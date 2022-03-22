@@ -6,8 +6,8 @@
 
 #define VERSION GetVersionNumbersString("..\..\src\srcrepair\bin\Release\srcrepair.exe")
 #define BASEDIR "..\..\src\srcrepair"
-#define CI_COMMIT GetEnv('CI_HASH')
-#if CI_COMMIT == ''
+
+#if GetEnv('CI_HASH') == ''
 #define _RELEASE 1
 #endif
 
@@ -25,11 +25,7 @@ DefaultGroupName=SRC Repair
 AllowNoIcons=yes
 LicenseFile=..\..\COPYING
 OutputDir=..\results
-#ifdef _RELEASE
-OutputBaseFilename=srcrepair_{#GetEnv('RELVER')}_setup
-#else
-OutputBaseFilename=snapshot_{#CI_COMMIT}
-#endif
+OutputBaseFilename={#GetEnv('PREFIX')}_setup
 SetupIconFile={#BASEDIR}\srcrepair.ico
 UninstallDisplayIcon={app}\srcrepair.exe
 Compression=lzma2
