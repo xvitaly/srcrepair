@@ -41,11 +41,11 @@ echo Compiling Installer...
 "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" inno\srcrepair.iss
 
 echo Generating archive for non-Windows platforms...
-"%PROGRAMFILES%\7-Zip\7z.exe" a -m0=LZMA2 -mx9 -t7z -x!*.ico -x!DotNetZip.xml -x!NLog.xml "results\srcrepair_%RELVER%_final.7z" ".\..\src\srcrepair\bin\Release\*"
+"%PROGRAMFILES%\7-Zip\7z.exe" a -tzip -mx9 -mm=Deflate -x!*.ico -x!DotNetZip.xml -x!NLog.xml "results\srcrepair_%RELVER%_other.zip" ".\..\src\srcrepair\bin\Release\*"
 
 echo Signing built artifacts...
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_final.exe
-"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_final.7z
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_setup.exe
+"%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% results\srcrepair_%RELVER%_other.zip
 
 echo Removing temporary files and directories...
 rd /S /Q "..\docs\build\doctrees"
