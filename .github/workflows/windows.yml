@@ -10,12 +10,10 @@ on:
   push:
     branches:
     - 'master'
-    - 'dev'
     - 'legacy'
   pull_request:
     branches:
     - 'master'
-    - 'dev'
     - 'legacy'
 
 jobs:
