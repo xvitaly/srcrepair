@@ -15,6 +15,8 @@
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues)](https://github.com/xvitaly/srcrepair/issues)
 ---
 
+## About
+
 **SRC Repair** (ex. TF2 Repair) is a free open source tool that can be used for tuning and cleaning up Steam and Source
 engine games. You can also create and edit .cfg files (configs), backup and restore game settings, apply FPS configs or
 sprays into the game with one click.
@@ -23,19 +25,18 @@ sprays into the game with one click.
 
 **Supported OS**: Windows 7 SP1, 8.1, 10, 11, GNU/Linux (mono), MacOS X (mono).
 
-**Supported platforms**: x86, x64.
-
 **Dependencies on Windows**: [Microsoft .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) or above.
 
 **Dependencies on other OS**: [Mono 6.12](https://www.mono-project.com/download/) or above.
 
-# Downloads
+## Downloads
 
-Download application (always contains the latest version):
+Download application:
 
-[![Download SRC Repair](https://www.easycoding.org/wp-content/uploads/download-now.png)](https://github.com/xvitaly/srcrepair/releases/latest)
+  * [Latest release](https://github.com/xvitaly/srcrepair/releases/latest);
+  * [Archived releases](https://github.com/xvitaly/srcrepair/releases).
 
-# Supported games
+## Supported games
 
 Supported Valve games:
 
@@ -106,7 +107,7 @@ Supported mods and third-party Source engine games:
   * Zeno Clash;
   * Zombie Panic! Source.
 
-# 3rd party libraries
+## 3rd party libraries
 
   * [DotNetZip](https://github.com/haf/DotNetZip.Semverd) (MPL license + zlib license);
   * [NLog](https://github.com/NLog/NLog) (BSD license).
