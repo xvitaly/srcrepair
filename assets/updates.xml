@@ -10,29 +10,4 @@
         <URL>https://github.com/xvitaly/srcrepair/releases/download/v43.0.6/srcrepair_436_setup.exe</URL>
         <Hash2>42a7cf892ba84412c6ca86945b0c6892078561bd7977439e22ab6be16d4d2f667fe7f24b4adcc28fd9f397158f013aded0e48d927fc75a1d948a0575c7a449e4</Hash2>
     </Application>
-    <GameDB>
-        <Version>8</Version>
-        <URL>https://www.easycoding.org/files/srcrepair/updates/games.xml</URL>
-        <Hash2>cfb31dfed4fe4f399f585f7ee118e4aaa4b51a2ea85230b55d12bf07b19a17db64457c1dda7686165a1636994a4a602b4eee602a54284926dd5bd82fde90f737</Hash2>
-    </GameDB>
-    <HUDDB>
-        <Version>41</Version>
-        <URL>https://www.easycoding.org/files/srcrepair/updates/huds.xml</URL>
-        <Hash2>93a2938801ba09f84cb0f90a52bfe149c6b708bda4e60ba28cb7accc8600a796805c15b5ba90f9c5e51c16cd105f2521d06aecb0a9a9b11e202f092057107355</Hash2>
-    </HUDDB>
-    <CfgDB>
-        <Version>19</Version>
-        <URL>https://www.easycoding.org/files/srcrepair/updates/configs.xml</URL>
-        <Hash2>30aa270ea6f78d8e0994fccad08b8cf783ef854c5cc92fdbdb18f6d426a4e9ae1f1a88bcf5276eebda585d4ae6b25557e151c013bfe177d60648c42a6f81e189</Hash2>
-    </CfgDB>
-    <ClnDB>
-        <Version>6</Version>
-        <URL>https://www.easycoding.org/files/srcrepair/updates/cleanup.xml</URL>
-        <Hash2>a39b2aedeceb9b5849c3ece95ae9008dfe62c252db32ddc16f3bb552aa18848b85126a86c898684d8f6d159ff203845c75d4a6e590024e7c2c4e0c02ea77d892</Hash2>
-    </ClnDB>
-    <PlgDB>
-        <Version>2</Version>
-        <URL>https://www.easycoding.org/files/srcrepair/updates/plugins.xml</URL>
-        <Hash2>9cfcf5d5837cba630088d65224902a63d06de47b61993ac4032489091fa4315c67e6b8e4841e3f672999885adcdbfced2b311df56df8d29e83c67c0ef71fdc4a</Hash2>
-    </PlgDB>
 </Updates>
