@@ -41,6 +41,20 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Get or set selected game instance.
+        /// </summary>
+        public SourceGame SelectedGame { get; private set; }
+
+        /// <summary>
+        /// Select game and store instance in a private field.
+        /// </summary>
+        /// <param name="Name">Source game name.</param>
+        public void Select(string Name)
+        {
+            SelectedGame = SourceGames[Name];
+        }
+
+        /// <summary>
         /// Overloaded inxeding operator, returning SourceGame instance by specified name.
         /// </summary>
         public SourceGame this[string key] => SourceGames[key];
