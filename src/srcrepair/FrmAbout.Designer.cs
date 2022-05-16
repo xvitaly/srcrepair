@@ -41,6 +41,7 @@
             // 
             // AF_ProductIcon
             // 
+            this.AF_ProductIcon.Image = global::srcrepair.gui.Properties.Resources.ImageAppLogo;
             resources.ApplyResources(this.AF_ProductIcon, "AF_ProductIcon");
             this.AF_ProductIcon.Name = "AF_ProductIcon";
             this.AF_ProductIcon.TabStop = false;
