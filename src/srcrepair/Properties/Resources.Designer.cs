@@ -588,16 +588,6 @@ namespace srcrepair.gui.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IconXmas {
-            get {
-                object obj = ResourceManager.GetObject("IconXmas", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap ImageAppLogo {
             get {
                 object obj = ResourceManager.GetObject("ImageAppLogo", resourceCulture);
@@ -611,6 +601,16 @@ namespace srcrepair.gui.Properties {
         internal static System.Drawing.Bitmap ImageLoadingFile {
             get {
                 object obj = ResourceManager.GetObject("ImageLoadingFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ImageXmas {
+            get {
+                object obj = ResourceManager.GetObject("ImageXmas", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
