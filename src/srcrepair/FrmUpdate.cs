@@ -95,7 +95,6 @@ namespace srcrepair.gui
                     UpdAppStatus.Text = AppStrings.UPD_AppNoUpdates;
                     UpdateTimeSetApp();
                 }
-                IsCompleted = true;
             }
             catch (Exception Ex)
             {
@@ -103,6 +102,7 @@ namespace srcrepair.gui
                 UpdAppImg.Image = Properties.Resources.IconUpdateError;
                 UpdAppStatus.Text = AppStrings.UPD_AppCheckFailure;
             }
+            IsCompleted = true;
         }
 
         /// <summary>
