@@ -276,16 +276,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Checks for application updates.
-        /// </summary>
-        /// <returns>Check result.</returns>
-        private bool AutoUpdateCheck()
-        {
-            UpdateManager UpMan = new UpdateManager(App.UserAgent);
-            return UpMan.CheckAppUpdate();
-        }
-
-        /// <summary>
         /// Loads config file to Config Editor.
         /// </summary>
         /// <param name="ConfFileName">Full path to config file.</param>
@@ -1111,7 +1101,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    if (await CheckForUpdatesTask())
+                    if (await CheckForUpdatesTask(App.UserAgent))
                     {
                         MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -1528,13 +1518,12 @@ namespace srcrepair.gui
         /// <summary>
         /// Checks for application updates in a separate thread.
         /// </summary>
+        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
         /// <returns>Returns True if updates were found.</returns>
-        private async Task<bool> CheckForUpdatesTask()
+        private async Task<bool> CheckForUpdatesTask(string UA)
         {
-            return await Task.Run(() =>
-            {
-                return Task.FromResult(AutoUpdateCheck());
-            });
+            UpdateManager Updater = await UpdateManager.Create(UA);
+            return Updater.CheckAppUpdate();
         }
 
         /// <summary>
