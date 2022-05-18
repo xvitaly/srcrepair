@@ -199,9 +199,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmUpdate_Load(object sender, EventArgs e)
         {
-            // Setting app name in form title...
-            Text = String.Format(Text, Properties.Resources.AppName);
-
             // Starting checking for updates...
             CheckForUpdates();
         }
