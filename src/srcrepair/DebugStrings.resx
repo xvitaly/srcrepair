@@ -330,6 +330,9 @@
   <data name="AppDbgExUpdBinInst" xml:space="preserve">
     <value>Exception while trying to install binary update.</value>
   </data>
+  <data name="AppDbgExUpdChk" xml:space="preserve">
+    <value>Exception while checking for updates during the Updates form initialization.</value>
+  </data>
   <data name="AppDbgExUpdXmlDbInst" xml:space="preserve">
     <value>Exception while trying to install XML database update.</value>
   </data>

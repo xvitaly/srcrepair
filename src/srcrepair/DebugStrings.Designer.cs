@@ -700,6 +700,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while checking for updates during the Updates form initialization..
+        /// </summary>
+        internal static string AppDbgExUpdChk {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdChk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to install XML database update..
         /// </summary>
         internal static string AppDbgExUpdXmlDbInst {
