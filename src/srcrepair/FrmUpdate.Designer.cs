@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmUpdate));
             this.UpdAppImg = new System.Windows.Forms.PictureBox();
             this.UpdAppStatus = new System.Windows.Forms.Label();
-            this.WrkChkApp = new System.ComponentModel.BackgroundWorker();
             this.UpdClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UpdAppImg)).BeginInit();
             this.SuspendLayout();
@@ -51,11 +50,6 @@
             resources.ApplyResources(this.UpdAppStatus, "UpdAppStatus");
             this.UpdAppStatus.Name = "UpdAppStatus";
             this.UpdAppStatus.Click += new System.EventHandler(this.UpdAppStatus_Click);
-            // 
-            // WrkChkApp
-            // 
-            this.WrkChkApp.DoWork += new System.ComponentModel.DoWorkEventHandler(this.WrkChkApp_DoWork);
-            this.WrkChkApp.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.WrkChkApp_RunWorkerCompleted);
             // 
             // UpdClose
             // 
@@ -90,7 +84,6 @@
 
         private System.Windows.Forms.PictureBox UpdAppImg;
         private System.Windows.Forms.Label UpdAppStatus;
-        private System.ComponentModel.BackgroundWorker WrkChkApp;
         private System.Windows.Forms.Button UpdClose;
     }
 }

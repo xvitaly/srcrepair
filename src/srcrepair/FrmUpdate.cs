@@ -5,8 +5,8 @@
 */
 
 using System;
-using System.ComponentModel;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using NLog;
 using srcrepair.core;
@@ -64,6 +64,11 @@ namespace srcrepair.gui
         private string FullAppPath { get; set; }
 
         /// <summary>
+        /// Stores current state of the async tasks.
+        /// </summary>
+        private bool IsCompleted = false;
+
+        /// <summary>
         /// Sets time of last application update check.
         /// </summary>
         private void UpdateTimeSetApp()
@@ -72,15 +77,43 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Starts update checking sequence in a separate thread.
+        /// Launches a program update checker in a separate thread, waits for the
+        /// result and returns a message if found.
         /// </summary>
-        private void CheckForUpdates()
+        private async void CheckForUpdates()
         {
-            // Changing icons...
-            UpdAppImg.Image = Properties.Resources.IconUpdateChecking;
+            try
+            {
+                if (await CheckForUpdatesTask(UserAgent))
+                {
+                    UpdAppImg.Image = Properties.Resources.IconUpdateAvailable;
+                    UpdAppStatus.Text = String.Format(AppStrings.UPD_AppUpdateAvail, UpMan.AppUpdateVersion);
+                }
+                else
+                {
+                    UpdAppImg.Image = Properties.Resources.IconUpdateNotAvailable;
+                    UpdAppStatus.Text = AppStrings.UPD_AppNoUpdates;
+                    UpdateTimeSetApp();
+                }
+                IsCompleted = true;
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExUpdChk);
+                UpdAppImg.Image = Properties.Resources.IconUpdateError;
+                UpdAppStatus.Text = AppStrings.UPD_AppCheckFailure;
+            }
+        }
 
-            // Starting updates check in a separate thread...
-            if (!WrkChkApp.IsBusy) { WrkChkApp.RunWorkerAsync(UserAgent); }
+        /// <summary>
+        /// Checks for application updates in a separate thread.
+        /// </summary>
+        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
+        /// <returns>Returns True if updates were found.</returns>
+        private async Task<bool> CheckForUpdatesTask(string UA)
+        {
+            UpMan = await UpdateManager.Create(UA);
+            return UpMan.CheckAppUpdate();
         }
 
         /// <summary>
@@ -174,64 +207,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Checks for updates.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void WrkChkApp_DoWork(object sender, DoWorkEventArgs e)
-        {
-            // Checking for updates...
-            UpMan = new UpdateManager((string)e.Argument);
-        }
-
-        /// <summary>
-        /// Finalizes update checking procedure.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void WrkChkApp_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            try
-            {
-                if (e.Error == null)
-                {
-                    // Checking for application update...
-                    if (UpMan.CheckAppUpdate())
-                    {
-                        UpdAppImg.Image = Properties.Resources.IconUpdateAvailable;
-                        UpdAppStatus.Text = String.Format(AppStrings.UPD_AppUpdateAvail, UpMan.AppUpdateVersion);
-                    }
-                    else
-                    {
-                        UpdAppImg.Image = Properties.Resources.IconUpdateNotAvailable;
-                        UpdAppStatus.Text = AppStrings.UPD_AppNoUpdates;
-                        UpdateTimeSetApp();
-                    }
-                }
-                else
-                {
-                    // Changing controls texts...
-                    UpdAppImg.Image = Properties.Resources.IconUpdateError;
-                    UpdAppStatus.Text = AppStrings.UPD_AppCheckFailure;
-
-                    // Writing issue to log...
-                    Logger.Warn(e.Error);
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex);
-            }
-        }
-
-        /// <summary>
         /// "Form close" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
         private void FrmUpdate_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && WrkChkApp.IsBusy;
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && !IsCompleted;
         }
 
         /// <summary>
@@ -241,7 +223,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void UpdAppStatus_Click(object sender, EventArgs e)
         {
-            if (!WrkChkApp.IsBusy)
+            if (IsCompleted)
             {
                 if (UpMan.CheckAppUpdate())
                 {
