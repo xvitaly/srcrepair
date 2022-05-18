@@ -8,6 +8,7 @@ using System;
 using System.IO;
 using System.Net;
 using System.Reflection;
+using System.Threading.Tasks;
 using System.Xml;
 
 namespace srcrepair.core
@@ -47,12 +48,12 @@ namespace srcrepair.core
         /// Downloads XML file with imformation about latest updates
         /// from server and stores it in class field.
         /// </summary>
-        private void DownloadXML()
+        private async Task DownloadXML()
         {
             using (WebClient Downloader = new WebClient())
             {
                 Downloader.Headers.Add("User-Agent", UserAgent);
-                UpdateXML = Downloader.DownloadString(Properties.Resources.UpdateDBURL);
+                UpdateXML = await Downloader.DownloadStringTaskAsync(Properties.Resources.UpdateDBURL);
             }
         }
 
@@ -93,6 +94,15 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Asyncronically fetch and parse XML file with updates information.
+        /// </summary>
+        private async Task CheckForUpdatesTask()
+        {
+            await DownloadXML();
+            ParseXML();
+        }
+
+        /// <summary>
         /// Gets local application update file name.
         /// </summary>
         /// <param name="Url">Download URL.</param>
@@ -103,17 +113,24 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Create an instance of the UpdateManager class. Factory method.
+        /// </summary>
+        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
+        /// <returns>Return an instance of the UpdateManager class.</returns>
+        public static async Task<UpdateManager> Create(string UA)
+        {
+            UpdateManager UpdaterInstance = new UpdateManager(UA);
+            await UpdaterInstance.CheckForUpdatesTask();
+            return UpdaterInstance;
+        }
+
+        /// <summary>
         /// UpdateManager class constructor.
         /// </summary>
         /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
-        public UpdateManager(string UA)
+        private UpdateManager(string UA)
         {
-            // Saving paths...
             UserAgent = UA;
-
-            // Downloading and parsing XML...
-            DownloadXML();
-            ParseXML();
         }
     }
 }
