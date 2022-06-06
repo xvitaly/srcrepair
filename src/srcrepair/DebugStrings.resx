@@ -195,6 +195,9 @@
   <data name="AppDbgExClnFm" xml:space="preserve">
     <value>Exception while trying to show selected file in file manager.</value>
   </data>
+  <data name="AppDbgExClnOldUpdates" xml:space="preserve">
+    <value>Exception while trying to find and remove old application updates.</value>
+  </data>
   <data name="AppDbgExClnQueueRun" xml:space="preserve">
     <value>Exception while removing files from queue.</value>
   </data>
