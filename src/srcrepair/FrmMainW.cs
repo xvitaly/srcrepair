@@ -1118,6 +1118,22 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Tries to find and delete an old application update files in a
+        /// separate thread.
+        /// </summary>
+        private async void CleanOldUpdates()
+        {
+            try
+            {
+                await CleanOldUpdatesTask();
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExClnOldUpdates);
+            }
+        }
+
+        /// <summary>
         /// Generates internal offline help URL, based on current tab.
         /// </summary>
         /// <returns>Internal offline help URL.</returns>
@@ -1661,8 +1677,27 @@ namespace srcrepair.gui
             });
         }
 
+        /// <summary>
+        /// Finds and removes old application updates in a separate
+        /// thread.
+        /// </summary>
+        private async Task CleanOldUpdatesTask()
+        {
+            await Task.Run(() =>
+            {
+                // Removing modern updates directory...
+                if (Directory.Exists(App.AppUpdateDir)) { Directory.Delete(App.AppUpdateDir, true); }
+                
+                // Removing legacy updates...
+                foreach (string LegacyUpdateFile in FileManager.FindFiles(App.AppUserDir, "*.exe"))
+                {
+                    if (File.Exists(LegacyUpdateFile)) { File.Delete(LegacyUpdateFile); }
+                }
+            });
+        }
+
         #endregion
-        
+
         /// <summary>
         /// "Form create" event handler.
         /// </summary>
@@ -1679,6 +1714,7 @@ namespace srcrepair.gui
             CheckSymbolsSteam();
             FindGames();
             CheckForUpdates();
+            CleanOldUpdates();
         }
 
         /// <summary>
