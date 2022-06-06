@@ -1125,7 +1125,10 @@ namespace srcrepair.gui
         {
             try
             {
-                await CleanOldUpdatesTask();
+                if (App.Platform.OS == CurrentPlatform.OSType.Windows)
+                {
+                    await CleanOldUpdatesTask();
+                }
             }
             catch (Exception Ex)
             {
