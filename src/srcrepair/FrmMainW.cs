@@ -1125,9 +1125,10 @@ namespace srcrepair.gui
         {
             try
             {
-                if (App.Platform.OS == CurrentPlatform.OSType.Windows)
+                if (IsCleanupNeeded())
                 {
                     await CleanOldUpdatesTask();
+                    Properties.Settings.Default.LastCleanupTime = DateTime.Now;
                 }
             }
             catch (Exception Ex)
@@ -1163,6 +1164,16 @@ namespace srcrepair.gui
         private bool IsAutoUpdateCheckNeeded()
         {
             TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
+            return TS.Days >= 7;
+        }
+
+        /// <summary>
+        /// Checks if the application needs to perform cleanup.
+        /// </summary>
+        private bool IsCleanupNeeded()
+        {
+            if (App.Platform.OS != CurrentPlatform.OSType.Windows) { return false; }
+            TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastCleanupTime;
             return TS.Days >= 7;
         }
 
