@@ -56,5 +56,8 @@
     <Setting Name="HUDHideOutdated" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="LastCleanupTime" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2021-03-07</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
