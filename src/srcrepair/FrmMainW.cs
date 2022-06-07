@@ -1097,7 +1097,7 @@ namespace srcrepair.gui
         /// </summary>
         private async void CheckForUpdates()
         {
-            if (Properties.Settings.Default.AutoUpdateCheck && IsAutoUpdateCheckNeeded())
+            if (IsAutoUpdateCheckNeeded())
             {
                 try
                 {
@@ -1159,12 +1159,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Checks if application update check is required.
+        /// Checks if the application update check is required.
         /// </summary>
         private bool IsAutoUpdateCheckNeeded()
         {
-            TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastUpdateTime;
-            return TS.Days >= 7;
+            return Properties.Settings.Default.AutoUpdateCheck && (DateTime.Now - Properties.Settings.Default.LastUpdateTime).Days >= 7;
         }
 
         /// <summary>
@@ -1173,8 +1172,7 @@ namespace srcrepair.gui
         private bool IsCleanupNeeded()
         {
             if (App.Platform.OS != CurrentPlatform.OSType.Windows) { return false; }
-            TimeSpan TS = DateTime.Now - Properties.Settings.Default.LastCleanupTime;
-            return TS.Days >= 7;
+            return (DateTime.Now - Properties.Settings.Default.LastCleanupTime).Days >= 7;
         }
 
         /// <summary>
