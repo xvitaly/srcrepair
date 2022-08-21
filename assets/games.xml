@@ -733,7 +733,7 @@
     </Game>
     <Game Name="Entropy: Zero">
         <Enabled>1</Enabled>
-        <DirName>Entropy Zero</DirName>
+        <DirName>Entropy Zero/Entropy Zero</DirName>
         <SmallName>EntropyZero</SmallName>
         <VFDir>EntropyZero</VFDir>
         <UserDir>0</UserDir>
