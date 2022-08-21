@@ -76,6 +76,7 @@ Supported mods and third-party Source engine games:
   * Dystopia;
   * E.Y.E.: Divine Cybermancy;
   * Entropy: Zero;
+  * Entropy: Zero 2;
   * Eternal Silence;
   * FIREFIGHT RELOADED;
   * Garry’s Mod;
