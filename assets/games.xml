@@ -753,4 +753,15 @@
         <SVer>2</SVer>
         <Executable>portal2.exe</Executable>
     </Game>
+    <Game Name="Entropy: Zero 2">
+        <Enabled>1</Enabled>
+        <DirName>EntropyZero2</DirName>
+        <SmallName>entropyzero2</SmallName>
+        <VFDir>EntropyZero2</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>1583720</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
 </Games>
