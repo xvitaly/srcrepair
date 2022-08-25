@@ -9,7 +9,7 @@
         <Name>7HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/7hud_5a9b38bf.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/7hud_5a9b38bf.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/7hud_5a9b38bf.zip</Mirror>
         <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/7hud.jpg</Preview>
@@ -24,7 +24,7 @@
         <Name>broeselhud_blue</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/broeselhudblue_e6b5ae64.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/broeselhudblue_e6b5ae64.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/broeselhudblue_e6b5ae64.zip</Mirror>
         <UpURI>https://github.com/fblue/broeselhud_blue/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/broeselhud_blue.jpg</Preview>
@@ -54,7 +54,7 @@
         <Name>VoidHUD 2.0</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/voidhud_8165dbad.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/voidhud_8165dbad.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/voidhud_8165dbad.zip</Mirror>
         <UpURI>https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/voidhud.jpg</Preview>
@@ -69,7 +69,7 @@
         <Name>ahud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/ahud_419f0b4b.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/ahud_419f0b4b.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/ahud_419f0b4b.zip</Mirror>
         <UpURI>https://github.com/n0kk/ahud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/ahud.jpg</Preview>
@@ -84,7 +84,7 @@
         <Name>bwHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/bwhud_e3646579.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/bwhud_e3646579.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/bwhud_e3646579.zip</Mirror>
         <UpURI>https://github.com/bw-/bwhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/bwhud.jpg</Preview>
@@ -99,7 +99,7 @@
         <Name>budhud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/budhud_9a016992.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/budhud_9a016992.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/budhud_9a016992.zip</Mirror>
         <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
@@ -114,7 +114,7 @@
         <Name>Improved Default HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/idhud_a059d4a8.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/idhud_a059d4a8.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/idhud_a059d4a8.zip</Mirror>
         <UpURI>https://github.com/Eniere/idhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/idhud.jpg</Preview>
@@ -189,7 +189,7 @@
         <Name>FrankenHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/frankenhud_c41b267b.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/frankenhud_c41b267b.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/frankenhud_c41b267b.zip</Mirror>
         <UpURI>https://github.com/TheKins/frankenhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/frankenhud.jpg</Preview>
@@ -204,7 +204,7 @@
         <Name>yayahud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/yayahud_e753a9bf.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/yayahud_e753a9bf.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/yayahud_e753a9bf.zip</Mirror>
         <UpURI>https://github.com/Yttrium-tYcLief/yayahud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/yayahud.jpg</Preview>
@@ -219,7 +219,7 @@
         <Name>SolarHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/solarhud_ae24f9b5.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/solarhud_ae24f9b5.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/solarhud_ae24f9b5.zip</Mirror>
         <UpURI>https://github.com/Stochast1c/solarhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/solarhud.jpg</Preview>
@@ -234,7 +234,7 @@
         <Name>BoredHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/boredhud_e7f83610.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/boredhud_e7f83610.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/boredhud_e7f83610.zip</Mirror>
         <UpURI>https://github.com/TheStaticVoid/boredHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/boredhud.jpg</Preview>
@@ -264,7 +264,7 @@
         <Name>m0re Hud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/m0rehud_04fa5506.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/m0rehud_04fa5506.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/m0rehud_04fa5506.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/m0rehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/m0rehud.jpg</Preview>
@@ -279,7 +279,7 @@
         <Name>mkHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/mkhud_21eb8c0d.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/mkhud_21eb8c0d.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/mkhud_21eb8c0d.zip</Mirror>
         <UpURI>https://github.com/nimtra/mkHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/mkhud.jpg</Preview>
@@ -294,7 +294,7 @@
         <Name>mHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/mhud_ed89a10f.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/mhud_ed89a10f.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/mhud_ed89a10f.zip</Mirror>
         <UpURI>https://github.com/Marblr/mHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/mhud.jpg</Preview>
@@ -339,7 +339,7 @@
         <Name>RebelHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/rebelhud_9b070a7a.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/rebelhud_9b070a7a.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/rebelhud_9b070a7a.zip</Mirror>
         <UpURI>https://github.com/TheRebelCreeper/RebelHud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/rebelhud.jpg</Preview>
@@ -354,7 +354,7 @@
         <Name>Hypnotize HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/hypnotizehud_142d78ac.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/hypnotizehud_142d78ac.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/hypnotizehud_142d78ac.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Hypnotize-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
@@ -369,7 +369,7 @@
         <Name>MoesHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/moeshud_95a3a610.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/moeshud_95a3a610.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/moeshud_95a3a610.zip</Mirror>
         <UpURI>https://github.com/MoeLesting/MoesHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/moeshud.jpg</Preview>
@@ -384,7 +384,7 @@
         <Name>SlagHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/slaghud_0b8745d9.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/slaghud_0b8745d9.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/slaghud_0b8745d9.zip</Mirror>
         <UpURI>https://github.com/MagmaDude/SlagHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/slaghud.jpg</Preview>
@@ -399,7 +399,7 @@
         <Name>BX-HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/bxhud_0102fa8f.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/bxhud_0102fa8f.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/bxhud_0102fa8f.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/BX-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/bxhud.jpg</Preview>
@@ -414,7 +414,7 @@
         <Name>Garm3n-QL</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/garm3nql_21f05d47.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/garm3nql_21f05d47.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/garm3nql_21f05d47.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Garm3n-QL/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/garm3nql.jpg</Preview>
@@ -429,7 +429,7 @@
         <Name>Deli HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/delihud_f75c909a.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/delihud_f75c909a.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/delihud_f75c909a.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Deli-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/delihud.jpg</Preview>
@@ -444,7 +444,7 @@
         <Name>lionHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/lionhud_91667942.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/lionhud_91667942.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/lionhud_91667942.zip</Mirror>
         <UpURI>https://github.com/Jofre-Problem/lionHUD/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/lionhud.jpg</Preview>
@@ -459,7 +459,7 @@
         <Name>SunsetHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/archive/sunsethud_59d4a3a3.zip</URI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/sunsethud_59d4a3a3.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/sunsethud_59d4a3a3.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/Sunset-Hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/sunsethud.jpg</Preview>
