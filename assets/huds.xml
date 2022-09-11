@@ -11,9 +11,9 @@
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/7hud_5a9b38bf.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/7hud_5a9b38bf.zip</Mirror>
-        <UpURI>https://github.com/Sevin7/7HUD/archive/master.zip</UpURI>
+        <UpURI>https://github.com/Sevin7/7hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/7hud.jpg</Preview>
-        <RepoPath>https://github.com/Sevin7/7HUD</RepoPath>
+        <RepoPath>https://github.com/Sevin7/7hud</RepoPath>
         <Hash2>dcb4dee830b753a1d2c9e25aa5df428dbf46608c1091658cdf3ae9957e3f030cf99b68be4854262c83d8d9f19b966fe0a0d1490a7c47265017993629d1b8892c</Hash2>
         <LastUpdate>1624904633</LastUpdate>
         <Site>https://huds.tf/site/s-7HUD</Site>
@@ -131,9 +131,9 @@
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.08.25/kbnhud_7d2ac0c7.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/kbnhud_7d2ac0c7.zip</Mirror>
-        <UpURI>https://github.com/Jotunn/KBNHud/archive/master.zip</UpURI>
+        <UpURI>https://github.com/Jotunn/kbnhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.jpg</Preview>
-        <RepoPath>https://github.com/Jotunn/KBNHud</RepoPath>
+        <RepoPath>https://github.com/Jotunn/kbnhud</RepoPath>
         <Hash2>86b6b1a1a0ae9ac0db3e12c8128c24fafea723b02c17082a56052b567f7af7bdca895c3d4cfc432dfa741261a65413677d890523c8d39d5071c3163330f90479</Hash2>
         <LastUpdate>1660350159</LastUpdate>
         <Site>https://huds.tf/site/s-KBNHud</Site>
@@ -251,9 +251,9 @@
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.08.25/flawhud_633bd39d.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_633bd39d.zip</Mirror>
-        <UpURI>https://github.com/CriticalFlaw/FlawHUD/archive/master.zip</UpURI>
+        <UpURI>https://github.com/CriticalFlaw/flawhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
-        <RepoPath>https://github.com/CriticalFlaw/FlawHUD</RepoPath>
+        <RepoPath>https://github.com/CriticalFlaw/flawhud</RepoPath>
         <Hash2>2d1bec0cd021f466dda1d3098ac2c4bb275e5bb9da9f6d81662217f3faae0b32970773e3165bdbfc2b3f9264babe83e772624108ac799bf61383225178efc651</Hash2>
         <LastUpdate>1660870933</LastUpdate>
         <Site>https://huds.tf/site/s-FlawHUD</Site>
@@ -281,9 +281,9 @@
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/mkhud_21eb8c0d.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/mkhud_21eb8c0d.zip</Mirror>
-        <UpURI>https://github.com/nimtra/mkHUD/archive/master.zip</UpURI>
+        <UpURI>https://github.com/nimtra/mkhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/mkhud.jpg</Preview>
-        <RepoPath>https://github.com/nimtra/mkHUD</RepoPath>
+        <RepoPath>https://github.com/nimtra/mkhud</RepoPath>
         <Hash2>ca5e706896da88ab9a543035a44808794e1b626c9c86859f2343cc2ff89384c8a77c74684a9464d4d8775a7cfeca38255d9363ca997f23845a7eff0fd7e4fb70</Hash2>
         <LastUpdate>1619051285</LastUpdate>
         <Site>https://huds.tf/site/s-mkhud</Site>
@@ -356,9 +356,9 @@
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/hypnotizehud_142d78ac.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/hypnotizehud_142d78ac.zip</Mirror>
-        <UpURI>https://github.com/Hypnootize/Hypnotize-Hud/archive/master.zip</UpURI>
+        <UpURI>https://github.com/Hypnootize/hypnotize-hud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
-        <RepoPath>https://github.com/Hypnootize/Hypnotize-Hud</RepoPath>
+        <RepoPath>https://github.com/Hypnootize/hypnotize-hud</RepoPath>
         <Hash2>677889251f715b6262633ca6efcfd82c484c4dbe975b6cf2e8b29b422a14aa4bfbed11a32663466c49f4f32ef9dd9ab6399b11b863c05b246d138a723cf5a7c2</Hash2>
         <LastUpdate>1657816836</LastUpdate>
         <Site>https://huds.tf/site/s-Hypnotize-Hud</Site>
@@ -491,9 +491,9 @@
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.08.25/zehud_2b5489c1.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/zehud_2b5489c1.zip</Mirror>
-        <UpURI>https://github.com/bo0bsy/ZeHud/archive/master.zip</UpURI>
+        <UpURI>https://github.com/bo0bsy/zehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/zehud.jpg</Preview>
-        <RepoPath>https://github.com/bo0bsy/ZeHud</RepoPath>
+        <RepoPath>https://github.com/bo0bsy/zehud</RepoPath>
         <Hash2>8fb8829410436771eaa1452ae466032f9e63a2094498ff3aa92fe6516ec5aae5cf483d1b7d1023d33075f7bf5b2c8eb89effc9326605169cc9f30068f609a856</Hash2>
         <LastUpdate>1659819373</LastUpdate>
         <Site>https://huds.tf/site/s-ZeHud</Site>
