@@ -786,4 +786,15 @@
         <SVer>1</SVer>
         <Executable>hl2.exe</Executable>
     </Game>
+    <Game Name="Half-Life 2: VR Mod">
+        <Enabled>1</Enabled>
+        <DirName>Half-Life 2 VR</DirName>
+        <SmallName>hlvr</SmallName>
+        <VFDir>hlvr</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>658920</SID>
+        <SVer>1</SVer>
+        <Executable>hl2vr.exe</Executable>
+    </Game>
 </Games>
