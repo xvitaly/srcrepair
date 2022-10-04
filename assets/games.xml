@@ -797,4 +797,15 @@
         <SVer>1</SVer>
         <Executable>hl2vr.exe</Executable>
     </Game>
+    <Game Name="BrainBread 2">
+        <Enabled>1</Enabled>
+        <DirName>brainbread2</DirName>
+        <SmallName>brainbread2</SmallName>
+        <VFDir>brainbread2</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>346330</SID>
+        <SVer>1</SVer>
+        <Executable>bb2.exe</Executable>
+    </Game>
 </Games>
