@@ -65,6 +65,7 @@ Supported mods and third-party Source engine games:
   * Black Mesa;
   * Blade Symphony;
   * Bloody Good Time;
+  * BrainBread 2;
   * CONSORTIUM;
   * Codename CURE;
   * Contagion;
@@ -81,6 +82,8 @@ Supported mods and third-party Source engine games:
   * FIREFIGHT RELOADED;
   * Garry’s Mod;
   * Half-Life 2: DownFall;
+  * Half-Life 2: VR Mod;
+  * Half-Life 2: Year Long Alarm;
   * Half-Life: Update;
   * INFRA;
   * Insurgency: Modern Infantry Combat;
