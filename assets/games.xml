@@ -775,4 +775,15 @@
         <SVer>1</SVer>
         <Executable>hl2.exe</Executable>
     </Game>
+    <Game Name="Half-Life 2: Year Long Alarm">
+        <Enabled>1</Enabled>
+        <DirName>Half-Life 2 Year Long Alarm</DirName>
+        <SmallName>yearlongalarm</SmallName>
+        <VFDir>yearlongalarm</VFDir>
+        <UserDir>0</UserDir>
+        <HUDsAvail>0</HUDsAvail>
+        <SID>747250</SID>
+        <SVer>1</SVer>
+        <Executable>hl2.exe</Executable>
+    </Game>
 </Games>
