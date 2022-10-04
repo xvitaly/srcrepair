@@ -764,17 +764,6 @@
         <SVer>1</SVer>
         <Executable>hl2.exe</Executable>
     </Game>
-    <Game Name="Half-Life 2: DownFall">
-        <Enabled>1</Enabled>
-        <DirName>Half-Life 2 DownFall</DirName>
-        <SmallName>downfall</SmallName>
-        <VFDir>downfall</VFDir>
-        <UserDir>0</UserDir>
-        <HUDsAvail>0</HUDsAvail>
-        <SID>587650</SID>
-        <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
-    </Game>
     <Game Name="Half-Life 2: Year Long Alarm">
         <Enabled>1</Enabled>
         <DirName>Half-Life 2 Year Long Alarm</DirName>
