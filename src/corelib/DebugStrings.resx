@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppDbgCoreGetterOutOfRange" xml:space="preserve">
+    <value>Received value is out of supported range.</value>
+  </data>
+  <data name="AppDbgCoreSetterOutOfRange" xml:space="preserve">
+    <value>Requested value is out of supported range.</value>
+  </data>
   <data name="AppDbgExCoreClnManConstructor" xml:space="preserve">
     <value>Minor exception while while building CleanupTargets list object.</value>
   </data>

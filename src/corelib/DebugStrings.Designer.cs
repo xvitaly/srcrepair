@@ -61,6 +61,24 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Received value is out of supported range..
+        /// </summary>
+        internal static string AppDbgCoreGetterOutOfRange {
+            get {
+                return ResourceManager.GetString("AppDbgCoreGetterOutOfRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Requested value is out of supported range..
+        /// </summary>
+        internal static string AppDbgCoreSetterOutOfRange {
+            get {
+                return ResourceManager.GetString("AppDbgCoreSetterOutOfRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Minor exception while while building CleanupTargets list object..
         /// </summary>
         internal static string AppDbgExCoreClnManConstructor {
