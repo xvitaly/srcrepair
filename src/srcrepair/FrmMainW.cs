@@ -617,6 +617,9 @@ namespace srcrepair.gui
                 case 4:
                     WriteType4VideoSettings();
                     break;
+                default:
+                    Logger.Warn(DebugStrings.AppDbgIncorrectSourceType);
+                    break;
             }
             App.SourceGames[AppSelector.Text].Video.WriteSettings();
         }
