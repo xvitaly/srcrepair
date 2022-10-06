@@ -128,6 +128,9 @@ namespace srcrepair.core
                             case 4:
                                 res = 4;
                                 break;
+                            default:
+                                Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                                break;
                         }
                         break;
                     case 8:
@@ -139,7 +142,13 @@ namespace srcrepair.core
                             case 2:
                                 res = 6;
                                 break;
+                            default:
+                                Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                                break;
                         }
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
                         break;
                 }
 
@@ -178,6 +187,9 @@ namespace srcrepair.core
                         _AntiAliasing = 8;
                         _AntiAliasQuality = 2;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        break;
                 }
             }
         }
@@ -199,6 +211,9 @@ namespace srcrepair.core
                     case 1:
                         res = 1;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -213,6 +228,9 @@ namespace srcrepair.core
                         break;
                     case 1:
                         _MotionBlur = 1;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
