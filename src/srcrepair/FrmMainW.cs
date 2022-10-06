@@ -509,6 +509,9 @@ namespace srcrepair.gui
                 case 4:
                     ReadType4VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
                     break;
+                default:
+                    Logger.Warn(DebugStrings.AppDbgIncorrectSourceType);
+                    break;
             }
         }
 
