@@ -853,6 +853,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Unknown file type specified. Can&apos;t install..
+        /// </summary>
+        internal static string AppDbgQIUnknownFileType {
+            get {
+                return ResourceManager.GetString("AppDbgQIUnknownFileType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to perform elevation. User closed the UAC dialog..
         /// </summary>
         internal static string AppDbgUACCancel {
