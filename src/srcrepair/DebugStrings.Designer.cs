@@ -844,6 +844,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect or unsupported SourceType specified..
+        /// </summary>
+        internal static string AppDbgIncorrectSourceType {
+            get {
+                return ResourceManager.GetString("AppDbgIncorrectSourceType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to perform elevation. User closed the UAC dialog..
         /// </summary>
         internal static string AppDbgUACCancel {
