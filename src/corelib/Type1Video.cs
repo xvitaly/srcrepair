@@ -87,6 +87,9 @@ namespace srcrepair.core
                     case 1:
                         res = 1;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -101,6 +104,9 @@ namespace srcrepair.core
                         break;
                     case 1:
                         _DisplayMode = 1;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
@@ -126,6 +132,9 @@ namespace srcrepair.core
                     case 2:
                         res = 0;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -143,6 +152,9 @@ namespace srcrepair.core
                         break;
                     case 2:
                         _ModelDetail = 0;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
@@ -171,6 +183,9 @@ namespace srcrepair.core
                     case 2:
                         res = 0;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -191,6 +206,9 @@ namespace srcrepair.core
                         break;
                     case 3:
                         _TextureDetail = -1;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
@@ -213,6 +231,9 @@ namespace srcrepair.core
                     case 1:
                         res = 0;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -227,6 +248,9 @@ namespace srcrepair.core
                         break;
                     case 1:
                         _ShaderDetail = 0;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
@@ -255,7 +279,13 @@ namespace srcrepair.core
                             case 1:
                                 res = 2;
                                 break;
+                            default:
+                                Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                                break;
                         }
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
                         break;
                 }
 
@@ -278,6 +308,9 @@ namespace srcrepair.core
                         _WaterDetail = 1;
                         _WaterReflections = 1;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        break;
                 }
             }
         }
@@ -299,6 +332,9 @@ namespace srcrepair.core
                     case 1:
                         res = 1;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -313,6 +349,9 @@ namespace srcrepair.core
                         break;
                     case 1:
                         _ShadowQuality = 1;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
@@ -335,6 +374,9 @@ namespace srcrepair.core
                     case 1:
                         res = 1;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -349,6 +391,9 @@ namespace srcrepair.core
                         break;
                     case 1:
                         _ColorCorrection = 1;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
@@ -374,6 +419,9 @@ namespace srcrepair.core
                             case 1:
                                 res = 1;
                                 break;
+                            default:
+                                Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                                break;
                         }
                         break;
                     case 2:
@@ -387,6 +435,9 @@ namespace srcrepair.core
                         break;
                     case 16:
                         res = 5;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
                         break;
                 }
 
@@ -421,6 +472,9 @@ namespace srcrepair.core
                         _FilteringMode = 16;
                         _FilteringTrilinear = 0;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        break;
                 }
             }
         }
@@ -442,6 +496,9 @@ namespace srcrepair.core
                     case 1:
                         res = 1;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -456,6 +513,9 @@ namespace srcrepair.core
                         break;
                     case 1:
                         _VSync = 1;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
@@ -484,6 +544,9 @@ namespace srcrepair.core
                     case 95:
                         res = 3;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -504,6 +567,9 @@ namespace srcrepair.core
                         break;
                     case 3:
                         _DirectXMode = 95;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
@@ -529,6 +595,9 @@ namespace srcrepair.core
                     case 2:
                         res = 2;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        break;
                 }
 
                 return res;
@@ -546,6 +615,9 @@ namespace srcrepair.core
                         break;
                     case 2:
                         _HDRMode = 2;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
                         break;
                 }
             }
