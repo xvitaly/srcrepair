@@ -170,7 +170,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void BtnInstall_Click(object sender, EventArgs e)
         {
-            if (!(String.IsNullOrEmpty(InstallPath.Text)))
+            if (!String.IsNullOrEmpty(InstallPath.Text))
             {
                 try
                 {
@@ -180,29 +180,32 @@ namespace srcrepair.gui
                     // Using different methods, based on source file extension...
                     switch (Path.GetExtension(InstallPath.Text))
                     {
-                        // Installing demo file...
-                        case ".dem": InstallFileNow(InstallPath.Text, FullGamePath);
+                        case ".dem": // Installing demo file...
+                            InstallFileNow(InstallPath.Text, FullGamePath);
                             break;
-                        // Installing VPK package...
-                        case ".vpk": InstallFileNow(InstallPath.Text, CustomInstallDir);
+                        case ".vpk": // Installing VPK package...
+                            InstallFileNow(InstallPath.Text, CustomInstallDir);
                             break;
-                        // Installing game config...
-                        case ".cfg": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "cfg"));
+                        case ".cfg": // Installing game config...
+                            InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "cfg"));
                             break;
-                        // Installing map...
-                        case ".bsp": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "maps"));
+                        case ".bsp": // Installing map...
+                            InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "maps"));
                             break;
-                        // Installing hitsound...
-                        case ".wav": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "sound", "ui"));
+                        case ".wav": // Installing hitsound...
+                            InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "sound", "ui"));
                             break;
-                        // Installing spray...
-                        case ".vtf": InstallSprayNow(InstallPath.Text);
+                        case ".vtf": // Installing spray...
+                            InstallSprayNow(InstallPath.Text);
                             break;
-                        // Installing contents of Zip archive...
-                        case ".zip": GuiHelpers.FormShowArchiveExtract(InstallPath.Text, CustomInstallDir);
+                        case ".zip": // Installing contents of Zip archive...
+                            GuiHelpers.FormShowArchiveExtract(InstallPath.Text, CustomInstallDir);
                             break;
-                        // Installing binary plugin...
-                        case ".dll": InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "addons"));
+                        case ".dll": // Installing binary plugin...
+                            InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "addons"));
+                            break;
+                        default:
+                            Logger.Warn(DebugStrings.AppDbgQIUnknownFileType);
                             break;
                     }
 
