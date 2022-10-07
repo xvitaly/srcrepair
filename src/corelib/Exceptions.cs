@@ -20,4 +20,17 @@ namespace srcrepair.core
 
         public VideoConfigException(string Message, Exception InnerException) : base(Message, InnerException) { }
     }
+
+    /// <summary>
+    /// Class of custom VideoConfigException type.
+    /// </summary>
+    [Serializable]
+    public class SteamPathNotFoundException : Exception
+    {
+        public SteamPathNotFoundException() { }
+
+        public SteamPathNotFoundException(string Message) : base(Message) { }
+
+        public SteamPathNotFoundException(string Message, Exception InnerException) : base(Message, InnerException) { }
+    }
 }
