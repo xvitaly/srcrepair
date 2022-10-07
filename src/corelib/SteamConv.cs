@@ -17,7 +17,7 @@ namespace srcrepair.core
         /// <summary>
         /// Special pre-defined magic constant, using in all conversions.
         /// </summary>
-        public const long Multi = 76561197960265728;
+        private static readonly long Multi = 76561197960265728;
 
         /// <summary>
         /// Gets UserID from SteamID32.
