@@ -1026,6 +1026,7 @@ namespace srcrepair.gui
                     Result = CheckType2Settings();
                     break;
                 default:
+                    Logger.Warn(DebugStrings.AppDbgIncorrectSourceType);
                     Result = false;
                     break;
             }
@@ -1931,6 +1932,9 @@ namespace srcrepair.gui
                         GT_NCF_MemPool.SelectedIndex = 2;
                         GT_NCF_Quality.SelectedIndex = 2;
                         break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgIncorrectSourceType);
+                        break;
                 }
                 MessageBox.Show(AppStrings.GT_PerfSet, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -1977,6 +1981,9 @@ namespace srcrepair.gui
                         GT_NCF_EffectD.SelectedIndex = 0;
                         GT_NCF_MemPool.SelectedIndex = 0;
                         GT_NCF_Quality.SelectedIndex = 0;
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgIncorrectSourceType);
                         break;
                 }
                 MessageBox.Show(AppStrings.GT_PerfSet, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
