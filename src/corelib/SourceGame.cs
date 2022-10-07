@@ -180,10 +180,10 @@ namespace srcrepair.core
         {
             foreach (string Dir in GameDirs)
             {
-                string GamePath = Path.Combine(Dir, AppName);
-                if (Directory.Exists(Path.Combine(GamePath, SmallAppName)) && (File.Exists(Path.Combine(GamePath, GameBinaryFile)) || OSType != CurrentPlatform.OSType.Windows))
+                string GameDirectory = Path.Combine(Dir, AppName);
+                if (Directory.Exists(Path.Combine(GameDirectory, SmallAppName)) && (File.Exists(Path.Combine(GameDirectory, GameBinaryFile)) || OSType != CurrentPlatform.OSType.Windows))
                 {
-                    return GamePath;
+                    return GameDirectory;
                 }
             }
             return String.Empty;
