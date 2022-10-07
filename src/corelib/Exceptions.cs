@@ -59,4 +59,30 @@ namespace srcrepair.core
         /// <param name="InnerException">Reference to the inner exception.</param>
         public SteamPathNotFoundException(string Message, Exception InnerException) : base(Message, InnerException) { }
     }
+
+    /// <summary>
+    /// Class of custom SteamLangNameNotFoundException type.
+    /// </summary>
+    [Serializable]
+    public class SteamLangNameNotFoundException : Exception
+    {
+        /// <summary>
+        /// Parameter-less constructor of the SteamLangNameNotFoundException class.
+        /// </summary>
+        public SteamLangNameNotFoundException() { }
+
+        /// <summary>
+        /// Constructor of the SteamLangNameNotFoundException class with optional message.
+        /// </summary>
+        /// <param name="Message">Exception message.</param>
+        public SteamLangNameNotFoundException(string Message) : base(Message) { }
+
+        /// <summary>
+        /// Constructor of the SteamLangNameNotFoundException class with optional message and
+        /// a reference to the inner exception.
+        /// </summary>
+        /// <param name="Message">Exception message.</param>
+        /// <param name="InnerException">Reference to the inner exception.</param>
+        public SteamLangNameNotFoundException(string Message, Exception InnerException) : base(Message, InnerException) { }
+    }
 }
