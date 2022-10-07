@@ -149,7 +149,7 @@ namespace srcrepair.gui
                             };
 
                             // Adding file to main list and incrementing counter...
-                            Invoke((MethodInvoker)delegate () { CM_FTable.Items.Add(LvItem); });
+                            Invoke((MethodInvoker)delegate { CM_FTable.Items.Add(LvItem); });
                             TotalSize += DItem.Length;
                         }
 
