@@ -640,6 +640,9 @@ namespace srcrepair.gui
                     GT_GType1.Visible = false;
                     GT_GType2.Visible = true;
                     break;
+                default:
+                    Logger.Warn(DebugStrings.AppDbgIncorrectSourceType);
+                    break;
             }
         }
 
