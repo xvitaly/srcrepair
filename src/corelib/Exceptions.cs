@@ -14,23 +14,49 @@ namespace srcrepair.core
     [Serializable]
     public class VideoConfigException : Exception
     {
+        /// <summary>
+        /// Parameter-less constructor of the VideoConfigException class.
+        /// </summary>
         public VideoConfigException() { }
 
+        /// <summary>
+        /// Constructor of the VideoConfigException class with optional message.
+        /// </summary>
+        /// <param name="Message">Exception message.</param>
         public VideoConfigException(string Message) : base(Message) { }
 
+        /// <summary>
+        /// Constructor of the VideoConfigException class with optional message and a
+        /// reference to the inner exception.
+        /// </summary>
+        /// <param name="Message">Exception message.</param>
+        /// <param name="InnerException">Reference to the inner exception.</param>
         public VideoConfigException(string Message, Exception InnerException) : base(Message, InnerException) { }
     }
 
     /// <summary>
-    /// Class of custom VideoConfigException type.
+    /// Class of custom SteamPathNotFoundException type.
     /// </summary>
     [Serializable]
     public class SteamPathNotFoundException : Exception
     {
+        /// <summary>
+        /// Parameter-less constructor of the SteamPathNotFoundException class.
+        /// </summary>
         public SteamPathNotFoundException() { }
 
+        /// <summary>
+        /// Constructor of the SteamPathNotFoundException class with optional message.
+        /// </summary>
+        /// <param name="Message">Exception message.</param>
         public SteamPathNotFoundException(string Message) : base(Message) { }
 
+        /// <summary>
+        /// Constructor of the SteamPathNotFoundException class with optional message and a
+        /// reference to the inner exception.
+        /// </summary>
+        /// <param name="Message">Exception message.</param>
+        /// <param name="InnerException">Reference to the inner exception.</param>
         public SteamPathNotFoundException(string Message, Exception InnerException) : base(Message, InnerException) { }
     }
 }
