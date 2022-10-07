@@ -62,6 +62,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DebugStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="Exceptions.cs" />
     <Compile Include="FPSConfig.cs" />
     <Compile Include="ConfigManager.cs" />
     <Compile Include="CurrentApp.cs" />
