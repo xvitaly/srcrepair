@@ -172,7 +172,7 @@ namespace srcrepair.core
                         else
                         {
                             // Does not exists. Throwing exception...
-                            throw new NullReferenceException(DebugStrings.AppDbgExCoreStmManNoInstallPathDetected);
+                            throw new SteamPathNotFoundException(DebugStrings.AppDbgExCoreStmManNoInstallPathDetected);
                         }
                     }
                 }
@@ -210,7 +210,7 @@ namespace srcrepair.core
                         else
                         {
                             // Does not exists. Throwing exception...
-                            throw new NullReferenceException(DebugStrings.AppDbgExCoreStmManNoLangNameDetected);
+                            throw new SteamLangNameNotFoundException(DebugStrings.AppDbgExCoreStmManNoLangNameDetected);
                         }
                     }
                 }

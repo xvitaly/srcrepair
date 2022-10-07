@@ -663,7 +663,7 @@ namespace srcrepair.core
                 }
                 else
                 {
-                    throw new Exception(DebugStrings.AppDbgExCoreType1VideoRegOpenError);
+                    throw new VideoConfigException(DebugStrings.AppDbgExCoreType1VideoRegOpenError);
                 }
             }
         }
