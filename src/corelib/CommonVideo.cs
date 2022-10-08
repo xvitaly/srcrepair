@@ -294,12 +294,13 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Gets Cvar value of decimal type from video file.
+        /// Gets Cvar value of decimal type from video file. Supports
+        /// user-specified default value.
         /// </summary>
         /// <param name="CVar">Cvar name.</param>
         /// <param name="DefaultValue">Cvar default value.</param>
         /// <returns>Cvar value from video file.</returns>
-        protected decimal GetNCFDble(string CVar, decimal DefaultValue = 2.2M)
+        protected decimal GetNCFDble(string CVar, decimal DefaultValue)
         {
             try
             {
@@ -310,6 +311,17 @@ namespace srcrepair.core
                 Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
                 return DefaultValue;
             }
+        }
+
+        /// <summary>
+        /// Gets Cvar value of decimal type from video file.
+        /// </summary>
+        /// <param name="CVar">Cvar name.</param>
+        /// <param name="DefaultValue">Cvar default value.</param>
+        /// <returns>Cvar value from video file.</returns>
+        protected decimal GetNCFDble(string CVar)
+        {
+            return GetNCFDble(CVar, 2.2M);
         }
 
         /// <summary>
