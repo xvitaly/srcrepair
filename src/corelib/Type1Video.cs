@@ -702,11 +702,10 @@ namespace srcrepair.core
         /// Gets registry key, used for storing video settings.
         /// </summary>
         /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
-        /// <param name="ExpandPath">Allow to expand path.</param>
         /// <returns>Full registry key path.</returns>
-        public static string GetGameRegKey(string SAppName, bool ExpandPath = true)
+        public static string GetGameRegKey(string SAppName)
         {
-            return ExpandPath ? Path.Combine("Software", "Valve", "Source", SAppName, "Settings") : String.Format(@"Software\Valve\Source\{0}\Settings", SAppName);
+            return Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
         }
 
         /// <summary>
