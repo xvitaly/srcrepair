@@ -88,7 +88,7 @@ namespace srcrepair.core
         /// <param name="FullAppPath">Full path to application's directory</param>
         /// <param name="AppHUDDir">Full HUD directory installation path</param>
         /// <param name="HideOutdated">Enable hiding of outdated HUDs.</param>
-        public HUDManager(string GameID, string FullAppPath, string AppHUDDir, bool HideOutdated = true)
+        public HUDManager(string GameID, string FullAppPath, string AppHUDDir, bool HideOutdated)
         {
             // Initializing empty dictionary...
             HUDsAvailable = new Dictionary<string, HUDSingle>();
