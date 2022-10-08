@@ -73,7 +73,7 @@ namespace srcrepair.core
         /// <param name="CleanQuotes">Enable removal of quotes.</param>
         /// <param name="CleanSlashes">Enable removal of double slashes.</param>
         /// <returns>Clean string with removed special characters.</returns>
-        public static string CleanString(string RecvStr, bool CleanQuotes = false, bool CleanSlashes = false)
+        public static string CleanString(string RecvStr, bool CleanQuotes, bool CleanSlashes)
         {
             // Removing tabulations...
             while (RecvStr.IndexOf("\t") != -1)
@@ -113,6 +113,16 @@ namespace srcrepair.core
 
             // Return result with removal of leading and trailing white-spaces...
             return RecvStr.Trim();
+        }
+
+        /// <summary>
+        /// Remove different special characters from specified string.
+        /// </summary>
+        /// <param name="RecvStr">Source string for cleanup.</param>
+        /// <returns>Clean string with removed special characters.</returns>
+        public static string CleanString(string RecvStr)
+        {
+            return CleanString(RecvStr, false, false);
         }
 
         /// <summary>
