@@ -264,12 +264,13 @@ namespace srcrepair.core
         protected abstract string GetRawValue(string CVar);
 
         /// <summary>
-        /// Gets Cvar value of integer type from video file.
+        /// Gets Cvar value of integer type from video file. Supports
+        /// user-specified default value.
         /// </summary>
         /// <param name="CVar">Cvar name.</param>
         /// <param name="DefaultValue">Cvar default value.</param>
         /// <returns>Cvar value from video file.</returns>
-        protected int GetNCFDWord(string CVar, int DefaultValue = -1)
+        protected int GetNCFDWord(string CVar, int DefaultValue)
         {
             try
             {
@@ -280,6 +281,16 @@ namespace srcrepair.core
                 Logger.Error(Ex, DebugStrings.AppDbgExCoreVideoLoadCvar, CVar);
                 return DefaultValue;
             }
+        }
+
+        /// <summary>
+        /// Gets Cvar value of integer type from video file.
+        /// </summary>
+        /// <param name="CVar">Cvar name.</param>
+        /// <returns>Cvar value from video file.</returns>
+        protected int GetNCFDWord(string CVar)
+        {
+            return GetNCFDWord(CVar, -1);
         }
 
         /// <summary>
