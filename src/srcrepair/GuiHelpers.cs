@@ -57,7 +57,7 @@ namespace srcrepair.gui
         /// <param name="NoAuto">Disable automatically mark found files to deletion.</param>
         /// <param name="Recursive">Enable recursive cleanup.</param>
         /// <param name="ForceBackUp">Force backup file creation before running cleanup.</param>
-        public static void FormShowCleanup(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly = false, bool NoAuto = false, bool Recursive = true, bool ForceBackUp = false)
+        public static void FormShowCleanup(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly, bool NoAuto, bool Recursive, bool ForceBackUp)
         {
             if (!ProcessManager.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin)))
             {
@@ -70,6 +70,19 @@ namespace srcrepair.gui
             {
                 MessageBox.Show(String.Format(AppStrings.PS_AppRunning, CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        /// <summary>
+        /// Opens interactive cleanup window with default options.
+        /// </summary>
+        /// <param name="Paths">List of files and directories for cleanup.</param>
+        /// <param name="LText">Cleanup window title.</param>
+        /// <param name="CheckBin">Process name to be checked before cleanup.</param>
+        /// <param name="ResultMsg">Successful cleanup completion message text.</param>
+        /// <param name="BackUpDir">Path to directory for saving backups.</param>
+        public static void FormShowCleanup(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin)
+        {
+            FormShowCleanup(Paths, LText, ResultMsg, BackUpDir, CheckBin, false, false, true, false);
         }
 
         /// <summary>
