@@ -45,7 +45,7 @@ namespace srcrepair.core
         /// <param name="RtOutputFileName">Output file name with full path.</param>
         /// <param name="RtArchiveDirectoryName">Directory name inside of the final archive.</param>
         /// <param name="RtIsMandatory">If current target is mandatory.</param>
-        public ReportTarget(string RtProgram, string RtParameters, string RtOutputFileName, string RtArchiveDirectoryName, bool RtIsMandatory = false)
+        public ReportTarget(string RtProgram, string RtParameters, string RtOutputFileName, string RtArchiveDirectoryName, bool RtIsMandatory)
         {
             Program = RtProgram;
             Parameters = RtParameters;

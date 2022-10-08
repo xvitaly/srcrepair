@@ -46,14 +46,14 @@ namespace srcrepair.core
         private void SetTargets()
         {
             ReportTargets.Add(new ReportTarget(ReportStrings.MsInfoExe, ReportStrings.MsInfoParams, Path.Combine(TempDirectory, String.Format(ReportStrings.MsInfoOutput, CurrentUnixTime)), ReportStrings.MsInfoArchDirectory, true));
-            ReportTargets.Add(new ReportTarget(ReportStrings.DxDiagExe, ReportStrings.DxDiagParams, Path.Combine(TempDirectory, String.Format(ReportStrings.DxDiagOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
-            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.BasicInfoParams, Path.Combine(TempDirectory, String.Format(ReportStrings.BasicInfoOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
-            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.PingScParams, Path.Combine(TempDirectory, String.Format(ReportStrings.PingScOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
-            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.TracertScParams, Path.Combine(TempDirectory, String.Format(ReportStrings.TracertScOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
-            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.IpConfigParams, Path.Combine(TempDirectory, String.Format(ReportStrings.IpConfigOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
-            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.NetStatParams, Path.Combine(TempDirectory, String.Format(ReportStrings.NetStatOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
-            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.RoutesParams, Path.Combine(TempDirectory, String.Format(ReportStrings.RoutesOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
-            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.UsersParams, Path.Combine(TempDirectory, String.Format(ReportStrings.UsersOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory));
+            ReportTargets.Add(new ReportTarget(ReportStrings.DxDiagExe, ReportStrings.DxDiagParams, Path.Combine(TempDirectory, String.Format(ReportStrings.DxDiagOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory, false));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.BasicInfoParams, Path.Combine(TempDirectory, String.Format(ReportStrings.BasicInfoOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory, false));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.PingScParams, Path.Combine(TempDirectory, String.Format(ReportStrings.PingScOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory, false));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.TracertScParams, Path.Combine(TempDirectory, String.Format(ReportStrings.TracertScOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory, false));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.IpConfigParams, Path.Combine(TempDirectory, String.Format(ReportStrings.IpConfigOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory, false));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.NetStatParams, Path.Combine(TempDirectory, String.Format(ReportStrings.NetStatOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory, false));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.RoutesParams, Path.Combine(TempDirectory, String.Format(ReportStrings.RoutesOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory, false));
+            ReportTargets.Add(new ReportTarget(ReportStrings.CmdIntExe, ReportStrings.UsersParams, Path.Combine(TempDirectory, String.Format(ReportStrings.UsersOutput, CurrentUnixTime)), ReportStrings.GenericArchDirectory, false));
         }
 
         /// <summary>
