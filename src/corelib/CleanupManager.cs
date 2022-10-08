@@ -109,7 +109,7 @@ namespace srcrepair.core
         /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
         /// <param name="SelectedGame">Instance of SourceGame class with selected in main window game.</param>
         /// <param name="AllowUnsafe">Allow or disallow to use unsafe cleanup methods.</param>
-        public CleanupManager(string FullAppPath, SourceGame SelectedGame, bool AllowUnsafe = false)
+        public CleanupManager(string FullAppPath, SourceGame SelectedGame, bool AllowUnsafe)
         {
             // Filling some private fields...
             GamePath = SelectedGame.GamePath;
