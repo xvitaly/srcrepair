@@ -102,8 +102,8 @@ namespace srcrepair.core
         /// Start an external helper application.
         /// </summary>
         /// <param name="FileName">Full path to helper application.</param>
-        /// <param name="Elevated">Run with administrator privileges.</param>
-        void StartExternalHelper(string FileName, bool Elevated = false);
+        /// <param name="IsElevated">Run with administrator privileges.</param>
+        void StartExternalHelper(string FileName, bool IsElevated);
 
         /// <summary>
         /// Start the required application as the current user.

@@ -119,13 +119,13 @@ namespace srcrepair.core
         /// Starts an external helper application.
         /// </summary>
         /// <param name="FileName">Full path to helper application.</param>
-        /// <param name="Elevated">Run with administrator privileges.</param>
+        /// <param name="IsElevated">Run with administrator privileges.</param>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public virtual void StartExternalHelper(string FileName, bool Elevated = false)
+        public virtual void StartExternalHelper(string FileName, bool IsElevated)
         {
             if (File.Exists(FileName))
             {
-                if (Elevated) { StartElevatedProcess(FileName); } else { StartRegularProcess(FileName); }
+                if (IsElevated) { StartElevatedProcess(FileName); } else { StartRegularProcess(FileName); }
             }
             else
             {
