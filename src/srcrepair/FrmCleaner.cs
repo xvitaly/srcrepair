@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -144,7 +145,7 @@ namespace srcrepair.gui
                                 SubItems =
                                 {
                                     GuiHelpers.SclBytes(DItem.Length),
-                                    DItem.LastWriteTime.ToString()
+                                    DItem.LastWriteTime.ToString(CultureInfo.CurrentUICulture)
                                 }
                             };
 
