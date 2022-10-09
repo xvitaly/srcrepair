@@ -6,6 +6,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
@@ -121,7 +122,7 @@ namespace srcrepair.core
         /// <returns>Date in UnixTime format.</returns>
         public static string DateTime2Unix(DateTime DTime)
         {
-            return Math.Round((DTime - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime()).TotalSeconds, 0).ToString();
+            return Math.Round((DTime - new DateTime(1970, 1, 1, 0, 0, 0).ToLocalTime()).TotalSeconds, 0).ToString(CultureInfo.InvariantCulture);
         }
 
         /// <summary>
