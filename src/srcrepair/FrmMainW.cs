@@ -318,14 +318,14 @@ namespace srcrepair.gui
                                 if (ImpStr[0] != '/')
                                 {
                                     // Checking for value in source string...
-                                    if (ImpStr.IndexOf(" ") != -1)
+                                    if (ImpStr.IndexOf(" ", StringComparison.CurrentCulture) != -1)
                                     {
                                         // Extracting variable...
-                                        CVarName = ImpStr.Substring(0, ImpStr.IndexOf(" "));
-                                        ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ") + 1);
+                                        CVarName = ImpStr.Substring(0, ImpStr.IndexOf(" ", StringComparison.CurrentCulture));
+                                        ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ", StringComparison.CurrentCulture) + 1);
 
                                         // Extracting value (excluding commentaries if exists)...
-                                        CVarContent = ImpStr.IndexOf("//") >= 1 ? ImpStr.Substring(0, ImpStr.IndexOf("//") - 1) : ImpStr;
+                                        CVarContent = ImpStr.IndexOf("//", StringComparison.CurrentCulture) >= 1 ? ImpStr.Substring(0, ImpStr.IndexOf("//", StringComparison.CurrentCulture) - 1) : ImpStr;
 
                                         // Adding to table Cvar and its value...
                                         CE_Editor.Rows.Add(CVarName, CVarContent);
@@ -1227,7 +1227,7 @@ namespace srcrepair.gui
                     {
                         CleanDirs.AddRange(Targets);
                     }
-                    GuiHelpers.FormShowCleanup(CleanDirs, Title.ToLower(), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+                    GuiHelpers.FormShowCleanup(CleanDirs, Title.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
                 }
                 catch (Exception Ex)
                 {
