@@ -208,7 +208,7 @@ namespace srcrepair.core
                         if (RdStr.IndexOf("path", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
                             RdStr = StringsManager.CleanString(RdStr, true, true);
-                            RdStr = RdStr.Remove(0, RdStr.IndexOf(" ") + 1);
+                            RdStr = RdStr.Remove(0, RdStr.IndexOf(" ", StringComparison.CurrentCulture) + 1);
                             if (!String.IsNullOrWhiteSpace(RdStr) && Directory.Exists(RdStr)) { Result.Add(RdStr); }
                         }
                     }
