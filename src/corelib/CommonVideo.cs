@@ -342,7 +342,7 @@ namespace srcrepair.core
         protected static string ExtractCVFromLine(string LineA)
         {
             LineA = StringsManager.CleanString(LineA, true, false);
-            return LineA.Substring(LineA.LastIndexOf(" ")).Trim();
+            return LineA.Substring(LineA.LastIndexOf(" ", StringComparison.InvariantCulture)).Trim();
         }
     }
 }
