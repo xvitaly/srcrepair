@@ -309,9 +309,6 @@
   <data name="&gt;&gt;PrbMain.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="GttWrk.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>104, 17</value>
-  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -352,12 +349,6 @@
     <value>ClnWrk</value>
   </data>
   <data name="&gt;&gt;ClnWrk.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GttWrk.Name" xml:space="preserve">
-    <value>GttWrk</value>
-  </data>
-  <data name="&gt;&gt;GttWrk.Type" xml:space="preserve">
     <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

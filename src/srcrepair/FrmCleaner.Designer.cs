@@ -39,7 +39,6 @@
             this.CM_Cancel = new System.Windows.Forms.Button();
             this.ClnWrk = new System.ComponentModel.BackgroundWorker();
             this.PrbMain = new System.Windows.Forms.ProgressBar();
-            this.GttWrk = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // CM_WelcMsg
@@ -112,11 +111,6 @@
             resources.ApplyResources(this.PrbMain, "PrbMain");
             this.PrbMain.Name = "PrbMain";
             // 
-            // GttWrk
-            // 
-            this.GttWrk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GttWrk_DoWork);
-            this.GttWrk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GttWrk_RunWorkerCompleted);
-            // 
             // FrmCleaner
             // 
             this.AcceptButton = this.CM_Clean;
@@ -154,6 +148,5 @@
         private System.Windows.Forms.ColumnHeader FDate;
         private System.ComponentModel.BackgroundWorker ClnWrk;
         private System.Windows.Forms.ProgressBar PrbMain;
-        private System.ComponentModel.BackgroundWorker GttWrk;
     }
 }

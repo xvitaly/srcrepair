@@ -11,6 +11,7 @@ using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using NLog;
 using srcrepair.core;
@@ -114,6 +115,11 @@ namespace srcrepair.gui
         /// Gets or sets total files size (in bytes).
         /// </summary>
         private long TotalSize { get; set; } = 0;
+
+        /// <summary>
+        /// Gets or sets status of currently running process.
+        /// </summary>
+        private bool IsRunning { get; set; } = true;
 
         /// <summary>
         /// Gets full list of files for deletion.
@@ -222,20 +228,60 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Asynchronously checks candidates for deletion.
+        /// </summary>
+        private async Task FindCandidatesTask()
+        {
+            await Task.Run(() =>
+            {
+                DetectFilesForCleanup(CleanDirs, IsRecursive);
+            });
+        }
+
+        /// <summary>
+        /// Finalizes candidates find procedure.
+        /// </summary>
+        private void HandleCandidates()
+        {
+            // Showing estimated free space to be freed after removing all found files...
+            CM_Info.Text = String.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
+
+            // Checking if candidates are found...
+            if (CM_FTable.Items.Count == 0)
+            {
+                // Nothing found. Showing message and closing form...
+                MessageBox.Show(AppStrings.PS_LoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                CM_Clean.Enabled = false;
+                Close();
+            }
+            else
+            {
+                // At least one candidate found. Enabling cleanup button...
+                CM_Clean.Enabled = true;
+            }
+
+            // Changing state...
+            IsRunning = false;
+        }
+
+        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void FrmCleaner_Load(object sender, EventArgs e)
+        private async void FrmCleaner_Load(object sender, EventArgs e)
         {
-            // Changing window title...
+            // Setting form properties...
             Text = String.Format(Text, CleanInfo);
-            
-            // Starting searching for candidates...
-            if (!GttWrk.IsBusy) { CM_FTable.BeginUpdate(); GttWrk.RunWorkerAsync(); }
-
-            // Blocking selection if required...
             CM_FTable.Enabled = !IsReadOnly;
+
+            // Starting searching for candidates...
+            CM_FTable.BeginUpdate();
+            await FindCandidatesTask();
+            CM_FTable.EndUpdate();
+
+            // Handling candidates...
+            HandleCandidates();
         }
 
         /// <summary>
@@ -245,7 +291,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void CM_FTable_KeyDown(object sender, KeyEventArgs e)
         {
-            if (!GttWrk.IsBusy)
+            if (!IsRunning)
             {
                 // "Ctrl + A" pressed...
                 if (e.Control && e.KeyCode == Keys.A)
@@ -461,51 +507,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Finds candidates for deletion async.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void GttWrk_DoWork(object sender, DoWorkEventArgs e)
-        {
-            DetectFilesForCleanup(CleanDirs, IsRecursive);
-        }
-
-        /// <summary>
-        /// Finalizes candidates find procedure.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void GttWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            // Unlocking ListView...
-            CM_FTable.EndUpdate();
-
-            // Showing estimated of free space to be free after removing all found files...
-            CM_Info.Text = String.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
-
-            // Checking if candidates are found...
-            if (CM_FTable.Items.Count == 0)
-            {
-                // Nothing found. Showing message and closing form...
-                MessageBox.Show(AppStrings.PS_LoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                CM_Clean.Enabled = false;
-                Close();
-            }
-            else
-            {
-                // At least one candidate found. Enabling cleanup button...
-                CM_Clean.Enabled = true;
-            }
-        }
-
-        /// <summary>
         /// "Form close" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
         private void FrmCleaner_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && (ClnWrk.IsBusy || GttWrk.IsBusy);
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && IsRunning;
         }
     }
 }
