@@ -279,9 +279,6 @@
   <data name="&gt;&gt;CM_Cancel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="ClnWrk.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <metadata name="PrbMain.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -344,12 +341,6 @@
   </data>
   <data name="&gt;&gt;FDate.Type" xml:space="preserve">
     <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ClnWrk.Name" xml:space="preserve">
-    <value>ClnWrk</value>
-  </data>
-  <data name="&gt;&gt;ClnWrk.Type" xml:space="preserve">
-    <value>System.ComponentModel.BackgroundWorker, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmCleaner</value>

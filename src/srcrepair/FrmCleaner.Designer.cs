@@ -37,7 +37,6 @@
             this.CM_Info = new System.Windows.Forms.Label();
             this.CM_Clean = new System.Windows.Forms.Button();
             this.CM_Cancel = new System.Windows.Forms.Button();
-            this.ClnWrk = new System.ComponentModel.BackgroundWorker();
             this.PrbMain = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
@@ -99,13 +98,6 @@
             this.CM_Cancel.UseVisualStyleBackColor = true;
             this.CM_Cancel.Click += new System.EventHandler(this.CM_Cancel_Click);
             // 
-            // ClnWrk
-            // 
-            this.ClnWrk.WorkerReportsProgress = true;
-            this.ClnWrk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.ClnWrk_DoWork);
-            this.ClnWrk.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.ClnWrk_ProgressChanged);
-            this.ClnWrk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.ClnWrk_RunWorkerCompleted);
-            // 
             // PrbMain
             // 
             resources.ApplyResources(this.PrbMain, "PrbMain");
@@ -146,7 +138,6 @@
         private System.Windows.Forms.ColumnHeader FName;
         private System.Windows.Forms.ColumnHeader FSize;
         private System.Windows.Forms.ColumnHeader FDate;
-        private System.ComponentModel.BackgroundWorker ClnWrk;
         private System.Windows.Forms.ProgressBar PrbMain;
     }
 }

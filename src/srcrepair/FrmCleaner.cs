@@ -198,6 +198,7 @@ namespace srcrepair.gui
         {
             // Setting new status...
             CM_Info.Text = AppStrings.PS_ProcessPrepare;
+            IsRunning = true;
 
             // Disabling "Execute cleanup" button...
             CM_Clean.Text = AppStrings.PS_CleanInProgress;
@@ -208,6 +209,19 @@ namespace srcrepair.gui
             CM_Cancel.Enabled = false;
             CM_Cancel.Visible = false;
             PrbMain.Visible = true;
+        }
+
+        /// <summary>
+        /// Reports progress to progress bar on form.
+        /// </summary>
+        /// <param name="Progress">Progress tuple.</param>
+        private void ReportProgressChange(Tuple<int, String> Progress)
+        {
+            PrbMain.Value = Progress.Item1;
+            if (!String.IsNullOrEmpty(Progress.Item2))
+            {
+                CM_Info.Text = Progress.Item2;
+            }
         }
 
         /// <summary>
@@ -228,6 +242,72 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Removes all selected files and directories.
+        /// </summary>
+        /// <param name="DeleteQueue">List of files and directories for deletion.</param>
+        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        private void DeleteCandidates(List<String> DeleteQueue, IProgress<Tuple<int, String>> Progress)
+        {
+            // Creating backup if enabled or required by policy...
+            if (Properties.Settings.Default.PackBeforeCleanup || ForceBackUp)
+            {
+                Progress.Report(new Tuple<int, String>(0, AppStrings.PS_ProgressArchive));
+                if (!FileManager.CompressFiles(DeleteQueue, FileManager.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
+                {
+                    Logger.Error(AppStrings.PS_ArchFailed);
+                }
+            }
+
+            // Reporting new status...
+            Progress.Report(new Tuple<int, String>(0, AppStrings.PS_ProgressCleanup));
+
+            // Creating some counters...
+            int TotalFiles = DeleteQueue.Count;
+            int CurrentFile = 1, CurrentPercent;
+
+            // Removing all files from list...
+            foreach (string Fl in DeleteQueue)
+            {
+                try
+                {
+                    // Removing file if exists...
+                    if (File.Exists(Fl))
+                    {
+                        File.SetAttributes(Fl, FileAttributes.Normal);
+                        File.Delete(Fl);
+                    }
+
+                    // Reporting progress to form...
+                    CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
+                    if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
+                    {
+                        Progress.Report(new Tuple<int, string>(CurrentPercent, null));
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex);
+                }
+            }
+
+            // Removing empty directories if allowed...
+            if (Properties.Settings.Default.RemoveEmptyDirs)
+            {
+                foreach (string Dir in CleanDirs)
+                {
+                    try
+                    {
+                        FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         /// Asynchronously checks candidates for deletion.
         /// </summary>
         private async Task FindCandidatesTask()
@@ -239,10 +319,26 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Asynchronously deletes selected files.
+        /// </summary>
+        /// <param name="DeleteQueue">List of files and directories for deletion.</param>
+        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        private async Task DeleteCandidatesTask(List<String> DeleteQueue, IProgress<Tuple<int, string>> Progress)
+        {
+            await Task.Run(() =>
+            {
+                DeleteCandidates(DeleteQueue, Progress);
+            });
+        }
+
+        /// <summary>
         /// Finalizes candidates find procedure.
         /// </summary>
         private void HandleCandidates()
         {
+            // Changing state...
+            IsRunning = false;
+
             // Showing estimated free space to be freed after removing all found files...
             CM_Info.Text = String.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
 
@@ -259,9 +355,6 @@ namespace srcrepair.gui
                 // At least one candidate found. Enabling cleanup button...
                 CM_Clean.Enabled = true;
             }
-
-            // Changing state...
-            IsRunning = false;
         }
 
         /// <summary>
@@ -337,141 +430,42 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Removes all selected files and directories.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void ClnWrk_DoWork(object sender, DoWorkEventArgs e)
-        {
-            // Extracting list from arguments...
-            List<String> DeleteQueue = e.Argument as List<String>;
-
-            // Creating backup if enabled or required by policy...
-            if (Properties.Settings.Default.PackBeforeCleanup || ForceBackUp)
-            {
-                ClnWrk.ReportProgress(0, AppStrings.PS_ProgressArchive);
-                if (!FileManager.CompressFiles(DeleteQueue, FileManager.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
-                {
-                    Logger.Error(AppStrings.PS_ArchFailed);
-                }
-            }
-
-            // Reporting new status...
-            ClnWrk.ReportProgress(0, AppStrings.PS_ProgressCleanup);
-
-            // Creating some counters...
-            int TotalFiles = DeleteQueue.Count;
-            int CurrentFile = 1, CurrentPercent;
-
-            // Removing all files from list...
-            foreach (string Fl in DeleteQueue)
-            {
-                try
-                {
-                    // Removing file if exists...
-                    if (File.Exists(Fl))
-                    {
-                        File.SetAttributes(Fl, FileAttributes.Normal);
-                        File.Delete(Fl);
-                    }
-
-                    // Reporting progress to form...
-                    CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
-                    if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
-                    {
-                        ClnWrk.ReportProgress(CurrentPercent);
-                    }
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex);
-                }
-            }
-
-            // Removing empty directories if allowed...
-            if (Properties.Settings.Default.RemoveEmptyDirs)
-            {
-                foreach (string Dir in CleanDirs)
-                {
-                    try
-                    {
-                        FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
-                    }
-                    catch (Exception Ex)
-                    {
-                        Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
-                    }
-                }
-            }
-        }
-
-        /// <summary>
-        /// Reports progress to progress bar on form.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void ClnWrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            PrbMain.Value = e.ProgressPercentage;
-            if (e.UserState != null)
-            {
-                CM_Info.Text = (string)e.UserState;
-            }
-        }
-
-        /// <summary>
-        /// Finalizes cleanup procedure.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void ClnWrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            // Reporing new status...
-            CM_Info.Text = AppStrings.PS_ProgressFinished;
-
-            // Checking async task results...
-            if (e.Error == null)
-            {
-                MessageBox.Show(SuccessMessage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(e.Error, DebugStrings.AppDbgExClnQueueRun);
-            }
-
-            // Closing form...
-            Close();
-        }
-
-        /// <summary>
         /// "Execute cleanup" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void CM_Clean_Click(object sender, EventArgs e)
+        private async void CM_Clean_Click(object sender, EventArgs e)
         {
-            if (CM_FTable.Items.Count > 0)
+            if (MessageBox.Show(String.Format(AppStrings.PS_CleanupExecuteQ, CleanInfo), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if (CM_FTable.CheckedItems.Count > 0)
+                if (CM_FTable.Items.Count > 0)
                 {
-                    if (MessageBox.Show(String.Format(AppStrings.PS_CleanupExecuteQ, CleanInfo), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    if (CM_FTable.CheckedItems.Count > 0)
                     {
                         ChangeControlsState();
-                        if (!ClnWrk.IsBusy)
+                        try
                         {
-                            ClnWrk.RunWorkerAsync(GetDeleteFilesList());
+                            await DeleteCandidatesTask(GetDeleteFilesList(), new Progress<Tuple<int, string>>(ReportProgressChange));
+                            CM_Info.Text = AppStrings.PS_ProgressFinished;
+                            MessageBox.Show(SuccessMessage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
+                        catch (Exception Ex)
+                        {
+                            Logger.Error(Ex, DebugStrings.AppDbgExClnQueueRun);
+                            MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        IsRunning = false;
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show(AppStrings.PS_SelectItemsMsg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show(AppStrings.PS_SelectItemsMsg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.PS_LoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.PS_LoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
