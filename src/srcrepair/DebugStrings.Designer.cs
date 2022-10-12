@@ -628,15 +628,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RepGen Worker is busy. Can&apos;t start build sequence..
-        /// </summary>
-        internal static string AppDbgExRepWrkBusy {
-            get {
-                return ResourceManager.GetString("AppDbgExRepWrkBusy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while removing files..
         /// </summary>
         internal static string AppDbgExRmRf {

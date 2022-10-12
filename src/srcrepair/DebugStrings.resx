@@ -306,9 +306,6 @@
   <data name="AppDbgExRepPack" xml:space="preserve">
     <value>Exception while trying to pack all generated logs to a single Zip archive.</value>
   </data>
-  <data name="AppDbgExRepWrkBusy" xml:space="preserve">
-    <value>RepGen Worker is busy. Can't start build sequence.</value>
-  </data>
   <data name="AppDbgExRmRf" xml:space="preserve">
     <value>Exception while removing files.</value>
   </data>
