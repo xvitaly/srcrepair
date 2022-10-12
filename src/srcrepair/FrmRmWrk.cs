@@ -98,7 +98,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Removes all files and directories recursively from specified directories.
         /// </summary>
-        /// <param name="Arguments">List of files and directories for cleanup.</param>
+        /// <param name="Arguments">List directories for cleanup.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
         private void CleanupFiles(List<String> Arguments, IProgress<int> Progress)
         {
@@ -167,9 +167,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Asynchronously deletes selected files.
+        /// Asynchronously deletes all files and directories recursively from specified
+        /// directories.
         /// </summary>
-        /// <param name="Arguments">List of files and directories for cleanup.</param>
+        /// <param name="Arguments">List directories for cleanup.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
         private async Task CleanupFilesTask(List<String> Arguments, IProgress<int> Progress)
         {
