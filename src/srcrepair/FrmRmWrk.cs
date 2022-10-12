@@ -6,9 +6,9 @@
 
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Windows.Forms;
 using System.IO;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 using NLog;
 using srcrepair.core;
 
@@ -96,29 +96,12 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Form create" event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void FrmRmWrk_Load(object sender, EventArgs e)
-        {
-            // Starting async removal sequence...
-            if (!RW_Wrk.IsBusy)
-            {
-                RW_Wrk.RunWorkerAsync(RemDirs);
-            }
-        }
-
-        /// <summary>
         /// Removes all files and directories recursively from specified directories.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void RW_Wrk_DoWork(object sender, DoWorkEventArgs e)
+        /// <param name="Arguments">List of files and directories for cleanup.</param>
+        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        private void CleanupFiles(List<String> Arguments, IProgress<int> Progress)
         {
-            // Parsing arguments list...
-            List<String> Arguments = e.Argument as List<String>;
-
             // Searching for candidates...
             List<string> DeleteQueue = DetectFilesForCleanup(Arguments);
 
@@ -137,12 +120,12 @@ namespace srcrepair.gui
                         File.SetAttributes(Fl, FileAttributes.Normal);
                         File.Delete(Fl);
                     }
-                    
+
                     // Reporting progress to form...
                     CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
                     if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
                     {
-                        RW_Wrk.ReportProgress(CurrentPercent);
+                        Progress.Report(CurrentPercent);
                     }
                 }
                 catch (Exception Ex)
@@ -168,29 +151,51 @@ namespace srcrepair.gui
         /// <summary>
         /// Reports progress to progress bar on form.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void RW_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        /// <param name="Progress">Progress tuple.</param>
+        private void ReportCleanupProgress(int Progress)
         {
-            RW_PrgBr.Value = e.ProgressPercentage;
+            RW_PrgBr.Value = Progress;
         }
 
         /// <summary>
         /// Finalizes cleanup procedure.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void RW_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        private void FinalizeCleanup()
         {
             IsRunning = false;
-
-            if (e.Error != null)
-            {
-                MessageBox.Show(AppStrings.RW_RmException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(e.Error, DebugStrings.AppDbgExRmRf);
-            }
-
             Close();
+        }
+
+        /// <summary>
+        /// Asynchronously deletes selected files.
+        /// </summary>
+        /// <param name="Arguments">List of files and directories for cleanup.</param>
+        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        private async Task CleanupFilesTask(List<String> Arguments, IProgress<int> Progress)
+        {
+            await Task.Run(() =>
+            {
+                CleanupFiles(Arguments, Progress);
+            });
+        }
+
+        /// <summary>
+        /// "Form create" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private async void FrmRmWrk_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                await CleanupFilesTask(RemDirs, new Progress<int>(ReportCleanupProgress));
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExRmRf);
+                MessageBox.Show(AppStrings.RW_RmException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            FinalizeCleanup();
         }
 
         /// <summary>
@@ -201,7 +206,7 @@ namespace srcrepair.gui
         private void FrmRmWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Blocking ability to close form window during cleanup process...
-            e.Cancel = IsRunning;
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && IsRunning;
         }
     }
 }

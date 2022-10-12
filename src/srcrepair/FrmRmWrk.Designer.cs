@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRmWrk));
             this.RW_PrgBr = new System.Windows.Forms.ProgressBar();
             this.RW_WlcMsg = new System.Windows.Forms.Label();
-            this.RW_Wrk = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // RW_PrgBr
@@ -43,13 +42,6 @@
             // 
             resources.ApplyResources(this.RW_WlcMsg, "RW_WlcMsg");
             this.RW_WlcMsg.Name = "RW_WlcMsg";
-            // 
-            // RW_Wrk
-            // 
-            this.RW_Wrk.WorkerReportsProgress = true;
-            this.RW_Wrk.DoWork += new System.ComponentModel.DoWorkEventHandler(this.RW_Wrk_DoWork);
-            this.RW_Wrk.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.RW_Wrk_ProgressChanged);
-            this.RW_Wrk.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.RW_Wrk_RunWorkerCompleted);
             // 
             // FrmRmWrk
             // 
@@ -74,6 +66,5 @@
 
         private System.Windows.Forms.ProgressBar RW_PrgBr;
         private System.Windows.Forms.Label RW_WlcMsg;
-        private System.ComponentModel.BackgroundWorker RW_Wrk;
     }
 }
