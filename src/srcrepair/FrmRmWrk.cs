@@ -151,7 +151,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Reports progress to progress bar on form.
         /// </summary>
-        /// <param name="Progress">Progress tuple.</param>
+        /// <param name="Progress">Current progress percentage.</param>
         private void ReportCleanupProgress(int Progress)
         {
             RW_PrgBr.Value = Progress;
