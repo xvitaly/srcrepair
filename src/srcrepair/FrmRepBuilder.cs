@@ -5,9 +5,9 @@
 */
 
 using System;
-using System.ComponentModel;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ionic.Zip;
 using NLog;
@@ -100,7 +100,8 @@ namespace srcrepair.gui
         /// <summary>
         /// Creates compressed report and saves it to disk.
         /// </summary>
-        private void RepCreateReport()
+        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        private void RepCreateReport(IProgress<int> Progress)
         {
             using (ZipFile ZBkUp = new ZipFile(RepMan.ReportArchiveName, Encoding.UTF8))
             {
@@ -116,7 +117,7 @@ namespace srcrepair.gui
                     CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
                     if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
                     {
-                        BwGen.ReportProgress(CurrentPercent);
+                        Progress.Report(CurrentPercent);
                     }
 
                     if (File.Exists(RepTarget.OutputFileName))
@@ -236,66 +237,26 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Generates report in a separate thread.
+        /// Asynchronously generates reports.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BwGen_DoWork(object sender, DoWorkEventArgs e)
+        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        private async Task CreateReportTask(IProgress<int> Progress)
         {
-            // Creating directories if does not exists...
-            RepCreateDirectories();
-
-            // Creating Zip archive...
-            RepCreateReport();
-
-            // Removing temporary files...
-            RepCleanupDirectories();
+            await Task.Run(() =>
+            {
+                RepCreateDirectories();
+                RepCreateReport(Progress);
+                RepCleanupDirectories();
+            });
         }
 
         /// <summary>
         /// Reports progress to progress bar on form.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void BwGen_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        /// <param name="Progress">Current progress percentage.</param>
+        private void ReportProgress(int Progress)
         {
-            RB_Progress.Value = e.ProgressPercentage;
-        }
-
-        /// <summary>
-        /// Finalizes report generating procedure.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void BwGen_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            RepWindowFinalize();
-
-            if (e.Error == null)
-            {
-                if (File.Exists(RepMan.ReportArchiveName))
-                {
-                    try
-                    {
-                        MessageBox.Show(String.Format(AppStrings.RPB_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Platform.OpenExplorer(RepMan.ReportArchiveName);
-                    }
-                    catch (Exception Ex)
-                    {
-                        Logger.Warn(Ex, DebugStrings.AppDbgExRepFm);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.RPB_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Logger.Error(e.Error, DebugStrings.AppDbgExRepPack);
-                RepRemoveArchive();
-            }
+            RB_Progress.Value = Progress;
         }
 
         /// <summary>
@@ -303,19 +264,37 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void GenerateNow_Click(object sender, EventArgs e)
+        private async void GenerateNow_Click(object sender, EventArgs e)
         {
             if (!IsCompleted)
             {
-                RepWindowStart();
-
-                if (!BwGen.IsBusy)
+                try
                 {
-                    BwGen.RunWorkerAsync();
+                    RepWindowStart();
+                    await CreateReportTask(new Progress<int>(ReportProgress));
+                    RepWindowFinalize();
+                    if (File.Exists(RepMan.ReportArchiveName))
+                    {
+                        try
+                        {
+                            MessageBox.Show(String.Format(AppStrings.RPB_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Platform.OpenExplorer(RepMan.ReportArchiveName);
+                        }
+                        catch (Exception Ex)
+                        {
+                            Logger.Warn(Ex, DebugStrings.AppDbgExRepFm);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
-                else
+                catch (Exception Ex)
                 {
-                    Logger.Warn(DebugStrings.AppDbgExRepWrkBusy);
+                    Logger.Error(Ex, DebugStrings.AppDbgExRepPack);
+                    MessageBox.Show(AppStrings.RPB_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    RepRemoveArchive();
                 }
             }
             else
@@ -332,7 +311,7 @@ namespace srcrepair.gui
         private void FrmRepBuilder_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Blocking ability to close form window during report generating process...
-            e.Cancel = BwGen.IsBusy;
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && !IsCompleted;
         }
     }
 }
