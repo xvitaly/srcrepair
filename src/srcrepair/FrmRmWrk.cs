@@ -98,12 +98,12 @@ namespace srcrepair.gui
         /// <summary>
         /// Removes all files and directories recursively from specified directories.
         /// </summary>
-        /// <param name="Arguments">List directories for cleanup.</param>
+        /// <param name="CleanDirs">List directories for cleanup.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private void CleanupFiles(List<String> Arguments, IProgress<int> Progress)
+        private void CleanupFiles(List<String> CleanDirs, IProgress<int> Progress)
         {
             // Searching for candidates...
-            List<string> DeleteQueue = DetectFilesForCleanup(Arguments);
+            List<string> DeleteQueue = DetectFilesForCleanup(CleanDirs);
 
             // Creating some counters...
             int TotalFiles = DeleteQueue.Count;
@@ -135,7 +135,7 @@ namespace srcrepair.gui
             }
 
             // Removing empty directories after files removal...
-            foreach (string Dir in Arguments)
+            foreach (string Dir in CleanDirs)
             {
                 try
                 {
@@ -170,13 +170,13 @@ namespace srcrepair.gui
         /// Asynchronously deletes all files and directories recursively from specified
         /// directories.
         /// </summary>
-        /// <param name="Arguments">List directories for cleanup.</param>
+        /// <param name="CleanDirs">List directories for cleanup.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task CleanupFilesTask(List<String> Arguments, IProgress<int> Progress)
+        private async Task CleanupFilesTask(List<String> CleanDirs, IProgress<int> Progress)
         {
             await Task.Run(() =>
             {
-                CleanupFiles(Arguments, Progress);
+                CleanupFiles(CleanDirs, Progress);
             });
         }
 
