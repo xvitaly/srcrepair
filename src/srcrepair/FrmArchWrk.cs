@@ -5,12 +5,11 @@
 */
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using NLog;
 using Ionic.Zip;
+using NLog;
 
 namespace srcrepair.gui
 {
@@ -40,6 +39,82 @@ namespace srcrepair.gui
         private string DestinationDirectory { get; set; }
 
         /// <summary>
+        /// Extracts archive to specified destination directory.
+        /// </summary>
+        /// <param name="ArchName">Archive name with full path.</param>
+        /// <param name="DestDirectory">Destination directory.</param>
+        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        private void UnpackArchive(string ArchName, string DestDirectory, IProgress<int> Progress)
+        {
+            // Checking if archive file exists...
+            if (File.Exists(ArchName))
+            {
+                // Opening archive...
+                using (ZipFile Zip = ZipFile.Read(ArchName))
+                {
+                    // Creating some counters...
+                    int TotalFiles = Zip.Count;
+                    int CurrentFile = 1, CurrentPercent = 0;
+
+                    // Unpacking archive contents...
+                    foreach (ZipEntry ZFile in Zip)
+                    {
+                        try
+                        {
+                            // Extracting file, then counting and reporting progress...
+                            ZFile.Extract(DestDirectory, ExtractExistingFileAction.OverwriteSilently);
+                            CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
+                            if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
+                            {
+                                Progress.Report(CurrentPercent);
+                            }
+                        }
+                        catch (Exception Ex)
+                        {
+                            Logger.Warn(Ex);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                throw new FileNotFoundException(AppStrings.AR_BkgWrkExText, ArchName);
+            }
+        }
+
+        /// <summary>
+        /// Asynchronously extracts archive to specified destination directory.
+        /// </summary>
+        /// <param name="ArchName">Archive name with full path.</param>
+        /// <param name="DestDirectory">Destination directory.</param>
+        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        private async Task UnpackArchiveTask(string ArchName, string DestDirectory, IProgress<int> Progress)
+        {
+            await Task.Run(() =>
+            {
+                UnpackArchive(ArchName, DestDirectory, Progress);
+            });
+        }
+
+        /// <summary>
+        /// Reports progress to progress bar on form.
+        /// </summary>
+        /// <param name="Progress">Current progress percentage.</param>
+        private void ReportUnpackProgress(int Progress)
+        {
+            AR_PrgBr.Value = Progress;
+        }
+
+        /// <summary>
+        /// Finalizes archive unpacking procedure.
+        /// </summary>
+        private void FinalizeUnpack()
+        {
+            IsRunning = false;
+            Close();
+        }
+
+        /// <summary>
         /// FrmArchWrk class constructor.
         /// </summary>
         /// <param name="A">Full path to archive.</param>
@@ -56,87 +131,18 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void FrmArchWrk_Load(object sender, EventArgs e)
+        private async void FrmArchWrk_Load(object sender, EventArgs e)
         {
-            // Starting async unpack sequence...
-            if (!AR_Wrk.IsBusy)
+            try
             {
-                AR_Wrk.RunWorkerAsync(new List<String> { ArchiveName, DestinationDirectory });
+                await UnpackArchiveTask(ArchiveName, DestinationDirectory, new Progress<int>(ReportUnpackProgress));
             }
-        }
-
-        /// <summary>
-        /// Extracts archive to specified destination directory.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void AR_Wrk_DoWork(object sender, DoWorkEventArgs e)
-        {
-            // Parsing arguments list...
-            List<String> Arguments = e.Argument as List<String>;
-
-            // Checking if archive file exists...
-            if (File.Exists(Arguments[0]))
+            catch (Exception Ex)
             {
-                // Opening archive...
-                using (ZipFile Zip = ZipFile.Read(Arguments[0]))
-                {
-                    // Creating some counters...
-                    int TotalFiles = Zip.Count;
-                    int CurrentFile = 1, CurrentPercent = 0;
-                    
-                    // Unpacking archive contents...
-                    foreach (ZipEntry ZFile in Zip)
-                    {
-                        try
-                        {
-                            // Extracting file, then counting and reporting progress...
-                            ZFile.Extract(Arguments[1], ExtractExistingFileAction.OverwriteSilently);
-                            CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
-                            if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
-                            {
-                                AR_Wrk.ReportProgress(CurrentPercent);
-                            }
-                        }
-                        catch (Exception Ex)
-                        {
-                            Logger.Warn(Ex);
-                        }
-                    }
-                }
-            }
-            else
-            {
-                throw new FileNotFoundException(AppStrings.AR_BkgWrkExText, Arguments[0]);
-            }
-        }
-
-        /// <summary>
-        /// Reports progress to progress bar on form.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Additional arguments.</param>
-        private void AR_Wrk_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            AR_PrgBr.Value = e.ProgressPercentage;
-        }
-
-        /// <summary>
-        /// Finalizes unpacking procedure.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Completion arguments and results.</param>
-        private void AR_Wrk_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            IsRunning = false;
-
-            if (e.Error != null)
-            {
+                Logger.Error(Ex, DebugStrings.AppDbgExArWrkUnpack);
                 MessageBox.Show(AppStrings.AR_UnpackException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(e.Error, DebugStrings.AppDbgExArWrkUnpack);
             }
-
-            Close();
+            FinalizeUnpack();
         }
 
         /// <summary>
@@ -147,7 +153,7 @@ namespace srcrepair.gui
         private void FrmArchWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Blocking ability to close form window during extraction process...
-            e.Cancel = IsRunning;
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && IsRunning;
         }
     }
 }
