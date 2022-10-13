@@ -39,6 +39,18 @@ namespace srcrepair.gui
         private string DestinationDirectory { get; set; }
 
         /// <summary>
+        /// FrmArchWrk class constructor.
+        /// </summary>
+        /// <param name="A">Full path to archive.</param>
+        /// <param name="D">Full destination path.</param>
+        public FrmArchWrk(string A, string D)
+        {
+            InitializeComponent();
+            ArchiveName = A;
+            DestinationDirectory = D;
+        }
+
+        /// <summary>
         /// Extracts archive to specified destination directory.
         /// </summary>
         /// <param name="ArchName">Archive name with full path.</param>
@@ -112,18 +124,6 @@ namespace srcrepair.gui
         {
             IsRunning = false;
             Close();
-        }
-
-        /// <summary>
-        /// FrmArchWrk class constructor.
-        /// </summary>
-        /// <param name="A">Full path to archive.</param>
-        /// <param name="D">Full destination path.</param>
-        public FrmArchWrk(string A, string D)
-        {
-            InitializeComponent();
-            ArchiveName = A;
-            DestinationDirectory = D;
         }
 
         /// <summary>
