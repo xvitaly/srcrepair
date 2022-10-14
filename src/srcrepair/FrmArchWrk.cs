@@ -66,7 +66,7 @@ namespace srcrepair.gui
                 {
                     // Creating some counters...
                     int TotalFiles = Zip.Count;
-                    int CurrentFile = 1, CurrentPercent = 0;
+                    int CurrentFile = 1, CurrentPercent = 0, PreviousPercent = 0;
 
                     // Unpacking archive contents...
                     foreach (ZipEntry ZFile in Zip)
@@ -76,8 +76,9 @@ namespace srcrepair.gui
                             // Extracting file, then counting and reporting progress...
                             ZFile.Extract(DestDirectory, ExtractExistingFileAction.OverwriteSilently);
                             CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
-                            if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
+                            if ((CurrentPercent >= 0) && (CurrentPercent <= 100) && (CurrentPercent > PreviousPercent))
                             {
+                                PreviousPercent = CurrentPercent;
                                 Progress.Report(CurrentPercent);
                             }
                         }
