@@ -107,7 +107,7 @@ namespace srcrepair.gui
             {
                 // Creating some counters...
                 int TotalFiles = RepMan.ReportTargets.Count;
-                int CurrentFile = 1, CurrentPercent;
+                int CurrentFile = 1, CurrentPercent, PreviousPercent = 0;
 
                 // Adding generic report files...
                 foreach (ReportTarget RepTarget in RepMan.ReportTargets)
@@ -115,8 +115,9 @@ namespace srcrepair.gui
                     ProcessManager.StartProcessAndWait(RepTarget.Program, String.Format(RepTarget.Parameters, RepTarget.OutputFileName));
 
                     CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
-                    if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
+                    if ((CurrentPercent >= 0) && (CurrentPercent <= 100) && (CurrentPercent > PreviousPercent))
                     {
+                        PreviousPercent = CurrentPercent;
                         Progress.Report(CurrentPercent);
                     }
 
