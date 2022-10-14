@@ -107,7 +107,7 @@ namespace srcrepair.gui
 
             // Creating some counters...
             int TotalFiles = DeleteQueue.Count;
-            int CurrentFile = 1, CurrentPercent;
+            int CurrentFile = 1, CurrentPercent, PreviousPercent = 0;
 
             // Removing all files from list...
             foreach (string Fl in DeleteQueue)
@@ -123,8 +123,9 @@ namespace srcrepair.gui
 
                     // Reporting progress to form...
                     CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
-                    if ((CurrentPercent >= 0) && (CurrentPercent <= 100))
+                    if ((CurrentPercent >= 0) && (CurrentPercent <= 100) && (CurrentPercent > PreviousPercent))
                     {
+                        PreviousPercent = CurrentPercent;
                         Progress.Report(CurrentPercent);
                     }
                 }
