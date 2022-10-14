@@ -66,7 +66,7 @@ namespace srcrepair.gui
                 {
                     // Creating some counters...
                     int TotalFiles = Zip.Count;
-                    int CurrentFile = 1, CurrentPercent = 0, PreviousPercent = 0;
+                    int CurrentFile = 1, CurrentPercent, PreviousPercent = 0;
 
                     // Unpacking archive contents...
                     foreach (ZipEntry ZFile in Zip)
