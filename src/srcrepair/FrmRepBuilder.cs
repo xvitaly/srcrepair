@@ -238,6 +238,16 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Handles errors during report generation.
+        /// </summary>
+        private void RepWindowError()
+        {
+            RepWindowFinalize();
+            RepRemoveArchive();
+            Close();
+        }
+
+        /// <summary>
         /// Asynchronously generates reports.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
@@ -295,9 +305,7 @@ namespace srcrepair.gui
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExRepPack);
                     MessageBox.Show(AppStrings.RPB_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    RepRemoveArchive();
-                    IsCompleted = true;
-                    Close();
+                    RepWindowError();
                 }
             }
             else
