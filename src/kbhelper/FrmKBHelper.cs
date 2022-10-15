@@ -27,23 +27,27 @@ namespace srcrepair.gui.kbhelper
 
         /// <summary>
         /// Stores the value of the registry key to disable only the left WIN key.
+        /// Value: 00 00 00 00 00 00 00 00 02 00 00 00 00 00 5B E0 00 00 00 00.
         /// </summary>
         private readonly byte[] RegLWinValue;
 
         /// <summary>
         /// Stores the value of the registry key to disable both WIN keys.
+        /// Value: 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5B E0 00 00 5C E0 00 00 00 00.
         /// </summary>
         private readonly byte[] RegBothWinValue;
 
         /// <summary>
         /// Stores the value of the registry key to disable the right WIN
         /// and the MENU keys.
+        /// Value: 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5C E0 00 00 5D E0 00 00 00 00.
         /// </summary>
         private readonly byte[] RegRWinMenuValue;
 
         /// <summary>
         /// Stores the value of the registry key to disable both WIN and
         /// the MENU keys.
+        /// Value: 00 00 00 00 00 00 00 00 04 00 00 00 00 00 5B E0 00 00 5C E0 00 00 5D E0 00 00 00 00.
         /// </summary>
         private readonly byte[] RegBothWinMenuValue;
 
@@ -132,7 +136,6 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_LWIN_Click(object sender, EventArgs e)
         {
-            // 00 00 00 00 00 00 00 00 02 00 00 00 00 00 5B E0 00 00 00 00
             InstallKBS(RegLWinValue, ((Button)sender).Text.ToLowerInvariant());
         }
 
@@ -143,7 +146,6 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_BWIN_Click(object sender, EventArgs e)
         {
-            // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5B E0 00 00 5C E0 00 00 00 00
             InstallKBS(RegBothWinValue, ((Button)sender).Text.ToLowerInvariant());
         }
 
@@ -154,7 +156,6 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_RWinMnu_Click(object sender, EventArgs e)
         {
-            // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5C E0 00 00 5D E0 00 00 00 00
             InstallKBS(RegRWinMenuValue, ((Button)sender).Text.ToLowerInvariant());
         }
 
@@ -165,7 +166,6 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_BWinMnu_Click(object sender, EventArgs e)
         {
-            // 00 00 00 00 00 00 00 00 04 00 00 00 00 00 5B E0 00 00 5C E0 00 00 5D E0 00 00 00 00
             InstallKBS(RegBothWinMenuValue, ((Button)sender).Text.ToLowerInvariant());
         }
 
@@ -176,7 +176,6 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_Restore_Click(object sender, EventArgs e)
         {
-            // Restoring default settings by removing manual overrides...
             UninstallKBS();
         }
     }
