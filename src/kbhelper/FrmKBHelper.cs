@@ -26,11 +26,37 @@ namespace srcrepair.gui.kbhelper
         private const string RegKeyName = @"SYSTEM\CurrentControlSet\Control\Keyboard Layout";
 
         /// <summary>
+        /// Stores the value of the registry key to disable only the left WIN key.
+        /// </summary>
+        private readonly byte[] RegLWinValue;
+
+        /// <summary>
+        /// Stores the value of the registry key to disable both WIN keys.
+        /// </summary>
+        private readonly byte[] RegBothWinValue;
+
+        /// <summary>
+        /// Stores the value of the registry key to disable the right WIN
+        /// and the MENU keys.
+        /// </summary>
+        private readonly byte[] RegRWinMenuValue;
+
+        /// <summary>
+        /// Stores the value of the registry key to disable both WIN and
+        /// the MENU keys.
+        /// </summary>
+        private readonly byte[] RegBothWinMenuValue;
+
+        /// <summary>
         /// FrmKBHelper class constructor.
         /// </summary>
         public FrmKBHelper()
         {
             InitializeComponent();
+            RegLWinValue = new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 91, 224, 0, 0, 0, 0 };
+            RegBothWinValue = new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 92, 224, 0, 0, 0, 0 };
+            RegRWinMenuValue = new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 93, 224, 0, 0, 0, 0 };
+            RegBothWinMenuValue = new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 92, 224, 0, 0, 93, 224, 0, 0, 0, 0 };
         }
 
         /// <summary>
@@ -106,9 +132,8 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_LWIN_Click(object sender, EventArgs e)
         {
-            // Disable left Windows button...
             // 00 00 00 00 00 00 00 00 02 00 00 00 00 00 5B E0 00 00 00 00
-            InstallKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 91, 224, 0, 0, 0, 0 }, ((Button)sender).Text.ToLowerInvariant());
+            InstallKBS(RegLWinValue, ((Button)sender).Text.ToLowerInvariant());
         }
 
         /// <summary>
@@ -118,9 +143,8 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_BWIN_Click(object sender, EventArgs e)
         {
-            // Disable both Windows keys...
             // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5B E0 00 00 5C E0 00 00 00 00
-            InstallKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 92, 224, 0, 0, 0, 0 }, ((Button)sender).Text.ToLowerInvariant());
+            InstallKBS(RegBothWinValue, ((Button)sender).Text.ToLowerInvariant());
         }
 
         /// <summary>
@@ -130,9 +154,8 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_RWinMnu_Click(object sender, EventArgs e)
         {
-            // Disable right Windows and Context keys...
             // 00 00 00 00 00 00 00 00 03 00 00 00 00 00 5C E0 00 00 5D E0 00 00 00 00
-            InstallKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 91, 224, 0, 0, 93, 224, 0, 0, 0, 0 }, ((Button)sender).Text.ToLowerInvariant());
+            InstallKBS(RegRWinMenuValue, ((Button)sender).Text.ToLowerInvariant());
         }
 
         /// <summary>
@@ -142,9 +165,8 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_BWinMnu_Click(object sender, EventArgs e)
         {
-            // Disable both Windows and Context buttons...
             // 00 00 00 00 00 00 00 00 04 00 00 00 00 00 5B E0 00 00 5C E0 00 00 5D E0 00 00 00 00
-            InstallKBS(new byte[] { 0, 0, 0, 0, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 92, 224, 0, 0, 93, 224, 0, 0, 0, 0 }, ((Button)sender).Text.ToLowerInvariant());
+            InstallKBS(RegBothWinMenuValue, ((Button)sender).Text.ToLowerInvariant());
         }
 
         /// <summary>
