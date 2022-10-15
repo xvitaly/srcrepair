@@ -296,6 +296,8 @@ namespace srcrepair.gui
                     Logger.Error(Ex, DebugStrings.AppDbgExRepPack);
                     MessageBox.Show(AppStrings.RPB_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     RepRemoveArchive();
+                    IsCompleted = true;
+                    Close();
                 }
             }
             else
