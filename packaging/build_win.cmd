@@ -39,7 +39,6 @@ if [%CI_HASH%] == [] (
     "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\srcrepair.exe
     "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\kbhelper.exe
     "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\corelib.dll
-    "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\DotNetZip.dll
     "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\NLog.dll
     "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\ru\srcrepair.resources.dll
     "%ProgramFiles(x86)%\GnuPG\bin\gpg.exe" --sign --detach-sign --default-key %GPGKEY% ..\src\srcrepair\bin\Release\ru\kbhelper.resources.dll
@@ -49,7 +48,7 @@ echo Compiling Installer...
 "%ProgramFiles(x86)%\Inno Setup 6\ISCC.exe" inno\srcrepair.iss
 
 echo Generating archive for non-Windows platforms...
-"%PROGRAMFILES%\7-Zip\7z.exe" a -tzip -mx9 -mm=Deflate -x!*.ico -x!DotNetZip.xml -x!NLog.xml "results\%PREFIX%_other.zip" ".\..\src\srcrepair\bin\Release\*"
+"%PROGRAMFILES%\7-Zip\7z.exe" a -tzip -mx9 -mm=Deflate -x!*.ico -x!NLog.xml "results\%PREFIX%_other.zip" ".\..\src\srcrepair\bin\Release\*"
 
 echo Signing built artifacts...
 if [%CI_HASH%] == [] (

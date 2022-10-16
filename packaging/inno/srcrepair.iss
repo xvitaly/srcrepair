@@ -66,7 +66,6 @@ Source: "{#BASEDIR}\bin\Release\huds.xml"; DestDir: "{app}"; Flags: ignoreversio
 Source: "{#BASEDIR}\bin\Release\configs.xml"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\cleanup.xml"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\plugins.xml"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "{#BASEDIR}\bin\Release\DotNetZip.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\NLog.dll"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\srcrepair.exe"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\srcrepair.pdb"; DestDir: "{app}"; Flags: ignoreversion; Components: debug
@@ -86,7 +85,6 @@ Source: "{#BASEDIR}\bin\Release\help\srcrepair_ru.chm"; DestDir: "{app}\help"; F
 #ifdef _RELEASE
 Source: "{#BASEDIR}\bin\Release\srcrepair.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\corelib.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
-Source: "{#BASEDIR}\bin\Release\DotNetZip.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\NLog.dll.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: core
 Source: "{#BASEDIR}\bin\Release\kbhelper.exe.sig"; DestDir: "{app}"; Flags: ignoreversion; Components: plugins\kbhelper
 Source: "{#BASEDIR}\bin\Release\ru\srcrepair.resources.dll.sig"; DestDir: "{app}\ru"; Flags: ignoreversion; Components: locales\ru
@@ -104,14 +102,12 @@ Filename: "{app}\srcrepair.exe"; Description: "{cm:LaunchProgram,SRC Repair}"; F
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\srcrepair.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\kbhelper.exe"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: plugins\kbhelper
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\corelib.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
-Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\DotNetZip.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "install ""{app}\NLog.dll"""; StatusMsg: {cm:OptNetStatus}; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [UninstallRun]
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\srcrepair.exe"""; RunOnceId: "NgenMainApp"; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\kbhelper.exe"""; RunOnceId: "NgenKBHelper"; Flags: runhidden; Check: IsAdmin(); Components: plugins\kbhelper
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\corelib.dll"""; RunOnceId: "NgenCoreLib"; Flags: runhidden; Check: IsAdmin(); Components: core
-Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\DotNetZip.dll"""; RunOnceId: "NgenDotNetZip"; Flags: runhidden; Check: IsAdmin(); Components: core
 Filename: "{dotnet40}\ngen.exe"; Parameters: "uninstall ""{app}\NLog.dll"""; RunOnceId: "NgenNLog"; Flags: runhidden; Check: IsAdmin(); Components: core
 
 [Code]
