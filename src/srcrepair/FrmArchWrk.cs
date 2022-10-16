@@ -6,9 +6,9 @@
 
 using System;
 using System.IO;
+using System.IO.Compression;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Ionic.Zip;
 using NLog;
 
 namespace srcrepair.gui
@@ -62,19 +62,23 @@ namespace srcrepair.gui
             if (File.Exists(ArchName))
             {
                 // Opening archive...
-                using (ZipFile Zip = ZipFile.Read(ArchName))
+                using (ZipArchive Zip = ZipFile.OpenRead(ArchName))
                 {
                     // Creating some counters...
-                    int TotalFiles = Zip.Count;
+                    int TotalFiles = Zip.Entries.Count;
                     int CurrentFile = 1, CurrentPercent, PreviousPercent = 0;
 
                     // Unpacking archive contents...
-                    foreach (ZipEntry ZFile in Zip)
+                    foreach (ZipArchiveEntry ZFile in Zip.Entries)
                     {
                         try
                         {
-                            // Extracting file, then counting and reporting progress...
-                            ZFile.Extract(DestDirectory, ExtractExistingFileAction.OverwriteSilently);
+                            // Extracting file or directory...
+                            string FullName = Path.GetFullPath(Path.Combine(DestDirectory, ZFile.FullName));
+                            if (!FullName.StartsWith(Path.GetFullPath(DestDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException("The archive tries to traverse through the base archive directory!"); }
+                            if (String.IsNullOrEmpty(ZFile.Name)) { Directory.CreateDirectory(FullName); } else { ZFile.ExtractToFile(FullName, true); }
+
+                            // Reporting progress...
                             CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
                             if ((CurrentPercent >= 0) && (CurrentPercent <= 100) && (CurrentPercent > PreviousPercent))
                             {

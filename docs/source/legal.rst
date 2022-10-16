@@ -69,7 +69,6 @@ Libraries licensing
 .. csv-table::
     :header: "**Library name**", "**Linkage type**", "**License name**", "**URL**"
 
-    "DotNetZip", "Dynamic (shared)", "`MPL + zlib <https://github.com/haf/DotNetZip.Semverd/blob/master/LICENSE>`__", "`GitHub page <https://github.com/haf/DotNetZip.Semverd>`__"
     "NLog", "Dynamic (shared)", "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__", "`GitHub page <https://github.com/NLog/NLog>`__"
 
 .. index:: trademarks, legal
