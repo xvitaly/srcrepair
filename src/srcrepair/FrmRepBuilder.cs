@@ -6,10 +6,10 @@
 
 using System;
 using System.IO;
+using System.IO.Compression;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Ionic.Zip;
 using NLog;
 using srcrepair.core;
 
@@ -40,7 +40,8 @@ namespace srcrepair.gui
         {
             InitializeComponent();
             AppUserDir = A;
-            FullSteamPath = FS;
+            FullSteamDumpsDir = Path.Combine(FS, "dumps");
+            FullSteamLogsDir = Path.Combine(FS, "logs");
             SelectedGame = SG;
         }
 
@@ -55,9 +56,14 @@ namespace srcrepair.gui
         private string AppUserDir { get; set; }
 
         /// <summary>
-        /// Gets or sets full path to Steam client directory.
+        /// Gets or sets full path to Steam client crash dumps directory.
         /// </summary>
-        private string FullSteamPath { get; set; }
+        private string FullSteamDumpsDir { get; set; }
+
+        /// <summary>
+        /// Gets or sets full path to Steam client logs directory.
+        /// </summary>
+        private string FullSteamLogsDir { get; set; }
 
         /// <summary>
         /// Gets or sets instance of SourceGame class, selected in main window.
@@ -103,7 +109,7 @@ namespace srcrepair.gui
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
         private void RepCreateReport(IProgress<int> Progress)
         {
-            using (ZipFile ZBkUp = new ZipFile(RepMan.ReportArchiveName, Encoding.UTF8))
+            using (ZipArchive ZBkUp = ZipFile.Open(RepMan.ReportArchiveName, ZipArchiveMode.Create, Encoding.UTF8))
             {
                 // Creating some counters...
                 int TotalFiles = RepMan.ReportTargets.Count;
@@ -123,7 +129,7 @@ namespace srcrepair.gui
 
                     if (File.Exists(RepTarget.OutputFileName))
                     {
-                        ZBkUp.AddFile(RepTarget.OutputFileName, RepTarget.ArchiveDirectoryName);
+                        ZBkUp.CreateEntryFromFile(RepTarget.OutputFileName, Path.Combine(RepTarget.ArchiveDirectoryName, Path.GetFileName(RepTarget.OutputFileName)), CompressionLevel.Optimal);
                     }
                     else
                     {
@@ -137,7 +143,7 @@ namespace srcrepair.gui
                 // Adding game configs...
                 if (Directory.Exists(SelectedGame.FullCfgPath))
                 {
-                    ZBkUp.AddDirectory(SelectedGame.FullCfgPath, "configs");
+                    ZBkUp.CreateEntryFromDirectory(SelectedGame.FullCfgPath, "configs", CompressionLevel.Optimal);
                 }
 
                 // Adding video file...
@@ -146,36 +152,33 @@ namespace srcrepair.gui
                     string GameVideo = SelectedGame.GetActualVideoFile();
                     if (File.Exists(GameVideo))
                     {
-                        ZBkUp.AddFile(GameVideo, "video");
+                        ZBkUp.CreateEntryFromFile(GameVideo, Path.Combine("video", Path.GetFileName(GameVideo)), CompressionLevel.Optimal);
                     }
                 }
 
                 // Adding Steam crash dumps...
-                if (Directory.Exists(Path.Combine(FullSteamPath, "dumps")))
+                if (Directory.Exists(FullSteamDumpsDir))
                 {
-                    ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "dumps"), "dumps");
+                    ZBkUp.CreateEntryFromDirectory(FullSteamDumpsDir, "dumps", CompressionLevel.Optimal);
                 }
 
                 // Adding Steam logs...
-                if (Directory.Exists(Path.Combine(FullSteamPath, "logs")))
+                if (Directory.Exists(FullSteamLogsDir))
                 {
-                    ZBkUp.AddDirectory(Path.Combine(FullSteamPath, "logs"), "logs");
+                    ZBkUp.CreateEntryFromDirectory(FullSteamLogsDir, "logs", CompressionLevel.Optimal);
                 }
 
                 // Adding Hosts file contents...
                 if (File.Exists(Platform.HostsFileFullPath))
                 {
-                    ZBkUp.AddFile(Platform.HostsFileFullPath, "hosts");
+                    ZBkUp.CreateEntryFromFile(Platform.HostsFileFullPath, Path.Combine("hosts", Path.GetFileName(Platform.HostsFileFullPath)), CompressionLevel.Optimal);
                 }
 
                 // Adding application debug log...
                 if (Directory.Exists(CurrentApp.LogDirectoryPath))
                 {
-                    ZBkUp.AddDirectory(CurrentApp.LogDirectoryPath, "debug");
+                    ZBkUp.CreateEntryFromDirectory(CurrentApp.LogDirectoryPath, "debug", CompressionLevel.Optimal);
                 }
-
-                // Saving Zip file to disk...
-                ZBkUp.Save();
             }
         }
 
