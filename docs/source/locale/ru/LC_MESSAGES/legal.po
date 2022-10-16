@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-06 12:39+0100\n"
-"PO-Revision-Date: 2021-11-06 12:39+0100\n"
+"POT-Creation-Date: 2022-10-16 13:30+0200\n"
+"PO-Revision-Date: 2022-10-16 13:31+0200\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0\n"
+"Generated-By: Babel 2.7.0\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -560,25 +560,12 @@ msgid "**URL**"
 msgstr "**Дом. страница**"
 
 #: ../../source/legal.rst:1
-msgid "DotNetZip"
+msgid "NLog"
 msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "Dynamic (shared)"
 msgstr "Динамическая (DLL)"
-
-#: ../../source/legal.rst:1
-msgid ""
-"`MPL + zlib <https://github.com/haf/DotNetZip.Semverd/blob/master/LICENSE>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`GitHub page <https://github.com/haf/DotNetZip.Semverd>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "NLog"
-msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__"
@@ -588,15 +575,15 @@ msgstr ""
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:79
+#: ../../source/legal.rst:78
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:82
+#: ../../source/legal.rst:81
 msgid "Valve"
 msgstr ""
 
-#: ../../source/legal.rst:84
+#: ../../source/legal.rst:83
 msgid ""
 "Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, "
 "Steam, the Steam logo, Team Fortress, the Team Fortress logo, Opposing "
@@ -613,11 +600,11 @@ msgstr ""
 "торговыми марками и/или зарегистрированными торговыми марками Корпорации "
 "Valve."
 
-#: ../../source/legal.rst:87
+#: ../../source/legal.rst:86
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:89
+#: ../../source/legal.rst:88
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -625,10 +612,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:92
+#: ../../source/legal.rst:91
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:94
+#: ../../source/legal.rst:93
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."

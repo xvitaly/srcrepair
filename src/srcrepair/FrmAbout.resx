@@ -296,7 +296,6 @@ Graphics by:
 SRC Repair's icon by Lopagof (https://lopagof.deviantart.com). Licensed under the terms of CC Attribution Non-Commercial No Derivatives license.
 
 3rd party libraries (dynamic linked):
- - DotNetZip (MPL license + zlib license);
  - NLog (BSD license).</value>
   </data>
   <data name="&gt;&gt;AF_Description.Name" xml:space="preserve">
