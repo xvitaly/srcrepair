@@ -123,6 +123,9 @@
   <data name="AppDbgCoreSetterOutOfRange" xml:space="preserve">
     <value>Requested value is out of supported range.</value>
   </data>
+  <data name="AppDbgCoreZipAddDirNotFound" xml:space="preserve">
+    <value>Directory {0} not found. Cannot add it to the Zip archive!</value>
+  </data>
   <data name="AppDbgExCoreClnManConstructor" xml:space="preserve">
     <value>Minor exception while while building CleanupTargets list object.</value>
   </data>
