@@ -35,13 +35,13 @@ namespace srcrepair.gui
         /// <summary>
         /// Gets or sets list of available Steam UserIDs.
         /// </summary>
-        private List<String> SteamIDs { get; set; }
+        private List<string> SteamIDs { get; set; }
 
         /// <summary>
         /// FrmStmSelector class constructor.
         /// </summary>
         /// <param name="S">List of available Steam UserIDs.</param>
-        public FrmStmSelector(List<String> S)
+        public FrmStmSelector(List<string> S)
         {
             InitializeComponent();
             SteamIDs = S;

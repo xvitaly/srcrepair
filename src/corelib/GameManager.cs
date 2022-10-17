@@ -30,11 +30,11 @@ namespace srcrepair.core
         /// <summary>
         /// Get names of installed games.
         /// </summary>
-        public List<String> InstalledGameNames
+        public List<string> InstalledGameNames
         {
             get
             {
-                List<String> Result = new List<String>();
+                List<string> Result = new List<string>();
                 foreach (string IG in SourceGames.Keys) { Result.Add(IG); }
                 return Result;
             }
@@ -56,7 +56,7 @@ namespace srcrepair.core
             SourceGames = new Dictionary<string, SourceGame>();
 
             // Fetching game libraries...
-            List<String> GameDirs = App.SteamClient.FormatInstallDirs(App.Platform.SteamAppsFolderName);
+            List<string> GameDirs = App.SteamClient.FormatInstallDirs(App.Platform.SteamAppsFolderName);
 
             // Creating FileStream for XML database...
             using (FileStream XMLFS = new FileStream(Path.Combine(App.FullAppPath, Properties.Resources.GameListFile), FileMode.Open, FileAccess.Read))

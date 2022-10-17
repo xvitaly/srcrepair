@@ -82,7 +82,7 @@ namespace srcrepair.gui
                 {
                     while (OpenedHosts.Peek() >= 0)
                     {
-                        List<String> Res = ParseRow(StringsManager.CleanString(OpenedHosts.ReadLine()));
+                        List<string> Res = ParseRow(StringsManager.CleanString(OpenedHosts.ReadLine()));
                         foreach (string Str in Res)
                         {
                             MM_Table.Rows.Add(Str);
@@ -125,9 +125,9 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="Row">Source string.</param>
         /// <returns>List of valid SteamIDs.</returns>
-        private List<String> ParseRow(string Row)
+        private List<string> ParseRow(string Row)
         {
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
             foreach (Match Mh in Regex.Matches(Row, Properties.Resources.MM_SteamIDRegex))
             {
                 Result.Add(Mh.Value);

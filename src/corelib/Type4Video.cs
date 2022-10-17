@@ -34,7 +34,7 @@ namespace srcrepair.core
         /// <summary>
         /// Stores contents of video settings file.
         /// </summary>
-        protected List<String> VideoFile;
+        protected List<string> VideoFile;
 
         /// <summary>
         /// Gets or sets shadow effects quality video setting.
@@ -80,7 +80,7 @@ namespace srcrepair.core
         /// </summary>
         private void ReadVideoFile()
         {
-            VideoFile = File.ReadAllLines(VideoFileName).ToList<String>();
+            VideoFile = File.ReadAllLines(VideoFileName).ToList<string>();
         }
 
         /// <summary>
@@ -180,7 +180,7 @@ namespace srcrepair.core
         {
             VSettings = new Type4Settings();
             VideoFileName = VFile;
-            VideoFile = new List<String>();
+            VideoFile = new List<string>();
         }
     }
 }

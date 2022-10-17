@@ -35,7 +35,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Gets or sets the list of files and directories for cleanup.
         /// </summary>
-        private List<String> CleanDirs { get; set; }
+        private List<string> CleanDirs { get; set; }
 
         /// <summary>
         /// FrmStmClean class constructor.

@@ -43,7 +43,7 @@ namespace srcrepair.gui
         /// <param name="NA">Disable automatically mark found files to deletion.</param>
         /// <param name="RS">Enable recursive cleanup.</param>
         /// <param name="FB">Force backup file creation before running cleanup.</param>
-        public FrmCleaner(List<String> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
+        public FrmCleaner(List<string> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
             CleanDirs = CD;
@@ -73,7 +73,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Gets or sets list of files and directories for cleanup.
         /// </summary>
-        private List<String> CleanDirs { get; set; }
+        private List<string> CleanDirs { get; set; }
 
         /// <summary>
         /// Gets or sets if manual selection of files is allowed.
@@ -125,7 +125,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="CleanDirs">List of files and directories for cleanup.</param>
         /// <param name="Recursive">Enable recursive cleanup.</param>
-        private void DetectFilesForCleanup(List<String> CleanDirs, bool Recursive)
+        private void DetectFilesForCleanup(List<string> CleanDirs, bool Recursive)
         {
             foreach (string DirMs in CleanDirs)
             {
@@ -164,7 +164,7 @@ namespace srcrepair.gui
                             try
                             {
                                 // Getting subdirectories...
-                                List<String> SubDirs = new List<string>();
+                                List<string> SubDirs = new List<string>();
                                 foreach (DirectoryInfo Dir in DInfo.GetDirectories())
                                 {
                                     SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
@@ -227,9 +227,9 @@ namespace srcrepair.gui
         /// Gets list of files for removal.
         /// </summary>
         /// <returns>List of files to be removed.</returns>
-        private List<String> GetDeleteFilesList()
+        private List<string> GetDeleteFilesList()
         {
-            List<String> DeleteQueue = new List<String>();
+            List<string> DeleteQueue = new List<string>();
             foreach (ListViewItem LVI in CM_FTable.Items)
             {
                 if (LVI.Checked)
@@ -245,7 +245,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="DeleteQueue">List of files and directories for deletion.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private void DeleteCandidates(List<String> DeleteQueue, IProgress<Tuple<int, String>> Progress)
+        private void DeleteCandidates(List<string> DeleteQueue, IProgress<Tuple<int, String>> Progress)
         {
             // Reporting new status...
             Progress.Report(new Tuple<int, String>(0, AppStrings.PS_ProgressCleanup));
@@ -313,7 +313,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="DeleteQueue">List of files and directories for deletion.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task BackUpCandidatesTask(List<String> DeleteQueue, IProgress<Tuple<int, String>> Progress)
+        private async Task BackUpCandidatesTask(List<string> DeleteQueue, IProgress<Tuple<int, String>> Progress)
         {
             await Task.Run(() =>
             {
@@ -333,7 +333,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="DeleteQueue">List of files and directories for deletion.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task DeleteCandidatesTask(List<String> DeleteQueue, IProgress<Tuple<int, String>> Progress)
+        private async Task DeleteCandidatesTask(List<string> DeleteQueue, IProgress<Tuple<int, String>> Progress)
         {
             await Task.Run(() =>
             {
@@ -455,7 +455,7 @@ namespace srcrepair.gui
                         ChangeControlsState();
                         try
                         {
-                            List<String> Candidates = GetDeleteFilesList();
+                            List<string> Candidates = GetDeleteFilesList();
                             Progress<Tuple<int, String>> Progress = new Progress<Tuple<int, String>>(ReportProgressChange);
                             await BackUpCandidatesTask(Candidates, Progress);
                             await DeleteCandidatesTask(Candidates, Progress);

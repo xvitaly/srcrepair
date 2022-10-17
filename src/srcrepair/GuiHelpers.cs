@@ -57,7 +57,7 @@ namespace srcrepair.gui
         /// <param name="NoAuto">Disable automatically mark found files to deletion.</param>
         /// <param name="Recursive">Enable recursive cleanup.</param>
         /// <param name="ForceBackUp">Force backup file creation before running cleanup.</param>
-        public static void FormShowCleanup(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly, bool NoAuto, bool Recursive, bool ForceBackUp)
+        public static void FormShowCleanup(List<string> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly, bool NoAuto, bool Recursive, bool ForceBackUp)
         {
             if (!ProcessManager.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin)))
             {
@@ -80,7 +80,7 @@ namespace srcrepair.gui
         /// <param name="CheckBin">Process name to be checked before cleanup.</param>
         /// <param name="ResultMsg">Successful cleanup completion message text.</param>
         /// <param name="BackUpDir">Path to directory for saving backups.</param>
-        public static void FormShowCleanup(List<String> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin)
+        public static void FormShowCleanup(List<string> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin)
         {
             FormShowCleanup(Paths, LText, ResultMsg, BackUpDir, CheckBin, false, false, true, false);
         }
@@ -89,7 +89,7 @@ namespace srcrepair.gui
         /// Opens non-interactive cleanup window.
         /// </summary>
         /// <param name="Paths">List of files and directories for cleanup.</param>
-        public static void FormShowRemoveFiles(List<String> Paths)
+        public static void FormShowRemoveFiles(List<string> Paths)
         {
             using (FrmRmWrk Rm = new FrmRmWrk(Paths))
             {
@@ -103,7 +103,7 @@ namespace srcrepair.gui
         /// <param name="RmPath">Path for cleanup.</param>
         public static void FormShowRemoveFiles(string RmPath)
         {
-            FormShowRemoveFiles(new List<String> { RmPath });
+            FormShowRemoveFiles(new List<string> { RmPath });
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="SteamIDs">List of available Steam UserIDs.</param>
         /// <returns>Selected by user Steam UserID.</returns>
-        public static string FormShowIDSelect(List<String> SteamIDs)
+        public static string FormShowIDSelect(List<string> SteamIDs)
         {
             // Checking number of available Steam UserIDs...
             if (SteamIDs.Count < 1)
@@ -140,7 +140,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="Cfgs">List of available configs.</param>
         /// <returns>Selected by user config.</returns>
-        public static string FormShowCfgSelect(List<String> Cfgs)
+        public static string FormShowCfgSelect(List<string> Cfgs)
         {
             // Checking number of available configs...
             if (Cfgs.Count < 1)

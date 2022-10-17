@@ -30,11 +30,11 @@ namespace srcrepair.core
         /// <summary>
         /// Gets list of all available FPS-config names.
         /// </summary>
-        public List<String> ConfigNames
+        public List<string> ConfigNames
         {
             get
             {
-                List<String> Result = new List<String>();
+                List<string> Result = new List<string>();
                 foreach (string Cfg in Configs.Keys) { Result.Add(Cfg); }
                 return Result;
             }
@@ -56,9 +56,9 @@ namespace srcrepair.core
         /// <param name="GamePath">Game installation directory.</param>
         /// <param name="UserDir">If game use custom user directories for custom stuff.</param>
         /// <returns>List of common FPS-config paths.</returns>
-        public static List<String> ListFPSConfigs(string GamePath, bool UserDir)
+        public static List<string> ListFPSConfigs(string GamePath, bool UserDir)
         {
-            List<String> Result = new List<String> { Path.Combine(GamePath, "cfg", "autoexec.cfg") };
+            List<string> Result = new List<string> { Path.Combine(GamePath, "cfg", "autoexec.cfg") };
             if (UserDir) { Result.Add(Path.Combine(GamePath, "custom", "autoexec.cfg")); }
             return Result;
         }
@@ -137,9 +137,9 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="XmlItem">Source XML node item.</param>
         /// <returns>List of strings.</returns>
-        private List<String> GetFilesListFromNode(XmlNode XmlItem)
+        private List<string> GetFilesListFromNode(XmlNode XmlItem)
         {
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
 
             foreach (XmlNode CtFiles in XmlItem.SelectSingleNode("Files"))
             {

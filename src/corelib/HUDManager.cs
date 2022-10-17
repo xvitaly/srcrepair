@@ -35,11 +35,11 @@ namespace srcrepair.core
         /// <summary>
         /// Gets list of all available HUDs.
         /// </summary>
-        public List<String> AvailableHUDNames
+        public List<string> AvailableHUDNames
         {
             get
             {
-                List<String> Result = new List<String>();
+                List<string> Result = new List<string>();
                 foreach (string Hud in HUDsAvailable.Keys) { Result.Add(Hud); }
                 return Result;
             }

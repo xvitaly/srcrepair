@@ -153,7 +153,7 @@ namespace srcrepair.core
         /// <param name="Files">List with full file names to be compressed.</param>
         /// <param name="ArchiveName">Archive name with full path.</param>
         /// <returns>Return True if archive was created successfully.</returns>
-        public static bool CompressFiles(List<String> Files, string ArchiveName)
+        public static bool CompressFiles(List<string> Files, string ArchiveName)
         {
             try
             {
@@ -225,9 +225,9 @@ namespace srcrepair.core
         /// <param name="SrcMask">File mask (wildcards are supported).</param>
         /// <param name="IsRecursive">Use recursive (include subdirectories) search.</param>
         /// <returns>List of files with full paths, matches mask.</returns>
-        public static List<String> FindFiles(string SearchPath, string SrcMask, bool IsRecursive)
+        public static List<string> FindFiles(string SearchPath, string SrcMask, bool IsRecursive)
         {
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
             if (Directory.Exists(SearchPath))
             {
                 DirectoryInfo DInfo = new DirectoryInfo(SearchPath);
@@ -244,7 +244,7 @@ namespace srcrepair.core
         /// <param name="SearchPath">Start directory.</param>
         /// <param name="SrcMask">File mask (wildcards are supported).</param>
         /// <returns>List of files with full paths, matches mask.</returns>
-        public static List<String> FindFiles(string SearchPath, string SrcMask)
+        public static List<string> FindFiles(string SearchPath, string SrcMask)
         {
             return FindFiles(SearchPath, SrcMask, true);
         }
@@ -256,9 +256,9 @@ namespace srcrepair.core
         /// <param name="CleanDirs">List of directories with masks.</param>
         /// <param name="IsRecursive">Use recursive (include subdirectories) search.</param>
         /// <returns>List of files with full paths, matches mask.</returns>
-        public static List<String> ExpandFileList(List<String> CleanDirs, bool IsRecursive)
+        public static List<string> ExpandFileList(List<string> CleanDirs, bool IsRecursive)
         {
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
             foreach (string DirMs in CleanDirs)
             {
                 string CleanDir = Path.GetDirectoryName(DirMs); string CleanMask = Path.GetFileName(DirMs);
@@ -274,7 +274,7 @@ namespace srcrepair.core
                         {
                             try
                             {
-                                List<String> SubDirs = new List<string>();
+                                List<string> SubDirs = new List<string>();
                                 foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName, CleanMask)); }
                                 if (SubDirs.Count > 0) { Result.AddRange(ExpandFileList(SubDirs, true)); }
                             }
@@ -292,10 +292,10 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="Configs">List of files with full paths to check.</param>
         /// <returns>List with existing files.</returns>
-        public static List<String> GetRealFilesFromList(List<String> Configs)
+        public static List<string> GetRealFilesFromList(List<string> Configs)
         {
             // Creating a new empty list...
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
 
             // Using loop to check a single item from source list...
             foreach (string Config in Configs)
@@ -316,7 +316,7 @@ namespace srcrepair.core
         /// <param name="Configs">List of files to be backed up.</param>
         /// <param name="BackUpDir">Full path to directory for saving backups.</param>
         /// <param name="Prefix">Backup file pre-defined prefix.</param>
-        public static void CreateConfigBackUp(List<String> Configs, string BackUpDir, string Prefix)
+        public static void CreateConfigBackUp(List<string> Configs, string BackUpDir, string Prefix)
         {
             // Checking if destination directory exists...
             if (!Directory.Exists(BackUpDir)) { Directory.CreateDirectory(BackUpDir); }
@@ -340,7 +340,7 @@ namespace srcrepair.core
         public static void CreateConfigBackUp(string Config, string BackUpDir, string Prefix)
         {
             // Adding only one file to list...
-            List<String> Configs = new List<String> { Config };
+            List<string> Configs = new List<string> { Config };
 
             // Running another overloaded version of this method...
             CreateConfigBackUp(Configs, BackUpDir, Prefix);
@@ -351,7 +351,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="FileList">List of files for check.</param>
         /// <returns>Full path to the newerest file.</returns>
-        public static string FindNewerestFile(List<String> FileList)
+        public static string FindNewerestFile(List<string> FileList)
         {
             // Creating a new list of FileInfo...
             List<FileInfo> FF = new List<FileInfo>();

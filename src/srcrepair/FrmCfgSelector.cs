@@ -23,13 +23,13 @@ namespace srcrepair.gui
         /// <summary>
         /// Gets or sets list of available configs.
         /// </summary>
-        private List<String> Configs { get; set; }
+        private List<string> Configs { get; set; }
 
         /// <summary>
         /// FrmCfgSelector class constructor.
         /// </summary>
         /// <param name="C">List of available configs.</param>
-        public FrmCfgSelector(List<String> C)
+        public FrmCfgSelector(List<string> C)
         {
             InitializeComponent();
             Configs = C;

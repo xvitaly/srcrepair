@@ -88,9 +88,9 @@ namespace srcrepair.core
         /// <param name="XmlItem">Source XML node item.</param>
         /// <param name="AllowUnsafe">Allow or disallow to use unsafe cleanup methods.</param>
         /// <returns>The list of directories.</returns>
-        private List<String> GetDirListFromNode(XmlNode XmlItem, bool AllowUnsafe)
+        private List<string> GetDirListFromNode(XmlNode XmlItem, bool AllowUnsafe)
         {
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
 
             foreach (XmlNode CtDir in XmlItem.SelectSingleNode("Directories"))
             {

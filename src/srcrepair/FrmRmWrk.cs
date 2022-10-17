@@ -32,13 +32,13 @@ namespace srcrepair.gui
         /// <summary>
         /// Gets or sets list of directories for cleanup.
         /// </summary>
-        private List<String> RemDirs { get; set; }
+        private List<string> RemDirs { get; set; }
 
         /// <summary>
         /// FrmRmWrk class constructor.
         /// </summary>
         /// <param name="SL">List of directories for cleanup.</param>
-        public FrmRmWrk(List<String> SL)
+        public FrmRmWrk(List<string> SL)
         {
             InitializeComponent();
             RemDirs = SL;
@@ -49,10 +49,10 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="CleanDirs">List of directories for cleanup.</param>
         /// <returns>List of files for deletion.</returns>
-        private List<String> DetectFilesForCleanup(List<String> CleanDirs)
+        private List<string> DetectFilesForCleanup(List<string> CleanDirs)
         {
             // Generating an empty list for storing results...
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
 
             // Expanding every directory from source list...
             foreach (string CleanCnd in CleanDirs)
@@ -69,7 +69,7 @@ namespace srcrepair.gui
                     }
 
                     // Getting subdirectories...
-                    List<String> SubDirs = new List<string>();
+                    List<string> SubDirs = new List<string>();
                     foreach (DirectoryInfo Dir in DInfo.GetDirectories())
                     {
                         SubDirs.Add(Path.Combine(Dir.FullName));

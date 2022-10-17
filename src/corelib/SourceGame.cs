@@ -54,7 +54,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets full paths to local copies of configs, stored in Cloud.
         /// </summary>
-        public List<String> CloudConfigs { get; private set; }
+        public List<string> CloudConfigs { get; private set; }
 
         /// <summary>
         /// Gets full path to local copies of cloud screenshots.
@@ -102,7 +102,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets full paths to all found configs with video settings.
         /// </summary>
-        public List<String> VideoCfgFiles { get; private set; }
+        public List<string> VideoCfgFiles { get; private set; }
 
         /// <summary>
         /// Gets the name of directory or registry key with video settings.
@@ -122,7 +122,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets full paths to all found FPS-configs.
         /// </summary>
-        public List<String> FPSConfigs { get; set; }
+        public List<string> FPSConfigs { get; set; }
 
         /// <summary>
         /// Gets or sets instance of HUDManager class.
@@ -147,7 +147,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets full paths to all found voice ban list files.
         /// </summary>
-        public List<String> BanlistFiles { get; private set; }
+        public List<string> BanlistFiles { get; private set; }
 
         /// <summary>
         /// Gets if the game is installed.
@@ -176,7 +176,7 @@ namespace srcrepair.core
         /// <param name="GameDirs">Paths to all available game libraries.</param>
         /// <param name="OSType">Operating system type.</param>
         /// <returns>Returns full path or empty string if nothing was found.</returns>
-        private string GetGameDirectory(string AppName, List<String> GameDirs, CurrentPlatform.OSType OSType)
+        private string GetGameDirectory(string AppName, List<string> GameDirs, CurrentPlatform.OSType OSType)
         {
             foreach (string Dir in GameDirs)
             {
@@ -195,7 +195,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="Mask">File mask (pattern).</param>
         /// <returns>List of all found local copies of cloud configs.</returns>
-        private List<String> GetCloudConfigs(string Mask = "*.*cfg")
+        private List<string> GetCloudConfigs(string Mask = "*.*cfg")
         {
             return FileManager.FindFiles(Path.Combine(SteamPath, "userdata", SteamID, GameInternalID), Mask);
         }
@@ -270,7 +270,7 @@ namespace srcrepair.core
         /// <param name="SteamDir">Full path to Steam directory.</param>
         /// <param name="SteamAppsDirName">Platform-dependent SteamApps directory name.</param>
         /// <param name="OS">Operating system type.</param>
-        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, int SV, string VFDir, bool UserDir, bool HUDAv, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<String> GameDirs, CurrentPlatform.OSType OS)
+        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, int SV, string VFDir, bool UserDir, bool HUDAv, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<string> GameDirs, CurrentPlatform.OSType OS)
         {
             // Setting basic properties...
             FullAppName = AppName;

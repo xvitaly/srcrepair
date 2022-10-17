@@ -36,13 +36,13 @@ namespace srcrepair.core
         /// <summary>
         /// Stores contents of video settings file.
         /// </summary>
-        protected List<String> VideoFile;
+        protected List<string> VideoFile;
 
         /// <summary>
         /// Stores contents of video settings file with default
         /// options for this system.
         /// </summary>
-        protected List<String> DefaultsFile;
+        protected List<string> DefaultsFile;
 
         /// <summary>
         /// Stores screen aspect ratio: setting.aspectratiomode.
@@ -643,10 +643,10 @@ namespace srcrepair.core
         /// </summary>
         private void ReadVideoFile()
         {
-            VideoFile = File.ReadAllLines(VideoFileName).ToList<String>();
+            VideoFile = File.ReadAllLines(VideoFileName).ToList<string>();
             if (File.Exists(DefaultsFileName))
             {
-                DefaultsFile = File.ReadAllLines(DefaultsFileName).ToList<String>();
+                DefaultsFile = File.ReadAllLines(DefaultsFileName).ToList<string>();
             }
         }
 
@@ -737,8 +737,8 @@ namespace srcrepair.core
             VSettings = new Type2Settings();
             VideoFileName = VFile;
             DefaultsFileName = Path.Combine(Path.GetDirectoryName(VideoFileName), "videodefaults.txt");
-            VideoFile = new List<String>();
-            DefaultsFile = new List<String>();
+            VideoFile = new List<string>();
+            DefaultsFile = new List<string>();
         }
     }
 }

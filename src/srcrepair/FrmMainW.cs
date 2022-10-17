@@ -1216,13 +1216,13 @@ namespace srcrepair.gui
         /// <param name="ID">Cleanup target ID.</param>
         /// <param name="Title">Title for cleanup window.</param>
         /// <param name="Targets">Additional targets for cleanup.</param>
-        private void StartCleanup(string ID, string Title, List<String> Targets)
+        private void StartCleanup(string ID, string Title, List<string> Targets)
         {
             if (HandleCleanupTargetsTask(AppSelector.Text).Status != TaskStatus.Running)
             {
                 try
                 {
-                    List<String> CleanDirs = new List<String>(App.SourceGames[AppSelector.Text].ClnMan[ID].Directories);
+                    List<string> CleanDirs = new List<string>(App.SourceGames[AppSelector.Text].ClnMan[ID].Directories);
                     if (Targets.Count > 0)
                     {
                         CleanDirs.AddRange(Targets);
@@ -1248,7 +1248,7 @@ namespace srcrepair.gui
         /// <param name="Title">Title for cleanup window.</param>
         private void StartCleanup(string ID, string Title)
         {
-            StartCleanup(ID, Title, new List<String>());
+            StartCleanup(ID, Title, new List<string>());
         }
 
         /// <summary>
@@ -2311,7 +2311,7 @@ namespace srcrepair.gui
         private void PS_RemGameOpts_Click(object sender, EventArgs e)
         {
             // Creating list with candidates...
-            List<String> CleanDirs = new List<string>();
+            List<string> CleanDirs = new List<string>();
 
             // Asking for confirmation...
             if (MessageBox.Show(string.Format(AppStrings.AppQuestionTemplate, ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
@@ -3201,7 +3201,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_DeepCleanup_Click(object sender, EventArgs e)
         {
-            List<String> CleanDirs = new List<String>(App.SourceGames[AppSelector.Text].CloudConfigs);
+            List<string> CleanDirs = new List<string>(App.SourceGames[AppSelector.Text].CloudConfigs);
             if (App.SourceGames[AppSelector.Text].IsUsingVideoFile)
             {
                 CleanDirs.AddRange(App.SourceGames[AppSelector.Text].VideoCfgFiles);
@@ -3347,7 +3347,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUExtClnAppCache_Click(object sender, EventArgs e)
         {
-            List<String> CleanDirs = new List<string>
+            List<string> CleanDirs = new List<string>
             {
                 Path.Combine(App.AppUserDir, StringsManager.HudDirectoryName, "*.*"),
                 Path.Combine(App.AppUserDir, StringsManager.ConfigDirectoryName, "*.*"),
@@ -3363,7 +3363,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
         {
-            List<String> CleanDirs = new List<string>
+            List<string> CleanDirs = new List<string>
             {
                 Path.Combine(Path.GetTempPath(), "*.*")
             };

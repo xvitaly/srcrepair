@@ -30,7 +30,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets list of available UserIDs.
         /// </summary>
-        public List<String> SteamIDs { get; private set; }
+        public List<string> SteamIDs { get; private set; }
 
         /// <summary>
         /// Gets selected or default UserID.
@@ -133,9 +133,9 @@ namespace srcrepair.core
         /// Gets full path to Steam localconfig.vdf configuration file.
         /// </summary>
         /// <returns>Full path to localconfig.vdf file.</returns>
-        public List<String> GetSteamLocalConfig()
+        public List<string> GetSteamLocalConfig()
         {
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
             foreach (string ID in SteamIDs)
             {
                 Result.AddRange(FileManager.FindFiles(Path.Combine(UserDataPath, ID, "config"), "localconfig.vdf"));
@@ -194,9 +194,9 @@ namespace srcrepair.core
         /// configuration file.
         /// <param name="LibraryFoldersConfigFile">Full path to the libraryfolders.vdf file.</param>
         /// </summary>
-        private List<String> ReadMountPointsFromFile(string LibraryFoldersConfigFile)
+        private List<string> ReadMountPointsFromFile(string LibraryFoldersConfigFile)
         {
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
             using (StreamReader SteamConfig = new StreamReader(LibraryFoldersConfigFile, Encoding.UTF8))
             {
                 string RdStr;
@@ -220,9 +220,9 @@ namespace srcrepair.core
         /// <summary>
         /// Gets list of all additional mount points from main configuration file.
         /// </summary>
-        private List<String> GetSteamMountPoints()
+        private List<string> GetSteamMountPoints()
         {
-            List<String> Result = new List<String> { FullSteamPath };
+            List<string> Result = new List<string> { FullSteamPath };
             try
             {
                 string LibraryFoldersConfigFile = GetLibraryFoldersConfig();
@@ -242,13 +242,13 @@ namespace srcrepair.core
         /// Gets list of all available game libraries.
         /// </summary>
         /// <param name="SteamAppsFolderName">Platform-dependent SteamApps directory name.</param>
-        public List<String> FormatInstallDirs(string SteamAppsFolderName)
+        public List<string> FormatInstallDirs(string SteamAppsFolderName)
         {
             // Creating a new empty list...
-            List<String> Result = new List<String>();
+            List<string> Result = new List<string>();
 
             // Getting additional mount points...
-            List<String> MntPnts = GetSteamMountPoints();
+            List<string> MntPnts = GetSteamMountPoints();
 
             // Adding mandatory directories to paths...
             foreach (string MntPnt in MntPnts)
@@ -266,7 +266,7 @@ namespace srcrepair.core
         /// <param name="LastSteamID">Last used UserID.</param>
         private void SetValues(string LastSteamID)
         {
-            SteamIDs = new List<String>();
+            SteamIDs = new List<string>();
             UserDataPath = Path.Combine(FullSteamPath, "userdata");
             GetUserIDs();
             SteamID = GetCurrentSteamID(LastSteamID);

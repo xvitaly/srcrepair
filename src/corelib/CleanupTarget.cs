@@ -22,14 +22,14 @@ namespace srcrepair.core
         /// <summary>
         /// Gets or sets list of directories for cleanup.
         /// </summary>
-        public List<String> Directories { get; private set; }
+        public List<string> Directories { get; private set; }
 
         /// <summary>
         /// CleanupTarget class constructor.
         /// </summary>
         /// <param name="CtName">Cleanup target friendly name.</param>
         /// <param name="CtDirectories">List of directories for cleanup.</param>
-        public CleanupTarget(string CtName, List<String> CtDirectories)
+        public CleanupTarget(string CtName, List<string> CtDirectories)
         {
             Name = CtName;
             Directories = CtDirectories;
