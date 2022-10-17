@@ -75,7 +75,7 @@ namespace srcrepair.gui
                         {
                             // Extracting file or directory...
                             string FullName = Path.GetFullPath(Path.Combine(DestDirectory, ZFile.FullName));
-                            if (!FullName.StartsWith(Path.GetFullPath(DestDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException("The archive tries to traverse through the base archive directory!"); }
+                            if (!FullName.StartsWith(Path.GetFullPath(DestDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException(DebugStrings.AppDbgZipPathTraversalDetected); }
                             if (string.IsNullOrEmpty(ZFile.Name)) { Directory.CreateDirectory(FullName); } else { ZFile.ExtractToFile(FullName, true); }
 
                             // Reporting progress...
