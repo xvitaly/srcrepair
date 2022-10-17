@@ -860,5 +860,14 @@ namespace srcrepair.gui {
                 return ResourceManager.GetString("AppDbgUACCancel", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The archive tries to traverse through the base archive directory!.
+        /// </summary>
+        internal static string AppDbgZipPathTraversalDetected {
+            get {
+                return ResourceManager.GetString("AppDbgZipPathTraversalDetected", resourceCulture);
+            }
+        }
     }
 }
