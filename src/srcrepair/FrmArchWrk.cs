@@ -88,7 +88,7 @@ namespace srcrepair.gui
                         }
                         catch (Exception Ex)
                         {
-                            Logger.Warn(Ex);
+                            Logger.Warn(Ex, DebugStrings.AppDbgZipExtractFailure, ZFile.Name);
                         }
                     }
                 }
