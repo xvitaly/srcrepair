@@ -65,7 +65,7 @@ namespace srcrepair.core
         /// <returns>Result string.</returns>
         private static string ConvertBytesToString(byte[] Source)
         {
-            return BitConverter.ToString(Source).Replace("-", String.Empty).ToLowerInvariant();
+            return BitConverter.ToString(Source).Replace("-", string.Empty).ToLowerInvariant();
         }
 
         /// <summary>
@@ -95,7 +95,7 @@ namespace srcrepair.core
             DriveInfo[] Drives = DriveInfo.GetDrives();
             foreach (DriveInfo Dr in Drives)
             {
-                if (String.Compare(Dr.Name, CDrive, true) == 0)
+                if (string.Compare(Dr.Name, CDrive, true) == 0)
                 {
                     Result = Dr.DriveFormat;
                     break;
@@ -143,7 +143,7 @@ namespace srcrepair.core
         /// <returns>Full backup file name.</returns>
         public static string GenerateBackUpFileName(string BackUpDir, string Prefix)
         {
-            return Path.Combine(BackUpDir, String.Format("{0}_{1}.bud", Prefix, DateTime2Unix(DateTime.Now)));
+            return Path.Combine(BackUpDir, string.Format("{0}_{1}.bud", Prefix, DateTime2Unix(DateTime.Now)));
         }
 
         /// <summary>

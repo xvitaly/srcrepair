@@ -87,7 +87,7 @@ namespace srcrepair.gui
                 if (await CheckForUpdatesTask(UserAgent))
                 {
                     UpdAppImg.Image = Properties.Resources.IconUpdateAvailable;
-                    UpdAppStatus.Text = String.Format(AppStrings.UPD_AppUpdateAvail, UpMan.AppUpdateVersion);
+                    UpdAppStatus.Text = string.Format(AppStrings.UPD_AppUpdateAvail, UpMan.AppUpdateVersion);
                 }
                 else
                 {
@@ -233,7 +233,7 @@ namespace srcrepair.gui
                     }
                     else
                     {
-                        MessageBox.Show(String.Format(AppStrings.UPD_AppOtherPlatform, Platform.OSFriendlyName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(string.Format(AppStrings.UPD_AppOtherPlatform, Platform.OSFriendlyName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else

@@ -170,7 +170,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void BtnInstall_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(InstallPath.Text))
+            if (!string.IsNullOrEmpty(InstallPath.Text))
             {
                 try
                 {

@@ -217,7 +217,7 @@ namespace srcrepair.gui
         private void ReportProgressChange(Tuple<int, String> Progress)
         {
             PrbMain.Value = Progress.Item1;
-            if (!String.IsNullOrEmpty(Progress.Item2))
+            if (!string.IsNullOrEmpty(Progress.Item2))
             {
                 CM_Info.Text = Progress.Item2;
             }
@@ -350,7 +350,7 @@ namespace srcrepair.gui
             IsRunning = false;
 
             // Showing estimated free space to be freed after removing all found files...
-            CM_Info.Text = String.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
+            CM_Info.Text = string.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
 
             // Checking if candidates are found...
             if (CM_FTable.Items.Count == 0)
@@ -375,7 +375,7 @@ namespace srcrepair.gui
         private async void FrmCleaner_Load(object sender, EventArgs e)
         {
             // Setting form properties...
-            Text = String.Format(Text, CleanInfo);
+            Text = string.Format(Text, CleanInfo);
             CM_FTable.Enabled = !IsReadOnly;
 
             // Starting searching for candidates...
@@ -446,7 +446,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private async void CM_Clean_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(String.Format(AppStrings.PS_CleanupExecuteQ, CleanInfo), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format(AppStrings.PS_CleanupExecuteQ, CleanInfo), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 if (CM_FTable.Items.Count > 0)
                 {

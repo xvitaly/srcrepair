@@ -203,13 +203,13 @@ namespace srcrepair.core
                 while (SteamConfig.Peek() >= 0)
                 {
                     RdStr = SteamConfig.ReadLine().Trim();
-                    if (!String.IsNullOrWhiteSpace(RdStr))
+                    if (!string.IsNullOrWhiteSpace(RdStr))
                     {
                         if (RdStr.IndexOf("path", StringComparison.CurrentCultureIgnoreCase) != -1)
                         {
                             RdStr = StringsManager.CleanString(RdStr, true, true);
                             RdStr = RdStr.Remove(0, RdStr.IndexOf(" ", StringComparison.CurrentCulture) + 1);
-                            if (!String.IsNullOrWhiteSpace(RdStr) && Directory.Exists(RdStr)) { Result.Add(RdStr); }
+                            if (!string.IsNullOrWhiteSpace(RdStr) && Directory.Exists(RdStr)) { Result.Add(RdStr); }
                         }
                     }
                 }

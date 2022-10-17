@@ -141,31 +141,31 @@ namespace srcrepair.core
                 CFile.WriteLine("{");
 
                 // Adding video settings...
-                CFile.WriteLine(String.Format(Templt, VSettings.ScreenWidth, _ScreenWidth));
-                CFile.WriteLine(String.Format(Templt, VSettings.ScreenHeight, _ScreenHeight));
-                CFile.WriteLine(String.Format(Templt, VSettings.DisplayMode, _DisplayMode));
-                CFile.WriteLine(String.Format(Templt, VSettings.ModelDetail, _ModelDetail));
-                CFile.WriteLine(String.Format(Templt, VSettings.TextureDetail, _TextureDetail));
-                CFile.WriteLine(String.Format(Templt, VSettings.ShaderDetail, _ShaderDetail));
-                CFile.WriteLine(String.Format(Templt, VSettings.WaterDetail, _WaterDetail));
-                CFile.WriteLine(String.Format(Templt, VSettings.WaterReflections, _WaterReflections));
-                CFile.WriteLine(String.Format(Templt, VSettings.ShadowDetail, _ShadowQuality));
-                CFile.WriteLine(String.Format(Templt, VSettings.Brightness, (_Brightness / 10.0).ToString(CI)));
-                CFile.WriteLine(String.Format(Templt, VSettings.ColorCorrection, _ColorCorrection));
-                CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasing, _AntiAliasing));
-                CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasQuality, _AntiAliasQuality));
-                CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasingMSAA, _AntiAliasing));
-                CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasQualityMSAA, _AntiAliasQuality));
-                CFile.WriteLine(String.Format(Templt, VSettings.FilteringMode, _FilteringMode));
-                CFile.WriteLine(String.Format(Templt, VSettings.FilteringTrilinear, _FilteringTrilinear));
-                CFile.WriteLine(String.Format(Templt, VSettings.VSync, _VSync));
-                CFile.WriteLine(String.Format(Templt, VSettings.MotionBlur, _MotionBlur));
-                CFile.WriteLine(String.Format(Templt, VSettings.DirectXMode, _DirectXMode));
-                CFile.WriteLine(String.Format(Templt, VSettings.HDRMode, _HDRMode));
-                CFile.WriteLine(String.Format(Templt, VSettings.DisplayBorderless, _DisplayBorderless));
-                CFile.WriteLine(String.Format(Templt, VSettings.ShadowDepth, _ShadowDepth));
-                CFile.WriteLine(String.Format(Templt, VSettings.VendorID, _VendorID));
-                CFile.WriteLine(String.Format(Templt, VSettings.DeviceID, _DeviceID));
+                CFile.WriteLine(string.Format(Templt, VSettings.ScreenWidth, _ScreenWidth));
+                CFile.WriteLine(string.Format(Templt, VSettings.ScreenHeight, _ScreenHeight));
+                CFile.WriteLine(string.Format(Templt, VSettings.DisplayMode, _DisplayMode));
+                CFile.WriteLine(string.Format(Templt, VSettings.ModelDetail, _ModelDetail));
+                CFile.WriteLine(string.Format(Templt, VSettings.TextureDetail, _TextureDetail));
+                CFile.WriteLine(string.Format(Templt, VSettings.ShaderDetail, _ShaderDetail));
+                CFile.WriteLine(string.Format(Templt, VSettings.WaterDetail, _WaterDetail));
+                CFile.WriteLine(string.Format(Templt, VSettings.WaterReflections, _WaterReflections));
+                CFile.WriteLine(string.Format(Templt, VSettings.ShadowDetail, _ShadowQuality));
+                CFile.WriteLine(string.Format(Templt, VSettings.Brightness, (_Brightness / 10.0).ToString(CI)));
+                CFile.WriteLine(string.Format(Templt, VSettings.ColorCorrection, _ColorCorrection));
+                CFile.WriteLine(string.Format(Templt, VSettings.AntiAliasing, _AntiAliasing));
+                CFile.WriteLine(string.Format(Templt, VSettings.AntiAliasQuality, _AntiAliasQuality));
+                CFile.WriteLine(string.Format(Templt, VSettings.AntiAliasingMSAA, _AntiAliasing));
+                CFile.WriteLine(string.Format(Templt, VSettings.AntiAliasQualityMSAA, _AntiAliasQuality));
+                CFile.WriteLine(string.Format(Templt, VSettings.FilteringMode, _FilteringMode));
+                CFile.WriteLine(string.Format(Templt, VSettings.FilteringTrilinear, _FilteringTrilinear));
+                CFile.WriteLine(string.Format(Templt, VSettings.VSync, _VSync));
+                CFile.WriteLine(string.Format(Templt, VSettings.MotionBlur, _MotionBlur));
+                CFile.WriteLine(string.Format(Templt, VSettings.DirectXMode, _DirectXMode));
+                CFile.WriteLine(string.Format(Templt, VSettings.HDRMode, _HDRMode));
+                CFile.WriteLine(string.Format(Templt, VSettings.DisplayBorderless, _DisplayBorderless));
+                CFile.WriteLine(string.Format(Templt, VSettings.ShadowDepth, _ShadowDepth));
+                CFile.WriteLine(string.Format(Templt, VSettings.VendorID, _VendorID));
+                CFile.WriteLine(string.Format(Templt, VSettings.DeviceID, _DeviceID));
 
                 // Adding standard footer...
                 CFile.WriteLine("}");
@@ -176,7 +176,7 @@ namespace srcrepair.core
         /// Type4Video class constructor.
         /// </summary>
         /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
-        public Type4Video(string VFile) : base (String.Empty)
+        public Type4Video(string VFile) : base (string.Empty)
         {
             VSettings = new Type4Settings();
             VideoFileName = VFile;

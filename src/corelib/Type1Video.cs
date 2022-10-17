@@ -630,7 +630,7 @@ namespace srcrepair.core
         /// <returns>Cvar value as string from video file.</returns>
         protected override string GetRawValue(string CVar)
         {
-            return String.Empty;
+            return string.Empty;
         }
 
         /// <summary>
@@ -749,7 +749,7 @@ namespace srcrepair.core
         /// <param name="DestDir">Directory for saving backups.</param>
         public static void CreateRegBackUpNow(string RegKey, string FileName, string DestDir)
         {
-            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, String.Format(Properties.Resources.RegExportCmdLine, RegKey, Path.Combine(DestDir, String.Format(Properties.Resources.RegOutFilePattern, FileName, FileManager.DateTime2Unix(DateTime.Now)))));
+            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, RegKey, Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, FileName, FileManager.DateTime2Unix(DateTime.Now)))));
         }
 
         /// <summary>
@@ -758,7 +758,7 @@ namespace srcrepair.core
         /// <param name="FileName">Full path to the backup file.</param>
         public static void RestoreRegBackUpNow(string FileName)
         {
-            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, String.Format(Properties.Resources.RegImportCmdLine, FileName));
+            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegImportCmdLine, FileName));
         }
 
         /// <summary>

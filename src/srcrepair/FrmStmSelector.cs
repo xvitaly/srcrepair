@@ -90,7 +90,7 @@ namespace srcrepair.gui
         {
             try
             {
-                Platform.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(SD_IDSel.Text)));
+                Platform.OpenWebPage(string.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(SD_IDSel.Text)));
             }
             catch (Exception Ex)
             {

@@ -151,7 +151,7 @@ namespace srcrepair.core
         /// <returns>Quoted string with path.</returns>
         public static string AddQuotesToPath(string Source)
         {
-            return String.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, Source);
+            return string.Format(Properties.Resources.AppOpenHandlerEscapeTemplate, Source);
         }
     }
 }

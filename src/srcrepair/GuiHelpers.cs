@@ -68,7 +68,7 @@ namespace srcrepair.gui
             }
             else
             {
-                MessageBox.Show(String.Format(AppStrings.PS_AppRunning, CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(string.Format(AppStrings.PS_AppRunning, CheckBin), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -120,7 +120,7 @@ namespace srcrepair.gui
             }
 
             // Creating local variable for storing result...
-            string Result = String.Empty;
+            string Result = string.Empty;
 
             // Starting form...
             using (FrmStmSelector StmSel = new FrmStmSelector(SteamIDs))
@@ -149,7 +149,7 @@ namespace srcrepair.gui
             }
 
             // Creating local variable for storing result...
-            string Result = String.Empty;
+            string Result = string.Empty;
 
             // Starting form...
             using (FrmCfgSelector CfgSel = new FrmCfgSelector(Cfgs))
@@ -283,13 +283,13 @@ namespace srcrepair.gui
             const string Template = "{0} {1}";
 
             // Checking bytes...
-            if ((InpNumber >= 0) && (InpNumber < B)) { return String.Format(Template, InpNumber, AppStrings.AppSizeBytes); }
+            if ((InpNumber >= 0) && (InpNumber < B)) { return string.Format(Template, InpNumber, AppStrings.AppSizeBytes); }
             // ...kilobytes...
-            else if ((InpNumber >= B) && (InpNumber < KB)) { return String.Format(Template, Math.Round((float)InpNumber / B, 2), AppStrings.AppSizeKilobytes); }
+            else if ((InpNumber >= B) && (InpNumber < KB)) { return string.Format(Template, Math.Round((float)InpNumber / B, 2), AppStrings.AppSizeKilobytes); }
             // ...megabytes...
-            else if ((InpNumber >= KB) && (InpNumber < MB)) { return String.Format(Template, Math.Round((float)InpNumber / KB, 2), AppStrings.AppSizeMegabytes); }
+            else if ((InpNumber >= KB) && (InpNumber < MB)) { return string.Format(Template, Math.Round((float)InpNumber / KB, 2), AppStrings.AppSizeMegabytes); }
             // ...gitabytes.
-            else if ((InpNumber >= MB) && (InpNumber < GB)) { return String.Format(Template, Math.Round((float)InpNumber / MB, 2), AppStrings.AppSizeGigabytes); }
+            else if ((InpNumber >= MB) && (InpNumber < GB)) { return string.Format(Template, Math.Round((float)InpNumber / MB, 2), AppStrings.AppSizeGigabytes); }
 
             // Return source as result...
             return InpNumber.ToString();

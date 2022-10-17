@@ -94,7 +94,7 @@ namespace srcrepair.gui.kbhelper
         /// <param name="Name">User-friendly setting name.</param>
         private void InstallKBS(byte[] Value, string Name)
         {
-            if (MessageBox.Show(String.Format(AppStrings.KB_DisableQuestion, Name), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format(AppStrings.KB_DisableQuestion, Name), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try
                 {

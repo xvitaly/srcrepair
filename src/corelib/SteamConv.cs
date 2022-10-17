@@ -47,7 +47,7 @@ namespace srcrepair.core
         /// <returns>SteamIDv3.</returns>
         public static string ConvSid32Sidv3(string Sid32)
         {
-            return String.Format("[U:1:{0}]", GetUserID(Sid32));
+            return string.Format("[U:1:{0}]", GetUserID(Sid32));
         }
 
         /// <summary>

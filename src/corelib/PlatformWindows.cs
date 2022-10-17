@@ -36,7 +36,7 @@ namespace srcrepair.core
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public override void OpenExplorer(string FileName)
         {
-            Process.Start(Properties.Resources.ShBinWin, String.Format("{0} \"{1}\"", Properties.Resources.ShParamWin, FileName));
+            Process.Start(Properties.Resources.ShBinWin, string.Format("{0} \"{1}\"", Properties.Resources.ShParamWin, FileName));
         }
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace srcrepair.core
             get
             {
                 // Creating an empty string for storing result...
-                string ResString = String.Empty;
+                string ResString = string.Empty;
 
                 // Opening registry key as read only...
                 using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
@@ -190,7 +190,7 @@ namespace srcrepair.core
             get
             {
                 // Creating an empty string for storing result...
-                string Result = String.Empty;
+                string Result = string.Empty;
 
                 // Opening registry key as read only...
                 using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))

@@ -312,7 +312,7 @@ namespace srcrepair.gui
                             ImpStr = StringsManager.CleanString(ConfigFile.ReadLine());
 
                             // Checking if source string is not empty...
-                            if (!String.IsNullOrEmpty(ImpStr))
+                            if (!string.IsNullOrEmpty(ImpStr))
                             {
                                 // Checking if source string is not a commentary...
                                 if (ImpStr[0] != '/')
@@ -333,7 +333,7 @@ namespace srcrepair.gui
                                     else
                                     {
                                         // Adding to table only Cvar with empty value...
-                                        CE_Editor.Rows.Add(ImpStr, String.Empty);
+                                        CE_Editor.Rows.Add(ImpStr, string.Empty);
                                     }
                                 }
                             }
@@ -366,39 +366,39 @@ namespace srcrepair.gui
             switch (FileName.Name.Substring(0, FileName.Name.LastIndexOf('_')))
             {
                 case "Container":
-                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Bud, FileName.CreationTime);
+                    ConfRow = string.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Bud, FileName.CreationTime);
                     ConfType = AppStrings.BU_BType_Cont;
                     break;
                 case "Config":
-                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Config, FileName.CreationTime);
+                    ConfRow = string.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_Config, FileName.CreationTime);
                     ConfType = AppStrings.BU_BType_Cfg;
                     break;
                 case "VoiceBan":
-                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_VChat, FileName.CreationTime);
+                    ConfRow = string.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_VChat, FileName.CreationTime);
                     ConfType = AppStrings.BU_BType_DB;
                     break;
                 case "VideoCfg":
-                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
+                    ConfRow = string.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
                     ConfType = AppStrings.BU_BType_Video;
                     break;
                 case "VideoAutoCfg":
-                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
+                    ConfRow = string.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
                     ConfType = AppStrings.BU_BType_Video;
                     break;
                 case "Game_Options":
-                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
+                    ConfRow = string.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GRGame, FileName.CreationTime);
                     ConfType = AppStrings.BU_BType_Reg;
                     break;
                 case "Source_Options":
-                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SRCAll, FileName.CreationTime);
+                    ConfRow = string.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SRCAll, FileName.CreationTime);
                     ConfType = AppStrings.BU_BType_Reg;
                     break;
                 case "Steam_BackUp":
-                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SteamAll, FileName.CreationTime);
+                    ConfRow = string.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_SteamAll, FileName.CreationTime);
                     ConfType = AppStrings.BU_BType_Reg;
                     break;
                 case "Game_AutoBackUp":
-                    ConfRow = String.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
+                    ConfRow = string.Format(Properties.Resources.BU_TablePrefix, AppStrings.BU_BName_GameAuto, FileName.CreationTime);
                     ConfType = AppStrings.BU_BType_Reg;
                     break;
                 default:
@@ -698,7 +698,7 @@ namespace srcrepair.gui
         /// <param name="OldPath">Valid path to Steam client installation directory.</param>
         private string CheckLastSteamPath(string OldPath)
         {
-            return (!String.IsNullOrWhiteSpace(OldPath) && File.Exists(Path.Combine(OldPath, App.Platform.SteamBinaryName))) ? OldPath : GetPathByMEnter();
+            return (!string.IsNullOrWhiteSpace(OldPath) && File.Exists(Path.Combine(OldPath, App.Platform.SteamBinaryName))) ? OldPath : GetPathByMEnter();
         }
 
         /// <summary>
@@ -798,7 +798,7 @@ namespace srcrepair.gui
             Properties.Settings.Default.LastSteamPath = App.SteamClient.FullSteamPath;
             
             // Add Steam client installation path to Troubleshooting page...
-            PS_StPath.Text = String.Format(PS_StPath.Text, App.SteamClient.FullSteamPath);
+            PS_StPath.Text = string.Format(PS_StPath.Text, App.SteamClient.FullSteamPath);
         }
 
         /// <summary>
@@ -823,11 +823,11 @@ namespace srcrepair.gui
         {
             try
             {
-                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, FileManager.DetectDriveFileSystem(Path.GetPathRoot(App.SourceGames[AppSelector.Text].FullGamePath)));
+                PS_OSDrive.Text = string.Format(PS_OSDrive.Text, FileManager.DetectDriveFileSystem(Path.GetPathRoot(App.SourceGames[AppSelector.Text].FullGamePath)));
             }
             catch (Exception Ex)
             {
-                PS_OSDrive.Text = String.Format(PS_OSDrive.Text, "Unknown");
+                PS_OSDrive.Text = string.Format(PS_OSDrive.Text, "Unknown");
                 Logger.Warn(Ex);
             }
         }
@@ -841,7 +841,7 @@ namespace srcrepair.gui
             switch (GamesCount)
             {
                 case 0:
-                    Logger.Warn(String.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
+                    Logger.Warn(string.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
                     MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Environment.Exit(ReturnCodes.NoGamesDetected);
                     break;
@@ -866,7 +866,7 @@ namespace srcrepair.gui
             {
                 PS_PathSteam.ForeColor = Color.Red;
                 PS_PathSteam.Image = Properties.Resources.IconUpdateError;
-                Logger.Warn(String.Format(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath));
+                Logger.Warn(string.Format(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath));
             }
         }
 
@@ -880,7 +880,7 @@ namespace srcrepair.gui
             {
                 PS_PathGame.ForeColor = Color.Red;
                 PS_PathGame.Image = Properties.Resources.IconUpdateError;
-                Logger.Warn(String.Format(AppStrings.AppRestrSymbLog, App.SourceGames[AppSelector.Text].FullGamePath));
+                Logger.Warn(string.Format(AppStrings.AppRestrSymbLog, App.SourceGames[AppSelector.Text].FullGamePath));
             }
             else
             {
@@ -904,7 +904,7 @@ namespace srcrepair.gui
         /// </summary>
         private async void HandleHUDScreenshot()
         {
-            string HUDScreenshotFile = String.Empty;
+            string HUDScreenshotFile = string.Empty;
             try
             {
                 HUDScreenshotFile = await HandleHUDScreenshotTask(AppSelector.Text, HD_HSel.Text);
@@ -932,7 +932,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex);
-                SB_SteamID.Text = String.Empty;
+                SB_SteamID.Text = string.Empty;
             }
         }
 
@@ -970,7 +970,7 @@ namespace srcrepair.gui
                     {
                         MNUShowEdHint.Enabled = true;
                         SB_Status.ForeColor = Color.Black;
-                        SB_Status.Text = String.Format(AppStrings.StatusOpenedFile, String.IsNullOrEmpty(CFGFileName) ? AppStrings.UnnamedFileName : Path.GetFileName(CFGFileName));
+                        SB_Status.Text = string.Format(AppStrings.StatusOpenedFile, string.IsNullOrEmpty(CFGFileName) ? AppStrings.UnnamedFileName : Path.GetFileName(CFGFileName));
                     }
                     break;
                 default: // Any other page selected...
@@ -1039,7 +1039,7 @@ namespace srcrepair.gui
         /// </summary>
         private void CloseEditorConfigs()
         {
-            CFGFileName = String.Empty;
+            CFGFileName = string.Empty;
             CE_Editor.Rows.Clear();
         }
 
@@ -1114,7 +1114,7 @@ namespace srcrepair.gui
                 {
                     if (await CheckForUpdatesTask(App.UserAgent))
                     {
-                        MessageBox.Show(String.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(string.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -1166,7 +1166,7 @@ namespace srcrepair.gui
             };
 
             // Returns result...
-            return String.Format("{0}.html", TabMappings[MainTabControl.SelectedTab]);
+            return string.Format("{0}.html", TabMappings[MainTabControl.SelectedTab]);
         }
 
         /// <summary>
@@ -1383,7 +1383,7 @@ namespace srcrepair.gui
         /// <param name="UseNotepad">Use default text editor instead of Config Editor.</param>
         private void EditFPSConfig(string ConfigFile, bool UseNotepad = false)
         {
-            if (!String.IsNullOrWhiteSpace(ConfigFile) && File.Exists(ConfigFile))
+            if (!string.IsNullOrWhiteSpace(ConfigFile) && File.Exists(ConfigFile))
             {
                 if (UseNotepad)
                 {
@@ -1397,7 +1397,7 @@ namespace srcrepair.gui
             }
             else
             {
-                Logger.Warn(String.Format(DebugStrings.AppDbgExCfgEditorLoad, ConfigFile));
+                Logger.Warn(string.Format(DebugStrings.AppDbgExCfgEditorLoad, ConfigFile));
             }
         }
 
@@ -1835,7 +1835,7 @@ namespace srcrepair.gui
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                e.Cancel = Properties.Settings.Default.ConfirmExit && MessageBox.Show(String.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes;
+                e.Cancel = Properties.Settings.Default.ConfirmExit && MessageBox.Show(string.Format(AppStrings.FrmCloseQuery, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes;
             }
         }
 
@@ -2030,7 +2030,7 @@ namespace srcrepair.gui
             try
             {
                 // Checking result...
-                bool Success = !String.IsNullOrEmpty(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Name);
+                bool Success = !string.IsNullOrEmpty(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Name);
 
                 // Changing some controls state...
                 FP_Description.Text = App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].Description;
@@ -2198,7 +2198,7 @@ namespace srcrepair.gui
         {
             CE_SaveCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
 
-            if (!String.IsNullOrEmpty(CFGFileName))
+            if (!string.IsNullOrEmpty(CFGFileName))
             {
                 if (Properties.Settings.Default.SafeCleanup)
                 {
@@ -2314,7 +2314,7 @@ namespace srcrepair.gui
             List<String> CleanDirs = new List<string>();
 
             // Asking for confirmation...
-            if (MessageBox.Show(String.Format(AppStrings.AppQuestionTemplate, ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format(AppStrings.AppQuestionTemplate, ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try
                 {
@@ -2397,11 +2397,11 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_CheckCache_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(String.Format(AppStrings.AppQuestionTemplate, ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format(AppStrings.AppQuestionTemplate, ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try
                 {
-                    App.Platform.StartRegularProcess(String.Format("steam://validate/{0}", App.SourceGames[AppSelector.Text].GameInternalID));
+                    App.Platform.StartRegularProcess(string.Format("steam://validate/{0}", App.SourceGames[AppSelector.Text].GameInternalID));
                 }
                 catch (Exception Ex)
                 {
@@ -2689,10 +2689,10 @@ namespace srcrepair.gui
             try
             {
                 string Buf = CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[0].Value.ToString();
-                if (!String.IsNullOrEmpty(Buf))
+                if (!string.IsNullOrEmpty(Buf))
                 {
                     Buf = CvarFetcher.GetString(Buf);
-                    if (!String.IsNullOrEmpty(Buf))
+                    if (!string.IsNullOrEmpty(Buf))
                     {
                         MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
@@ -2720,7 +2720,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUHelp_Click(object sender, EventArgs e)
         {
-            string CHMFile = Path.Combine(App.FullAppPath, "help", String.Format(Properties.Resources.AppHelpFileName, AppStrings.AppLangPrefix));
+            string CHMFile = Path.Combine(App.FullAppPath, "help", string.Format(Properties.Resources.AppHelpFileName, AppStrings.AppLangPrefix));
 
             if (File.Exists(CHMFile))
             {
@@ -3035,7 +3035,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void CE_OpenInNotepad_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(CFGFileName))
+            if (!string.IsNullOrEmpty(CFGFileName))
             {
                 try
                 {
@@ -3153,14 +3153,14 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void CE_ManualBackUpCfg_Click(object sender, EventArgs e)
         {
-            if (!(String.IsNullOrEmpty(CFGFileName)))
+            if (!(string.IsNullOrEmpty(CFGFileName)))
             {
                 if (File.Exists(CFGFileName))
                 {
                     try
                     {
                         FileManager.CreateConfigBackUp(CFGFileName, App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
-                        MessageBox.Show(String.Format(AppStrings.CE_BackUpCreated, Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show(string.Format(AppStrings.CE_BackUpCreated, Path.GetFileName(CFGFileName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception Ex)
                     {
@@ -3227,7 +3227,7 @@ namespace srcrepair.gui
         private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
         {                
             // Checking result...
-            bool Success = !String.IsNullOrEmpty(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Name);
+            bool Success = !string.IsNullOrEmpty(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Name);
 
             // Changing some controls state...
             HD_GB_Pbx.Image = Properties.Resources.ImageLoadingFile;
@@ -3239,7 +3239,7 @@ namespace srcrepair.gui
             HD_LastUpdate.Visible = Success;
             if (Success)
             {
-                HD_LastUpdate.Text = String.Format(AppStrings.HD_LastUpdateInfo, FileManager.Unix2DateTime(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LastUpdate).ToLocalTime());
+                HD_LastUpdate.Text = string.Format(AppStrings.HD_LastUpdateInfo, FileManager.Unix2DateTime(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LastUpdate).ToLocalTime());
             }
 
             // Checking if selected HUD is installed...
@@ -3261,7 +3261,7 @@ namespace srcrepair.gui
         {
             if (App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].IsUpdated)
             {
-                if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                if (MessageBox.Show(string.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                 {
                     // Downloading HUD archive...
                     bool DownloadResult = DownloadHUD();
@@ -3298,7 +3298,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void HD_Uninstall_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(String.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format("{0}?", ((Button)sender).Text), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 // Generating full path...
                 string HUDPath = Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].InstallDir);
@@ -3327,7 +3327,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void HD_Homepage_Click(object sender, EventArgs e)
         {
-            if (!String.IsNullOrEmpty(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Site))
+            if (!string.IsNullOrEmpty(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Site))
             {
                 try
                 {
@@ -3353,7 +3353,7 @@ namespace srcrepair.gui
                 Path.Combine(App.AppUserDir, StringsManager.ConfigDirectoryName, "*.*"),
                 Path.Combine(App.AppUserDir, StringsManager.UpdateLocalDirectoryName, "*.*")
             };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
 
         /// <summary>
@@ -3367,7 +3367,7 @@ namespace srcrepair.gui
             {
                 Path.Combine(Path.GetTempPath(), "*.*")
             };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", String.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower().Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
 
         /// <summary>
@@ -3449,7 +3449,7 @@ namespace srcrepair.gui
             {
                 string Result = GuiHelpers.FormShowIDSelect(App.SteamClient.SteamIDs);
 
-                if (!String.IsNullOrWhiteSpace(Result))
+                if (!string.IsNullOrWhiteSpace(Result))
                 {
                     SB_SteamID.Text = Result;
                     Properties.Settings.Default.LastSteamID = Result;

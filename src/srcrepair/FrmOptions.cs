@@ -45,7 +45,7 @@ namespace srcrepair.gui
             MO_HideOutdatedHUDs.Checked = Properties.Settings.Default.HUDHideOutdated;
 
             // Settig application name in window title...
-            Text = String.Format(Text, Properties.Resources.AppName);
+            Text = string.Format(Text, Properties.Resources.AppName);
         }
 
         /// <summary>

@@ -107,7 +107,7 @@ namespace srcrepair.gui
                     if (MM_Table.Rows[i].Cells[0].Value != null)
                     {
                         string Str = MM_Table.Rows[i].Cells[0].Value.ToString();
-                        if (Regex.IsMatch(Str, String.Format("^{0}$", Properties.Resources.MM_SteamIDRegex)))
+                        if (Regex.IsMatch(Str, string.Format("^{0}$", Properties.Resources.MM_SteamIDRegex)))
                         {
                             // Building result with using NULL bytes for aligning...
                             StringBuilder SB = new StringBuilder();
@@ -357,7 +357,7 @@ namespace srcrepair.gui
                 if (MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value != null)
                 {
                     string Value = MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value.ToString();
-                    Platform.OpenWebPage(String.Format(Properties.Resources.MM_CommunityURL, Regex.IsMatch(Value, Properties.Resources.MM_SteamID32Regex) ? SteamConv.ConvSid32Sid64(Value) : SteamConv.ConvSidv3Sid64(Value)));
+                    Platform.OpenWebPage(string.Format(Properties.Resources.MM_CommunityURL, Regex.IsMatch(Value, Properties.Resources.MM_SteamID32Regex) ? SteamConv.ConvSid32Sid64(Value) : SteamConv.ConvSidv3Sid64(Value)));
                 }
             }
             catch (Exception Ex)

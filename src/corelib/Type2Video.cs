@@ -629,9 +629,9 @@ namespace srcrepair.core
         /// <returns>Cvar value as string from video file.</returns>
         protected override string GetRawValue(string CVar)
         {
-            string CVarRegex = String.Format("setting.{0}", CVar);
+            string CVarRegex = string.Format("setting.{0}", CVar);
             string StrRes = VideoFile.FirstOrDefault(s => Regex.IsMatch(s, CVarRegex));
-            if (String.IsNullOrEmpty(StrRes))
+            if (string.IsNullOrEmpty(StrRes))
             {
                 StrRes = DefaultsFile.FirstOrDefault(s => s.Contains(CVar));
             }
@@ -703,25 +703,25 @@ namespace srcrepair.core
                 CFile.WriteLine("{");
 
                 // Adding video settings...
-                CFile.WriteLine(String.Format(Templt, VSettings.EffectDetails, _EffectDetails));
-                CFile.WriteLine(String.Format(Templt, VSettings.ShaderEffects, _ShaderEffects));
-                CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasing, _AntiAliasing));
-                CFile.WriteLine(String.Format(Templt, VSettings.AntiAliasQuality, _AntiAliasQuality));
-                CFile.WriteLine(String.Format(Templt, VSettings.FilteringMode, _FilteringMode));
-                CFile.WriteLine(String.Format(Templt, VSettings.VSync, _VSync));
-                CFile.WriteLine(String.Format(Templt, VSettings.VSyncMode, _VSyncMode));
-                CFile.WriteLine(String.Format(Templt, VSettings.GrainScaleOverride, "1"));
-                CFile.WriteLine(String.Format(Templt, VSettings.Brightness, (_Brightness / 10.0).ToString(CI)));
-                CFile.WriteLine(String.Format(Templt, VSettings.ShadowQuality, _ShadowQuality));
-                CFile.WriteLine(String.Format(Templt, VSettings.MotionBlur, _MotionBlur));
-                CFile.WriteLine(String.Format(Templt, VSettings.TextureModelQuality, _TextureModelQuality));
-                CFile.WriteLine(String.Format(Templt, VSettings.MemoryPoolType, _MemoryPoolType));
-                CFile.WriteLine(String.Format(Templt, VSettings.MCRendering, _MCRendering));
-                CFile.WriteLine(String.Format(Templt, VSettings.ScreenWidth, _ScreenWidth));
-                CFile.WriteLine(String.Format(Templt, VSettings.ScreenHeight, _ScreenHeight));
-                CFile.WriteLine(String.Format(Templt, VSettings.ScreenRatio, _ScreenRatio));
-                CFile.WriteLine(String.Format(Templt, VSettings.DisplayMode, _DisplayMode));
-                CFile.WriteLine(String.Format(Templt, VSettings.DisplayBorderless, _DisplayBorderless));
+                CFile.WriteLine(string.Format(Templt, VSettings.EffectDetails, _EffectDetails));
+                CFile.WriteLine(string.Format(Templt, VSettings.ShaderEffects, _ShaderEffects));
+                CFile.WriteLine(string.Format(Templt, VSettings.AntiAliasing, _AntiAliasing));
+                CFile.WriteLine(string.Format(Templt, VSettings.AntiAliasQuality, _AntiAliasQuality));
+                CFile.WriteLine(string.Format(Templt, VSettings.FilteringMode, _FilteringMode));
+                CFile.WriteLine(string.Format(Templt, VSettings.VSync, _VSync));
+                CFile.WriteLine(string.Format(Templt, VSettings.VSyncMode, _VSyncMode));
+                CFile.WriteLine(string.Format(Templt, VSettings.GrainScaleOverride, "1"));
+                CFile.WriteLine(string.Format(Templt, VSettings.Brightness, (_Brightness / 10.0).ToString(CI)));
+                CFile.WriteLine(string.Format(Templt, VSettings.ShadowQuality, _ShadowQuality));
+                CFile.WriteLine(string.Format(Templt, VSettings.MotionBlur, _MotionBlur));
+                CFile.WriteLine(string.Format(Templt, VSettings.TextureModelQuality, _TextureModelQuality));
+                CFile.WriteLine(string.Format(Templt, VSettings.MemoryPoolType, _MemoryPoolType));
+                CFile.WriteLine(string.Format(Templt, VSettings.MCRendering, _MCRendering));
+                CFile.WriteLine(string.Format(Templt, VSettings.ScreenWidth, _ScreenWidth));
+                CFile.WriteLine(string.Format(Templt, VSettings.ScreenHeight, _ScreenHeight));
+                CFile.WriteLine(string.Format(Templt, VSettings.ScreenRatio, _ScreenRatio));
+                CFile.WriteLine(string.Format(Templt, VSettings.DisplayMode, _DisplayMode));
+                CFile.WriteLine(string.Format(Templt, VSettings.DisplayBorderless, _DisplayBorderless));
 
                 // Adding standard footer...
                 CFile.WriteLine("}");

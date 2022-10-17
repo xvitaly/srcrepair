@@ -186,7 +186,7 @@ namespace srcrepair.core
                     return GameDirectory;
                 }
             }
-            return String.Empty;
+            return string.Empty;
         }
 
         /// <summary>
@@ -288,7 +288,7 @@ namespace srcrepair.core
             GamePath = GetGameDirectory(DirName, GameDirs, OS);
 
             // Checking if game installed...
-            IsInstalled = !String.IsNullOrWhiteSpace(GamePath);
+            IsInstalled = !string.IsNullOrWhiteSpace(GamePath);
 
             // Setting all other properties only for installed games...
             if (IsInstalled)
@@ -300,7 +300,7 @@ namespace srcrepair.core
                 FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
                 AppHUDDir = Path.Combine(AUserDir, Properties.Resources.HUDLocalDir, SmallAppName);
                 AppCfgDir = Path.Combine(AUserDir, Properties.Resources.CfgLocalDir);
-                CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : String.Empty);
+                CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : string.Empty);
                 AppWorkshopDir = Path.Combine(SteamDir, SteamAppsDirName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
                 CloudScreenshotsPath = Path.Combine(SteamDir, "userdata", SteamID, "760", "remote", GameInternalID, "screenshots");
                 if (IsUsingVideoFile) { UpdateVideoFilesList(); }

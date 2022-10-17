@@ -98,7 +98,7 @@ namespace srcrepair.core
             {
                 while (RecvStr.IndexOf(@"""", StringComparison.InvariantCulture) != -1)
                 {
-                    RecvStr = RecvStr.Replace(@"""", String.Empty);
+                    RecvStr = RecvStr.Replace(@"""", string.Empty);
                 }
             }
 
@@ -133,7 +133,7 @@ namespace srcrepair.core
         /// <returns>Contents of bundled in resource text file.</returns>
         public static string GetTemplateFromResource(string FileName)
         {
-            string Result = String.Empty;
+            string Result = string.Empty;
             using (StreamReader Reader = new StreamReader(Assembly.GetCallingAssembly().GetManifestResourceStream(FileName)))
             {
                 Result = Reader.ReadToEnd();

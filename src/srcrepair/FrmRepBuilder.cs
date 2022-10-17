@@ -118,7 +118,7 @@ namespace srcrepair.gui
                 // Adding generic report files...
                 foreach (ReportTarget RepTarget in RepMan.ReportTargets)
                 {
-                    ProcessManager.StartProcessAndWait(RepTarget.Program, String.Format(RepTarget.Parameters, RepTarget.OutputFileName));
+                    ProcessManager.StartProcessAndWait(RepTarget.Program, string.Format(RepTarget.Parameters, RepTarget.OutputFileName));
 
                     CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
                     if ((CurrentPercent >= 0) && (CurrentPercent <= 100) && (CurrentPercent > PreviousPercent))
@@ -291,7 +291,7 @@ namespace srcrepair.gui
                     {
                         try
                         {
-                            MessageBox.Show(String.Format(AppStrings.RPB_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(string.Format(AppStrings.RPB_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Platform.OpenExplorer(RepMan.ReportArchiveName);
                         }
                         catch (Exception Ex)
