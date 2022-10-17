@@ -664,6 +664,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to create form due to not enough SteamIDs in list..
+        /// </summary>
+        internal static string AppDbgExStmIDsNotEnough {
+            get {
+                return ResourceManager.GetString("AppDbgExStmIDsNotEnough", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while initializing SteamManager class instance..
         /// </summary>
         internal static string AppDbgExStmmInit {

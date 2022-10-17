@@ -546,8 +546,8 @@
   <data name="RW_RmException" xml:space="preserve">
     <value>An error occured during files removal. Some files were not deleted.</value>
   </data>
-  <data name="SD_NEParamsFormException" xml:space="preserve">
-    <value>Not enough SteamIDs in list.</value>
+  <data name="SD_NotEnoughStmIDs" xml:space="preserve">
+    <value>Failed to show SteamID selector dialog due to not enough SteamIDs found!</value>
   </data>
   <data name="StatusNormal" xml:space="preserve">
     <value>Ready.</value>

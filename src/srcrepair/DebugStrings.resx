@@ -318,6 +318,9 @@
   <data name="AppDbgExSteamPath" xml:space="preserve">
     <value>Exception while trying to get Steam path. Application will be terminated.</value>
   </data>
+  <data name="AppDbgExStmIDsNotEnough" xml:space="preserve">
+    <value>Failed to create form due to not enough SteamIDs in list.</value>
+  </data>
   <data name="AppDbgExStmmInit" xml:space="preserve">
     <value>Exception while initializing SteamManager class instance.</value>
   </data>
