@@ -53,16 +53,14 @@ namespace srcrepair.gui
         /// <summary>
         /// Extracts archive to specified destination directory.
         /// </summary>
-        /// <param name="ArchName">Archive name with full path.</param>
-        /// <param name="DestDirectory">Destination directory.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private void UnpackArchive(string ArchName, string DestDirectory, IProgress<int> Progress)
+        private void UnpackArchive(IProgress<int> Progress)
         {
             // Checking if archive file exists...
-            if (File.Exists(ArchName))
+            if (File.Exists(ArchiveName))
             {
                 // Opening archive...
-                using (ZipArchive Zip = ZipFile.OpenRead(ArchName))
+                using (ZipArchive Zip = ZipFile.OpenRead(ArchiveName))
                 {
                     // Creating some counters...
                     int TotalFiles = Zip.Entries.Count;
@@ -74,8 +72,8 @@ namespace srcrepair.gui
                         try
                         {
                             // Extracting file or directory...
-                            string FullName = Path.GetFullPath(Path.Combine(DestDirectory, ZFile.FullName));
-                            if (!FullName.StartsWith(Path.GetFullPath(DestDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException(DebugStrings.AppDbgZipPathTraversalDetected); }
+                            string FullName = Path.GetFullPath(Path.Combine(DestinationDirectory, ZFile.FullName));
+                            if (!FullName.StartsWith(Path.GetFullPath(DestinationDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException(DebugStrings.AppDbgZipPathTraversalDetected); }
                             if (string.IsNullOrEmpty(ZFile.Name)) { Directory.CreateDirectory(FullName); } else { ZFile.ExtractToFile(FullName, true); }
 
                             // Reporting progress...
@@ -95,21 +93,19 @@ namespace srcrepair.gui
             }
             else
             {
-                throw new FileNotFoundException(DebugStrings.AppDebgZipExtractArchiveNotFound, ArchName);
+                throw new FileNotFoundException(DebugStrings.AppDebgZipExtractArchiveNotFound, ArchiveName);
             }
         }
 
         /// <summary>
         /// Asynchronously extracts archive to specified destination directory.
         /// </summary>
-        /// <param name="ArchName">Archive name with full path.</param>
-        /// <param name="DestDirectory">Destination directory.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task UnpackArchiveTask(string ArchName, string DestDirectory, IProgress<int> Progress)
+        private async Task UnpackArchiveTask(IProgress<int> Progress)
         {
             await Task.Run(() =>
             {
-                UnpackArchive(ArchName, DestDirectory, Progress);
+                UnpackArchive(Progress);
             });
         }
 
@@ -140,7 +136,7 @@ namespace srcrepair.gui
         {
             try
             {
-                await UnpackArchiveTask(ArchiveName, DestinationDirectory, new Progress<int>(ReportUnpackProgress));
+                await UnpackArchiveTask(new Progress<int>(ReportUnpackProgress));
             }
             catch (Exception Ex)
             {
