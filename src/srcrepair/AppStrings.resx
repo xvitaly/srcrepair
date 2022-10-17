@@ -210,9 +210,6 @@
   <data name="AppXMLParseError" xml:space="preserve">
     <value>An error occurred while parsing XML game database file. Please reinstall this application.</value>
   </data>
-  <data name="AR_BkgWrkExText" xml:space="preserve">
-    <value>Archive not found.</value>
-  </data>
   <data name="AR_UnpackException" xml:space="preserve">
     <value>An error occured during unpacking selected archive. Additional information can be found in debug log.</value>
   </data>

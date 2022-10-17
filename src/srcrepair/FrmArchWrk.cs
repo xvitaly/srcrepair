@@ -95,7 +95,7 @@ namespace srcrepair.gui
             }
             else
             {
-                throw new FileNotFoundException(AppStrings.AR_BkgWrkExText, ArchName);
+                throw new FileNotFoundException(DebugStrings.AppDebgZipExtractArchiveNotFound, ArchName);
             }
         }
 

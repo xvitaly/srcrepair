@@ -393,4 +393,7 @@
   <data name="AppDbgZipPathTraversalDetected" xml:space="preserve">
     <value>The archive tries to traverse through the base archive directory!</value>
   </data>
+  <data name="AppDebgZipExtractArchiveNotFound" xml:space="preserve">
+    <value>Cannot unpack because the archive file was not found.</value>
+  </data>
 </root>

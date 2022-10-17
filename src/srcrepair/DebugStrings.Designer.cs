@@ -887,5 +887,14 @@ namespace srcrepair.gui {
                 return ResourceManager.GetString("AppDbgZipPathTraversalDetected", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot unpack because the archive file was not found..
+        /// </summary>
+        internal static string AppDebgZipExtractArchiveNotFound {
+            get {
+                return ResourceManager.GetString("AppDebgZipExtractArchiveNotFound", resourceCulture);
+            }
+        }
     }
 }
