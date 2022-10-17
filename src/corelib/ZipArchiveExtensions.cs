@@ -24,7 +24,7 @@ namespace srcrepair.core
         /// <param name="CompressionLevel">Compression level.</param>
         public static void CreateEntryFromDirectory(this ZipArchive Archive, string SourceDirectoryName, string EntryName, CompressionLevel CompressionLevel)
         {
-            if (!Directory.Exists(SourceDirectoryName)) { throw new DirectoryNotFoundException(string.Format("Directory {0} not found. Cannot add it to the Zip archive!", SourceDirectoryName)); }
+            if (!Directory.Exists(SourceDirectoryName)) { throw new DirectoryNotFoundException(string.Format(DebugStrings.AppDbgCoreZipAddDirNotFound, SourceDirectoryName)); }
             foreach (string SFile in Directory.GetFiles(SourceDirectoryName).Concat(Directory.GetDirectories(SourceDirectoryName)))
             {
                 if (File.GetAttributes(SFile).HasFlag(FileAttributes.Directory))

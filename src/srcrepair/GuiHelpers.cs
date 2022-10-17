@@ -116,7 +116,7 @@ namespace srcrepair.gui
             // Checking number of available Steam UserIDs...
             if (SteamIDs.Count < 1)
             {
-                throw new ArgumentOutOfRangeException(AppStrings.SD_NEParamsFormException);
+                throw new ArgumentOutOfRangeException(DebugStrings.AppDbgExStmIDsNotEnough);
             }
 
             // Creating local variable for storing result...

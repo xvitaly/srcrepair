@@ -79,6 +79,15 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Directory {0} not found. Cannot add it to the Zip archive!.
+        /// </summary>
+        internal static string AppDbgCoreZipAddDirNotFound {
+            get {
+                return ResourceManager.GetString("AppDbgCoreZipAddDirNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Minor exception while while building CleanupTargets list object..
         /// </summary>
         internal static string AppDbgExCoreClnManConstructor {

@@ -340,15 +340,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Archive not found..
-        /// </summary>
-        internal static string AR_BkgWrkExText {
-            get {
-                return ResourceManager.GetString("AR_BkgWrkExText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occured during unpacking selected archive. Additional information can be found in debug log..
         /// </summary>
         internal static string AR_UnpackException {
@@ -1348,11 +1339,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not enough SteamIDs in list..
+        ///   Looks up a localized string similar to Failed to show SteamID selector dialog due to not enough SteamIDs found!.
         /// </summary>
-        internal static string SD_NEParamsFormException {
+        internal static string SD_NotEnoughStmIDs {
             get {
-                return ResourceManager.GetString("SD_NEParamsFormException", resourceCulture);
+                return ResourceManager.GetString("SD_NotEnoughStmIDs", resourceCulture);
             }
         }
         

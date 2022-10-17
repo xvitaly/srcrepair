@@ -3459,6 +3459,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExUserIdSel);
+                MessageBox.Show(AppStrings.SD_NotEnoughStmIDs, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

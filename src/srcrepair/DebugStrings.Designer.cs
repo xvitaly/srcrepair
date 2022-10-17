@@ -664,6 +664,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to create form due to not enough SteamIDs in list..
+        /// </summary>
+        internal static string AppDbgExStmIDsNotEnough {
+            get {
+                return ResourceManager.GetString("AppDbgExStmIDsNotEnough", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while initializing SteamManager class instance..
         /// </summary>
         internal static string AppDbgExStmmInit {
@@ -858,6 +867,33 @@ namespace srcrepair.gui {
         internal static string AppDbgUACCancel {
             get {
                 return ResourceManager.GetString("AppDbgUACCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannnot unpack file {0} from Zip archive due to an error..
+        /// </summary>
+        internal static string AppDbgZipExtractFailure {
+            get {
+                return ResourceManager.GetString("AppDbgZipExtractFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The archive tries to traverse through the base archive directory!.
+        /// </summary>
+        internal static string AppDbgZipPathTraversalDetected {
+            get {
+                return ResourceManager.GetString("AppDbgZipPathTraversalDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot unpack because the archive file was not found..
+        /// </summary>
+        internal static string AppDebgZipExtractArchiveNotFound {
+            get {
+                return ResourceManager.GetString("AppDebgZipExtractArchiveNotFound", resourceCulture);
             }
         }
     }

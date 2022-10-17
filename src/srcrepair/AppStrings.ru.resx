@@ -543,8 +543,8 @@
   <data name="RW_RmException" xml:space="preserve">
     <value>Произошла ошибка во время удаления файлов. Не все файлы были удалены.</value>
   </data>
-  <data name="SD_NEParamsFormException" xml:space="preserve">
-    <value>Невозможно создать форму, т.к. передано недостаточное количество SteamID.</value>
+  <data name="SD_NotEnoughStmIDs" xml:space="preserve">
+    <value>Невозможно отобразить диалоговое окно выбора SteamID, т.к. найдено недостаточное их количество!</value>
   </data>
   <data name="StatusNormal" xml:space="preserve">
     <value>Готово.</value>
