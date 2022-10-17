@@ -384,6 +384,9 @@
   <data name="AppDbgUACCancel" xml:space="preserve">
     <value>Failed to perform elevation. User closed the UAC dialog.</value>
   </data>
+  <data name="AppDbgZipExtractFailure" xml:space="preserve">
+    <value>Cannnot unpack file {0} from Zip archive due to an error.</value>
+  </data>
   <data name="AppDbgZipPathTraversalDetected" xml:space="preserve">
     <value>The archive tries to traverse through the base archive directory!</value>
   </data>

@@ -862,6 +862,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannnot unpack file {0} from Zip archive due to an error..
+        /// </summary>
+        internal static string AppDbgZipExtractFailure {
+            get {
+                return ResourceManager.GetString("AppDbgZipExtractFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The archive tries to traverse through the base archive directory!.
         /// </summary>
         internal static string AppDbgZipPathTraversalDetected {
