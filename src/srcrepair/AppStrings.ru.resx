@@ -207,6 +207,9 @@
   <data name="AppVideoDbNotFound" xml:space="preserve">
     <value>Не удалось загрузить графические настройки игры "{0}" из файла "{1}".</value>
   </data>
+  <data name="AppVisitWebsiteError" xml:space="preserve">
+    <value>Не удалось запустить веб-браузер для посещения официального сайта программы!</value>
+  </data>
   <data name="AppXMLParseError" xml:space="preserve">
     <value>Произошла ошибка при разборе XML файла со списком игр. Возможно он отсутствует или повреждён. Пожалуйста, переустановите программу.</value>
   </data>

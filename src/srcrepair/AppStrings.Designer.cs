@@ -331,6 +331,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to open web browser to visit the official website!.
+        /// </summary>
+        internal static string AppVisitWebsiteError {
+            get {
+                return ResourceManager.GetString("AppVisitWebsiteError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while parsing XML game database file. Please reinstall this application..
         /// </summary>
         internal static string AppXMLParseError {
