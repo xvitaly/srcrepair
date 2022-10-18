@@ -2754,6 +2754,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExUrlWebsite);
+                MessageBox.Show(AppStrings.AppVisitWebsiteError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
