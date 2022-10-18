@@ -61,15 +61,6 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/issues/new.
-        /// </summary>
-        internal static string AppBtURL {
-            get {
-                return ResourceManager.GetString("AppBtURL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to wget.
         /// </summary>
         internal static string AppDnlUA {
@@ -106,11 +97,11 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to https://www.easycoding.org/projects/srcrepair#respond.
+        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/issues/new.
         /// </summary>
-        internal static string AppURLReply {
+        internal static string AppURLBugTracker {
             get {
-                return ResourceManager.GetString("AppURLReply", resourceCulture);
+                return ResourceManager.GetString("AppURLBugTracker", resourceCulture);
             }
         }
         
@@ -129,6 +120,15 @@ namespace srcrepair.gui.Properties {
         internal static string AppURLSteamGroup {
             get {
                 return ResourceManager.GetString("AppURLSteamGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair.
+        /// </summary>
+        internal static string AppURLWebsite {
+            get {
+                return ResourceManager.GetString("AppURLWebsite", resourceCulture);
             }
         }
         

@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
-        DwAAAk1TRnQBSQFMAgEBBgEAAVgBBQFYAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBgEAAYQBBQGEAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -4589,11 +4589,11 @@
   <data name="MNUSep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 6</value>
   </data>
-  <data name="MNUOpinion.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MNUWebsite.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
-  <data name="MNUOpinion.Text" xml:space="preserve">
-    <value>Give &amp;feedback</value>
+  <data name="MNUWebsite.Text" xml:space="preserve">
+    <value>Official w&amp;ebsite</value>
   </data>
   <data name="MNUReportBug.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
@@ -4607,14 +4607,14 @@
   <data name="MNUSteamGroup.Text" xml:space="preserve">
     <value>Visit S&amp;team group</value>
   </data>
+  <data name="MNUSep4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 6</value>
+  </data>
   <data name="MNUShowLog.Size" type="System.Drawing.Size, System.Drawing">
     <value>195, 22</value>
   </data>
   <data name="MNUShowLog.Text" xml:space="preserve">
     <value>&amp;Show debug log...</value>
-  </data>
-  <data name="MNUSep4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>192, 6</value>
   </data>
   <data name="MNUAbout.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Shift+F1</value>
@@ -5708,10 +5708,10 @@
   <data name="&gt;&gt;MNUSep3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MNUOpinion.Name" xml:space="preserve">
-    <value>MNUOpinion</value>
+  <data name="&gt;&gt;MNUWebsite.Name" xml:space="preserve">
+    <value>MNUWebsite</value>
   </data>
-  <data name="&gt;&gt;MNUOpinion.Type" xml:space="preserve">
+  <data name="&gt;&gt;MNUWebsite.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUReportBug.Name" xml:space="preserve">
@@ -5726,17 +5726,17 @@
   <data name="&gt;&gt;MNUSteamGroup.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MNUShowLog.Name" xml:space="preserve">
-    <value>MNUShowLog</value>
-  </data>
-  <data name="&gt;&gt;MNUShowLog.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;MNUSep4.Name" xml:space="preserve">
     <value>MNUSep4</value>
   </data>
   <data name="&gt;&gt;MNUSep4.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MNUShowLog.Name" xml:space="preserve">
+    <value>MNUShowLog</value>
+  </data>
+  <data name="&gt;&gt;MNUShowLog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MNUAbout.Name" xml:space="preserve">
     <value>MNUAbout</value>

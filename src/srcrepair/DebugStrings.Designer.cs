@@ -745,15 +745,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to open web browser to show app commentary page..
-        /// </summary>
-        internal static string AppDbgExUrlHome {
-            get {
-                return ResourceManager.GetString("AppDbgExUrlHome", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to open web browser to show HUD&apos;s homepage..
         /// </summary>
         internal static string AppDbgExUrlHudHome {
@@ -768,6 +759,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExUrlStmSel {
             get {
                 return ResourceManager.GetString("AppDbgExUrlStmSel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to open web browser to show the official website..
+        /// </summary>
+        internal static string AppDbgExUrlWebsite {
+            get {
+                return ResourceManager.GetString("AppDbgExUrlWebsite", resourceCulture);
             }
         }
         

@@ -214,11 +214,11 @@
             this.MNUHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUUpdateCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep3 = new System.Windows.Forms.ToolStripSeparator();
-            this.MNUOpinion = new System.Windows.Forms.ToolStripMenuItem();
+            this.MNUWebsite = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUReportBug = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSteamGroup = new System.Windows.Forms.ToolStripMenuItem();
-            this.MNUShowLog = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUSep4 = new System.Windows.Forms.ToolStripSeparator();
+            this.MNUShowLog = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusBar = new System.Windows.Forms.StatusStrip();
             this.SB_Status = new System.Windows.Forms.ToolStripStatusLabel();
@@ -1812,11 +1812,11 @@
             this.MNUHelp,
             this.MNUUpdateCheck,
             this.MNUSep3,
-            this.MNUOpinion,
+            this.MNUWebsite,
             this.MNUReportBug,
             this.MNUSteamGroup,
-            this.MNUShowLog,
             this.MNUSep4,
+            this.MNUShowLog,
             this.MNUAbout});
             this.HelpMNU.Name = "HelpMNU";
             resources.ApplyResources(this.HelpMNU, "HelpMNU");
@@ -1840,12 +1840,12 @@
             this.MNUSep3.Name = "MNUSep3";
             resources.ApplyResources(this.MNUSep3, "MNUSep3");
             // 
-            // MNUOpinion
+            // MNUWebsite
             // 
-            this.MNUOpinion.Image = global::srcrepair.gui.Properties.Resources.IconHome;
-            this.MNUOpinion.Name = "MNUOpinion";
-            resources.ApplyResources(this.MNUOpinion, "MNUOpinion");
-            this.MNUOpinion.Click += new System.EventHandler(this.MNUOpinion_Click);
+            this.MNUWebsite.Image = global::srcrepair.gui.Properties.Resources.IconHome;
+            this.MNUWebsite.Name = "MNUWebsite";
+            resources.ApplyResources(this.MNUWebsite, "MNUWebsite");
+            this.MNUWebsite.Click += new System.EventHandler(this.MNUWebsite_Click);
             // 
             // MNUReportBug
             // 
@@ -1861,17 +1861,17 @@
             resources.ApplyResources(this.MNUSteamGroup, "MNUSteamGroup");
             this.MNUSteamGroup.Click += new System.EventHandler(this.MNUSteamGroup_Click);
             // 
+            // MNUSep4
+            // 
+            this.MNUSep4.Name = "MNUSep4";
+            resources.ApplyResources(this.MNUSep4, "MNUSep4");
+            // 
             // MNUShowLog
             // 
             this.MNUShowLog.Image = global::srcrepair.gui.Properties.Resources.IconNotebook;
             this.MNUShowLog.Name = "MNUShowLog";
             resources.ApplyResources(this.MNUShowLog, "MNUShowLog");
             this.MNUShowLog.Click += new System.EventHandler(this.MNUShowLog_Click);
-            // 
-            // MNUSep4
-            // 
-            this.MNUSep4.Name = "MNUSep4";
-            resources.ApplyResources(this.MNUSep4, "MNUSep4");
             // 
             // MNUAbout
             // 
@@ -2022,7 +2022,7 @@
         private System.Windows.Forms.ToolStripMenuItem MNUExit;
         private System.Windows.Forms.ToolStripMenuItem HelpMNU;
         private System.Windows.Forms.ToolStripMenuItem MNUHelp;
-        private System.Windows.Forms.ToolStripMenuItem MNUOpinion;
+        private System.Windows.Forms.ToolStripMenuItem MNUWebsite;
         private System.Windows.Forms.ToolStripMenuItem MNUReportBug;
         private System.Windows.Forms.ToolStripMenuItem MNUSteamGroup;
         private System.Windows.Forms.ToolStripSeparator MNUSep4;

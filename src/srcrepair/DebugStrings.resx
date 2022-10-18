@@ -345,14 +345,14 @@
   <data name="AppDbgExUrlGroup" xml:space="preserve">
     <value>Exception while trying to open web browser to show Steam group profile.</value>
   </data>
-  <data name="AppDbgExUrlHome" xml:space="preserve">
-    <value>Exception while trying to open web browser to show app commentary page.</value>
-  </data>
   <data name="AppDbgExUrlHudHome" xml:space="preserve">
     <value>Exception while trying to open web browser to show HUD's homepage.</value>
   </data>
   <data name="AppDbgExUrlStmSel" xml:space="preserve">
     <value>Exception while trying to open web browser to show Steam profile.</value>
+  </data>
+  <data name="AppDbgExUrlWebsite" xml:space="preserve">
+    <value>Exception while trying to open web browser to show the official website.</value>
   </data>
   <data name="AppDbgExUserIdSel" xml:space="preserve">
     <value>Exception during new UserID selection.</value>

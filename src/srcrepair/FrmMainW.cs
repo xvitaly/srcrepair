@@ -2467,7 +2467,7 @@ namespace srcrepair.gui
         {
             try
             {
-                App.Platform.OpenWebPage(Properties.Resources.AppBtURL);
+                App.Platform.OpenWebPage(Properties.Resources.AppURLBugTracker);
             }
             catch (Exception Ex)
             {
@@ -2741,19 +2741,19 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Add review" menu click event handler.
+        /// "Visit official website" menu click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void MNUOpinion_Click(object sender, EventArgs e)
+        private void MNUWebsite_Click(object sender, EventArgs e)
         {
             try
             {
-                App.Platform.OpenWebPage(Properties.Resources.AppURLReply);
+                App.Platform.OpenWebPage(Properties.Resources.AppURLWebsite);
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExUrlHome);
+                Logger.Warn(Ex, DebugStrings.AppDbgExUrlWebsite);
             }
         }
 

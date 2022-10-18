@@ -199,7 +199,7 @@
   <data name="IconOptions" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\options.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AppBtURL" xml:space="preserve">
+  <data name="AppURLBugTracker" xml:space="preserve">
     <value>https://github.com/xvitaly/srcrepair/issues/new</value>
   </data>
   <data name="IconUpdateAvailable" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -241,8 +241,8 @@
   <data name="IconOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\open.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="AppURLReply" xml:space="preserve">
-    <value>https://www.easycoding.org/projects/srcrepair#respond</value>
+  <data name="AppURLWebsite" xml:space="preserve">
+    <value>https://github.com/xvitaly/srcrepair</value>
   </data>
   <data name="AppName" xml:space="preserve">
     <value>SRC Repair</value>
