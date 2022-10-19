@@ -78,16 +78,17 @@ namespace srcrepair.gui
         {
             if (File.Exists(Banlist))
             {
-                using (StreamReader OpenedHosts = new StreamReader(Banlist, Encoding.Default))
+                using (var BanlistStream = File.Open(Banlist, FileMode.Open))
+                using (var BanlistReader = new BinaryReader(BanlistStream, Encoding.UTF8, false))
                 {
-                    while (OpenedHosts.Peek() >= 0)
+                    // Skipping 4 bytes header...
+                    BanlistStream.Seek(4, SeekOrigin.Begin);
+                    // Reading 32 bytes per iteration until EOF...
+                    do
                     {
-                        List<string> Res = ParseRow(StringsManager.CleanString(OpenedHosts.ReadLine()));
-                        foreach (string Str in Res)
-                        {
-                            MM_Table.Rows.Add(Str);
-                        }
+                        MM_Table.Rows.Add(new string(BanlistReader.ReadChars(32)).TrimEnd('\0'));
                     }
+                    while (BanlistStream.Position < BanlistStream.Length);
                 }
             }
         }
