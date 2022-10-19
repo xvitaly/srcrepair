@@ -27,6 +27,16 @@ namespace srcrepair.gui
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
+        /// Stores the number of bytes in database file header.
+        /// </summary>
+        private readonly int HeaderLength = 4;
+
+        /// <summary>
+        /// Stores the number of bytes in each database entry.
+        /// </summary>
+        private readonly int ElementLength = 32;
+
+        /// <summary>
         /// FrmMute class constructor.
         /// </summary>
         /// <param name="BL">Full path to muted players database file.</param>
@@ -52,7 +62,6 @@ namespace srcrepair.gui
             }
         }
 
-        #region IV
         /// <summary>
         /// Logger instance for FrmMute class.
         /// </summary>
@@ -67,9 +76,7 @@ namespace srcrepair.gui
         /// Gets or sets full path to game backups directory.
         /// </summary>
         private string BackUpDir { get; set; }
-        #endregion
 
-        #region IM
         /// <summary>
         /// Reads contents from muted players database file and
         /// renders it on form.
@@ -82,11 +89,11 @@ namespace srcrepair.gui
                 using (var BanlistReader = new BinaryReader(BanlistStream, Encoding.UTF8, false))
                 {
                     // Skipping 4 bytes header...
-                    BanlistStream.Seek(4, SeekOrigin.Begin);
+                    BanlistStream.Seek(HeaderLength, SeekOrigin.Begin);
                     // Reading 32 bytes per iteration until EOF...
                     do
                     {
-                        MM_Table.Rows.Add(new string(BanlistReader.ReadChars(32)).TrimEnd('\0'));
+                        MM_Table.Rows.Add(new string(BanlistReader.ReadChars(ElementLength)).TrimEnd('\0'));
                     }
                     while (BanlistStream.Position < BanlistStream.Length);
                 }
@@ -366,6 +373,5 @@ namespace srcrepair.gui
                 Logger.Warn(Ex);
             }
         }
-        #endregion
     }
 }
