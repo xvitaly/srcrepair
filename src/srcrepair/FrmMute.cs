@@ -91,7 +91,7 @@ namespace srcrepair.gui
             if (File.Exists(Banlist))
             {
                 using (var BanlistStream = File.Open(Banlist, FileMode.Open))
-                using (var BanlistReader = new BinaryReader(BanlistStream, Encoding.UTF8, false))
+                using (var BanlistReader = new BinaryReader(BanlistStream, Encoding.ASCII, false))
                 {
                     DatabaseHeader = BanlistReader.ReadBytes(HeaderLength);
                     do
@@ -108,23 +108,21 @@ namespace srcrepair.gui
         /// </summary>
         private void WriteTableToFile()
         {
-            using (StreamWriter CFile = new StreamWriter(Banlist, false, Encoding.Default))
+            using (var BanlistStream = File.Open(Banlist, FileMode.Truncate))
+            using (var BanlistWriter = new BinaryWriter(BanlistStream, Encoding.ASCII, false))
             {
                 // Writing mandatory header...
-                CFile.Write("\x01\x00\x00\x00");
-                
-                for (int i = 0; i < MM_Table.Rows.Count - 1; i++)
+                BanlistWriter.Write(DatabaseHeader);
+
+                // Writing contents...
+                foreach (DataGridViewRow CurrentRow in MM_Table.Rows)
                 {
-                    if (MM_Table.Rows[i].Cells[0].Value != null)
+                    if (!CurrentRow.IsNewRow && CurrentRow.Cells[0].Value != null)
                     {
-                        string Str = MM_Table.Rows[i].Cells[0].Value.ToString();
+                        string Str = CurrentRow.Cells[0].Value.ToString();
                         if (Regex.IsMatch(Str, string.Format("^{0}$", Properties.Resources.MM_SteamIDRegex)))
                         {
-                            // Building result with using NULL bytes for aligning...
-                            StringBuilder SB = new StringBuilder();
-                            SB.Append(Str);
-                            SB.Append('\0', 32 - Str.Length);
-                            CFile.Write(SB);
+                            BanlistWriter.Write(Encoding.ASCII.GetBytes(AlignString(Str)));
                         }
                     }
                 }
@@ -144,6 +142,19 @@ namespace srcrepair.gui
                 Result.Add(Mh.Value);
             }
             return Result;
+        }
+
+        /// <summary>
+        /// Aligns string to specified length with NUL bytes.
+        /// </summary>
+        /// <param name="Source">Source string.</param>
+        /// <returns>Aligned string.</returns>
+        private string AlignString(string Source)
+        {
+            StringBuilder SB = new StringBuilder();
+            SB.Append(Source);
+            SB.Append('\0', ElementLength - Source.Length);
+            return SB.ToString();
         }
 
         /// <summary>
