@@ -52,6 +52,11 @@ namespace srcrepair.gui
         private readonly string BackUpDir;
 
         /// <summary>
+        /// Stores database header.
+        /// </summary>
+        private byte[] DatabaseHeader;
+
+        /// <summary>
         /// FrmMute class constructor.
         /// </summary>
         /// <param name="BL">Full path to muted players database file.</param>
@@ -88,9 +93,7 @@ namespace srcrepair.gui
                 using (var BanlistStream = File.Open(Banlist, FileMode.Open))
                 using (var BanlistReader = new BinaryReader(BanlistStream, Encoding.UTF8, false))
                 {
-                    // Skipping 4 bytes header...
-                    BanlistStream.Seek(HeaderLength, SeekOrigin.Begin);
-                    // Reading 32 bytes per iteration until EOF...
+                    DatabaseHeader = BanlistReader.ReadBytes(HeaderLength);
                     do
                     {
                         MM_Table.Rows.Add(new string(BanlistReader.ReadChars(ElementLength)).TrimEnd('\0'));
