@@ -96,7 +96,7 @@ namespace srcrepair.gui
                     DatabaseHeader = BanlistReader.ReadBytes(HeaderLength);
                     do
                     {
-                        MM_Table.Rows.Add(new string(BanlistReader.ReadChars(ElementLength)).TrimEnd('\0'));
+                        MM_Table.Rows.Add(Encoding.ASCII.GetString(BanlistReader.ReadBytes(ElementLength)).TrimEnd('\0'));
                     }
                     while (BanlistStream.Position < BanlistStream.Length);
                 }
