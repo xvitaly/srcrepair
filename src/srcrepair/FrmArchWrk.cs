@@ -93,7 +93,7 @@ namespace srcrepair.gui
             }
             else
             {
-                throw new FileNotFoundException(DebugStrings.AppDebgZipExtractArchiveNotFound, ArchiveName);
+                throw new FileNotFoundException(DebugStrings.AppDbgZipExtractArchiveNotFound, ArchiveName);
             }
         }
 

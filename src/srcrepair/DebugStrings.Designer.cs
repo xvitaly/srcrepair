@@ -880,6 +880,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannot unpack because the archive file was not found..
+        /// </summary>
+        internal static string AppDbgZipExtractArchiveNotFound {
+            get {
+                return ResourceManager.GetString("AppDbgZipExtractArchiveNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannnot unpack file {0} from Zip archive due to an error..
         /// </summary>
         internal static string AppDbgZipExtractFailure {
@@ -894,15 +903,6 @@ namespace srcrepair.gui {
         internal static string AppDbgZipPathTraversalDetected {
             get {
                 return ResourceManager.GetString("AppDbgZipPathTraversalDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot unpack because the archive file was not found..
-        /// </summary>
-        internal static string AppDebgZipExtractArchiveNotFound {
-            get {
-                return ResourceManager.GetString("AppDebgZipExtractArchiveNotFound", resourceCulture);
             }
         }
     }
