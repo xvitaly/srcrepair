@@ -381,6 +381,9 @@
   <data name="AppDbgIncorrectSourceType" xml:space="preserve">
     <value>Incorrect or unsupported SourceType specified.</value>
   </data>
+  <data name="AppDbgMutedPlayersWrongFormat" xml:space="preserve">
+    <value>The string "{0}" failed to validate and was ignored.</value>
+  </data>
   <data name="AppDbgQIUnknownFileType" xml:space="preserve">
     <value>Unknown file type specified. Can't install.</value>
   </data>

@@ -853,6 +853,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The string &quot;{0}&quot; failed to validate and was ignored..
+        /// </summary>
+        internal static string AppDbgMutedPlayersWrongFormat {
+            get {
+                return ResourceManager.GetString("AppDbgMutedPlayersWrongFormat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unknown file type specified. Can&apos;t install..
         /// </summary>
         internal static string AppDbgQIUnknownFileType {

@@ -124,6 +124,10 @@ namespace srcrepair.gui
                         {
                             BanlistWriter.Write(Encoding.ASCII.GetBytes(AlignString(Str)));
                         }
+                        else
+                        {
+                            Logger.Warn(DebugStrings.AppDbgMutedPlayersWrongFormat, Str);
+                        }
                     }
                 }
             }
