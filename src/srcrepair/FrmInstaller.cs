@@ -23,11 +23,6 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Stores plugin's name.
-        /// </summary>
-        private readonly string PluginName = "Quick Installer";
-
-        /// <summary>
         /// Stores path to game installation directory.
         /// </summary>
         private readonly string FullGamePath;
@@ -121,7 +116,7 @@ namespace srcrepair.gui
             else
             {
                 // Not found. Asking user to allow its compilation...
-                if (MessageBox.Show(AppStrings.QI_GenVMTMsg, PluginName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(AppStrings.QI_GenVMTMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     // Will compile VMT file automatically...
                     UseVMT = true;
@@ -210,7 +205,7 @@ namespace srcrepair.gui
                     }
 
                     // Showing message...
-                    MessageBox.Show(AppStrings.QI_InstSuccessfull, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.QI_InstSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Closing window...
                     Close();
@@ -225,7 +220,7 @@ namespace srcrepair.gui
             else
             {
                 // User selected nothing. Showing message...
-                MessageBox.Show(AppStrings.QI_InstUnav, PluginName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.QI_InstUnav, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
