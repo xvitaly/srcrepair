@@ -23,9 +23,9 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Gets or sets full path to log file.
+        /// Stores full path to log file.
         /// </summary>
-        private string LogFileName { get; set; }
+        private readonly string LogFileName;
 
         /// <summary>
         /// FrmLogView class constructor.
