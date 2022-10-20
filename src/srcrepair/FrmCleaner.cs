@@ -33,6 +33,56 @@ namespace srcrepair.gui
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
+        /// Stores list of files and directories for cleanup.
+        /// </summary>
+        private readonly List<string> CleanDirs;
+
+        /// <summary>
+        /// Stores if manual selection of files is allowed.
+        /// </summary>
+        private readonly bool IsReadOnly;
+
+        /// <summary>
+        /// Stores if automatic files selection is disallowed.
+        /// </summary>
+        private readonly bool NoAutoCheck;
+
+        /// <summary>
+        /// Stores if recursive cleanup is allowed.
+        /// </summary>
+        private readonly bool IsRecursive;
+
+        /// <summary>
+        /// Stores if backups are forced.
+        /// </summary>
+        private readonly bool ForceBackUp;
+
+        /// <summary>
+        /// Stores full path to directory for saving backups.
+        /// </summary>
+        private readonly string FullBackUpDirPath;
+
+        /// <summary>
+        /// Stores successful cleanup completion message text.
+        /// </summary>
+        private readonly string SuccessMessage;
+
+        /// <summary>
+        /// Stores cleanup window title.
+        /// </summary>
+        private readonly string CleanInfo;
+
+        /// <summary>
+        /// Stores total files size (in bytes).
+        /// </summary>
+        private long TotalSize = 0;
+
+        /// <summary>
+        /// Stores status of currently running process.
+        /// </summary>
+        private bool IsRunning = true;
+
+        /// <summary>
         /// FrmCleaner class constructor.
         /// </summary>
         /// <param name="CD">List of files and directories for cleanup.</param>
@@ -69,56 +119,6 @@ namespace srcrepair.gui
                 DpiManager.ScaleColumnsInControl(CM_FTable, ScalingFactor);
             }
         }
-
-        /// <summary>
-        /// Gets or sets list of files and directories for cleanup.
-        /// </summary>
-        private List<string> CleanDirs { get; set; }
-
-        /// <summary>
-        /// Gets or sets if manual selection of files is allowed.
-        /// </summary>
-        private bool IsReadOnly { get; set; }
-
-        /// <summary>
-        /// Gets or sets if automatic files selection is disallowed.
-        /// </summary>
-        private bool NoAutoCheck { get; set; }
-
-        /// <summary>
-        /// Gets or sets if recursive cleanup is allowed.
-        /// </summary>
-        private bool IsRecursive { get; set; }
-
-        /// <summary>
-        /// Gets or sets if backups are forced.
-        /// </summary>
-        private bool ForceBackUp { get; set; }
-
-        /// <summary>
-        /// Gets or sets full path to directory for saving backups.
-        /// </summary>
-        private string FullBackUpDirPath { get; set; }
-
-        /// <summary>
-        /// Gets or sets successful cleanup completion message text.
-        /// </summary>
-        private string SuccessMessage { get; set; }
-
-        /// <summary>
-        /// Gets or sets cleanup window title.
-        /// </summary>
-        private string CleanInfo { get; set; }
-
-        /// <summary>
-        /// Gets or sets total files size (in bytes).
-        /// </summary>
-        private long TotalSize { get; set; } = 0;
-
-        /// <summary>
-        /// Gets or sets status of currently running process.
-        /// </summary>
-        private bool IsRunning { get; set; } = true;
 
         /// <summary>
         /// Gets full list of files for deletion.
