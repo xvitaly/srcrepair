@@ -25,14 +25,14 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Gets or sets status of currently running process.
+        /// Stores the list of directories for cleanup.
         /// </summary>
-        private bool IsRunning { get; set; } = true;
+        private readonly List<string> RemDirs;
 
         /// <summary>
-        /// Gets or sets list of directories for cleanup.
+        /// Stores status of currently running process.
         /// </summary>
-        private List<string> RemDirs { get; set; }
+        private bool IsRunning = true;
 
         /// <summary>
         /// FrmRmWrk class constructor.
