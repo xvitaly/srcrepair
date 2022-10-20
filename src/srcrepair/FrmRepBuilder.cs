@@ -31,6 +31,32 @@ namespace srcrepair.gui
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
+        /// Stores full path to Steam client crash dumps directory.
+        /// </summary>
+        private readonly string FullSteamDumpsDir;
+
+        /// <summary>
+        /// Stores full path to Steam client logs directory.
+        /// </summary>
+        private readonly string FullSteamLogsDir;
+
+        /// <summary>
+        /// Stores an instance of the SourceGame class, selected in main window.
+        /// </summary>
+        private readonly SourceGame SelectedGame;
+
+        /// <summary>
+        /// Stores an instance of the ReportManager class for managing generic
+        /// report targets.
+        /// </summary>
+        private readonly ReportManager RepMan;
+
+        /// <summary>
+        /// Stores status of currently running process.
+        /// </summary>
+        private bool IsCompleted = false;
+
+        /// <summary>
         /// FrmRepBuilder class constructor.
         /// </summary>
         /// <param name="A">Path to app's user directory.</param>
@@ -39,51 +65,10 @@ namespace srcrepair.gui
         public FrmRepBuilder(string A, string FS, SourceGame SG)
         {
             InitializeComponent();
-            AppUserDir = A;
+            RepMan = new ReportManager(A);
             FullSteamDumpsDir = Path.Combine(FS, "dumps");
             FullSteamLogsDir = Path.Combine(FS, "logs");
             SelectedGame = SG;
-        }
-
-        /// <summary>
-        /// Gets or sets status of currently running process.
-        /// </summary>
-        private bool IsCompleted { get; set; } = false;
-
-        /// <summary>
-        /// Gets or sets path to app's user directory.
-        /// </summary>
-        private string AppUserDir { get; set; }
-
-        /// <summary>
-        /// Gets or sets full path to Steam client crash dumps directory.
-        /// </summary>
-        private string FullSteamDumpsDir { get; set; }
-
-        /// <summary>
-        /// Gets or sets full path to Steam client logs directory.
-        /// </summary>
-        private string FullSteamLogsDir { get; set; }
-
-        /// <summary>
-        /// Gets or sets instance of SourceGame class, selected in main window.
-        /// </summary>
-        private SourceGame SelectedGame { get; set; }
-
-        /// <summary>
-        /// Gets or sets instance of ReportManager class for managing generic
-        /// report targets.
-        /// </summary>
-        private ReportManager RepMan { get; set; }
-
-        /// <summary>
-        /// "Form create" event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void FrmRepBuilder_Load(object sender, EventArgs e)
-        {
-            RepMan = new ReportManager(AppUserDir);
         }
 
         /// <summary>
