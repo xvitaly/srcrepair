@@ -24,24 +24,24 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Gets or sets status of currently running process.
+        /// Stores URL of download.
         /// </summary>
-        private bool IsRunning { get; set; } = true;
+        private readonly string RemoteURI;
 
         /// <summary>
-        /// Gets or sets URL of download.
+        /// Stores full path of local destination file.
         /// </summary>
-        private string RemoteURI { get; set; }
+        private readonly string LocalFile;
 
         /// <summary>
-        /// Gets or sets full path of local destination file.
+        /// Stores full path to the destination directory.
         /// </summary>
-        private string LocalFile { get; set; }
+        private readonly string LocalDirectory;
 
         /// <summary>
-        /// Gets or sets full path to the destination directory.
+        /// Stores status of currently running process.
         /// </summary>
-        private string LocalDirectory { get; set; }
+        private bool IsRunning = true;
 
         /// <summary>
         /// FrmDnWrk class constructor.
