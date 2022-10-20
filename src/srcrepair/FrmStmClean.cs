@@ -23,19 +23,19 @@ namespace srcrepair.gui
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
-        /// Gets or sets full path to Steam client directory.
+        /// Stores full path to Steam client directory.
         /// </summary>
-        private string SteamPath { get; set; }
+        private readonly string SteamPath;
 
         /// <summary>
-        /// Gets or sets full path to directory for saving backups.
+        ///Stores full path to directory for saving backups.
         /// </summary>
-        private string BackUpDir { get; set; }
+        private readonly string BackUpDir;
 
         /// <summary>
-        /// Gets or sets the list of files and directories for cleanup.
+        /// Stores the list of files and directories for cleanup.
         /// </summary>
-        private List<string> CleanDirs { get; set; }
+        private readonly List<string> CleanDirs;
 
         /// <summary>
         /// FrmStmClean class constructor.
