@@ -29,6 +29,32 @@ namespace srcrepair.gui
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
+        /// Stores User-Agent header for outgoing HTTP queries.
+        /// </summary>
+        private readonly string UserAgent;
+
+        /// <summary>
+        /// Stores full path to the local updates directory.
+        /// </summary>
+        private readonly string AppUpdateDir;
+
+        /// <summary>
+        /// Stores app's installation directory.
+        /// </summary>
+        private readonly string FullAppPath;
+
+        /// <summary>
+        /// Stores an instance of UpdateManager class for working
+        /// with updates.
+        /// </summary>
+        private UpdateManager UpMan;
+
+        /// <summary>
+        /// Stores current state of the async tasks.
+        /// </summary>
+        private bool IsCompleted = false;
+
+        /// <summary>
         /// FrmUpdate class constructor.
         /// </summary>
         /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
@@ -41,32 +67,6 @@ namespace srcrepair.gui
             FullAppPath = A;
             AppUpdateDir = U;
         }
-
-        /// <summary>
-        /// Gets or sets instance of UpdateManager class for working
-        /// with updates.
-        /// </summary>
-        private UpdateManager UpMan { get; set; }
-
-        /// <summary>
-        /// Gets or sets User-Agent header for outgoing HTTP queries.
-        /// </summary>
-        private string UserAgent { get; set; }
-
-        /// <summary>
-        /// Gets or sets full path to the local updates directory.
-        /// </summary>
-        private string AppUpdateDir { get; set; }
-
-        /// <summary>
-        /// Gets or sets app's installation directory.
-        /// </summary>
-        private string FullAppPath { get; set; }
-
-        /// <summary>
-        /// Stores current state of the async tasks.
-        /// </summary>
-        private bool IsCompleted = false;
 
         /// <summary>
         /// Sets time of last application update check.
