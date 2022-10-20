@@ -24,19 +24,19 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Gets or sets status of currently running process.
+        /// Stores archive name with full path.
         /// </summary>
-        private bool IsRunning { get; set; } = true;
+        private readonly string ArchiveName;
 
         /// <summary>
-        /// Gets or sets archive name with full path.
+        /// Stores destination directory path.
         /// </summary>
-        private string ArchiveName { get; set; }
+        private readonly string DestinationDirectory;
 
         /// <summary>
-        /// Gets or sets destination directory.
+        /// Stores status of currently running process.
         /// </summary>
-        private string DestinationDirectory { get; set; }
+        private bool IsRunning = true;
 
         /// <summary>
         /// FrmArchWrk class constructor.
