@@ -23,6 +23,27 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
+        /// Stores plugin's name.
+        /// </summary>
+        private readonly string PluginName = "Quick Installer";
+
+        /// <summary>
+        /// Stores path to game installation directory.
+        /// </summary>
+        private readonly string FullGamePath;
+
+        /// <summary>
+        /// Stores if current game is using a special directory
+        /// for custom user stuff.
+        /// </summary>
+        private readonly bool IsUsingUserDir;
+
+        /// <summary>
+        /// Stores path to custom user stuff directory.
+        /// </summary>
+        private readonly string CustomInstallDir;
+
+        /// <summary>
         /// FrmInstaller class constructor.
         /// </summary>
         /// <param name="F">Path to game installation directory.</param>
@@ -35,27 +56,6 @@ namespace srcrepair.gui
             IsUsingUserDir = I;
             CustomInstallDir = U;
         }
-
-        /// <summary>
-        /// Stores plugin's name.
-        /// </summary>
-        private const string PluginName = "Quick Installer";
-
-        /// <summary>
-        /// Gets or sets path to game installation directory.
-        /// </summary>
-        private string FullGamePath { get; set; }
-
-        /// <summary>
-        /// Gets or sets if current game is using a special directory
-        /// for custom user stuff.
-        /// </summary>
-        private bool IsUsingUserDir { get; set; }
-
-        /// <summary>
-        /// Gets or sets path to custom user stuff directory.
-        /// </summary>
-        private string CustomInstallDir { get; set; }
 
         /// <summary>
         /// Installs custom file to game.
