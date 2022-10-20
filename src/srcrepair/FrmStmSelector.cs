@@ -28,14 +28,14 @@ namespace srcrepair.gui
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
+        /// Stores the list of available Steam UserIDs.
+        /// </summary>
+        private readonly List<string> SteamIDs;
+
+        /// <summary>
         /// Gets or sets Steam UserID.
         /// </summary>
         public string SteamID { get; private set; }
-
-        /// <summary>
-        /// Gets or sets list of available Steam UserIDs.
-        /// </summary>
-        private List<string> SteamIDs { get; set; }
 
         /// <summary>
         /// FrmStmSelector class constructor.
