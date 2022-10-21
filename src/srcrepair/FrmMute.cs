@@ -162,6 +162,24 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Handles copy and cut operations in table.
+        /// </summary>
+        /// <param name="RemoveItems">True to cut items and False to copy.</param>
+        private void CopyOrCutItems(bool RemoveItems)
+        {
+            StringBuilder SB = new StringBuilder();
+            string Delimeter = String.Empty;
+            foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
+            {
+                SB.Append(Delimeter);
+                SB.Append(Cell.Value);
+                if (RemoveItems) { MM_Table.Rows.RemoveAt(Cell.RowIndex); }
+                Delimeter = " ";
+            }
+            Clipboard.SetText(SB.ToString());
+        }
+
+        /// <summary>
         /// "Update table" menu item and button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -252,13 +270,7 @@ namespace srcrepair.gui
         {
             try
             {
-                StringBuilder SB = new StringBuilder();
-                foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
-                {
-                    SB.AppendFormat("{0} ", Cell.Value);
-                    MM_Table.Rows.RemoveAt(Cell.RowIndex);
-                }
-                Clipboard.SetText(SB.ToString());
+                CopyOrCutItems(true);
             }
             catch (Exception Ex)
             {
@@ -275,12 +287,7 @@ namespace srcrepair.gui
         {
             try
             {
-                StringBuilder SB = new StringBuilder();
-                foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
-                {
-                    SB.AppendFormat("{0} ", Cell.Value);
-                }
-                Clipboard.SetText(SB.ToString());
+                CopyOrCutItems(false);
             }
             catch (Exception Ex)
             {
