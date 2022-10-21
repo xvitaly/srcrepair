@@ -1060,6 +1060,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while converting selected items to a new format!.
+        /// </summary>
+        internal static string MM_ConvertItemsError {
+            get {
+                return ResourceManager.GetString("MM_ConvertItemsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Conversion from SteamIDv3 to legacy SteamID32 is not allowed!.
         /// </summary>
         internal static string MM_ConvRest {

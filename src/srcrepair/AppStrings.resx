@@ -450,6 +450,9 @@
   <data name="LV_LoadFailed" xml:space="preserve">
     <value>Failed to load error log. Try again later.</value>
   </data>
+  <data name="MM_ConvertItemsError" xml:space="preserve">
+    <value>An error occurred while converting selected items to a new format!</value>
+  </data>
   <data name="MM_ConvRest" xml:space="preserve">
     <value>Conversion from SteamIDv3 to legacy SteamID32 is not allowed!</value>
   </data>

@@ -450,6 +450,9 @@
   <data name="LV_LoadFailed" xml:space="preserve">
     <value>Произошла ошибка при загрузке журнала ошибок программы.</value>
   </data>
+  <data name="MM_ConvertItemsError" xml:space="preserve">
+    <value>Произошла ошибка при попытке преобразования выбранных элементов в новый формат!</value>
+  </data>
   <data name="MM_ConvRest" xml:space="preserve">
     <value>Преобразование выбранной строки в новый формат записи SteamID не требуется.</value>
   </data>

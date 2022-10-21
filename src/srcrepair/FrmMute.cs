@@ -406,7 +406,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExMMConvertItems);
+                MessageBox.Show(AppStrings.MM_ConvertItemsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
