@@ -583,6 +583,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to refresh items from the database..
+        /// </summary>
+        internal static string AppDbgExMMRefresh {
+            get {
+                return ResourceManager.GetString("AppDbgExMMRefresh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to remove selected items..
         /// </summary>
         internal static string AppDbgExMMRemoveItems {

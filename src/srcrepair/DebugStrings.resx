@@ -291,6 +291,9 @@
   <data name="AppDbgExMMReadDb" xml:space="preserve">
     <value>Exception while reading muted users database.</value>
   </data>
+  <data name="AppDbgExMMRefresh" xml:space="preserve">
+    <value>Exception while trying to refresh items from the database.</value>
+  </data>
   <data name="AppDbgExMMRemoveItems" xml:space="preserve">
     <value>Exception while trying to remove selected items.</value>
   </data>

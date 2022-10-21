@@ -471,6 +471,9 @@
   <data name="MM_PasteItemsError" xml:space="preserve">
     <value>An error occurred while trying to paste items from clipboard!</value>
   </data>
+  <data name="MM_RefreshError" xml:space="preserve">
+    <value>An error occurred while trying to update items from the database!</value>
+  </data>
   <data name="MM_RemoveItemsError" xml:space="preserve">
     <value>An error occurred while deleting selected items!</value>
   </data>

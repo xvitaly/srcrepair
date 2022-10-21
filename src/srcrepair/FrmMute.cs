@@ -282,7 +282,15 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmMute_Load(object sender, EventArgs e)
         {
-            UpdateTable();
+            try
+            {
+                UpdateTable();
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExMMReadDb);
+                MessageBox.Show(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         /// <summary>
@@ -298,8 +306,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExMMReadDb);
-                MessageBox.Show(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, DebugStrings.AppDbgExMMRefresh);
+                MessageBox.Show(AppStrings.MM_RefreshError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

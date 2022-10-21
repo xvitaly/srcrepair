@@ -1123,6 +1123,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to update items from the database!.
+        /// </summary>
+        internal static string MM_RefreshError {
+            get {
+                return ResourceManager.GetString("MM_RefreshError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while deleting selected items!.
         /// </summary>
         internal static string MM_RemoveItemsError {
