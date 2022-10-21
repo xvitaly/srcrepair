@@ -273,6 +273,9 @@
   <data name="AppDbgExMMAutoSave" xml:space="preserve">
     <value>Exception while trying to save blacklist auto backup before saving it.</value>
   </data>
+  <data name="AppDbgExMMCutItems" xml:space="preserve">
+    <value>Exception while trying to cut selected items to clipboard.</value>
+  </data>
   <data name="AppDbgExMMReadDb" xml:space="preserve">
     <value>Exception while reading muted users database.</value>
   </data>

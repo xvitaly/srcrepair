@@ -453,6 +453,9 @@
   <data name="MM_ConvRest" xml:space="preserve">
     <value>Преобразование выбранной строки в новый формат записи SteamID не требуется.</value>
   </data>
+  <data name="MM_CutItemsError" xml:space="preserve">
+    <value>Произошла ошибка при попытке вырезать выделенные элементы в буфер обмена!</value>
+  </data>
   <data name="MM_ExceptionDetected" xml:space="preserve">
     <value>При загрузке содержимого файла произошла ошибка. Попробуйте ещё раз позже.</value>
   </data>

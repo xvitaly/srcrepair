@@ -1069,6 +1069,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occured while cutting selected items to clipboard!.
+        /// </summary>
+        internal static string MM_CutItemsError {
+            get {
+                return ResourceManager.GetString("MM_CutItemsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occured while parsing game banlist file. Please try again later..
         /// </summary>
         internal static string MM_ExceptionDetected {

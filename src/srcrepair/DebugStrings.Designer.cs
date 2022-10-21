@@ -529,6 +529,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to cut selected items to clipboard..
+        /// </summary>
+        internal static string AppDbgExMMCutItems {
+            get {
+                return ResourceManager.GetString("AppDbgExMMCutItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while reading muted users database..
         /// </summary>
         internal static string AppDbgExMMReadDb {
