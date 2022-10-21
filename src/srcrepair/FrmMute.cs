@@ -253,8 +253,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExMMReadDb);
+                MessageBox.Show(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -286,8 +286,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.MM_SaveException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExMMSaveDb);
+                MessageBox.Show(AppStrings.MM_SaveException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
