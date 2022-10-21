@@ -195,6 +195,17 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Deletes selected items from the table.
+        /// </summary>
+        private void DeleteItems()
+        {
+            foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
+            {
+                MM_Table.Rows.RemoveAt(Cell.RowIndex);
+            }
+        }
+
+        /// <summary>
         /// "Update table" menu item and button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -336,13 +347,7 @@ namespace srcrepair.gui
         {
             try
             {
-                foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
-                {
-                    if (Cell.Selected)
-                    {
-                        MM_Table.Rows.RemoveAt(Cell.RowIndex);
-                    }
-                }
+                DeleteItems();
             }
             catch (Exception Ex)
             {
