@@ -424,7 +424,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExMMOpenItemProfile);
+                MessageBox.Show(AppStrings.MM_OpenItemProfileError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

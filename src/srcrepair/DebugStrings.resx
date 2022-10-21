@@ -282,6 +282,9 @@
   <data name="AppDbgExMMCutItems" xml:space="preserve">
     <value>Exception while trying to cut selected items to clipboard.</value>
   </data>
+  <data name="AppDbgExMMOpenItemProfile" xml:space="preserve">
+    <value>Exception when trying to view the selected item's Steam profile in a web browser.</value>
+  </data>
   <data name="AppDbgExMMPasteItems" xml:space="preserve">
     <value>Exception while trying to paste items from clipboard.</value>
   </data>

@@ -556,6 +556,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception when trying to view the selected item&apos;s Steam profile in a web browser..
+        /// </summary>
+        internal static string AppDbgExMMOpenItemProfile {
+            get {
+                return ResourceManager.GetString("AppDbgExMMOpenItemProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to paste items from clipboard..
         /// </summary>
         internal static string AppDbgExMMPasteItems {

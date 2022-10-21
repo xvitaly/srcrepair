@@ -465,6 +465,9 @@
   <data name="MM_ExceptionDetected" xml:space="preserve">
     <value>При загрузке содержимого файла произошла ошибка. Попробуйте ещё раз позже.</value>
   </data>
+  <data name="MM_OpenItemProfileError" xml:space="preserve">
+    <value>Произошла ошибка при попытке просмотреть профиль Steam выбранного элемента в веб-браузере!</value>
+  </data>
   <data name="MM_PasteItemsError" xml:space="preserve">
     <value>Произошла ошибка при попытке вставить элементы из буфера обмена!</value>
   </data>
