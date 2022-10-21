@@ -180,6 +180,21 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Tries to find Steam UserIDs in clipboard and then insert
+        /// them to the table.
+        /// </summary>
+        private void PasteItems()
+        {
+            if (Clipboard.ContainsText())
+            {
+                foreach (string Item in ParseRow(Clipboard.GetText()))
+                {
+                    MM_Table.Rows.Add(Item);
+                }
+            }
+        }
+
+        /// <summary>
         /// "Update table" menu item and button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -304,13 +319,7 @@ namespace srcrepair.gui
         {
             try
             {
-                if (Clipboard.ContainsText())
-                {
-                    foreach (string Row in ParseRow(Clipboard.GetText()))
-                    {
-                        MM_Table.Rows.Add(Row);
-                    }
-                }
+                PasteItems();
             }
             catch (Exception Ex)
             {
