@@ -1069,6 +1069,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occured while copying selected items to clipboard!.
+        /// </summary>
+        internal static string MM_CopyItemsError {
+            get {
+                return ResourceManager.GetString("MM_CopyItemsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occured while cutting selected items to clipboard!.
         /// </summary>
         internal static string MM_CutItemsError {
