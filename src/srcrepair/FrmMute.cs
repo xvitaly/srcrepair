@@ -228,6 +228,18 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Opens Steam profile page of selected user ID.
+        /// </summary>
+        private void OpenItemProfile()
+        {
+            if (!MM_Table.CurrentRow.IsNewRow && MM_Table.CurrentCell.Value != null)
+            {
+                string CellText = MM_Table.CurrentCell.Value.ToString();
+                Platform.OpenWebPage(string.Format(Properties.Resources.MM_CommunityURL, Regex.IsMatch(CellText, Properties.Resources.MM_SteamID32Regex) ? SteamConv.ConvSid32Sid64(CellText) : SteamConv.ConvSidv3Sid64(CellText)));
+            }
+        }
+
+        /// <summary>
         /// "Update table" menu item and button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -403,11 +415,7 @@ namespace srcrepair.gui
         {
             try
             {
-                if (MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value != null)
-                {
-                    string Value = MM_Table.Rows[MM_Table.CurrentRow.Index].Cells[MM_Table.CurrentCell.ColumnIndex].Value.ToString();
-                    Platform.OpenWebPage(string.Format(Properties.Resources.MM_CommunityURL, Regex.IsMatch(Value, Properties.Resources.MM_SteamID32Regex) ? SteamConv.ConvSid32Sid64(Value) : SteamConv.ConvSidv3Sid64(Value)));
-                }
+                OpenItemProfile();
             }
             catch (Exception Ex)
             {
