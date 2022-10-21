@@ -206,6 +206,28 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Converts selected items from SteamID32 to SteamIDv3.
+        /// </summary>
+        private void ConvertItems()
+        {
+            foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
+            {
+                string CellText = Cell.Value.ToString();
+                if (Regex.IsMatch(CellText, Properties.Resources.MM_SteamID32Regex))
+                {
+                    Cell.Value = SteamConv.ConvSid32Sidv3(CellText);
+                }
+                else
+                {
+                    if (MM_Table.SelectedCells.Count == 1)
+                    {
+                        MessageBox.Show(AppStrings.MM_ConvRest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         /// "Update table" menu item and button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -364,21 +386,7 @@ namespace srcrepair.gui
         {
             try
             {
-                foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
-                {
-                    string CellText = Cell.Value.ToString();
-                    if (Cell.Selected && Regex.IsMatch(CellText, Properties.Resources.MM_SteamID32Regex))
-                    {
-                        Cell.Value = SteamConv.ConvSid32Sidv3(CellText);
-                    }
-                    else
-                    {
-                        if (MM_Table.SelectedCells.Count == 1)
-                        {
-                            MessageBox.Show(AppStrings.MM_ConvRest, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                    }
-                }
+                ConvertItems();
             }
             catch (Exception Ex)
             {
