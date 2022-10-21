@@ -547,11 +547,29 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to paste items from clipboard..
+        /// </summary>
+        internal static string AppDbgExMMPasteItems {
+            get {
+                return ResourceManager.GetString("AppDbgExMMPasteItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while reading muted users database..
         /// </summary>
         internal static string AppDbgExMMReadDb {
             get {
                 return ResourceManager.GetString("AppDbgExMMReadDb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove selected items..
+        /// </summary>
+        internal static string AppDbgExMMRemoveItems {
+            get {
+                return ResourceManager.GetString("AppDbgExMMRemoveItems", resourceCulture);
             }
         }
         

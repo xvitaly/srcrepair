@@ -454,13 +454,19 @@
     <value>Conversion from SteamIDv3 to legacy SteamID32 is not allowed!</value>
   </data>
   <data name="MM_CopyItemsError" xml:space="preserve">
-    <value>An error occured while copying selected items to clipboard!</value>
+    <value>An error occurred while copying selected items to clipboard!</value>
   </data>
   <data name="MM_CutItemsError" xml:space="preserve">
-    <value>An error occured while cutting selected items to clipboard!</value>
+    <value>An error occurred while cutting selected items to clipboard!</value>
   </data>
   <data name="MM_ExceptionDetected" xml:space="preserve">
     <value>An error occured while parsing game banlist file. Please try again later.</value>
+  </data>
+  <data name="MM_PasteItemsError" xml:space="preserve">
+    <value>An error occurred while trying to paste items from clipboard!</value>
+  </data>
+  <data name="MM_RemoveItemsError" xml:space="preserve">
+    <value>An error occurred while deleting selected items!</value>
   </data>
   <data name="MM_SavedOK" xml:space="preserve">
     <value>Your changes ware saved!</value>

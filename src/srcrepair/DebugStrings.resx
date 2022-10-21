@@ -279,8 +279,14 @@
   <data name="AppDbgExMMCutItems" xml:space="preserve">
     <value>Exception while trying to cut selected items to clipboard.</value>
   </data>
+  <data name="AppDbgExMMPasteItems" xml:space="preserve">
+    <value>Exception while trying to paste items from clipboard.</value>
+  </data>
   <data name="AppDbgExMMReadDb" xml:space="preserve">
     <value>Exception while reading muted users database.</value>
+  </data>
+  <data name="AppDbgExMMRemoveItems" xml:space="preserve">
+    <value>Exception while trying to remove selected items.</value>
   </data>
   <data name="AppDbgExMMSaveDb" xml:space="preserve">
     <value>Exception while writing to save muted users database.</value>

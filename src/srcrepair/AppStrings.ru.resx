@@ -462,6 +462,12 @@
   <data name="MM_ExceptionDetected" xml:space="preserve">
     <value>При загрузке содержимого файла произошла ошибка. Попробуйте ещё раз позже.</value>
   </data>
+  <data name="MM_PasteItemsError" xml:space="preserve">
+    <value>Произошла ошибка при попытке вставить элементы из буфера обмена!</value>
+  </data>
+  <data name="MM_RemoveItemsError" xml:space="preserve">
+    <value>Произошла ошибка при попытке удалить выделенные элементы!</value>
+  </data>
   <data name="MM_SavedOK" xml:space="preserve">
     <value>Файл успешно сохранён!</value>
   </data>

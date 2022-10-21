@@ -1069,7 +1069,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occured while copying selected items to clipboard!.
+        ///   Looks up a localized string similar to An error occurred while copying selected items to clipboard!.
         /// </summary>
         internal static string MM_CopyItemsError {
             get {
@@ -1078,7 +1078,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occured while cutting selected items to clipboard!.
+        ///   Looks up a localized string similar to An error occurred while cutting selected items to clipboard!.
         /// </summary>
         internal static string MM_CutItemsError {
             get {
@@ -1092,6 +1092,24 @@ namespace srcrepair.gui {
         internal static string MM_ExceptionDetected {
             get {
                 return ResourceManager.GetString("MM_ExceptionDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to paste items from clipboard!.
+        /// </summary>
+        internal static string MM_PasteItemsError {
+            get {
+                return ResourceManager.GetString("MM_PasteItemsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while deleting selected items!.
+        /// </summary>
+        internal static string MM_RemoveItemsError {
+            get {
+                return ResourceManager.GetString("MM_RemoveItemsError", resourceCulture);
             }
         }
         

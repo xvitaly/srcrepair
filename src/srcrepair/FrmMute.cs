@@ -370,7 +370,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExMMPasteItems);
+                MessageBox.Show(AppStrings.MM_PasteItemsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -387,7 +388,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExMMRemoveItems);
+                MessageBox.Show(AppStrings.MM_RemoveItemsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
