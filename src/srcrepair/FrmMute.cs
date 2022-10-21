@@ -255,11 +255,8 @@ namespace srcrepair.gui
                 StringBuilder SB = new StringBuilder();
                 foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
                 {
-                    if (Cell.Selected)
-                    {
-                        SB.AppendFormat("{0} ", Cell.Value);
-                        MM_Table.Rows.RemoveAt(Cell.RowIndex);
-                    }
+                    SB.AppendFormat("{0} ", Cell.Value);
+                    MM_Table.Rows.RemoveAt(Cell.RowIndex);
                 }
                 Clipboard.SetText(SB.ToString());
             }
@@ -281,10 +278,7 @@ namespace srcrepair.gui
                 StringBuilder SB = new StringBuilder();
                 foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
                 {
-                    if (Cell.Selected)
-                    {
-                        SB.AppendFormat("{0} ", Cell.Value);
-                    }
+                    SB.AppendFormat("{0} ", Cell.Value);
                 }
                 Clipboard.SetText(SB.ToString());
             }
