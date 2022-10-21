@@ -48,7 +48,7 @@
             this.MM_Sep4 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_CRemove = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_CConvert = new System.Windows.Forms.ToolStripMenuItem();
-            this.showSteamProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MM_CSteam = new System.Windows.Forms.ToolStripMenuItem();
             this.MM_Toolbar = new System.Windows.Forms.ToolStrip();
             this.MM_Refresh = new System.Windows.Forms.ToolStripButton();
             this.MM_Save = new System.Windows.Forms.ToolStripButton();
@@ -143,6 +143,7 @@
             this.MM_Table.ContextMenuStrip = this.MM_Context;
             resources.ApplyResources(this.MM_Table, "MM_Table");
             this.MM_Table.Name = "MM_Table";
+            this.MM_Table.SelectionChanged += new System.EventHandler(this.MM_Table_SelectionChanged);
             // 
             // SteamID
             // 
@@ -158,7 +159,7 @@
             this.MM_Sep4,
             this.MM_CRemove,
             this.MM_CConvert,
-            this.showSteamProfileToolStripMenuItem});
+            this.MM_CSteam});
             this.MM_Context.Name = "MM_Context";
             resources.ApplyResources(this.MM_Context, "MM_Context");
             // 
@@ -202,12 +203,12 @@
             resources.ApplyResources(this.MM_CConvert, "MM_CConvert");
             this.MM_CConvert.Click += new System.EventHandler(this.MM_Convert_Click);
             // 
-            // showSteamProfileToolStripMenuItem
+            // MM_CSteam
             // 
-            this.showSteamProfileToolStripMenuItem.Image = global::srcrepair.gui.Properties.Resources.IconSteam;
-            this.showSteamProfileToolStripMenuItem.Name = "showSteamProfileToolStripMenuItem";
-            resources.ApplyResources(this.showSteamProfileToolStripMenuItem, "showSteamProfileToolStripMenuItem");
-            this.showSteamProfileToolStripMenuItem.Click += new System.EventHandler(this.MM_Steam_Click);
+            this.MM_CSteam.Image = global::srcrepair.gui.Properties.Resources.IconSteam;
+            this.MM_CSteam.Name = "MM_CSteam";
+            resources.ApplyResources(this.MM_CSteam, "MM_CSteam");
+            this.MM_CSteam.Click += new System.EventHandler(this.MM_Steam_Click);
             // 
             // MM_Toolbar
             // 
@@ -376,6 +377,6 @@
         private System.Windows.Forms.ToolStripButton MM_Convert;
         private System.Windows.Forms.ToolStripMenuItem MM_CConvert;
         private System.Windows.Forms.ToolStripButton MM_Steam;
-        private System.Windows.Forms.ToolStripMenuItem showSteamProfileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MM_CSteam;
     }
 }

@@ -303,10 +303,10 @@
   <data name="MM_CConvert.Text" xml:space="preserve">
     <value>Co&amp;nvert SteamIDs</value>
   </data>
-  <data name="showSteamProfileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="MM_CSteam.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 22</value>
   </data>
-  <data name="showSteamProfileToolStripMenuItem.Text" xml:space="preserve">
+  <data name="MM_CSteam.Text" xml:space="preserve">
     <value>Sh&amp;ow Steam profile</value>
   </data>
   <data name="MM_Context.Size" type="System.Drawing.Size, System.Drawing">
@@ -585,10 +585,10 @@
   <data name="&gt;&gt;MM_CConvert.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;showSteamProfileToolStripMenuItem.Name" xml:space="preserve">
-    <value>showSteamProfileToolStripMenuItem</value>
+  <data name="&gt;&gt;MM_CSteam.Name" xml:space="preserve">
+    <value>MM_CSteam</value>
   </data>
-  <data name="&gt;&gt;showSteamProfileToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;MM_CSteam.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MM_Refresh.Name" xml:space="preserve">

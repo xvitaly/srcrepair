@@ -457,5 +457,17 @@ namespace srcrepair.gui
         {
             GuiHelpers.FormShowAboutApp();
         }
+
+        /// <summary>
+        /// "Selection changed" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void MM_Table_SelectionChanged(object sender, EventArgs e)
+        {
+            bool State = MM_Table.SelectedCells.Count <= 1;
+            MM_Steam.Enabled = State;
+            MM_CSteam.Enabled = State;
+        }
     }
 }
