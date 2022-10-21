@@ -240,16 +240,61 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Creates backup of database file if safe cleanup is enabled.
+        /// </summary>
+        private void CreateTableBackUp()
+        {
+            if (File.Exists(Banlist) && Properties.Settings.Default.SafeCleanup)
+            {
+                try
+                {
+                    FileManager.CreateConfigBackUp(Banlist, BackUpDir, Properties.Resources.BU_PrefixVChat);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, DebugStrings.AppDbgExMMAutoSave);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Reads elements from a database file.
+        /// </summary>
+        private void UpdateTable()
+        {
+            MM_Table.Rows.Clear();
+            ReadFileToTable();
+        }
+
+        /// <summary>
+        /// Saves current contents to a database file.
+        /// </summary>
+        private void WriteTable()
+        {
+            CreateTableBackUp();
+            WriteTableToFile();
+        }
+
+        /// <summary>
+        /// "Form create" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void FrmMute_Load(object sender, EventArgs e)
+        {
+            UpdateTable();
+        }
+
+        /// <summary>
         /// "Update table" menu item and button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void UpdateTable(object sender, EventArgs e)
+        private void MM_Refresh_Click(object sender, EventArgs e)
         {
             try
             {
-                MM_Table.Rows.Clear();
-                ReadFileToTable();
+                UpdateTable();
             }
             catch (Exception Ex)
             {
@@ -263,25 +308,11 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void WriteTable(object sender, EventArgs e)
+        private void MM_Save_Click(object sender, EventArgs e)
         {
             try
             {
-                if (Properties.Settings.Default.SafeCleanup)
-                {
-                    if (File.Exists(Banlist))
-                    {
-                        try
-                        {
-                            FileManager.CreateConfigBackUp(Banlist, BackUpDir, Properties.Resources.BU_PrefixVChat);
-                        }
-                        catch (Exception Ex)
-                        {
-                            Logger.Warn(Ex, DebugStrings.AppDbgExMMAutoSave);
-                        }
-                    }
-                }
-                WriteTableToFile();
+                WriteTable();
                 MessageBox.Show(AppStrings.MM_SavedOK, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception Ex)
@@ -289,36 +320,6 @@ namespace srcrepair.gui
                 Logger.Error(Ex, DebugStrings.AppDbgExMMSaveDb);
                 MessageBox.Show(AppStrings.MM_SaveException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        /// <summary>
-        /// "About" menu item and button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void AboutDlg(object sender, EventArgs e)
-        {
-            GuiHelpers.FormShowAboutApp();
-        }
-
-        /// <summary>
-        /// "Form create" event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void FrmMute_Load(object sender, EventArgs e)
-        {
-            UpdateTable(sender, e);
-        }
-
-        /// <summary>
-        /// "Exit" menu item click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void MM_Exit_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         /// <summary>
@@ -427,6 +428,26 @@ namespace srcrepair.gui
                 Logger.Warn(Ex, DebugStrings.AppDbgExMMOpenItemProfile);
                 MessageBox.Show(AppStrings.MM_OpenItemProfileError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        /// <summary>
+        /// "Exit" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void MM_Exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        /// <summary>
+        /// "About" menu item and button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void MM_About_Click(object sender, EventArgs e)
+        {
+            GuiHelpers.FormShowAboutApp();
         }
     }
 }

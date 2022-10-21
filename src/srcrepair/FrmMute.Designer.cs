@@ -91,14 +91,14 @@
             this.MM_FReload.Image = global::srcrepair.gui.Properties.Resources.IconRefresh;
             this.MM_FReload.Name = "MM_FReload";
             resources.ApplyResources(this.MM_FReload, "MM_FReload");
-            this.MM_FReload.Click += new System.EventHandler(this.UpdateTable);
+            this.MM_FReload.Click += new System.EventHandler(this.MM_Refresh_Click);
             // 
             // MM_FSave
             // 
             this.MM_FSave.Image = global::srcrepair.gui.Properties.Resources.IconSave;
             this.MM_FSave.Name = "MM_FSave";
             resources.ApplyResources(this.MM_FSave, "MM_FSave");
-            this.MM_FSave.Click += new System.EventHandler(this.WriteTable);
+            this.MM_FSave.Click += new System.EventHandler(this.MM_Save_Click);
             // 
             // MM_Exit
             // 
@@ -119,7 +119,7 @@
             this.MM_HAbout.Image = global::srcrepair.gui.Properties.Resources.IconInfo;
             this.MM_HAbout.Name = "MM_HAbout";
             resources.ApplyResources(this.MM_HAbout, "MM_HAbout");
-            this.MM_HAbout.Click += new System.EventHandler(this.AboutDlg);
+            this.MM_HAbout.Click += new System.EventHandler(this.MM_About_Click);
             // 
             // MM_StatusBar
             // 
@@ -233,7 +233,7 @@
             this.MM_Refresh.Image = global::srcrepair.gui.Properties.Resources.IconRefresh;
             resources.ApplyResources(this.MM_Refresh, "MM_Refresh");
             this.MM_Refresh.Name = "MM_Refresh";
-            this.MM_Refresh.Click += new System.EventHandler(this.UpdateTable);
+            this.MM_Refresh.Click += new System.EventHandler(this.MM_Refresh_Click);
             // 
             // MM_Save
             // 
@@ -241,7 +241,7 @@
             this.MM_Save.Image = global::srcrepair.gui.Properties.Resources.IconSave;
             resources.ApplyResources(this.MM_Save, "MM_Save");
             this.MM_Save.Name = "MM_Save";
-            this.MM_Save.Click += new System.EventHandler(this.WriteTable);
+            this.MM_Save.Click += new System.EventHandler(this.MM_Save_Click);
             // 
             // MM_Sep1
             // 
@@ -312,7 +312,7 @@
             this.MM_About.Image = global::srcrepair.gui.Properties.Resources.IconInfo;
             resources.ApplyResources(this.MM_About, "MM_About");
             this.MM_About.Name = "MM_About";
-            this.MM_About.Click += new System.EventHandler(this.AboutDlg);
+            this.MM_About.Click += new System.EventHandler(this.MM_About_Click);
             // 
             // FrmMute
             // 
