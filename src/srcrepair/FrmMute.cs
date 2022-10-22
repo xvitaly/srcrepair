@@ -108,8 +108,8 @@ namespace srcrepair.gui
         /// </summary>
         private void WriteTableToFile()
         {
-            using (var BanlistStream = File.Open(Banlist, FileMode.Truncate))
-            using (var BanlistWriter = new BinaryWriter(BanlistStream, Encoding.ASCII, false))
+            using (FileStream BanlistStream = File.Open(Banlist, FileMode.Truncate))
+            using (BinaryWriter BanlistWriter = new BinaryWriter(BanlistStream, Encoding.ASCII, false))
             {
                 // Writing mandatory header...
                 BanlistWriter.Write(DatabaseHeader);
