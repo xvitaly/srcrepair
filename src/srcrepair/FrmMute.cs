@@ -168,7 +168,7 @@ namespace srcrepair.gui
         private void CopyOrCutItems(bool RemoveItems)
         {
             StringBuilder SB = new StringBuilder();
-            string Delimeter = String.Empty;
+            string Delimeter = string.Empty;
             foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
             {
                 SB.Append(Delimeter);
