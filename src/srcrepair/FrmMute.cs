@@ -90,8 +90,8 @@ namespace srcrepair.gui
         {
             if (File.Exists(Banlist))
             {
-                using (var BanlistStream = File.Open(Banlist, FileMode.Open))
-                using (var BanlistReader = new BinaryReader(BanlistStream, Encoding.ASCII, false))
+                using (FileStream BanlistStream = File.Open(Banlist, FileMode.Open))
+                using (BinaryReader BanlistReader = new BinaryReader(BanlistStream, Encoding.ASCII, false))
                 {
                     DatabaseHeader = BanlistReader.ReadBytes(HeaderLength);
                     do
