@@ -641,20 +641,20 @@ namespace srcrepair.gui
             }
             catch (FileNotFoundException Ex)
             {
-                MessageBox.Show(AppStrings.SteamPathEnterErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(Ex, DebugStrings.AppDbgExSteamPath);
+                MessageBox.Show(AppStrings.SteamPathEnterErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(ReturnCodes.StmWrongPath);
             }
             catch (OperationCanceledException Ex)
             {
-                MessageBox.Show(AppStrings.SteamPathCancel, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(Ex, DebugStrings.AppDbgExSteamPath);
+                MessageBox.Show(AppStrings.SteamPathCancel, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(ReturnCodes.StmPathCancel);
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.AppGenericError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(Ex, DebugStrings.AppDbgExSteamPath);
+                MessageBox.Show(AppStrings.AppGenericError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(ReturnCodes.StmPathException);
             }
         }
@@ -1000,8 +1000,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.AppXMLParseError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(Ex, DebugStrings.AppDbgExXmlParse);
+                MessageBox.Show(AppStrings.AppXMLParseError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(ReturnCodes.GameDbParseError);
             }
 
@@ -1803,8 +1803,8 @@ namespace srcrepair.gui
                         }
                         catch (Exception Ex)
                         {
-                            MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Logger.Error(Ex, DebugStrings.AppDbgExClnBlobs);
+                            MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
 
@@ -1816,8 +1816,8 @@ namespace srcrepair.gui
                         }
                         catch (Exception Ex)
                         {
-                            MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             Logger.Error(Ex, DebugStrings.AppDbgExClnReg);
+                            MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
 
@@ -1880,8 +1880,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.AppFailedToGetData, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExSelGame);
+                MessageBox.Show(AppStrings.AppFailedToGetData, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2090,8 +2090,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExFpsInstall);
+                MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             finally
             {
@@ -2144,8 +2144,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.FP_RemoveFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.Error(Ex, DebugStrings.AppDbgExFpsUninstall);
+                MessageBox.Show(AppStrings.FP_RemoveFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -2162,8 +2162,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExCfgSelection);
+                MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2226,8 +2226,8 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExCfgEdSave);
+                    MessageBox.Show(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else
@@ -2379,8 +2379,8 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExRemVd);
+                    MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2410,8 +2410,8 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show(AppStrings.AppStartSteamFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExValCache);
+                    MessageBox.Show(AppStrings.AppStartSteamFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2514,8 +2514,8 @@ namespace srcrepair.gui
                                     }
                                     catch (Exception Ex)
                                     {
-                                        MessageBox.Show(AppStrings.BU_RestFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                         Logger.Error(Ex, DebugStrings.AppDbgExRegedit);
+                                        MessageBox.Show(AppStrings.BU_RestFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     }
                                     break;
                                 case ".bud": // Standard archive...
@@ -2563,8 +2563,8 @@ namespace srcrepair.gui
                             }
                             catch (Exception Ex)
                             {
-                                MessageBox.Show(AppStrings.BU_DelFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 Logger.Error(Ex, DebugStrings.AppDbgExBackupRem);
+                                MessageBox.Show(AppStrings.BU_DelFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);                                
                             }
                         }
                         MessageBox.Show(AppStrings.BU_DelSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -2622,8 +2622,8 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExBkSg);
+                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2645,8 +2645,8 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExBkAllStm);
+                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2668,8 +2668,8 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Logger.Error(Ex, DebugStrings.AppDbgExBkAllGames);
+                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -2895,8 +2895,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.FP_EditorLoadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExEditCfg);
+                MessageBox.Show(AppStrings.FP_EditorLoadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
