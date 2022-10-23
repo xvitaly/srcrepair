@@ -97,25 +97,6 @@ namespace srcrepair.gui
                 Logger.Warn(Ex, DebugStrings.AppDbgExCryptoPolicy);
             }
         }
-        
-        /// <summary>
-        /// Saves contents of Config Editor to a text file. Used by Save
-        /// and Save As operations.
-        /// </summary>
-        /// <param name="Path">Full path to config file.</param>
-        private void WriteTableToFileNow(string Path)
-        {
-            using (StreamWriter CFile = new StreamWriter(Path))
-            {
-                foreach (DataGridViewRow Row in CE_Editor.Rows)
-                {
-                    if (Row.Cells[0].Value != null)
-                    {
-                        CFile.WriteLine("{0} {1}", Row.Cells[0].Value, Row.Cells[1].Value);
-                    }
-                }
-            }
-        }
 
         /// <summary>
         /// Seaching for installed games and adds them to ComboBox control
@@ -1723,6 +1704,25 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Saves contents of Config Editor to a text file in a separate thread.
+        /// Used by Save and Save As operations.
+        /// </summary>
+        /// <param name="Path">Full path to config file.</param>
+        private async Task WriteTableToFileTask(string ConfFileName)
+        {
+            using (StreamWriter CFile = new StreamWriter(ConfFileName))
+            {
+                foreach (DataGridViewRow Row in CE_Editor.Rows)
+                {
+                    if (Row.Cells[0].Value != null)
+                    {
+                        await CFile.WriteLineAsync(string.Format("{0} {1}", Row.Cells[0].Value, Row.Cells[1].Value));
+                    }
+                }
+            }
+        }
+
         #endregion
 
         /// <summary>
@@ -2199,30 +2199,27 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void CE_Save_Click(object sender, EventArgs e)
+        private async void CE_Save_Click(object sender, EventArgs e)
         {
             CE_SaveCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
 
             if (!string.IsNullOrEmpty(CFGFileName))
             {
-                if (Properties.Settings.Default.SafeCleanup)
+                if (Properties.Settings.Default.SafeCleanup && File.Exists(CFGFileName))
                 {
-                    if (File.Exists(CFGFileName))
+                    try
                     {
-                        try
-                        {
-                            FileManager.CreateConfigBackUp(CFGFileName, App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
-                        }
-                        catch (Exception Ex)
-                        {
-                            Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdAutoBackup);
-                        }
+                        FileManager.CreateConfigBackUp(CFGFileName, App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixCfg);
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdAutoBackup);
                     }
                 }
 
                 try
                 {
-                    WriteTableToFileNow(CFGFileName);
+                    await WriteTableToFileTask(CFGFileName);
                 }
                 catch (Exception Ex)
                 {
@@ -2236,7 +2233,7 @@ namespace srcrepair.gui
 
                 if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
                 {
-                    WriteTableToFileNow(CE_SaveCfgDialog.FileName);
+                    await WriteTableToFileTask(CE_SaveCfgDialog.FileName);
                     CFGFileName = CE_SaveCfgDialog.FileName;
                     UpdateStatusBar();
                 }
@@ -2248,13 +2245,13 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void CE_SaveAs_Click(object sender, EventArgs e)
+        private async void CE_SaveAs_Click(object sender, EventArgs e)
         {
             CE_SaveCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
 
             if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
             {
-                WriteTableToFileNow(CE_SaveCfgDialog.FileName);
+                await WriteTableToFileTask(CE_SaveCfgDialog.FileName);
             }
         }
 
