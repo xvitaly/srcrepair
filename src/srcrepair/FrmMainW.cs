@@ -57,20 +57,6 @@ namespace srcrepair.gui
 
         #endregion
 
-        #region Internal Properties
-
-        /// <summary>
-        /// Gets or sets loaded in Config Editor file name.
-        /// </summary>
-        private string CFGFileName { get; set; }
-
-        /// <summary>
-        /// Gets or sets instance of CurrentApp class.
-        /// </summary>
-        private CurrentApp App { get; set; }
-
-        #endregion
-
         #region Internal Fields
 
         /// <summary>
@@ -82,6 +68,16 @@ namespace srcrepair.gui
         /// ResourceManager instance for managing Cvar descriptions in Config Editor.
         /// </summary>
         private readonly ResourceManager CvarFetcher = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
+
+        /// <summary>
+        /// Stores loaded in Config Editor file name.
+        /// </summary>
+        private string CFGFileName;
+
+        /// <summary>
+        /// Stores an instance of the CurrentApp class.
+        /// </summary>
+        private CurrentApp App;
 
         #endregion
 
