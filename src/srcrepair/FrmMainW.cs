@@ -277,81 +277,14 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Loads config file to Config Editor.
+        /// Checks if the user is trying to edit config.cfg file and show
+        /// a warning message.
         /// </summary>
-        /// <param name="ConfFileName">Full path to config file.</param>
-        private void ReadConfigFromFile(string ConfFileName)
+        private void CheckGameConfigEditor()
         {
-            // Creating some variables...
-            string ImpStr, CVarName, CVarContent;
-
-            // Checking if config file exists...
-            if (File.Exists(ConfFileName))
+            if (CFGFileName.EndsWith("config.cfg"))
             {
-                // Setting config file name (without full path)...
-                CFGFileName = ConfFileName;
-
-                // Checking if currently opened file is not config.cfg. If so, show warning to user.
-                if (Path.GetFileName(CFGFileName) == "config.cfg")
-                {
-                    MessageBox.Show(AppStrings.CE_RestConfigOpenWarn, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-
-                // Clearing editor...
-                CE_Editor.Rows.Clear();
-
-                try
-                {
-                    // Loading config file...
-                    using (StreamReader ConfigFile = new StreamReader(ConfFileName, Encoding.Default))
-                    {
-                        // Reading config file to the end...
-                        while (ConfigFile.Peek() >= 0)
-                        {
-                            // Clearing string from special chars...
-                            ImpStr = StringsManager.CleanString(ConfigFile.ReadLine());
-
-                            // Checking if source string is not empty...
-                            if (!string.IsNullOrEmpty(ImpStr))
-                            {
-                                // Checking if source string is not a commentary...
-                                if (ImpStr[0] != '/')
-                                {
-                                    // Checking for value in source string...
-                                    if (ImpStr.IndexOf(" ", StringComparison.CurrentCulture) != -1)
-                                    {
-                                        // Extracting variable...
-                                        CVarName = ImpStr.Substring(0, ImpStr.IndexOf(" ", StringComparison.CurrentCulture));
-                                        ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ", StringComparison.CurrentCulture) + 1);
-
-                                        // Extracting value (excluding commentaries if exists)...
-                                        CVarContent = ImpStr.IndexOf("//", StringComparison.CurrentCulture) >= 1 ? ImpStr.Substring(0, ImpStr.IndexOf("//", StringComparison.CurrentCulture) - 1) : ImpStr;
-
-                                        // Adding to table Cvar and its value...
-                                        CE_Editor.Rows.Add(CVarName, CVarContent);
-                                    }
-                                    else
-                                    {
-                                        // Adding to table only Cvar with empty value...
-                                        CE_Editor.Rows.Add(ImpStr, string.Empty);
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    // Updating status bar text...
-                    UpdateStatusBar();
-                }
-                catch (Exception Ex)
-                {
-                    MessageBox.Show(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, DebugStrings.AppDbgExCfgEdLoad);
-                }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.CE_OpenFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.CE_RestConfigOpenWarn, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -1381,7 +1314,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="ConfigFile">Full path to config file to edit.</param>
         /// <param name="UseNotepad">Use default text editor instead of Config Editor.</param>
-        private void EditFPSConfig(string ConfigFile, bool UseNotepad = false)
+        private async Task EditFPSConfigTask(string ConfigFile, bool UseNotepad = false)
         {
             if (!string.IsNullOrWhiteSpace(ConfigFile) && File.Exists(ConfigFile))
             {
@@ -1391,7 +1324,7 @@ namespace srcrepair.gui
                 }
                 else
                 {
-                    ReadConfigFromFile(ConfigFile);
+                    await ReadConfigFromFileTask(ConfigFile);
                     MainTabControl.SelectedIndex = 1;
                 }
             }
@@ -1717,6 +1650,81 @@ namespace srcrepair.gui
                     if (File.Exists(LegacyUpdateFile)) { File.Delete(LegacyUpdateFile); }
                 }
             });
+        }
+
+        /// <summary>
+        /// Loads config file to Config Editor in a separate thread.
+        /// </summary>
+        /// <param name="ConfFileName">Full path to config file.</param>
+        private async Task LoadConfigFromFileTask(string ConfFileName)
+        {
+            // Creating some variables...
+            string ImpStr, CVarName, CVarContent;
+
+            // Loading config file...
+            using (StreamReader ConfigFile = new StreamReader(ConfFileName, Encoding.UTF8))
+            {
+                // Reading config file to the end...
+                while (ConfigFile.Peek() >= 0)
+                {
+                    // Clearing string from special chars...
+                    ImpStr = StringsManager.CleanString(await ConfigFile.ReadLineAsync());
+
+                    // Checking if source string is not empty...
+                    if (!string.IsNullOrEmpty(ImpStr))
+                    {
+                        // Checking if source string is not a commentary...
+                        if (ImpStr[0] != '/')
+                        {
+                            // Checking for value in source string...
+                            if (ImpStr.IndexOf(" ", StringComparison.CurrentCulture) != -1)
+                            {
+                                // Extracting variable...
+                                CVarName = ImpStr.Substring(0, ImpStr.IndexOf(" ", StringComparison.CurrentCulture));
+                                ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ", StringComparison.CurrentCulture) + 1);
+
+                                // Extracting value (excluding commentaries if exists)...
+                                CVarContent = ImpStr.IndexOf("//", StringComparison.CurrentCulture) >= 1 ? ImpStr.Substring(0, ImpStr.IndexOf("//", StringComparison.CurrentCulture) - 1) : ImpStr;
+
+                                // Adding to table Cvar and its value...
+                                CE_Editor.Rows.Add(CVarName, CVarContent);
+                            }
+                            else
+                            {
+                                // Adding to table only Cvar with empty value...
+                                CE_Editor.Rows.Add(ImpStr, string.Empty);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Loads config file to Config Editor.
+        /// </summary>
+        /// <param name="ConfFileName">Full path to config file.</param>
+        private async Task ReadConfigFromFileTask(string ConfFileName)
+        {
+            if (File.Exists(ConfFileName))
+            {
+                try
+                {
+                    CFGFileName = ConfFileName;
+                    CE_Editor.Rows.Clear();
+                    await LoadConfigFromFileTask(ConfFileName);
+                    UpdateStatusBar();
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex, DebugStrings.AppDbgExCfgEdLoad);
+                    MessageBox.Show(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.CE_OpenFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         #endregion
@@ -2150,11 +2158,11 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void GT_Warning_Click(object sender, EventArgs e)
+        private async void GT_Warning_Click(object sender, EventArgs e)
         {
             try
             {
-                EditFPSConfig(GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), ModifierKeys == Keys.Shift);
+                await EditFPSConfigTask(GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), ModifierKeys == Keys.Shift);
             }
             catch (Exception Ex)
             {
@@ -2179,13 +2187,14 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void CE_Open_Click(object sender, EventArgs e)
+        private async void CE_Open_Click(object sender, EventArgs e)
         {
             CE_OpenCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
 
             if (CE_OpenCfgDialog.ShowDialog() == DialogResult.OK)
             {
-                ReadConfigFromFile(CE_OpenCfgDialog.FileName);
+                CheckGameConfigEditor();
+                await ReadConfigFromFileTask(CE_OpenCfgDialog.FileName);
             }
         }
 
@@ -2878,7 +2887,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void FP_OpenNotepad_Click(object sender, EventArgs e)
+        private async void FP_OpenNotepad_Click(object sender, EventArgs e)
         {
             try
             {
@@ -2886,7 +2895,7 @@ namespace srcrepair.gui
                 Keys MfKeysState = ModifierKeys;
 
                 // Loading FPS-config to Notepad or built-in Config Editor...
-                EditFPSConfig(App.SourceGames[AppSelector.Text].IsUsingUserDir ? Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg") : GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), MfKeysState != Keys.Shift);
+                await EditFPSConfigTask(App.SourceGames[AppSelector.Text].IsUsingUserDir ? Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg") : GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), MfKeysState != Keys.Shift);
             }
             catch (Exception Ex)
             {
