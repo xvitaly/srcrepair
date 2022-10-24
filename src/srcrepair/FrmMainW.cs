@@ -1286,6 +1286,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Configures Save and Save As dialogs.
+        /// </summary>
+        private void ConfigureSaveFileDialog()
+        {
+            CE_SaveCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
+            CE_SaveCfgDialog.FileName = File.Exists(Path.Combine(App.SourceGames[AppSelector.Text].FullCfgPath, "autoexec.cfg")) ? AppStrings.UnnamedFileName : "autoexec.cfg";
+        }
+
+        /// <summary>
         /// Shows FPS-config selection dialog and load selected config
         /// in Config Editor module or default text editor.
         /// </summary>
@@ -1308,6 +1317,22 @@ namespace srcrepair.gui
             else
             {
                 Logger.Warn(string.Format(DebugStrings.AppDbgExCfgEditorLoad, ConfigFile));
+            }
+        }
+
+        /// <summary>
+        /// Saves contents of Config Editor to a specified configuration file.
+        /// <param name="ConfigFileName">Full path to the configuration file.</param>
+        private async Task SaveConfigToFileTask(string ConfigFileName)
+        {
+            try
+            {
+                await WriteTableToFileTask(ConfigFileName);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExCfgEdSave);
+                MessageBox.Show(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -2201,8 +2226,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private async void CE_Save_Click(object sender, EventArgs e)
         {
-            CE_SaveCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
-
             if (!string.IsNullOrEmpty(CFGFileName))
             {
                 if (Properties.Settings.Default.SafeCleanup && File.Exists(CFGFileName))
@@ -2216,24 +2239,14 @@ namespace srcrepair.gui
                         Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdAutoBackup);
                     }
                 }
-
-                try
-                {
-                    await WriteTableToFileTask(CFGFileName);
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Error(Ex, DebugStrings.AppDbgExCfgEdSave);
-                    MessageBox.Show(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                await SaveConfigToFileTask(CFGFileName);
             }
             else
             {
-                CE_SaveCfgDialog.FileName = File.Exists(Path.Combine(App.SourceGames[AppSelector.Text].FullCfgPath, "autoexec.cfg")) ? AppStrings.UnnamedFileName : "autoexec.cfg";
-
+                ConfigureSaveFileDialog();
                 if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
                 {
-                    await WriteTableToFileTask(CE_SaveCfgDialog.FileName);
+                    await SaveConfigToFileTask(CE_SaveCfgDialog.FileName);
                     CFGFileName = CE_SaveCfgDialog.FileName;
                     UpdateStatusBar();
                 }
@@ -2247,11 +2260,10 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private async void CE_SaveAs_Click(object sender, EventArgs e)
         {
-            CE_SaveCfgDialog.InitialDirectory = App.SourceGames[AppSelector.Text].FullCfgPath;
-
+            ConfigureSaveFileDialog();
             if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
             {
-                await WriteTableToFileTask(CE_SaveCfgDialog.FileName);
+                await SaveConfigToFileTask(CE_SaveCfgDialog.FileName);
             }
         }
 
