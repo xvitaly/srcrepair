@@ -1322,12 +1322,12 @@ namespace srcrepair.gui
 
         /// <summary>
         /// Saves contents of Config Editor to a specified configuration file.
-        /// <param name="ConfigFileName">Full path to the configuration file.</param>
-        private async Task SaveConfigToFile(string ConfigFileName)
+        /// <param name="ConfigFile">Full path to the configuration file.</param>
+        private async Task SaveConfigToFile(string ConfigFile)
         {
             try
             {
-                await WriteTableToFileTask(ConfigFileName);
+                await WriteTableToFileTask(ConfigFile);
             }
             catch (Exception Ex)
             {
