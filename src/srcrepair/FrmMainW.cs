@@ -1733,10 +1733,10 @@ namespace srcrepair.gui
         /// Saves contents of Config Editor to a text file in a separate thread.
         /// Used by Save and Save As operations.
         /// </summary>
-        /// <param name="Path">Full path to config file.</param>
-        private async Task WriteTableToFileTask(string ConfFileName)
+        /// <param name="ConfFile">Full path to config file.</param>
+        private async Task WriteTableToFileTask(string ConfFile)
         {
-            using (StreamWriter CFile = new StreamWriter(ConfFileName))
+            using (StreamWriter CFile = new StreamWriter(ConfFile))
             {
                 foreach (DataGridViewRow Row in CE_Editor.Rows)
                 {
