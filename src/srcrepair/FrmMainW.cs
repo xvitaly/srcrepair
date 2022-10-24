@@ -1300,7 +1300,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="ConfigFile">Full path to config file to edit.</param>
         /// <param name="UseNotepad">Use default text editor instead of Config Editor.</param>
-        private async Task EditFPSConfigTask(string ConfigFile, bool UseNotepad = false)
+        private async Task EditFPSConfig(string ConfigFile, bool UseNotepad = false)
         {
             if (!string.IsNullOrWhiteSpace(ConfigFile) && File.Exists(ConfigFile))
             {
@@ -1323,7 +1323,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Saves contents of Config Editor to a specified configuration file.
         /// <param name="ConfigFileName">Full path to the configuration file.</param>
-        private async Task SaveConfigToFileTask(string ConfigFileName)
+        private async Task SaveConfigToFile(string ConfigFileName)
         {
             try
             {
@@ -2183,7 +2183,7 @@ namespace srcrepair.gui
         {
             try
             {
-                await EditFPSConfigTask(GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), ModifierKeys == Keys.Shift);
+                await EditFPSConfig(GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), ModifierKeys == Keys.Shift);
             }
             catch (Exception Ex)
             {
@@ -2239,14 +2239,14 @@ namespace srcrepair.gui
                         Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdAutoBackup);
                     }
                 }
-                await SaveConfigToFileTask(CFGFileName);
+                await SaveConfigToFile(CFGFileName);
             }
             else
             {
                 ConfigureSaveFileDialog();
                 if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
                 {
-                    await SaveConfigToFileTask(CE_SaveCfgDialog.FileName);
+                    await SaveConfigToFile(CE_SaveCfgDialog.FileName);
                     CFGFileName = CE_SaveCfgDialog.FileName;
                     UpdateStatusBar();
                 }
@@ -2263,7 +2263,7 @@ namespace srcrepair.gui
             ConfigureSaveFileDialog();
             if (CE_SaveCfgDialog.ShowDialog() == DialogResult.OK)
             {
-                await SaveConfigToFileTask(CE_SaveCfgDialog.FileName);
+                await SaveConfigToFile(CE_SaveCfgDialog.FileName);
             }
         }
 
@@ -2900,7 +2900,7 @@ namespace srcrepair.gui
                 Keys MfKeysState = ModifierKeys;
 
                 // Loading FPS-config to Notepad or built-in Config Editor...
-                await EditFPSConfigTask(App.SourceGames[AppSelector.Text].IsUsingUserDir ? Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg") : GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), MfKeysState != Keys.Shift);
+                await EditFPSConfig(App.SourceGames[AppSelector.Text].IsUsingUserDir ? Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg") : GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), MfKeysState != Keys.Shift);
             }
             catch (Exception Ex)
             {
