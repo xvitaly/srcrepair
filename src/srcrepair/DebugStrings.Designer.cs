@@ -340,6 +340,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to detect file system..
+        /// </summary>
+        internal static string AppDbgExDetectFileSystem {
+            get {
+                return ResourceManager.GetString("AppDbgExDetectFileSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to detect installed games..
+        /// </summary>
+        internal static string AppDbgExDetectInstalledGames {
+            get {
+                return ResourceManager.GetString("AppDbgExDetectInstalledGames", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to download file from the remote server..
         /// </summary>
         internal static string AppDbgExDnWrkDownloadFile {
@@ -354,6 +372,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExEditCfg {
             get {
                 return ResourceManager.GetString("AppDbgExEditCfg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while changing the selected FPS-config..
+        /// </summary>
+        internal static string AppDbgExFPSConfigSelectionChange {
+            get {
+                return ResourceManager.GetString("AppDbgExFPSConfigSelectionChange", resourceCulture);
             }
         }
         
@@ -394,6 +421,51 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to build the list of available cleanup targets..
+        /// </summary>
+        internal static string AppDbgExHandleCleanupTargets {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleCleanupTargets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to build the list of available FPS-configs..
+        /// </summary>
+        internal static string AppDbgExHandleFpsConfigs {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleFpsConfigs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to build the list of available game HUDs..
+        /// </summary>
+        internal static string AppDbgExHandleHUDs {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleHUDs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to fetch HUD screenshot from the Internet..
+        /// </summary>
+        internal static string AppDbgExHandleHUDScreenshot {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleHUDScreenshot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to get current Steam User ID..
+        /// </summary>
+        internal static string AppDbgExHandleSteamIDs {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleSteamIDs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to open the offline help viewer with the required page..
         /// </summary>
         internal static string AppDbgExHlpShow {
@@ -426,6 +498,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExHUDInstall {
             get {
                 return ResourceManager.GetString("AppDbgExHUDInstall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove temporary files after HUD installation..
+        /// </summary>
+        internal static string AppDbgExHUDInstallationCleanup {
+            get {
+                return ResourceManager.GetString("AppDbgExHUDInstallationCleanup", resourceCulture);
             }
         }
         
@@ -718,6 +799,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to start cleanup..
+        /// </summary>
+        internal static string AppDbgExStartCleanup {
+            get {
+                return ResourceManager.GetString("AppDbgExStartCleanup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to get Steam path. Application will be terminated..
         /// </summary>
         internal static string AppDbgExSteamPath {
@@ -759,6 +849,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExT2AutoFail {
             get {
                 return ResourceManager.GetString("AppDbgExT2AutoFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to get the list of available backups..
+        /// </summary>
+        internal static string AppDbgExUpdateBackUpList {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdateBackUpList", resourceCulture);
             }
         }
         
@@ -849,6 +948,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExValCache {
             get {
                 return ResourceManager.GetString("AppDbgExValCache", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while creating automatic video settings backup..
+        /// </summary>
+        internal static string AppDbgExVideoAutoBackUp {
+            get {
+                return ResourceManager.GetString("AppDbgExVideoAutoBackUp", resourceCulture);
             }
         }
         

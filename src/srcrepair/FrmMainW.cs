@@ -117,7 +117,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExDetectInstalledGames);
             }
         }
 
@@ -737,8 +737,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDetectFileSystem);
                 PS_OSDrive.Text = string.Format(PS_OSDrive.Text, "Unknown");
-                Logger.Warn(Ex);
             }
         }
 
@@ -751,7 +751,7 @@ namespace srcrepair.gui
             switch (GamesCount)
             {
                 case 0:
-                    Logger.Warn(string.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
+                    Logger.Warn(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath);
                     MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Environment.Exit(ReturnCodes.NoGamesDetected);
                     break;
@@ -774,9 +774,9 @@ namespace srcrepair.gui
         {
             if (!FileManager.CheckNonASCII(App.SteamClient.FullSteamPath))
             {
+                Logger.Warn(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath);
                 PS_PathSteam.ForeColor = Color.Red;
                 PS_PathSteam.Image = Properties.Resources.IconUpdateError;
-                Logger.Warn(string.Format(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath));
             }
         }
 
@@ -788,9 +788,9 @@ namespace srcrepair.gui
         {
             if (!FileManager.CheckNonASCII(App.SourceGames[AppSelector.Text].FullGamePath))
             {
+                Logger.Warn(AppStrings.AppRestrSymbLog, App.SourceGames[AppSelector.Text].FullGamePath);
                 PS_PathGame.ForeColor = Color.Red;
                 PS_PathGame.Image = Properties.Resources.IconUpdateError;
-                Logger.Warn(string.Format(AppStrings.AppRestrSymbLog, App.SourceGames[AppSelector.Text].FullGamePath));
             }
             else
             {
@@ -822,7 +822,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExHandleHUDScreenshot);
                 if (File.Exists(HUDScreenshotFile)) { File.Delete(HUDScreenshotFile); }
             }
         }
@@ -841,7 +841,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExHandleSteamIDs);
                 SB_SteamID.Text = string.Empty;
             }
         }
@@ -965,7 +965,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExUpdateBackUpList);
             }
         }
 
@@ -1141,7 +1141,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Error(Ex);
+                    Logger.Error(Ex, DebugStrings.AppDbgExStartCleanup);
                     MessageBox.Show(AppStrings.PS_ClnWndInitError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -1175,7 +1175,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExHandleHUDs);
                 }
             }
         }
@@ -1203,7 +1203,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 // Exception detected. Writing to log...
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExHandleFpsConfigs);
 
                 // Showing message...
                 FP_Description.Text = AppStrings.FP_NoCfgGame;
@@ -1247,7 +1247,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExHandleCleanupTargets);
             }
         }
 
@@ -1316,7 +1316,7 @@ namespace srcrepair.gui
             }
             else
             {
-                Logger.Warn(string.Format(DebugStrings.AppDbgExCfgEditorLoad, ConfigFile));
+                Logger.Warn(DebugStrings.AppDbgExCfgEditorLoad, ConfigFile);
             }
         }
 
@@ -1605,7 +1605,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExHUDInstallationCleanup);
                     }
                 }
             });
@@ -1887,8 +1887,8 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    NullGraphSettings();
                     Logger.Error(Ex, DebugStrings.AppDbgExVideoLoadFail);
+                    NullGraphSettings();
                     MessageBox.Show(AppStrings.GT_VideoLoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
@@ -2071,7 +2071,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExFPSConfigSelectionChange);
                 FP_Description.Text = AppStrings.FP_NoDescr;
             }
         }
@@ -2343,7 +2343,7 @@ namespace srcrepair.gui
                             {
                                 Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
                             }
-                            catch (Exception Ex) { Logger.Warn(Ex); }
+                            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExVideoAutoBackUp); }
                         }
 
                         Type1Video.RemoveRegKey(GameRegKey);

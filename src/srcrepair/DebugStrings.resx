@@ -210,11 +210,20 @@
   <data name="AppDbgExCvarDescFetchFailure" xml:space="preserve">
     <value>Exception while fetching Cvar description from a separate resource file.</value>
   </data>
+  <data name="AppDbgExDetectFileSystem" xml:space="preserve">
+    <value>Exception while trying to detect file system.</value>
+  </data>
+  <data name="AppDbgExDetectInstalledGames" xml:space="preserve">
+    <value>Exception while trying to detect installed games.</value>
+  </data>
   <data name="AppDbgExDnWrkDownloadFile" xml:space="preserve">
     <value>Exception while trying to download file from the remote server.</value>
   </data>
   <data name="AppDbgExEditCfg" xml:space="preserve">
     <value>Exception on trying to load installed FPS-config to editor.</value>
+  </data>
+  <data name="AppDbgExFPSConfigSelectionChange" xml:space="preserve">
+    <value>Exception while changing the selected FPS-config.</value>
   </data>
   <data name="AppDbgExFpsInstall" xml:space="preserve">
     <value>Exception during FPS config installation.</value>
@@ -228,6 +237,21 @@
   <data name="AppDbgExGTSave" xml:space="preserve">
     <value>Exception during saving of video settings.</value>
   </data>
+  <data name="AppDbgExHandleCleanupTargets" xml:space="preserve">
+    <value>Exception while trying to build the list of available cleanup targets.</value>
+  </data>
+  <data name="AppDbgExHandleFpsConfigs" xml:space="preserve">
+    <value>Exception while trying to build the list of available FPS-configs.</value>
+  </data>
+  <data name="AppDbgExHandleHUDs" xml:space="preserve">
+    <value>Exception while trying to build the list of available game HUDs.</value>
+  </data>
+  <data name="AppDbgExHandleHUDScreenshot" xml:space="preserve">
+    <value>Exception while trying to fetch HUD screenshot from the Internet.</value>
+  </data>
+  <data name="AppDbgExHandleSteamIDs" xml:space="preserve">
+    <value>Exception while trying to get current Steam User ID.</value>
+  </data>
   <data name="AppDbgExHlpShow" xml:space="preserve">
     <value>Failed to open the offline help viewer with the required page.</value>
   </data>
@@ -239,6 +263,9 @@
   </data>
   <data name="AppDbgExHUDInstall" xml:space="preserve">
     <value>Exception during HUD installation.</value>
+  </data>
+  <data name="AppDbgExHUDInstallationCleanup" xml:space="preserve">
+    <value>Exception while trying to remove temporary files after HUD installation.</value>
   </data>
   <data name="AppDbgExHudSelect" xml:space="preserve">
     <value>Exception while trying to select another HUD.</value>
@@ -336,6 +363,9 @@
   <data name="AppDbgExSelGame" xml:space="preserve">
     <value>Exception while handling selected game by user or application.</value>
   </data>
+  <data name="AppDbgExStartCleanup" xml:space="preserve">
+    <value>Exception while trying to start cleanup.</value>
+  </data>
   <data name="AppDbgExSteamPath" xml:space="preserve">
     <value>Exception while trying to get Steam path. Application will be terminated.</value>
   </data>
@@ -350,6 +380,9 @@
   </data>
   <data name="AppDbgExT2AutoFail" xml:space="preserve">
     <value>Exception while trying to create backup of Type 2 game video settings.</value>
+  </data>
+  <data name="AppDbgExUpdateBackUpList" xml:space="preserve">
+    <value>Exception while trying to get the list of available backups.</value>
   </data>
   <data name="AppDbgExUpdBinInst" xml:space="preserve">
     <value>Exception while trying to install binary update.</value>
@@ -380,6 +413,9 @@
   </data>
   <data name="AppDbgExValCache" xml:space="preserve">
     <value>Exception on trying to launch Steam to validate game cache.</value>
+  </data>
+  <data name="AppDbgExVideoAutoBackUp" xml:space="preserve">
+    <value>Exception while creating automatic video settings backup.</value>
   </data>
   <data name="AppDbgExVideoLoadFail" xml:space="preserve">
     <value>Exception while loading video settings.</value>
