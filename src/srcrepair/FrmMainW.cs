@@ -1141,7 +1141,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Error(Ex);
+                    Logger.Error(Ex, DebugStrings.AppDbgExStartCleanup);
                     MessageBox.Show(AppStrings.PS_ClnWndInitError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
