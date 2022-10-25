@@ -774,9 +774,9 @@ namespace srcrepair.gui
         {
             if (!FileManager.CheckNonASCII(App.SteamClient.FullSteamPath))
             {
+                Logger.Warn(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath);
                 PS_PathSteam.ForeColor = Color.Red;
                 PS_PathSteam.Image = Properties.Resources.IconUpdateError;
-                Logger.Warn(string.Format(AppStrings.AppRestrSymbLog, App.SteamClient.FullSteamPath));
             }
         }
 
