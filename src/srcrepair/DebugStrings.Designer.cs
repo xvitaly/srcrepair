@@ -799,6 +799,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to get the list of available backups..
+        /// </summary>
+        internal static string AppDbgExUpdateBackUpList {
+            get {
+                return ResourceManager.GetString("AppDbgExUpdateBackUpList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to install binary update..
         /// </summary>
         internal static string AppDbgExUpdBinInst {

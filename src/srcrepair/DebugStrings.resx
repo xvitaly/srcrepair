@@ -363,6 +363,9 @@
   <data name="AppDbgExT2AutoFail" xml:space="preserve">
     <value>Exception while trying to create backup of Type 2 game video settings.</value>
   </data>
+  <data name="AppDbgExUpdateBackUpList" xml:space="preserve">
+    <value>Exception while trying to get the list of available backups.</value>
+  </data>
   <data name="AppDbgExUpdBinInst" xml:space="preserve">
     <value>Exception while trying to install binary update.</value>
   </data>
