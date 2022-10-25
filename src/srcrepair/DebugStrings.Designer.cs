@@ -340,6 +340,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to detect file system..
+        /// </summary>
+        internal static string AppDbgExDetectFileSystem {
+            get {
+                return ResourceManager.GetString("AppDbgExDetectFileSystem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to detect installed games..
         /// </summary>
         internal static string AppDbgExDetectInstalledGames {

@@ -210,6 +210,9 @@
   <data name="AppDbgExCvarDescFetchFailure" xml:space="preserve">
     <value>Exception while fetching Cvar description from a separate resource file.</value>
   </data>
+  <data name="AppDbgExDetectFileSystem" xml:space="preserve">
+    <value>Exception while trying to detect file system.</value>
+  </data>
   <data name="AppDbgExDetectInstalledGames" xml:space="preserve">
     <value>Exception while trying to detect installed games.</value>
   </data>

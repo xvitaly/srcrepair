@@ -737,8 +737,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDetectFileSystem);
                 PS_OSDrive.Text = string.Format(PS_OSDrive.Text, "Unknown");
-                Logger.Warn(Ex);
             }
         }
 
