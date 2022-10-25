@@ -952,6 +952,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while creating automatic video settings backup..
+        /// </summary>
+        internal static string AppDbgExVideoAutoBackUp {
+            get {
+                return ResourceManager.GetString("AppDbgExVideoAutoBackUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while loading video settings..
         /// </summary>
         internal static string AppDbgExVideoLoadFail {

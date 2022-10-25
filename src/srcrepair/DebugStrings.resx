@@ -414,6 +414,9 @@
   <data name="AppDbgExValCache" xml:space="preserve">
     <value>Exception on trying to launch Steam to validate game cache.</value>
   </data>
+  <data name="AppDbgExVideoAutoBackUp" xml:space="preserve">
+    <value>Exception while creating automatic video settings backup.</value>
+  </data>
   <data name="AppDbgExVideoLoadFail" xml:space="preserve">
     <value>Exception while loading video settings.</value>
   </data>

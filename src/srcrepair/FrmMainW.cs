@@ -2343,7 +2343,7 @@ namespace srcrepair.gui
                             {
                                 Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
                             }
-                            catch (Exception Ex) { Logger.Warn(Ex); }
+                            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExVideoAutoBackUp); }
                         }
 
                         Type1Video.RemoveRegKey(GameRegKey);
