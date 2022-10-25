@@ -1316,7 +1316,7 @@ namespace srcrepair.gui
             }
             else
             {
-                Logger.Warn(string.Format(DebugStrings.AppDbgExCfgEditorLoad, ConfigFile));
+                Logger.Warn(DebugStrings.AppDbgExCfgEditorLoad, ConfigFile);
             }
         }
 
