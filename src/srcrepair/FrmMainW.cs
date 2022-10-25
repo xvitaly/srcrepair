@@ -788,9 +788,9 @@ namespace srcrepair.gui
         {
             if (!FileManager.CheckNonASCII(App.SourceGames[AppSelector.Text].FullGamePath))
             {
+                Logger.Warn(AppStrings.AppRestrSymbLog, App.SourceGames[AppSelector.Text].FullGamePath);
                 PS_PathGame.ForeColor = Color.Red;
                 PS_PathGame.Image = Properties.Resources.IconUpdateError;
-                Logger.Warn(string.Format(AppStrings.AppRestrSymbLog, App.SourceGames[AppSelector.Text].FullGamePath));
             }
             else
             {
