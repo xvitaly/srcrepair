@@ -1203,7 +1203,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 // Exception detected. Writing to log...
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExHandleFpsConfigs);
 
                 // Showing message...
                 FP_Description.Text = AppStrings.FP_NoCfgGame;

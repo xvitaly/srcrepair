@@ -412,6 +412,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to build the list of available FPS-configs..
+        /// </summary>
+        internal static string AppDbgExHandleFpsConfigs {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleFpsConfigs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to build the list of available game HUDs..
         /// </summary>
         internal static string AppDbgExHandleHUDs {
