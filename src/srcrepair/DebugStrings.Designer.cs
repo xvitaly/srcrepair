@@ -412,6 +412,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to fetch HUD screenshot from the Internet..
+        /// </summary>
+        internal static string AppDbgExHandleHUDScreenshot {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleHUDScreenshot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to open the offline help viewer with the required page..
         /// </summary>
         internal static string AppDbgExHlpShow {
