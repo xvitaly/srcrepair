@@ -261,6 +261,9 @@
   <data name="AppDbgExHUDInstall" xml:space="preserve">
     <value>Exception during HUD installation.</value>
   </data>
+  <data name="AppDbgExHUDInstallationCleanup" xml:space="preserve">
+    <value>Exception while trying to remove temporary files after HUD installation.</value>
+  </data>
   <data name="AppDbgExHudSelect" xml:space="preserve">
     <value>Exception while trying to select another HUD.</value>
   </data>

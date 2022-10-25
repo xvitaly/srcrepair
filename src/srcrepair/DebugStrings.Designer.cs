@@ -493,6 +493,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove temporary files after HUD installation..
+        /// </summary>
+        internal static string AppDbgExHUDInstallationCleanup {
+            get {
+                return ResourceManager.GetString("AppDbgExHUDInstallationCleanup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to select another HUD..
         /// </summary>
         internal static string AppDbgExHudSelect {
