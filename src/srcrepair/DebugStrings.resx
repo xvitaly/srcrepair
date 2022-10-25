@@ -234,6 +234,9 @@
   <data name="AppDbgExGTSave" xml:space="preserve">
     <value>Exception during saving of video settings.</value>
   </data>
+  <data name="AppDbgExHandleHUDs" xml:space="preserve">
+    <value>Exception while trying to build the list of available game HUDs.</value>
+  </data>
   <data name="AppDbgExHandleHUDScreenshot" xml:space="preserve">
     <value>Exception while trying to fetch HUD screenshot from the Internet.</value>
   </data>

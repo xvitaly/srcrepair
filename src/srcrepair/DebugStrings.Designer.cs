@@ -412,6 +412,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to build the list of available game HUDs..
+        /// </summary>
+        internal static string AppDbgExHandleHUDs {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleHUDs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to fetch HUD screenshot from the Internet..
         /// </summary>
         internal static string AppDbgExHandleHUDScreenshot {
