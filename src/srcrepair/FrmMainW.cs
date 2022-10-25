@@ -1887,8 +1887,8 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    NullGraphSettings();
                     Logger.Error(Ex, DebugStrings.AppDbgExVideoLoadFail);
+                    NullGraphSettings();
                     MessageBox.Show(AppStrings.GT_VideoLoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
