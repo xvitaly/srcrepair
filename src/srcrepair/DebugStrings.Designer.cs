@@ -421,6 +421,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to get current Steam User ID..
+        /// </summary>
+        internal static string AppDbgExHandleSteamIDs {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleSteamIDs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to open the offline help viewer with the required page..
         /// </summary>
         internal static string AppDbgExHlpShow {

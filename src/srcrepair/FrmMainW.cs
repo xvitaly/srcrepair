@@ -841,7 +841,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExHandleSteamIDs);
                 SB_SteamID.Text = string.Empty;
             }
         }
