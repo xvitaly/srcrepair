@@ -751,7 +751,7 @@ namespace srcrepair.gui
             switch (GamesCount)
             {
                 case 0:
-                    Logger.Warn(string.Format(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath));
+                    Logger.Warn(AppStrings.AppNoGamesDLog, App.SteamClient.FullSteamPath);
                     MessageBox.Show(AppStrings.AppNoGamesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     Environment.Exit(ReturnCodes.NoGamesDetected);
                     break;
