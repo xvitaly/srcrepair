@@ -376,6 +376,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while changing the selected FPS-config..
+        /// </summary>
+        internal static string AppDbgExFPSConfigSelectionChange {
+            get {
+                return ResourceManager.GetString("AppDbgExFPSConfigSelectionChange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception during FPS config installation..
         /// </summary>
         internal static string AppDbgExFpsInstall {

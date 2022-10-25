@@ -2071,7 +2071,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExFPSConfigSelectionChange);
                 FP_Description.Text = AppStrings.FP_NoDescr;
             }
         }

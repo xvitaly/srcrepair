@@ -222,6 +222,9 @@
   <data name="AppDbgExEditCfg" xml:space="preserve">
     <value>Exception on trying to load installed FPS-config to editor.</value>
   </data>
+  <data name="AppDbgExFPSConfigSelectionChange" xml:space="preserve">
+    <value>Exception while changing the selected FPS-config.</value>
+  </data>
   <data name="AppDbgExFpsInstall" xml:space="preserve">
     <value>Exception during FPS config installation.</value>
   </data>
