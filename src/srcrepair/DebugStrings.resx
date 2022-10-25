@@ -234,6 +234,9 @@
   <data name="AppDbgExGTSave" xml:space="preserve">
     <value>Exception during saving of video settings.</value>
   </data>
+  <data name="AppDbgExHandleCleanupTargets" xml:space="preserve">
+    <value>Exception while trying to build the list of available cleanup targets.</value>
+  </data>
   <data name="AppDbgExHandleFpsConfigs" xml:space="preserve">
     <value>Exception while trying to build the list of available FPS-configs.</value>
   </data>

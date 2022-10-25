@@ -412,6 +412,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to build the list of available cleanup targets..
+        /// </summary>
+        internal static string AppDbgExHandleCleanupTargets {
+            get {
+                return ResourceManager.GetString("AppDbgExHandleCleanupTargets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to build the list of available FPS-configs..
         /// </summary>
         internal static string AppDbgExHandleFpsConfigs {
