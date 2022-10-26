@@ -143,8 +143,6 @@ namespace srcrepair.gui
             try
             {
                 DownloaderRunChecks();
-
-                // Starting asynchronous download...
                 using (WebClient FileDownloader = new WebClient())
                 {
                     FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
@@ -153,7 +151,10 @@ namespace srcrepair.gui
                     FileDownloader.DownloadFileAsync(new Uri(RemoteURI), LocalFile);
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnWrkTask, RemoteURI, LocalFile);
+            }
         }
 
         /// <summary>
