@@ -63,7 +63,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmDnWrk_Load(object sender, EventArgs e)
         {
-            // Starting asynchronous download process in a separate thread...
             DownloaderStart();
         }
 
@@ -74,8 +73,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void DownloaderProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            // Rendering progress on form...
-            // Sometimes it can give us incorrect (out of range) values.
             try
             {
                 DN_PrgBr.Value = e.ProgressPercentage;
@@ -136,7 +133,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Downloads file from the Internet.
+        /// Asynchronously downloads file from the Internet in a separate thread.
         /// </summary>
         private void DownloaderStart()
         {
