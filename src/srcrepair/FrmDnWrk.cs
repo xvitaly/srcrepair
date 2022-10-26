@@ -63,7 +63,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmDnWrk_Load(object sender, EventArgs e)
         {
-            // Starting asynchronous download process in a separate thread...
             DownloaderStart();
         }
 
@@ -74,9 +73,14 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void DownloaderProgressChanged(object sender, DownloadProgressChangedEventArgs e)
         {
-            // Rendering progress on form...
-            // Sometimes it can give us incorrect (out of range) values.
-            try { DN_PrgBr.Value = e.ProgressPercentage; } catch (Exception Ex) { Logger.Warn(Ex); }
+            try
+            {
+                DN_PrgBr.Value = e.ProgressPercentage;
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnProgressChanged);
+            }
         }
 
         /// <summary>
@@ -89,7 +93,7 @@ namespace srcrepair.gui
             // Download task completed. Checking for errors...
             if (e.Error != null)
             {
-                Logger.Error(e.Error, DebugStrings.AppDbgExDnWrkDownloadFile);
+                Logger.Error(e.Error, DebugStrings.AppDbgExDnWrkDownloadFile, RemoteURI, LocalFile);
             }
 
             // Performing additional actions...
@@ -129,15 +133,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Downloads file from the Internet.
+        /// Asynchronously downloads file from the Internet in a separate thread.
         /// </summary>
         private void DownloaderStart()
         {
             try
             {
                 DownloaderRunChecks();
-
-                // Starting asynchronous download...
                 using (WebClient FileDownloader = new WebClient())
                 {
                     FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
@@ -146,7 +148,10 @@ namespace srcrepair.gui
                     FileDownloader.DownloadFileAsync(new Uri(RemoteURI), LocalFile);
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnWrkTask, RemoteURI, LocalFile);
+            }
         }
 
         /// <summary>
@@ -162,7 +167,10 @@ namespace srcrepair.gui
                     Fi.Delete();
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnResultVerify, LocalFile);
+            }
         }
 
         /// <summary>

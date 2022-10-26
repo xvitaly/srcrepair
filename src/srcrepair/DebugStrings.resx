@@ -216,8 +216,17 @@
   <data name="AppDbgExDetectInstalledGames" xml:space="preserve">
     <value>Exception while trying to detect installed games.</value>
   </data>
+  <data name="AppDbgExDnProgressChanged" xml:space="preserve">
+    <value>Exception while trying to report download progress to form.</value>
+  </data>
+  <data name="AppDbgExDnResultVerify" xml:space="preserve">
+    <value>Exception while verifying the downloaded file "{0}".</value>
+  </data>
   <data name="AppDbgExDnWrkDownloadFile" xml:space="preserve">
-    <value>Exception while trying to download file from the remote server.</value>
+    <value>Exception while downloading file "{0}" from the remote server to local file "{1}".</value>
+  </data>
+  <data name="AppDbgExDnWrkTask" xml:space="preserve">
+    <value>Exception while trying to start downloading file "{0}" to "{1}".</value>
   </data>
   <data name="AppDbgExEditCfg" xml:space="preserve">
     <value>Exception on trying to load installed FPS-config to editor.</value>
