@@ -167,7 +167,10 @@ namespace srcrepair.gui
                     Fi.Delete();
                 }
             }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnResultVerify, LocalFile);
+            }
         }
 
         /// <summary>

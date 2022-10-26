@@ -367,6 +367,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while verifying the downloaded file &quot;{0}&quot;..
+        /// </summary>
+        internal static string AppDbgExDnResultVerify {
+            get {
+                return ResourceManager.GetString("AppDbgExDnResultVerify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to download file from the remote server..
         /// </summary>
         internal static string AppDbgExDnWrkDownloadFile {

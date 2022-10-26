@@ -219,6 +219,9 @@
   <data name="AppDbgExDnProgressChanged" xml:space="preserve">
     <value>Exception while trying to report download progress to form.</value>
   </data>
+  <data name="AppDbgExDnResultVerify" xml:space="preserve">
+    <value>Exception while verifying the downloaded file "{0}".</value>
+  </data>
   <data name="AppDbgExDnWrkDownloadFile" xml:space="preserve">
     <value>Exception while trying to download file from the remote server.</value>
   </data>
