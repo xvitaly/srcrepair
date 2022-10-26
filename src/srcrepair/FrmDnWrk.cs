@@ -57,16 +57,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Form create" event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void FrmDnWrk_Load(object sender, EventArgs e)
-        {
-            DownloaderStart();
-        }
-
-        /// <summary>
         /// Reports progress to progress bar on form.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -180,6 +170,16 @@ namespace srcrepair.gui
         {
             IsRunning = false;
             Close();
+        }
+
+        /// <summary>
+        /// "Form create" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void FrmDnWrk_Load(object sender, EventArgs e)
+        {
+            DownloaderStart();
         }
 
         /// <summary>
