@@ -93,7 +93,7 @@ namespace srcrepair.gui
             // Download task completed. Checking for errors...
             if (e.Error != null)
             {
-                Logger.Error(e.Error, DebugStrings.AppDbgExDnWrkDownloadFile);
+                Logger.Error(e.Error, DebugStrings.AppDbgExDnWrkDownloadFile, RemoteURI, LocalFile);
             }
 
             // Performing additional actions...

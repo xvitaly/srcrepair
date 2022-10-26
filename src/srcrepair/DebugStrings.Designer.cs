@@ -376,7 +376,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to download file from the remote server..
+        ///   Looks up a localized string similar to Exception while downloading file &quot;{0}&quot; from the remote server to local file &quot;{1}&quot;..
         /// </summary>
         internal static string AppDbgExDnWrkDownloadFile {
             get {
@@ -385,7 +385,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while downloading file &quot;{0}&quot; to &quot;{1}&quot;..
+        ///   Looks up a localized string similar to Exception while trying to start downloading file &quot;{0}&quot; to &quot;{1}&quot;..
         /// </summary>
         internal static string AppDbgExDnWrkTask {
             get {
