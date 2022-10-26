@@ -142,7 +142,7 @@ namespace srcrepair.gui
                 DownloaderRunChecks();
                 using (WebClient FileDownloader = new WebClient())
                 {
-                    FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDnlUA);
+                    FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDownloadUserAgent);
                     FileDownloader.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloaderCompleted);
                     FileDownloader.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloaderProgressChanged);
                     FileDownloader.DownloadFileAsync(new Uri(RemoteURI), LocalFile);

@@ -63,9 +63,9 @@ namespace srcrepair.gui.Properties {
         /// <summary>
         ///   Looks up a localized string similar to wget.
         /// </summary>
-        internal static string AppDnlUA {
+        internal static string AppDownloadUserAgent {
             get {
-                return ResourceManager.GetString("AppDnlUA", resourceCulture);
+                return ResourceManager.GetString("AppDownloadUserAgent", resourceCulture);
             }
         }
         
