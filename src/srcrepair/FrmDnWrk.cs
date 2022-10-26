@@ -76,7 +76,14 @@ namespace srcrepair.gui
         {
             // Rendering progress on form...
             // Sometimes it can give us incorrect (out of range) values.
-            try { DN_PrgBr.Value = e.ProgressPercentage; } catch (Exception Ex) { Logger.Warn(Ex); }
+            try
+            {
+                DN_PrgBr.Value = e.ProgressPercentage;
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnProgressChanged);
+            }
         }
 
         /// <summary>

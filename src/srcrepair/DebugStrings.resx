@@ -216,6 +216,9 @@
   <data name="AppDbgExDetectInstalledGames" xml:space="preserve">
     <value>Exception while trying to detect installed games.</value>
   </data>
+  <data name="AppDbgExDnProgressChanged" xml:space="preserve">
+    <value>Exception while trying to report download progress to form.</value>
+  </data>
   <data name="AppDbgExDnWrkDownloadFile" xml:space="preserve">
     <value>Exception while trying to download file from the remote server.</value>
   </data>

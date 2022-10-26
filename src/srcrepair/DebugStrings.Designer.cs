@@ -358,6 +358,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to report download progress to form..
+        /// </summary>
+        internal static string AppDbgExDnProgressChanged {
+            get {
+                return ResourceManager.GetString("AppDbgExDnProgressChanged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to download file from the remote server..
         /// </summary>
         internal static string AppDbgExDnWrkDownloadFile {
