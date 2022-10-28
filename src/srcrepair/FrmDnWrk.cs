@@ -189,7 +189,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmDnWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = IsRunning;
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && IsRunning;
         }
     }
 }
