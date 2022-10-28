@@ -57,7 +57,7 @@ namespace srcrepair.gui
         private bool IsRunning = false;
 
         /// <summary>
-        /// Stores status of completed process.
+        /// Stores status of process completion event.
         /// </summary>
         private bool IsCompleted = false;
 
