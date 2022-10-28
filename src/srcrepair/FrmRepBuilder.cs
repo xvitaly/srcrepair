@@ -54,6 +54,11 @@ namespace srcrepair.gui
         /// <summary>
         /// Stores status of currently running process.
         /// </summary>
+        private bool IsRunning = false;
+
+        /// <summary>
+        /// Stores status of completed process.
+        /// </summary>
         private bool IsCompleted = false;
 
         /// <summary>
@@ -208,6 +213,7 @@ namespace srcrepair.gui
         /// </summary>
         private void RepWindowStart()
         {
+            IsRunning = true;
             RB_Progress.Visible = true;
             GenerateNow.Enabled = false;
             ControlBox = false;
@@ -218,6 +224,7 @@ namespace srcrepair.gui
         /// </summary>
         private void RepWindowFinalize()
         {
+            IsRunning = false;
             RB_Progress.Visible = false;
             GenerateNow.Text = AppStrings.RPB_CloseCpt;
             GenerateNow.Enabled = true;
@@ -310,7 +317,7 @@ namespace srcrepair.gui
         private void FrmRepBuilder_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Blocking ability to close form window during report generating process...
-            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && !IsCompleted;
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && IsRunning;
         }
     }
 }
