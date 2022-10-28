@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="WelcomeLabel.Text" xml:space="preserve">
-    <value>Здесь Вы можете легко и быстро создать отчёт для службы технической поддержки. Процесс займёт много времени, поэтому наберитесь терпения. Не прерывайте его!</value>
+    <value>Здесь вы можете легко и быстро создать отчёт для службы технической поддержки. Процесс займёт много времени, поэтому наберитесь терпения. Не прерывайте его!</value>
   </data>
   <data name="GenerateNow.Text" xml:space="preserve">
     <value>Создать отчёт!</value>
