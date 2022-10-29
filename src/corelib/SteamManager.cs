@@ -48,14 +48,14 @@ namespace srcrepair.core
         public string FullLogsPath { get; private set; }
 
         /// <summary>
-        /// Gets list of available UserIDs.
+        /// Gets or sets the list of available UserIDs.
         /// </summary>
         public List<string> SteamIDs { get; private set; }
 
         /// <summary>
-        /// Gets selected or default UserID.
+        /// Gets or sets selected or default UserID.
         /// </summary>
-        public string SteamID { get; set; }
+        public string SteamID { get; private set; }
 
         /// <summary>
         /// Checks if specified UserID currently available. If not,
