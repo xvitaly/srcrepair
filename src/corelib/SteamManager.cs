@@ -28,6 +28,21 @@ namespace srcrepair.core
         public string FullSteamPath { get; private set; }
 
         /// <summary>
+        /// Gets or sets full path to Steam userdata directory.
+        /// </summary>
+        public string FullUserDataPath { get; private set; }
+
+        /// <summary>
+        /// Gets or sets full path to Steam crash dumps directory.
+        /// </summary>
+        public string FullDumpsPath { get; private set; }
+
+        /// <summary>
+        /// Gets or sets full path to Steam logs directory.
+        /// </summary>
+        public string FullLogsPath { get; private set; }
+
+        /// <summary>
         /// Gets list of available UserIDs.
         /// </summary>
         public List<string> SteamIDs { get; private set; }
@@ -36,11 +51,6 @@ namespace srcrepair.core
         /// Gets selected or default UserID.
         /// </summary>
         public string SteamID { get; set; }
-
-        /// <summary>
-        /// Gets or sets full path to Steam userdata directory.
-        /// </summary>
-        private string UserDataPath { get; set; }
 
         /// <summary>
         /// Checks if specified UserID currently available. If not,
@@ -138,7 +148,7 @@ namespace srcrepair.core
             List<string> Result = new List<string>();
             foreach (string ID in SteamIDs)
             {
-                Result.AddRange(FileManager.FindFiles(Path.Combine(UserDataPath, ID, "config"), "localconfig.vdf"));
+                Result.AddRange(FileManager.FindFiles(Path.Combine(FullUserDataPath, ID, "config"), "localconfig.vdf"));
             }
             return Result;
         }
@@ -149,9 +159,9 @@ namespace srcrepair.core
         /// <returns>List of available UserIDs.</returns>
         private void GetUserIDs()
         {
-            if (Directory.Exists(UserDataPath))
+            if (Directory.Exists(FullUserDataPath))
             {
-                DirectoryInfo DInfo = new DirectoryInfo(UserDataPath);
+                DirectoryInfo DInfo = new DirectoryInfo(FullUserDataPath);
                 foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
                 {
                     if (SteamConv.ValidateUserID(SubDir.Name))
@@ -267,7 +277,9 @@ namespace srcrepair.core
         private void SetValues(string LastSteamID)
         {
             SteamIDs = new List<string>();
-            UserDataPath = Path.Combine(FullSteamPath, "userdata");
+            FullDumpsPath = Path.Combine(FullSteamPath, "dumps");
+            FullLogsPath = Path.Combine(FullSteamPath, "logs");
+            FullUserDataPath = Path.Combine(FullSteamPath, "userdata");
             GetUserIDs();
             SteamID = GetCurrentSteamID(LastSteamID);
         }
