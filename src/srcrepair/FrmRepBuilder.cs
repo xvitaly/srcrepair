@@ -65,14 +65,15 @@ namespace srcrepair.gui
         /// FrmRepBuilder class constructor.
         /// </summary>
         /// <param name="A">Path to app's user directory.</param>
-        /// <param name="FS">Full path to Steam client directory.</param>
+        /// <param name="SD">Full path to Steam crash dumps directory.</param>
+        /// <param name="SL">Full path to Steam logs directory.</param>
         /// <param name="SG">Instance of SourceGame class, selected in main window.</param>
-        public FrmRepBuilder(string A, string FS, SourceGame SG)
+        public FrmRepBuilder(string A, string SD, string SL, SourceGame SG)
         {
             InitializeComponent();
             RepMan = new ReportManager(A);
-            FullSteamDumpsDir = Path.Combine(FS, "dumps");
-            FullSteamLogsDir = Path.Combine(FS, "logs");
+            FullSteamDumpsDir = SD;
+            FullSteamLogsDir = SL;
             SelectedGame = SG;
         }
 
