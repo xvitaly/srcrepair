@@ -28,6 +28,11 @@ namespace srcrepair.core
         public string FullSteamPath { get; private set; }
 
         /// <summary>
+        /// Gets or sets full path to Steam configuration files directory.
+        /// </summary>
+        public string FullConfigsPath { get; private set; }
+
+        /// <summary>
         /// Gets or sets full path to Steam userdata directory.
         /// </summary>
         public string FullUserDataPath { get; private set; }
@@ -131,13 +136,13 @@ namespace srcrepair.core
         /// Gets full path to the main Steam config.vdf configuration file.
         /// </summary>
         /// <returns>Full path to config.vdf file.</returns>
-        public string GetSteamConfig() => Path.Combine(FullSteamPath, "config", "config.vdf");
+        public string GetSteamConfig() => Path.Combine(FullConfigsPath, "config.vdf");
 
         /// <summary>
         /// Gets full path to the libraryfolders.vdf Steam configuration file.
         /// </summary>
         /// <returns>Full path to the libraryfolders.vdf file.</returns>
-        public string GetLibraryFoldersConfig() => Path.Combine(FullSteamPath, "config", "libraryfolders.vdf");
+        public string GetLibraryFoldersConfig() => Path.Combine(FullConfigsPath, "libraryfolders.vdf");
 
         /// <summary>
         /// Gets full path to Steam localconfig.vdf configuration file.
@@ -277,6 +282,7 @@ namespace srcrepair.core
         private void SetValues(string LastSteamID)
         {
             SteamIDs = new List<string>();
+            FullConfigsPath = Path.Combine(FullSteamPath, "config");
             FullDumpsPath = Path.Combine(FullSteamPath, "dumps");
             FullLogsPath = Path.Combine(FullSteamPath, "logs");
             FullUserDataPath = Path.Combine(FullSteamPath, "userdata");
