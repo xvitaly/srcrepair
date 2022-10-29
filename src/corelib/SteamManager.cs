@@ -133,16 +133,16 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Gets full path to the main Steam config.vdf configuration file.
+        /// Gets or sets full path to the main Steam config.vdf configuration file.
         /// </summary>
         /// <returns>Full path to config.vdf file.</returns>
-        public string GetSteamConfig() => Path.Combine(FullConfigsPath, "config.vdf");
+        public string SteamConfigFile { get; private set; }
 
         /// <summary>
-        /// Gets full path to the libraryfolders.vdf Steam configuration file.
+        /// Gets or sets full path to the libraryfolders.vdf Steam configuration file.
         /// </summary>
         /// <returns>Full path to the libraryfolders.vdf file.</returns>
-        public string GetLibraryFoldersConfig() => Path.Combine(FullConfigsPath, "libraryfolders.vdf");
+        public string LibraryFoldersConfigFile { get; private set; }
 
         /// <summary>
         /// Gets full path to Steam localconfig.vdf configuration file.
@@ -207,9 +207,8 @@ namespace srcrepair.core
         /// <summary>
         /// Reads and constructs a list of mount points from the specified
         /// configuration file.
-        /// <param name="LibraryFoldersConfigFile">Full path to the libraryfolders.vdf file.</param>
         /// </summary>
-        private List<string> ReadMountPointsFromFile(string LibraryFoldersConfigFile)
+        private List<string> ReadMountPointsFromFile()
         {
             List<string> Result = new List<string>();
             using (StreamReader SteamConfig = new StreamReader(LibraryFoldersConfigFile, Encoding.UTF8))
@@ -240,10 +239,9 @@ namespace srcrepair.core
             List<string> Result = new List<string> { FullSteamPath };
             try
             {
-                string LibraryFoldersConfigFile = GetLibraryFoldersConfig();
                 if (File.Exists(LibraryFoldersConfigFile))
                 {
-                    Result.AddRange(ReadMountPointsFromFile(LibraryFoldersConfigFile));
+                    Result.AddRange(ReadMountPointsFromFile());
                 }
             }
             catch (Exception Ex)
@@ -286,6 +284,8 @@ namespace srcrepair.core
             FullDumpsPath = Path.Combine(FullSteamPath, "dumps");
             FullLogsPath = Path.Combine(FullSteamPath, "logs");
             FullUserDataPath = Path.Combine(FullSteamPath, "userdata");
+            SteamConfigFile = Path.Combine(FullConfigsPath, "config.vdf");
+            LibraryFoldersConfigFile = Path.Combine(FullConfigsPath, "libraryfolders.vdf");
             GetUserIDs();
             SteamID = GetCurrentSteamID(LastSteamID);
         }
