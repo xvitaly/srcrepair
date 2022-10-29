@@ -38,7 +38,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets report file name with full path.
         /// </summary>
-        public string ReportArchiveName => Path.Combine(ReportsDirectory, string.Format("report_{0}.zip", CurrentUnixTime));
+        public string ReportArchiveName { get; private set; }
 
         /// <summary>
         /// Adds custom report generators to collection.
@@ -66,6 +66,7 @@ namespace srcrepair.core
             TempDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
             CurrentUnixTime = FileManager.DateTime2Unix(DateTime.Now);
             ReportsDirectory = Path.Combine(AppUserDir, ReportStrings.DirectoryName);
+            ReportArchiveName = Path.Combine(ReportsDirectory, string.Format("report_{0}.zip", CurrentUnixTime));
             SetTargets();
         }
     }
