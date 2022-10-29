@@ -58,6 +58,18 @@ namespace srcrepair.core
         public string SteamID { get; private set; }
 
         /// <summary>
+        /// Gets or sets full path to the main Steam config.vdf configuration file.
+        /// </summary>
+        /// <returns>Full path to config.vdf file.</returns>
+        public string SteamConfigFile { get; private set; }
+
+        /// <summary>
+        /// Gets or sets full path to the libraryfolders.vdf Steam configuration file.
+        /// </summary>
+        /// <returns>Full path to the libraryfolders.vdf file.</returns>
+        public string LibraryFoldersConfigFile { get; private set; }
+
+        /// <summary>
         /// Checks if specified UserID currently available. If not,
         /// returns first available value.
         /// </summary>
@@ -131,18 +143,6 @@ namespace srcrepair.core
                 case "ukrainian": return 27; case "vietnamese": return 28; default: return 7;
             }
         }
-
-        /// <summary>
-        /// Gets or sets full path to the main Steam config.vdf configuration file.
-        /// </summary>
-        /// <returns>Full path to config.vdf file.</returns>
-        public string SteamConfigFile { get; private set; }
-
-        /// <summary>
-        /// Gets or sets full path to the libraryfolders.vdf Steam configuration file.
-        /// </summary>
-        /// <returns>Full path to the libraryfolders.vdf file.</returns>
-        public string LibraryFoldersConfigFile { get; private set; }
 
         /// <summary>
         /// Gets full path to Steam localconfig.vdf configuration file.
