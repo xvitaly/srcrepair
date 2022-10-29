@@ -2434,7 +2434,7 @@ namespace srcrepair.gui
         {
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
-                GuiHelpers.FormShowRepBuilder(App.AppUserDir, App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text]);
+                GuiHelpers.FormShowRepBuilder(App.AppUserDir, App.SteamClient.FullDumpsPath, App.SteamClient.FullLogsPath, App.SourceGames[AppSelector.Text]);
             }
             else
             {

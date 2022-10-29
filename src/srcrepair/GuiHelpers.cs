@@ -168,11 +168,12 @@ namespace srcrepair.gui
         /// Opens reports generation window.
         /// </summary>
         /// <param name="AppUserDir">App's user directory.</param>
-        /// <param name="FullSteamPath">Full path to Steam client directory.</param>
+        /// <param name="FullDumpsPath">Full path to Steam crash dumps directory.</param>
+        /// <param name="FullLogsPath">Full path to Steam logs directory.</param>
         /// <param name="SelectedGame">Instance of SourceGame class, selected in main window.</param>
-        public static void FormShowRepBuilder(string AppUserDir, string FullSteamPath, SourceGame SelectedGame)
+        public static void FormShowRepBuilder(string AppUserDir, string FullDumpsPath, string FullLogsPath, SourceGame SelectedGame)
         {
-            using (FrmRepBuilder RBF = new FrmRepBuilder(AppUserDir, FullSteamPath, SelectedGame))
+            using (FrmRepBuilder RBF = new FrmRepBuilder(AppUserDir, FullDumpsPath, FullLogsPath, SelectedGame))
             {
                 RBF.ShowDialog();
             }
