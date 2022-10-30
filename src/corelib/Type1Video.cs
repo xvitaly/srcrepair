@@ -232,7 +232,7 @@ namespace srcrepair.core
                         res = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ShaderDetail, "_ShaderDetail");
                         break;
                 }
 
@@ -250,7 +250,7 @@ namespace srcrepair.core
                         _ShaderDetail = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ShaderQuality");
                         break;
                 }
             }
