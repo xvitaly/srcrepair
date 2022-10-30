@@ -212,7 +212,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _MotionBlur, "_MotionBlur");
                         break;
                 }
 
@@ -230,7 +230,7 @@ namespace srcrepair.core
                         _MotionBlur = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "MotionBlur");
                         break;
                 }
             }
