@@ -88,7 +88,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _DisplayMode, "_DisplayMode");
                         break;
                 }
 
@@ -106,7 +106,7 @@ namespace srcrepair.core
                         _DisplayMode = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "DisplayMode");
                         break;
                 }
             }
