@@ -496,7 +496,7 @@ namespace srcrepair.core
                         res = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _EffectDetails, "_EffectDetails");
                         break;
                 }
 
@@ -517,7 +517,7 @@ namespace srcrepair.core
                         _EffectDetails = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "Effects");
                         break;
                 }
             }
