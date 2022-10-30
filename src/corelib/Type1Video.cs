@@ -280,12 +280,12 @@ namespace srcrepair.core
                                 res = 2;
                                 break;
                             default:
-                                Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _WaterReflections, "_WaterReflections");
                                 break;
                         }
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _WaterDetail, "_WaterDetail");
                         break;
                 }
 
@@ -309,7 +309,7 @@ namespace srcrepair.core
                         _WaterReflections = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ReflectionsQuality");
                         break;
                 }
             }
