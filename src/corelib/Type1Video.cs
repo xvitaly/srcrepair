@@ -420,7 +420,7 @@ namespace srcrepair.core
                                 res = 1;
                                 break;
                             default:
-                                Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _FilteringTrilinear, "_FilteringTrilinear");
                                 break;
                         }
                         break;
@@ -437,7 +437,7 @@ namespace srcrepair.core
                         res = 5;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _FilteringMode, "_FilteringMode");
                         break;
                 }
 
@@ -473,7 +473,7 @@ namespace srcrepair.core
                         _FilteringTrilinear = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "FilteringMode");
                         break;
                 }
             }
