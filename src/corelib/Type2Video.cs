@@ -278,7 +278,7 @@ namespace srcrepair.core
                         res = 5;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _FilteringMode, "_FilteringMode");
                         break;
                 }
 
@@ -308,7 +308,7 @@ namespace srcrepair.core
                         _FilteringMode = 16;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "FilteringMode");
                         break;
                 }
             }
