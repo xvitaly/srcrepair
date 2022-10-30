@@ -497,7 +497,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _VSync, "_VSync");
                         break;
                 }
 
@@ -515,7 +515,7 @@ namespace srcrepair.core
                         _VSync = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "VSync");
                         break;
                 }
             }
