@@ -397,7 +397,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _MCRendering, "_MCRendering");
                         break;
                 }
 
@@ -415,7 +415,7 @@ namespace srcrepair.core
                         _MCRendering = -1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "RenderingMode");
                         break;
                 }
             }
