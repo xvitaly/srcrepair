@@ -547,7 +547,7 @@ namespace srcrepair.core
                         res = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _MemoryPoolType, "_MemoryPoolType");
                         break;
                 }
 
@@ -568,7 +568,7 @@ namespace srcrepair.core
                         _MemoryPoolType = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "MemoryPool");
                         break;
                 }
             }
