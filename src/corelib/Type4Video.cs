@@ -59,7 +59,7 @@ namespace srcrepair.core
                         _ShadowDepth = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ShadowQuality");
                         break;
                 }
             }
