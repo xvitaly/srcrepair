@@ -156,7 +156,7 @@ namespace srcrepair.core
                         res = 3;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ShadowQuality, "_ShadowQuality");
                         break;
                 }
 
@@ -180,7 +180,7 @@ namespace srcrepair.core
                         _ShadowQuality = 3;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ShadowQuality");
                         break;
                 }
             }
