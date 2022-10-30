@@ -133,7 +133,7 @@ namespace srcrepair.core
                         res = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ModelDetail, "_ModelDetail");
                         break;
                 }
 
@@ -154,7 +154,7 @@ namespace srcrepair.core
                         _ModelDetail = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ModelQuality");
                         break;
                 }
             }
