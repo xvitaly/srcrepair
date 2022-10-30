@@ -596,7 +596,7 @@ namespace srcrepair.core
                         res = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _HDRMode, "_HDRMode");
                         break;
                 }
 
@@ -617,7 +617,7 @@ namespace srcrepair.core
                         _HDRMode = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "HDRType");
                         break;
                 }
             }
