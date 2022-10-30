@@ -545,7 +545,7 @@ namespace srcrepair.core
                         res = 3;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _DirectXMode, "_DirectXMode");
                         break;
                 }
 
@@ -569,7 +569,7 @@ namespace srcrepair.core
                         _DirectXMode = 95;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "DirectXMode");
                         break;
                 }
             }
