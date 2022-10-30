@@ -120,9 +120,6 @@
   <data name="AppDbgCoreFieldOutOfRange" xml:space="preserve">
     <value>The value "{0}" of the "{1}" field is out of range.</value>
   </data>
-  <data name="AppDbgCoreGetterOutOfRange" xml:space="preserve">
-    <value>Received value is out of supported range.</value>
-  </data>
   <data name="AppDbgCoreSetterOutOfRange" xml:space="preserve">
     <value>The requested value "{0}" for the "{1}" setter is out of range.</value>
   </data>

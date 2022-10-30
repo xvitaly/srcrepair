@@ -70,15 +70,6 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Received value is out of supported range..
-        /// </summary>
-        internal static string AppDbgCoreGetterOutOfRange {
-            get {
-                return ResourceManager.GetString("AppDbgCoreGetterOutOfRange", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to The requested value &quot;{0}&quot; for the &quot;{1}&quot; setter is out of range..
         /// </summary>
         internal static string AppDbgCoreSetterOutOfRange {
