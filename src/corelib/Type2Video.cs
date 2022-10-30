@@ -338,12 +338,12 @@ namespace srcrepair.core
                                 res = 2;
                                 break;
                             default:
-                                Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _VSyncMode, "_VSyncMode");
                                 break;
                         }
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _VSync, "_VSync");
                         break;
                 }
 
@@ -367,7 +367,7 @@ namespace srcrepair.core
                         _VSyncMode = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "VSync");
                         break;
                 }
             }
