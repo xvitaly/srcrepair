@@ -375,7 +375,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ColorCorrection, "_ColorCorrection");
                         break;
                 }
 
@@ -393,7 +393,7 @@ namespace srcrepair.core
                         _ColorCorrection = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ColorCorrection");
                         break;
                 }
             }
