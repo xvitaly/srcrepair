@@ -184,7 +184,7 @@ namespace srcrepair.core
                         res = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _TextureDetail, "_TextureDetail");
                         break;
                 }
 
@@ -208,7 +208,7 @@ namespace srcrepair.core
                         _TextureDetail = -1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "TextureQuality");
                         break;
                 }
             }
