@@ -86,7 +86,7 @@ namespace srcrepair.core
         {
             get
             {
-                int res;
+                int res = -1;
 
                 switch (_ScreenRatio)
                 {
@@ -100,7 +100,7 @@ namespace srcrepair.core
                         res = 2;
                         break;
                     default:
-                        res = 2;
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ScreenRatio, "_ScreenRatio");
                         break;
                 }
 
@@ -121,7 +121,7 @@ namespace srcrepair.core
                         _ScreenRatio = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ScreenRatio");
                         break;
                 }
             }
