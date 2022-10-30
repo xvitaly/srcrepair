@@ -445,7 +445,7 @@ namespace srcrepair.core
                         res = 3;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreGetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ShaderEffects, "_ShaderEffects");
                         break;
                 }
 
@@ -469,7 +469,7 @@ namespace srcrepair.core
                         _ShaderEffects = 3;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange);
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ShaderEffects");
                         break;
                 }
             }
