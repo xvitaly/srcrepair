@@ -1186,7 +1186,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cleanup targets is not yet available! Please try again in 10 seconds..
+        ///   Looks up a localized string similar to Cleanup targets are not yet available! Please try again in 10 seconds..
         /// </summary>
         internal static string PS_BwBusy {
             get {
