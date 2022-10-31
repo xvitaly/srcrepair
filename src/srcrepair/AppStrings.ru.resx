@@ -492,9 +492,6 @@
   <data name="PS_ArchFailed" xml:space="preserve">
     <value>Произошла ошибка при упаковке файлов в архив. Архив не был создан!</value>
   </data>
-  <data name="PS_BwBusy" xml:space="preserve">
-    <value>Цели для очистки ещё не были построены! Пожалуйста повторите попытку через несколько секунд.</value>
-  </data>
   <data name="PS_CleanException" xml:space="preserve">
     <value>Произошла ошибка во время процедуры очистки. Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
