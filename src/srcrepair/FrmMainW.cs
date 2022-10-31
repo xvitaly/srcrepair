@@ -1128,26 +1128,19 @@ namespace srcrepair.gui
         /// <param name="Targets">Additional targets for cleanup.</param>
         private void StartCleanup(string ID, string Title, List<string> Targets)
         {
-            if (HandleCleanupTargetsTask(AppSelector.Text).Status != TaskStatus.Running)
+            try
             {
-                try
+                List<string> CleanDirs = new List<string>(App.SourceGames[AppSelector.Text].ClnMan[ID].Directories);
+                if (Targets.Count > 0)
                 {
-                    List<string> CleanDirs = new List<string>(App.SourceGames[AppSelector.Text].ClnMan[ID].Directories);
-                    if (Targets.Count > 0)
-                    {
-                        CleanDirs.AddRange(Targets);
-                    }
-                    GuiHelpers.FormShowCleanup(CleanDirs, Title.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+                    CleanDirs.AddRange(Targets);
                 }
-                catch (Exception Ex)
-                {
-                    Logger.Error(Ex, DebugStrings.AppDbgExStartCleanup);
-                    MessageBox.Show(AppStrings.PS_ClnWndInitError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                GuiHelpers.FormShowCleanup(CleanDirs, Title.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
             }
-            else
+            catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.PS_BwBusy, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, DebugStrings.AppDbgExStartCleanup);
+                MessageBox.Show(AppStrings.PS_ClnWndInitError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
