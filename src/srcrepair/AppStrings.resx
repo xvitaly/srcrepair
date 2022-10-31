@@ -492,6 +492,9 @@
   <data name="PS_ArchFailed" xml:space="preserve">
     <value>An error occured during packing files. The archive was not created!</value>
   </data>
+  <data name="PS_BwBusy" xml:space="preserve">
+    <value>Cleanup targets is not yet available! Please try again in 10 seconds.</value>
+  </data>
   <data name="PS_CleanException" xml:space="preserve">
     <value>An error occurred during cleanup. Perhaps you have not enough rights for doing this.</value>
   </data>

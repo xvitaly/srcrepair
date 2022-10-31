@@ -1128,6 +1128,12 @@ namespace srcrepair.gui
         /// <param name="Targets">Additional targets for cleanup.</param>
         private void StartCleanup(string ID, string Title, List<string> Targets)
         {
+            if (App.SourceGames[AppSelector.Text].ClnMan == null)
+            {
+                MessageBox.Show(AppStrings.PS_BwBusy, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 List<string> CleanDirs = new List<string>(App.SourceGames[AppSelector.Text].ClnMan[ID].Directories);
