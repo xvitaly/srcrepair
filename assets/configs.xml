@@ -322,8 +322,8 @@ Graphics degradation: No]]>
     </Config>
     <Config>
         <Name>mastercomfig-maxperf</Name>
-        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2022.08.25/mastercomfigpf_561428e6.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2cfgs/downloads/mastercomfigpf_561428e6.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2022.11.01/mastercomfigpf_a668eb0d.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2cfgs/downloads/mastercomfigpf_a668eb0d.zip</Mirror>
         <SupportedGames>440</SupportedGames>
         <ru>
         <![CDATA[Доработанный и улучшенный вариант FPS-конфига. Обеспечивает значительный прирост кадровой частоты при очень сильном ухудшении качества картинки. Должен обеспечивать максимально высокий прирост производительности игры.
@@ -342,12 +342,12 @@ Graphics degradation: 16-bit style]]>
             <File>cfg/autoexec.cfg</File>
         </Files>
         <InstallDir>mastercomfigpf</InstallDir>
-        <Hash2>532774c0e1a76e9a3379ef81c54d6db028ae8c6037ea30716628c2be1e27e97b2b36c5d54276551e8144d551942d0aa87be3c6116d7da835dc3746e0cfa78a59</Hash2>
+        <Hash2>991fc8038c65706091bfc45721564311f9668ccaee7efa0de9f1b5ca44840aa22f0deead3829cd61e1f04f4c6447ac5e5a9d82aad3397a9f8f076d770933c0f2</Hash2>
     </Config>
     <Config>
         <Name>mastercomfig-quality</Name>
-        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2022.08.25/mastercomfigmq_c000bd4a.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2cfgs/downloads/mastercomfigmq_c000bd4a.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2cfgs/releases/download/2022.11.01/mastercomfigmq_93a4a20e.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2cfgs/downloads/mastercomfigmq_93a4a20e.zip</Mirror>
         <SupportedGames>440</SupportedGames>
         <ru>
         <![CDATA[FPS-конфиг "наоборот". Устанавливает все графические настройки игры на максимум, что позволит получить наилучшее качество графики. Данный конфиг создан специально для создателей видеороликов. Используйте только на мощном современном компьютере.
@@ -366,7 +366,7 @@ Graphics degradation: None]]>
             <File>cfg/autoexec.cfg</File>
         </Files>
         <InstallDir>mastercomfigmq</InstallDir>
-        <Hash2>2d9891613b4910459b78de221aa99f4b5cc487455524a764db86cb9d9840f402b51041d4b104089b39a7c356e0077617a3a1eb055ae07a3c8213da8a18036b9f</Hash2>
+        <Hash2>b6ea9f2f82aa01e4ebe9723b2502b5f06666b670e3858e960eec6fa9cf59847bfb073db937628bc6e8b669f1fde5378981eb368a02e11405691d5da57f7096cb</Hash2>
     </Config>
     <Config>
         <Name>rhaprody-perf</Name>
