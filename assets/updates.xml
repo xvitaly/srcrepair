@@ -8,6 +8,7 @@
     <Application>
         <Version>44.0.0.0</Version>
         <URL>https://github.com/xvitaly/srcrepair/releases/download/v44.0.0/srcrepair_440_setup.exe</URL>
+        <Info>https://github.com/xvitaly/srcrepair/releases/tag/v44.0.0</Info>
         <Hash2>97c3497bce62897263cb0b47c907e991e20d1e27df5a479fb468ab28c0b90474e5ef87be4f72f4b443c5d9d33c6660b286b118f93c4eb313fb03df6313329fbd</Hash2>
     </Application>
 </Updates>
