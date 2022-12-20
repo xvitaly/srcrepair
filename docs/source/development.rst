@@ -345,7 +345,7 @@ Level 2:
 
   * ``Version`` -- application or database version;
   * ``URL`` -- direct download URL (no redirects are allowed);
-  * ``Info`` -- application changelog URL;
+  * ``Info`` -- changelog URL;
   * ``Hash2`` -- download file SHA2 (SHA-512) hash.
 
 .. index:: development, plugins, database, plugins database

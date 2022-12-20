@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-20 13:56+0100\n"
-"PO-Revision-Date: 2022-12-20 13:59+0100\n"
+"POT-Creation-Date: 2022-12-20 14:01+0100\n"
+"PO-Revision-Date: 2022-12-20 14:02+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -683,8 +683,8 @@ msgid "``URL`` -- direct download URL (no redirects are allowed);"
 msgstr "``URL`` -- URL для загрузки (любые редиректы запрещены);"
 
 #: ../../source/development.rst:348
-msgid "``Info`` -- application changelog URL;"
-msgstr "``Info`` -- URL страницы со списком изменений;"
+msgid "``Info`` -- changelog URL;"
+msgstr "``Info`` -- URL со списком изменений;"
 
 #: ../../source/development.rst:349
 msgid "``Hash2`` -- download file SHA2 (SHA-512) hash."
