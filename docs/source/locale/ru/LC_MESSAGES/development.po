@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-23 14:28+0100\n"
-"PO-Revision-Date: 2022-03-23 14:28+0100\n"
+"POT-Creation-Date: 2022-12-20 13:56+0100\n"
+"PO-Revision-Date: 2022-12-20 13:59+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Generated-By: Babel 2.7.0\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -268,19 +268,19 @@ msgstr "Исходный файл ``assets/cleanup.xml``."
 
 #: ../../source/development.rst:91 ../../source/development.rst:160
 #: ../../source/development.rst:215 ../../source/development.rst:275
-#: ../../source/development.rst:363
+#: ../../source/development.rst:360
 msgid "XML database example"
 msgstr "Пример базы данных в формате XML"
 
 #: ../../source/development.rst:108 ../../source/development.rst:184
 #: ../../source/development.rst:236 ../../source/development.rst:299
-#: ../../source/development.rst:334 ../../source/development.rst:378
+#: ../../source/development.rst:334 ../../source/development.rst:375
 msgid "Properties"
 msgstr "Доступные свойства"
 
 #: ../../source/development.rst:110 ../../source/development.rst:186
 #: ../../source/development.rst:238 ../../source/development.rst:301
-#: ../../source/development.rst:336 ../../source/development.rst:380
+#: ../../source/development.rst:336 ../../source/development.rst:377
 msgid "Level 0:"
 msgstr "Уровень 0:"
 
@@ -290,7 +290,7 @@ msgstr "``Targets`` -- корневой элемент XML."
 
 #: ../../source/development.rst:114 ../../source/development.rst:190
 #: ../../source/development.rst:242 ../../source/development.rst:305
-#: ../../source/development.rst:340 ../../source/development.rst:384
+#: ../../source/development.rst:340 ../../source/development.rst:381
 msgid "Level 1:"
 msgstr "Уровень 1:"
 
@@ -300,7 +300,7 @@ msgstr "``Target`` -- базовый элемент."
 
 #: ../../source/development.rst:118 ../../source/development.rst:194
 #: ../../source/development.rst:248 ../../source/development.rst:309
-#: ../../source/development.rst:348 ../../source/development.rst:388
+#: ../../source/development.rst:344 ../../source/development.rst:385
 msgid "Level 2:"
 msgstr "Уровень 2:"
 
@@ -671,81 +671,54 @@ msgid "``Updates`` -- XML root element."
 msgstr "``Updates`` -- корневой элемент XML."
 
 #: ../../source/development.rst:342
-msgid "``Application`` -- sub-element with application update metadata;"
-msgstr "``Application`` -- содержит метаданные обновления приложения;"
-
-#: ../../source/development.rst:343
-msgid ""
-"``GameDB`` -- sub-element with :ref:`games database <games-database>` update "
-"metadata;"
-msgstr ""
-"``GameDB`` -- содержит метаданные обновления :ref:`базы игр <games-"
-"database>`;"
-
-#: ../../source/development.rst:344
-msgid ""
-"``HUDDB`` -- sub-element with :ref:`HUDs database <huds-database>` update "
-"metadata;"
-msgstr ""
-"``HUDDB`` -- содержит метаданные обновления :ref:`базы HUD <huds-database>`;"
-
-#: ../../source/development.rst:345
-msgid ""
-"``CfgDB`` -- sub-element with :ref:`configs database <configs-database>` "
-"update metadata;"
-msgstr ""
-"``CfgDB`` -- содержит метаданные обновления :ref:`базы FPS-конфигов <configs-"
-"database>`;"
+msgid "``Application`` -- sub-element with application update metadata."
+msgstr "``Application`` -- содержит метаданные обновления приложения."
 
 #: ../../source/development.rst:346
-msgid ""
-"``ClnDB`` -- sub-element with :ref:`cleanup database <cleanup-database>` "
-"update metadata."
-msgstr ""
-"``ClnDB`` -- содержит метаданные обновления :ref:`базы очистки <cleanup-"
-"database>`."
-
-#: ../../source/development.rst:350
 msgid "``Version`` -- application or database version;"
 msgstr "``Version`` -- версия приложения или базы данных;"
 
-#: ../../source/development.rst:351
+#: ../../source/development.rst:347
 msgid "``URL`` -- direct download URL (no redirects are allowed);"
 msgstr "``URL`` -- URL для загрузки (любые редиректы запрещены);"
 
-#: ../../source/development.rst:352
+#: ../../source/development.rst:348
+msgid "``Info`` -- application changelog URL;"
+msgstr "``Info`` -- URL страницы со списком изменений;"
+
+#: ../../source/development.rst:349
 msgid "``Hash2`` -- download file SHA2 (SHA-512) hash."
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш файла файла обновления."
 
-#: ../../source/development.rst:358
+#: ../../source/development.rst:355
 msgid "Plugins database documentation"
 msgstr "Документация базы внешних модулей"
 
-#: ../../source/development.rst:360
+#: ../../source/development.rst:357
 msgid "The original source file is located in ``assets/plugins.xml``."
 msgstr "Исходный файл ``assets/plugins.xml``."
 
-#: ../../source/development.rst:382
+#: ../../source/development.rst:379
 msgid "``Plugins`` -- XML root element."
 msgstr "``Plugins`` -- корневой элемент XML."
 
-#: ../../source/development.rst:386
+#: ../../source/development.rst:383
 msgid "``Plugin`` -- database entry base element."
 msgstr "``Plugin`` -- базовый элемент."
 
-#: ../../source/development.rst:390
+#: ../../source/development.rst:387
 msgid "``Name`` -- plugin user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:391
+#: ../../source/development.rst:388
 msgid "``IntName`` -- internal name for different actions;"
 msgstr "``IntName`` -- внутреннее имя внешнего модуля для различных целей;"
 
-#: ../../source/development.rst:392
+#: ../../source/development.rst:389
 msgid "``ExeName`` -- executable file name;"
 msgstr "``ExeName`` -- имя исполняемого файла;"
 
-#: ../../source/development.rst:393
+#: ../../source/development.rst:390
 msgid ""
 "``ElevationRequired`` -- ``1`` if the plugin need a local administrator "
 "rights in order to run, ``0`` -- if don't."

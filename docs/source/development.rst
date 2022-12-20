@@ -339,16 +339,13 @@ Level 0:
 
 Level 1:
 
-  * ``Application`` -- sub-element with application update metadata;
-  * ``GameDB`` -- sub-element with :ref:`games database <games-database>` update metadata;
-  * ``HUDDB`` -- sub-element with :ref:`HUDs database <huds-database>` update metadata;
-  * ``CfgDB`` -- sub-element with :ref:`configs database <configs-database>` update metadata;
-  * ``ClnDB`` -- sub-element with :ref:`cleanup database <cleanup-database>` update metadata.
+  * ``Application`` -- sub-element with application update metadata.
 
 Level 2:
 
   * ``Version`` -- application or database version;
   * ``URL`` -- direct download URL (no redirects are allowed);
+  * ``Info`` -- application changelog URL;
   * ``Hash2`` -- download file SHA2 (SHA-512) hash.
 
 .. index:: development, plugins, database, plugins database
