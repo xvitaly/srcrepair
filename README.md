@@ -9,7 +9,6 @@
 [![Linux CI status](https://github.com/xvitaly/srcrepair/actions/workflows/linux.yml/badge.svg)](https://github.com/xvitaly/srcrepair/actions/workflows/linux.yml)
 [![Windows CI status](https://github.com/xvitaly/srcrepair/actions/workflows/windows.yml/badge.svg)](https://github.com/xvitaly/srcrepair/actions/workflows/windows.yml)
 [![CodeQL CI status](https://github.com/xvitaly/srcrepair/actions/workflows/codeql.yml/badge.svg)](https://github.com/xvitaly/srcrepair/actions/workflows/codeql.yml)
-[![LGTM alerts](https://img.shields.io/lgtm/alerts/g/xvitaly/srcrepair.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/xvitaly/srcrepair/alerts/)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/d3ae6f35f414449a89acca408b5088bf)](https://www.codacy.com/gh/xvitaly/srcrepair/dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/xvitaly/srcrepair/badge)](https://www.codefactor.io/repository/github/xvitaly/srcrepair)
 [![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues)](https://github.com/xvitaly/srcrepair/issues)
