@@ -99,13 +99,13 @@
         <Name>budhud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.11.01/budhud_8ab3c571.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/budhud_8ab3c571.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.12.20/budhud_8b95d493.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/budhud_8b95d493.zip</Mirror>
         <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
         <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
-        <Hash2>01eff1a0184682c2f279b87f8504a99740c60827cc97e58ad593b6059cc9aa46265646aaf5936d5c1293ca096c592ccc6bd0126117881145bfc44c6d73596455</Hash2>
-        <LastUpdate>1666931902</LastUpdate>
+        <Hash2>ed2375859d1da99c1b21b9a718e968d418bd45b718cd4964fb85c1b17a3e408003a45ca18395f21c605181264598d6254766753edffbe5c036fc084e91672688</Hash2>
+        <LastUpdate>1670623660</LastUpdate>
         <Site>https://huds.tf/site/s-budhud</Site>
         <ArchiveDir>budhud-master</ArchiveDir>
         <InstallDir>budhud</InstallDir>
@@ -129,13 +129,13 @@
         <Name>KBNHud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.08.25/kbnhud_7d2ac0c7.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/kbnhud_7d2ac0c7.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.12.20/kbnhud_389cd089.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/kbnhud_389cd089.zip</Mirror>
         <UpURI>https://github.com/Jotunn/kbnhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/kbnhud.jpg</Preview>
         <RepoPath>https://github.com/Jotunn/kbnhud</RepoPath>
-        <Hash2>86b6b1a1a0ae9ac0db3e12c8128c24fafea723b02c17082a56052b567f7af7bdca895c3d4cfc432dfa741261a65413677d890523c8d39d5071c3163330f90479</Hash2>
-        <LastUpdate>1660350159</LastUpdate>
+        <Hash2>46615540e8fed130866d2be273653562aed306319d64d3da75a647eaf3e358a2fdbf9ff5407020fd78f12d2007156ced4fb6bb750008ca0681e9aa5e15e6ab4e</Hash2>
+        <LastUpdate>1670974720</LastUpdate>
         <Site>https://huds.tf/site/s-KBNHud</Site>
         <ArchiveDir>kbnhud-master</ArchiveDir>
         <InstallDir>kbnhud</InstallDir>
@@ -144,13 +144,13 @@
         <Name>rayshud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.08.25/rayshud_9094c302.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/rayshud_9094c302.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.12.20/rayshud_23f03586.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/rayshud_23f03586.zip</Mirror>
         <UpURI>https://github.com/raysfire/rayshud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/rayshud.jpg</Preview>
         <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
-        <Hash2>0173fe74dec11e2f4d12de40faab75e431729a1d7b0cd0aeb6cedac14de541ca7b3b90c5f2cff2c8f89bea5d4d8bea834720f1cad9a718d10306ba6f6b9a0b61</Hash2>
-        <LastUpdate>1659667687</LastUpdate>
+        <Hash2>8e9c91fa7b9a425be97462eee0b53d9108417ca8f53ab9b7a9160c09e8fb6aefa3b6249b62f9f61258828b781faa651e4c9b4d5952ee50087f001042a1aa359d</Hash2>
+        <LastUpdate>1670988731</LastUpdate>
         <Site>https://huds.tf/site/s-rayshud</Site>
         <ArchiveDir>rayshud-master</ArchiveDir>
         <InstallDir>rayshud</InstallDir>
@@ -174,13 +174,13 @@
         <Name>biscottiHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.08.25/biscottihud_cb671628.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/biscottihud_cb671628.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.12.20/biscottihud_764d1696.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/biscottihud_764d1696.zip</Mirror>
         <UpURI>https://github.com/MedicodiBiscotti/biscottihud/archive/main.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/biscottihud.jpg</Preview>
         <RepoPath>https://github.com/MedicodiBiscotti/biscottihud</RepoPath>
-        <Hash2>972b3f73493267a379d5e5f02ccd81e7e50773fed935f349095a08dc7fcb9551962dc98cea15eb7846217269297550e526c1077ddf00fdf4d462393e1b3f557e</Hash2>
-        <LastUpdate>1659900412</LastUpdate>
+        <Hash2>a9b00cb9e6673229c721f28c8b1655852f2930211a1873b4a2c84bc4cecf610acb3f277ba6624534e3d2b53374c75510898334c2d35e0acbda6273b11f3714a2</Hash2>
+        <LastUpdate>1671145410</LastUpdate>
         <Site>https://huds.tf/site/s-biscottiHUD</Site>
         <ArchiveDir>biscottihud-main</ArchiveDir>
         <InstallDir>biscottihud</InstallDir>
@@ -249,13 +249,13 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.11.01/flawhud_500f5a39.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_500f5a39.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.12.20/flawhud_cc5a3b3c.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_cc5a3b3c.zip</Mirror>
         <UpURI>https://github.com/CriticalFlaw/flawhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/flawhud</RepoPath>
-        <Hash2>6063f1feb42fb79838052b3be3d31c0ba0c4439cd674117149a301beb6ea47c0c7e47fcc75f554fa179c4aaf5472a5588e24ab0c310a43a68dca26baa0089979</Hash2>
-        <LastUpdate>1667167356</LastUpdate>
+        <Hash2>0e30d909b6f81a02fd06cd5f40503815b35f9480ab7a61e6c9d601eef7421529a113d8e56bd708ab56a46cedcbc2db132763033d07d9c99699c451b032073f4e</Hash2>
+        <LastUpdate>1671076737</LastUpdate>
         <Site>https://huds.tf/site/s-FlawHUD</Site>
         <ArchiveDir>flawhud-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
@@ -264,13 +264,13 @@
         <Name>m0re Hud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.11.01/m0rehud_d17d8095.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/m0rehud_d17d8095.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.12.20/m0rehud_b1b83faf.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/m0rehud_b1b83faf.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/m0rehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/m0rehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
-        <Hash2>fa8fba248f7f809bc0ada6108dab743b08ea2a4b3b8da87dad9d5fd4256ba62b00d695bf33daae09b93e7005407f19e92fda9723636865cb0b9be4f9295f4eb1</Hash2>
-        <LastUpdate>1662302502</LastUpdate>
+        <Hash2>472b54a5fea3c4e36202666b5f3cfa810078b8ea257ccc36a05ceac9b72d6a5d0318744a1cf6e2d585952d009736fb81e68b506d0b86eeddd198691913bd5572</Hash2>
+        <LastUpdate>1670447278</LastUpdate>
         <Site>https://huds.tf/site/s-m0re-Hud</Site>
         <ArchiveDir>m0rehud-master</ArchiveDir>
         <InstallDir>m0rehud</InstallDir>
@@ -354,15 +354,15 @@
         <Name>Hypnotize HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.11.01/hypnotizehud_bb6c798b.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/hypnotizehud_bb6c798b.zip</Mirror>
-        <UpURI>https://github.com/Hypnootize/hypnotize-hud/archive/master.zip</UpURI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.12.20/hypnotizehud_8d38bc5c.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/hypnotizehud_8d38bc5c.zip</Mirror>
+        <UpURI>https://github.com/Hypnootize/hypnotizehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
-        <RepoPath>https://github.com/Hypnootize/hypnotize-hud</RepoPath>
-        <Hash2>9b7beacdc0cc1e8bd1e9d7cd8509d44143d4efc33c3831608a0cbe04a5c52ed6b8ffa7843e6b81f2adda98dab4f477a961af15e247b48f1afadcc769a2f2c3d8</Hash2>
-        <LastUpdate>1664223073</LastUpdate>
+        <RepoPath>https://github.com/Hypnootize/hypnotizehud</RepoPath>
+        <Hash2>42d0968bb03df46b36d3adac3200f088473ff4dc26a25b103622186b75c862c59c6fe961280120e2b63477575e5fd54ad814e9759051fbca537a4c28a8a24fdd</Hash2>
+        <LastUpdate>1670447004</LastUpdate>
         <Site>https://huds.tf/site/s-Hypnotize-Hud</Site>
-        <ArchiveDir>hypnotize-hud-master</ArchiveDir>
+        <ArchiveDir>hypnotizehud-master</ArchiveDir>
         <InstallDir>hypnotizehud</InstallDir>
     </HUD>
     <HUD>
@@ -459,15 +459,15 @@
         <Name>SunsetHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.11.01/sunsethud_8d16f2d2.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/sunsethud_8d16f2d2.zip</Mirror>
-        <UpURI>https://github.com/Hypnootize/Sunset-Hud/archive/master.zip</UpURI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.12.20/sunsethud_9ba7a234.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/sunsethud_9ba7a234.zip</Mirror>
+        <UpURI>https://github.com/Hypnootize/sunsethud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/sunsethud.jpg</Preview>
-        <RepoPath>https://github.com/Hypnootize/Sunset-Hud</RepoPath>
-        <Hash2>b1ca5e0cac790c7a177c75accdca6c53aeba6d579ce33cf1406c2a20037c7c02d993e101ef914244b73490eeb3ecf6b5c4a29069c6eac357326689f648e4e7aa</Hash2>
-        <LastUpdate>1662319397</LastUpdate>
+        <RepoPath>https://github.com/Hypnootize/sunsethud</RepoPath>
+        <Hash2>c40387954f1403a79fde384d62de8373e0511fa9c6efe2b0a7dea7258dab740dda579e2ccd5eb283fe2fe3f5422a03a5dce39c199ea8a7b1d68bb3d3f75a9ccf</Hash2>
+        <LastUpdate>1670447141</LastUpdate>
         <Site>https://huds.tf/site/s-Sunset-Hud</Site>
-        <ArchiveDir>Sunset-Hud-master/sunsetlight</ArchiveDir>
+        <ArchiveDir>sunsethud-master</ArchiveDir>
         <InstallDir>sunsethud</InstallDir>
     </HUD>
     <HUD>
@@ -489,13 +489,13 @@
         <Name>ZeHud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.11.01/zehud_fffd5e53.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/zehud_fffd5e53.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.12.20/zehud_0789104a.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/zehud_0789104a.zip</Mirror>
         <UpURI>https://github.com/bo0bsy/zehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/zehud.jpg</Preview>
         <RepoPath>https://github.com/bo0bsy/zehud</RepoPath>
-        <Hash2>c9a8d8e8879109083452ad04ecbd609c36eb1379129fe97d925d210eb987162a3ff905115c232d830ad3bca4fb4bceb8ffc9fb03ec672d612f07f0f2ec89659a</Hash2>
-        <LastUpdate>1667247567</LastUpdate>
+        <Hash2>2ba3ec9d7bbe95d43abfd5264fdb299fec14a7f2a2a37736ea7dd1f8306bc3bcce82cfae285ccd5177e140e5292d459b18c235963773d9cd9a6452df354339ea</Hash2>
+        <LastUpdate>1670582531</LastUpdate>
         <Site>https://huds.tf/site/s-ZeHud</Site>
         <ArchiveDir>zehud-master</ArchiveDir>
         <InstallDir>zehud</InstallDir>
