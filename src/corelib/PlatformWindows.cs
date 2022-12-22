@@ -74,6 +74,11 @@ namespace srcrepair.core
         public override OSType OS => OSType.Windows;
 
         /// <summary>
+        /// Return whether automatic updates are supported on this platform.
+        /// </summary>
+        public override bool AutoUpdateSupported => true;
+
+        /// <summary>
         /// Get platform-dependent Steam installation folder (directory) name.
         /// </summary>
         public override string SteamFolderName => Properties.Resources.SteamFolderNameWin;
