@@ -29,6 +29,26 @@ namespace srcrepair.gui
     public partial class FrmMainW : Form
     {
         /// <summary>
+        /// Logger instance for FrmMainW class.
+        /// </summary>
+        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+
+        /// <summary>
+        /// ResourceManager instance for managing Cvar descriptions in Config Editor.
+        /// </summary>
+        private readonly ResourceManager CvarFetcher = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
+
+        /// <summary>
+        /// Stores loaded in Config Editor file name.
+        /// </summary>
+        private string CFGFileName;
+
+        /// <summary>
+        /// Stores an instance of the CurrentApp class.
+        /// </summary>
+        private CurrentApp App;
+
+        /// <summary>
         /// FrmMainW class constructor.
         /// </summary>
         public FrmMainW()
@@ -52,26 +72,6 @@ namespace srcrepair.gui
                 DpiManager.ScaleColumnsInControl(StatusBar, ScalingFactor);
             }
         }
-
-        /// <summary>
-        /// Logger instance for FrmMainW class.
-        /// </summary>
-        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
-        /// <summary>
-        /// ResourceManager instance for managing Cvar descriptions in Config Editor.
-        /// </summary>
-        private readonly ResourceManager CvarFetcher = new ResourceManager(Properties.Resources.CE_CVResDf, typeof(FrmMainW).Assembly);
-
-        /// <summary>
-        /// Stores loaded in Config Editor file name.
-        /// </summary>
-        private string CFGFileName;
-
-        /// <summary>
-        /// Stores an instance of the CurrentApp class.
-        /// </summary>
-        private CurrentApp App;
 
         /// <summary>
         /// Overrides system cryptographic policies.
