@@ -224,7 +224,7 @@ namespace srcrepair.gui
             {
                 if (UpMan.CheckAppUpdate())
                 {
-                    if (Platform.OS == CurrentPlatform.OSType.Windows)
+                    if (Platform.AutoUpdateSupported)
                     {
                         if (InstallBinaryUpdate(UpMan.AppUpdateURL))
                         {
@@ -233,7 +233,10 @@ namespace srcrepair.gui
                     }
                     else
                     {
-                        MessageBox.Show(string.Format(AppStrings.UPD_AppOtherPlatform, Platform.OSFriendlyName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (MessageBox.Show(string.Format(AppStrings.UPD_AppOtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            Platform.OpenWebPage(UpMan.AppUpdateInfo);
+                        }
                     }
                 }
                 else
