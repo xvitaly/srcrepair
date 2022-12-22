@@ -1082,7 +1082,7 @@ namespace srcrepair.gui
         /// </summary>
         private bool IsCleanupNeeded()
         {
-            if (App.Platform.OS != CurrentPlatform.OSType.Windows) { return false; }
+            if (!App.Platform.AutoUpdateSupported) { return false; }
             return (DateTime.Now - Properties.Settings.Default.LastCleanupTime).Days >= 7;
         }
 
