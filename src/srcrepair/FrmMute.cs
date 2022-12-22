@@ -72,10 +72,10 @@ namespace srcrepair.gui
         /// Scales controls on current form with some additional hacks applied.
         /// </summary>
         /// <param name="ScalingFactor">Scaling factor.</param>
-        /// <param name="Bounds">Bounds of control.</param>
-        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified Bounds)
+        /// <param name="ControlBounds">The bounds of the control.</param>
+        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified ControlBounds)
         {
-            base.ScaleControl(ScalingFactor, Bounds);
+            base.ScaleControl(ScalingFactor, ControlBounds);
             if (!DpiManager.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
             {
                 DpiManager.ScaleColumnsInControl(MM_Table, ScalingFactor);
