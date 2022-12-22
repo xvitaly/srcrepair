@@ -27,6 +27,17 @@ namespace srcrepair.core
         CurrentPlatform.OSType OS { get; }
 
         /// <summary>
+        /// Return whether automatic updates are supported on this platform.
+        /// </summary>
+        bool AutoUpdateSupported { get; }
+
+        /// <summary>
+        /// Immediately shut down application and return exit code.
+        /// </summary>
+        /// <param name="ReturnCode">Exit code.</param>
+        void Exit(int ReturnCode);
+
+        /// <summary>
         /// Get current operating system friendly name.
         /// </summary>
         string OSFriendlyName { get; }
