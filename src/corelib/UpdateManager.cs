@@ -24,6 +24,11 @@ namespace srcrepair.core
         public Version AppUpdateVersion { get; private set; }
 
         /// <summary>
+        /// Get or set the application changelog page URL.
+        /// </summary>
+        public string AppUpdateInfo { get; private set; }
+
+        /// <summary>
         /// Gets or sets download URL of application update.
         /// </summary>
         public string AppUpdateURL { get; private set; }
@@ -70,6 +75,7 @@ namespace srcrepair.core
             // Extracting information about application update...
             XmlNode AppNode = XMLD.SelectSingleNode("Updates/Application");
             AppUpdateVersion = new Version(AppNode.SelectSingleNode("Version").InnerText);
+            AppUpdateInfo = AppNode.SelectSingleNode("Info").InnerText;
             AppUpdateURL = AppNode.SelectSingleNode("URL").InnerText;
             AppUpdateHash = AppNode.SelectSingleNode("Hash2").InnerText;
         }
