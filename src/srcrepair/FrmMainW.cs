@@ -37,8 +37,6 @@ namespace srcrepair.gui
             InitializeComponent();
         }
 
-        #region HiDPI hacks
-
         /// <summary>
         /// Scales controls on current form with some additional hacks applied.
         /// </summary>
@@ -54,10 +52,6 @@ namespace srcrepair.gui
                 DpiManager.ScaleColumnsInControl(StatusBar, ScalingFactor);
             }
         }
-
-        #endregion
-
-        #region Internal Fields
 
         /// <summary>
         /// Logger instance for FrmMainW class.
@@ -78,10 +72,6 @@ namespace srcrepair.gui
         /// Stores an instance of the CurrentApp class.
         /// </summary>
         private CurrentApp App;
-
-        #endregion
-
-        #region Internal Methods
 
         /// <summary>
         /// Overrides system cryptographic policies.
@@ -1484,10 +1474,6 @@ namespace srcrepair.gui
             }
         }
 
-        #endregion
-
-        #region Asynchronous Methods
-
         /// <summary>
         /// Checks for application updates in a separate thread.
         /// </summary>
@@ -1746,8 +1732,6 @@ namespace srcrepair.gui
                 }
             }
         }
-
-        #endregion
 
         /// <summary>
         /// "Form create" event handler.
