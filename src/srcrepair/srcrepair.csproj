@@ -72,11 +72,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppStrings.resx</DependentUpon>
     </Compile>
-    <Compile Include="AppStrings.ru.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AppStrings.ru.resx</DependentUpon>
-    </Compile>
     <Compile Include="DebugStrings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -192,11 +187,12 @@
       <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="AppStrings.ru.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppStrings.ru.Designer.cs</LastGenOutput>
+      <DependentUpon>AppStrings.resx</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CVList.resx" />
-    <EmbeddedResource Include="CVList.ru.resx" />
+    <EmbeddedResource Include="CVList.ru.resx">
+      <DependentUpon>CVList.resx</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DebugStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DebugStrings.Designer.cs</LastGenOutput>
