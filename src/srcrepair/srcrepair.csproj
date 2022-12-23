@@ -190,7 +190,9 @@
       <DependentUpon>AppStrings.resx</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CVList.resx" />
-    <EmbeddedResource Include="CVList.ru.resx" />
+    <EmbeddedResource Include="CVList.ru.resx">
+      <DependentUpon>CVList.resx</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DebugStrings.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DebugStrings.Designer.cs</LastGenOutput>
