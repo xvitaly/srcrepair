@@ -186,7 +186,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppStrings.ru.resx" />
+    <EmbeddedResource Include="AppStrings.ru.resx">
+      <DependentUpon>AppStrings.resx</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CVList.resx" />
     <EmbeddedResource Include="CVList.ru.resx" />
     <EmbeddedResource Include="DebugStrings.resx">
