@@ -31,13 +31,13 @@ Installing pre-requirements
 
 First you will need to install C# complier, Microsoft .NET Framework SDK and other required tools (all steps are mandatory):
 
-  1. download `Microsoft Visual Studio 2019 Community <https://visualstudio.microsoft.com/vs/community/>`_ installer and run it;
-  2. select **Microsoft Visual Studio 2019 Community**, enable **Classic .NET application development** component, then switch to **Additional components** tab and enable **NuGet package manager**;
-  3. install Microsoft Visual Studio 2019 Community;
+  1. download `Microsoft Visual Studio 2022 Community <https://visualstudio.microsoft.com/vs/community/>`_ installer and run it;
+  2. select **Microsoft Visual Studio 2022 Community**, enable **Classic .NET application development** component, then switch to **Additional components** tab and enable **NuGet package manager**;
+  3. install Microsoft Visual Studio 2022 Community;
   4. download the latest version of `NuGet CLI <https://www.nuget.org/downloads>`_ and copy executable to any directory, located in ``%PATH%`` environment variable;
   5. download and install `HTML Help Workshop <https://www.microsoft.com/en-us/download/details.aspx?id=21138>`_;
   6. download and install `Gpg4Win <https://www.gpg4win.org/>`_ to a default directory;
-  7. download and install `Python 3.7 for Windows <https://www.python.org/downloads/windows/>`_;
+  7. download and install `Python 3 for Windows <https://www.python.org/downloads/windows/>`_;
   8. open terminal and install Sphinx-doc using PIP: ``pip3 install sphinx``;
   9. download and install `7-Zip for Windows <https://www.7-zip.org/download.html>`_ to a default directory;
   10. download and install `InnoSetup 6 <http://www.jrsoftware.org/isdl.php>`_ to a default directory.
@@ -60,7 +60,7 @@ If you don't want to use automatic method, you can build this project manually.
 Building main project
 ++++++++++++++++++++++++++++++++
 
-  1. Start Microsoft Visual Studio 2019 Community.
+  1. Start Microsoft Visual Studio 2022 Community.
   2. **File** -- **Open** -- **Project or solution**, select ``srcrepair.sln``, then press **Open** button.
   3. **Tools** -- **NuGet Package Manager** -- **Manage NuGet packages for Solution**, press **Restore** button.
   4. **Build** -- **Configuration manager** -- **Active solution configuration** -- **Release**, then press **Close** button.

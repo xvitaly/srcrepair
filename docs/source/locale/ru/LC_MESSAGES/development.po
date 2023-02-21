@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-20 14:01+0100\n"
-"PO-Revision-Date: 2022-12-20 14:02+0100\n"
+"POT-Creation-Date: 2023-02-21 15:14+0100\n"
+"PO-Revision-Date: 2023-02-21 15:15+0100\n"
 "Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -76,26 +76,26 @@ msgstr ""
 
 #: ../../source/development.rst:34
 msgid ""
-"download `Microsoft Visual Studio 2019 Community <https://visualstudio."
+"download `Microsoft Visual Studio 2022 Community <https://visualstudio."
 "microsoft.com/vs/community/>`_ installer and run it;"
 msgstr ""
-"скачайте программу установки `Microsoft Visual Studio 2019 Community "
+"скачайте программу установки `Microsoft Visual Studio 2022 Community "
 "<https://visualstudio.microsoft.com/vs/community/>`_ и запустите её;"
 
 #: ../../source/development.rst:35
 msgid ""
-"select **Microsoft Visual Studio 2019 Community**, enable **Classic .NET "
+"select **Microsoft Visual Studio 2022 Community**, enable **Classic .NET "
 "application development** component, then switch to **Additional "
 "components** tab and enable **NuGet package manager**;"
 msgstr ""
-"выберите **Microsoft Visual Studio 2019 Community**, установите флажок около "
+"выберите **Microsoft Visual Studio 2022 Community**, установите флажок около "
 "компонента **Разработка классических приложений .NET**, перейдите на "
 "страницу **Дополнительные компоненты** и отметьте флажком **Пакетный "
 "менеджер NuGet**;"
 
 #: ../../source/development.rst:36
-msgid "install Microsoft Visual Studio 2019 Community;"
-msgstr "установите Microsoft Visual Studio 2019 Community;"
+msgid "install Microsoft Visual Studio 2022 Community;"
+msgstr "установите Microsoft Visual Studio 2022 Community;"
 
 #: ../../source/development.rst:37
 msgid ""
@@ -125,10 +125,10 @@ msgstr ""
 
 #: ../../source/development.rst:40
 msgid ""
-"download and install `Python 3.7 for Windows <https://www.python.org/"
-"downloads/windows/>`_;"
+"download and install `Python 3 for Windows <https://www.python.org/downloads/"
+"windows/>`_;"
 msgstr ""
-"скачайте и установите `Python 3.7 для Windows <https://www.python.org/"
+"скачайте и установите `Python 3 для Windows <https://www.python.org/"
 "downloads/windows/>`_;"
 
 #: ../../source/development.rst:41
@@ -194,9 +194,9 @@ msgid "Building main project"
 msgstr "Сборка основного проекта"
 
 #: ../../source/development.rst:63
-msgid "Start Microsoft Visual Studio 2019 Community."
+msgid "Start Microsoft Visual Studio 2022 Community."
 msgstr ""
-"Запустите интегрированную среду разработки Microsoft Visual Studio 2019 "
+"Запустите интегрированную среду разработки Microsoft Visual Studio 2022 "
 "Community."
 
 #: ../../source/development.rst:64
