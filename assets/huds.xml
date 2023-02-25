@@ -39,9 +39,9 @@
         <Name>ToonHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://toonhud.com/downloads/toonhud_11-3.zip</URI>
+        <URI>https://toonhud.com/downloads/toonhud_11-4.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/toonhud_5860d69e.zip</Mirror>
-        <UpURI>https://toonhud.com/downloads/toonhud_11-3.zip</UpURI>
+        <UpURI>https://toonhud.com/downloads/toonhud_11-4.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/toonhud.jpg</Preview>
         <RepoPath>null</RepoPath>
         <Hash2>7b8a3ef7c23bcdd24606d58f551bc3ce7b043db4a5b8de686c23ae04fbbed846db0c6b84f32c71beed6647bced86f69b359b315956c9de3ea2a48865bac54cc4</Hash2>
