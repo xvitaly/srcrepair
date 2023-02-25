@@ -16,7 +16,7 @@
         <RepoPath>https://github.com/Sevin7/7hud</RepoPath>
         <Hash2>dcb4dee830b753a1d2c9e25aa5df428dbf46608c1091658cdf3ae9957e3f030cf99b68be4854262c83d8d9f19b966fe0a0d1490a7c47265017993629d1b8892c</Hash2>
         <LastUpdate>1624904633</LastUpdate>
-        <Site>https://huds.tf/site/s-7HUD</Site>
+        <Site>https://github.com/Sevin7/7hud</Site>
         <ArchiveDir>7hud-master</ArchiveDir>
         <InstallDir>7hud</InstallDir>
     </HUD>
@@ -31,7 +31,7 @@
         <RepoPath>https://github.com/fblue/broeselhud_blue</RepoPath>
         <Hash2>bf856f3e41f34c924bc4327f3eeade3118f4bba55d95388bbe8d0356ac2a71ad705ac194e29178f7789eb32873d7bcc7024d6373d877067fb206bc5a0e216aa8</Hash2>
         <LastUpdate>1522659948</LastUpdate>
-        <Site>https://huds.tf/site/s-broeselhud-blue</Site>
+        <Site>https://github.com/fblue/broeselhud_blue</Site>
         <ArchiveDir>broeselhud_blue-master</ArchiveDir>
         <InstallDir>broeselhudblue</InstallDir>
     </HUD>
@@ -54,14 +54,14 @@
         <Name>VoidHUD 2.0</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/voidhud_8165dbad.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/voidhud_8165dbad.zip</Mirror>
-        <UpURI>https://github.com/TheStaticVoid/VoidHUD2.0/archive/master.zip</UpURI>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.02.25/voidhud_294838dd.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/voidhud_294838dd.zip</Mirror>
+        <UpURI>https://github.com/TheStaticVoid/voidhud2.0/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/voidhud.jpg</Preview>
         <RepoPath>https://github.com/TheStaticVoid/voidhud2.0</RepoPath>
         <Hash2>f797c6033f698e1a3c3d9131597be4b6bd0ccc8d4a2c90301044220a748404afd6d716a7e01133a241236730a07e72d0fdf2744962689e9dd8d3fb0e7b0a755a</Hash2>
         <LastUpdate>1598210316</LastUpdate>
-        <Site>https://huds.tf/site/s-VoidHUD-Classic</Site>
+        <Site>https://github.com/TheStaticVoid/voidhud2.0</Site>
         <ArchiveDir>VoidHUD2.0-master</ArchiveDir>
         <InstallDir>voidhud</InstallDir>
     </HUD>
@@ -76,7 +76,7 @@
         <RepoPath>https://github.com/n0kk/ahud</RepoPath>
         <Hash2>1cab21f1c8b59bcb47c719a3c5799b0b03b4bedf5bc74f7cb855a284b994d3672b75c7098952b283039a6758d1a9751da990883df329d5d039c61e5f9d1813d6</Hash2>
         <LastUpdate>1605073284</LastUpdate>
-        <Site>https://huds.tf/site/s-ahud</Site>
+        <Site>https://github.com/n0kk/ahud</Site>
         <ArchiveDir>ahud-master</ArchiveDir>
         <InstallDir>ahud</InstallDir>
     </HUD>
@@ -91,7 +91,7 @@
         <RepoPath>https://github.com/bw-/bwhud</RepoPath>
         <Hash2>ae823bbe0af1995c8f8e0587342e2a7dc0e6de13849d31288d18eba2699762c980c3e3ebdb9426aeadbe2495d67f6bf37728c8c09eb746033c7ff2e60b7a305f</Hash2>
         <LastUpdate>1522281493</LastUpdate>
-        <Site>https://huds.tf/site/s-bwhud</Site>
+        <Site>https://github.com/bw-/bwhud</Site>
         <ArchiveDir>bwhud-master</ArchiveDir>
         <InstallDir>bwhud</InstallDir>
     </HUD>
@@ -101,12 +101,12 @@
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.02.25/budhud_164809a4.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/budhud_164809a4.zip</Mirror>
-        <UpURI>https://github.com/WhiskerBiscuit/budhud/archive/master.zip</UpURI>
+        <UpURI>https://github.com/rbjaxter/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
-        <RepoPath>https://github.com/WhiskerBiscuit/budhud</RepoPath>
+        <RepoPath>https://github.com/rbjaxter/budhud</RepoPath>
         <Hash2>f0384a5613b3d1f2cc7ba921a7907bf7cf6cee2272e29e6975b925ca72d3950e458d4750ee60a86998c3b3d699793ae4b6797930195f13677b872c2d0968b44c</Hash2>
         <LastUpdate>1675643475</LastUpdate>
-        <Site>https://huds.tf/site/s-budhud</Site>
+        <Site>https://github.com/rbjaxter/budhud</Site>
         <ArchiveDir>budhud-master</ArchiveDir>
         <InstallDir>budhud</InstallDir>
     </HUD>
@@ -121,7 +121,7 @@
         <RepoPath>https://github.com/Eniere/idhud</RepoPath>
         <Hash2>755c9b2e1070d7b01aea4d855a03032015cda08fe424200885f08021baca2287aef413cb74da334f1a05be47c5fe1a2d0785462d842e88cc20ea83c915ad2975</Hash2>
         <LastUpdate>1645777305</LastUpdate>
-        <Site>https://huds.tf/site/s-Improved-default-HUD</Site>
+        <Site>https://github.com/Eniere/idhud</Site>
         <ArchiveDir>idhud-master</ArchiveDir>
         <InstallDir>idhud</InstallDir>
     </HUD>
@@ -136,7 +136,7 @@
         <RepoPath>https://github.com/Jotunn/kbnhud</RepoPath>
         <Hash2>8298554f60b4ed9834b6978cb07ca3d80c65a00c686bf9a8fdbe4d3437b248757eec1fbfaacd77096beb9e9f542e718ce93be3cd84ae2084aeb11b509651d25c</Hash2>
         <LastUpdate>1675734389</LastUpdate>
-        <Site>https://huds.tf/site/s-KBNHud</Site>
+        <Site>https://github.com/Jotunn/kbnhud</Site>
         <ArchiveDir>kbnhud-master</ArchiveDir>
         <InstallDir>kbnhud</InstallDir>
     </HUD>
@@ -151,7 +151,7 @@
         <RepoPath>https://github.com/raysfire/rayshud</RepoPath>
         <Hash2>8e9c91fa7b9a425be97462eee0b53d9108417ca8f53ab9b7a9160c09e8fb6aefa3b6249b62f9f61258828b781faa651e4c9b4d5952ee50087f001042a1aa359d</Hash2>
         <LastUpdate>1670988731</LastUpdate>
-        <Site>https://huds.tf/site/s-rayshud</Site>
+        <Site>https://github.com/raysfire/rayshud</Site>
         <ArchiveDir>rayshud-master</ArchiveDir>
         <InstallDir>rayshud</InstallDir>
     </HUD>
@@ -181,7 +181,7 @@
         <RepoPath>https://github.com/MedicodiBiscotti/biscottihud</RepoPath>
         <Hash2>a9b00cb9e6673229c721f28c8b1655852f2930211a1873b4a2c84bc4cecf610acb3f277ba6624534e3d2b53374c75510898334c2d35e0acbda6273b11f3714a2</Hash2>
         <LastUpdate>1671145410</LastUpdate>
-        <Site>https://huds.tf/site/s-biscottiHUD</Site>
+        <Site>https://github.com/MedicodiBiscotti/biscottihud</Site>
         <ArchiveDir>biscottihud-main</ArchiveDir>
         <InstallDir>biscottihud</InstallDir>
     </HUD>
@@ -196,7 +196,7 @@
         <RepoPath>https://github.com/TheKins/frankenhud</RepoPath>
         <Hash2>b2201a1ebf0d337109d519986e893945b6db6b4e1d41be7966ca95179ffb35207b3941be52cc1e3843968c8cbb25fe6014cc157377fcb70ec8e41e7234c4183b</Hash2>
         <LastUpdate>1630350525</LastUpdate>
-        <Site>https://huds.tf/site/s-Franken-Hud</Site>
+        <Site>https://github.com/TheKins/frankenhud</Site>
         <ArchiveDir>frankenhud-master/hud_src</ArchiveDir>
         <InstallDir>frankenhud</InstallDir>
     </HUD>
@@ -211,7 +211,7 @@
         <RepoPath>https://github.com/yttrium-tyclief/yayahud</RepoPath>
         <Hash2>eadf73e77499a48765a72a7859c70e07473e165b9f1b956bf7505572b4173118cab3f4f8cc0878abb0e8dd8991cc3d1c0e6746aca39e7188d10c7f07d5f500a1</Hash2>
         <LastUpdate>1555972291</LastUpdate>
-        <Site>https://huds.tf/site/s-yayahud</Site>
+        <Site>https://github.com/yttrium-tyclief/yayahud</Site>
         <ArchiveDir>yayahud-master/yayahud</ArchiveDir>
         <InstallDir>yayahud</InstallDir>
     </HUD>
@@ -241,7 +241,7 @@
         <RepoPath>https://github.com/TheStaticVoid/boredHUD</RepoPath>
         <Hash2>2e53798e22c92b204c09ed54b4f25e9134e3bed7c48afc369f5f454c13e4489f4334a2dd262d2b1063027604a10f479582eeb611a9722ced4a58786401bad560</Hash2>
         <LastUpdate>1598389290</LastUpdate>
-        <Site>https://huds.tf/site/s-boredHUD</Site>
+        <Site>https://github.com/TheStaticVoid/boredHUD</Site>
         <ArchiveDir>boredHUD-master</ArchiveDir>
         <InstallDir>boredhud</InstallDir>
     </HUD>
@@ -256,7 +256,7 @@
         <RepoPath>https://github.com/CriticalFlaw/flawhud</RepoPath>
         <Hash2>7effa418daa8b270629ee8f4a06b2a2b8b1834fe64b9b50fac3eb68728e8d2d3e9d1b5f95a20beff01d44360d6e079d23aabbbd8abe1bf00d6100f2fd832293b</Hash2>
         <LastUpdate>1677121467</LastUpdate>
-        <Site>https://huds.tf/site/s-FlawHUD</Site>
+        <Site>https://github.com/CriticalFlaw/flawhud</Site>
         <ArchiveDir>flawhud-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
     </HUD>
@@ -271,7 +271,7 @@
         <RepoPath>https://github.com/Hypnootize/m0rehud</RepoPath>
         <Hash2>8d2d635bf64ef71f35c1e6e8e786c3db74151d82a7979f44426622f3ee1b85a9932e0341fadb1afdd401b41c3a44c62e377a8d4b1d7500a8932d7373c858afef</Hash2>
         <LastUpdate>1677098489</LastUpdate>
-        <Site>https://huds.tf/site/s-m0re-Hud</Site>
+        <Site>https://github.com/Hypnootize/m0rehud</Site>
         <ArchiveDir>m0rehud-master</ArchiveDir>
         <InstallDir>m0rehud</InstallDir>
     </HUD>
@@ -286,7 +286,7 @@
         <RepoPath>https://github.com/nimtra/mkhud</RepoPath>
         <Hash2>6720ed356afdc41e4b5de44e9aa8fd20fba7044651c4fd2e3aacc6d14617e41d872d0ba770647a10fedfa0cc235ded669daa7a320f93a8272cb5d9b747630a19</Hash2>
         <LastUpdate>1663766539</LastUpdate>
-        <Site>https://huds.tf/site/s-mkhud</Site>
+        <Site>https://github.com/nimtra/mkhud</Site>
         <ArchiveDir>mkhud-master</ArchiveDir>
         <InstallDir>mkhud</InstallDir>
     </HUD>
@@ -301,7 +301,7 @@
         <RepoPath>https://github.com/Marblr/mHUD</RepoPath>
         <Hash2>ccf5c1ddd3fc6ab948850a33c4f33a39b58027276120eaf1204099f0bfcb66be9f575cd5d7b277391311af4f0a396de1209dcd27813647841c93da14ebf575c1</Hash2>
         <LastUpdate>1540348335</LastUpdate>
-        <Site>https://huds.tf/site/s-mHUD</Site>
+        <Site>https://github.com/Marblr/mHUD</Site>
         <ArchiveDir>mHUD-master</ArchiveDir>
         <InstallDir>mhud</InstallDir>
     </HUD>
@@ -316,7 +316,7 @@
         <RepoPath>https://github.com/AsianAntwan/AntsHUD</RepoPath>
         <Hash2>bc9e0fdfc3932c3a6638a987706e6585122e813dac8a8805dab809a8571ab9ed5e8048c367d31d91cb46b1d17526eb91b5f2b4f4abf7bd8c74002dc8ec5a2318</Hash2>
         <LastUpdate>1661049354</LastUpdate>
-        <Site>https://huds.tf/site/s-AntsHUD</Site>
+        <Site>https://github.com/AsianAntwan/AntsHUD</Site>
         <ArchiveDir>AntsHUD-master</ArchiveDir>
         <InstallDir>antshud</InstallDir>
     </HUD>
@@ -324,14 +324,14 @@
         <Name>SlimHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://huds.tf/forum/xthreads_attach.php/119_1548695581_32f5cd5d/18b7f8d9f144b851879b7df3409769c6/slimHUD.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/slimhud_0cfd5b12.zip</Mirror>
-        <UpURI>https://huds.tf/forum/xthreads_attach.php/119_1548695581_32f5cd5d/18b7f8d9f144b851879b7df3409769c6/slimHUD.zip</UpURI>
+        <URI>https://files.gamebanana.com/mods/slimhud.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/slimhud_3696b4e0.zip</Mirror>
+        <UpURI>https://files.gamebanana.com/mods/slimhud.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/slimhud.jpg</Preview>
         <RepoPath>null</RepoPath>
         <Hash2>d86f6aa7f91d4f1ccd62f04dd05d643cab1a2052dae137d22535e4341a6baf16234993273efed09739e14abccb23707d64978df52ac90a43963cb845098d984f</Hash2>
-        <LastUpdate>1548695581</LastUpdate>
-        <Site>https://huds.tf/site/s-slimHUD</Site>
+        <LastUpdate>1580439640</LastUpdate>
+        <Site>https://gamebanana.com/mods/26397</Site>
         <ArchiveDir>slimHUD</ArchiveDir>
         <InstallDir>slimhud</InstallDir>
     </HUD>
@@ -346,7 +346,7 @@
         <RepoPath>https://github.com/TheRebelCreeper/RebelHud</RepoPath>
         <Hash2>5892046e916af9208d81908685e25709696b4bbd8278fbeab5ababd54410ead34aeb48b04ac9c8241a90068e116470d50fed7aa10bdc229a736026fba71456cb</Hash2>
         <LastUpdate>1547093746</LastUpdate>
-        <Site>https://huds.tf/site/s-RebelHUD</Site>
+        <Site>https://github.com/TheRebelCreeper/RebelHud</Site>
         <ArchiveDir>RebelHud-master/custom/RebelHud</ArchiveDir>
         <InstallDir>rebelhud</InstallDir>
     </HUD>
@@ -361,7 +361,7 @@
         <RepoPath>https://github.com/Hypnootize/hypnotizehud</RepoPath>
         <Hash2>888323481fac930c1cf3b2b552d6e423d2ebdec444477f217addbad080e6cdcbbe1c21e0823f72f2081ee2cb065ef86b2d5398d3afc58b2e397957bb9e5c191c</Hash2>
         <LastUpdate>1677098439</LastUpdate>
-        <Site>https://huds.tf/site/s-Hypnotize-Hud</Site>
+        <Site>https://github.com/Hypnootize/hypnotizehud</Site>
         <ArchiveDir>hypnotizehud-master</ArchiveDir>
         <InstallDir>hypnotizehud</InstallDir>
     </HUD>
@@ -376,7 +376,7 @@
         <RepoPath>https://github.com/MoeLesting/MoesHUD</RepoPath>
         <Hash2>9106f84fa2ab9fabcc053ac7146df65ba7adc969baeb941161734645ed54a3d506864f447fd0b01e58e6c8e8c69ae7b05ee8cb2872667cacd1ea7e8304a25418</Hash2>
         <LastUpdate>1545271840</LastUpdate>
-        <Site>https://huds.tf/site/s-moeshud</Site>
+        <Site>https://github.com/MoeLesting/MoesHUD</Site>
         <ArchiveDir>moeshud-master</ArchiveDir>
         <InstallDir>moeshud</InstallDir>
     </HUD>
@@ -386,12 +386,12 @@
         <IsUpdated>1</IsUpdated>
         <URI>https://github.com/EasyCoding/tf2huds/releases/download/2022.07.15/slaghud_0b8745d9.zip</URI>
         <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/slaghud_0b8745d9.zip</Mirror>
-        <UpURI>https://github.com/MagmaDude/SlagHUD/archive/master.zip</UpURI>
+        <UpURI>https://files.gamebanana.com/mods/slaghud-master_f6f6b.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/slaghud.jpg</Preview>
-        <RepoPath>https://github.com/MagmaDude/SlagHUD</RepoPath>
+        <RepoPath>null</RepoPath>
         <Hash2>4f84e6e2bf9eade946f71551c5d5eb401df1328592a6510ecda6a1b0f3170c9345926577a7778aa58a52762aa63afbeea8f785a1a68b7f58376a057b9ebb91ae</Hash2>
-        <LastUpdate>1523198816</LastUpdate>
-        <Site>https://huds.tf/site/s-SlagHUD</Site>
+        <LastUpdate>1523199018</LastUpdate>
+        <Site>https://gamebanana.com/mods/26568</Site>
         <ArchiveDir>SlagHUD-master</ArchiveDir>
         <InstallDir>slaghud</InstallDir>
     </HUD>
@@ -406,7 +406,7 @@
         <RepoPath>https://github.com/Hypnootize/BX-Hud</RepoPath>
         <Hash2>1fc4cd0e691422240ffe7e92590feb6de9505ed8eb570c330a442518c037c1eeced2665d3c356083cd9ab4985991d9536dcd459e48023efe1b871721261807bc</Hash2>
         <LastUpdate>1673036393</LastUpdate>
-        <Site>https://huds.tf/site/s-Bx-Hud</Site>
+        <Site>https://github.com/Hypnootize/BX-Hud</Site>
         <ArchiveDir>BX-Hud-master</ArchiveDir>
         <InstallDir>bxhud</InstallDir>
     </HUD>
@@ -421,7 +421,7 @@
         <RepoPath>https://github.com/Hypnootize/Garm3n-QL</RepoPath>
         <Hash2>8ed2b15febe7486f7577b480e9de005a15d2acde2590121e0dcaec76511d6f8163a4d71d46e683bf8bb904c0282c7d705ec9417168b9a0574a86d7fa935c9134</Hash2>
         <LastUpdate>1673036405</LastUpdate>
-        <Site>https://huds.tf/site/s-Garm3n-QL</Site>
+        <Site>https://github.com/Hypnootize/Garm3n-QL</Site>
         <ArchiveDir>Garm3n-QL-master</ArchiveDir>
         <InstallDir>garm3nql</InstallDir>
     </HUD>
@@ -436,7 +436,7 @@
         <RepoPath>https://github.com/Hypnootize/Deli-Hud</RepoPath>
         <Hash2>a07844834cc2a769807c889d3592589aebeb43e4b8d71c1d8c7c33941ad53de3b8f383826b3663a56f1918bd0a9a4ba63df32c48b21a4b364d691833225f5e06</Hash2>
         <LastUpdate>1673036386</LastUpdate>
-        <Site>https://huds.tf/site/s-Deli-Hud</Site>
+        <Site>https://github.com/Hypnootize/Deli-Hud</Site>
         <ArchiveDir>Deli-Hud-master/Deli Hud Normal</ArchiveDir>
         <InstallDir>delihud</InstallDir>
     </HUD>
@@ -451,7 +451,7 @@
         <RepoPath>https://github.com/Jofre-Problem/lionHUD</RepoPath>
         <Hash2>1bfc6c4b736707b69dd1e46d578022ffc418d5750bf3e2632b86e3614a149539b30a3f4e0c3e7dcac72fd0cfae278daf6b07c5c4982ce978ce23de63229fc820</Hash2>
         <LastUpdate>1677121081</LastUpdate>
-        <Site>https://huds.tf/site/s-Lion-HUD--3903</Site>
+        <Site>https://github.com/Jofre-Problem/lionHUD</Site>
         <ArchiveDir>lionHUD-master</ArchiveDir>
         <InstallDir>lionhud</InstallDir>
     </HUD>
@@ -466,7 +466,7 @@
         <RepoPath>https://github.com/Hypnootize/sunsethud</RepoPath>
         <Hash2>96b736caab7739453846b34b84ffef32e3342d13ff68f609f51f38a709f71b4f660db8dcf174b89db9d4c43839fc398f0fff6c32f607bced73a8f322b0721056</Hash2>
         <LastUpdate>1677097789</LastUpdate>
-        <Site>https://huds.tf/site/s-Sunset-Hud</Site>
+        <Site>https://github.com/Hypnootize/sunsethud</Site>
         <ArchiveDir>sunsethud-master</ArchiveDir>
         <InstallDir>sunsethud</InstallDir>
     </HUD>
@@ -481,7 +481,7 @@
         <RepoPath>https://github.com/DrinkinTea22/teahudv2</RepoPath>
         <Hash2>63456451ebf6e4293b4ddc6c0f9bcb8e5903293d98fa15978da75bc6746a4cb434de4c32790c1a78e58c84c9b8e831607d7a8bbbbab78a6a53182f14a4d0047b</Hash2>
         <LastUpdate>1662508063</LastUpdate>
-        <Site>https://huds.tf/site/s-TeaHud-V2--3867</Site>
+        <Site>https://github.com/DrinkinTea22/teahudv2</Site>
         <ArchiveDir>teahudv2-main</ArchiveDir>
         <InstallDir>teahudv2</InstallDir>
     </HUD>
@@ -496,7 +496,7 @@
         <RepoPath>https://github.com/bo0bsy/zehud</RepoPath>
         <Hash2>326e7b3891b4375d637bb62574c97acb36b0b7644d1e08574b0167e10a5040e2f49e657de3be6409c0d692049c34eb9d20eecbc006929770389b90819cea3885</Hash2>
         <LastUpdate>1676818560</LastUpdate>
-        <Site>https://huds.tf/site/s-ZeHud</Site>
+        <Site>https://github.com/bo0bsy/zehud</Site>
         <ArchiveDir>zehud-master</ArchiveDir>
         <InstallDir>zehud</InstallDir>
     </HUD>
