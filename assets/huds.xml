@@ -99,13 +99,13 @@
         <Name>budhud</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.02.25/budhud_164809a4.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/budhud_164809a4.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.03.30/budhud_8724e880.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/budhud_8724e880.zip</Mirror>
         <UpURI>https://github.com/rbjaxter/budhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/budhud.jpg</Preview>
         <RepoPath>https://github.com/rbjaxter/budhud</RepoPath>
-        <Hash2>f0384a5613b3d1f2cc7ba921a7907bf7cf6cee2272e29e6975b925ca72d3950e458d4750ee60a86998c3b3d699793ae4b6797930195f13677b872c2d0968b44c</Hash2>
-        <LastUpdate>1675643475</LastUpdate>
+        <Hash2>bb4d125d2e5540957d4ac2e374bf140a6e191ed49f73b4b2249041bc8a32f799abd230eb1ce4f42cfe1b7ce29eb86365884d197f1b0d27dc614ee1292fd86bbc</Hash2>
+        <LastUpdate>1677887350</LastUpdate>
         <Site>https://github.com/rbjaxter/budhud</Site>
         <ArchiveDir>budhud-master</ArchiveDir>
         <InstallDir>budhud</InstallDir>
@@ -249,13 +249,13 @@
         <Name>FlawHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.02.25/flawhud_214155d7.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_214155d7.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.03.30/flawhud_0623a09d.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/flawhud_0623a09d.zip</Mirror>
         <UpURI>https://github.com/CriticalFlaw/flawhud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/flawhud.jpg</Preview>
         <RepoPath>https://github.com/CriticalFlaw/flawhud</RepoPath>
-        <Hash2>7effa418daa8b270629ee8f4a06b2a2b8b1834fe64b9b50fac3eb68728e8d2d3e9d1b5f95a20beff01d44360d6e079d23aabbbd8abe1bf00d6100f2fd832293b</Hash2>
-        <LastUpdate>1677121467</LastUpdate>
+        <Hash2>638497011d3d2e9543a125b9cc6ca35ad282d849fb4cddf759069941d1ee894429f05351d7bc2c09c85a531b00f6a9c3a95648bf6e60f428644a767940f93162</Hash2>
+        <LastUpdate>1680146691</LastUpdate>
         <Site>https://github.com/CriticalFlaw/flawhud</Site>
         <ArchiveDir>flawhud-master</ArchiveDir>
         <InstallDir>flawhud</InstallDir>
@@ -354,13 +354,13 @@
         <Name>Hypnotize HUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.02.25/hypnotizehud_2da39af6.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/hypnotizehud_2da39af6.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.03.30/hypnotizehud_9c2bc34e.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/hypnotizehud_9c2bc34e.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/hypnotizehud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/hypnotizehud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/hypnotizehud</RepoPath>
-        <Hash2>888323481fac930c1cf3b2b552d6e423d2ebdec444477f217addbad080e6cdcbbe1c21e0823f72f2081ee2cb065ef86b2d5398d3afc58b2e397957bb9e5c191c</Hash2>
-        <LastUpdate>1677098439</LastUpdate>
+        <Hash2>f9470c3e022c9d49041d24243ebbd26e73903e69fc160ef2abcbc7169f6f58ae3799a4d77b0451dbb164d1be185482c8d6a1b5a4edfffd10aee1ffe153bc3a00</Hash2>
+        <LastUpdate>1677776556</LastUpdate>
         <Site>https://github.com/Hypnootize/hypnotizehud</Site>
         <ArchiveDir>hypnotizehud-master</ArchiveDir>
         <InstallDir>hypnotizehud</InstallDir>
@@ -459,13 +459,13 @@
         <Name>SunsetHUD</Name>
         <Game>tf</Game>
         <IsUpdated>1</IsUpdated>
-        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.02.25/sunsethud_e2c1f702.zip</URI>
-        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/sunsethud_e2c1f702.zip</Mirror>
+        <URI>https://github.com/EasyCoding/tf2huds/releases/download/2023.03.30/sunsethud_6c33608c.zip</URI>
+        <Mirror>https://bitbucket.org/ectm/tf2huds/downloads/sunsethud_6c33608c.zip</Mirror>
         <UpURI>https://github.com/Hypnootize/sunsethud/archive/master.zip</UpURI>
         <Preview>https://www.easycoding.org/files/srcrepair/huds/sunsethud.jpg</Preview>
         <RepoPath>https://github.com/Hypnootize/sunsethud</RepoPath>
-        <Hash2>96b736caab7739453846b34b84ffef32e3342d13ff68f609f51f38a709f71b4f660db8dcf174b89db9d4c43839fc398f0fff6c32f607bced73a8f322b0721056</Hash2>
-        <LastUpdate>1677097789</LastUpdate>
+        <Hash2>b898499e52719a7b7d3e16a72d2b576d69b3ae537ecd33c185955080715c5706cf240006a2c837e8ba8131279086792ebe3154e4e0f88138de4ba6631b31876c</Hash2>
+        <LastUpdate>1678020430</LastUpdate>
         <Site>https://github.com/Hypnootize/sunsethud</Site>
         <ArchiveDir>sunsethud-master</ArchiveDir>
         <InstallDir>sunsethud</InstallDir>
