@@ -91,10 +91,10 @@ namespace srcrepair.gui.kbhelper
         /// Installs specified keyboard settings override.
         /// </summary>
         /// <param name="Value">Bytes array with new settings.</param>
-        /// <param name="Name">User-friendly setting name.</param>
-        private void InstallKBS(byte[] Value, string Name)
+        /// <param name="FriendlyName">User-friendly setting name.</param>
+        private void InstallKBS(byte[] Value, string FriendlyName)
         {
-            if (MessageBox.Show(string.Format(AppStrings.KB_DisableQuestion, Name), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (MessageBox.Show(string.Format(AppStrings.KB_DisableQuestion, FriendlyName), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 try
                 {
