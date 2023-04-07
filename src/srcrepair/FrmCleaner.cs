@@ -123,11 +123,11 @@ namespace srcrepair.gui
         /// <summary>
         /// Gets full list of files for deletion.
         /// </summary>
-        /// <param name="CleanDirs">List of files and directories for cleanup.</param>
+        /// <param name="Targets">List of files and directories for cleanup.</param>
         /// <param name="Recursive">Enable recursive cleanup.</param>
-        private void DetectFilesForCleanup(List<string> CleanDirs, bool Recursive)
+        private void DetectFilesForCleanup(List<string> Targets, bool Recursive)
         {
-            foreach (string DirMs in CleanDirs)
+            foreach (string DirMs in Targets)
             {
                 // Extracting directory path and file mask from combined string...
                 string CleanDir = Path.GetDirectoryName(DirMs);
