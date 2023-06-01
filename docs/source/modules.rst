@@ -46,19 +46,13 @@ Program updater
 
 You can start this module from **Help** -- **Check for updates** menu.
 
-Updater will check updates for the following:
-
-  * main program;
-  * game database;
-  * HUD database.
+The Updater will check for program updates immediately.
 
 SRC Repair will automatically check for updates once a week (can be disabled in :ref:`advanced settings <settings-advanced>`).
 
-Database are being download from repository and copied to the installation directory.
-
 Program updates are being downloaded from CDN as a standalone installers.
 
-If updates we found, you can install them by left clicking on message.
+If the updates were found, you can install them by left clicking on a message.
 
 If SRC Repair is installed for all users to a system protected directory like **%PROGRAMFILES%**, UAC dialog will appear.
 
