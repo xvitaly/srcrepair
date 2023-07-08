@@ -123,6 +123,20 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Remove double slashes from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with double slashes removed.</returns>
+        private static string RemoveDoubleSlashes(string SrcStr)
+        {
+            while (SrcStr.IndexOf(@"\\", StringComparison.InvariantCulture) != -1)
+            {
+                SrcStr = SrcStr.Replace(@"\\", @"\");
+            }
+            return SrcStr;
+        }
+
+        /// <summary>
         /// Remove different special characters from specified string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
@@ -144,13 +158,7 @@ namespace srcrepair.core
             if (CleanQuotes) { RecvStr = RemoveQuotes(RecvStr); }
 
             // Removing double slashes if enabled...
-            if (CleanSlashes)
-            {
-                while (RecvStr.IndexOf(@"\\", StringComparison.InvariantCulture) != -1)
-                {
-                    RecvStr = RecvStr.Replace(@"\\", @"\");
-                }
-            }
+            if (CleanSlashes) { RecvStr = RemoveDoubleSlashes(RecvStr); }
 
             // Return result with removal of leading and trailing white-spaces...
             return RecvStr.Trim();
