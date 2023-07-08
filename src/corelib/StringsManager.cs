@@ -156,6 +156,16 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Remove leading and trailing spaces from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with leading and trailing spaces removed.</returns>
+        private static string RemoveStartEndSpaces(string SrcStr)
+        {
+            return string.IsNullOrEmpty(SrcStr) ? SrcStr : SrcStr.Trim();
+        }
+
+        /// <summary>
         /// Remove different special characters from specified string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
@@ -180,7 +190,7 @@ namespace srcrepair.core
             if (CleanSlashes) { RecvStr = RemoveDoubleSlashes(RecvStr); }
 
             // Return result with removal of leading and trailing white-spaces...
-            return RecvStr.Trim();
+            return RemoveStartEndSpaces(RecvStr);
         }
 
         /// <summary>
