@@ -109,6 +109,20 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Remove quotes from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with quotes removed.</returns>
+        private static string RemoveQuotes(string SrcStr)
+        {
+            while (SrcStr.IndexOf(@"""", StringComparison.InvariantCulture) != -1)
+            {
+                SrcStr = SrcStr.Replace(@"""", string.Empty);
+            }
+            return SrcStr;
+        }
+
+        /// <summary>
         /// Remove different special characters from specified string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
@@ -127,13 +141,7 @@ namespace srcrepair.core
             RecvStr = RemoveMultipleSpaces(RecvStr);
 
             // Removing quotes if enabled...
-            if (CleanQuotes)
-            {
-                while (RecvStr.IndexOf(@"""", StringComparison.InvariantCulture) != -1)
-                {
-                    RecvStr = RecvStr.Replace(@"""", string.Empty);
-                }
-            }
+            if (CleanQuotes) { RecvStr = RemoveQuotes(RecvStr); }
 
             // Removing double slashes if enabled...
             if (CleanSlashes)
