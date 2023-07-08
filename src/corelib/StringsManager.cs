@@ -174,22 +174,11 @@ namespace srcrepair.core
         /// <returns>Clean string with removed special characters.</returns>
         public static string CleanString(string RecvStr, bool CleanQuotes, bool CleanSlashes)
         {
-            // Removing tabulations...
             RecvStr = RemoveTabs(RecvStr);
-
-            // Replacing all NUL symbols with spaces...
             RecvStr = RemoveNullBytes(RecvStr);
-
-            // Removing multiple spaces...
             RecvStr = RemoveMultipleSpaces(RecvStr);
-
-            // Removing quotes if enabled...
             if (CleanQuotes) { RecvStr = RemoveQuotes(RecvStr); }
-
-            // Removing double slashes if enabled...
             if (CleanSlashes) { RecvStr = RemoveDoubleSlashes(RecvStr); }
-
-            // Return result with removal of leading and trailing white-spaces...
             return RemoveStartEndSpaces(RecvStr);
         }
 
