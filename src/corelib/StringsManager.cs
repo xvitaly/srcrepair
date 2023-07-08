@@ -81,6 +81,20 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Remove NUL-bytes from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with NUL-bytes removed.</returns>
+        private static string RemoveNullBytes(string SrcStr)
+        {
+            while (SrcStr.IndexOf("\0", StringComparison.InvariantCulture) != -1)
+            {
+                SrcStr = SrcStr.Replace("\0", " ");
+            }
+            return SrcStr;
+        }
+
+        /// <summary>
         /// Remove different special characters from specified string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
@@ -93,10 +107,7 @@ namespace srcrepair.core
             RecvStr = RemoveTabs(RecvStr);
 
             // Replacing all NUL symbols with spaces...
-            while (RecvStr.IndexOf("\0", StringComparison.InvariantCulture) != -1)
-            {
-                RecvStr = RecvStr.Replace("\0", " ");
-            }
+            RecvStr = RemoveNullBytes(RecvStr);
 
             // Removing multiple spaces...
             while (RecvStr.IndexOf("  ", StringComparison.InvariantCulture) != -1)
