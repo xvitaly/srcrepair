@@ -67,6 +67,20 @@ namespace srcrepair.core
         public static string PluginsDatabaseName => Properties.Resources.PluginsDbFile;
 
         /// <summary>
+        /// Remove tabulations from the source string.
+        /// </summary>
+        /// <param name="SrcStr">Source string for cleanup.</param>
+        /// <returns>String with tabulations replaced with spaces.</returns>
+        private static string RemoveTabs(string SrcStr)
+        {
+            while (SrcStr.IndexOf("\t", StringComparison.InvariantCulture) != -1)
+            {
+                SrcStr = SrcStr.Replace("\t", " ");
+            }
+            return SrcStr;
+        }
+
+        /// <summary>
         /// Remove different special characters from specified string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
@@ -76,10 +90,7 @@ namespace srcrepair.core
         public static string CleanString(string RecvStr, bool CleanQuotes, bool CleanSlashes)
         {
             // Removing tabulations...
-            while (RecvStr.IndexOf("\t", StringComparison.InvariantCulture) != -1)
-            {
-                RecvStr = RecvStr.Replace("\t", " ");
-            }
+            RecvStr = RemoveTabs(RecvStr);
 
             // Replacing all NUL symbols with spaces...
             while (RecvStr.IndexOf("\0", StringComparison.InvariantCulture) != -1)
