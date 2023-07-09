@@ -341,7 +341,7 @@ namespace srcrepair.core
         /// <returns>Extracted from source string value.</returns>
         protected static string ExtractCVFromLine(string LineA)
         {
-            LineA = StringsManager.CleanString(LineA, true, false);
+            LineA = StringsManager.CleanString(LineA, true, false, false);
             return LineA.Substring(LineA.LastIndexOf(" ", StringComparison.InvariantCulture)).Trim();
         }
     }
