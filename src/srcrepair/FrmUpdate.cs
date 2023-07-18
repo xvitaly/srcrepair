@@ -80,11 +80,11 @@ namespace srcrepair.gui
         /// Launches a program update checker in a separate thread, waits for the
         /// result and returns a message if found.
         /// </summary>
-        private async void CheckForUpdates()
+        private async Task CheckForUpdates()
         {
             try
             {
-                if (await CheckForUpdatesTask(UserAgent))
+                if (await IsUpdatesAvailable(UserAgent))
                 {
                     UpdAppImg.Image = Properties.Resources.IconUpdateAvailable;
                     UpdAppStatus.Text = string.Format(AppStrings.UPD_AppUpdateAvail, UpMan.AppUpdateVersion);
@@ -110,7 +110,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
         /// <returns>Returns True if updates were found.</returns>
-        private async Task<bool> CheckForUpdatesTask(string UA)
+        private async Task<bool> IsUpdatesAvailable(string UA)
         {
             UpMan = await UpdateManager.Create(UA);
             return UpMan.CheckAppUpdate();
@@ -197,10 +197,10 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void FrmUpdate_Load(object sender, EventArgs e)
+        private async void FrmUpdate_Load(object sender, EventArgs e)
         {
             // Starting checking for updates...
-            CheckForUpdates();
+            await CheckForUpdates();
         }
 
         /// <summary>
