@@ -802,12 +802,12 @@ namespace srcrepair.gui
         /// <summary>
         /// Downloads and shows on the form screenshot of the selected HUD.
         /// </summary>
-        private async void HandleHUDScreenshot()
+        private async Task HandleHUDScreenshot()
         {
             string HUDScreenshotFile = string.Empty;
             try
             {
-                HUDScreenshotFile = await HandleHUDScreenshotTask(AppSelector.Text, HD_HSel.Text);
+                HUDScreenshotFile = await DownloadHUDScreenshot(AppSelector.Text, HD_HSel.Text);
                 HD_GB_Pbx.Image = Image.FromFile(HUDScreenshotFile);
             }
             catch (Exception Ex)
@@ -1546,7 +1546,7 @@ namespace srcrepair.gui
         /// <param name="SelectedGame">Selected game name.</param>
         /// <param name="SelectedHUD">Selected HUD name.</param>
         /// <returns>Returns full path to the HUD screenshot file.</returns>
-        private async Task<string> HandleHUDScreenshotTask(string SelectedGame, string SelectedHUD)
+        private async Task<string> DownloadHUDScreenshot(string SelectedGame, string SelectedHUD)
         {
             // Generating full file name for HUD screenshot...
             string ScreenFile = Path.Combine(App.SourceGames[SelectedGame].AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan[SelectedHUD].Preview));
@@ -3222,8 +3222,8 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
-        {                
+        private async void HD_HSel_SelectedIndexChanged(object sender, EventArgs e)
+        {
             // Checking result...
             bool Success = !string.IsNullOrEmpty(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Name);
 
@@ -3246,7 +3246,7 @@ namespace srcrepair.gui
             // Downloading screenshot...
             if (Success)
             {
-                HandleHUDScreenshot();
+                await HandleHUDScreenshot();
             }
         }
 
