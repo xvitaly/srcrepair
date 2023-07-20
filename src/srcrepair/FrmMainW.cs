@@ -1032,13 +1032,13 @@ namespace srcrepair.gui
         /// Tries to find and delete an old application update files in a
         /// separate thread.
         /// </summary>
-        private async void CleanOldUpdates()
+        private async Task CleanOldUpdates()
         {
             try
             {
                 if (IsCleanupNeeded())
                 {
-                    await CleanOldUpdatesTask();
+                    await Task.Run(() => { if (Directory.Exists(App.AppUpdateDir)) { Directory.Delete(App.AppUpdateDir, true); } });
                     Properties.Settings.Default.LastCleanupTime = DateTime.Now;
                 }
             }
@@ -1621,25 +1621,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Finds and removes old application updates in a separate
-        /// thread.
-        /// </summary>
-        private async Task CleanOldUpdatesTask()
-        {
-            await Task.Run(() =>
-            {
-                // Removing modern updates directory...
-                if (Directory.Exists(App.AppUpdateDir)) { Directory.Delete(App.AppUpdateDir, true); }
-                
-                // Removing legacy updates...
-                foreach (string LegacyUpdateFile in FileManager.FindFiles(App.AppUserDir, "*.exe"))
-                {
-                    if (File.Exists(LegacyUpdateFile)) { File.Delete(LegacyUpdateFile); }
-                }
-            });
-        }
-
-        /// <summary>
         /// Loads config file to Config Editor in a separate thread.
         /// </summary>
         /// <param name="ConfFileName">Full path to config file.</param>
@@ -1749,7 +1730,7 @@ namespace srcrepair.gui
             CheckSymbolsSteam();
             FindGames();
             await CheckForUpdates();
-            CleanOldUpdates();
+            await CleanOldUpdates();
         }
 
         /// <summary>
