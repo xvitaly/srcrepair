@@ -1006,7 +1006,7 @@ namespace srcrepair.gui
         /// Launches a program update checker in a separate thread, waits for the
         /// result and returns a message if found.
         /// </summary>
-        private async void CheckForUpdates()
+        private async Task CheckForUpdates()
         {
             if (IsAutoUpdateCheckNeeded())
             {
@@ -1738,7 +1738,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void FrmMainW_Load(object sender, EventArgs e)
+        private async void FrmMainW_Load(object sender, EventArgs e)
         {
             ConfigureCryptoPolicy();
             InitializeApp();
@@ -1748,7 +1748,7 @@ namespace srcrepair.gui
             CheckSafeClnStatus();
             CheckSymbolsSteam();
             FindGames();
-            CheckForUpdates();
+            await CheckForUpdates();
             CleanOldUpdates();
         }
 
