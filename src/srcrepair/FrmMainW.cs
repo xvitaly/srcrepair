@@ -1208,7 +1208,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Installs the selected HUD.
         /// </summary>
-        private async void HandleHUDInstallation()
+        private async Task HandleHUDInstallation()
         {
             try
             {
@@ -1439,7 +1439,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Installs the contents of the downloaded HUD archive.
         /// </summary>
-        private void InstallHUD()
+        private async Task InstallHUD()
         {
             // Checking hash of downloaded file...
             if (Properties.Settings.Default.HUDUseUpstream || App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].CheckHash())
@@ -1455,7 +1455,7 @@ namespace srcrepair.gui
                 GuiHelpers.FormShowArchiveExtract(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].LocalFile, Path.Combine(App.SourceGames[AppSelector.Text].CustomInstallDir, "hudtemp"));
 
                 // Installing files in a separate thread...
-                HandleHUDInstallation();
+                await HandleHUDInstallation();
             }
             else
             {
@@ -3236,7 +3236,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void HD_Install_Click(object sender, EventArgs e)
+        private async void HD_Install_Click(object sender, EventArgs e)
         {
             if (App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].IsUpdated)
             {
@@ -3255,7 +3255,7 @@ namespace srcrepair.gui
                     // Installing downloaded HUD...
                     if (DownloadResult)
                     {
-                        InstallHUD();
+                        await InstallHUD();
                     }
                     else
                     {
