@@ -1,19 +1,5 @@
 # SRC Repair
 
-[![GitHub version](https://img.shields.io/github/v/release/xvitaly/srcrepair?sort=semver&color=brightgreen&logo=git&logoColor=white)](https://github.com/xvitaly/srcrepair/releases)
-[![SourceForge downloads](https://www.easycoding.org/files/images/sf_downloads.svg)](https://github.com/xvitaly/srcrepair/releases)
-[![Github downloads](https://img.shields.io/github/downloads/xvitaly/srcrepair/total.svg?label=GH%20downloads&logo=github&logoColor=white)](https://github.com/xvitaly/srcrepair/releases)
-[![FPS-config installations](https://img.shields.io/github/downloads/EasyCoding/tf2cfgs/total.svg?label=FPS%20configs&logo=sourceengine&logoColor=white)](https://github.com/EasyCoding/tf2cfgs/releases)
-[![HUD installations](https://img.shields.io/github/downloads/EasyCoding/tf2huds/total.svg?label=HUDs&logo=pinboard&logoColor=white)](https://github.com/EasyCoding/tf2huds/releases)
-[![AppVeyor status](https://ci.appveyor.com/api/projects/status/9r2yma3aab972blf?svg=true)](https://ci.appveyor.com/project/xvitaly/srcrepair)
-[![Linux CI status](https://github.com/xvitaly/srcrepair/actions/workflows/linux.yml/badge.svg)](https://github.com/xvitaly/srcrepair/actions/workflows/linux.yml)
-[![Windows CI status](https://github.com/xvitaly/srcrepair/actions/workflows/windows.yml/badge.svg)](https://github.com/xvitaly/srcrepair/actions/workflows/windows.yml)
-[![CodeQL CI status](https://github.com/xvitaly/srcrepair/actions/workflows/codeql.yml/badge.svg)](https://github.com/xvitaly/srcrepair/actions/workflows/codeql.yml)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/d3ae6f35f414449a89acca408b5088bf)](https://www.codacy.com/gh/xvitaly/srcrepair/dashboard)
-[![CodeFactor](https://www.codefactor.io/repository/github/xvitaly/srcrepair/badge)](https://www.codefactor.io/repository/github/xvitaly/srcrepair)
-[![GitHub issues](https://img.shields.io/github/issues/xvitaly/srcrepair.svg?label=issues)](https://github.com/xvitaly/srcrepair/issues)
----
-
 ## About
 
 **SRC Repair** (ex. TF2 Repair) is a free open source tool that can be used for tuning and cleaning up Steam and Source
