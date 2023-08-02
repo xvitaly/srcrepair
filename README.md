@@ -2,17 +2,19 @@
 
 ## About
 
-**SRC Repair** (ex. TF2 Repair) is a free open source tool that can be used for tuning and cleaning up Steam and Source
-engine games. You can also create and edit .cfg files (configs), backup and restore game settings, apply FPS configs or
-sprays into the game with one click.
+**SRC Repair** (ex. TF2 Repair) is a free open source tool that can be used for tuning and cleaning up Steam and Source engine games. You can also create and edit .cfg files (configs), backup and restore game settings, apply FPS configs or sprays into the game with one click.
 
-**License**: [GNU GPL version 3](COPYING).
+## Features
 
-**Supported OS**: Windows 7 SP1, 8.1, 10, 11, GNU/Linux (mono), MacOS X (mono).
+Key features:
 
-**Dependencies on Windows**: [Microsoft .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) or above.
-
-**Dependencies on other OS**: [Mono 6.12](https://www.mono-project.com/download/) or above.
+  * video settings editor;
+  * configuration files editor;
+  * cleanup and troubleshooting tool;
+  * FPS-configs manager;
+  * HUD manager (only for some games);
+  * backups manager;
+  * reports generator.
 
 ## Downloads
 
