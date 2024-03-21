@@ -20,13 +20,14 @@ jobs:
   build:
     name: Build project using .NET Framework
     runs-on: windows-latest
-
     steps:
     - name: Fetching sources
-      uses: actions/checkout@v3
-    - name: Configuring msbuild service
+      uses: actions/checkout@v4
+    - name: Configuring MSBuild service
       uses: microsoft/setup-msbuild@v1.3
-    - name: Restoring nuget dependencies
-      run: nuget restore srcrepair.sln
-    - name: Building project with msbuild
-      run: msbuild /p:Configuration=Release srcrepair.sln
+    - name: Restoring dependencies with NuGet
+      run: |
+        nuget restore srcrepair.sln
+    - name: Building project with MSBuild
+      run: |
+        msbuild /p:Configuration=Release srcrepair.sln
