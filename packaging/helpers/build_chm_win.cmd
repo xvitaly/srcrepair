@@ -19,3 +19,4 @@ set BUILDLANG=ru
 call "..\..\docs\make.cmd" htmlhelp
 "%ProgramFiles(x86)%\HTML Help Workshop\hhc.exe" "..\..\docs\build\htmlhelp\srcrepair_ru.hhp" & exit /b 1 | exit /b 0
 move "..\..\docs\build\htmlhelp\srcrepair_ru.chm" "..\..\src\srcrepair\bin\Release\help\srcrepair_ru.chm"
+del /S /Q "..\..\docs\source\locale\ru\LC_MESSAGES\*.mo" >nul
