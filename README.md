@@ -28,7 +28,6 @@ Download application:
 Supported Valve games:
 
   * Alien Swarm;
-  * Counter-Strike Global Offensive;
   * Counter-Strike: Source;
   * Day of Defeat: Source;
   * Half-Life 2: Deathmatch;
