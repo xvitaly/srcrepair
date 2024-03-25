@@ -271,25 +271,25 @@
     </Game>
     <Game Name="Dota 2">
         <Enabled>0</Enabled>
-        <DirName>dota 2 beta\game</DirName>
+        <DirName>dota 2 beta/game</DirName>
         <SmallName>dota</SmallName>
         <VFDir>dota</VFDir>
         <UserDir>0</UserDir>
         <HUDsAvail>0</HUDsAvail>
         <SID>570</SID>
         <SVer>3</SVer>
-        <Executable>bin\win64\dota2.exe</Executable>
+        <Executable>bin/win64/dota2.exe</Executable>
     </Game>
     <Game Name="Counter-Strike 2">
         <Enabled>0</Enabled>
-        <DirName>Counter-Strike Global Offensive\game</DirName>
+        <DirName>Counter-Strike Global Offensive/game</DirName>
         <SmallName>csgo</SmallName>
         <VFDir>csgo</VFDir>
         <UserDir>0</UserDir>
         <HUDsAvail>0</HUDsAvail>
         <SID>730</SID>
         <SVer>3</SVer>
-        <Executable>bin\win64\cs2.exe</Executable>
+        <Executable>bin/win64/cs2.exe</Executable>
     </Game>
     <Game Name="Nuclear Dawn">
         <Enabled>1</Enabled>
