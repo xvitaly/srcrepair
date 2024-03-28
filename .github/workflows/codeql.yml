@@ -10,11 +10,9 @@ on:
   push:
     branches:
     - 'master'
-    - 'legacy'
   pull_request:
     branches:
     - 'master'
-    - 'legacy'
 
 jobs:
   analyze:
