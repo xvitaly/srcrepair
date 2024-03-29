@@ -7,121 +7,120 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-22 15:26+0100\n"
-"PO-Revision-Date: 2020-03-22 15:28+0100\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
-"Language: ru\n"
+"POT-Creation-Date: 2024-03-29 14:32+0100\n"
+"PO-Revision-Date: 2024-03-29 14:40+0100\n"
+"Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 "
-"&& (n%100<12 || n%100>14) ? 1 : 2);\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/faq.rst:23
+#: ../../source/faq.rst:10
 msgid "Frequently asked questions (FAQ)"
 msgstr "Часто задаваемые вопросы (ЧаВо)"
 
-#: ../../source/faq.rst:29
+#: ../../source/faq.rst:16
 msgid "How to fix an error with Microsoft .NET Framework 4 on program startup?"
 msgstr ""
 "При попытке запуска программы появляется сообщение об ошибке Microsoft .NET "
 "Framework 4. Что делать?"
 
-#: ../../source/faq.rst:31
+#: ../../source/faq.rst:18
 msgid ""
-"You to download and install Microsoft .NET Framework version 4.7.2 or higher in "
-"order to use this program."
+"You to download and install Microsoft .NET Framework version 4.7.2 or higher "
+"in order to use this program."
 msgstr ""
 "Для работы программы необходим установленный пакет Microsoft .NET Framework "
 "версии 4.7.2 или выше."
 
-#: ../../source/faq.rst:33
+#: ../../source/faq.rst:20
 msgid ""
 "You can download if from official `Microsoft Download website <https://www."
 "microsoft.com/net/download/dotnet-framework-runtime>`__."
 msgstr ""
-"Скачайте и установите его с `официального сайта Microsoft <https://www.microsoft."
-"com/net/download/dotnet-framework-runtime>`__."
+"Скачайте и установите его с `официального сайта Microsoft <https://www."
+"microsoft.com/net/download/dotnet-framework-runtime>`__."
 
-#: ../../source/faq.rst:39
+#: ../../source/faq.rst:26
 msgid "How can I run this program under Windows XP/Vista?"
 msgstr "Как я могу запустить программу под Windows XP/Vista?"
 
-#: ../../source/faq.rst:41
+#: ../../source/faq.rst:28
 msgid "These legacy operating systems are no longer supported."
 msgstr "Поддержка устаревших операционных систем полностью прекращена."
 
-#: ../../source/faq.rst:47
+#: ../../source/faq.rst:34
 msgid "How to fix slow startup?"
 msgstr "Как ускорить запуск программы?"
 
-#: ../../source/faq.rst:49
+#: ../../source/faq.rst:36
 msgid ""
-"You can install SRC Repair for all users. Installer will use NGen to generate "
-"native images, which should significantly increate cold startup speed."
+"You can install SRC Repair for all users. Installer will use NGen to "
+"generate native images, which should significantly increate cold startup "
+"speed."
 msgstr ""
-"Для ускорения запуска программы установите её с правами администратора для всех "
-"пользователей. При такой установке будут автоматически созданы машинные сборки, "
-"что значительно ускорит холодный старт приложения."
+"Для ускорения запуска программы установите её с правами администратора для "
+"всех пользователей. При такой установке будут автоматически созданы машинные "
+"сборки, что значительно ускорит холодный старт приложения."
 
-#: ../../source/faq.rst:55
+#: ../../source/faq.rst:42
 msgid "Can I use this program with cracked version of game?"
 msgstr "Будет ли программа поддерживать пиратские версии игр?"
 
-#: ../../source/faq.rst:57
+#: ../../source/faq.rst:44
 msgid "No. We support only legal Steam versions."
 msgstr "Нет, не будет. Мы за лицензионный софт."
 
-#: ../../source/faq.rst:63
+#: ../../source/faq.rst:50
 msgid "Will the Source 2 engine be supported and when?"
 msgstr "Будет ли поддержка игр на движке Source 2 и когда?"
 
-#: ../../source/faq.rst:65
+#: ../../source/faq.rst:52
 msgid "Maybe, but no ETA yet."
 msgstr "Да, планируется, но точная дата неизвестна."
 
-#: ../../source/faq.rst:71
+#: ../../source/faq.rst:58
 msgid "Is Dota 2 supported?"
 msgstr "Почему не поддерживается Dota 2?"
 
-#: ../../source/faq.rst:73
+#: ../../source/faq.rst:60
 msgid "This game uses the Source 2 engine, which is not supported yet."
 msgstr ""
 "Данная игра использует движок Source 2, который в настоящее время не "
 "поддерживается."
 
-#: ../../source/faq.rst:79
+#: ../../source/faq.rst:66
 msgid "Can this program steal my Steam account?"
 msgstr "Может ли программа украсть мой Steam аккаунт?"
 
-#: ../../source/faq.rst:81
+#: ../../source/faq.rst:68
 msgid ""
-"No. SRC Repair is a free and opensource program. You can check its `source code "
-"on GitHub <https://github.com/xvitaly/srcrepair>`__."
+"No. SRC Repair is a free and opensource program. You can check its `source "
+"code on GitHub <https://github.com/xvitaly/srcrepair>`__."
 msgstr ""
-"Нет, не может. Вся функциональность программы документирована, а `исходный код "
-"открыт <https://github.com/xvitaly/srcrepair>`__ на GitHub для всех желающих."
+"Нет, не может. Вся функциональность программы документирована, а `исходный "
+"код открыт <https://github.com/xvitaly/srcrepair>`__ на GitHub для всех "
+"желающих."
 
-#: ../../source/faq.rst:87
+#: ../../source/faq.rst:74
 msgid "Is it safe to run this program with Steam simultaneously?"
 msgstr "Безопасно ли запускать программу одновременно со Steam?"
 
-#: ../../source/faq.rst:89
+#: ../../source/faq.rst:76
 msgid "Yes, unless you use :ref:`Steam cleanup module <modules-stmcln>`."
 msgstr "Да, если не выполнять :ref:`очистку кэшей Steam <modules-stmcln>`."
 
-#: ../../source/faq.rst:95
+#: ../../source/faq.rst:82
 msgid "Is it safe to run this program with controlled game simultaneously?"
 msgstr ""
 "Безопасно ли использовать программу при запущенной игре, которой я управляю?"
 
-#: ../../source/faq.rst:97
+#: ../../source/faq.rst:84
 msgid ""
 "We strongly do not recommend doing this, as neither SRC Repair, nor the "
 "controled game cannot get exclusive access to files and settings."
@@ -129,206 +128,211 @@ msgstr ""
 "Настоятельно не рекомендуется, т.к. не гарантируется монопольный доступ к "
 "настройкам и файлам конфигурации."
 
-#: ../../source/faq.rst:103
+#: ../../source/faq.rst:90
 msgid "Can I get VAC ban for using this program?"
 msgstr "Могут ли выдать VAC бан за использование программы?"
 
-#: ../../source/faq.rst:105
+#: ../../source/faq.rst:92
 msgid "No, but do not use this program with any running VAC-protected game."
 msgstr ""
-"Нет, но постарайтесь не использовать SRC Repair одновременно с любой защищённой "
-"VAC игрой."
+"Нет, но постарайтесь не использовать SRC Repair одновременно с любой "
+"защищённой VAC игрой."
 
-#: ../../source/faq.rst:111
+#: ../../source/faq.rst:98
 msgid "How I can report bug or create a new feature request?"
 msgstr "Куда направлять предложения/замечания по поводу программы?"
 
-#: ../../source/faq.rst:113 ../../source/faq.rst:129
+#: ../../source/faq.rst:100 ../../source/faq.rst:116
 msgid ""
 "Please open a new issue in our `bug tracker <https://github.com/xvitaly/"
 "srcrepair/issues>`__ on GitHub."
 msgstr ""
-"Пожалуйста откройте новую заявку в нашей `системе отслеживания ошибок <https://"
-"github.com/xvitaly/srcrepair/issues>`__ на GitHub."
+"Пожалуйста откройте новую заявку в нашей `системе отслеживания ошибок "
+"<https://github.com/xvitaly/srcrepair/issues>`__ на GitHub."
 
-#: ../../source/faq.rst:119
+#: ../../source/faq.rst:106
 msgid "For what purposes does SRC Repair require Internet access?"
 msgstr ""
-"Мой файрвол (брандмауэр) заявляет, что SRC Repair хочет получить доступ к сети "
-"Интернет. Зачем?"
+"Мой файрвол (брандмауэр) заявляет, что SRC Repair хочет получить доступ к "
+"сети Интернет. Зачем?"
 
-#: ../../source/faq.rst:121
+#: ../../source/faq.rst:108
 msgid ""
 "SRC Repair need Internet access for checking for updates once a week (can be "
 "disabled in :ref:`advanced settings <settings-advanced>`)."
 msgstr ""
-"Работает модуль автоматического обновления программы. Раз в неделю он проверяет "
-"наличие новых версий на нашем сервере. Если вы не хотите, чтобы программа "
-"проверяла обновления, отключите эту функцию :ref:`дополнительных настройках "
-"<settings-advanced>`."
+"Работает модуль автоматического обновления программы. Раз в неделю он "
+"проверяет наличие новых версий на нашем сервере. Если вы не хотите, чтобы "
+"программа проверяла обновления, отключите эту функцию :ref:`дополнительных "
+"настройках <settings-advanced>`."
 
-#: ../../source/faq.rst:127
+#: ../../source/faq.rst:114
 msgid "I want to add a new game. What should I do?"
 msgstr "Я хочу добавить поддержку новой игры. Как это сделать?"
 
-#: ../../source/faq.rst:131
+#: ../../source/faq.rst:118
 msgid "We support only Source Engine games."
 msgstr "Помните, что SRC Repair поддерживает только игры на движке Source."
 
-#: ../../source/faq.rst:137
+#: ../../source/faq.rst:124
 msgid "Can I build SRC Repair from sources?"
 msgstr "Могу ли я собрать программу из исходников?"
 
-#: ../../source/faq.rst:139
+#: ../../source/faq.rst:126
 msgid ":ref:`Yes, you can <building-from-sources>`."
 msgstr ":ref:`Да, можете <building-from-sources>`."
 
-#: ../../source/faq.rst:145
+#: ../../source/faq.rst:132
 msgid "How I can remove garbage, accumulated by installed games?"
 msgstr ""
 "Умеет ли данная программа очищать мусор, остающийся на диске в результате "
 "использования игр на движке Source?"
 
-#: ../../source/faq.rst:147
+#: ../../source/faq.rst:134
 msgid ""
-"Please use tools from :ref:`Troubleshooting and cleanup <cleanup-wizard>` tab."
+"Please use tools from :ref:`Troubleshooting and cleanup <cleanup-wizard>` "
+"tab."
 msgstr ""
-"Да, умеет. Инструменты вы найдёте на странице :ref:`Устранение проблем и очистка "
-"<cleanup-wizard>`."
+"Да, умеет. Инструменты вы найдёте на странице :ref:`Устранение проблем и "
+"очистка <cleanup-wizard>`."
 
-#: ../../source/faq.rst:153
+#: ../../source/faq.rst:140
 msgid "How I can remove garbage, accumulated by Steam?"
 msgstr ""
 "Умеет ли данная программа очищать мусор, остающийся на диске в результате "
 "использования клиента Steam?"
 
-#: ../../source/faq.rst:155
+#: ../../source/faq.rst:142
 msgid "Please use :ref:`Steam cleanup module <modules-stmcln>`."
 msgstr ""
 "Да. Всё необходимое находится в меню **Инструменты** -- :ref:`Модуль очистки "
 "кэшей Steam <modules-stmcln>`."
 
-#: ../../source/faq.rst:161
+#: ../../source/faq.rst:148
 msgid ""
 "I want to change installation directory, but cannot do this due to an error. "
 "What shall I do?"
 msgstr ""
-"Хочу установить программу в особый каталог, но при запуске установки появляется "
-"ошибка. Как исправить?"
+"Хочу установить программу в особый каталог, но при запуске установки "
+"появляется ошибка. Как исправить?"
 
-#: ../../source/faq.rst:163
+#: ../../source/faq.rst:150
 msgid ""
-"If you want to install program to a privileged directory, you will need to run "
-"installer with admininstrator user rights."
+"If you want to install program to a privileged directory, you will need to "
+"run installer with admininstrator user rights."
 msgstr ""
-"Чтобы установить программу в привилегированный каталог, установщик должен быть "
-"запущен с правами администратора."
+"Чтобы установить программу в привилегированный каталог, установщик должен "
+"быть запущен с правами администратора."
 
-#: ../../source/faq.rst:165
+#: ../../source/faq.rst:152
 msgid ""
-"Press right mouse button on installer and select **Run as admininstrator** from "
-"context menu."
+"Press right mouse button on installer and select **Run as admininstrator** "
+"from context menu."
 msgstr ""
 "Нажмите правой кнопкой по установщику и выберите пункт **Запуск от имени "
 "администратора** из контекстного меню."
 
-#: ../../source/faq.rst:171
+#: ../../source/faq.rst:158
 msgid "How I can fix \"Could not open registry key\" error?"
 msgstr ""
-"При выборе игры появляется ошибка \"Произошла ошибка при открытие ключа реестра"
-"\". Что делать?"
+"При выборе игры появляется ошибка \"Произошла ошибка при открытие ключа "
+"реестра\". Что делать?"
 
-#: ../../source/faq.rst:173
+#: ../../source/faq.rst:160
 msgid ""
 "Please start selected game at least once from Steam, then restart SRC Repair."
 msgstr ""
-"Для начала запустите данную игру из Steam хотя бы один раз, затем перезапустите "
-"SRC Repair."
+"Для начала запустите данную игру из Steam хотя бы один раз, затем "
+"перезапустите SRC Repair."
 
-#: ../../source/faq.rst:175
+#: ../../source/faq.rst:162
 msgid ""
-"If that does not help, you have ``-autoconfig`` or ``-dxlevel`` :ref:`command-"
-"line options <gt-params>` enabled."
+"If that does not help, you have ``-autoconfig`` or ``-dxlevel`` :ref:"
+"`command-line options <gt-params>` enabled."
 msgstr ""
-"Если это не помогает, то скорее всего у вас включён :ref:`параметр запуска <gt-"
-"params>` ``-autoconfig`` или ``-dxlevel``."
+"Если это не помогает, то скорее всего у вас включён :ref:`параметр запуска "
+"<gt-params>` ``-autoconfig`` или ``-dxlevel``."
 
-#: ../../source/faq.rst:177 ../../source/faq.rst:189
+#: ../../source/faq.rst:164 ../../source/faq.rst:176
 msgid ""
-"Open command-line :ref:`options editor <gt-setparams>`, remove everything from "
-"this row, then launch the game."
+"Open command-line :ref:`options editor <gt-setparams>`, remove everything "
+"from this row, then launch the game."
 msgstr ""
-"Откройте :ref:`окно изменения <gt-setparams>` параметров запуска и сотрите всё "
-"из данной строки, запустите игру, затем выйдите из неё."
+"Откройте :ref:`окно изменения <gt-setparams>` параметров запуска и сотрите "
+"всё из данной строки, запустите игру, затем выйдите из неё."
 
-#: ../../source/faq.rst:179
+#: ../../source/faq.rst:166
 msgid "Now SRC Repair will load video settings corretly."
 msgstr "Теперь SRC Repair сможет управлять настройками графики."
 
-#: ../../source/faq.rst:185
-msgid "Game do not respect settings set in graphic tweaker. How I can fix this?"
-msgstr "Игра перестала подчиняться заданным настройкам графики. Как это исправить?"
-
-#: ../../source/faq.rst:187
+#: ../../source/faq.rst:172
 msgid ""
-"This is a known issue for all Source Engine games if ``-dxlevel`` :ref:`command-"
-"line option <gt-params>` is set."
+"Game do not respect settings set in graphic tweaker. How I can fix this?"
 msgstr ""
-"Это очень старый баг всех игр на движке Source, который провляется если задан "
-"параметр запуска ``-dxlevel``. Откройте :ref:`окно изменения <gt-setparams>` "
-"параметров запуска и сотрите всё из данной строки. При следующем запуске игра "
-"будет использовать правильные настройки графики."
+"Игра перестала подчиняться заданным настройкам графики. Как это исправить?"
 
-#: ../../source/faq.rst:195
+#: ../../source/faq.rst:174
+msgid ""
+"This is a known issue for all Source Engine games if ``-dxlevel`` :ref:"
+"`command-line option <gt-params>` is set."
+msgstr ""
+"Это очень старый баг всех игр на движке Source, который провляется если "
+"задан параметр запуска ``-dxlevel``. Откройте :ref:`окно изменения <gt-"
+"setparams>` параметров запуска и сотрите всё из данной строки. При следующем "
+"запуске игра будет использовать правильные настройки графики."
+
+#: ../../source/faq.rst:182
 msgid "Garry's Mod cannot use DirectX 8.x mode. How can I fix this?"
 msgstr ""
-"Garry's Mod не использует режим DirectX 8.x после его установки в SRC Repair. "
-"Что делать?"
+"Garry's Mod не использует режим DirectX 8.x после его установки в SRC "
+"Repair. Что делать?"
 
-#: ../../source/faq.rst:197
+#: ../../source/faq.rst:184
 msgid ""
-"DirectX 8.x support was removed from the latest Garry's Mod versions. This game "
-"will always use DirectX 9.0c, regardless of the selected mode in :ref:`graphic "
-"tweaker <gt-type1>`."
+"DirectX 8.x support was removed from the latest Garry's Mod versions. This "
+"game will always use DirectX 9.0c, regardless of the selected mode in :ref:"
+"`graphic tweaker <gt-type1>`."
 msgstr ""
 "В одном из последних обновлений разработчики данной игры вырезали поддержку "
 "DirectX 8.0 и 8.1, поэтому вне зависимости от выбранных опций рендеринга в "
-"модуле :ref:`графических настроек <gt-type1>`, игра всё равно будет использовать "
-"9.0c."
+"модуле :ref:`графических настроек <gt-type1>`, игра всё равно будет "
+"использовать 9.0c."
 
-#: ../../source/faq.rst:203
+#: ../../source/faq.rst:190
 msgid ""
-"Missing eyes after installing FPS-config in Team Fortress 2. How can I fix this?"
+"Missing eyes after installing FPS-config in Team Fortress 2. How can I fix "
+"this?"
 msgstr ""
-"После установки FPS-конфига у персонажей в игре Team Fortress 2 нет глаз. Что "
-"делать?"
+"После установки FPS-конфига у персонажей в игре Team Fortress 2 нет глаз. "
+"Что делать?"
 
-#: ../../source/faq.rst:205
+#: ../../source/faq.rst:192
 msgid ""
-"Most of FPS-configs disable face animations in order to significantly increase "
-"game performance."
+"Most of FPS-configs disable face animations in order to significantly "
+"increase game performance."
 msgstr ""
 "Лицевая анимация потребляет очень много ресурсов, поэтому все FPS конфиги её "
 "полностью отключают."
 
-#: ../../source/faq.rst:206
+#: ../../source/faq.rst:193
 msgid "All FPS-configs are licensed \"as is\". We cannot change them."
 msgstr ""
-"Все FPS-конфиги в SRC Repair поставляются по лицензии \"как есть\", т.е. мы не "
-"имеем права вносить в них каких-либо изменений."
+"Все FPS-конфиги в SRC Repair поставляются по лицензии \"как есть\", т.е. мы "
+"не имеем права вносить в них каких-либо изменений."
 
-#: ../../source/faq.rst:207
+#: ../../source/faq.rst:194
 msgid ""
-"You can enable face animations by switching from ``r_eyes 0`` to ``r_eyes 1``."
+"You can enable face animations by switching from ``r_eyes 0`` to ``r_eyes "
+"1``."
 msgstr ""
 "Снова включить лицевую анимацию можно если изменить значение ``r_eyes 0`` на "
 "``r_eyes 1``."
 
-#: ../../source/faq.rst:213
+#: ../../source/faq.rst:200
 msgid "How I can edit installed FPS-config?"
 msgstr "Как мне отредактировать установленный FPS-конфиг?"
 
-#: ../../source/faq.rst:215
+#: ../../source/faq.rst:202
 msgid ""
 "If you have installed :ref:`FPS-config <fps-about>`, you will see a yellow "
 "exclamation mark in :ref:`Graphic tweaker <graphic-tweaker>` tab."
@@ -337,18 +341,18 @@ msgstr ""
 "страницы :ref:`Графические настройки <graphic-tweaker>` будет отображаться "
 "жёлтый восклицательный знак."
 
-#: ../../source/faq.rst:217
+#: ../../source/faq.rst:204
 msgid ""
 "Press left mouse button on it and select FPS-config to edit by :ref:`Config "
-"editor <config-editor>` or hold **Shift** to edit it by a :ref:`selected text "
-"editor <settings-advanced>`."
+"editor <config-editor>` or hold **Shift** to edit it by a :ref:`selected "
+"text editor <settings-advanced>`."
 msgstr ""
-"Нажмите по нему левой кнопкой мыши и выберите FPS-конфиг для редактирования. Он "
-"будет автоматически загружен в :ref:`Редактор конфигов <config-editor>`. "
+"Нажмите по нему левой кнопкой мыши и выберите FPS-конфиг для редактирования. "
+"Он будет автоматически загружен в :ref:`Редактор конфигов <config-editor>`. "
 "Удерживайте клавишу **Shift**, чтобы использовать :ref:`выбранный текстовый "
 "редактор <settings-advanced>`."
 
-#: ../../source/faq.rst:223
+#: ../../source/faq.rst:210
 msgid ""
 "Why does the description of some FPS-configs say that they are not fully "
 "compatible with the game?"
@@ -356,49 +360,51 @@ msgstr ""
 "Почему в описании некоторых FPS-конфигов сказано, что они не полностью "
 "совместимы с игрой?"
 
-#: ../../source/faq.rst:225
+#: ../../source/faq.rst:212
 msgid ""
 "Some console variables were marked as cheats and cannot be used on servers "
 "without ``sv_cheats 1``."
 msgstr ""
 "Разработчики Source игр постоянно вносят в игру изменения, переименовывают "
-"названия переменных, блокируют работу без установленного ``sv_cheats 1`` и т.д."
+"названия переменных, блокируют работу без установленного ``sv_cheats 1`` и т."
+"д."
 
-#: ../../source/faq.rst:227
+#: ../../source/faq.rst:214
 msgid ""
-"Unfortunately, some authors of FPS-configs have abandoned their configs. You can "
-"still use them, but their effectiveness may be low."
+"Unfortunately, some authors of FPS-configs have abandoned their configs. You "
+"can still use them, but their effectiveness may be low."
 msgstr ""
 "К сожалению, многие авторы FPS конфигов уже давно забросили их поддержку, "
 "поэтому мы соответствующим образом их помечаем. Их использовать можно, но "
 "корректная работа и эффективность не гарантируется."
 
-#: ../../source/faq.rst:233
+#: ../../source/faq.rst:220
 msgid "Why I cannot use FPS-config in a Team Fortress 2 competitive mode?"
 msgstr ""
 "Почему установленный FPS конфиг не работает в соревновательном режиме Team "
 "Fortress 2?"
 
-#: ../../source/faq.rst:235
+#: ../../source/faq.rst:222
 msgid ""
-"Valve have completely disabled all FPS-configs in Team Fortress 2 competitive "
-"mode."
+"Valve have completely disabled all FPS-configs in Team Fortress 2 "
+"competitive mode."
 msgstr ""
 "Так решили Valve, полностью заблокировав возможность изменения графических "
 "настроек в соревновательном режиме."
 
-#: ../../source/faq.rst:241
+#: ../../source/faq.rst:228
 msgid "Cannot download FPS-config or HUD. How can I fix this?"
 msgstr "При загрузке FPS-конфига или HUD появляется ошибка. Что делать?"
 
-#: ../../source/faq.rst:243
+#: ../../source/faq.rst:230
 msgid ""
-"Please open :ref:`program settings <settings>` and enable following checkboxes:"
+"Please open :ref:`program settings <settings>` and enable following "
+"checkboxes:"
 msgstr ""
 "Попробуйте в :ref:`настройках программы <settings>` активировать следующие "
 "опции, установив около них флажок и нажав кнопку **OK**:"
 
-#: ../../source/faq.rst:245
+#: ../../source/faq.rst:232
 msgid ""
 "**Allow download and install latest (untested) HUDs** (:ref:`common settings "
 "<settings-main>` tab) -- should fix issues with downloading HUD files;"
@@ -406,7 +412,7 @@ msgstr ""
 "**Разрешить установку новейших версий HUD** (страница :ref:`общие настройки "
 "<settings-main>`) -- должно решить проблему загрузки файлов HUD;"
 
-#: ../../source/faq.rst:246
+#: ../../source/faq.rst:233
 msgid ""
 "**Use mirrors to download FPS-configs** (:ref:`advanced settings <settings-"
 "advanced>` tab) -- should fix issues with downloading FPS-configs."
@@ -415,8 +421,8 @@ msgstr ""
 "<settings-advanced>`) -- должно решить проблему загрузки файлов FPS-конфигов."
 
 #~ msgid ""
-#~ "`Yes, you can <https://github.com/xvitaly/srcrepair/blob/dev/docs/building-"
-#~ "from-sources.md>`__."
+#~ "`Yes, you can <https://github.com/xvitaly/srcrepair/blob/dev/docs/"
+#~ "building-from-sources.md>`__."
 #~ msgstr ""
-#~ "`Да, вы можете <https://github.com/xvitaly/srcrepair/blob/dev/docs/building-"
-#~ "from-sources.md>`__."
+#~ "`Да, вы можете <https://github.com/xvitaly/srcrepair/blob/dev/docs/"
+#~ "building-from-sources.md>`__."

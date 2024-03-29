@@ -7,27 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 14:56+0100\n"
-"PO-Revision-Date: 2020-03-17 14:59+0100\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"POT-Creation-Date: 2024-03-29 14:32+0100\n"
+"PO-Revision-Date: 2024-03-29 14:36+0100\n"
+"Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/cleanup.rst:23
+#: ../../source/cleanup.rst:10
 msgid "Troubleshooting and cleanup"
 msgstr "Устранение проблем и очистка"
 
-#: ../../source/cleanup.rst:25
+#: ../../source/cleanup.rst:12
 msgid ""
 "With tools, presented on this page, you can resolve most of the known Steam "
 "and Source Engine games issues. Also you can clean up garbage, accumulated "
@@ -38,11 +35,11 @@ msgstr ""
 "а также очищать выбранную игру от различного мусора, который накапливается "
 "при её использовании."
 
-#: ../../source/cleanup.rst:31
+#: ../../source/cleanup.rst:18
 msgid "Troubleshooting and recovery"
 msgstr "Устранение проблем и восстановление"
 
-#: ../../source/cleanup.rst:33
+#: ../../source/cleanup.rst:20
 msgid ""
 "To run Steam client recovery, enable **Clean .blob files from Steam "
 "directory** or/and **Clean all registry entries** (require admin rights; not "
@@ -54,21 +51,21 @@ msgstr ""
 "хранящиеся в реестре** (недоступно на платформах, отличных от Microsoft "
 "Windows) и нажать кнопку **Выполнить!**."
 
-#: ../../source/cleanup.rst:35
+#: ../../source/cleanup.rst:22
 msgid "Warning! Steam client will be automatically terminated (if running)."
 msgstr ""
 "Внимание! После нажатия кнопки **Выполнить**, все процессы Steam будут "
 "автоматически завершены (если он был запущен)."
 
-#: ../../source/cleanup.rst:37
+#: ../../source/cleanup.rst:24
 msgid "Known issues, can be resolved by this tool:"
 msgstr "Известные проблемы, исправляемые данным модулем:"
 
-#: ../../source/cleanup.rst:39
+#: ../../source/cleanup.rst:26
 msgid "Steam logon errors;"
 msgstr "ошибки входа в Steam;"
 
-#: ../../source/cleanup.rst:40
+#: ../../source/cleanup.rst:27
 msgid ""
 "errors like **Steam servers are not available**, **This game is not "
 "available at this time**, **No Steam connection**, **Could not connect to "
@@ -77,19 +74,19 @@ msgstr ""
 "ошибки типа **Серверы Steam перегружены**, **Эта игра недоступна в настоящее "
 "время**, **Ошибка подключения к серверам Steam**;"
 
-#: ../../source/cleanup.rst:41
+#: ../../source/cleanup.rst:28
 msgid "endless Steam connection to servers;"
 msgstr ""
 "ошибки бесконечного подключения к серверам (Steam делает вид, что "
 "подключается, но ничего не происходит);"
 
-#: ../../source/cleanup.rst:42
+#: ../../source/cleanup.rst:29
 msgid "some issues, related to Friends system;"
 msgstr ""
 "ошибки, связанные со списком друзей (например, после выхода из игры статус "
 "остаётся **В игре** и не меняется длительное время и т.д.);"
 
-#: ../../source/cleanup.rst:43
+#: ../../source/cleanup.rst:30
 msgid ""
 "damaged Steam installation (after running this, Steam client will be re-"
 "downloaded from official servers);"
@@ -97,15 +94,15 @@ msgstr ""
 "повреждённые файлы Steam, например, после неправильного выхода из него за "
 "счёт их принудительного обновления с официальных серверов;"
 
-#: ../../source/cleanup.rst:44
+#: ../../source/cleanup.rst:31
 msgid "some other issues."
 msgstr "множество других ошибок."
 
-#: ../../source/cleanup.rst:50
+#: ../../source/cleanup.rst:37
 msgid "Principle of operation"
 msgstr "Принцип работы инструмента восстановления"
 
-#: ../../source/cleanup.rst:52
+#: ../../source/cleanup.rst:39
 msgid ""
 "If **Clean .blob files from Steam directory** is checked, SRC Repair will "
 "get Steam installation directory path, find and remove files with .blob "
@@ -119,7 +116,7 @@ msgstr ""
 "обновления Steam потребует повторно авторизоваться в сервисе, т.к. файлы "
 "blob, содержащие служебную информацию, были удалены."
 
-#: ../../source/cleanup.rst:53
+#: ../../source/cleanup.rst:40
 msgid ""
 "If **Clean all registry entries** is checked, SRC Repair will remove "
 "``HKEY_CURRENT_USER\\Software\\Valve\\Steam`` registry key, modify some "
@@ -128,18 +125,18 @@ msgid ""
 "to select Steam language from list."
 msgstr ""
 "При выборе пункта **Очистить записи Steam, хранящиеся в реестре**, программа "
-"удаляет содержимое ключа реестра ``HKEY_CURRENT_USER\\Software\\Valve"
-"\\Steam``, модифицирует содержимое ``HKEY_LOCAL_MACHINE\\Software\\Valve"
-"\\Steam``, исправляя известные ошибки в них, а также указывает Steam при "
-"следующем запуске запуститься в режиме восстановления. При выборе этой "
-"опции, нужно обязательно указать язык, который будет использовать внутри "
-"интерфейса Steam."
+"удаляет содержимое ключа реестра "
+"``HKEY_CURRENT_USER\\Software\\Valve\\Steam``, модифицирует содержимое "
+"``HKEY_LOCAL_MACHINE\\Software\\Valve\\Steam``, исправляя известные ошибки в "
+"них, а также указывает Steam при следующем запуске запуститься в режиме "
+"восстановления. При выборе этой опции, нужно обязательно указать язык, "
+"который будет использовать внутри интерфейса Steam."
 
-#: ../../source/cleanup.rst:59
+#: ../../source/cleanup.rst:46
 msgid "Installation path checker"
 msgstr "Служба обнаружения некорректного пути"
 
-#: ../../source/cleanup.rst:61
+#: ../../source/cleanup.rst:48
 msgid ""
 "This tool will automatically check for restricted (non-ASCII) symbols in "
 "Steam installation directory path. Steam path should contain only latin "
@@ -150,7 +147,7 @@ msgstr ""
 "немецких, французских и т.д. букв, а также прочих символов юникода. Данные "
 "символы создают проблемы при запуске некоторых игр, не поддерживающих юникод."
 
-#: ../../source/cleanup.rst:63
+#: ../../source/cleanup.rst:50
 msgid ""
 "If any restricted symbols were found, a warning message will be shown. Also "
 "you will see a red sign in **General information** section."
@@ -159,17 +156,17 @@ msgstr ""
 "также вы увидите красный значок в группе **Информация о текущей установке "
 "Steam**."
 
-#: ../../source/cleanup.rst:65
+#: ../../source/cleanup.rst:52
 msgid "This tool starts automatically with SRC Repair and cannot be disabled."
 msgstr ""
 "Данная служба запускается автоматически при каждом запуске SRC Repair и не "
 "может быть отключена."
 
-#: ../../source/cleanup.rst:71
+#: ../../source/cleanup.rst:58
 msgid "Game cleanup wizard"
 msgstr "Служба очистки игр и удаления ненужных данных"
 
-#: ../../source/cleanup.rst:73
+#: ../../source/cleanup.rst:60
 msgid ""
 "This tool allow you to clean up garbage, accumulated in game on regular "
 "daily use. It can free-up lots of disk space."
@@ -178,7 +175,7 @@ msgstr ""
 "устаревшие данные и кэши, которые способны занимать на жёстком диске "
 "несколько сотен мегабайт свободного места."
 
-#: ../../source/cleanup.rst:75
+#: ../../source/cleanup.rst:62
 msgid ""
 "After selecting cleanup action, :ref:`safe clean window <modules-cleanup>` "
 "will appear. You can manually check the list of files, marked to deletion."
@@ -187,7 +184,7 @@ msgstr ""
 "выдаст :ref:`отдельное окно модуля очистки <modules-cleanup>`, в котором вы "
 "сможете просмотреть список файлов, помеченных для удаления."
 
-#: ../../source/cleanup.rst:77
+#: ../../source/cleanup.rst:64
 msgid ""
 "If you don't want to remove some file, uncheck checkbox near its name. All "
 "marked files will be removed."
@@ -195,7 +192,7 @@ msgstr ""
 "Если около имени файла стоит флажок, значит он будет удалён при запуске "
 "очистки. Чтобы оставить файл, просто уберите флажок около него."
 
-#: ../../source/cleanup.rst:79
+#: ../../source/cleanup.rst:66
 msgid ""
 "When done, press **Execute cleanup** button to run cleanup sequence. If you "
 "changed your mind  -- press **Cancel**."
@@ -203,12 +200,12 @@ msgstr ""
 "Для запуска очистки нажмите кнопку **Выполнить очистку**, а для выхода без "
 "очистки -- **Отмена**."
 
-#: ../../source/cleanup.rst:81
+#: ../../source/cleanup.rst:68
 msgid "Currently supported by SRC Repair cleanu actions:"
 msgstr ""
 "В настоящее время SRC Repair способен выполнять следующие варианты очистки:"
 
-#: ../../source/cleanup.rst:83
+#: ../../source/cleanup.rst:70
 msgid ""
 "**custom maps** -- remove downloaded or installed custom maps. This will "
 "free lots of disk space and can speed-up game startup;"
@@ -218,7 +215,7 @@ msgstr ""
 "считывает чтобы добавить в список доступных карт) и освободить много места "
 "на жёстком диске (от нескольких сотен мегабайт до нескольких гигабайт);"
 
-#: ../../source/cleanup.rst:84
+#: ../../source/cleanup.rst:71
 msgid ""
 "**download cache** -- remove downloaded from game servers data: personal "
 "sprays of all players, you ever seen on servers, different partial "
@@ -231,7 +228,7 @@ msgstr ""
 "Способен занимать сотни мегабайт. Содержит абсолютно ненужные данные. "
 "Рекомендуется очищать несколько раз в месяц;"
 
-#: ../../source/cleanup.rst:85
+#: ../../source/cleanup.rst:72
 msgid ""
 "**custom directory** -- remove installed custom modifications from ``/"
 "custom`` directory (only if supported by game);"
@@ -239,19 +236,19 @@ msgstr ""
 "**кастомный каталог** -- удаляет все установленные нестандартные модификации "
 "игры, расположенные в ``/custom`` (если поддерживается выбранной игрой);"
 
-#: ../../source/cleanup.rst:86
+#: ../../source/cleanup.rst:73
 msgid "**custom sounds** -- remove sound files downloaded from game servers;"
 msgstr ""
 "**кастомные звуки** -- очищает загруженные с серверов и установленные "
 "пользователем нестандартные звуковые файлы;"
 
-#: ../../source/cleanup.rst:87
+#: ../../source/cleanup.rst:74
 msgid "**FPS-configs** -- remove installed :ref:`FPS-configs <fps-about>`;"
 msgstr ""
 "**FPS-конфиги** -- позволяет удалить все установленные :ref:`FPS-конфиги "
 "<fps-about>`;"
 
-#: ../../source/cleanup.rst:88
+#: ../../source/cleanup.rst:75
 msgid ""
 "**graph and sound cache** -- remove sound and graphic caches, created by "
 "game. It can fix some issues. Will be automatically created on next game "
@@ -261,7 +258,7 @@ msgstr ""
 "случаях его повреждения, либо для оптимизации. Кэш будет создан заново при "
 "следующем запуске игры;"
 
-#: ../../source/cleanup.rst:89
+#: ../../source/cleanup.rst:76
 msgid ""
 "**secondary cache** -- remove downloaded from game servers cache files. We "
 "recommend to run this cleanup at least once a month;"
@@ -269,7 +266,7 @@ msgstr ""
 "**вторичный кэш** -- содержит данные, скачанные с игровых серверов. "
 "Рекомендуется очищать несколько раз в месяц;"
 
-#: ../../source/cleanup.rst:90
+#: ../../source/cleanup.rst:77
 msgid ""
 "**screenshots** -- remove screenshots from ``/screenshots`` directory. Can "
 "free-up lots of disk space;"
@@ -278,7 +275,7 @@ msgstr ""
 "скриншотов способно освободить от нескольких сотен мегабайт до десятка "
 "гигабайт места на диске;"
 
-#: ../../source/cleanup.rst:91
+#: ../../source/cleanup.rst:78
 msgid ""
 "**recorded demos** -- remove downloaded or installed demo files (files \\*."
 "dem) from game directory;"
@@ -287,7 +284,7 @@ msgstr ""
 "(файлы \\*.dem), находящиеся в каталоге игры. Это способно освободить от "
 "нескольких десятков до нескольких сотен мегабайт места на диске;"
 
-#: ../../source/cleanup.rst:92
+#: ../../source/cleanup.rst:79
 msgid ""
 "**models and textures** -- remove models and textures downloaded from game "
 "servers or installed by different custom modifications;"
@@ -295,7 +292,7 @@ msgstr ""
 "**модели и текстуры** -- позволяет удалить нестандартные текстуры и модели, "
 "установленные пользователем, либо скачанные с игровых серверов;"
 
-#: ../../source/cleanup.rst:93
+#: ../../source/cleanup.rst:80
 msgid ""
 "**deep cleanup** -- try to remove all garbage from game at once. You "
 "**must** run game :ref:`cache verification <cleanup-advanced>` after running "
@@ -305,18 +302,18 @@ msgstr ""
 "старых бинарников, кэшей и конфигов. По окончании **необходимо** запустить :"
 "ref:`проверку целостности кэша <cleanup-advanced>`;"
 
-#: ../../source/cleanup.rst:94
+#: ../../source/cleanup.rst:81
 msgid ""
 "**replays** -- remove files, created by Replays system (only if supported by "
 "game)."
 msgstr ""
 "**реплеи (повторы)** -- удаляет файлы и кэши, созданные системой Replay."
 
-#: ../../source/cleanup.rst:100
+#: ../../source/cleanup.rst:87
 msgid "Deep cleanup"
 msgstr "Служба специальной очистки"
 
-#: ../../source/cleanup.rst:102
+#: ../../source/cleanup.rst:89
 msgid ""
 "**Clean game settings (+video)** -- reset all in-game video settings. Backup "
 "file will be created."
@@ -325,7 +322,7 @@ msgstr ""
 "прочие настройки управляемой игры. Перед удалением будет создана резервная "
 "копия."
 
-#: ../../source/cleanup.rst:103
+#: ../../source/cleanup.rst:90
 msgid ""
 "**Remove all binaries and launchers** -- remove game binaries and launchers "
 "(contents of ``/bin``, ``/{game}/bin`` directories and ``/hl2.exe`` file). "
@@ -339,7 +336,7 @@ msgstr ""
 "ошибкой. Данный вариант полностью безопасен. После окончания очистки "
 "запустите проверку целостности кэша."
 
-#: ../../source/cleanup.rst:104
+#: ../../source/cleanup.rst:91
 msgid ""
 "**Validate game cache files** -- force game cache verification. Will check "
 "all game files and re-download corrupted or missing. You must run this "

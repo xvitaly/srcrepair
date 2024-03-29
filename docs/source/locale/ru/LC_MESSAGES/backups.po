@@ -7,24 +7,24 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-17 14:56+0100\n"
-"PO-Revision-Date: 2020-03-17 14:58+0100\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"POT-Creation-Date: 2024-03-29 14:32+0100\n"
+"PO-Revision-Date: 2024-03-29 14:35+0100\n"
+"Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"Generated-By: Babel 2.7.0\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../../..\n"
+"X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/backups.rst:23
+#: ../../source/backups.rst:10
 msgid "BackUps Manager"
 msgstr "Управление резервными копиями"
 
-#: ../../source/backups.rst:25
+#: ../../source/backups.rst:12
 msgid ""
 "On this tab you can view, remove or restore backups, created by program."
 msgstr ""
@@ -32,11 +32,11 @@ msgstr ""
 "создать и восстановить резервные копии разделов реестра, отвечающих за "
 "текущую выбранную игру, Steam и все Source игры."
 
-#: ../../source/backups.rst:31
+#: ../../source/backups.rst:18
 msgid "Managing backup files"
 msgstr "Управление резервными копиями"
 
-#: ../../source/backups.rst:33
+#: ../../source/backups.rst:20
 msgid ""
 "When safe cleanup is on (green light in status bar), application will "
 "automatically create backup files for the most performed actions."
@@ -45,13 +45,13 @@ msgstr ""
 "зелёным), каждое действие программы создаёт резервную копию, которую можно в "
 "любой момент восстановить, либо удалить."
 
-#: ../../source/backups.rst:35
+#: ../../source/backups.rst:22
 msgid "You can select multiple backups by pressing **Ctrl** or **Shift**."
 msgstr ""
 "Допускается восстанавливать и удалять сразу несколько копий. Для этого можно "
 "их выделять с нажатой клавишей **Ctrl**, либо **Shift**."
 
-#: ../../source/backups.rst:37
+#: ../../source/backups.rst:24
 msgid ""
 "Plain text backup files can be viewed or edited by a :ref:`default text "
 "editor <settings-advanced>`. Just select such file and press **Edit in "
@@ -61,17 +61,17 @@ msgstr ""
 "`текстовом редакторе по умолчанию <settings-advanced>` посредством нажатия "
 "кнопки **Открыть в текстовом редакторе** на панели инструментов."
 
-#: ../../source/backups.rst:39
+#: ../../source/backups.rst:26
 msgid "Binary files with **bud** extension can be opened by any Zip-archiver."
 msgstr ""
 "Бинарные файлы резервных копий с расширением **bud** могут быть загружены в "
 "любом архиваторе."
 
-#: ../../source/backups.rst:45
+#: ../../source/backups.rst:32
 msgid "BackUp types"
 msgstr "Типы резервных копий"
 
-#: ../../source/backups.rst:47
+#: ../../source/backups.rst:34
 msgid ""
 "Typical backup file name ``Container_UNIXTIME.bud`` consists of prefix "
 "**Container**, **UNIXTIME** -- current datetime in UnixTime format and "
@@ -81,7 +81,7 @@ msgstr ""
 "префикса **Container**, **UNIXTIME** -- текущего времени на момент создания "
 "файла в формате UnixTime, а также расширения **bud**."
 
-#: ../../source/backups.rst:49
+#: ../../source/backups.rst:36
 msgid ""
 "BUD-files are standard Zip-archives, which contains removed by program files "
 "with keeping the original directory hierarchy."
@@ -89,7 +89,7 @@ msgstr ""
 "BUD-файлы представляют собой стандартные Zip-архивы, состоящие из удалённых "
 "программой файлов с сохранением полной иерахии каталогов."
 
-#: ../../source/backups.rst:51
+#: ../../source/backups.rst:38
 msgid ""
 "The names of the registry backup files (only in version for Microsoft "
 "Windows) are generated as follows:"
@@ -97,19 +97,19 @@ msgstr ""
 "Имена файлов резервных копий реестра (только в версии под ОС Microsoft "
 "Windows) генерируется следующим образом:"
 
-#: ../../source/backups.rst:53
+#: ../../source/backups.rst:40
 msgid ""
 "``Game_AutoBackUp_UNIXTIME.reg`` -- automatic backup of game video settings;"
 msgstr ""
 "``Game_AutoBackUp_UNIXTIME.reg`` -- автоматический бэкап графических "
 "настроек игры;"
 
-#: ../../source/backups.rst:54
+#: ../../source/backups.rst:41
 msgid "``Game_Options_UNIXTIME.reg`` -- manual backup of game video settings;"
 msgstr ""
 "``Game_Options_UNIXTIME.reg`` -- ручной бэкап графических настроек игры;"
 
-#: ../../source/backups.rst:55
+#: ../../source/backups.rst:42
 msgid ""
 "``Source_Options_UNIXTIME.reg`` -- manual backup of all Source Engine games "
 "video settings;"
@@ -117,7 +117,7 @@ msgstr ""
 "``Source_Options_UNIXTIME.reg`` -- бэкап графических настроек всех Source-"
 "игр, хранящихся в реестре;"
 
-#: ../../source/backups.rst:56
+#: ../../source/backups.rst:43
 msgid ""
 "``Steam_BackUp_UNIXTIME.reg`` -- manual backup of all Steam settings, stored "
 "in Windows registry."
@@ -125,19 +125,19 @@ msgstr ""
 "``Steam_BackUp_UNIXTIME.reg`` -- бэкап всех настроек Steam, хранящихся в "
 "реестре."
 
-#: ../../source/backups.rst:62
+#: ../../source/backups.rst:49
 msgid "Backup storage"
 msgstr "Хранение резервных копий"
 
-#: ../../source/backups.rst:64
+#: ../../source/backups.rst:51
 msgid ""
 "All backup files are stored in ``%APPDATA%\\SRC Repair\\backups`` directory, "
 "in subdirectories for each game."
 msgstr ""
-"Все файлы резервных копий хранятся в каталоге ``%APPDATA%\\SRC Repair"
-"\\backups``, в подкаталоге по короткому названию игры."
+"Все файлы резервных копий хранятся в каталоге ``%APPDATA%\\SRC "
+"Repair\\backups``, в подкаталоге по короткому названию игры."
 
-#: ../../source/backups.rst:66
+#: ../../source/backups.rst:53
 msgid ""
 "The number of backups is not limited, so don't forget to remove them "
 "manually. No automatic removal will be performed."
@@ -146,7 +146,7 @@ msgstr ""
 "наличия свободного места на диске, с которого запускается программа. "
 "Автоматическое удаление не производится."
 
-#: ../../source/backups.rst:68
+#: ../../source/backups.rst:55
 msgid ""
 "Old backup files (older than 30 days) will be highlighted in list for your "
 "convenience (it can be disabled in :ref:`settings <settings-main>`)."
@@ -155,11 +155,11 @@ msgstr ""
 "для удобства их визуального поиска и последующего удаления (может быть "
 "отключено в :ref:`настройках программы <settings-main>`)."
 
-#: ../../source/backups.rst:74
+#: ../../source/backups.rst:61
 msgid "Backup restoration"
 msgstr "Восстановление резервных копий"
 
-#: ../../source/backups.rst:76
+#: ../../source/backups.rst:63
 msgid ""
 "If you want to restore backup, just select file (or files) from the list and "
 "press **Restore selected backup** button on the main toolbar."
@@ -168,15 +168,15 @@ msgstr ""
 "строки) из списка и нажмите на панели инструментов программы кнопку "
 "**Восстановить выбранную резервную копию**."
 
-#: ../../source/backups.rst:78
+#: ../../source/backups.rst:65
 msgid "Confirm restoration."
 msgstr "Подтвердите восстановление."
 
-#: ../../source/backups.rst:84
+#: ../../source/backups.rst:71
 msgid "Backup removal"
 msgstr "Удаление резервных копий"
 
-#: ../../source/backups.rst:86
+#: ../../source/backups.rst:73
 msgid ""
 "If you want to remove backup, just select file (or files) from the list and "
 "press **Remove selected backup** button on the main toolbar."
@@ -185,15 +185,15 @@ msgstr ""
 "строки) из списка и нажмите на панели инструментов программы кнопку "
 "**Удалить выбранную резервную копию**."
 
-#: ../../source/backups.rst:88
+#: ../../source/backups.rst:75
 msgid "Confirm deletion. Removed files cannot be restored!"
 msgstr "Подтвердите удаление. Удалённые файлы невозможно восстановить!"
 
-#: ../../source/backups.rst:94
+#: ../../source/backups.rst:81
 msgid "Creating registry backups"
 msgstr "Создание резервных копий реестра"
 
-#: ../../source/backups.rst:96
+#: ../../source/backups.rst:83
 msgid ""
 "If you want to create backup of video settings, video settings of all Source "
 "Engine games or Steam settings, stored in Windows registry, press button "

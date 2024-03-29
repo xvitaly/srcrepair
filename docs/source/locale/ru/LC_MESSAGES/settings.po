@@ -7,37 +7,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-28 13:38+0100\n"
-"PO-Revision-Date: 2020-12-28 13:38+0100\n"
-"Last-Translator: Vitaly Zaitsev <vitaly@easycoding.org>\n"
+"POT-Creation-Date: 2024-03-29 14:32+0100\n"
+"PO-Revision-Date: 2024-03-29 14:44+0100\n"
+"Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: ../../source/settings.rst:23
+#: ../../source/settings.rst:10
 msgid "Program settings"
 msgstr "Настройки программы"
 
-#: ../../source/settings.rst:29
+#: ../../source/settings.rst:16
 msgid "Common settings"
 msgstr "Общие настройки программы"
 
-#: ../../source/settings.rst:31
+#: ../../source/settings.rst:18
 msgid "**Confirm exit** -- enable or disable exit confirmation dialog."
 msgstr ""
 "**Подтверждать выход из программы** -- включает или отключает запрос на "
 "подтверждение выхода из программы."
 
-#: ../../source/settings.rst:32
+#: ../../source/settings.rst:19
 msgid ""
 "**Hide unsupported by application games** -- if enabled, partially supported "
 "games will not be shown."
@@ -46,7 +43,7 @@ msgstr ""
 "поддерживаемые игры будут скрыты из списка даже если они корректно "
 "установлены в Steam."
 
-#: ../../source/settings.rst:33
+#: ../../source/settings.rst:20
 msgid ""
 "**Auto-highlight old backup files** -- enable or disable highlighting of "
 "older than 30 days files on :ref:`backups page <backups>`."
@@ -55,7 +52,7 @@ msgstr ""
 "подсветку жёлтым цветом старых резервных копий на :ref:`одноимённой странице "
 "<backups>`, которые хранятся более 30 дней."
 
-#: ../../source/settings.rst:34
+#: ../../source/settings.rst:21
 msgid ""
 "**Compress files to zip before deletion** -- if enabled, backups for all "
 "removed by :ref:`cleanup module <cleanup-wizard>` files will be created. Not "
@@ -68,7 +65,7 @@ msgstr ""
 "к. это, во-первых, замедлит работу модуля очистки программы, а, во-вторых, "
 "приведёт к хранению ненужных данных на диске."
 
-#: ../../source/settings.rst:35
+#: ../../source/settings.rst:22
 msgid ""
 "**Remove empty directories after safe cleanup** -- enable or disable "
 "automatic removal of empty directories after running :ref:`cleanup process "
@@ -78,7 +75,7 @@ msgstr ""
 "удаляет пустые каталоги, которые остались в результате :ref:`очистки "
 "<cleanup-wizard>`."
 
-#: ../../source/settings.rst:36
+#: ../../source/settings.rst:23
 msgid ""
 "**Allow download and install latest (untested) HUDs** -- if enabled, :ref:"
 "`HUD manager <hud-manager>` will try to download latest versions of HUDs "
@@ -90,11 +87,11 @@ msgstr ""
 "привести к установке не до конца протестированных нестабильных версий. "
 "Следует использовать с осторожностью."
 
-#: ../../source/settings.rst:42
+#: ../../source/settings.rst:29
 msgid "Advances settings"
 msgstr "Дополнительные настройки программы"
 
-#: ../../source/settings.rst:44
+#: ../../source/settings.rst:31
 msgid ""
 "**Allow unsafe cleanup operations** -- allow some unsafe methods for :ref:"
 "`cleanup module <cleanup-wizard>`. It will find and remove more files, but "
@@ -108,7 +105,7 @@ msgstr ""
 "настоятельно рекомендуется по завершении процесса очистки выполнять :ref:"
 "`проверку целостности кэша <cleanup-advanced>`."
 
-#: ../../source/settings.rst:45
+#: ../../source/settings.rst:32
 msgid ""
 "**Automatically check for updates** -- enable or disable checking for "
 "updates on program startup (once a week)."
@@ -116,7 +113,7 @@ msgstr ""
 "**Проверять обновления при запуске** -- включает или отключает встроенный "
 "модуль автоматической проверки наличия новых версий программы."
 
-#: ../../source/settings.rst:46
+#: ../../source/settings.rst:33
 msgid ""
 "**Don't show outdated HUDs** -- if enabled, :ref:`HUD Manager <hud-manager>` "
 "will show outdated versions of HUDs. We do not recommend to install them."
@@ -125,7 +122,7 @@ msgstr ""
 "списке :ref:`установленных HUD <hud-manager>` устаревших версий, однако их "
 "установка и дальнейшее использование не рекомендуется."
 
-#: ../../source/settings.rst:47
+#: ../../source/settings.rst:34
 msgid ""
 "**Text editor binary** -- select text editor to load and edit text files "
 "instead of using default one. Press **Browse** button and find its "
@@ -135,7 +132,7 @@ msgstr ""
 "который будет использоваться для отображения и редактирования текстовых "
 "файлов. Для выбора достаточно нажать кнопку **Обзор** и найти его на диске."
 
-#: ../../source/settings.rst:48
+#: ../../source/settings.rst:35
 msgid ""
 "**Custom directory name** -- specify directory name for custom stuff "
 "installation (only for games with its support)."
