@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-29 14:32+0100\n"
-"PO-Revision-Date: 2024-03-29 14:38+0100\n"
+"POT-Creation-Date: 2024-03-29 14:47+0100\n"
+"PO-Revision-Date: 2024-03-29 14:48+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -46,7 +46,7 @@ msgstr "Подготовка к сборке"
 
 #: ../../source/development.rst:26
 msgid ""
-"Clone this repository or download a source tarball from `releases page "
+"Clone this repository or download the source tarball from the `releases page "
 "<https://github.com/xvitaly/srcrepair/releases>`_."
 msgstr ""
 "Клонируйте репозиторий с исходными кодами программы при помощи Git клиента, "
@@ -73,7 +73,7 @@ msgstr ""
 
 #: ../../source/development.rst:34
 msgid ""
-"download `Microsoft Visual Studio 2022 Community <https://visualstudio."
+"download the `Microsoft Visual Studio 2022 Community <https://visualstudio."
 "microsoft.com/vs/community/>`_ installer and run it;"
 msgstr ""
 "скачайте программу установки `Microsoft Visual Studio 2022 Community "
@@ -81,9 +81,9 @@ msgstr ""
 
 #: ../../source/development.rst:35
 msgid ""
-"select **Microsoft Visual Studio 2022 Community**, enable **Classic .NET "
-"application development** component, then switch to **Additional "
-"components** tab and enable **NuGet package manager**;"
+"select the **Microsoft Visual Studio 2022 Community**, enable the **Classic ."
+"NET application development** component, then switch to the **Additional "
+"components** tab and enable the **NuGet package manager**;"
 msgstr ""
 "выберите **Microsoft Visual Studio 2022 Community**, установите флажок около "
 "компонента **Разработка классических приложений .NET**, перейдите на "
@@ -91,30 +91,27 @@ msgstr ""
 "менеджер NuGet**;"
 
 #: ../../source/development.rst:36
-msgid "install Microsoft Visual Studio 2022 Community;"
+msgid "install the Microsoft Visual Studio 2022 Community;"
 msgstr "установите Microsoft Visual Studio 2022 Community;"
 
 #: ../../source/development.rst:37
 msgid ""
 "download the latest version of `NuGet CLI <https://www.nuget.org/"
-"downloads>`_ and copy executable to any directory, located in ``%PATH%`` "
-"environment variable;"
+"downloads>`_ and copy its executable to any directory, located in the "
+"``%PATH%`` environment variable;"
 msgstr ""
 "скачайте самую свежую версию `утилиты NuGet <https://www.nuget.org/"
 "downloads>`_ и скопируйте EXE-файл в любой каталог, указанный внутри "
 "переменной окружения ``%PATH%``;"
 
 #: ../../source/development.rst:38
-msgid ""
-"download and install `HTML Help Workshop <https://www.microsoft.com/en-us/"
-"download/details.aspx?id=21138>`_;"
+msgid "download and install HTML Help Workshop from any trusted source;"
 msgstr ""
-"скачайте и установите `HTML Help Workshop <https://www.microsoft.com/en-us/"
-"download/details.aspx?id=21138>`_;"
+"скачайте и установите HTML Help Workshop из любого надёжного источника;"
 
 #: ../../source/development.rst:39
 msgid ""
-"download and install `Gpg4Win <https://www.gpg4win.org/>`_ to a default "
+"download and install `Gpg4Win <https://www.gpg4win.org/>`_ to default "
 "directory;"
 msgstr ""
 "скачайте и установите `Gpg4Win <https://www.gpg4win.org/>`_ в каталог по "
@@ -138,17 +135,17 @@ msgstr ""
 #: ../../source/development.rst:42
 msgid ""
 "download and install `7-Zip for Windows <https://www.7-zip.org/download."
-"html>`_ to a default directory;"
+"html>`_ to default directory;"
 msgstr ""
 "скачайте и установите `7-Zip для Windows <https://www.7-zip.org/download."
 "html>`_ в каталог по умолчанию;"
 
 #: ../../source/development.rst:43
 msgid ""
-"download and install `InnoSetup 6 <http://www.jrsoftware.org/isdl.php>`_ to "
-"a default directory."
+"download and install `InnoSetup <https://jrsoftware.org/isdl.php>`_ to "
+"default directory."
 msgstr ""
-"скачайте и установите `InnoSetup 6 <http://www.jrsoftware.org/isdl.php>`_ в "
+"скачайте и установите `InnoSetup <https://jrsoftware.org/isdl.php>`_ в "
 "каталог по умолчанию."
 
 #: ../../source/development.rst:46
@@ -156,7 +153,7 @@ msgid "Automatic build"
 msgstr "Автоматическая сборка"
 
 #: ../../source/development.rst:48
-msgid "If you want to use automatic build, follow this steps:"
+msgid "If you want to use automatic build, follow these steps:"
 msgstr ""
 "Если вы хотите использовать автоматическую сборку, просто выполните "
 "следующие действия:"
@@ -166,12 +163,12 @@ msgid "install pre-requirements;"
 msgstr "установите все указанные выше зависимости;"
 
 #: ../../source/development.rst:51
-msgid "double click on ``packaging/build_win.cmd``."
+msgid "double click on the ``packaging/build_win.cmd`` script."
 msgstr ""
 "дважды кликните в Проводнике Windows по файлу ``packaging/build_win.cmd``."
 
 #: ../../source/development.rst:53 ../../source/development.rst:80
-msgid "You will find results in a ``packaging/results`` directory."
+msgid "You will find results in the ``packaging/results`` directory."
 msgstr "Результат сборки можно найти в каталоге ``packaging/results``."
 
 #: ../../source/development.rst:56
@@ -191,7 +188,7 @@ msgid "Building main project"
 msgstr "Сборка основного проекта"
 
 #: ../../source/development.rst:63
-msgid "Start Microsoft Visual Studio 2022 Community."
+msgid "Start the Microsoft Visual Studio 2022 Community."
 msgstr ""
 "Запустите интегрированную среду разработки Microsoft Visual Studio 2022 "
 "Community."
@@ -225,8 +222,8 @@ msgid "**Build** -- **Build solution**."
 msgstr "**Построение** -- **Построить решение**."
 
 #: ../../source/development.rst:69
-msgid "You will find results in a ``srcrepair/bin/Release`` directory."
-msgstr "Результат сборки можно найти в каталоге ``srcrepair/bin/Release``."
+msgid "You will find results in the ``src/srcrepair/bin/Release`` directory."
+msgstr "Результат сборки можно найти в каталоге ``src/srcrepair/bin/Release``."
 
 #: ../../source/development.rst:72
 msgid "Building installer"
@@ -237,7 +234,7 @@ msgid "Run InnoSetup Compiler."
 msgstr "Запустите InnoSetup Compiler."
 
 #: ../../source/development.rst:75
-msgid "Open file ``packaging/inno/srcrepair.iss``."
+msgid "Open the ``packaging/inno/srcrepair.iss`` file."
 msgstr "Откройте файл ``packaging/inno/srcrepair.iss``."
 
 #: ../../source/development.rst:76
@@ -246,9 +243,9 @@ msgstr "Выберите **Build** -- **Compile**."
 
 #: ../../source/development.rst:78
 msgid ""
-"If InnoSetup will complain about missing ``*.sig`` files, you will need to "
-"manually sign (use detached signatures) compiled binaries with GnuPG by "
-"using Gpg4Win, or remove this rows from InnoSetup script."
+"If the InnoSetup will complain about missing ``*.sig`` files, you will need "
+"to manually sign (use detached signatures) compiled binaries with GnuPG by "
+"using Gpg4Win, or remove these rows from the InnoSetup script."
 msgstr ""
 "Если компилятор InnoSetup будет жаловаться на отсутствие ``*.sig`` файлов, "
 "вам придётся самостоятельно подписать при помощи GnuPG (входит в набор "
