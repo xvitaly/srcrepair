@@ -9,7 +9,7 @@
 HUD manager
 **********************************
 
-.. index:: hud, hud manager
+.. index:: hud manager
 .. _hud-about:
 
 HUD manager
@@ -23,7 +23,7 @@ All HUDs are being downloaded from our cloud and licensed "as is".
 
 This module will be unavailable if current game does not support custom HUDs.
 
-.. index:: hud, hud installation
+.. index:: hud installation
 .. _hud-install:
 
 HUD installation
@@ -35,7 +35,7 @@ All required files will be downloaded and installed automatically.
 
 Do not install more than one HUD because it can lead to unpredictable consequences.
 
-.. index:: hud, hud unintallation
+.. index:: hud unintallation
 .. _hud-uninstall:
 
 HUD uninstallation
@@ -45,7 +45,7 @@ To remove HUD, select it from the list of available HUDs, press **Remove selecte
 
 This action available only for installed HUDs.
 
-.. index:: hud, hud updates, reinstalling hud
+.. index:: hud updates, reinstalling hud
 .. _hud-update:
 
 Updating installed HUD
@@ -55,7 +55,7 @@ To update or reinstall installed HUD, select it from the list of available HUDs,
 
 Warning! All custom changes in installed HUD will be permanently lost.
 
-.. index:: hud, hud homepage, hud controls, hud buttons
+.. index:: hud homepage, hud controls, hud buttons
 .. _hud-other:
 
 Additional HUD manager buttons

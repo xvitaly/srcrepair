@@ -11,7 +11,7 @@ Config editor
 
 Game configuration file editor (config editor) allow you to easily create, view or edit any Source Engine game configs in a simple, but powerful GUI.
 
-.. index:: config editor, working with config editor
+.. index:: working with config editor
 .. _editor-working:
 
 Working with config editor
@@ -31,7 +31,7 @@ You can ask program to show hint. Select row and press **Show hint** button or p
 
 If you want to edit config as a text file, press **Open config in Notepad** button. File will be loaded by a :ref:`selected <settings-advanced>` (or system default) text editor.
 
-.. index:: config editor, creating new configs
+.. index:: creating new configs
 .. _editor-createcfg:
 
 Creating new configs
@@ -41,7 +41,7 @@ Creating new configs
   2. Edit config as described in :ref:`working with config editor <editor-working>`.
   3. Press **Save config** button on the main toolbar to save changes in config file. If it was a new file, save as dialog will be shown. Extension is not required.
 
-.. index:: config editor, loading config file
+.. index:: loading config file
 .. _editor-loadcfg:
 
 Loading config file
@@ -53,7 +53,7 @@ Loading config file
 
 If safe clean is enabled (green light in status bar), backup file will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 
-.. index:: config editor, useful information
+.. index:: useful information about config editor
 .. _editor-other:
 
 Other useful information

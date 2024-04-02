@@ -11,7 +11,7 @@ Troubleshooting and cleanup
 
 With tools, presented on this page, you can resolve most of the known Steam and Source Engine games issues. Also you can clean up garbage, accumulated in game on regular daily use.
 
-.. index:: troubleshooting, blob files cleanup, registry entries cleanup
+.. index:: blob files cleanup, registry entries cleanup
 .. _cleanup-troubleshooting:
 
 Troubleshooting and recovery
@@ -30,7 +30,7 @@ Known issues, can be resolved by this tool:
  * damaged Steam installation (after running this, Steam client will be re-downloaded from official servers);
  * some other issues.
 
-.. index:: troubleshooting, principle of operation, recovery process
+.. index:: principle of operation, recovery process
 .. _cleanup-principle:
 
 Principle of operation
@@ -39,7 +39,7 @@ Principle of operation
  * If **Clean .blob files from Steam directory** is checked, SRC Repair will get Steam installation directory path, find and remove files with .blob extension, and force Steam recovery on next launch. Warning! Steam can force you to login again after performing this action.
  * If **Clean all registry entries** is checked, SRC Repair will remove ``HKEY_CURRENT_USER\Software\Valve\Steam`` registry key, modify some values in ``HKEY_LOCAL_MACHINE\Software\Valve\Steam`` (only when running with admin rights), and force Steam recovery on next launch. You will need to select Steam language from list.
 
-.. index:: troubleshooting, path checker
+.. index:: path checker, installation path checker
 .. _cleanup-pathcheck:
 
 Installation path checker
@@ -51,7 +51,7 @@ If any restricted symbols were found, a warning message will be shown. Also you 
 
 This tool starts automatically with SRC Repair and cannot be disabled.
 
-.. index:: cleanup, game cleanup, safe cleanup
+.. index:: game cleanup, safe cleanup
 .. _cleanup-wizard:
 
 Game cleanup wizard
@@ -80,7 +80,7 @@ Currently supported by SRC Repair cleanu actions:
  * **deep cleanup** -- try to remove all garbage from game at once. You **must** run game :ref:`cache verification <cleanup-advanced>` after running this cleanup;
  * **replays** -- remove files, created by Replays system (only if supported by game).
 
-.. index:: cleanup, game cleanup, deep cleanup
+.. index:: deep cleanup, advanced cleanup
 .. _cleanup-advanced:
 
 Deep cleanup

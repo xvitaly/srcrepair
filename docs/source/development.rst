@@ -9,7 +9,7 @@
 Development
 **********************************
 
-.. index:: development, building from sources
+.. index:: building from sources
 .. _building-from-sources:
 
 Building from sources
@@ -79,7 +79,7 @@ If the InnoSetup will complain about missing ``*.sig`` files, you will need to m
 
 You will find results in the ``packaging/results`` directory.
 
-.. index:: development, cleanup, database, cleanup database
+.. index:: cleanup database
 .. _cleanup-database:
 
 Cleanup database documentation
@@ -148,7 +148,7 @@ Available templates (can be used within the ``Directory`` property):
 
 Multiple templates are supported in a single entry.
 
-.. index:: development, FPS-configs, database, FPS-configs database
+.. index:: FPS-configs database
 .. _configs-database:
 
 FPS-configs database documentation
@@ -203,7 +203,7 @@ Level 2:
   * ``InstallDir`` -- installation directory name;
   * ``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``.
 
-.. index:: development, games, database, games database
+.. index:: games database
 .. _games-database:
 
 Games database documentation
@@ -263,7 +263,7 @@ Level 2:
 
   * ``Executable`` -- game executable file name (only for Windows).
 
-.. index:: development, hud, database, huds database
+.. index:: huds database
 .. _huds-database:
 
 HUDs database documentation
@@ -322,7 +322,7 @@ Level 2:
   * ``ArchiveDir`` -- directory name in the archive (subdirectories are supported (use ``/`` symbol));
   * ``InstallDir`` -- installation directory name.
 
-.. index:: development, update, database, updates database
+.. index:: updates database
 .. _updates-database:
 
 Updates database documentation
@@ -348,7 +348,7 @@ Level 2:
   * ``Info`` -- changelog URL;
   * ``Hash2`` -- download file SHA2 (SHA-512) hash.
 
-.. index:: development, plugins, database, plugins database
+.. index:: plugins database
 .. _plugins-database:
 
 Plugins database documentation

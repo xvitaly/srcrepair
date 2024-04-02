@@ -11,7 +11,7 @@ BackUps Manager
 
 On this tab you can view, remove or restore backups, created by program.
 
-.. index:: backups, managing backups
+.. index:: managing backups
 .. _backups-about:
 
 Managing backup files
@@ -25,7 +25,7 @@ Plain text backup files can be viewed or edited by a :ref:`default text editor <
 
 Binary files with **bud** extension can be opened by any Zip-archiver.
 
-.. index:: backups, backup types
+.. index:: backup types
 .. _backups-types:
 
 BackUp types
@@ -42,7 +42,7 @@ The names of the registry backup files (only in version for Microsoft Windows) a
  * ``Source_Options_UNIXTIME.reg`` -- manual backup of all Source Engine games video settings;
  * ``Steam_BackUp_UNIXTIME.reg`` -- manual backup of all Steam settings, stored in Windows registry.
 
-.. index:: backups, backup storage
+.. index:: backup storage
 .. _backups-storage:
 
 Backup storage
@@ -64,7 +64,7 @@ If you want to restore backup, just select file (or files) from the list and pre
 
 Confirm restoration.
 
-.. index:: backups, backup removal
+.. index:: backup removal
 .. _backups-remove:
 
 Backup removal
@@ -74,7 +74,7 @@ If you want to remove backup, just select file (or files) from the list and pres
 
 Confirm deletion. Removed files cannot be restored!
 
-.. index:: backups, registry backups
+.. index:: registry backups
 .. _backups-registry:
 
 Creating registry backups

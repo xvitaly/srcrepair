@@ -9,7 +9,7 @@
 Program settings
 *******************************
 
-.. index:: settings, main settings, generic settings, common settings
+.. index:: main settings, generic settings, common settings
 .. _settings-main:
 
 Common settings
@@ -22,7 +22,7 @@ Common settings
  * **Remove empty directories after safe cleanup** -- enable or disable automatic removal of empty directories after the :ref:`cleanup process <cleanup-wizard>`.
  * **Allow download and install latest (untested) HUDs** -- enable or disable the :ref:`HUD manager <hud-manager>` downloading the latest HUD versions directly from their repositories. Installation of such untested HUDs may be dangerous. Proceed with caution.
 
-.. index:: settings, advanced settings, additional settings
+.. index:: advanced settings, additional settings
 .. _settings-advanced:
 
 Advances settings

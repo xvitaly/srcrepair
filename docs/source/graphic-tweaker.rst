@@ -11,7 +11,7 @@ Graphic tweaker
 
 Tools on this page allow to view or edit graphic settings of all supported Source Engine games without needed to launch them.
 
-.. index:: graphic settings, source type 1
+.. index:: source type 1 video settings
 .. _gt-type1:
 
 Graphic settings of Type 1 games
@@ -35,7 +35,7 @@ Available settings:
   * **DirectX mode**: *8.0*, *8.1*, *9.0*, *9.0c* -- set DirectX feature level. 8.x will disable some effects and significantly increase performance. :ref:`Some games <faq-gm-dx8>` supports only 9.0c;
   * **High Dynamic Range**: *disabled* or *enabled* -- allow or disallow High Dynamic Range effects.
 
-.. index:: graphic settings, source type 2
+.. index:: source type 2 video settings
 .. _gt-type2:
 
 Graphic settings of Type 2 games
@@ -75,7 +75,7 @@ All parameters must be separated by spaces. For example:
 
 Warning! Do not use ``-dxlevel`` command-line option, because it will lead to the fact that the game video settings will no longer be saved correctly. This is a known issue of all Source Engine games.
 
-.. index:: launch options, game launch options, changing launch options
+.. index:: changing game launch options
 .. _gt-setparams:
 
 Changing game launch options
@@ -83,7 +83,7 @@ Changing game launch options
 
 Start Steam client -- select the game from Steam Library -- press right mouse button -- select **Properties** -- press **Set launch options** button -- set new launch options -- press **OK** and **Close** -- launch game.
 
-.. index:: launch options, game launch options, list of supported launch options
+.. index:: list of supported launch options
 .. _gt-launchopts:
 
 List of supported launch options
@@ -123,7 +123,7 @@ Available launch options:
   * **-lv** -- enable Low Violence mode in Left 4 Dead (2);
   * **-sillygibs** -- enable Low Violence mode in Team Fortress 2.
 
-.. index:: video profiles, maximum quality profile
+.. index:: maximum quality profile
 .. _gt-maxquality:
 
 Video profiles: maximum quality
@@ -145,7 +145,7 @@ Video profiles: maximum quality
  * **DirectX mode** -> 9.0c;
  * **High Dynamic Range** -> full.
 
-.. index:: video profiles, maximum performance profile
+.. index:: maximum performance profile
 .. _gt-maxfps:
 
 Video profiles: maximum performance
@@ -169,7 +169,7 @@ Video profiles: maximum performance
 
 If you want to reach maximum performance, you should install special :ref:`FPS-config <fps-configs>`.
 
-.. index:: video profiles, useful information
+.. index:: useful information about video profiles
 .. _gt-other:
 
 Other useful information about profiles

@@ -9,7 +9,7 @@
 Legal
 **********************************
 
-.. index:: icons, licensing, legal
+.. index:: icons licensing
 .. _legal-icons:
 
 Icons licensing
@@ -60,7 +60,7 @@ Icons licensing
     "warning.png", "La Glanz Studio", "Free", "`IconsPedia <https://www.iconspedia.com/icon/warning-16712.html>`__"
     "xmas.png", "Iconspedia", "Free for non commercial use", "`IconsPedia <https://www.iconspedia.com/icon/santa-hat-17458.html>`__"
 
-.. index:: libraries, licensing, legal
+.. index:: libraries licensing
 .. _legal-libraries:
 
 Libraries licensing
@@ -71,7 +71,7 @@ Libraries licensing
 
     "NLog", "Dynamic (shared)", "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__", "`GitHub page <https://github.com/NLog/NLog>`__"
 
-.. index:: trademarks, legal
+.. index:: trademarks
 .. _legal-trademarks:
 
 Trademarks

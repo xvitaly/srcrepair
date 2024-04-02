@@ -9,7 +9,7 @@
 FPS-config manager
 *******************************
 
-.. index:: FPS-configs
+.. index:: about FPS-configs
 .. _fps-about:
 
 About FPS configs
@@ -23,7 +23,7 @@ Installed FPS-configs can be edited with :ref:`Config editor <editor-working>`.
 
 All FPS-configs are being downloaded from our cloud and licensed "as is".
 
-.. index:: FPS-configs, supported FPS-configs
+.. index:: supported FPS-configs
 .. _fps-available:
 
 Supported FPS-configs
@@ -48,7 +48,7 @@ The following FPS-configs are supported by current version of application:
   * mastercomfig-quality (reverse);
   * rhaprody-perf.
 
-.. index:: FPS-configs, FPS-config installation
+.. index:: FPS-config installation
 .. _fps-install:
 
 FPS-config installation
@@ -62,7 +62,7 @@ Some configs are not supported by games. You will see warning message if so.
 
 Do not install multiple FPS-configs to game. It will cause unpredictable consequences.
 
-.. index:: FPS-configs, FPS-config uninstallation
+.. index:: FPS-config uninstallation
 .. _fps-uninstall:
 
 FPS-config uninstallation
@@ -72,7 +72,7 @@ To remove FPS-config, select it from the list of available configs, press **Remo
 
 If safe clean is enabled (green light in status bar), backup will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 
-.. index:: FPS-configs, FPS-configs known issues, missing voice chat, missing sprays
+.. index:: known issues with FPS-configs, missing voice chat, missing sprays
 .. _fps-troubleshooting:
 
 Known issues with FPS-configs
@@ -97,7 +97,7 @@ If you want to enable them again, you will need to :ref:`remove all installed FP
 
 If you use developer console (can be called by pressing **~** (tilde) button), don't forget to press **Enter** after entering each row.
 
-.. index:: FPS-configs, reverse FPS-configs, maximum quality configs
+.. index:: reverse FPS-configs, maximum quality configs
 .. _fps-maxquality:
 
 Reverse FPS-configs
