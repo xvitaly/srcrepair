@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-29 14:32+0100\n"
-"PO-Revision-Date: 2024-03-29 14:35+0100\n"
+"POT-Creation-Date: 2024-04-03 17:54+0200\n"
+"PO-Revision-Date: 2024-04-03 18:01+0200\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -26,11 +26,10 @@ msgstr "Управление резервными копиями"
 
 #: ../../source/backups.rst:12
 msgid ""
-"On this tab you can view, remove or restore backups, created by program."
+"On this tab, you can view, remove, or restore backups created by the program."
 msgstr ""
-"На этой странице вы можете восстановить резервные копии файлов, а также "
-"создать и восстановить резервные копии разделов реестра, отвечающих за "
-"текущую выбранную игру, Steam и все Source игры."
+"На этой странице вы можете просматривать, удалять или восстанавливать "
+"резервные копии, созданные программой."
 
 #: ../../source/backups.rst:18
 msgid "Managing backup files"
@@ -38,8 +37,9 @@ msgstr "Управление резервными копиями"
 
 #: ../../source/backups.rst:20
 msgid ""
-"When safe cleanup is on (green light in status bar), application will "
-"automatically create backup files for the most performed actions."
+"When safe cleanup is enabled (green light in the status bar), the "
+"application automatically creates backup files for the most performed "
+"actions."
 msgstr ""
 "При включённой опции безопасной очистки (значок в статусной строке светит "
 "зелёным), каждое действие программы создаёт резервную копию, которую можно в "
@@ -53,63 +53,75 @@ msgstr ""
 
 #: ../../source/backups.rst:24
 msgid ""
-"Plain text backup files can be viewed or edited by a :ref:`default text "
-"editor <settings-advanced>`. Just select such file and press **Edit in "
+"Plain text backup files can be viewed or edited using a :ref:`text editor "
+"<settings-advanced>`. Simply select such a file and click the **Edit in "
 "Notepad** button on the main toolbar."
 msgstr ""
 "Резервные копии в виде текстовых файлов допускается открыть в :ref:"
-"`текстовом редакторе по умолчанию <settings-advanced>` посредством нажатия "
-"кнопки **Открыть в текстовом редакторе** на панели инструментов."
+"`текстовом редакторе <settings-advanced>` посредством нажатия кнопки "
+"**Открыть в текстовом редакторе** на панели инструментов."
 
 #: ../../source/backups.rst:26
-msgid "Binary files with **bud** extension can be opened by any Zip-archiver."
+msgid ""
+"Binary files with the **bud** extension can be opened by any Zip-archiver."
 msgstr ""
 "Бинарные файлы резервных копий с расширением **bud** могут быть загружены в "
 "любом архиваторе."
 
 #: ../../source/backups.rst:32
-msgid "BackUp types"
+msgid "Backup types"
 msgstr "Типы резервных копий"
 
 #: ../../source/backups.rst:34
 msgid ""
-"Typical backup file name ``Container_UNIXTIME.bud`` consists of prefix "
-"**Container**, **UNIXTIME** -- current datetime in UnixTime format and "
-"extension **bud**."
+"A typical backup file name ``Container_UNIXTIME.bud`` consists of the "
+"following parts:"
 msgstr ""
-"Имя файла резервной копии конфига ``Container_UNIXTIME.bud`` состоит из "
-"префикса **Container**, **UNIXTIME** -- текущего времени на момент создания "
-"файла в формате UnixTime, а также расширения **bud**."
+"Стандартное имя файла резервной копии ``Container_UNIXTIME.bud`` состоит из "
+"следующих частей:"
 
 #: ../../source/backups.rst:36
+msgid "**Container** -- prefix;"
+msgstr "**Container** -- префикс;"
+
+#: ../../source/backups.rst:37
+msgid "**UNIXTIME** -- current datetime in UnixTime format;"
+msgstr ""
+"**UNIXTIME** -- текущее время на момент создания файла в формате UnixTime;"
+
+#: ../../source/backups.rst:38
+msgid "**bud** -- file extension."
+msgstr "**bud** -- расширение файла."
+
+#: ../../source/backups.rst:40
 msgid ""
-"BUD-files are standard Zip-archives, which contains removed by program files "
-"with keeping the original directory hierarchy."
+"BUD files are standard Zip-archives containing files removed by the program, "
+"preserving the original directory hierarchy."
 msgstr ""
 "BUD-файлы представляют собой стандартные Zip-архивы, состоящие из удалённых "
 "программой файлов с сохранением полной иерахии каталогов."
 
-#: ../../source/backups.rst:38
+#: ../../source/backups.rst:42
 msgid ""
-"The names of the registry backup files (only in version for Microsoft "
-"Windows) are generated as follows:"
+"Registry backup file names (only on Microsoft Windows platform) are "
+"generated as follows:"
 msgstr ""
-"Имена файлов резервных копий реестра (только в версии под ОС Microsoft "
-"Windows) генерируется следующим образом:"
+"Имена файлов резервных копий реестра (только на платформе Microsoft Windows) "
+"генерируется следующим образом:"
 
-#: ../../source/backups.rst:40
+#: ../../source/backups.rst:44
 msgid ""
 "``Game_AutoBackUp_UNIXTIME.reg`` -- automatic backup of game video settings;"
 msgstr ""
 "``Game_AutoBackUp_UNIXTIME.reg`` -- автоматический бэкап графических "
 "настроек игры;"
 
-#: ../../source/backups.rst:41
+#: ../../source/backups.rst:45
 msgid "``Game_Options_UNIXTIME.reg`` -- manual backup of game video settings;"
 msgstr ""
 "``Game_Options_UNIXTIME.reg`` -- ручной бэкап графических настроек игры;"
 
-#: ../../source/backups.rst:42
+#: ../../source/backups.rst:46
 msgid ""
 "``Source_Options_UNIXTIME.reg`` -- manual backup of all Source Engine games "
 "video settings;"
@@ -117,19 +129,19 @@ msgstr ""
 "``Source_Options_UNIXTIME.reg`` -- бэкап графических настроек всех Source-"
 "игр, хранящихся в реестре;"
 
-#: ../../source/backups.rst:43
+#: ../../source/backups.rst:47
 msgid ""
 "``Steam_BackUp_UNIXTIME.reg`` -- manual backup of all Steam settings, stored "
-"in Windows registry."
+"in the Windows registry."
 msgstr ""
 "``Steam_BackUp_UNIXTIME.reg`` -- бэкап всех настроек Steam, хранящихся в "
 "реестре."
 
-#: ../../source/backups.rst:49
+#: ../../source/backups.rst:53
 msgid "Backup storage"
 msgstr "Хранение резервных копий"
 
-#: ../../source/backups.rst:51
+#: ../../source/backups.rst:55
 msgid ""
 "All backup files are stored in ``%APPDATA%\\SRC Repair\\backups`` directory, "
 "in subdirectories for each game."
@@ -137,7 +149,7 @@ msgstr ""
 "Все файлы резервных копий хранятся в каталоге ``%APPDATA%\\SRC "
 "Repair\\backups``, в подкаталоге по короткому названию игры."
 
-#: ../../source/backups.rst:53
+#: ../../source/backups.rst:57
 msgid ""
 "The number of backups is not limited, so don't forget to remove them "
 "manually. No automatic removal will be performed."
@@ -146,59 +158,59 @@ msgstr ""
 "наличия свободного места на диске, с которого запускается программа. "
 "Автоматическое удаление не производится."
 
-#: ../../source/backups.rst:55
+#: ../../source/backups.rst:59
 msgid ""
-"Old backup files (older than 30 days) will be highlighted in list for your "
-"convenience (it can be disabled in :ref:`settings <settings-main>`)."
+"Old backup files (older than 30 days) will be highlighted in the list for "
+"your convenience (this can be disabled in :ref:`settings <settings-main>`)."
 msgstr ""
-"Старые резервные копии, созданные более месяца назад, подсвечиваются жёлтым "
-"для удобства их визуального поиска и последующего удаления (может быть "
-"отключено в :ref:`настройках программы <settings-main>`)."
+"Старые резервные копии, созданные более 30 дней назад, подсвечиваются в "
+"списке для удобства их визуального поиска и последующего удаления (может "
+"быть отключено в :ref:`настройках программы <settings-main>`)."
 
-#: ../../source/backups.rst:61
+#: ../../source/backups.rst:65
 msgid "Backup restoration"
 msgstr "Восстановление резервных копий"
 
-#: ../../source/backups.rst:63
+#: ../../source/backups.rst:67
 msgid ""
-"If you want to restore backup, just select file (or files) from the list and "
-"press **Restore selected backup** button on the main toolbar."
+"If you want to restore a backup, just select the file (or files) from the "
+"list and click the **Restore selected backup** button on the main toolbar."
 msgstr ""
 "Чтобы восстановить резервную копию, просто выберите нужную строку (или "
 "строки) из списка и нажмите на панели инструментов программы кнопку "
 "**Восстановить выбранную резервную копию**."
 
-#: ../../source/backups.rst:65
+#: ../../source/backups.rst:69
 msgid "Confirm restoration."
 msgstr "Подтвердите восстановление."
 
-#: ../../source/backups.rst:71
+#: ../../source/backups.rst:75
 msgid "Backup removal"
 msgstr "Удаление резервных копий"
 
-#: ../../source/backups.rst:73
+#: ../../source/backups.rst:77
 msgid ""
-"If you want to remove backup, just select file (or files) from the list and "
-"press **Remove selected backup** button on the main toolbar."
+"If you want to remove a backup, just select the file (or files) from the "
+"list and click the **Remove selected backup** button on the main toolbar."
 msgstr ""
 "Чтобы удалить резервную копию, просто выберите ненужную более строку (или "
 "строки) из списка и нажмите на панели инструментов программы кнопку "
 "**Удалить выбранную резервную копию**."
 
-#: ../../source/backups.rst:75
+#: ../../source/backups.rst:79
 msgid "Confirm deletion. Removed files cannot be restored!"
 msgstr "Подтвердите удаление. Удалённые файлы невозможно восстановить!"
 
-#: ../../source/backups.rst:81
+#: ../../source/backups.rst:85
 msgid "Creating registry backups"
 msgstr "Создание резервных копий реестра"
 
-#: ../../source/backups.rst:83
+#: ../../source/backups.rst:87
 msgid ""
-"If you want to create backup of video settings, video settings of all Source "
-"Engine games or Steam settings, stored in Windows registry, press button "
-"**Create** on the main toolbar and select any option from dropdown menu. "
-"Backup file will be created and added to the list."
+"If you want to create a backup of video settings, video settings of all "
+"Source Engine games or Steam settings, stored in the Windows registry, click "
+"the **Create** button on the main toolbar and select an option from the drop-"
+"down menu. The backup file will be created and added to the list."
 msgstr ""
 "Чтобы создать резервную копию графических настроек выбранной игры, всех "
 "Source игр или всего Steam, нажмите кнопку **Создать** на панели "
