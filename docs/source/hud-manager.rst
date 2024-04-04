@@ -12,16 +12,16 @@ HUD manager
 .. index:: hud manager
 .. _hud-about:
 
-HUD manager
+About HUD manager
 ==========================================
 
-On this page you can install one of available and tested HUDs into selected game.
+On this page you can install, update or remove one of the available and tested HUDs into the selected game.
 
-Each HUD has a readme file and a screenshot. Select one from list and you will be able to see it.
+Each HUD has a readme file and a screenshot. Select one from the list and you will be able to see it.
 
-All HUDs are being downloaded from our cloud and licensed "as is".
+All HUDs are being downloaded from the cloud and licensed "as is". Additional licensing information can be found on their home pages.
 
-This module will be unavailable if current game does not support custom HUDs.
+This module will be unavailable if the current game does not support custom HUDs.
 
 .. index:: hud installation
 .. _hud-install:
@@ -29,11 +29,11 @@ This module will be unavailable if current game does not support custom HUDs.
 HUD installation
 ==========================================
 
-To install HUD, select it from the list of available HUDs, press **Install selected HUD** button and confirm this operation.
+To install a HUD, select it from the list of available HUDs, click the **Install selected HUD** button and confirm this operation.
 
 All required files will be downloaded and installed automatically.
 
-Do not install more than one HUD because it can lead to unpredictable consequences.
+Do not install more than one HUD, as this may lead to unpredictable consequences.
 
 .. index:: hud unintallation
 .. _hud-uninstall:
@@ -41,9 +41,9 @@ Do not install more than one HUD because it can lead to unpredictable consequenc
 HUD uninstallation
 ==========================================
 
-To remove HUD, select it from the list of available HUDs, press **Remove selected HUD** button and confirm this operation.
+To remove a HUD, select it from the list of available HUDs, click the **Remove selected HUD** button and confirm this operation.
 
-This action available only for installed HUDs.
+This action is only available for installed HUDs.
 
 .. index:: hud updates, reinstalling hud
 .. _hud-update:
@@ -51,9 +51,9 @@ This action available only for installed HUDs.
 Updating installed HUD
 ==========================================
 
-To update or reinstall installed HUD, select it from the list of available HUDs, press **Update selected HUD** button and confirm this operation.
+To update or reinstall an installed HUD, select it from the list of available HUDs, click the **Update selected HUD** button and confirm this operation.
 
-Warning! All custom changes in installed HUD will be permanently lost.
+Warning! All custom changes to the installed HUD will be permanently lost.
 
 .. index:: hud homepage, hud controls, hud buttons
 .. _hud-other:
