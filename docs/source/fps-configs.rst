@@ -15,13 +15,17 @@ FPS-config manager
 About FPS configs
 ==========================================
 
-On this page you can install one of available and tested FPS-configs into selected game. FPS-config is a text file with ``autoexec.cfg`` name. It can significantly increase game performance by changing hidden extended video settings.
+On this page you can install, remove or update one of the available and tested FPS-configs into the selected game.
 
-Settings, obtained from FPS-config, have higher priority than set by :ref:`Graphic tweaker <graphic-tweaker>` or by the game itself. Select config from list to read it's description.
+FPS-config is a text file named ``autoexec.cfg``. It can significantly improve game performance by changing hidden advanced video settings.
 
-Installed FPS-configs can be edited with :ref:`Config editor <editor-working>`.
+Settings obtained from FPS-config have higher priority than those set by the :ref:`Graphic tweaker <graphic-tweaker>` or by the game itself.
 
-All FPS-configs are being downloaded from our cloud and licensed "as is".
+Select a config from the list to read its description.
+
+Installed FPS-configs can be edited using the :ref:`Config editor <editor-working>`.
+
+All FPS-configs are being downloaded from the cloud and licensed "as is".
 
 .. index:: supported FPS-configs
 .. _fps-available:
@@ -29,7 +33,7 @@ All FPS-configs are being downloaded from our cloud and licensed "as is".
 Supported FPS-configs
 ==========================================
 
-The following FPS-configs are supported by current version of application:
+The following FPS-configs are supported by current version of the application:
 
   * v1tsk_high_fps;
   * m0refps;
@@ -54,13 +58,15 @@ The following FPS-configs are supported by current version of application:
 FPS-config installation
 ==========================================
 
-To install FPS-config, select it from the list of available configs, press **Install selected config** button and confirm this operation.
+To install a FPS-config, select it from the list of available configs, press the **Install selected config** button and confirm this operation.
 
-If safe clean is enabled (green light in status bar) and you already has installed ``autoexec.cfg`` file, backup will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
+All required files will be downloaded and installed automatically.
 
-Some configs are not supported by games. You will see warning message if so.
+If safe clean is enabled (green light in the status bar) and you already have ``autoexec.cfg`` file installed, the backup will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 
-Do not install multiple FPS-configs to game. It will cause unpredictable consequences.
+Some configs are not supported by games. In this case, you will see a warning message.
+
+Do not install more than one FPS-config, as this may lead to unpredictable consequences.
 
 .. index:: FPS-config uninstallation
 .. _fps-uninstall:
@@ -68,9 +74,9 @@ Do not install multiple FPS-configs to game. It will cause unpredictable consequ
 FPS-config uninstallation
 ==========================================
 
-To remove FPS-config, select it from the list of available configs, press **Remove selected config** (or **Remove installed config**) button and confirm this operation.
+To remove a FPS-config, select it from the list of available configs, press the **Remove selected config** (or the **Remove installed config**) button and confirm this operation.
 
-If safe clean is enabled (green light in status bar), backup will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
+If safe clean is enabled (green light in the status bar), the backup will be created automatically. You can restore or delete it on :ref:`BackUps <backups-about>` tab.
 
 .. index:: known issues with FPS-configs, missing voice chat, missing sprays
 .. _fps-troubleshooting:
@@ -80,7 +86,7 @@ Known issues with FPS-configs
 
 After installing FPS-configs voice chat can stop working, sprays and face animation can be disabled. This is conceived. Most of FPS-configs disable this functions in order to significantly increase game performance.
 
-If you want to enable them again, you will need to :ref:`remove all installed FPS-configs <fps-uninstall>` and then change the following variables via ``autoexec.cfg`` file or by using developer console:
+If you want to enable them again, you will need to :ref:`remove all installed FPS-configs <fps-uninstall>` and then change the following variables via the ``autoexec.cfg`` file or by using the developer console:
 
 .. code-block:: text
 
@@ -95,7 +101,7 @@ If you want to enable them again, you will need to :ref:`remove all installed FP
     voice_enable "1"
     r_eyes "1"
 
-If you use developer console (can be called by pressing **~** (tilde) button), don't forget to press **Enter** after entering each row.
+If you are using the developer console (can be accessed by pressing the **~** (tilde) button), remember to press **Enter** after entering each line.
 
 .. index:: reverse FPS-configs, maximum quality configs
 .. _fps-maxquality:
@@ -103,6 +109,6 @@ If you use developer console (can be called by pressing **~** (tilde) button), d
 Reverse FPS-configs
 ==========================================
 
-If you want to set all video settings to maxium to get best quality, you can install specical :ref:`reverse FPS-configs <fps-available>`.
+If you want to set all video settings to maximum to get the best quality, you can install specical :ref:`reverse FPS-configs <fps-available>`.
 
 You will need a high-end computer in order to use them.
