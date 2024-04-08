@@ -9,15 +9,21 @@
 BackUps Manager
 **********************************
 
-On this tab, you can view, remove, or restore backups created by the program.
-
-.. index:: managing backups
+.. index:: about backups manager
 .. _backups-about:
 
-Managing backup files
+About backups manager
 ==========================================
 
+On this page, you can view, remove, or restore backups created by the program.
+
 When safe cleanup is enabled (green light in the status bar), the application automatically creates backup files for the most performed actions.
+
+.. index:: working with backup files
+.. _backups-working:
+
+Working with backup files
+==========================================
 
 You can select multiple backups by pressing **Ctrl** or **Shift**.
 
