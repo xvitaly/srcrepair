@@ -217,14 +217,11 @@ namespace srcrepair.core
                 while (SteamConfig.Peek() >= 0)
                 {
                     RdStr = SteamConfig.ReadLine().Trim();
-                    if (!string.IsNullOrWhiteSpace(RdStr))
+                    if (!string.IsNullOrWhiteSpace(RdStr) && RdStr.IndexOf("path", StringComparison.CurrentCultureIgnoreCase) != -1)
                     {
-                        if (RdStr.IndexOf("path", StringComparison.CurrentCultureIgnoreCase) != -1)
-                        {
-                            RdStr = StringsManager.CleanString(RdStr, true, true, false);
-                            RdStr = RdStr.Remove(0, RdStr.IndexOf(" ", StringComparison.CurrentCulture) + 1);
-                            if (!string.IsNullOrWhiteSpace(RdStr) && Directory.Exists(RdStr)) { Result.Add(RdStr); }
-                        }
+                        RdStr = StringsManager.CleanString(RdStr, true, true, false);
+                        RdStr = RdStr.Remove(0, RdStr.IndexOf(" ", StringComparison.CurrentCulture) + 1);
+                        if (!string.IsNullOrWhiteSpace(RdStr) && Directory.Exists(RdStr)) { Result.Add(RdStr); }
                     }
                 }
             }
