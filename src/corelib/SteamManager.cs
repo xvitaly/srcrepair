@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using NLog;
 
@@ -167,12 +168,10 @@ namespace srcrepair.core
             if (Directory.Exists(FullUserDataPath))
             {
                 DirectoryInfo DInfo = new DirectoryInfo(FullUserDataPath);
-                foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
+                DirectoryInfo[] SubDirs = DInfo.GetDirectories();
+                foreach (DirectoryInfo SubDir in SubDirs.Where(e => SteamConv.ValidateUserID(e.Name)))
                 {
-                    if (SteamConv.ValidateUserID(SubDir.Name))
-                    {
-                        SteamIDs.Add(SubDir.Name);
-                    }
+                    SteamIDs.Add(SubDir.Name);
                 }
             }
         }
