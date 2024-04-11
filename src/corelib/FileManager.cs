@@ -93,13 +93,10 @@ namespace srcrepair.core
         {
             string Result = "Unknown";
             DriveInfo[] Drives = DriveInfo.GetDrives();
-            foreach (DriveInfo Dr in Drives)
+            foreach (DriveInfo Dr in Drives.Where(e => string.Compare(e.Name, CDrive, true) == 0))
             {
-                if (string.Compare(Dr.Name, CDrive, true) == 0)
-                {
-                    Result = Dr.DriveFormat;
-                    break;
-                }
+                Result = Dr.DriveFormat;
+                break;
             }
             return Result;
         }
