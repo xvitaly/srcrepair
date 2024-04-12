@@ -7,6 +7,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 namespace srcrepair.core
 {
@@ -178,13 +179,9 @@ namespace srcrepair.core
         /// <returns>Returns full path or empty string if nothing was found.</returns>
         private string GetGameDirectory(string AppName, List<string> GameDirs, CurrentPlatform.OSType OSType)
         {
-            foreach (string Dir in GameDirs)
+            foreach (string GameDirectory in GameDirs.Select(e => Path.Combine(e, AppName)).Where(j => Directory.Exists(Path.Combine(j, SmallAppName)) && (File.Exists(Path.Combine(j, GameBinaryFile)) || OSType != CurrentPlatform.OSType.Windows)))
             {
-                string GameDirectory = Path.Combine(Dir, AppName);
-                if (Directory.Exists(Path.Combine(GameDirectory, SmallAppName)) && (File.Exists(Path.Combine(GameDirectory, GameBinaryFile)) || OSType != CurrentPlatform.OSType.Windows))
-                {
-                    return GameDirectory;
-                }
+                return GameDirectory;
             }
             return string.Empty;
         }
