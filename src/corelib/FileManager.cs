@@ -295,12 +295,9 @@ namespace srcrepair.core
             List<string> Result = new List<string>();
 
             // Using loop to check a single item from source list...
-            foreach (string Config in Configs)
+            foreach (string Config in Configs.Where(e => File.Exists(e)))
             {
-                if (File.Exists(Config))
-                {
-                    Result.Add(Config);
-                }
+                Result.Add(Config);
             }
 
             // Returning result...
