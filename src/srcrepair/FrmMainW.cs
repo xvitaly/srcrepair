@@ -1771,46 +1771,43 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_ExecuteNow_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(AppStrings.PS_ExecuteMSG, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if ((PS_CleanBlobs.Checked || PS_CleanRegistry.Checked) && MessageBox.Show(AppStrings.PS_ExecuteMSG, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if (PS_CleanBlobs.Checked || PS_CleanRegistry.Checked)
+                if (ProcessManager.ProcessTerminate("Steam") != 0)
                 {
-                    if (ProcessManager.ProcessTerminate("Steam") != 0)
-                    {
-                        MessageBox.Show(AppStrings.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    MessageBox.Show(AppStrings.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
-                    if (PS_CleanBlobs.Checked)
+                if (PS_CleanBlobs.Checked)
+                {
+                    try
                     {
-                        try
-                        {
-                            App.SteamClient.CleanBlobsNow();
-                        }
-                        catch (Exception Ex)
-                        {
-                            Logger.Error(Ex, DebugStrings.AppDbgExClnBlobs);
-                            MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                        App.SteamClient.CleanBlobsNow();
                     }
+                    catch (Exception Ex)
+                    {
+                        Logger.Error(Ex, DebugStrings.AppDbgExClnBlobs);
+                        MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
 
-                    if (PS_CleanRegistry.Checked)
+                if (PS_CleanRegistry.Checked)
+                {
+                    try
                     {
-                        try
-                        {
-                            App.SteamClient.CleanRegistryNow(PS_SteamLang.SelectedIndex);
-                        }
-                        catch (Exception Ex)
-                        {
-                            Logger.Error(Ex, DebugStrings.AppDbgExClnReg);
-                            MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
+                        App.SteamClient.CleanRegistryNow(PS_SteamLang.SelectedIndex);
                     }
+                    catch (Exception Ex)
+                    {
+                        Logger.Error(Ex, DebugStrings.AppDbgExClnReg);
+                        MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
 
-                    MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
-                    {
-                        App.Platform.StartRegularProcess(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
-                    }
+                MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
+                {
+                    App.Platform.StartRegularProcess(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
                 }
             }
         }
