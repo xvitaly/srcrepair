@@ -146,8 +146,6 @@
             this.PS_StPath = new System.Windows.Forms.Label();
             this.PS_GB_Solver = new System.Windows.Forms.GroupBox();
             this.PS_ExecuteNow = new System.Windows.Forms.Button();
-            this.PS_SteamLang = new System.Windows.Forms.ComboBox();
-            this.L_PS_SteamLang = new System.Windows.Forms.Label();
             this.PS_CleanRegistry = new System.Windows.Forms.CheckBox();
             this.PS_CleanBlobs = new System.Windows.Forms.CheckBox();
             this.FPSCfgInstall = new System.Windows.Forms.TabPage();
@@ -1286,8 +1284,6 @@
             // PS_GB_Solver
             // 
             this.PS_GB_Solver.Controls.Add(this.PS_ExecuteNow);
-            this.PS_GB_Solver.Controls.Add(this.PS_SteamLang);
-            this.PS_GB_Solver.Controls.Add(this.L_PS_SteamLang);
             this.PS_GB_Solver.Controls.Add(this.PS_CleanRegistry);
             this.PS_GB_Solver.Controls.Add(this.PS_CleanBlobs);
             resources.ApplyResources(this.PS_GB_Solver, "PS_GB_Solver");
@@ -1300,48 +1296,6 @@
             this.PS_ExecuteNow.Name = "PS_ExecuteNow";
             this.PS_ExecuteNow.UseVisualStyleBackColor = true;
             this.PS_ExecuteNow.Click += new System.EventHandler(this.PS_ExecuteNow_Click);
-            // 
-            // PS_SteamLang
-            // 
-            this.PS_SteamLang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            resources.ApplyResources(this.PS_SteamLang, "PS_SteamLang");
-            this.PS_SteamLang.FormattingEnabled = true;
-            this.PS_SteamLang.Items.AddRange(new object[] {
-            resources.GetString("PS_SteamLang.Items"),
-            resources.GetString("PS_SteamLang.Items1"),
-            resources.GetString("PS_SteamLang.Items2"),
-            resources.GetString("PS_SteamLang.Items3"),
-            resources.GetString("PS_SteamLang.Items4"),
-            resources.GetString("PS_SteamLang.Items5"),
-            resources.GetString("PS_SteamLang.Items6"),
-            resources.GetString("PS_SteamLang.Items7"),
-            resources.GetString("PS_SteamLang.Items8"),
-            resources.GetString("PS_SteamLang.Items9"),
-            resources.GetString("PS_SteamLang.Items10"),
-            resources.GetString("PS_SteamLang.Items11"),
-            resources.GetString("PS_SteamLang.Items12"),
-            resources.GetString("PS_SteamLang.Items13"),
-            resources.GetString("PS_SteamLang.Items14"),
-            resources.GetString("PS_SteamLang.Items15"),
-            resources.GetString("PS_SteamLang.Items16"),
-            resources.GetString("PS_SteamLang.Items17"),
-            resources.GetString("PS_SteamLang.Items18"),
-            resources.GetString("PS_SteamLang.Items19"),
-            resources.GetString("PS_SteamLang.Items20"),
-            resources.GetString("PS_SteamLang.Items21"),
-            resources.GetString("PS_SteamLang.Items22"),
-            resources.GetString("PS_SteamLang.Items23"),
-            resources.GetString("PS_SteamLang.Items24"),
-            resources.GetString("PS_SteamLang.Items25"),
-            resources.GetString("PS_SteamLang.Items26"),
-            resources.GetString("PS_SteamLang.Items27"),
-            resources.GetString("PS_SteamLang.Items28")});
-            this.PS_SteamLang.Name = "PS_SteamLang";
-            // 
-            // L_PS_SteamLang
-            // 
-            resources.ApplyResources(this.L_PS_SteamLang, "L_PS_SteamLang");
-            this.L_PS_SteamLang.Name = "L_PS_SteamLang";
             // 
             // PS_CleanRegistry
             // 
@@ -2036,8 +1990,6 @@
         private System.Windows.Forms.GroupBox PS_GB_SInfo;
         private System.Windows.Forms.GroupBox PS_GB_Solver;
         private System.Windows.Forms.Button PS_ExecuteNow;
-        private System.Windows.Forms.ComboBox PS_SteamLang;
-        private System.Windows.Forms.Label L_PS_SteamLang;
         private System.Windows.Forms.CheckBox PS_CleanRegistry;
         private System.Windows.Forms.CheckBox PS_CleanBlobs;
         private System.Windows.Forms.Label PS_PathSteam;

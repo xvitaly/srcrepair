@@ -102,50 +102,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Gets Steam language from the specified internal ID.
-        /// </summary>
-        /// <param name="LangCode">Steam language ID.</param>
-        /// <returns>Steam language name.</returns>
-        public static string GetLanguageFromCode(int LangCode)
-        {
-            switch (LangCode)
-            {
-                case 0: return "arabic"; case 1: return "bulgarian"; case 2: return "schinese";
-                case 3: return "tchinese"; case 4: return "czech"; case 5: return "danish";
-                case 6: return "dutch"; case 7: return "english"; case 8: return "finnish";
-                case 9: return "french"; case 10: return "german"; case 11: return "greek";
-                case 12: return "hungarian"; case 13: return "italian"; case 14: return "japanese";
-                case 15: return "koreana"; case 16: return "norwegian"; case 17: return "polish";
-                case 18: return "portuguese"; case 19: return "brazilian"; case 20: return "romanian";
-                case 21: return "russian"; case 22: return "spanish"; case 23: return "latam";
-                case 24: return "swedish"; case 25: return "thai"; case 26: return "turkish";
-                case 27: return "ukrainian"; case 28: return "vietnamese"; default: return "english";
-            }
-        }
-
-        /// <summary>
-        /// Gets Steam language internal ID from the specified public name.
-        /// </summary>
-        /// <param name="LangString">Steam language string.</param>
-        /// <returns>Steam language internal ID.</returns>
-        public static int GetCodeFromLanguage(string LangString)
-        {
-            switch (LangString)
-            {
-                case "arabic": return 0; case "bulgarian": return 1; case "schinese": return 2;
-                case "tchinese": return 3; case "czech": return 4; case "danish": return 5;
-                case "dutch": return 6; case "english": return 7; case "finnish": return 8;
-                case "french": return 9; case "german": return 10; case "greek": return 11;
-                case "hungarian": return 12; case "italian": return 13; case "japanese": return 14;
-                case "koreana": return 15; case "norwegian": return 16; case "polish": return 17;
-                case "portuguese": return 18; case "brazilian": return 19; case "romanian": return 20;
-                case "russian": return 21; case "spanish": return 22; case "latam": return 23;
-                case "swedish": return 24; case "thai": return 25; case "turkish": return 26;
-                case "ukrainian": return 27; case "vietnamese": return 28; default: return 7;
-            }
-        }
-
-        /// <summary>
         /// Gets full path to Steam localconfig.vdf configuration file.
         /// </summary>
         /// <returns>Full path to localconfig.vdf file.</returns>
@@ -197,10 +153,10 @@ namespace srcrepair.core
         /// <summary>
         /// Removes Steam settings, stored in the Windows registry.
         /// </summary>
-        /// <param name="LangCode">Steam language ID.</param>
-        public void CleanRegistryNow(int LangCode)
+        /// <param name="LangCode">Steam language.</param>
+        public void CleanRegistryNow(string LangName)
         {
-            PlatformWindows.CleanRegistrySettings(LangCode);
+            PlatformWindows.CleanRegistrySettings(LangName);
         }
 
         /// <summary>

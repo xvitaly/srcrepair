@@ -1746,21 +1746,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_CleanRegistry_CheckedChanged(object sender, EventArgs e)
         {
-            // Enable control with selector of available Steam languages...
-            PS_SteamLang.Enabled = PS_CleanRegistry.Checked;
-
-            // Getting current language name from Registry...
-            try
-            {
-                PS_SteamLang.SelectedIndex = SteamManager.GetCodeFromLanguage(App.Platform.SteamLanguage);
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExCleanRegistry);
-                PS_SteamLang.SelectedIndex = 0;
-            }
-
-            // Enable or disable button based on checkboxes...
             PS_ExecuteNow.Enabled = PS_CleanRegistry.Checked || PS_CleanBlobs.Checked;
         }
 
@@ -1795,7 +1780,7 @@ namespace srcrepair.gui
                 {
                     try
                     {
-                        App.SteamClient.CleanRegistryNow(PS_SteamLang.SelectedIndex);
+                        App.SteamClient.CleanRegistryNow(App.Platform.SteamLanguage);
                     }
                     catch (Exception Ex)
                     {

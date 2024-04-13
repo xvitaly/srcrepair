@@ -101,8 +101,8 @@ namespace srcrepair.core
         /// <summary>
         /// Removes Steam settings, stored in the Windows registry.
         /// </summary>
-        /// <param name="LangCode">Steam language ID.</param>
-        public static void CleanRegistrySettings(int LangCode)
+        /// <param name="LangName">Steam language.</param>
+        public static void CleanRegistrySettings(string LangName)
         {
             // Removing key HKEY_LOCAL_MACHINE\Software\Valve recursive if we have admin rights...
             if (ProcessManager.IsCurrentUserAdmin())
@@ -117,10 +117,7 @@ namespace srcrepair.core
             using (RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Steam")))
             {
                 // Saving Steam language name...
-                if (RegLangKey != null)
-                {
-                    RegLangKey.SetValue("language", SteamManager.GetLanguageFromCode(LangCode));
-                }
+                RegLangKey?.SetValue("language", LangName);
             }
         }
 
