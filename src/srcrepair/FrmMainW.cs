@@ -790,6 +790,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Get the selection status of repair procedures.
+        /// </summary>
+        /// <returns>Returns True if at least one repair procedure is selected.</returns>
+        private bool GetRepairSelState()
+        {
+            return PS_CleanBlobs.Checked || PS_CleanRegistry.Checked;
+        }
+
+        /// <summary>
         /// Handles with installed FPS-configs and shows special icon.
         /// </summary>
         private void HandleConfigs()
@@ -1736,7 +1745,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
         {
-            PS_ExecuteNow.Enabled = PS_CleanBlobs.Checked || PS_CleanRegistry.Checked;
+            PS_ExecuteNow.Enabled = GetRepairSelState();
         }
 
         /// <summary>
@@ -1746,7 +1755,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_CleanRegistry_CheckedChanged(object sender, EventArgs e)
         {
-            PS_ExecuteNow.Enabled = PS_CleanRegistry.Checked || PS_CleanBlobs.Checked;
+            PS_ExecuteNow.Enabled = GetRepairSelState();
         }
 
         /// <summary>
@@ -1756,7 +1765,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_ExecuteNow_Click(object sender, EventArgs e)
         {
-            if ((PS_CleanBlobs.Checked || PS_CleanRegistry.Checked) && MessageBox.Show(AppStrings.PS_ExecuteMSG, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            if (GetRepairSelState() && MessageBox.Show(AppStrings.PS_ExecuteMSG, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 if (ProcessManager.ProcessTerminate("Steam") != 0)
                 {
