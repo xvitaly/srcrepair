@@ -795,7 +795,7 @@ namespace srcrepair.gui
         /// <returns>Returns True if at least one repair procedure is selected.</returns>
         private bool GetRepairSelState()
         {
-            return PS_CleanBlobs.Checked || PS_CleanRegistry.Checked;
+            return PS_CleanBlobs.Checked || PS_CleanRegistry.Checked || PS_ServiceRepair.Checked;
         }
 
         /// <summary>
