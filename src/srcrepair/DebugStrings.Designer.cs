@@ -853,6 +853,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to run Service automatic repair..
+        /// </summary>
+        internal static string AppDbgExSvcRepair {
+            get {
+                return ResourceManager.GetString("AppDbgExSvcRepair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to create backup of Type 1 game video settings..
         /// </summary>
         internal static string AppDbgExT1AutoFail {

@@ -381,6 +381,9 @@
   <data name="AppDbgExStmmInit" xml:space="preserve">
     <value>Exception while initializing SteamManager class instance.</value>
   </data>
+  <data name="AppDbgExSvcRepair" xml:space="preserve">
+    <value>Exception while trying to run Service automatic repair.</value>
+  </data>
   <data name="AppDbgExT1AutoFail" xml:space="preserve">
     <value>Exception while trying to create backup of Type 1 game video settings.</value>
   </data>
