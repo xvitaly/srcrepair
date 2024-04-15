@@ -1808,6 +1808,23 @@ namespace srcrepair.gui
                     }
                 }
 
+                if (PS_ServiceRepair.Checked)
+                {
+                    try
+                    {
+                        string ServiceBinary = Path.Combine(App.SteamClient.FullSteamPath, "bin", "steamservice.exe");
+                        if (File.Exists(ServiceBinary))
+                        {
+                            ProcessManager.StartProcessAndWait(ServiceBinary, "/repair");
+                        }
+                    }
+                    catch (Exception Ex)
+                    {
+                        Logger.Error(Ex, DebugStrings.AppDbgExSvcRepair);
+                        MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+
                 MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
                 {
