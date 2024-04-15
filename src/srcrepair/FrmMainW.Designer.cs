@@ -145,6 +145,7 @@
             this.PS_OSDrive = new System.Windows.Forms.Label();
             this.PS_StPath = new System.Windows.Forms.Label();
             this.PS_GB_Solver = new System.Windows.Forms.GroupBox();
+            this.PS_ServiceRepair = new System.Windows.Forms.CheckBox();
             this.PS_ExecuteNow = new System.Windows.Forms.Button();
             this.PS_CleanRegistry = new System.Windows.Forms.CheckBox();
             this.PS_CleanBlobs = new System.Windows.Forms.CheckBox();
@@ -1283,12 +1284,20 @@
             // 
             // PS_GB_Solver
             // 
+            this.PS_GB_Solver.Controls.Add(this.PS_ServiceRepair);
             this.PS_GB_Solver.Controls.Add(this.PS_ExecuteNow);
             this.PS_GB_Solver.Controls.Add(this.PS_CleanRegistry);
             this.PS_GB_Solver.Controls.Add(this.PS_CleanBlobs);
             resources.ApplyResources(this.PS_GB_Solver, "PS_GB_Solver");
             this.PS_GB_Solver.Name = "PS_GB_Solver";
             this.PS_GB_Solver.TabStop = false;
+            // 
+            // PS_ServiceRepair
+            // 
+            resources.ApplyResources(this.PS_ServiceRepair, "PS_ServiceRepair");
+            this.PS_ServiceRepair.Name = "PS_ServiceRepair";
+            this.PS_ServiceRepair.UseVisualStyleBackColor = true;
+            this.PS_ServiceRepair.CheckedChanged += new System.EventHandler(this.PS_ServiceRepair_CheckedChanged);
             // 
             // PS_ExecuteNow
             // 
@@ -2157,6 +2166,7 @@
         private System.Windows.Forms.ComboBox FP_ConfigSel;
         private System.Windows.Forms.Button FP_Uninstall;
         private System.Windows.Forms.Label L_FP_ConfigSel;
+        private System.Windows.Forms.CheckBox PS_ServiceRepair;
     }
 }
 

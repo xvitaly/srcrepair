@@ -1759,6 +1759,16 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// "Service Repair" checkbox status changed event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void PS_ServiceRepair_CheckedChanged(object sender, EventArgs e)
+        {
+            PS_ExecuteNow.Enabled = GetRepairSelState();
+        }
+
+        /// <summary>
         /// "Execute cleanup" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
