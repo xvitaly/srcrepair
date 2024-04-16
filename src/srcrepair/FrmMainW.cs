@@ -1812,7 +1812,7 @@ namespace srcrepair.gui
                 {
                     try
                     {
-                        string ServiceBinary = Path.Combine(App.SteamClient.FullSteamPath, "bin", "steamservice.exe");
+                        string ServiceBinary = Path.Combine(App.SteamClient.FullBinPath, "steamservice.exe");
                         if (File.Exists(ServiceBinary))
                         {
                             ProcessManager.StartProcessAndWait(ServiceBinary, "/repair");

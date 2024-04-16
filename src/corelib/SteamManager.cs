@@ -29,6 +29,11 @@ namespace srcrepair.core
         public string FullSteamPath { get; private set; }
 
         /// <summary>
+        /// Gets or sets full path to Steam binaries directory.
+        /// </summary>
+        public string FullBinPath { get; private set; }
+
+        /// <summary>
         /// Gets or sets full path to Steam configuration files directory.
         /// </summary>
         public string FullConfigsPath { get; private set; }
@@ -232,6 +237,7 @@ namespace srcrepair.core
         private void SetValues(string LastSteamID)
         {
             SteamIDs = new List<string>();
+            FullBinPath = Path.Combine(FullSteamPath, "bin");
             FullConfigsPath = Path.Combine(FullSteamPath, "config");
             FullDumpsPath = Path.Combine(FullSteamPath, "dumps");
             FullLogsPath = Path.Combine(FullSteamPath, "logs");
