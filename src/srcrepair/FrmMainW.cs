@@ -1031,6 +1031,25 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Performs deletion of registry entries, if selected.
+        /// </summary>
+        private void HandleCleanRegistry()
+        {
+            if (PS_CleanRegistry.Checked)
+            {
+                try
+                {
+                    App.SteamClient.CleanRegistryNow(App.Platform.SteamLanguage);
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex, DebugStrings.AppDbgExClnReg);
+                    MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        /// <summary>
         /// Launches a program update checker in a separate thread, waits for the
         /// result and returns a message if found.
         /// </summary>
@@ -1802,19 +1821,7 @@ namespace srcrepair.gui
                 }
 
                 HandleCleanBlobs();
-
-                if (PS_CleanRegistry.Checked)
-                {
-                    try
-                    {
-                        App.SteamClient.CleanRegistryNow(App.Platform.SteamLanguage);
-                    }
-                    catch (Exception Ex)
-                    {
-                        Logger.Error(Ex, DebugStrings.AppDbgExClnReg);
-                        MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
+                HandleCleanRegistry();
 
                 if (PS_ServiceRepair.Checked)
                 {
