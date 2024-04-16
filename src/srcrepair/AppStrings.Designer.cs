@@ -19,7 +19,7 @@ namespace srcrepair.gui {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppStrings {
@@ -1195,11 +1195,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred during cleanup. Perhaps you have not enough rights for doing this..
+        ///   Looks up a localized string similar to An error occurred during the blobs removal! Perhaps you have not enough rights for doing this..
         /// </summary>
-        internal static string PS_CleanException {
+        internal static string PS_CleanBlobsException {
             get {
-                return ResourceManager.GetString("PS_CleanException", resourceCulture);
+                return ResourceManager.GetString("PS_CleanBlobsException", resourceCulture);
             }
         }
         
@@ -1209,6 +1209,15 @@ namespace srcrepair.gui {
         internal static string PS_CleanInProgress {
             get {
                 return ResourceManager.GetString("PS_CleanInProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred during the registry entries removal! Perhaps you have not enough rights for doing this..
+        /// </summary>
+        internal static string PS_CleanRegistryException {
+            get {
+                return ResourceManager.GetString("PS_CleanRegistryException", resourceCulture);
             }
         }
         
@@ -1335,6 +1344,15 @@ namespace srcrepair.gui {
         internal static string PS_SeqCompleted {
             get {
                 return ResourceManager.GetString("PS_SeqCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to run the Steam Service automatic repair procedure! Perhaps you have not enough rights for doing this..
+        /// </summary>
+        internal static string PS_ServiceRepairException {
+            get {
+                return ResourceManager.GetString("PS_ServiceRepairException", resourceCulture);
             }
         }
         

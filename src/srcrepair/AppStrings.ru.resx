@@ -495,11 +495,14 @@
   <data name="PS_BwBusy" xml:space="preserve">
     <value>Цели для очистки ещё не были построены! Пожалуйста повторите попытку через 10 секунд.</value>
   </data>
-  <data name="PS_CleanException" xml:space="preserve">
-    <value>Произошла ошибка во время процедуры очистки. Возможно, у вас отсутствуют необходимые права для этого действия.</value>
+  <data name="PS_CleanBlobsException" xml:space="preserve">
+    <value>Произошла ошибка во время работы процедуры очистки blob-файлов! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
   <data name="PS_CleanInProgress" xml:space="preserve">
     <value>Выполняется...</value>
+  </data>
+  <data name="PS_CleanRegistryException" xml:space="preserve">
+    <value>Произошла ошибка во время удаления записей, хранящихся в реестре! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
   <data name="PS_CleanupErr" xml:space="preserve">
     <value>Во время удаления файлов произошла ошибка. Некоторые файлы не были удалены!</value>
@@ -542,6 +545,9 @@
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
     <value>Очистка успешно выполнена. Steam будет запущен в режиме восстановления прямо сейчас!</value>
+  </data>
+  <data name="PS_ServiceRepairException" xml:space="preserve">
+    <value>Произошла ошибка при попытке запуска автоматического восстановления Steam Service! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
   <data name="QI_Excpt" xml:space="preserve">
     <value>Произошла ошибка во время установки выбранного файла!</value>
