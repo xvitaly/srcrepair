@@ -1050,6 +1050,29 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Performs automatic service repair, if selected.
+        /// </summary>
+        private void HandleServiceRepair()
+        {
+            if (PS_ServiceRepair.Checked)
+            {
+                try
+                {
+                    string ServiceBinary = Path.Combine(App.SteamClient.FullBinPath, "steamservice.exe");
+                    if (File.Exists(ServiceBinary))
+                    {
+                        ProcessManager.StartProcessAndWait(ServiceBinary, "/repair");
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex, DebugStrings.AppDbgExSvcRepair);
+                    MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        /// <summary>
         /// Launches a program update checker in a separate thread, waits for the
         /// result and returns a message if found.
         /// </summary>
@@ -1822,23 +1845,7 @@ namespace srcrepair.gui
 
                 HandleCleanBlobs();
                 HandleCleanRegistry();
-
-                if (PS_ServiceRepair.Checked)
-                {
-                    try
-                    {
-                        string ServiceBinary = Path.Combine(App.SteamClient.FullBinPath, "steamservice.exe");
-                        if (File.Exists(ServiceBinary))
-                        {
-                            ProcessManager.StartProcessAndWait(ServiceBinary, "/repair");
-                        }
-                    }
-                    catch (Exception Ex)
-                    {
-                        Logger.Error(Ex, DebugStrings.AppDbgExSvcRepair);
-                        MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
+                HandleServiceRepair();
 
                 MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
