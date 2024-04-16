@@ -1012,6 +1012,25 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Performs deletion of blob files, if selected.
+        /// </summary>
+        private void HandleCleanBlobs()
+        {
+            if (PS_CleanBlobs.Checked)
+            {
+                try
+                {
+                    App.SteamClient.CleanBlobsNow();
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex, DebugStrings.AppDbgExClnBlobs);
+                    MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        /// <summary>
         /// Launches a program update checker in a separate thread, waits for the
         /// result and returns a message if found.
         /// </summary>
@@ -1782,18 +1801,7 @@ namespace srcrepair.gui
                     MessageBox.Show(AppStrings.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
-                if (PS_CleanBlobs.Checked)
-                {
-                    try
-                    {
-                        App.SteamClient.CleanBlobsNow();
-                    }
-                    catch (Exception Ex)
-                    {
-                        Logger.Error(Ex, DebugStrings.AppDbgExClnBlobs);
-                        MessageBox.Show(AppStrings.PS_CleanException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
+                HandleCleanBlobs();
 
                 if (PS_CleanRegistry.Checked)
                 {
