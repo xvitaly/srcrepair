@@ -1082,6 +1082,25 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Starts Steam client and handles possible exceptions.
+        /// </summary>
+        private void HandleStartClient()
+        {
+            try
+            {
+                if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
+                {
+                    App.Platform.StartRegularProcess(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExStartClient);
+                MessageBox.Show(AppStrings.PS_StartClientException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
         /// Launches a program update checker in a separate thread, waits for the
         /// result and returns a message if found.
         /// </summary>
@@ -1860,10 +1879,7 @@ namespace srcrepair.gui
                 if (CleanStatus)
                 {
                     MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
-                    {
-                        App.Platform.StartRegularProcess(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
-                    }
+                    HandleStartClient();
                 }
             }
         }
