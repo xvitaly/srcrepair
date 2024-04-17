@@ -372,6 +372,9 @@
   <data name="AppDbgExStartCleanup" xml:space="preserve">
     <value>Exception while trying to start cleanup.</value>
   </data>
+  <data name="AppDbgExStartClient" xml:space="preserve">
+    <value>Exception while trying to start the installed Steam client.</value>
+  </data>
   <data name="AppDbgExSteamPath" xml:space="preserve">
     <value>Exception while trying to get Steam path. Application will be terminated.</value>
   </data>

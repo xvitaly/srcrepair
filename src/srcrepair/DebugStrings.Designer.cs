@@ -826,6 +826,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to start the installed Steam client..
+        /// </summary>
+        internal static string AppDbgExStartClient {
+            get {
+                return ResourceManager.GetString("AppDbgExStartClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to get Steam path. Application will be terminated..
         /// </summary>
         internal static string AppDbgExSteamPath {
