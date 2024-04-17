@@ -1082,6 +1082,27 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Shuts down the running Steam client and handles possible exceptions.
+        /// </summary>
+        private bool HandleShutdownClient()
+        {
+            try
+            {
+                if (ProcessManager.ProcessTerminate("Steam") != 0)
+                {
+                    MessageBox.Show(AppStrings.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExShutdownClient);
+                MessageBox.Show(AppStrings.PS_ShutdownClientException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
         /// Starts Steam client and handles possible exceptions.
         /// </summary>
         private void HandleStartClient()
@@ -1866,10 +1887,7 @@ namespace srcrepair.gui
         {
             if (GetRepairSelState() && MessageBox.Show(AppStrings.PS_ExecuteMSG, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if (ProcessManager.ProcessTerminate("Steam") != 0)
-                {
-                    MessageBox.Show(AppStrings.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                if (!HandleShutdownClient()) { return; }
 
                 bool CleanStatus = true;
                 CleanStatus &= HandleCleanBlobs();
