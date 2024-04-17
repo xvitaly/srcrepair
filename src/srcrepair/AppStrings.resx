@@ -549,6 +549,9 @@
   <data name="PS_ServiceRepairException" xml:space="preserve">
     <value>An error occurred while trying to run the Steam Service automatic repair procedure! Perhaps you have not enough rights for doing this.</value>
   </data>
+  <data name="PS_StartClientException" xml:space="preserve">
+    <value>An error occurred while trying to start the installed Steam client! Perhaps you have not enough rights for doing this.</value>
+  </data>
   <data name="QI_Excpt" xml:space="preserve">
     <value>An error occured during file installation. Please try again later!</value>
   </data>

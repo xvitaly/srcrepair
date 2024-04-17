@@ -1357,6 +1357,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to start the installed Steam client! Perhaps you have not enough rights for doing this..
+        /// </summary>
+        internal static string PS_StartClientException {
+            get {
+                return ResourceManager.GetString("PS_StartClientException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occured during file installation. Please try again later!.
         /// </summary>
         internal static string QI_Excpt {
