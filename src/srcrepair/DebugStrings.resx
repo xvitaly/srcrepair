@@ -369,6 +369,9 @@
   <data name="AppDbgExSelGame" xml:space="preserve">
     <value>Exception while handling selected game by user or application.</value>
   </data>
+  <data name="AppDbgExShutdownClient" xml:space="preserve">
+    <value>Exception while trying to shut down the running Steam client.</value>
+  </data>
   <data name="AppDbgExStartCleanup" xml:space="preserve">
     <value>Exception while trying to start cleanup.</value>
   </data>

@@ -817,6 +817,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to shut down the running Steam client..
+        /// </summary>
+        internal static string AppDbgExShutdownClient {
+            get {
+                return ResourceManager.GetString("AppDbgExShutdownClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to start cleanup..
         /// </summary>
         internal static string AppDbgExStartCleanup {
