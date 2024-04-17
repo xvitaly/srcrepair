@@ -1357,6 +1357,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to shut down the running Steam client! Perhaps you have not enough rights for doing this..
+        /// </summary>
+        internal static string PS_ShutdownClientException {
+            get {
+                return ResourceManager.GetString("PS_ShutdownClientException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while trying to start the installed Steam client! Perhaps you have not enough rights for doing this..
         /// </summary>
         internal static string PS_StartClientException {

@@ -549,6 +549,9 @@
   <data name="PS_ServiceRepairException" xml:space="preserve">
     <value>Произошла ошибка при попытке запуска автоматического восстановления Steam Service! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
+  <data name="PS_ShutdownClientException" xml:space="preserve">
+    <value>Произошла ошибка при попытке завершить работу запущенного клиента Steam! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
+  </data>
   <data name="PS_StartClientException" xml:space="preserve">
     <value>Произошла ошибка при попытке запуска установленного клиента Steam! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
