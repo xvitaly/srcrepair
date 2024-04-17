@@ -1014,7 +1014,8 @@ namespace srcrepair.gui
         /// <summary>
         /// Performs deletion of blob files, if selected.
         /// </summary>
-        private void HandleCleanBlobs()
+        /// <returns>Returns True if the process completed without errors.</returns>
+        private bool HandleCleanBlobs()
         {
             if (PS_CleanBlobs.Checked)
             {
@@ -1026,14 +1027,17 @@ namespace srcrepair.gui
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExClnBlobs);
                     MessageBox.Show(AppStrings.PS_CleanBlobsException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
             }
+            return true;
         }
 
         /// <summary>
         /// Performs deletion of registry entries, if selected.
         /// </summary>
-        private void HandleCleanRegistry()
+        /// <returns>Returns True if the process completed without errors.</returns>
+        private bool HandleCleanRegistry()
         {
             if (PS_CleanRegistry.Checked)
             {
@@ -1045,14 +1049,17 @@ namespace srcrepair.gui
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExClnReg);
                     MessageBox.Show(AppStrings.PS_CleanRegistryException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
             }
+            return true;
         }
 
         /// <summary>
         /// Performs automatic service repair, if selected.
         /// </summary>
-        private void HandleServiceRepair()
+        /// <returns>Returns True if the process completed without errors.</returns>
+        private bool HandleServiceRepair()
         {
             if (PS_ServiceRepair.Checked)
             {
@@ -1068,8 +1075,10 @@ namespace srcrepair.gui
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExSvcRepair);
                     MessageBox.Show(AppStrings.PS_ServiceRepairException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
                 }
             }
+            return true;
         }
 
         /// <summary>
@@ -1843,14 +1852,18 @@ namespace srcrepair.gui
                     MessageBox.Show(AppStrings.PS_ProcessDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
-                HandleCleanBlobs();
-                HandleCleanRegistry();
-                HandleServiceRepair();
+                bool CleanStatus = true;
+                CleanStatus &= HandleCleanBlobs();
+                CleanStatus &= HandleCleanRegistry();
+                CleanStatus &= HandleServiceRepair();
 
-                MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
+                if (CleanStatus)
                 {
-                    App.Platform.StartRegularProcess(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
+                    MessageBox.Show(AppStrings.PS_SeqCompleted, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
+                    {
+                        App.Platform.StartRegularProcess(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
+                    }
                 }
             }
         }
