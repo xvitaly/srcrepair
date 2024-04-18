@@ -710,9 +710,13 @@ namespace srcrepair.gui
             // Checking platform...
             if (App.Platform.OS != CurrentPlatform.OSType.Windows)
             {
-                // On Linux and MacOS we will disable "Keyboard disabler" and Reporter modules...
+                // On Linux and MacOS we will disable some modules and features...
                 MNUReportBuilder.Enabled = false;
                 MNUWinMnuDisabler.Enabled = false;
+                PS_CleanRegistry.Enabled = false;
+                PS_ServiceRepair.Enabled = false;
+                BUT_L_AllSteam.Enabled = false;
+                BUT_L_AllSRC.Enabled = false;
             }
         }
 
