@@ -32,6 +32,11 @@ namespace srcrepair.core
         bool AutoUpdateSupported { get; }
 
         /// <summary>
+        /// Return whether advanced features are supported on this platform.
+        /// </summary>
+        bool AdvancedFeaturesSupported { get; }
+
+        /// <summary>
         /// Immediately shut down application and return exit code.
         /// </summary>
         /// <param name="ReturnCode">Exit code.</param>

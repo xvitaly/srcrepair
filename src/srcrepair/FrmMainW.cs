@@ -678,7 +678,7 @@ namespace srcrepair.gui
         {
             try
             {
-                if (App.Platform.OS == CurrentPlatform.OSType.Windows)
+                if (App.Platform.AdvancedFeaturesSupported)
                 {
                     MNUWinMnuDisabler.Enabled = App.Plugins["kbhelper"].Installed;
                 }
@@ -708,7 +708,7 @@ namespace srcrepair.gui
         private void ChangePrvControlState()
         {
             // Checking platform...
-            if (App.Platform.OS != CurrentPlatform.OSType.Windows)
+            if (!App.Platform.AdvancedFeaturesSupported)
             {
                 // On Linux and MacOS we will disable some modules and features...
                 MNUReportBuilder.Enabled = false;

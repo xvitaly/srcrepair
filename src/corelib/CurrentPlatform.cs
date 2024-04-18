@@ -82,6 +82,11 @@ namespace srcrepair.core
         public virtual bool AutoUpdateSupported => false;
 
         /// <summary>
+        /// Return whether advanced features are supported on this platform.
+        /// </summary>
+        public virtual bool AdvancedFeaturesSupported => false;
+
+        /// <summary>
         /// Immediately shut down application and return exit code.
         /// </summary>
         /// <param name="ReturnCode">Exit code.</param>

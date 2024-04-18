@@ -79,6 +79,11 @@ namespace srcrepair.core
         public override bool AutoUpdateSupported => true;
 
         /// <summary>
+        /// Return whether advanced features are supported on this platform.
+        /// </summary>
+        public override bool AdvancedFeaturesSupported => true;
+
+        /// <summary>
         /// Get platform-dependent Steam installation folder (directory) name.
         /// </summary>
         public override string SteamFolderName => Properties.Resources.SteamFolderNameWin;
