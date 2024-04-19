@@ -40,17 +40,20 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Start the required application from administrator.
+        /// Start the required application from an administrator with specified
+        /// command-line arguments.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
+        /// <param name="Arguments">Command-line arguments.</param>
         /// <returns>PID of the newly created process.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public override int StartElevatedProcess(string FileName)
+        public override int StartElevatedProcess(string FileName, string Arguments)
         {
             // Setting advanced properties...
             ProcessStartInfo ST = new ProcessStartInfo
             {
                 FileName = FileName,
+                Arguments = Arguments,
                 Verb = "runas",
                 WindowStyle = ProcessWindowStyle.Normal,
                 UseShellExecute = true

@@ -108,7 +108,16 @@ namespace srcrepair.core
         void RestartApplicationAsAdmin();
 
         /// <summary>
-        /// Start the required application from administrator.
+        /// Start the required application from an administrator with specified
+        /// command-line arguments.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <param name="Arguments">Command-line arguments.</param>
+        /// <returns>PID of the newly created process.</returns>
+        int StartElevatedProcess(string FileName, string Arguments);
+
+        /// <summary>
+        /// Start the required application from an administrator.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
         /// <returns>PID of the newly created process.</returns>
@@ -120,6 +129,15 @@ namespace srcrepair.core
         /// <param name="FileName">Full path to helper application.</param>
         /// <param name="IsElevated">Run with administrator privileges.</param>
         void StartExternalHelper(string FileName, bool IsElevated);
+
+        /// <summary>
+        /// Start the required application as the current user with specified
+        /// command-line arguments.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <param name="Arguments">Command-line arguments.</param>
+        /// <returns>PID of the newly created process.</returns>
+        int StartRegularProcess(string FileName, string Arguments);
 
         /// <summary>
         /// Start the required application as the current user.

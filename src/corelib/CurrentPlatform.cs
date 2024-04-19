@@ -155,6 +155,35 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Start the required application as the current user with specified
+        /// command-line arguments.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <param name="Arguments">Command-line arguments.</param>
+        /// <returns>PID of the newly created process.</returns>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public virtual int StartRegularProcess(string FileName, string Arguments)
+        {
+            ProcessStartInfo ST = new ProcessStartInfo
+            {
+                FileName = FileName,
+                Arguments = Arguments
+            };
+            return Process.Start(ST).Id;
+        }
+
+        /// <summary>
+        /// Start the required application from an administrator.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <returns>PID of the newly created process.</returns>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        public virtual int StartElevatedProcess(string FileName)
+        {
+            return StartElevatedProcess(FileName, string.Empty);
+        }
+
+        /// <summary>
         /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
         public virtual string UASuffix => Properties.Resources.AppUASuffixOther;
@@ -221,11 +250,13 @@ namespace srcrepair.core
         public abstract void OpenExplorer(string FileName);
 
         /// <summary>
-        /// Start the required application from administrator.
+        /// Start the required application from an administrator with specified
+        /// command-line arguments.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
+        /// <param name="Arguments">Command-line arguments.</param>
         /// <returns>PID of the newly created process.</returns>
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
-        public abstract int StartElevatedProcess(string FileName);
+        public abstract int StartElevatedProcess(string FileName, string Arguments);
     }
 }
