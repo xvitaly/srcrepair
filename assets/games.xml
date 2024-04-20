@@ -14,7 +14,7 @@
         <HUDsAvail>1</HUDsAvail>
         <SID>440</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>tf_win64.exe</Executable>
     </Game>
     <Game Name="Counter-Strike: Source">
         <Enabled>1</Enabled>
