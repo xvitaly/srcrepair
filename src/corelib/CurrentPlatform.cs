@@ -173,7 +173,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Start the required application from an administrator.
+        /// Start the required application as an administrator.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
         /// <returns>PID of the newly created process.</returns>
@@ -184,8 +184,8 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Start the required application from an administrator with specified
-        /// command-line arguments.
+        /// Start the required application as an administrator with the specified
+        /// command-line arguments and external helper tool.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
         /// <param name="Arguments">Command-line arguments.</param>
@@ -278,7 +278,7 @@ namespace srcrepair.core
         public abstract void OpenExplorer(string FileName);
 
         /// <summary>
-        /// Start the required application from an administrator with specified
+        /// Start the required application as an administrator with the specified
         /// command-line arguments.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>

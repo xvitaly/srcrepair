@@ -40,7 +40,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Start the required application from an administrator with specified
+        /// Start the required application as an administrator with the specified
         /// command-line arguments.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
