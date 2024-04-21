@@ -48,21 +48,7 @@ namespace srcrepair.core
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public override int StartElevatedProcess(string FileName, string Arguments)
         {
-            // Setting advanced properties...
-            ProcessStartInfo ST = new ProcessStartInfo
-            {
-                FileName = FileName,
-                Arguments = Arguments,
-                Verb = "sudo",
-                WindowStyle = ProcessWindowStyle.Normal,
-                UseShellExecute = true
-            };
-
-            // Starting process...
-            Process NewProcess = Process.Start(ST);
-
-            // Returning PID of created process...
-            return NewProcess.Id;
+            return StartElevatedProcess(FileName, Arguments, "sudo");
         }
 
         /// <summary>

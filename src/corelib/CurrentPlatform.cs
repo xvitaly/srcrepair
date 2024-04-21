@@ -184,6 +184,34 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Start the required application from an administrator with specified
+        /// command-line arguments.
+        /// </summary>
+        /// <param name="FileName">Full path to the executable.</param>
+        /// <param name="Arguments">Command-line arguments.</param>
+        /// <param name="ExternalHelper">External helper application for elevating permissions.</param>
+        /// <returns>PID of the newly created process.</returns>
+        [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
+        protected virtual int StartElevatedProcess(string FileName, string Arguments, string ExternalHelper)
+        {
+            // Setting advanced properties...
+            ProcessStartInfo ST = new ProcessStartInfo
+            {
+                FileName = FileName,
+                Arguments = Arguments,
+                Verb = ExternalHelper,
+                WindowStyle = ProcessWindowStyle.Normal,
+                UseShellExecute = true
+            };
+
+            // Starting process...
+            Process NewProcess = Process.Start(ST);
+
+            // Returning PID of created process...
+            return NewProcess.Id;
+        }
+
+        /// <summary>
         /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
         public virtual string UASuffix => Properties.Resources.AppUASuffixOther;
