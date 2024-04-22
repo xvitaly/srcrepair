@@ -155,7 +155,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Start the required application as the current user with specified
+        /// Start the required application as the current user with the specified
         /// command-line arguments.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>

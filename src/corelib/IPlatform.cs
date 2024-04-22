@@ -108,7 +108,7 @@ namespace srcrepair.core
         void RestartApplicationAsAdmin();
 
         /// <summary>
-        /// Start the required application from an administrator with specified
+        /// Start the required application as an administrator with the specified
         /// command-line arguments.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
@@ -131,7 +131,7 @@ namespace srcrepair.core
         void StartExternalHelper(string FileName, bool IsElevated);
 
         /// <summary>
-        /// Start the required application as the current user with specified
+        /// Start the required application as the current user with the specified
         /// command-line arguments.
         /// </summary>
         /// <param name="FileName">Full path to the executable.</param>
