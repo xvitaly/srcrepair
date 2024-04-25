@@ -9,21 +9,21 @@
 Frequently asked questions (FAQ)
 *****************************************
 
-.. index:: framework, dotnet version
+.. index:: dotnet framework version
 .. _faq-framework:
 
 How to fix an error with Microsoft .NET Framework 4 on program startup?
-===========================================================================================
+=================================================================================
 
-You to download and install Microsoft .NET Framework version 4.7.2 or higher in order to use this program.
+You need to download and install Microsoft .NET Framework version 4.8 or later in order to use this program.
 
-You can download if from official `Microsoft Download website <https://www.microsoft.com/net/download/dotnet-framework-runtime>`__.
+You can download if from the `official website <https://dotnet.microsoft.com/en-us/download/dotnet-framework>`__.
 
 .. index:: windows xp, windows vista
 .. _faq-legacy:
 
 How can I run this program under Windows XP/Vista?
-=========================================================
+======================================================
 
 These legacy operating systems are no longer supported.
 
@@ -31,89 +31,81 @@ These legacy operating systems are no longer supported.
 .. _faq-slow-start:
 
 How to fix slow startup?
-===========================================
+============================
 
-You can install SRC Repair for all users. Installer will use NGen to generate native images, which should significantly increate cold startup speed.
+You can install SRC Repair for all users. The installer will use NGen to generate native images, which should significantly improve cold startup speed.
 
-.. index:: counterfeit, cracked versions
+.. index:: cracked game versions
 .. _faq-crrrr:
 
-Can I use this program with cracked version of game?
-=============================================================
+Can I use this program with cracked version of the game?
+============================================================
 
-No. We support only legal Steam versions.
+No. We only support genuine Steam versions.
 
-.. index:: source 2
+.. index:: source 2 support
 .. _faq-source2:
 
 Will the Source 2 engine be supported and when?
-=======================================================
+===================================================
 
 Maybe, but no ETA yet.
 
-.. index:: source 2, dota 2
-.. _faq-dota2:
-
-Is Dota 2 supported?
-===================================
-
-This game uses the Source 2 engine, which is not supported yet.
-
-.. index:: steam account, steam password, steam
+.. index:: steam account security
 .. _faq-password:
 
 Can this program steal my Steam account?
 ============================================
 
-No. SRC Repair is a free and opensource program. You can check its `source code on GitHub <https://github.com/xvitaly/srcrepair>`__.
+No. SRC Repair is a free and opensource program. You can check its `source code <https://github.com/xvitaly/srcrepair>`__.
 
-.. index:: steam, simultaneous launch
+.. index:: simultaneous launch with steam
 .. _faq-steam-run:
 
 Is it safe to run this program with Steam simultaneously?
-===============================================================
+=============================================================
 
-Yes, unless you use :ref:`Steam cleanup module <modules-stmcln>`.
+Yes, unless you want use the :ref:`Steam cleanup module <modules-stmcln>`.
 
-.. index:: simultaneous launch
+.. index:: simultaneous launch with the game
 .. _faq-game-run:
 
 Is it safe to run this program with controlled game simultaneously?
-===========================================================================
+=======================================================================
 
-We strongly do not recommend doing this, as neither SRC Repair, nor the controled game cannot get exclusive access to files and settings.
+We strongly recommend against doing this, as neither SRC Repair nor the managed game can gain exclusive access to files and settings.
 
 .. index:: vac ban
 .. _faq-vac:
 
 Can I get VAC ban for using this program?
-=======================================================
+==============================================
 
-No, but do not use this program with any running VAC-protected game.
+No, but do not use this program with any running VAC protected game.
 
-.. index:: report issue, report bug, feature request
+.. index:: report a bug, feature request
 .. _faq-opinion:
 
 How I can report bug or create a new feature request?
-===============================================================
+==========================================================
 
-Please open a new issue in our `bug tracker <https://github.com/xvitaly/srcrepair/issues>`__ on GitHub.
+Please open a new issue in our `bug tracker <https://github.com/xvitaly/srcrepair/issues>`__.
 
-.. index:: firewall, network activity
+.. index:: network access
 .. _faq-firewall:
 
 For what purposes does SRC Repair require Internet access?
-===================================================================================================
+==============================================================
 
 SRC Repair need Internet access for checking for updates once a week (can be disabled in :ref:`advanced settings <settings-advanced>`).
 
-.. index:: adding a new game, report issue
+.. index:: adding a new game
 .. _faq-add-game:
 
 I want to add a new game. What should I do?
-===========================================================
+===============================================
 
-Please open a new issue in our `bug tracker <https://github.com/xvitaly/srcrepair/issues>`__ on GitHub.
+Please open a new issue in our `bug tracker <https://github.com/xvitaly/srcrepair/issues>`__.
 
 We support only Source Engine games.
 
@@ -121,113 +113,110 @@ We support only Source Engine games.
 .. _faq-sources:
 
 Can I build SRC Repair from sources?
-=============================================
+========================================
 
 :ref:`Yes, you can <building-from-sources>`.
 
-.. index:: cleanup
+.. index:: game cleanup
 .. _faq-gb-games:
 
 How I can remove garbage, accumulated by installed games?
-================================================================================================================
+=============================================================
 
 Please use tools from :ref:`Troubleshooting and cleanup <cleanup-wizard>` tab.
 
-.. index:: cleanup
+.. index:: steam cleanup
 .. _faq-gb-steam:
 
 How I can remove garbage, accumulated by Steam?
-=========================================================================================================
+===================================================
 
-Please use :ref:`Steam cleanup module <modules-stmcln>`.
+Please use the :ref:`Steam cleanup module <modules-stmcln>`.
 
-.. index:: installation error, error
+.. index:: installation directory error
 .. _faq-install-error:
 
-I want to change installation directory, but cannot do this due to an error. What shall I do?
-====================================================================================================
+I want to change the installation directory, but I can't do it because of an error. What should I do?
+==========================================================================================================
 
-If you want to install program to a privileged directory, you will need to run installer with admininstrator user rights.
+If you want to install the program in a privileged directory, you need to run the installer as an administrator.
 
-Press right mouse button on installer and select **Run as admininstrator** from context menu.
+Right-click the installer and select **Run as administrator** from the context menu.
 
-.. index:: error
+.. index:: open registry key error
 .. _faq-reg-error:
 
-How I can fix "Could not open registry key" error?
-==============================================================================================
+How I can fix the "Couldn't open registry key" error?
+=========================================================
 
-Please start selected game at least once from Steam, then restart SRC Repair.
+Please launch the selected game at least once from Steam and then restart SRC Repair.
 
-If that does not help, you have ``-autoconfig`` or ``-dxlevel`` :ref:`command-line options <gt-params>` enabled.
+If this does not help, you have ``-autoconfig`` or ``-dxlevel`` :ref:`command-line options <gt-params>` enabled.
 
-Open command-line :ref:`options editor <gt-setparams>`, remove everything from this row, then launch the game.
+Open the command-line :ref:`options editor <gt-setparams>`, remove everything from this row, then launch the game.
 
-Now SRC Repair will load video settings corretly.
+Now SRC Repair will be able to load video settings correctly.
 
-.. index:: error
+.. index:: graphic settings doesn't work
 .. _faq-graph-na:
 
-Game do not respect settings set in graphic tweaker. How I can fix this?
-==================================================================================
+The game doesn't respect the settings set in the graphic tweaker. How I can fix this?
+===========================================================================================
 
-This is a known issue for all Source Engine games if ``-dxlevel`` :ref:`command-line option <gt-params>` is set.
+This is a known issue for all Source Engine games if the ``-dxlevel`` :ref:`command-line option <gt-params>` is set.
 
-Open command-line :ref:`options editor <gt-setparams>`, remove everything from this row, then launch the game.
+Open the command-line :ref:`options editor <gt-setparams>`, remove everything from this row, then launch the game.
 
-.. index:: error
+.. index:: directx 8 mode
 .. _faq-gm-dx8:
 
-Garry's Mod cannot use DirectX 8.x mode. How can I fix this?
-================================================================================
+Garry's Mod can't use DirectX 8.x mode. How can I fix this?
+===============================================================
 
-DirectX 8.x support was removed from the latest Garry's Mod versions. This game will always use DirectX 9.0c, regardless of the selected mode in :ref:`graphic tweaker <gt-type1>`.
+DirectX 8.x support has been removed from recent versions of Garry's Mod. This game will always use DirectX 9.0c, regardless of the selected mode in :ref:`graphic tweaker <gt-type1>`.
 
-.. index:: missing face animation, missing eyes, FPS-configs
+.. index:: missing facial animation, missing eyes
 .. _faq-tf2-eyes:
 
-Missing eyes after installing FPS-config in Team Fortress 2. How can I fix this?
-=========================================================================================
+How can I fix the issue with missing eyes after installing FPS-config?
+============================================================================
 
-  1. Most of FPS-configs disable face animations in order to significantly increase game performance.
-  2. All FPS-configs are licensed "as is". We cannot change them.
-  3. You can enable face animations by switching from ``r_eyes 0`` to ``r_eyes 1``.
+  1. Most of FPS-configs disable facial animation to significantly improve game performance.
+  2. All FPS-configs are licensed "as is". We can't change them.
+  3. You can enable facial animation by switching from ``r_eyes 0`` to ``r_eyes 1``.
 
-.. index:: FPS-configs, FPS-config edit
+.. index:: edit installed FPS-config
 .. _faq-fps-edit:
 
-How I can edit installed FPS-config?
-=====================================================
+How I can edit the installed FPS-config?
+=============================================
 
-If you have installed :ref:`FPS-config <fps-about>`, you will see a yellow exclamation mark in :ref:`Graphic tweaker <graphic-tweaker>` tab.
+If you have installed :ref:`FPS-config <fps-about>`, you will see a yellow exclamation mark in the :ref:`Graphic tweaker <graphic-tweaker>` tab.
 
-Press left mouse button on it and select FPS-config to edit by :ref:`Config editor <config-editor>` or hold **Shift** to edit it by a :ref:`selected text editor <settings-advanced>`.
+Left-click on it and select FPS-config to edit using the :ref:`Config editor <config-editor>` or hold **Shift** to edit it using the :ref:`selected text editor <settings-advanced>`.
 
-.. index:: FPS-configs, FPS-configs compatibility
+.. index:: FPS-configs compatibility
 .. _faq-fps-compat:
 
 Why does the description of some FPS-configs say that they are not fully compatible with the game?
 =======================================================================================================
 
-Some console variables were marked as cheats and cannot be used on servers without ``sv_cheats 1``.
+Some console variables are marked as cheats and can't be used on servers without ``sv_cheats 1``.
 
-Unfortunately, some authors of FPS-configs have abandoned their configs. You can still use them, but their effectiveness may be low.
+Unfortunately, some FPS-configs authors have abandoned their configs. You can still use them, but their effectiveness may be low.
 
-.. index:: FPS-configs, TF2 competitive mode
+.. index:: TF2 competitive mode
 .. _faq-tf-comp:
 
-Why I cannot use FPS-config in a Team Fortress 2 competitive mode?
-==========================================================================================
+Why I can't use FPS-config in a Team Fortress 2 competitive mode?
+======================================================================
 
-Valve have completely disabled all FPS-configs in Team Fortress 2 competitive mode.
+Valve has completely disabled all FPS-configs in Team Fortress 2's competitive mode.
 
-.. index:: FPS-configs, hud, download error, FPS-config download error, hud download error
+.. index:: hud download error, FPS-config download error
 .. _faq-download-error:
 
-Cannot download FPS-config or HUD. How can I fix this?
-===================================================================
+Can't download FPS-config or HUD. How can I fix this?
+==========================================================
 
-Please open :ref:`program settings <settings>` and enable following checkboxes:
-
-  * **Allow download and install latest (untested) HUDs** (:ref:`common settings <settings-main>` tab) -- should fix issues with downloading HUD files;
-  * **Use mirrors to download FPS-configs** (:ref:`advanced settings <settings-advanced>` tab) -- should fix issues with downloading FPS-configs.
+SRC Repair will automatically try to connect to another server if it can't download a file from the primary CDN.
