@@ -19,14 +19,6 @@ You need to download and install Microsoft .NET Framework version 4.8 or later i
 
 You can download if from the `official website <https://dotnet.microsoft.com/en-us/download/dotnet-framework>`__.
 
-.. index:: windows xp, windows vista
-.. _faq-legacy:
-
-How can I run this program under Windows XP/Vista?
-======================================================
-
-These legacy operating systems are no longer supported.
-
 .. index:: slow startup
 .. _faq-slow-start:
 
