@@ -43,7 +43,7 @@ Principle of operation
 ============================================
 
  * If the **Clean .blob files from Steam directory** is checked, SRC Repair will get the Steam installation path, find and remove files with the .blob extension, and force Steam recovery the next time you launch it. Warning! Steam can force you to sign in again after performing this action.
- * If the **Clean all registry entries** is checked, SRC Repair will remove the ``HKEY_CURRENT_USER\Software\Valve\Steam`` registry key, modify some values in the ``HKEY_LOCAL_MACHINE\Software\Valve\Steam`` (only when running with admin rights), and force Steam recovery the next time you launch it. You will need to select your preferred Steam language from the list.
+ * If the **Clean all registry entries** is checked, SRC Repair will remove the ``HKEY_CURRENT_USER\Software\Valve\Steam`` registry key, and force Steam recovery the next time you launch it.
 
 .. index:: path checker, installation path checker
 .. _cleanup-pathcheck:
