@@ -98,12 +98,6 @@ namespace srcrepair.core
         /// <param name="LangName">Steam language.</param>
         public static void CleanRegistrySettings(string LangName)
         {
-            // Removing key HKEY_LOCAL_MACHINE\Software\Valve recursive if we have admin rights...
-            if (ProcessManager.IsCurrentUserAdmin())
-            {
-                Registry.LocalMachine.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
-            }
-
             // Removing key HKEY_CURRENT_USER\Software\Valve recursive...
             Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
 
