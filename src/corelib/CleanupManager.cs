@@ -26,7 +26,7 @@ namespace srcrepair.core
         /// <summary>
         /// Stores full list of available cleanup targets.
         /// </summary>
-        private readonly Dictionary<string, CleanupTarget> CleanupTargets;
+        private readonly Dictionary<int, CleanupTarget> CleanupTargets;
 
         /// <summary>
         /// Stores path to installation directory without SmallAppName.
@@ -52,7 +52,7 @@ namespace srcrepair.core
         /// Overloading inxeding operator to return cleanup target instance
         /// by specified name.
         /// </summary>
-        public CleanupTarget this[string key] => CleanupTargets[key];
+        public CleanupTarget this[int key] => CleanupTargets[key];
 
         /// <summary>
         /// Fill templates with real application paths.
@@ -118,7 +118,7 @@ namespace srcrepair.core
             CloudScreenshotsPath = SelectedGame.CloudScreenshotsPath;
 
             // Initializing empty dictionary...
-            CleanupTargets = new Dictionary<string, CleanupTarget>();
+            CleanupTargets = new Dictionary<int, CleanupTarget>();
 
             // Fetching list of available cleanup targets from XML database file...
             using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.CleanupDatabaseName), FileMode.Open, FileAccess.Read))
@@ -132,7 +132,7 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        CleanupTargets.Add(XmlItem.SelectSingleNode("ID").InnerText, new CleanupTarget(XmlItem.SelectSingleNode("Name").InnerText, GetDirListFromNode(XmlItem, AllowUnsafe)));
+                        CleanupTargets.Add(int.Parse(XmlItem.SelectSingleNode("ID").InnerText), new CleanupTarget(XmlItem.SelectSingleNode("Name").InnerText, GetDirListFromNode(XmlItem, AllowUnsafe)));
                     }
                     catch (Exception Ex)
                     {

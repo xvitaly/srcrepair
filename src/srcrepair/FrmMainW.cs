@@ -1239,7 +1239,7 @@ namespace srcrepair.gui
         /// <param name="ID">Cleanup target ID.</param>
         /// <param name="Title">Title for cleanup window.</param>
         /// <param name="Targets">Additional targets for cleanup.</param>
-        private void StartCleanup(string ID, string Title, List<string> Targets)
+        private void StartCleanup(int ID, string Title, List<string> Targets)
         {
             if (App.SourceGames[AppSelector.Text].ClnMan == null)
             {
@@ -1268,7 +1268,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="ID">Cleanup target ID.</param>
         /// <param name="Title">Title for cleanup window.</param>
-        private void StartCleanup(string ID, string Title)
+        private void StartCleanup(int ID, string Title)
         {
             StartCleanup(ID, Title, new List<string>());
         }
@@ -2325,7 +2325,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemCustMaps_Click(object sender, EventArgs e)
         {
-            StartCleanup("0", ((Button)sender).Text);
+            StartCleanup(0, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -2335,7 +2335,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemDnlCache_Click(object sender, EventArgs e)
         {
-            StartCleanup("1", ((Button)sender).Text);
+            StartCleanup(1, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -2345,7 +2345,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemSoundCache_Click(object sender, EventArgs e)
         {
-            StartCleanup("2", ((Button)sender).Text);
+            StartCleanup(2, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -2355,7 +2355,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemScreenShots_Click(object sender, EventArgs e)
         {
-            StartCleanup("3", ((Button)sender).Text);
+            StartCleanup(3, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -2365,7 +2365,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemDemos_Click(object sender, EventArgs e)
         {
-            StartCleanup("4", ((Button)sender).Text);
+            StartCleanup(4, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -2452,7 +2452,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemOldBin_Click(object sender, EventArgs e)
         {
-            StartCleanup("5", ((Button)sender).Text);
+            StartCleanup(5, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -3152,7 +3152,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemReplays_Click(object sender, EventArgs e)
         {
-            StartCleanup("6", ((Button)sender).Text);
+            StartCleanup(6, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -3162,7 +3162,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemTextures_Click(object sender, EventArgs e)
         {
-            StartCleanup("7", ((Button)sender).Text);
+            StartCleanup(7, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -3172,7 +3172,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemSecndCache_Click(object sender, EventArgs e)
         {
-            StartCleanup("8", ((Button)sender).Text);
+            StartCleanup(8, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -3247,7 +3247,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemSounds_Click(object sender, EventArgs e)
         {
-            StartCleanup("9", ((Button)sender).Text);
+            StartCleanup(9, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -3257,7 +3257,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemCustDir_Click(object sender, EventArgs e)
         {
-            StartCleanup("10", ((Button)sender).Text);
+            StartCleanup(10, ((Button)sender).Text);
         }
 
         /// <summary>
@@ -3272,7 +3272,7 @@ namespace srcrepair.gui
             {
                 CleanDirs.AddRange(App.SourceGames[AppSelector.Text].VideoCfgFiles);
             }
-            StartCleanup("11", ((Button)sender).Text, CleanDirs);
+            StartCleanup(11, ((Button)sender).Text, CleanDirs);
         }
 
         /// <summary>
