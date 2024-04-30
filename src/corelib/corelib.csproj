@@ -57,6 +57,7 @@
     <Compile Include="CleanupTarget.cs" />
     <Compile Include="CommonSettings.cs" />
     <Compile Include="CommonVideo.cs" />
+    <Compile Include="ConfigEntryParser.cs" />
     <Compile Include="DebugStrings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
