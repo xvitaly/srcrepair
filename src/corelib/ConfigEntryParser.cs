@@ -37,7 +37,34 @@ namespace srcrepair.core
         /// <returns>Returns the ConfigEntryParser object, or null if exceptions are disabled.</returns>
         private static ConfigEntryParser InternalParse(string Value, bool TryParse)
         {
-            throw new NotImplementedException();
+            // Checking the source string for null...
+            if (string.IsNullOrWhiteSpace(Value))
+            {
+                if (TryParse) { return null; } else { throw new ArgumentException("Game config entry string cannot be null, empty or contain only spaces.", nameof(Value)); }
+            }
+
+            // Calculating the indices of the first space and the double slash character...
+            int SpaceIndex = Value.IndexOf(" ", StringComparison.InvariantCulture);
+            int CommentIndex = Value.IndexOf("//", StringComparison.InvariantCulture);
+
+            // If the source string contains no spaces, return it as is...
+            if ((SpaceIndex == -1) && (CommentIndex == -1))
+            {
+                return new ConfigEntryParser(Value, string.Empty, string.Empty);
+            }
+
+            // Parsing the source string...
+            try
+            {
+                string NameStr = Value.Substring(0, SpaceIndex);
+                string ValueStr = CommentIndex > SpaceIndex ? Value.Substring(SpaceIndex + 1, CommentIndex - SpaceIndex - 1) : Value.Remove(0, SpaceIndex + 1);
+                string CommentStr = CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty;
+                return new ConfigEntryParser(NameStr, ValueStr, CommentStr);
+            }
+            catch
+            {
+                if (TryParse) { return null; } else { throw; }
+            }
         }
 
         /// <summary>
