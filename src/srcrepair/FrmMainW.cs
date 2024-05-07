@@ -1749,9 +1749,6 @@ namespace srcrepair.gui
         /// <param name="ConfFileName">Full path to config file.</param>
         private async Task LoadConfigFromFileTask(string ConfFileName)
         {
-            // Creating some variables...
-            string ImpStr, CVarName, CVarContent;
-
             // Loading config file...
             using (StreamReader ConfigFile = new StreamReader(ConfFileName, Encoding.UTF8))
             {
@@ -1759,29 +1756,12 @@ namespace srcrepair.gui
                 while (ConfigFile.Peek() >= 0)
                 {
                     // Clearing string from special chars...
-                    ImpStr = StringsManager.CleanString(await ConfigFile.ReadLineAsync());
+                    string ImpStr = StringsManager.CleanString(await ConfigFile.ReadLineAsync());
 
-                    // Checking if the source string is empty or a commentary...
-                    if (!string.IsNullOrEmpty(ImpStr) && ImpStr[0] != '/')
+                    // Checking if the source string is empty or a commentary and parsing it...
+                    if (!string.IsNullOrEmpty(ImpStr) && ImpStr[0] != '/' && ConfigEntryParser.TryParse(ImpStr, out ConfigEntryParser Parser))
                     {
-                        // Checking for value in source string...
-                        if (ImpStr.IndexOf(" ", StringComparison.CurrentCulture) != -1)
-                        {
-                            // Extracting variable...
-                            CVarName = ImpStr.Substring(0, ImpStr.IndexOf(" ", StringComparison.CurrentCulture));
-                            ImpStr = ImpStr.Remove(0, ImpStr.IndexOf(" ", StringComparison.CurrentCulture) + 1);
-
-                            // Extracting value (excluding commentaries if exists)...
-                            CVarContent = ImpStr.IndexOf("//", StringComparison.CurrentCulture) >= 1 ? ImpStr.Substring(0, ImpStr.IndexOf("//", StringComparison.CurrentCulture) - 1) : ImpStr;
-
-                            // Adding to table Cvar and its value...
-                            CE_Editor.Rows.Add(CVarName, CVarContent);
-                        }
-                        else
-                        {
-                            // Adding to table only Cvar with empty value...
-                            CE_Editor.Rows.Add(ImpStr, string.Empty);
-                        }
+                        CE_Editor.Rows.Add(Parser.Variable, Parser.Value);
                     }
                 }
             }
