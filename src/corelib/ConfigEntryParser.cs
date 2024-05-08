@@ -48,22 +48,40 @@ namespace srcrepair.core
             int QuoteIndex = Value.IndexOf(@"""", StringComparison.InvariantCulture);
             int CommentIndex = Value.IndexOf("//", StringComparison.InvariantCulture);
 
+            // If the source string contains no spaces, quotes and comments, return it as is...
+            if ((SpaceIndex == -1) && (QuoteIndex == -1) && (CommentIndex == -1))
+            {
+                return new ConfigEntryParser(Value, string.Empty, string.Empty);
+            }
+
+            // If the source string contains only a name and a comment, skip the value parsing...
+            if ((CommentIndex > 0) && ((SpaceIndex == -1) || (CommentIndex < SpaceIndex)))
+            {
+                try
+                {
+                    return new ConfigEntryParser(Value.Substring(0, CommentIndex).Trim(), string.Empty, Value.Substring(CommentIndex + 2).Trim());
+                }
+                catch
+                {
+                    if (TryParse) { return null; } else { throw; }
+                }
+            }
+
+            // Calculating split ranges...
+            int SplitIndex = SpaceIndex;
+            int SplitOffset = 1;
+
             // If the source string contains quotes we will use them instead of spaces...
             if ((QuoteIndex > 0) && ((SpaceIndex == -1) || (QuoteIndex < SpaceIndex)))
             {
-                return new ConfigEntryParser(Value.Substring(0, QuoteIndex).Trim(), (CommentIndex > QuoteIndex ? Value.Substring(QuoteIndex, CommentIndex - QuoteIndex) : Value.Remove(0, QuoteIndex)).Trim(), CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty);
-            }
-
-            // If the source string contains no spaces, return it as is...
-            if ((SpaceIndex == -1) && (CommentIndex == -1))
-            {
-                return new ConfigEntryParser(Value, string.Empty, string.Empty);
+                SplitIndex = QuoteIndex;
+                SplitOffset = 0;
             }
 
             // Parsing the source string...
             try
             {
-                return new ConfigEntryParser(Value.Substring(0, SpaceIndex).Trim(), (CommentIndex > SpaceIndex ? Value.Substring(SpaceIndex + 1, CommentIndex - SpaceIndex - 1) : Value.Remove(0, SpaceIndex + 1)).Trim(), CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty);
+                return new ConfigEntryParser(Value.Substring(0, SplitIndex).Trim(), (CommentIndex > SplitIndex ? Value.Substring(SplitIndex + SplitOffset, CommentIndex - SplitIndex - SplitOffset) : Value.Remove(0, SplitIndex + SplitOffset)).Trim(), CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty);
             }
             catch
             {
