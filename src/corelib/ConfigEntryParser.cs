@@ -51,7 +51,7 @@ namespace srcrepair.core
             // If the source string contains quotes we will use them instead of spaces...
             if ((QuoteIndex > 0) && ((SpaceIndex == -1) || (QuoteIndex < SpaceIndex)))
             {
-                return new ConfigEntryParser(Value.Substring(0, QuoteIndex), CommentIndex > QuoteIndex ? Value.Substring(QuoteIndex, CommentIndex - QuoteIndex) : Value.Remove(0, QuoteIndex), CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty);
+                return new ConfigEntryParser(Value.Substring(0, QuoteIndex).Trim(), (CommentIndex > QuoteIndex ? Value.Substring(QuoteIndex, CommentIndex - QuoteIndex) : Value.Remove(0, QuoteIndex)).Trim(), CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty);
             }
 
             // If the source string contains no spaces, return it as is...
@@ -63,10 +63,7 @@ namespace srcrepair.core
             // Parsing the source string...
             try
             {
-                string NameStr = Value.Substring(0, SpaceIndex);
-                string ValueStr = CommentIndex > SpaceIndex ? Value.Substring(SpaceIndex + 1, CommentIndex - SpaceIndex - 1) : Value.Remove(0, SpaceIndex + 1);
-                string CommentStr = CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty;
-                return new ConfigEntryParser(NameStr, ValueStr, CommentStr);
+                return new ConfigEntryParser(Value.Substring(0, SpaceIndex).Trim(), (CommentIndex > SpaceIndex ? Value.Substring(SpaceIndex + 1, CommentIndex - SpaceIndex - 1) : Value.Remove(0, SpaceIndex + 1)).Trim(), CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty);
             }
             catch
             {
