@@ -45,7 +45,14 @@ namespace srcrepair.core
 
             // Calculating the indices of the first space and the double slash character...
             int SpaceIndex = Value.IndexOf(" ", StringComparison.InvariantCulture);
+            int QuoteIndex = Value.IndexOf(@"""", StringComparison.InvariantCulture);
             int CommentIndex = Value.IndexOf("//", StringComparison.InvariantCulture);
+
+            // If the source string contains quotes we will use them instead of spaces...
+            if ((QuoteIndex > 0) && ((SpaceIndex == -1) || (QuoteIndex < SpaceIndex)))
+            {
+                return new ConfigEntryParser(Value.Substring(0, QuoteIndex), CommentIndex > QuoteIndex ? Value.Substring(QuoteIndex, CommentIndex - QuoteIndex) : Value.Remove(0, QuoteIndex), CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty);
+            }
 
             // If the source string contains no spaces, return it as is...
             if ((SpaceIndex == -1) && (CommentIndex == -1))
