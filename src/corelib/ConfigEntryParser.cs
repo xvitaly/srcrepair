@@ -28,6 +28,21 @@ namespace srcrepair.core
         /// </summary>
         public string Comment { get; private set; }
 
+        private static string ExtractVariable(string Value, int SplitIndex)
+        {
+            return Value.Substring(0, SplitIndex).Trim();
+        }
+
+        private static string ExtractValue(string Value, int SplitIndex, int CommentIndex, int SplitOffset)
+        {
+            return (CommentIndex > SplitIndex ? Value.Substring(SplitIndex + SplitOffset, CommentIndex - SplitIndex - SplitOffset) : Value.Remove(0, SplitIndex + SplitOffset)).Trim();
+        }
+
+        private static string ExtractComment(string Value, int CommentIndex)
+        {
+            return CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty;
+        }
+
         /// <summary>
         /// An internal implementation of the game config entries strings parser.
         /// Creates an object from the string.
@@ -59,7 +74,7 @@ namespace srcrepair.core
             {
                 try
                 {
-                    return new ConfigEntryParser(Value.Substring(0, CommentIndex).Trim(), string.Empty, Value.Substring(CommentIndex + 2).Trim());
+                    return new ConfigEntryParser(ExtractVariable(Value, CommentIndex), string.Empty, ExtractComment(Value, CommentIndex));
                 }
                 catch
                 {
@@ -67,21 +82,23 @@ namespace srcrepair.core
                 }
             }
 
-            // Calculating split ranges...
-            int SplitIndex = SpaceIndex;
-            int SplitOffset = 1;
-
             // If the source string contains quotes we will use them instead of spaces...
             if ((QuoteIndex > 0) && ((SpaceIndex == -1) || (QuoteIndex < SpaceIndex)))
             {
-                SplitIndex = QuoteIndex;
-                SplitOffset = 0;
+                try
+                {
+                    return new ConfigEntryParser(ExtractVariable(Value, QuoteIndex), ExtractValue(Value, QuoteIndex, CommentIndex, 0), ExtractComment(Value, CommentIndex));
+                }
+                catch
+                {
+                    if (TryParse) { return null; } else { throw; }
+                }
             }
 
             // Parsing the source string...
             try
             {
-                return new ConfigEntryParser(Value.Substring(0, SplitIndex).Trim(), (CommentIndex > SplitIndex ? Value.Substring(SplitIndex + SplitOffset, CommentIndex - SplitIndex - SplitOffset) : Value.Remove(0, SplitIndex + SplitOffset)).Trim(), CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty);
+                return new ConfigEntryParser(ExtractVariable(Value, SpaceIndex), ExtractValue(Value, SpaceIndex, CommentIndex, 1), ExtractComment(Value, CommentIndex));
             }
             catch
             {
