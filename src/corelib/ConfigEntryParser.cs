@@ -28,16 +28,36 @@ namespace srcrepair.core
         /// </summary>
         public string Comment { get; private set; }
 
+        /// <summary>
+        /// Extract the variable name from the game config file entry.
+        /// </summary>
+        /// <param name="Value">Game config entry string for parsing.</param>
+        /// <param name="SplitIndex">Separator index (space or quote).</param>
+        /// <returns>Extracted variable name.</returns>
         private static string ExtractVariable(string Value, int SplitIndex)
         {
             return Value.Substring(0, SplitIndex).Trim();
         }
 
+        /// <summary>
+        /// Extract the value of the variable from the game config file entry.
+        /// </summary>
+        /// <param name="Value">Game config entry string for parsing.</param>
+        /// <param name="SplitIndex">Separator index (space or quote).</param>
+        /// <param name="CommentIndex">Position of the comment character in the source string.</param>
+        /// <param name="SplitOffset">Separator size (1 for space; 0 for quote).</param>
+        /// <returns>Extracted value of the variable.</returns>
         private static string ExtractValue(string Value, int SplitIndex, int CommentIndex, int SplitOffset)
         {
             return (CommentIndex > SplitIndex ? Value.Substring(SplitIndex + SplitOffset, CommentIndex - SplitIndex - SplitOffset) : Value.Remove(0, SplitIndex + SplitOffset)).Trim();
         }
 
+        /// <summary>
+        /// Extract the comment from the game config file entry.
+        /// </summary>
+        /// <param name="Value">Game config entry string for parsing.</param>
+        /// <param name="CommentIndex">Position of the comment character in the source string.</param>
+        /// <returns>Extracted comment.</returns>
         private static string ExtractComment(string Value, int CommentIndex)
         {
             return CommentIndex > 0 ? Value.Substring(CommentIndex + 2).Trim() : string.Empty;
