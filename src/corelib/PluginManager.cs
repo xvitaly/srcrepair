@@ -43,7 +43,7 @@ namespace srcrepair.core
             Plugins = new Dictionary<string, PluginTarget>();
 
             // Fetching the list of available plugins from the XML database file...
-            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.PluginsDatabaseName), FileMode.Open, FileAccess.Read))
+            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, Properties.Resources.PluginsDbFile), FileMode.Open, FileAccess.Read))
             {
                 // Loading XML file from file stream...
                 XmlDocument XMLD = new XmlDocument();

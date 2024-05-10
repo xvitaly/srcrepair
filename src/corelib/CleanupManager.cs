@@ -121,7 +121,7 @@ namespace srcrepair.core
             CleanupTargets = new Dictionary<int, CleanupTarget>();
 
             // Fetching list of available cleanup targets from XML database file...
-            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.CleanupDatabaseName), FileMode.Open, FileAccess.Read))
+            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, Properties.Resources.CleanupDbFile), FileMode.Open, FileAccess.Read))
             {
                 // Loading XML file from file stream...
                 XmlDocument XMLD = new XmlDocument();

@@ -17,34 +17,9 @@ namespace srcrepair.core
     public static class StringsManager
     {
         /// <summary>
-        /// Gets HTTP_USER_AGENT header template.
-        /// </summary>
-        public static string HTTPUserAgentTemplate => Properties.Resources.AppDefUA;
-
-        /// <summary>
         /// Gets local updates directory name.
         /// </summary>
         public static string UpdateLocalDirectoryName => Properties.Resources.UpdateLocalDir;
-
-        /// <summary>
-        /// Gets config database file name.
-        /// </summary>
-        public static string ConfigDatabaseName => Properties.Resources.CfgDbFile;
-
-        /// <summary>
-        /// Gets game database file name.
-        /// </summary>
-        public static string GameDatabaseName => Properties.Resources.GameListFile;
-
-        /// <summary>
-        /// Gets HUD database file name.
-        /// </summary>
-        public static string HudDatabaseName => Properties.Resources.HUDDbFile;
-
-        /// <summary>
-        /// Gets full update checker URL.
-        /// </summary>
-        public static string UpdateDatabaseUrl => Properties.Resources.UpdateDBURL;
 
         /// <summary>
         /// Gets HUD local directory name.
@@ -55,16 +30,6 @@ namespace srcrepair.core
         /// Gets HUD local directory name.
         /// </summary>
         public static string ConfigDirectoryName => Properties.Resources.CfgLocalDir;
-
-        /// <summary>
-        /// Gets cleanup targets database file name.
-        /// </summary>
-        public static string CleanupDatabaseName => Properties.Resources.CleanupDbFile;
-
-        /// <summary>
-        /// Gets plugins database file name.
-        /// </summary>
-        public static string PluginsDatabaseName => Properties.Resources.PluginsDbFile;
 
         /// <summary>
         /// Remove tabulations from the source string.

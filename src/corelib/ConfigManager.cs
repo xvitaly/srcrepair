@@ -163,7 +163,7 @@ namespace srcrepair.core
             FPSConfigInstallPath = Destination;
 
             // Fetching list of available FPS-configs from XML database file...
-            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.ConfigDatabaseName), FileMode.Open, FileAccess.Read))
+            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, Properties.Resources.CfgDbFile), FileMode.Open, FileAccess.Read))
             {
                 // Loading XML file from file stream...
                 XmlDocument XMLD = new XmlDocument();

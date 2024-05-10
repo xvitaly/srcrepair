@@ -154,7 +154,7 @@ namespace srcrepair.core
             AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);
 
             // Getting full path to application local updates directory...
-            AppUpdateDir = Path.Combine(AppUserDir, StringsManager.UpdateLocalDirectoryName);
+            AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
 
             // Checking if user directory exists. If not - creating it...
             if (!Directory.Exists(AppUserDir))
@@ -163,7 +163,7 @@ namespace srcrepair.core
             }
 
             // Generating User-Agent header for outgoing HTTP queries...
-            UserAgent = string.Format(StringsManager.HTTPUserAgentTemplate, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
+            UserAgent = string.Format(Properties.Resources.AppDefUA, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
         }
     }
 }

@@ -94,7 +94,7 @@ namespace srcrepair.core
             HUDsAvailable = new Dictionary<string, HUDSingle>();
 
             // Fetching list of available HUDs from XML database file...
-            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, StringsManager.HudDatabaseName), FileMode.Open, FileAccess.Read))
+            using (FileStream XMLFS = new FileStream(Path.Combine(FullAppPath, Properties.Resources.HUDDbFile), FileMode.Open, FileAccess.Read))
             {
                 // Loading XML file from file stream...
                 XmlDocument XMLD = new XmlDocument();
