@@ -17,11 +17,6 @@ namespace srcrepair.core
     public static class StringsManager
     {
         /// <summary>
-        /// Gets local updates directory name.
-        /// </summary>
-        public static string UpdateLocalDirectoryName => Properties.Resources.UpdateLocalDir;
-
-        /// <summary>
         /// Gets HUD local directory name.
         /// </summary>
         public static string HudDirectoryName => Properties.Resources.HUDLocalDir;
