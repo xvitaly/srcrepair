@@ -38,6 +38,11 @@ namespace srcrepair.core
         public string AppUpdateDir { get; private set; }
 
         /// <summary>
+        /// Get full path to the local HUDs directory.
+        /// </summary>
+        public string AppHUDDir { get; private set; }
+
+        /// <summary>
         /// Get information about running operating system.
         /// </summary>
         public CurrentPlatform Platform { get; private set; }
@@ -153,8 +158,9 @@ namespace srcrepair.core
             // Getting full to application user directory...
             AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);
 
-            // Getting full path to application local updates directory...
+            // Getting full paths to local application directories...
             AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
+            AppHUDDir = Path.Combine(AppUserDir, Properties.Resources.HUDLocalDir);
 
             // Checking if user directory exists. If not - creating it...
             if (!Directory.Exists(AppUserDir))

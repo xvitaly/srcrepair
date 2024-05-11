@@ -3395,7 +3395,7 @@ namespace srcrepair.gui
         {
             List<string> CleanDirs = new List<string>
             {
-                Path.Combine(App.AppUserDir, StringsManager.HudDirectoryName, "*.*"),
+                Path.Combine(App.AppHUDDir, "*.*"),
                 Path.Combine(App.AppUserDir, StringsManager.ConfigDirectoryName, "*.*"),
                 Path.Combine(App.AppUpdateDir, "*.*")
             };

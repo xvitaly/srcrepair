@@ -19,11 +19,6 @@ namespace srcrepair.core
         /// <summary>
         /// Gets HUD local directory name.
         /// </summary>
-        public static string HudDirectoryName => Properties.Resources.HUDLocalDir;
-
-        /// <summary>
-        /// Gets HUD local directory name.
-        /// </summary>
         public static string ConfigDirectoryName => Properties.Resources.CfgLocalDir;
 
         /// <summary>
