@@ -38,6 +38,11 @@ namespace srcrepair.core
         public string AppUpdateDir { get; private set; }
 
         /// <summary>
+        /// Get full path to the local FPS-configs directory.
+        /// </summary>
+        public string AppCfgDir { get; private set; }
+
+        /// <summary>
         /// Get full path to the local HUDs directory.
         /// </summary>
         public string AppHUDDir { get; private set; }
@@ -160,6 +165,7 @@ namespace srcrepair.core
 
             // Getting full paths to local application directories...
             AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
+            AppCfgDir = Path.Combine(AppUserDir, Properties.Resources.CfgLocalDir);
             AppHUDDir = Path.Combine(AppUserDir, Properties.Resources.HUDLocalDir);
 
             // Checking if user directory exists. If not - creating it...

@@ -17,11 +17,6 @@ namespace srcrepair.core
     public static class StringsManager
     {
         /// <summary>
-        /// Gets HUD local directory name.
-        /// </summary>
-        public static string ConfigDirectoryName => Properties.Resources.CfgLocalDir;
-
-        /// <summary>
         /// Remove tabulations from the source string.
         /// </summary>
         /// <param name="SrcStr">Source string for cleanup.</param>
