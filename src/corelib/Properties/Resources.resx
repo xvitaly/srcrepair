@@ -135,6 +135,9 @@
   <data name="AppUASuffixWin" xml:space="preserve">
     <value>NT</value>
   </data>
+  <data name="BackUpLocalDir" xml:space="preserve">
+    <value>backups</value>
+  </data>
   <data name="CfgDbFile" xml:space="preserve">
     <value>configs.xml</value>
   </data>

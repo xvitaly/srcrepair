@@ -294,7 +294,7 @@ namespace srcrepair.core
                 FullGamePath = Path.Combine(GamePath, SmallAppName);
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 CoreEngineBinPath = Path.Combine(GamePath, "bin");
-                FullBackUpDirPath = Path.Combine(AUserDir, "backups", Path.GetFileName(SmallAppName));
+                FullBackUpDirPath = Path.Combine(AUserDir, Properties.Resources.BackUpLocalDir, SmallAppName);
                 AppHUDDir = Path.Combine(AUserDir, Properties.Resources.HUDLocalDir, SmallAppName);
                 AppCfgDir = Path.Combine(AUserDir, Properties.Resources.CfgLocalDir);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : string.Empty);
