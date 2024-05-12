@@ -807,7 +807,7 @@ namespace srcrepair.gui
         /// </summary>
         private void HandleConfigs()
         {
-            if (!Directory.Exists(App.SourceGames[AppSelector.Text].AppCfgDir)) { Directory.CreateDirectory(App.SourceGames[AppSelector.Text].AppCfgDir); }
+            if (!Directory.Exists(App.AppCfgDir)) { Directory.CreateDirectory(App.AppCfgDir); }
             App.SourceGames[AppSelector.Text].FPSConfigs = FileManager.ExpandFileList(ConfigManager.ListFPSConfigs(App.SourceGames[AppSelector.Text].FullGamePath, App.SourceGames[AppSelector.Text].IsUsingUserDir), true);
             GT_Warning.Visible = App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0;
         }
@@ -1617,7 +1617,7 @@ namespace srcrepair.gui
         {
             await Task.Run(() =>
             {
-                App.SourceGames[SelectedGame].CFGMan = new ConfigManager(App.FullAppPath, App.SourceGames[SelectedGame].AppCfgDir, App.SourceGames[SelectedGame].IsUsingUserDir ? App.SourceGames[SelectedGame].CustomInstallDir : App.SourceGames[SelectedGame].FullGamePath, AppStrings.AppLangPrefix);
+                App.SourceGames[SelectedGame].CFGMan = new ConfigManager(App.FullAppPath, App.AppCfgDir, App.SourceGames[SelectedGame].IsUsingUserDir ? App.SourceGames[SelectedGame].CustomInstallDir : App.SourceGames[SelectedGame].FullGamePath, AppStrings.AppLangPrefix);
             });
         }
 
