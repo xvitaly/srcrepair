@@ -64,7 +64,7 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmRepBuilder class constructor.
         /// </summary>
-        /// <param name="A">Path to app's user directory.</param>
+        /// <param name="A">Full path to the local reports directory.</param>
         /// <param name="SD">Full path to Steam crash dumps directory.</param>
         /// <param name="SL">Full path to Steam logs directory.</param>
         /// <param name="SG">Instance of SourceGame class, selected in main window.</param>

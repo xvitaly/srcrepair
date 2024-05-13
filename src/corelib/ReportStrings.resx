@@ -126,9 +126,6 @@
   <data name="CmdIntExe" xml:space="preserve">
     <value>cmd.exe</value>
   </data>
-  <data name="DirectoryName" xml:space="preserve">
-    <value>reports</value>
-  </data>
   <data name="DxDiagExe" xml:space="preserve">
     <value>dxdiag.exe</value>
   </data>

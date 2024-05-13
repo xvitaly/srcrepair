@@ -59,14 +59,14 @@ namespace srcrepair.core
         /// <summary>
         /// ReportManager class constructor.
         /// </summary>
-        /// <param name="AppUserDir">Path to apps's user directory.</param>
-        public ReportManager(string AppUserDir)
+        /// <param name="AppReportDir">Full path to the local reports directory..</param>
+        public ReportManager(string AppReportDir)
         {
             ReportTargets = new List<ReportTarget>();
             TempDirectory = Path.Combine(Path.GetTempPath(), Guid.NewGuid().ToString());
             CurrentUnixTime = FileManager.DateTime2Unix(DateTime.Now);
-            ReportsDirectory = Path.Combine(AppUserDir, ReportStrings.DirectoryName);
-            ReportArchiveName = Path.Combine(ReportsDirectory, string.Format("report_{0}.zip", CurrentUnixTime));
+            ReportsDirectory = AppReportDir;
+            ReportArchiveName = Path.Combine(AppReportDir, string.Format("report_{0}.zip", CurrentUnixTime));
             SetTargets();
         }
     }

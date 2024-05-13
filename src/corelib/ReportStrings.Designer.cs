@@ -19,7 +19,7 @@ namespace srcrepair.core {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class ReportStrings {
@@ -84,15 +84,6 @@ namespace srcrepair.core {
         internal static string CmdIntExe {
             get {
                 return ResourceManager.GetString("CmdIntExe", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to reports.
-        /// </summary>
-        internal static string DirectoryName {
-            get {
-                return ResourceManager.GetString("DirectoryName", resourceCulture);
             }
         }
         

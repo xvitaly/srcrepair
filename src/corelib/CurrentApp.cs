@@ -43,6 +43,11 @@ namespace srcrepair.core
         public string AppHUDDir { get; private set; }
 
         /// <summary>
+        /// Get full path to the local reports directory.
+        /// </summary>
+        public string AppReportDir { get; private set; }
+
+        /// <summary>
         /// Get full path to the local updates directory.
         /// </summary>
         public string AppUpdateDir { get; private set; }
@@ -166,6 +171,7 @@ namespace srcrepair.core
             // Getting full paths to local application directories...
             AppCfgDir = Path.Combine(AppUserDir, Properties.Resources.CfgLocalDir);
             AppHUDDir = Path.Combine(AppUserDir, Properties.Resources.HUDLocalDir);
+            AppReportDir = Path.Combine(AppUserDir, Properties.Resources.ReportLocalDir);
             AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
 
             // Checking if user directory exists. If not - creating it...

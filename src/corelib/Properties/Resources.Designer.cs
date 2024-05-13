@@ -232,6 +232,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to reports.
+        /// </summary>
+        internal static string ReportLocalDir {
+            get {
+                return ResourceManager.GetString("ReportLocalDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to explorer.exe.
         /// </summary>
         internal static string ShBinWin {
