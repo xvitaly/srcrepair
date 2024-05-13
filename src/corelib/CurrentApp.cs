@@ -33,11 +33,6 @@ namespace srcrepair.core
         public string AppUserDir { get; private set; }
 
         /// <summary>
-        /// Get full path to the local updates directory.
-        /// </summary>
-        public string AppUpdateDir { get; private set; }
-
-        /// <summary>
         /// Get full path to the local FPS-configs directory.
         /// </summary>
         public string AppCfgDir { get; private set; }
@@ -46,6 +41,11 @@ namespace srcrepair.core
         /// Get full path to the local HUDs directory.
         /// </summary>
         public string AppHUDDir { get; private set; }
+
+        /// <summary>
+        /// Get full path to the local updates directory.
+        /// </summary>
+        public string AppUpdateDir { get; private set; }
 
         /// <summary>
         /// Get information about running operating system.
@@ -164,9 +164,9 @@ namespace srcrepair.core
             AppUserDir = IsPortable ? Path.Combine(Path.GetDirectoryName(Assembly.GetCallingAssembly().Location), "portable") : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);
 
             // Getting full paths to local application directories...
-            AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
             AppCfgDir = Path.Combine(AppUserDir, Properties.Resources.CfgLocalDir);
             AppHUDDir = Path.Combine(AppUserDir, Properties.Resources.HUDLocalDir);
+            AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
 
             // Checking if user directory exists. If not - creating it...
             if (!Directory.Exists(AppUserDir))
