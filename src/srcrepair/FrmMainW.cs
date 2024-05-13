@@ -1653,13 +1653,13 @@ namespace srcrepair.gui
             await Task.Run(() =>
             {
                 // Creating if the local directory for HUDs exists. If not, creating it...
-                if (!Directory.Exists(App.SourceGames[SelectedGame].HUDDir))
+                if (!Directory.Exists(App.AppHUDDir))
                 {
-                    Directory.CreateDirectory(App.SourceGames[SelectedGame].HUDDir);
+                    Directory.CreateDirectory(App.AppHUDDir);
                 }
 
                 // Building the HUD collection...
-                App.SourceGames[SelectedGame].HUDMan = new HUDManager(App.SourceGames[SelectedGame].SmallAppName, App.FullAppPath, App.SourceGames[SelectedGame].HUDDir, Properties.Settings.Default.HUDHideOutdated);
+                App.SourceGames[SelectedGame].HUDMan = new HUDManager(App.SourceGames[SelectedGame].SmallAppName, App.FullAppPath, App.AppHUDDir, Properties.Settings.Default.HUDHideOutdated);
             });
         }
 
@@ -1672,7 +1672,7 @@ namespace srcrepair.gui
         private async Task<string> DownloadHUDScreenshot(string SelectedGame, string SelectedHUD)
         {
             // Generating full file name for HUD screenshot...
-            string ScreenFile = Path.Combine(App.SourceGames[SelectedGame].HUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan[SelectedHUD].Preview));
+            string ScreenFile = Path.Combine(App.AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan[SelectedHUD].Preview));
 
             // Downloading file if it doesn't exists...
             if (!File.Exists(ScreenFile))
