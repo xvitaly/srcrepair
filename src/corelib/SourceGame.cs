@@ -113,7 +113,7 @@ namespace srcrepair.core
         /// <summary>
         /// Gets full path to the local HUDs download directory.
         /// </summary>
-        public string AppHUDDir { get; private set; }
+        public string HUDDir { get; private set; }
 
         /// <summary>
         /// Gets full paths to all found FPS-configs.
@@ -290,7 +290,7 @@ namespace srcrepair.core
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 CoreEngineBinPath = Path.Combine(GamePath, "bin");
                 FullBackUpDirPath = Path.Combine(AUserDir, Properties.Resources.BackUpLocalDir, SmallAppName);
-                AppHUDDir = Path.Combine(AUserDir, Properties.Resources.HUDLocalDir, SmallAppName);
+                HUDDir = Path.Combine(AUserDir, Properties.Resources.HUDLocalDir, SmallAppName);
                 CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : string.Empty);
                 AppWorkshopDir = Path.Combine(SteamDir, SteamAppsDirName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
                 CloudScreenshotsPath = Path.Combine(SteamDir, "userdata", SteamID, "760", "remote", GameInternalID, "screenshots");
