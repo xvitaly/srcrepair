@@ -33,6 +33,11 @@ namespace srcrepair.core
         public string AppUserDir { get; private set; }
 
         /// <summary>
+        /// Get full path to the active log file.
+        /// </summary>
+        public string AppLogFile { get; private set; }
+
+        /// <summary>
         /// Get full path to the local FPS-configs directory.
         /// </summary>
         public string AppCfgDir { get; private set; }
@@ -41,6 +46,11 @@ namespace srcrepair.core
         /// Get full path to the local HUDs directory.
         /// </summary>
         public string AppHUDDir { get; private set; }
+
+        /// <summary>
+        /// Get full path to the local logs directory.
+        /// </summary>
+        public string AppLogDir { get; private set; }
 
         /// <summary>
         /// Get full path to the local reports directory.
@@ -76,23 +86,6 @@ namespace srcrepair.core
         /// Get information about hardware architecture.
         /// </summary>
         private string SystemArch => Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
-
-        /// <summary>
-        /// Get full path to Nlog active log file.
-        /// </summary>
-        public static string LogFileName
-        {
-            get
-            {
-                NLog.Targets.FileTarget LogTarget = (NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("logfile");
-                return Path.GetFullPath(LogTarget.FileName.Render(new LogEventInfo()));
-            }
-        }
-
-        /// <summary>
-        /// Get full path to Nlog's directory for storing log files.
-        /// </summary>
-        public static string LogDirectoryPath => Path.GetDirectoryName(LogFileName);
 
         /// <summary>
         /// Get application name from the resource section of calling assembly.
@@ -153,6 +146,16 @@ namespace srcrepair.core
         public static string AssemblyLocation => Assembly.GetEntryAssembly().Location;
 
         /// <summary>
+        /// Get the full path to the active application's log file.
+        /// </summary>
+        /// <returns>Full path to the active log file.</returns>
+        private string GetLogFileName()
+        {
+            NLog.Targets.FileTarget LogTarget = (NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("logfile");
+            return Path.GetFullPath(LogTarget.FileName.Render(new LogEventInfo()));
+        }
+
+        /// <summary>
         /// CurrentApp class constructor.
         /// </summary>
         /// <param name="IsPortable">Enable portable mode (with settings in the same directory as executable).</param>
@@ -173,6 +176,10 @@ namespace srcrepair.core
             AppHUDDir = Path.Combine(AppUserDir, Properties.Resources.HUDLocalDir);
             AppReportDir = Path.Combine(AppUserDir, Properties.Resources.ReportLocalDir);
             AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
+
+            // Gettings paths to application logs...
+            AppLogFile = GetLogFileName();
+            AppLogDir = Path.GetDirectoryName(AppLogFile);
 
             // Checking if user directory exists. If not - creating it...
             if (!Directory.Exists(AppUserDir))

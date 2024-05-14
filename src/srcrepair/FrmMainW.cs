@@ -2465,7 +2465,7 @@ namespace srcrepair.gui
         {
             if ((AppSelector.Items.Count > 0) && (AppSelector.SelectedIndex != -1))
             {
-                GuiHelpers.FormShowRepBuilder(App.AppReportDir, App.SteamClient.FullDumpsPath, App.SteamClient.FullLogsPath, App.SourceGames[AppSelector.Text]);
+                GuiHelpers.FormShowRepBuilder(App.AppReportDir, App.AppLogDir, App.SteamClient.FullDumpsPath, App.SteamClient.FullLogsPath, App.SourceGames[AppSelector.Text]);
             }
             else
             {
@@ -3423,10 +3423,9 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUShowLog_Click(object sender, EventArgs e)
         {
-            string DFile = CurrentApp.LogFileName;
-            if (File.Exists(DFile))
+            if (File.Exists(App.AppLogFile))
             {
-                GuiHelpers.FormShowLogViewer(DFile);
+                GuiHelpers.FormShowLogViewer(App.AppLogFile);
             }
             else
             {

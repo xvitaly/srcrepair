@@ -31,6 +31,11 @@ namespace srcrepair.gui
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
+        /// Stores full path to the local logs directory.
+        /// </summary>
+        private readonly string AppLogDir;
+
+        /// <summary>
         /// Stores full path to Steam client crash dumps directory.
         /// </summary>
         private readonly string FullSteamDumpsDir;
@@ -65,13 +70,15 @@ namespace srcrepair.gui
         /// FrmRepBuilder class constructor.
         /// </summary>
         /// <param name="A">Full path to the local reports directory.</param>
+        /// <param name="L">Full path to the local logs directory.</param>
         /// <param name="SD">Full path to Steam crash dumps directory.</param>
         /// <param name="SL">Full path to Steam logs directory.</param>
         /// <param name="SG">Instance of SourceGame class, selected in main window.</param>
-        public FrmRepBuilder(string A, string SD, string SL, SourceGame SG)
+        public FrmRepBuilder(string A, string L, string SD, string SL, SourceGame SG)
         {
             InitializeComponent();
             RepMan = new ReportManager(A);
+            AppLogDir = L;
             FullSteamDumpsDir = SD;
             FullSteamLogsDir = SL;
             SelectedGame = SG;
@@ -166,9 +173,9 @@ namespace srcrepair.gui
                 }
 
                 // Adding application debug log...
-                if (Directory.Exists(CurrentApp.LogDirectoryPath))
+                if (Directory.Exists(AppLogDir))
                 {
-                    ZBkUp.CreateEntryFromDirectory(CurrentApp.LogDirectoryPath, "debug", CompressionLevel.Optimal);
+                    ZBkUp.CreateEntryFromDirectory(AppLogDir, "debug", CompressionLevel.Optimal);
                 }
             }
         }

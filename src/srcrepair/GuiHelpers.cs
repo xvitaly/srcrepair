@@ -168,12 +168,13 @@ namespace srcrepair.gui
         /// Opens reports generation window.
         /// </summary>
         /// <param name="AppReportDir">Full path to the local reports directory.</param>
+        /// <param name="AppLogDir">Full path to the local logs directory.</param>
         /// <param name="FullDumpsPath">Full path to Steam crash dumps directory.</param>
         /// <param name="FullLogsPath">Full path to Steam logs directory.</param>
         /// <param name="SelectedGame">Instance of SourceGame class, selected in main window.</param>
-        public static void FormShowRepBuilder(string AppReportDir, string FullDumpsPath, string FullLogsPath, SourceGame SelectedGame)
+        public static void FormShowRepBuilder(string AppReportDir, string AppLogDir, string FullDumpsPath, string FullLogsPath, SourceGame SelectedGame)
         {
-            using (FrmRepBuilder RBF = new FrmRepBuilder(AppReportDir, FullDumpsPath, FullLogsPath, SelectedGame))
+            using (FrmRepBuilder RBF = new FrmRepBuilder(AppReportDir, AppLogDir, FullDumpsPath, FullLogsPath, SelectedGame))
             {
                 RBF.ShowDialog();
             }
