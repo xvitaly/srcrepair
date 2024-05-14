@@ -83,11 +83,6 @@ namespace srcrepair.core
         public PluginManager Plugins { get; set; }
 
         /// <summary>
-        /// Get information about hardware architecture.
-        /// </summary>
-        private string SystemArch => Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
-
-        /// <summary>
         /// Get application name from the resource section of calling assembly.
         /// </summary>
         public static string AppProduct
@@ -144,6 +139,11 @@ namespace srcrepair.core
         /// Get the full path to the running assembly.
         /// </summary>
         public static string AssemblyLocation => Assembly.GetEntryAssembly().Location;
+
+        /// <summary>
+        /// Get information about hardware architecture.
+        /// </summary>
+        private string SystemArch => Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
 
         /// <summary>
         /// Get the full path to the active application's log file.
