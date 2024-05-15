@@ -93,7 +93,7 @@ namespace srcrepair.core
         public override string SteamProcName => Properties.Resources.SteamProcNameWin;
 
         /// <summary>
-        /// Removes Steam settings, stored in the Windows registry.
+        /// Remove Steam settings, stored in the Windows registry.
         /// </summary>
         /// <param name="LangName">Steam language.</param>
         public static void CleanRegistrySettings(string LangName)
@@ -110,104 +110,115 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Return platform-dependent location of the Hosts file.
+        /// Get platform-dependent location of the Hosts file.
         /// </summary>
-        public override string HostsFileLocation
+        /// <returns>Platform-dependent location of the Hosts file.</returns>
+        private string GetHostsFileLocation()
         {
-            get
+            string HostsDirectory;
+
+            try
             {
-                string HostsDirectory;
-
-                try
+                using (RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false))
                 {
-                    using (RegistryKey ResKey = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Services\Tcpip\Parameters", false))
-                    {
-                        HostsDirectory = (string)ResKey.GetValue("DataBasePath");
-                    }
+                    HostsDirectory = (string)ResKey.GetValue("DataBasePath");
                 }
-                catch
-                {
-                    HostsDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
-                }
-
-                return HostsDirectory;
             }
+            catch
+            {
+                HostsDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.SystemX86), "drivers", "etc");
+            }
+
+            return HostsDirectory;
         }
 
         /// <summary>
-        /// Return Steam installation directory from the Windows registry.
+        /// Get platform-dependent Steam installation directory from the Windows
+        /// registry.
         /// </summary>
-        public override string SteamInstallPath
+        /// <returns>Steam installation directory from the Windows registry.</returns>
+        private string GetSteamInstallPath()
         {
-            get
+            // Creating an empty string for storing result...
+            string ResString = string.Empty;
+
+            // Opening registry key as read only...
+            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
             {
-                // Creating an empty string for storing result...
-                string ResString = string.Empty;
-
-                // Opening registry key as read only...
-                using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
+                // Checking if registry key exists and available for reading...
+                if (ResKey != null)
                 {
-                    // Checking if registry key exists and available for reading...
-                    if (ResKey != null)
-                    {
-                        // Getting SteamPath value from previously opened key...
-                        object ResObj = ResKey.GetValue("SteamPath");
+                    // Getting SteamPath value from previously opened key...
+                    object ResObj = ResKey.GetValue("SteamPath");
 
-                        // Checking if value exists...
-                        if (ResObj != null)
-                        {
-                            // Extracting result...
-                            ResString = Path.GetFullPath(Convert.ToString(ResObj));
-                        }
-                        else
-                        {
-                            // Does not exists. Throwing exception...
-                            throw new SteamPathNotFoundException(DebugStrings.AppDbgExCoreStmManNoInstallPathDetected);
-                        }
+                    // Checking if value exists...
+                    if (ResObj != null)
+                    {
+                        // Extracting result...
+                        ResString = Path.GetFullPath(Convert.ToString(ResObj));
+                    }
+                    else
+                    {
+                        // Does not exists. Throwing exception...
+                        throw new SteamPathNotFoundException(DebugStrings.AppDbgExCoreStmManNoInstallPathDetected);
                     }
                 }
-
-                // Returning result...
-                return ResString;
             }
+
+            // Returning result...
+            return ResString;
         }
 
         /// <summary>
         /// Get platform-dependent Steam language name from the Windows registry.
         /// </summary>
-        public override string SteamLanguage
+        /// <returns>Steam language name from the Windows registry.</returns>
+        private string GetSteamLanguage()
         {
-            get
+            // Creating an empty string for storing result...
+            string Result = string.Empty;
+
+            // Opening registry key as read only...
+            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
             {
-                // Creating an empty string for storing result...
-                string Result = string.Empty;
-
-                // Opening registry key as read only...
-                using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam", false))
+                // Checking if registry key exists and available for reading...
+                if (ResKey != null)
                 {
-                    // Checking if registry key exists and available for reading...
-                    if (ResKey != null)
-                    {
-                        // Getting SteamPath value from previously opened key...
-                        object ResObj = ResKey.GetValue("Language");
+                    // Getting SteamPath value from previously opened key...
+                    object ResObj = ResKey.GetValue("Language");
 
-                        // Checking if value exists...
-                        if (ResObj != null)
-                        {
-                            // Extracting result...
-                            Result = Convert.ToString(ResObj);
-                        }
-                        else
-                        {
-                            // Does not exists. Throwing exception...
-                            throw new SteamLangNameNotFoundException(DebugStrings.AppDbgExCoreStmManNoLangNameDetected);
-                        }
+                    // Checking if value exists...
+                    if (ResObj != null)
+                    {
+                        // Extracting result...
+                        Result = Convert.ToString(ResObj);
+                    }
+                    else
+                    {
+                        // Does not exists. Throwing exception...
+                        throw new SteamLangNameNotFoundException(DebugStrings.AppDbgExCoreStmManNoLangNameDetected);
                     }
                 }
-
-                // Returning result...
-                return Result;
             }
+
+            // Returning result...
+            return Result;
         }
+
+        /// <summary>
+        /// Return platform-dependent location of the Hosts file.
+        /// </summary>
+        public override string HostsFileLocation => GetHostsFileLocation();
+
+        /// <summary>
+        /// Return platform-dependent Steam installation directory from the Windows
+        /// registry.
+        /// </summary>
+        public override string SteamInstallPath => GetSteamInstallPath();
+
+        /// <summary>
+        /// Return platform-dependent Steam language name from the Windows registry.
+        /// </summary>
+        public override string SteamLanguage => GetSteamLanguage();
     }
 }
