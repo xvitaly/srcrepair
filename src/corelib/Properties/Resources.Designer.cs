@@ -196,6 +196,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to portable.
+        /// </summary>
+        internal static string PortableLocalDir {
+            get {
+                return ResourceManager.GetString("PortableLocalDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to reg.exe.
         /// </summary>
         internal static string RegExecutable {

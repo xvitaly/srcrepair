@@ -162,6 +162,9 @@
   <data name="PluginsDbFile" xml:space="preserve">
     <value>plugins.xml</value>
   </data>
+  <data name="PortableLocalDir" xml:space="preserve">
+    <value>portable</value>
+  </data>
   <data name="RegExecutable" xml:space="preserve">
     <value>reg.exe</value>
   </data>
