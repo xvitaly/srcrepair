@@ -151,8 +151,15 @@ namespace srcrepair.core
         /// <returns>Full path to the active log file.</returns>
         private string GetLogFileName()
         {
-            NLog.Targets.FileTarget LogTarget = (NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("logfile");
-            return Path.GetFullPath(LogTarget.FileName.Render(new LogEventInfo()));
+            try
+            {
+                NLog.Targets.FileTarget LogTarget = (NLog.Targets.FileTarget)LogManager.Configuration.FindTargetByName("logfile");
+                return Path.GetFullPath(LogTarget.FileName.Render(new LogEventInfo()));
+            }
+            catch
+            {
+                return Path.Combine(AppUserDir, Properties.Resources.LogLocalDir, Properties.Resources.LogMainFile);
+            }
         }
 
         /// <summary>
