@@ -156,6 +156,9 @@
   <data name="HUDLocalDir" xml:space="preserve">
     <value>HUDs</value>
   </data>
+  <data name="LogLocalDir" xml:space="preserve">
+    <value>logs</value>
+  </data>
   <data name="PathValidateRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z :()-_./\\\\]*$</value>
   </data>

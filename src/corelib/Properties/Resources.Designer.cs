@@ -178,6 +178,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to logs.
+        /// </summary>
+        internal static string LogLocalDir {
+            get {
+                return ResourceManager.GetString("LogLocalDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ^[0-9a-zA-Z :()-_./\\\\]*$.
         /// </summary>
         internal static string PathValidateRegex {
