@@ -163,6 +163,22 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Get the full path to the configured application's log directory.
+        /// </summary>
+        /// <returns>Full path to the configured application's log directory.</returns>
+        private string GetLogDirPath()
+        {
+            try
+            {
+                return Path.GetFullPath(LogManager.Configuration.Variables["logdir"].Render(new LogEventInfo()));
+            }
+            catch
+            {
+                return Path.Combine(AppUserDir, Properties.Resources.LogLocalDir);
+            }
+        }
+
+        /// <summary>
         /// CurrentApp class constructor.
         /// </summary>
         /// <param name="IsPortable">Enable portable mode (with settings in the same directory as executable).</param>
