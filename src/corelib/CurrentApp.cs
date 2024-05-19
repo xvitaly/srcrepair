@@ -202,7 +202,7 @@ namespace srcrepair.core
 
             // Gettings paths to application logs...
             AppLogFile = GetLogFileName();
-            AppLogDir = Path.GetDirectoryName(AppLogFile);
+            AppLogDir = GetLogDirPath();
 
             // Checking if user directory exists. If not - creating it...
             if (!Directory.Exists(AppUserDir))
