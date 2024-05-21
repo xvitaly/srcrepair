@@ -200,7 +200,7 @@ namespace srcrepair.core
             AppReportDir = Path.Combine(AppUserDir, Properties.Resources.ReportLocalDir);
             AppUpdateDir = Path.Combine(AppUserDir, Properties.Resources.UpdateLocalDir);
 
-            // Gettings paths to application logs...
+            // Gettings full paths to local application logs...
             AppLogFile = GetLogFileName();
             AppLogDir = GetLogDirPath();
 
