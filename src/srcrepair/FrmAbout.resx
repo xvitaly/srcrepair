@@ -253,9 +253,7 @@
     <value>6</value>
   </data>
   <data name="AF_Description.Text" xml:space="preserve">
-    <value>Author: Vitaly Zaitsev (vitaly@easycoding.org)
-
-Special thanks to:
+    <value>Special thanks to:
  - Ctrl+C - testing and FPS-configs descriptions;
  - Grin J - testing, bug reports, feature requests;
  - naym - testing, bug reports;
@@ -323,7 +321,7 @@ SRC Repair's icon by Lopagof (https://lopagof.deviantart.com). Licensed under th
     <value>3</value>
   </data>
   <data name="AF_License.Text" xml:space="preserve">
-    <value>Licensed under the terms of GNU GPLv3+ (except for the graphic assets; get more info in the help system).</value>
+    <value>Provided under the terms of the GPLv3+ license. The included components may use a variety of other licenses.</value>
   </data>
   <data name="&gt;&gt;AF_License.Name" xml:space="preserve">
     <value>AF_License</value>
