@@ -97,6 +97,6 @@ Supported mods and third-party Source engine games:
   * Zeno Clash;
   * Zombie Panic! Source.
 
-## 3rd party libraries
+## Third party libraries
 
   * [NLog](https://github.com/NLog/NLog) (BSD-3-Clause license).
