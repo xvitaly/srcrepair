@@ -294,7 +294,9 @@ Graphics by:
 SRC Repair's icon by Lopagof (https://lopagof.deviantart.com). Licensed under the terms of CC Attribution Non-Commercial No Derivatives license.
 
 Third party libraries (dynamic linked):
- - NLog (BSD license).</value>
+ - NLog (BSD license).
+
+Additional information about the components used in this project, including the name of the author of each component, full license names, and important links, can be found in the help system on the Legal page.</value>
   </data>
   <data name="&gt;&gt;AF_Description.Name" xml:space="preserve">
     <value>AF_Description</value>
