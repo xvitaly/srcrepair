@@ -138,6 +138,15 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Creates a backup copy of Steam settings, stored in the Windows registry.
+        /// </summary>
+        /// <param name="DestDir">Directory for saving backups.</param>
+        public void BackUpRegistryNow(string DestDir)
+        {
+            PlatformWindows.BackUpRegistrySettings(DestDir);
+        }
+
+        /// <summary>
         /// Removes Steam blob files (*.blob).
         /// </summary>
         public void CleanBlobsNow()
