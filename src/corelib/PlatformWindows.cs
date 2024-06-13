@@ -98,7 +98,7 @@ namespace srcrepair.core
         /// <param name="DestDir">Directory for saving backups.</param>
         public static void BackUpRegistrySettings(string DestDir)
         {
-            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, Path.Combine("Software", "Valve"), Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, "Steam_BackUp", FileManager.DateTime2Unix(DateTime.Now)))));
+            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, "Steam_BackUp", FileManager.DateTime2Unix(DateTime.Now)))));
         }
 
         /// <summary>
