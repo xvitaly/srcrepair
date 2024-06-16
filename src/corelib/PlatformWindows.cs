@@ -105,7 +105,7 @@ namespace srcrepair.core
         /// Remove Steam settings, stored in the Windows registry.
         /// </summary>
         /// <param name="LangName">Steam language.</param>
-        public static void CleanRegistrySettings(string LangName)
+        public override void CleanRegistrySettings(string LangName)
         {
             // Removing key HKEY_CURRENT_USER\Software\Valve recursive...
             Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);

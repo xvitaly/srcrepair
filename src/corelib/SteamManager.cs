@@ -165,15 +165,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Removes Steam settings, stored in the Windows registry.
-        /// </summary>
-        /// <param name="LangCode">Steam language.</param>
-        public void CleanRegistryNow(string LangName)
-        {
-            PlatformWindows.CleanRegistrySettings(LangName);
-        }
-
-        /// <summary>
         /// Reads and constructs a list of mount points from the specified
         /// configuration file.
         /// </summary>

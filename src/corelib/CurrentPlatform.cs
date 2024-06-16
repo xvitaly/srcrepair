@@ -212,6 +212,15 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Remove Steam settings, stored in the registry.
+        /// </summary>
+        /// <param name="LangName">Steam language.</param>
+        public virtual void CleanRegistrySettings(string LangName)
+        {
+            throw new PlatformNotSupportedException(DebugStrings.AppDbgCoreRegNotSupported);
+        }
+
+        /// <summary>
         /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
         public virtual string UASuffix => Properties.Resources.AppUASuffixOther;

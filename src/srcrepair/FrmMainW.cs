@@ -1051,7 +1051,7 @@ namespace srcrepair.gui
                     {
                         App.SteamClient.BackUpRegistryNow(App.SourceGames[AppSelector.Text].FullBackUpDirPath);
                     }
-                    App.SteamClient.CleanRegistryNow(App.Platform.SteamLanguage);
+                    App.Platform.CleanRegistrySettings(App.Platform.SteamLanguage);
                 }
                 catch (Exception Ex)
                 {
