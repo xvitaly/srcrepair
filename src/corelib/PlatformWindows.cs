@@ -93,10 +93,10 @@ namespace srcrepair.core
         public override string SteamProcName => Properties.Resources.SteamProcNameWin;
 
         /// <summary>
-        /// Backups Steam settings, stored in the Windows registry.
+        /// Backup Steam settings, stored in the Windows registry.
         /// </summary>
         /// <param name="DestDir">Directory for saving backups.</param>
-        public static void BackUpRegistrySettings(string DestDir)
+        public override void BackUpRegistrySettings(string DestDir)
         {
             ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, "Steam_BackUp", FileManager.DateTime2Unix(DateTime.Now)))));
         }

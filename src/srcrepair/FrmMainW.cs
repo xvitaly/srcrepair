@@ -1049,7 +1049,7 @@ namespace srcrepair.gui
                 {
                     if (Properties.Settings.Default.SafeCleanup)
                     {
-                        App.SteamClient.BackUpRegistryNow(App.SourceGames[AppSelector.Text].FullBackUpDirPath);
+                        App.Platform.BackUpRegistrySettings(App.SourceGames[AppSelector.Text].FullBackUpDirPath);
                     }
                     App.Platform.CleanRegistrySettings(App.Platform.SteamLanguage);
                 }

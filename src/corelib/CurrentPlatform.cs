@@ -212,6 +212,15 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Backup Steam settings, stored in the registry.
+        /// </summary>
+        /// <param name="DestDir">Directory for saving backups.</param>
+        public virtual void BackUpRegistrySettings(string DestDir)
+        {
+            throw new PlatformNotSupportedException(DebugStrings.AppDbgCoreRegNotSupported);
+        }
+
+        /// <summary>
         /// Remove Steam settings, stored in the registry.
         /// </summary>
         /// <param name="LangName">Steam language.</param>
