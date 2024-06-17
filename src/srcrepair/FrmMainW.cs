@@ -1073,11 +1073,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    string ServiceBinary = Path.Combine(App.SteamClient.FullBinPath, "steamservice.exe");
-                    if (File.Exists(ServiceBinary))
-                    {
-                        ProcessManager.StartProcessAndWait(ServiceBinary, "/repair");
-                    }
+                    App.Platform.StartServiceRepair(App.SteamClient.FullBinPath);
                 }
                 catch (Exception Ex)
                 {

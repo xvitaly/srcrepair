@@ -230,6 +230,15 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Start automatic service repair depending on the running platform.
+        /// </summary>
+        /// <param name="FullBinPath">Full path to Steam binaries directory.</param>
+        public virtual void StartServiceRepair(string FullBinPath)
+        {
+            throw new PlatformNotSupportedException(DebugStrings.AppDbgCoreServiceNotSupported);
+        }
+
+        /// <summary>
         /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
         public virtual string UASuffix => Properties.Resources.AppUASuffixOther;

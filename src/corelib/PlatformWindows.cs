@@ -119,6 +119,17 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Start automatic service repair depending on the running platform.
+        /// </summary>
+        /// <param name="FullBinPath">Full path to Steam binaries directory.</param>
+        public override void StartServiceRepair(string FullBinPath)
+        {
+            string ServiceBinary = Path.Combine(FullBinPath, "steamservice.exe");
+            if (!File.Exists(ServiceBinary)) { throw new FileNotFoundException(DebugStrings.AppDbgCoreServiceBinaryNotFound, ServiceBinary); }
+            ProcessManager.StartProcessAndWait(ServiceBinary, "/repair");
+        }
+
+        /// <summary>
         /// Get platform-dependent location of the Hosts file.
         /// </summary>
         /// <returns>Platform-dependent location of the Hosts file.</returns>
