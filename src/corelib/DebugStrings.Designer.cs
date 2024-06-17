@@ -79,6 +79,15 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Working with the service is not supported on this platform..
+        /// </summary>
+        internal static string AppDbgCoreServiceNotSupported {
+            get {
+                return ResourceManager.GetString("AppDbgCoreServiceNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The requested value &quot;{0}&quot; for the &quot;{1}&quot; setter is out of range..
         /// </summary>
         internal static string AppDbgCoreSetterOutOfRange {

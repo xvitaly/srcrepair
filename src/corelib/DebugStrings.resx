@@ -123,6 +123,9 @@
   <data name="AppDbgCoreRegNotSupported" xml:space="preserve">
     <value>Working with the registry is not supported on this platform.</value>
   </data>
+  <data name="AppDbgCoreServiceNotSupported" xml:space="preserve">
+    <value>Working with the service is not supported on this platform.</value>
+  </data>
   <data name="AppDbgCoreSetterOutOfRange" xml:space="preserve">
     <value>The requested value "{0}" for the "{1}" setter is out of range.</value>
   </data>
