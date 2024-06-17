@@ -79,6 +79,15 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The service binary doesn&apos;t exist..
+        /// </summary>
+        internal static string AppDbgCoreServiceBinaryNotFound {
+            get {
+                return ResourceManager.GetString("AppDbgCoreServiceBinaryNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Working with the service is not supported on this platform..
         /// </summary>
         internal static string AppDbgCoreServiceNotSupported {
