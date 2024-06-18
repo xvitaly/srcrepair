@@ -124,7 +124,7 @@
     <value>Working with the registry is not supported on this platform.</value>
   </data>
   <data name="AppDbgCoreServiceBinaryNotFound" xml:space="preserve">
-    <value>The service binary doesn't exist.</value>
+    <value>The service binary does not exist.</value>
   </data>
   <data name="AppDbgCoreServiceNotSupported" xml:space="preserve">
     <value>Working with the service is not supported on this platform.</value>
@@ -136,45 +136,45 @@
     <value>Directory {0} not found. Cannot add it to the Zip archive!</value>
   </data>
   <data name="AppDbgExCoreClnManConstructor" xml:space="preserve">
-    <value>Minor exception while while building CleanupTargets list object.</value>
+    <value>Minor exception while while building the CleanupTargets list object.</value>
   </data>
   <data name="AppDbgExCoreConfManConstructor" xml:space="preserve">
-    <value>Minor exception while while building Config list object.</value>
+    <value>Minor exception while while building the Config list object.</value>
   </data>
   <data name="AppDbgExCoreGameManConstructor" xml:space="preserve">
-    <value>Minor exception while building games list object.</value>
+    <value>Minor exception while building the games list object.</value>
   </data>
   <data name="AppDbgExCoreHelperNxExists" xml:space="preserve">
-    <value>Helper application executable does not exists.</value>
+    <value>The helper application executable file does not exist.</value>
   </data>
   <data name="AppDbgExCoreHudManConstructor" xml:space="preserve">
-    <value>Minor exception while building HUD list object.</value>
+    <value>Minor exception while building the HUD list object.</value>
   </data>
   <data name="AppDbgExCorePluginManConstructor" xml:space="preserve">
     <value>Minor exception while building the list of available plugins object.</value>
   </data>
   <data name="AppDbgExCorePluginNotFound" xml:space="preserve">
-    <value>Cannot find plugin's executable file.</value>
+    <value>The plugin executable file does not exist.</value>
   </data>
   <data name="AppDbgExCoreStmManMountPointsFetchError" xml:space="preserve">
-    <value>Minor exception while fetching Steam mount points.</value>
+    <value>Minor exception while fetching the Steam mount points.</value>
   </data>
   <data name="AppDbgExCoreStmManNoInstallPathDetected" xml:space="preserve">
-    <value>Exception: No InstallPath value detected! Please run Steam.</value>
+    <value>No InstallPath value detected! Please launch Steam at least once.</value>
   </data>
   <data name="AppDbgExCoreStmManNoLangNameDetected" xml:space="preserve">
-    <value>Exception: No Language value detected! Please run Steam.</value>
+    <value>No Language value detected! Please launch Steam at least once.</value>
   </data>
   <data name="AppDbgExCoreStmManSidListEmpty" xml:space="preserve">
-    <value>SteamID list is empty. Can not select one of them.</value>
+    <value>The SteamID list is empty. Cannot choose one of them.</value>
   </data>
   <data name="AppDbgExCoreType1VideoRegOpenError" xml:space="preserve">
-    <value>Failed to open registry key.</value>
+    <value>Failed to open the registry key.</value>
   </data>
   <data name="AppDbgExCoreUnknownEngineVersion" xml:space="preserve">
-    <value>Unknown version of Source Engine has been detected.</value>
+    <value>Unknown version of the Source Engine has been detected.</value>
   </data>
   <data name="AppDbgExCoreVideoLoadCvar" xml:space="preserve">
-    <value>Cannot fetch value of {0} video setting.</value>
+    <value>Unable to fetch the value of the {0} video setting.</value>
   </data>
 </root>

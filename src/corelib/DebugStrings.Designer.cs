@@ -79,7 +79,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The service binary doesn&apos;t exist..
+        ///   Looks up a localized string similar to The service binary does not exist..
         /// </summary>
         internal static string AppDbgCoreServiceBinaryNotFound {
             get {
@@ -115,7 +115,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while while building CleanupTargets list object..
+        ///   Looks up a localized string similar to Minor exception while while building the CleanupTargets list object..
         /// </summary>
         internal static string AppDbgExCoreClnManConstructor {
             get {
@@ -124,7 +124,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while while building Config list object..
+        ///   Looks up a localized string similar to Minor exception while while building the Config list object..
         /// </summary>
         internal static string AppDbgExCoreConfManConstructor {
             get {
@@ -133,7 +133,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while building games list object..
+        ///   Looks up a localized string similar to Minor exception while building the games list object..
         /// </summary>
         internal static string AppDbgExCoreGameManConstructor {
             get {
@@ -142,7 +142,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Helper application executable does not exists..
+        ///   Looks up a localized string similar to The helper application executable file does not exist..
         /// </summary>
         internal static string AppDbgExCoreHelperNxExists {
             get {
@@ -151,7 +151,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while building HUD list object..
+        ///   Looks up a localized string similar to Minor exception while building the HUD list object..
         /// </summary>
         internal static string AppDbgExCoreHudManConstructor {
             get {
@@ -169,7 +169,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot find plugin&apos;s executable file..
+        ///   Looks up a localized string similar to The plugin executable file does not exist..
         /// </summary>
         internal static string AppDbgExCorePluginNotFound {
             get {
@@ -178,7 +178,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while fetching Steam mount points..
+        ///   Looks up a localized string similar to Minor exception while fetching the Steam mount points..
         /// </summary>
         internal static string AppDbgExCoreStmManMountPointsFetchError {
             get {
@@ -187,7 +187,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception: No InstallPath value detected! Please run Steam..
+        ///   Looks up a localized string similar to No InstallPath value detected! Please launch Steam at least once..
         /// </summary>
         internal static string AppDbgExCoreStmManNoInstallPathDetected {
             get {
@@ -196,7 +196,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception: No Language value detected! Please run Steam..
+        ///   Looks up a localized string similar to No Language value detected! Please launch Steam at least once..
         /// </summary>
         internal static string AppDbgExCoreStmManNoLangNameDetected {
             get {
@@ -205,7 +205,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SteamID list is empty. Can not select one of them..
+        ///   Looks up a localized string similar to The SteamID list is empty. Cannot choose one of them..
         /// </summary>
         internal static string AppDbgExCoreStmManSidListEmpty {
             get {
@@ -214,7 +214,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to open registry key..
+        ///   Looks up a localized string similar to Failed to open the registry key..
         /// </summary>
         internal static string AppDbgExCoreType1VideoRegOpenError {
             get {
@@ -223,7 +223,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unknown version of Source Engine has been detected..
+        ///   Looks up a localized string similar to Unknown version of the Source Engine has been detected..
         /// </summary>
         internal static string AppDbgExCoreUnknownEngineVersion {
             get {
@@ -232,7 +232,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot fetch value of {0} video setting..
+        ///   Looks up a localized string similar to Unable to fetch the value of the {0} video setting..
         /// </summary>
         internal static string AppDbgExCoreVideoLoadCvar {
             get {
