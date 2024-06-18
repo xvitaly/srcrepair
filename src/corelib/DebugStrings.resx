@@ -160,10 +160,10 @@
     <value>Minor exception while fetching the Steam mount points.</value>
   </data>
   <data name="AppDbgExCoreStmManNoInstallPathDetected" xml:space="preserve">
-    <value>No InstallPath value detected! Please launch Steam at least once.</value>
+    <value>No InstallPath value detected. Unable to get installation path from the registry.</value>
   </data>
   <data name="AppDbgExCoreStmManNoLangNameDetected" xml:space="preserve">
-    <value>No Language value detected! Please launch Steam at least once.</value>
+    <value>No Language value detected. Unable to get language settings from the registry.</value>
   </data>
   <data name="AppDbgExCoreStmManSidListEmpty" xml:space="preserve">
     <value>The SteamID list is empty. Cannot choose one of them.</value>

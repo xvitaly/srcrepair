@@ -187,7 +187,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No InstallPath value detected! Please launch Steam at least once..
+        ///   Looks up a localized string similar to No InstallPath value detected. Unable to get installation path from the registry..
         /// </summary>
         internal static string AppDbgExCoreStmManNoInstallPathDetected {
             get {
@@ -196,7 +196,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No Language value detected! Please launch Steam at least once..
+        ///   Looks up a localized string similar to No Language value detected. Unable to get language settings from the registry..
         /// </summary>
         internal static string AppDbgExCoreStmManNoLangNameDetected {
             get {
