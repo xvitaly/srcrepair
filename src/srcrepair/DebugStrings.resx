@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppDbgExArWrkUnpack" xml:space="preserve">
-    <value>Exception during unpacking files from Zip archives.</value>
+    <value>Exception during unpacking files from a Zip archive.</value>
   </data>
   <data name="AppDbgExBackupRem" xml:space="preserve">
     <value>Exception while trying to remove selected backups.</value>
@@ -127,58 +127,58 @@
     <value>Exception while checking for updates during application startup.</value>
   </data>
   <data name="AppDbgExBkAllGames" xml:space="preserve">
-    <value>Exception while trying to create graphical settings backup of all games.</value>
+    <value>Exception while trying to backup the graphical settings of all games.</value>
   </data>
   <data name="AppDbgExBkAllStm" xml:space="preserve">
-    <value>Exception while trying to create backup of all Steam settings stored in registry.</value>
+    <value>Exception while trying to backup all Steam settings stored in the registry.</value>
   </data>
   <data name="AppDbgExBkExtEdt" xml:space="preserve">
-    <value>Exception while trying to load backup file in text editor.</value>
+    <value>Exception while trying to load a backup file into a text editor.</value>
   </data>
   <data name="AppDbgExBkFMan" xml:space="preserve">
-    <value>Exception while trying to show selected backup file in file manager.</value>
+    <value>Exception while trying to show the selected backup file in the file manager.</value>
   </data>
   <data name="AppDbgExBkGsAuto" xml:space="preserve">
-    <value>Exception while trying to save auto backup before saving game settings.</value>
+    <value>Exception while trying to create an automatic backup file before saving the game settings.</value>
   </data>
   <data name="AppDbgExBkSg" xml:space="preserve">
-    <value>Exception while trying to create graphical settings backup of selected game.</value>
+    <value>Exception while trying to create the graphical settings backup of the selected game.</value>
   </data>
   <data name="AppDbgExBugRep" xml:space="preserve">
-    <value>Exception while trying to open web browser to open bug tracker URL.</value>
+    <value>Exception while trying to start the web browser to open the bug tracker URL.</value>
   </data>
   <data name="AppDbgExCfgArchRem" xml:space="preserve">
-    <value>Exception while removing FPS-config archive file.</value>
+    <value>Exception while removing the FPS-config archive file.</value>
   </data>
   <data name="AppDbgExCfgEdAutoBackup" xml:space="preserve">
-    <value>Exception while trying to save config auto backup before saving it in Config editor.</value>
+    <value>Exception while trying to create an automatic backup of the game configuration file before saving it in the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgEdBkMan" xml:space="preserve">
-    <value>Exception while trying to create manual backup of config file.</value>
+    <value>Exception while trying to create a manual backup of the game configuration file.</value>
   </data>
   <data name="AppDbgExCfgEdCopy" xml:space="preserve">
-    <value>Exception while trying to copy item to clipboard in Config editor.</value>
+    <value>Exception while trying to copy an item to the clipboard in the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgEdCut" xml:space="preserve">
-    <value>Exception while trying to cut item to clipboard in Config editor.</value>
+    <value>Exception while trying to cut an item to the clipboard in the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgEdExtEdt" xml:space="preserve">
-    <value>Exception while trying to load config file in text editor.</value>
+    <value>Exception while trying to load a config file into a text editor.</value>
   </data>
   <data name="AppDbgExCfgEditorLoad" xml:space="preserve">
-    <value>Failed to find and load "{0}" FPS-config file by editor.</value>
+    <value>Failed to find and load the "{0}" FPS-config file by the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgEdLoad" xml:space="preserve">
-    <value>Exception while reading config file in Config editor.</value>
+    <value>Exception while reading a config file in the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgEdPaste" xml:space="preserve">
-    <value>Exception while trying to paste item from clipboard in Config editor.</value>
+    <value>Exception while trying to paste an item from the clipboard in the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgEdRemRow" xml:space="preserve">
-    <value>Exception while trying to remove item in Config editor.</value>
+    <value>Exception while trying to remove an item in the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgEdSave" xml:space="preserve">
-    <value>Exception during saving file in Config editor.</value>
+    <value>Exception during saving a file in the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgSelection" xml:space="preserve">
     <value>Exception during FPS config selection (click on warning icon).</value>

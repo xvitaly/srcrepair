@@ -61,7 +61,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception during unpacking files from Zip archives..
+        ///   Looks up a localized string similar to Exception during unpacking files from a Zip archive..
         /// </summary>
         internal static string AppDbgExArWrkUnpack {
             get {
@@ -88,7 +88,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create graphical settings backup of all games..
+        ///   Looks up a localized string similar to Exception while trying to backup the graphical settings of all games..
         /// </summary>
         internal static string AppDbgExBkAllGames {
             get {
@@ -97,7 +97,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create backup of all Steam settings stored in registry..
+        ///   Looks up a localized string similar to Exception while trying to backup all Steam settings stored in the registry..
         /// </summary>
         internal static string AppDbgExBkAllStm {
             get {
@@ -106,7 +106,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to load backup file in text editor..
+        ///   Looks up a localized string similar to Exception while trying to load a backup file into a text editor..
         /// </summary>
         internal static string AppDbgExBkExtEdt {
             get {
@@ -115,7 +115,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to show selected backup file in file manager..
+        ///   Looks up a localized string similar to Exception while trying to show the selected backup file in the file manager..
         /// </summary>
         internal static string AppDbgExBkFMan {
             get {
@@ -124,7 +124,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to save auto backup before saving game settings..
+        ///   Looks up a localized string similar to Exception while trying to create an automatic backup file before saving the game settings..
         /// </summary>
         internal static string AppDbgExBkGsAuto {
             get {
@@ -133,7 +133,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create graphical settings backup of selected game..
+        ///   Looks up a localized string similar to Exception while trying to create the graphical settings backup of the selected game..
         /// </summary>
         internal static string AppDbgExBkSg {
             get {
@@ -142,7 +142,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to open web browser to open bug tracker URL..
+        ///   Looks up a localized string similar to Exception while trying to start the web browser to open the bug tracker URL..
         /// </summary>
         internal static string AppDbgExBugRep {
             get {
@@ -151,7 +151,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while removing FPS-config archive file..
+        ///   Looks up a localized string similar to Exception while removing the FPS-config archive file..
         /// </summary>
         internal static string AppDbgExCfgArchRem {
             get {
@@ -160,7 +160,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to save config auto backup before saving it in Config editor..
+        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of the game configuration file before saving it in the Config Editor..
         /// </summary>
         internal static string AppDbgExCfgEdAutoBackup {
             get {
@@ -169,7 +169,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create manual backup of config file..
+        ///   Looks up a localized string similar to Exception while trying to create a manual backup of the game configuration file..
         /// </summary>
         internal static string AppDbgExCfgEdBkMan {
             get {
@@ -178,7 +178,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to copy item to clipboard in Config editor..
+        ///   Looks up a localized string similar to Exception while trying to copy an item to the clipboard in the Config Editor..
         /// </summary>
         internal static string AppDbgExCfgEdCopy {
             get {
@@ -187,7 +187,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to cut item to clipboard in Config editor..
+        ///   Looks up a localized string similar to Exception while trying to cut an item to the clipboard in the Config Editor..
         /// </summary>
         internal static string AppDbgExCfgEdCut {
             get {
@@ -196,7 +196,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to load config file in text editor..
+        ///   Looks up a localized string similar to Exception while trying to load a config file into a text editor..
         /// </summary>
         internal static string AppDbgExCfgEdExtEdt {
             get {
@@ -205,7 +205,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to find and load &quot;{0}&quot; FPS-config file by editor..
+        ///   Looks up a localized string similar to Failed to find and load the &quot;{0}&quot; FPS-config file by the Config Editor..
         /// </summary>
         internal static string AppDbgExCfgEditorLoad {
             get {
@@ -214,7 +214,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while reading config file in Config editor..
+        ///   Looks up a localized string similar to Exception while reading a config file in the Config Editor..
         /// </summary>
         internal static string AppDbgExCfgEdLoad {
             get {
@@ -223,7 +223,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to paste item from clipboard in Config editor..
+        ///   Looks up a localized string similar to Exception while trying to paste an item from the clipboard in the Config Editor..
         /// </summary>
         internal static string AppDbgExCfgEdPaste {
             get {
@@ -232,7 +232,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to remove item in Config editor..
+        ///   Looks up a localized string similar to Exception while trying to remove an item in the Config Editor..
         /// </summary>
         internal static string AppDbgExCfgEdRemRow {
             get {
@@ -241,7 +241,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception during saving file in Config editor..
+        ///   Looks up a localized string similar to Exception during saving a file in the Config Editor..
         /// </summary>
         internal static string AppDbgExCfgEdSave {
             get {
