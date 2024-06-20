@@ -108,10 +108,10 @@ namespace srcrepair.core
         public override void CleanRegistrySettings(string LangName)
         {
             // Removing key HKEY_CURRENT_USER\Software\Valve recursive...
-            Registry.CurrentUser.DeleteSubKeyTree(Path.Combine("Software", "Valve"), false);
+            Registry.CurrentUser.DeleteSubKeyTree(@"Software\Valve", false);
 
             // Creating a new registry key HKEY_CURRENT_USER\Software\Valve\Steam...
-            using (RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(Path.Combine("Software", "Valve", "Steam")))
+            using (RegistryKey RegLangKey = Registry.CurrentUser.CreateSubKey(@"Software\Valve\Steam"))
             {
                 // Saving Steam language name...
                 RegLangKey?.SetValue("language", LangName);
