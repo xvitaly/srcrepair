@@ -277,7 +277,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to show selected file in file manager..
+        ///   Looks up a localized string similar to Exception while trying to show the selected file in the file manager..
         /// </summary>
         internal static string AppDbgExClnFm {
             get {
@@ -286,7 +286,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to find and remove old application updates..
+        ///   Looks up a localized string similar to Exception while trying to find and remove the old application updates..
         /// </summary>
         internal static string AppDbgExClnOldUpdates {
             get {
@@ -295,7 +295,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while removing files from queue..
+        ///   Looks up a localized string similar to Exception while removing files from the queue..
         /// </summary>
         internal static string AppDbgExClnQueueRun {
             get {
@@ -313,7 +313,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to configure cryptographic policy..
+        ///   Looks up a localized string similar to Failed to configure the cryptographic policy..
         /// </summary>
         internal static string AppDbgExCryptoPolicy {
             get {
@@ -331,7 +331,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to detect file system..
+        ///   Looks up a localized string similar to Exception while trying to detect the file system..
         /// </summary>
         internal static string AppDbgExDetectFileSystem {
             get {
@@ -340,7 +340,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to detect installed games..
+        ///   Looks up a localized string similar to Exception while trying to detect the installed games..
         /// </summary>
         internal static string AppDbgExDetectInstalledGames {
             get {
@@ -349,7 +349,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to report download progress to form..
+        ///   Looks up a localized string similar to Exception while trying to report download progress to the form..
         /// </summary>
         internal static string AppDbgExDnProgressChanged {
             get {
@@ -367,7 +367,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while downloading file &quot;{0}&quot; from the remote server to local file &quot;{1}&quot;..
+        ///   Looks up a localized string similar to Exception while downloading the &quot;{0}&quot; file from the remote server to the local file &quot;{1}&quot;..
         /// </summary>
         internal static string AppDbgExDnWrkDownloadFile {
             get {
@@ -385,7 +385,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception on trying to load installed FPS-config to editor..
+        ///   Looks up a localized string similar to Exception on trying to load the installed FPS-config into the Config Editor..
         /// </summary>
         internal static string AppDbgExEditCfg {
             get {
@@ -412,7 +412,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while compressing files as backup before installation of new FPS config..
+        ///   Looks up a localized string similar to Exception while creating a backup file before installing a new FPS config..
         /// </summary>
         internal static string AppDbgExFpsInstBackup {
             get {

@@ -190,43 +190,43 @@
     <value>Exception while cleaning up empty directories.</value>
   </data>
   <data name="AppDbgExClnFm" xml:space="preserve">
-    <value>Exception while trying to show selected file in file manager.</value>
+    <value>Exception while trying to show the selected file in the file manager.</value>
   </data>
   <data name="AppDbgExClnOldUpdates" xml:space="preserve">
-    <value>Exception while trying to find and remove old application updates.</value>
+    <value>Exception while trying to find and remove the old application updates.</value>
   </data>
   <data name="AppDbgExClnQueueRun" xml:space="preserve">
-    <value>Exception while removing files from queue.</value>
+    <value>Exception while removing files from the queue.</value>
   </data>
   <data name="AppDbgExClnReg" xml:space="preserve">
     <value>Exception while cleaning up Steam registry entries.</value>
   </data>
   <data name="AppDbgExCryptoPolicy" xml:space="preserve">
-    <value>Failed to configure cryptographic policy.</value>
+    <value>Failed to configure the cryptographic policy.</value>
   </data>
   <data name="AppDbgExCvarDescFetchFailure" xml:space="preserve">
     <value>Exception while fetching Cvar description from a separate resource file.</value>
   </data>
   <data name="AppDbgExDetectFileSystem" xml:space="preserve">
-    <value>Exception while trying to detect file system.</value>
+    <value>Exception while trying to detect the file system.</value>
   </data>
   <data name="AppDbgExDetectInstalledGames" xml:space="preserve">
-    <value>Exception while trying to detect installed games.</value>
+    <value>Exception while trying to detect the installed games.</value>
   </data>
   <data name="AppDbgExDnProgressChanged" xml:space="preserve">
-    <value>Exception while trying to report download progress to form.</value>
+    <value>Exception while trying to report download progress to the form.</value>
   </data>
   <data name="AppDbgExDnResultVerify" xml:space="preserve">
     <value>Exception while verifying the downloaded file "{0}".</value>
   </data>
   <data name="AppDbgExDnWrkDownloadFile" xml:space="preserve">
-    <value>Exception while downloading file "{0}" from the remote server to local file "{1}".</value>
+    <value>Exception while downloading the "{0}" file from the remote server to the local file "{1}".</value>
   </data>
   <data name="AppDbgExDnWrkTask" xml:space="preserve">
     <value>Exception while trying to start downloading file "{0}" to "{1}".</value>
   </data>
   <data name="AppDbgExEditCfg" xml:space="preserve">
-    <value>Exception on trying to load installed FPS-config to editor.</value>
+    <value>Exception on trying to load the installed FPS-config into the Config Editor.</value>
   </data>
   <data name="AppDbgExFPSConfigSelectionChange" xml:space="preserve">
     <value>Exception while changing the selected FPS-config.</value>
@@ -235,7 +235,7 @@
     <value>Exception during FPS config installation.</value>
   </data>
   <data name="AppDbgExFpsInstBackup" xml:space="preserve">
-    <value>Exception while compressing files as backup before installation of new FPS config.</value>
+    <value>Exception while creating a backup file before installing a new FPS config.</value>
   </data>
   <data name="AppDbgExFpsUninstall" xml:space="preserve">
     <value>Exception during FPS config uninstallation.</value>
