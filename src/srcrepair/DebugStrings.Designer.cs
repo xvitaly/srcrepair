@@ -430,7 +430,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception during saving of video settings..
+        ///   Looks up a localized string similar to Exception during saving video settings..
         /// </summary>
         internal static string AppDbgExGTSave {
             get {
@@ -466,7 +466,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to fetch HUD screenshot from the Internet..
+        ///   Looks up a localized string similar to Exception while trying to fetch a HUD screenshot from the Internet..
         /// </summary>
         internal static string AppDbgExHandleHUDScreenshot {
             get {
@@ -475,7 +475,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to get current Steam User ID..
+        ///   Looks up a localized string similar to Exception while trying to get the current Steam User ID..
         /// </summary>
         internal static string AppDbgExHandleSteamIDs {
             get {
@@ -493,7 +493,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while removing HUD archive file..
+        ///   Looks up a localized string similar to Exception while removing the HUD archive file..
         /// </summary>
         internal static string AppDbgExHudArchRem {
             get {
@@ -502,7 +502,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to show selected HUD directory in file manager..
+        ///   Looks up a localized string similar to Exception while trying to show the selected HUD directory in the file manager..
         /// </summary>
         internal static string AppDbgExHudExtFm {
             get {
@@ -520,7 +520,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to remove temporary files after HUD installation..
+        ///   Looks up a localized string similar to Exception while trying to remove the temporary files after HUD installation..
         /// </summary>
         internal static string AppDbgExHUDInstallationCleanup {
             get {
@@ -538,7 +538,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while running installation of selected file..
+        ///   Looks up a localized string similar to Exception while installing the selected file..
         /// </summary>
         internal static string AppDbgExInstRun {
             get {

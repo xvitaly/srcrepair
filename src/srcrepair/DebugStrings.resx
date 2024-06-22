@@ -241,7 +241,7 @@
     <value>Exception during FPS config uninstallation.</value>
   </data>
   <data name="AppDbgExGTSave" xml:space="preserve">
-    <value>Exception during saving of video settings.</value>
+    <value>Exception during saving video settings.</value>
   </data>
   <data name="AppDbgExHandleCleanupTargets" xml:space="preserve">
     <value>Exception while trying to build the list of available cleanup targets.</value>
@@ -253,31 +253,31 @@
     <value>Exception while trying to build the list of available game HUDs.</value>
   </data>
   <data name="AppDbgExHandleHUDScreenshot" xml:space="preserve">
-    <value>Exception while trying to fetch HUD screenshot from the Internet.</value>
+    <value>Exception while trying to fetch a HUD screenshot from the Internet.</value>
   </data>
   <data name="AppDbgExHandleSteamIDs" xml:space="preserve">
-    <value>Exception while trying to get current Steam User ID.</value>
+    <value>Exception while trying to get the current Steam User ID.</value>
   </data>
   <data name="AppDbgExHlpShow" xml:space="preserve">
     <value>Failed to open the offline help viewer with the required page.</value>
   </data>
   <data name="AppDbgExHudArchRem" xml:space="preserve">
-    <value>Exception while removing HUD archive file.</value>
+    <value>Exception while removing the HUD archive file.</value>
   </data>
   <data name="AppDbgExHudExtFm" xml:space="preserve">
-    <value>Exception while trying to show selected HUD directory in file manager.</value>
+    <value>Exception while trying to show the selected HUD directory in the file manager.</value>
   </data>
   <data name="AppDbgExHUDInstall" xml:space="preserve">
     <value>Exception during HUD installation.</value>
   </data>
   <data name="AppDbgExHUDInstallationCleanup" xml:space="preserve">
-    <value>Exception while trying to remove temporary files after HUD installation.</value>
+    <value>Exception while trying to remove the temporary files after HUD installation.</value>
   </data>
   <data name="AppDbgExHudSelect" xml:space="preserve">
     <value>Exception while trying to select another HUD.</value>
   </data>
   <data name="AppDbgExInstRun" xml:space="preserve">
-    <value>Exception while running installation of selected file.</value>
+    <value>Exception while installing the selected file.</value>
   </data>
   <data name="AppDbgExKbBW" xml:space="preserve">
     <value>Exception while trying to disable both WIN keys.</value>
