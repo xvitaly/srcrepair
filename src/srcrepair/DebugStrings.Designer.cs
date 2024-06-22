@@ -592,7 +592,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to run external keyboard helper plugin..
+        ///   Looks up a localized string similar to Exception while trying to run the external keyboard helper plugin..
         /// </summary>
         internal static string AppDbgExKbStart {
             get {
@@ -601,7 +601,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while cleaning up debug log file..
+        ///   Looks up a localized string similar to Exception while cleaning up the debug log file..
         /// </summary>
         internal static string AppDbgExLvClean {
             get {
@@ -610,7 +610,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to load current debug log file..
+        ///   Looks up a localized string similar to Exception while trying to load the active debug log file..
         /// </summary>
         internal static string AppDbgExLvLoad {
             get {
@@ -619,7 +619,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to save blacklist auto backup before saving it..
+        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of the muted players file before saving it..
         /// </summary>
         internal static string AppDbgExMMAutoSave {
             get {
@@ -628,7 +628,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to convert selected items..
+        ///   Looks up a localized string similar to Exception while trying to convert the selected items..
         /// </summary>
         internal static string AppDbgExMMConvertItems {
             get {
@@ -637,7 +637,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to copy selected items to clipboard..
+        ///   Looks up a localized string similar to Exception while trying to copy the selected items to the clipboard..
         /// </summary>
         internal static string AppDbgExMMCopyItems {
             get {
@@ -646,7 +646,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to cut selected items to clipboard..
+        ///   Looks up a localized string similar to Exception while trying to cut the selected items to the clipboard..
         /// </summary>
         internal static string AppDbgExMMCutItems {
             get {
@@ -664,7 +664,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to paste items from clipboard..
+        ///   Looks up a localized string similar to Exception while trying to paste the items from the clipboard..
         /// </summary>
         internal static string AppDbgExMMPasteItems {
             get {
@@ -673,7 +673,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while reading muted users database..
+        ///   Looks up a localized string similar to Exception while reading the muted users database..
         /// </summary>
         internal static string AppDbgExMMReadDb {
             get {
@@ -682,7 +682,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to refresh items from the database..
+        ///   Looks up a localized string similar to Exception while trying to refresh the items from the database..
         /// </summary>
         internal static string AppDbgExMMRefresh {
             get {
@@ -691,7 +691,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to remove selected items..
+        ///   Looks up a localized string similar to Exception while trying to remove the selected items..
         /// </summary>
         internal static string AppDbgExMMRemoveItems {
             get {
@@ -700,7 +700,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while writing to save muted users database..
+        ///   Looks up a localized string similar to Exception while writing to save the muted users database..
         /// </summary>
         internal static string AppDbgExMMSaveDb {
             get {

@@ -295,43 +295,43 @@
     <value>Exception while trying to disable right WIN and CONTEXT keys.</value>
   </data>
   <data name="AppDbgExKbStart" xml:space="preserve">
-    <value>Exception while trying to run external keyboard helper plugin.</value>
+    <value>Exception while trying to run the external keyboard helper plugin.</value>
   </data>
   <data name="AppDbgExLvClean" xml:space="preserve">
-    <value>Exception while cleaning up debug log file.</value>
+    <value>Exception while cleaning up the debug log file.</value>
   </data>
   <data name="AppDbgExLvLoad" xml:space="preserve">
-    <value>Exception while trying to load current debug log file.</value>
+    <value>Exception while trying to load the active debug log file.</value>
   </data>
   <data name="AppDbgExMMAutoSave" xml:space="preserve">
-    <value>Exception while trying to save blacklist auto backup before saving it.</value>
+    <value>Exception while trying to create an automatic backup of the muted players file before saving it.</value>
   </data>
   <data name="AppDbgExMMConvertItems" xml:space="preserve">
-    <value>Exception while trying to convert selected items.</value>
+    <value>Exception while trying to convert the selected items.</value>
   </data>
   <data name="AppDbgExMMCopyItems" xml:space="preserve">
-    <value>Exception while trying to copy selected items to clipboard.</value>
+    <value>Exception while trying to copy the selected items to the clipboard.</value>
   </data>
   <data name="AppDbgExMMCutItems" xml:space="preserve">
-    <value>Exception while trying to cut selected items to clipboard.</value>
+    <value>Exception while trying to cut the selected items to the clipboard.</value>
   </data>
   <data name="AppDbgExMMOpenItemProfile" xml:space="preserve">
     <value>Exception when trying to view the selected item's Steam profile in a web browser.</value>
   </data>
   <data name="AppDbgExMMPasteItems" xml:space="preserve">
-    <value>Exception while trying to paste items from clipboard.</value>
+    <value>Exception while trying to paste the items from the clipboard.</value>
   </data>
   <data name="AppDbgExMMReadDb" xml:space="preserve">
-    <value>Exception while reading muted users database.</value>
+    <value>Exception while reading the muted users database.</value>
   </data>
   <data name="AppDbgExMMRefresh" xml:space="preserve">
-    <value>Exception while trying to refresh items from the database.</value>
+    <value>Exception while trying to refresh the items from the database.</value>
   </data>
   <data name="AppDbgExMMRemoveItems" xml:space="preserve">
-    <value>Exception while trying to remove selected items.</value>
+    <value>Exception while trying to remove the selected items.</value>
   </data>
   <data name="AppDbgExMMSaveDb" xml:space="preserve">
-    <value>Exception while writing to save muted users database.</value>
+    <value>Exception while writing to save the muted users database.</value>
   </data>
   <data name="AppDbgExPluginRegister" xml:space="preserve">
     <value>Exception while trying to register available plugins.</value>
