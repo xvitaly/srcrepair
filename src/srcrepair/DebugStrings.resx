@@ -334,37 +334,37 @@
     <value>Exception while writing to save the muted users database.</value>
   </data>
   <data name="AppDbgExPluginRegister" xml:space="preserve">
-    <value>Exception while trying to register available plugins.</value>
+    <value>Exception while trying to register the available plugins.</value>
   </data>
   <data name="AppDbgExPluginsInit" xml:space="preserve">
-    <value>Exception while trying to create an instance of PluginManager class.</value>
+    <value>Exception while trying to create an instance of the PluginManager class.</value>
   </data>
   <data name="AppDbgExRegedit" xml:space="preserve">
-    <value>Exception on trying to launch Windows registry editor to restore saved registry file.</value>
+    <value>Exception on trying to launch the registry editor to restore the saved registry file.</value>
   </data>
   <data name="AppDbgExRemVd" xml:space="preserve">
-    <value>Exception during removal of game settings.</value>
+    <value>Exception while trying to remove the game settings.</value>
   </data>
   <data name="AppDbgExRemVdAutoCfg" xml:space="preserve">
-    <value>Exception while trying to save configs auto backup before removing game settings.</value>
+    <value>Exception while trying to create an automatic backup of the game configs before removing them.</value>
   </data>
   <data name="AppDbgExRemVdAutoGs" xml:space="preserve">
-    <value>Exception while trying to save video auto backup before removing game settings.</value>
+    <value>Exception while trying to create an automatic backup of the game graphical settings before removing them.</value>
   </data>
   <data name="AppDbgExRepFm" xml:space="preserve">
-    <value>Exception while trying to show generated report file in file manager.</value>
+    <value>Exception while trying to show the generated report file in the file manager.</value>
   </data>
   <data name="AppDbgExRepGen" xml:space="preserve">
-    <value>Exception while generating report.</value>
+    <value>Exception while generating the report.</value>
   </data>
   <data name="AppDbgExRepPack" xml:space="preserve">
-    <value>Exception while trying to pack all generated logs to a single Zip archive.</value>
+    <value>Exception while trying to compress all generated log files into a single Zip archive.</value>
   </data>
   <data name="AppDbgExRmRf" xml:space="preserve">
     <value>Exception while removing files.</value>
   </data>
   <data name="AppDbgExRpMdrNotCreated" xml:space="preserve">
-    <value>Mandatory report was not created.</value>
+    <value>The mandatory report was not created.</value>
   </data>
   <data name="AppDbgExSelGame" xml:space="preserve">
     <value>Exception while handling selected game by user or application.</value>

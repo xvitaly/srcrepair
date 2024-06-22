@@ -709,7 +709,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to register available plugins..
+        ///   Looks up a localized string similar to Exception while trying to register the available plugins..
         /// </summary>
         internal static string AppDbgExPluginRegister {
             get {
@@ -718,7 +718,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create an instance of PluginManager class..
+        ///   Looks up a localized string similar to Exception while trying to create an instance of the PluginManager class..
         /// </summary>
         internal static string AppDbgExPluginsInit {
             get {
@@ -727,7 +727,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception on trying to launch Windows registry editor to restore saved registry file..
+        ///   Looks up a localized string similar to Exception on trying to launch the registry editor to restore the saved registry file..
         /// </summary>
         internal static string AppDbgExRegedit {
             get {
@@ -736,7 +736,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception during removal of game settings..
+        ///   Looks up a localized string similar to Exception while trying to remove the game settings..
         /// </summary>
         internal static string AppDbgExRemVd {
             get {
@@ -745,7 +745,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to save configs auto backup before removing game settings..
+        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of the game configs before removing them..
         /// </summary>
         internal static string AppDbgExRemVdAutoCfg {
             get {
@@ -754,7 +754,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to save video auto backup before removing game settings..
+        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of the game graphical settings before removing them..
         /// </summary>
         internal static string AppDbgExRemVdAutoGs {
             get {
@@ -763,7 +763,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to show generated report file in file manager..
+        ///   Looks up a localized string similar to Exception while trying to show the generated report file in the file manager..
         /// </summary>
         internal static string AppDbgExRepFm {
             get {
@@ -772,7 +772,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while generating report..
+        ///   Looks up a localized string similar to Exception while generating the report..
         /// </summary>
         internal static string AppDbgExRepGen {
             get {
@@ -781,7 +781,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to pack all generated logs to a single Zip archive..
+        ///   Looks up a localized string similar to Exception while trying to compress all generated log files into a single Zip archive..
         /// </summary>
         internal static string AppDbgExRepPack {
             get {
@@ -799,7 +799,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mandatory report was not created..
+        ///   Looks up a localized string similar to The mandatory report was not created..
         /// </summary>
         internal static string AppDbgExRpMdrNotCreated {
             get {
