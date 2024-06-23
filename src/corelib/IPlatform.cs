@@ -151,5 +151,11 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="DestDir">Directory for saving backups.</param>
         void BackUpRegistrySettings(string DestDir);
+
+        /// <summary>
+        /// Remove Steam settings, stored in the registry.
+        /// </summary>
+        /// <param name="LangName">Steam language.</param>
+        void CleanRegistrySettings(string LangName);
     }
 }
