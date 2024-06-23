@@ -232,7 +232,7 @@ namespace srcrepair.core
         /// <summary>
         /// Start automatic service repair depending on the running platform.
         /// </summary>
-        /// <param name="FullBinPath">Full path to Steam binaries directory.</param>
+        /// <param name="FullBinPath">Full path to the Steam binaries directory.</param>
         public virtual void StartServiceRepair(string FullBinPath)
         {
             throw new PlatformNotSupportedException(DebugStrings.AppDbgCoreServiceNotSupported);

@@ -157,5 +157,11 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="LangName">Steam language.</param>
         void CleanRegistrySettings(string LangName);
+
+        /// <summary>
+        /// Start automatic service repair depending on the running platform.
+        /// </summary>
+        /// <param name="FullBinPath">Full path to the Steam binaries directory.</param>
+        void StartServiceRepair(string FullBinPath);
     }
 }
