@@ -145,5 +145,11 @@ namespace srcrepair.core
         /// <param name="FileName">Full path to the executable.</param>
         /// <returns>PID of the newly created process.</returns>
         int StartRegularProcess(string FileName);
+
+        /// <summary>
+        /// Backup Steam settings, stored in the registry.
+        /// </summary>
+        /// <param name="DestDir">Directory for saving backups.</param>
+        void BackUpRegistrySettings(string DestDir);
     }
 }
