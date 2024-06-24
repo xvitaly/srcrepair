@@ -391,37 +391,34 @@
     <value>Exception while trying to run the Service automatic repair.</value>
   </data>
   <data name="AppDbgExT1AutoFail" xml:space="preserve">
-    <value>Exception while trying to create backup of Type 1 game video settings.</value>
+    <value>Exception while trying to create an automatic backup of Type 1 game video settings.</value>
   </data>
   <data name="AppDbgExT2AutoFail" xml:space="preserve">
-    <value>Exception while trying to create backup of Type 2 game video settings.</value>
+    <value>Exception while trying to create an automatic backup of Type 2 game video settings.</value>
   </data>
   <data name="AppDbgExUpdateBackUpList" xml:space="preserve">
     <value>Exception while trying to get the list of available backups.</value>
   </data>
   <data name="AppDbgExUpdBinInst" xml:space="preserve">
-    <value>Exception while trying to install binary update.</value>
+    <value>Exception while trying to install the binary update.</value>
   </data>
   <data name="AppDbgExUpdChk" xml:space="preserve">
     <value>Exception while checking for updates during the Updates form initialization.</value>
   </data>
-  <data name="AppDbgExUpdXmlDbInst" xml:space="preserve">
-    <value>Exception while trying to install XML database update.</value>
-  </data>
   <data name="AppDbgExUrlCvList" xml:space="preserve">
-    <value>Exception while trying to open web browser to show cvarlist.</value>
+    <value>Exception while trying to start the web browser to open the cvarlist URL.</value>
   </data>
   <data name="AppDbgExUrlGroup" xml:space="preserve">
-    <value>Exception while trying to open web browser to show Steam group profile.</value>
+    <value>Exception while trying to start the web browser to open the Steam group profile.</value>
   </data>
   <data name="AppDbgExUrlHudHome" xml:space="preserve">
-    <value>Exception while trying to open web browser to show HUD's homepage.</value>
+    <value>Exception while trying to start the web browser to open the HUD's homepage.</value>
   </data>
   <data name="AppDbgExUrlStmSel" xml:space="preserve">
-    <value>Exception while trying to open web browser to show Steam profile.</value>
+    <value>Exception while trying to start the web browser to open the Steam profile.</value>
   </data>
   <data name="AppDbgExUrlWebsite" xml:space="preserve">
-    <value>Exception while trying to open web browser to show the official website.</value>
+    <value>Exception while trying to start the web browser to open the official website.</value>
   </data>
   <data name="AppDbgExUserIdSel" xml:space="preserve">
     <value>Exception during new UserID selection.</value>

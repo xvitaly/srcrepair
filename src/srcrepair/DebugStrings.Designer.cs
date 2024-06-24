@@ -880,7 +880,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create backup of Type 1 game video settings..
+        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of Type 1 game video settings..
         /// </summary>
         internal static string AppDbgExT1AutoFail {
             get {
@@ -889,7 +889,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create backup of Type 2 game video settings..
+        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of Type 2 game video settings..
         /// </summary>
         internal static string AppDbgExT2AutoFail {
             get {
@@ -907,7 +907,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to install binary update..
+        ///   Looks up a localized string similar to Exception while trying to install the binary update..
         /// </summary>
         internal static string AppDbgExUpdBinInst {
             get {
@@ -925,16 +925,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to install XML database update..
-        /// </summary>
-        internal static string AppDbgExUpdXmlDbInst {
-            get {
-                return ResourceManager.GetString("AppDbgExUpdXmlDbInst", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to open web browser to show cvarlist..
+        ///   Looks up a localized string similar to Exception while trying to start the web browser to open the cvarlist URL..
         /// </summary>
         internal static string AppDbgExUrlCvList {
             get {
@@ -943,7 +934,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to open web browser to show Steam group profile..
+        ///   Looks up a localized string similar to Exception while trying to start the web browser to open the Steam group profile..
         /// </summary>
         internal static string AppDbgExUrlGroup {
             get {
@@ -952,7 +943,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to open web browser to show HUD&apos;s homepage..
+        ///   Looks up a localized string similar to Exception while trying to start the web browser to open the HUD&apos;s homepage..
         /// </summary>
         internal static string AppDbgExUrlHudHome {
             get {
@@ -961,7 +952,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to open web browser to show Steam profile..
+        ///   Looks up a localized string similar to Exception while trying to start the web browser to open the Steam profile..
         /// </summary>
         internal static string AppDbgExUrlStmSel {
             get {
@@ -970,7 +961,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to open web browser to show the official website..
+        ///   Looks up a localized string similar to Exception while trying to start the web browser to open the official website..
         /// </summary>
         internal static string AppDbgExUrlWebsite {
             get {
