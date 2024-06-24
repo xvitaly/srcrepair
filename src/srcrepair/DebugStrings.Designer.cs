@@ -970,7 +970,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception during new UserID selection..
+        ///   Looks up a localized string similar to Exception during a new SteamID selection..
         /// </summary>
         internal static string AppDbgExUserIdSel {
             get {
@@ -979,7 +979,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception on trying to launch Steam to validate game cache..
+        ///   Looks up a localized string similar to Exception while trying to launch Steam to validate the game cache..
         /// </summary>
         internal static string AppDbgExValCache {
             get {
@@ -988,7 +988,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while creating automatic video settings backup..
+        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of the game video settings before removing them..
         /// </summary>
         internal static string AppDbgExVideoAutoBackUp {
             get {
@@ -997,7 +997,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while loading video settings..
+        ///   Looks up a localized string similar to Exception while loading the game video settings..
         /// </summary>
         internal static string AppDbgExVideoLoadFail {
             get {
@@ -1006,7 +1006,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception on parsing XML game database. Application will be terminated..
+        ///   Looks up a localized string similar to Exception while parsing the XML game database. The program has been terminated..
         /// </summary>
         internal static string AppDbgExXmlParse {
             get {
@@ -1069,7 +1069,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unknown file type specified. Can&apos;t install..
+        ///   Looks up a localized string similar to Unknown file type was specified. The installation is not possible..
         /// </summary>
         internal static string AppDbgQIUnknownFileType {
             get {
@@ -1078,7 +1078,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to perform elevation. User closed the UAC dialog..
+        ///   Looks up a localized string similar to Failed to perform elevation. The user closed the UAC dialog..
         /// </summary>
         internal static string AppDbgUACCancel {
             get {
@@ -1096,7 +1096,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannnot unpack file {0} from Zip archive due to an error..
+        ///   Looks up a localized string similar to Cannot unpack the &quot;{0}&quot; file from the Zip archive due to an error..
         /// </summary>
         internal static string AppDbgZipExtractFailure {
             get {

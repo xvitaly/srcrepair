@@ -421,19 +421,19 @@
     <value>Exception while trying to start the web browser to open the official website.</value>
   </data>
   <data name="AppDbgExUserIdSel" xml:space="preserve">
-    <value>Exception during new UserID selection.</value>
+    <value>Exception during a new SteamID selection.</value>
   </data>
   <data name="AppDbgExValCache" xml:space="preserve">
-    <value>Exception on trying to launch Steam to validate game cache.</value>
+    <value>Exception while trying to launch Steam to validate the game cache.</value>
   </data>
   <data name="AppDbgExVideoAutoBackUp" xml:space="preserve">
-    <value>Exception while creating automatic video settings backup.</value>
+    <value>Exception while trying to create an automatic backup of the game video settings before removing them.</value>
   </data>
   <data name="AppDbgExVideoLoadFail" xml:space="preserve">
-    <value>Exception while loading video settings.</value>
+    <value>Exception while loading the game video settings.</value>
   </data>
   <data name="AppDbgExXmlParse" xml:space="preserve">
-    <value>Exception on parsing XML game database. Application will be terminated.</value>
+    <value>Exception while parsing the XML game database. The program has been terminated.</value>
   </data>
   <data name="AppDbgFPSDnlMain" xml:space="preserve">
     <value>Failed to download FPS-config from the main server. Trying mirror.</value>
@@ -454,16 +454,16 @@
     <value>The string "{0}" failed to validate and was ignored.</value>
   </data>
   <data name="AppDbgQIUnknownFileType" xml:space="preserve">
-    <value>Unknown file type specified. Can't install.</value>
+    <value>Unknown file type was specified. The installation is not possible.</value>
   </data>
   <data name="AppDbgUACCancel" xml:space="preserve">
-    <value>Failed to perform elevation. User closed the UAC dialog.</value>
+    <value>Failed to perform elevation. The user closed the UAC dialog.</value>
   </data>
   <data name="AppDbgZipExtractArchiveNotFound" xml:space="preserve">
     <value>Cannot unpack because the archive file was not found.</value>
   </data>
   <data name="AppDbgZipExtractFailure" xml:space="preserve">
-    <value>Cannnot unpack file {0} from Zip archive due to an error.</value>
+    <value>Cannot unpack the "{0}" file from the Zip archive due to an error.</value>
   </data>
   <data name="AppDbgZipPathTraversalDetected" xml:space="preserve">
     <value>The archive tries to traverse through the base archive directory!</value>
