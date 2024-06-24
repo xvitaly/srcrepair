@@ -808,7 +808,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while handling selected game by user or application..
+        ///   Looks up a localized string similar to Exception while switching the selected game by the user or the application itself..
         /// </summary>
         internal static string AppDbgExSelGame {
             get {
@@ -826,7 +826,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to start cleanup..
+        ///   Looks up a localized string similar to Exception while trying to start the cleanup..
         /// </summary>
         internal static string AppDbgExStartCleanup {
             get {
@@ -844,7 +844,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to get Steam path. Application will be terminated..
+        ///   Looks up a localized string similar to Exception while trying to get the Steam installation path. The program has been terminated..
         /// </summary>
         internal static string AppDbgExSteamPath {
             get {
@@ -853,7 +853,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to create form due to not enough SteamIDs in list..
+        ///   Looks up a localized string similar to Failed to create the Steam ID selection form due to insufficient SteamIDs in the list..
         /// </summary>
         internal static string AppDbgExStmIDsNotEnough {
             get {
@@ -862,7 +862,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while initializing SteamManager class instance..
+        ///   Looks up a localized string similar to Exception while initializing the SteamManager class instance..
         /// </summary>
         internal static string AppDbgExStmmInit {
             get {
@@ -871,7 +871,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to run Service automatic repair..
+        ///   Looks up a localized string similar to Exception while trying to run the Service automatic repair..
         /// </summary>
         internal static string AppDbgExSvcRepair {
             get {
