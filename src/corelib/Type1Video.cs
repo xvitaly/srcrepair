@@ -735,7 +735,7 @@ namespace srcrepair.core
         /// <summary>
         /// Removed specified subkey from registry (HKEY_CURRENT_USER branch).
         /// </summary>
-        /// <param name="Subkey">Подключ реестра для удаления</param>
+        /// <param name="Subkey">Subkey.</param>
         public static void RemoveRegKey(string Subkey)
         {
             Registry.CurrentUser.DeleteSubKeyTree(Subkey, false);
