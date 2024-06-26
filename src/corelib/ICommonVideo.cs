@@ -43,6 +43,11 @@ namespace srcrepair.core
         int VSync { get; set; }
 
         /// <summary>
+        /// Reads game video settings.
+        /// </summary>
+        void ReadSettings();
+
+        /// <summary>
         /// Saves video settings to file or registry.
         /// </summary>
         void WriteSettings();
