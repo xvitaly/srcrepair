@@ -325,6 +325,13 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Creates a backup copy of the game video settings.
+        /// </summary>
+        /// <param name="FileName">Full path to the backup file.</param>
+        /// <param name="DestDir">Directory for saving backups.</param>
+        public abstract void BackUpSettings(string FileName, string DestDir);
+
+        /// <summary>
         /// Reads game video settings.
         /// </summary>
         public abstract void ReadSettings();

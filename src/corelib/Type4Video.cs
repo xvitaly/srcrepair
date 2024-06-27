@@ -114,6 +114,16 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Creates a backup copy of the game video settings.
+        /// </summary>
+        /// <param name="FileName">Full path to the backup file.</param>
+        /// <param name="DestDir">Directory for saving backups.</param>
+        public override void BackUpSettings(string FileName, string DestDir)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Reads Type 4 game video settings from config file.
         /// </summary>
         public override void ReadSettings()

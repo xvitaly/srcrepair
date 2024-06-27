@@ -43,6 +43,13 @@ namespace srcrepair.core
         int VSync { get; set; }
 
         /// <summary>
+        /// Creates a backup copy of the game video settings.
+        /// </summary>
+        /// <param name="FileName">Full path to the backup file.</param>
+        /// <param name="DestDir">Directory for saving backups.</param>
+        void BackUpSettings(string FileName, string DestDir);
+
+        /// <summary>
         /// Reads game video settings.
         /// </summary>
         void ReadSettings();
