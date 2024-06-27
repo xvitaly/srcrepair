@@ -686,6 +686,15 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Restores a backup copy of the game video settings.
+        /// </summary>
+        /// <param name="FileName">Full path to the backup file.</param>
+        public override void RestoreSettings(string FileName)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Reads Type 2 game video settings from file.
         /// </summary>
         public override void ReadSettings()
