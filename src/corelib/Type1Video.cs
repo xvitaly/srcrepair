@@ -653,6 +653,14 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Removes game video settings.
+        /// </summary>
+        public override void RemoveSettings()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
         /// Reads Type 1 game video settings from Windows registry.
         /// </summary>
         public override void ReadSettings()

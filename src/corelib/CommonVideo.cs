@@ -338,6 +338,11 @@ namespace srcrepair.core
         public abstract void RestoreSettings(string FileName);
 
         /// <summary>
+        /// Removes game video settings.
+        /// </summary>
+        public abstract void RemoveSettings();
+
+        /// <summary>
         /// Reads game video settings.
         /// </summary>
         public abstract void ReadSettings();

@@ -56,6 +56,11 @@ namespace srcrepair.core
         void RestoreSettings(string FileName);
 
         /// <summary>
+        /// Removes game video settings.
+        /// </summary>
+        void RemoveSettings();
+
+        /// <summary>
         /// Reads game video settings.
         /// </summary>
         void ReadSettings();
