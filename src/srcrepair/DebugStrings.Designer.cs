@@ -970,6 +970,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove the game video settings..
+        /// </summary>
+        internal static string AppDbgExVideoRemoveFail {
+            get {
+                return ResourceManager.GetString("AppDbgExVideoRemoveFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while parsing the XML game database. The program has been terminated..
         /// </summary>
         internal static string AppDbgExXmlParse {

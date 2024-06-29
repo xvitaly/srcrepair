@@ -446,6 +446,21 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Removes game video settings.
+        /// </summary>
+        private void VideoSettingsRemove()
+        {
+            try
+            {
+                App.SourceGames[AppSelector.Text].Video.RemoveSettings();
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExVideoRemoveFail);
+            }
+        }
+
+        /// <summary>
         /// Performes backup and then writes video settings of Type 1 game,
         /// selected in main window.
         /// </summary>
@@ -2336,7 +2351,7 @@ namespace srcrepair.gui
                 try
                 {
                     VideoSettingsBackup();
-                    App.SourceGames[AppSelector.Text].Video.RemoveSettings();
+                    VideoSettingsRemove();
 
                     // Creating backup...
                     if (Properties.Settings.Default.SafeCleanup)

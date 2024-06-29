@@ -420,6 +420,9 @@
   <data name="AppDbgExVideoLoadFail" xml:space="preserve">
     <value>Exception while loading the game video settings.</value>
   </data>
+  <data name="AppDbgExVideoRemoveFail" xml:space="preserve">
+    <value>Exception while trying to remove the game video settings.</value>
+  </data>
   <data name="AppDbgExXmlParse" xml:space="preserve">
     <value>Exception while parsing the XML game database. The program has been terminated.</value>
   </data>
