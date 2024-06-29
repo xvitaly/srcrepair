@@ -124,15 +124,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create an automatic backup file before saving the game settings..
-        /// </summary>
-        internal static string AppDbgExBkGsAuto {
-            get {
-                return ResourceManager.GetString("AppDbgExBkGsAuto", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to create the graphical settings backup of the selected game..
         /// </summary>
         internal static string AppDbgExBkSg {
@@ -754,15 +745,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of the game graphical settings before removing them..
-        /// </summary>
-        internal static string AppDbgExRemVdAutoGs {
-            get {
-                return ResourceManager.GetString("AppDbgExRemVdAutoGs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to show the generated report file in the file manager..
         /// </summary>
         internal static string AppDbgExRepFm {
@@ -880,24 +862,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of Type 1 game video settings..
-        /// </summary>
-        internal static string AppDbgExT1AutoFail {
-            get {
-                return ResourceManager.GetString("AppDbgExT1AutoFail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of Type 2 game video settings..
-        /// </summary>
-        internal static string AppDbgExT2AutoFail {
-            get {
-                return ResourceManager.GetString("AppDbgExT2AutoFail", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to get the list of available backups..
         /// </summary>
         internal static string AppDbgExUpdateBackUpList {
@@ -988,11 +952,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of the game video settings before removing them..
+        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of the game video settings..
         /// </summary>
-        internal static string AppDbgExVideoAutoBackUp {
+        internal static string AppDbgExVideoAutoBackUpFail {
             get {
-                return ResourceManager.GetString("AppDbgExVideoAutoBackUp", resourceCulture);
+                return ResourceManager.GetString("AppDbgExVideoAutoBackUpFail", resourceCulture);
             }
         }
         

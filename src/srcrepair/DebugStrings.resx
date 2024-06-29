@@ -138,9 +138,6 @@
   <data name="AppDbgExBkFMan" xml:space="preserve">
     <value>Exception while trying to show the selected backup file in the file manager.</value>
   </data>
-  <data name="AppDbgExBkGsAuto" xml:space="preserve">
-    <value>Exception while trying to create an automatic backup file before saving the game settings.</value>
-  </data>
   <data name="AppDbgExBkSg" xml:space="preserve">
     <value>Exception while trying to create the graphical settings backup of the selected game.</value>
   </data>
@@ -348,9 +345,6 @@
   <data name="AppDbgExRemVdAutoCfg" xml:space="preserve">
     <value>Exception while trying to create an automatic backup of the game configs before removing them.</value>
   </data>
-  <data name="AppDbgExRemVdAutoGs" xml:space="preserve">
-    <value>Exception while trying to create an automatic backup of the game graphical settings before removing them.</value>
-  </data>
   <data name="AppDbgExRepFm" xml:space="preserve">
     <value>Exception while trying to show the generated report file in the file manager.</value>
   </data>
@@ -390,12 +384,6 @@
   <data name="AppDbgExSvcRepair" xml:space="preserve">
     <value>Exception while trying to run the Service automatic repair.</value>
   </data>
-  <data name="AppDbgExT1AutoFail" xml:space="preserve">
-    <value>Exception while trying to create an automatic backup of Type 1 game video settings.</value>
-  </data>
-  <data name="AppDbgExT2AutoFail" xml:space="preserve">
-    <value>Exception while trying to create an automatic backup of Type 2 game video settings.</value>
-  </data>
   <data name="AppDbgExUpdateBackUpList" xml:space="preserve">
     <value>Exception while trying to get the list of available backups.</value>
   </data>
@@ -426,8 +414,8 @@
   <data name="AppDbgExValCache" xml:space="preserve">
     <value>Exception while trying to launch Steam to validate the game cache.</value>
   </data>
-  <data name="AppDbgExVideoAutoBackUp" xml:space="preserve">
-    <value>Exception while trying to create an automatic backup of the game video settings before removing them.</value>
+  <data name="AppDbgExVideoAutoBackUpFail" xml:space="preserve">
+    <value>Exception while trying to create an automatic backup of the game video settings.</value>
   </data>
   <data name="AppDbgExVideoLoadFail" xml:space="preserve">
     <value>Exception while loading the game video settings.</value>
