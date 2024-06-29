@@ -640,7 +640,14 @@ namespace srcrepair.core
         /// <param name="DestDir">Directory for saving backups.</param>
         public override void BackUpSettings(string FileName, string DestDir)
         {
-            throw new NotImplementedException();
+            if (CheckRegKeyExists())
+            {
+                ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, Path.Combine("HKEY_CURRENT_USER", RegKey), Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, FileName, FileManager.DateTime2Unix(DateTime.Now)))));
+            }
+            else
+            {
+                CreateRegKey();
+            }
         }
 
         /// <summary>
@@ -649,7 +656,7 @@ namespace srcrepair.core
         /// <param name="FileName">Full path to the backup file.</param>
         public override void RestoreSettings(string FileName)
         {
-            throw new NotImplementedException();
+            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegImportCmdLine, FileName));
         }
 
         /// <summary>
@@ -657,7 +664,7 @@ namespace srcrepair.core
         /// </summary>
         public override void RemoveSettings()
         {
-            throw new NotImplementedException();
+            Registry.CurrentUser.DeleteSubKeyTree(RegKey, false);
         }
 
         /// <summary>
@@ -726,24 +733,13 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Gets registry key, used for storing video settings.
-        /// </summary>
-        /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
-        /// <returns>Full registry key path.</returns>
-        public static string GetGameRegKey(string SAppName)
-        {
-            return Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
-        }
-
-        /// <summary>
         /// Checks if specified registry subkey exists in HKEY_CURRENT_USER branch.
         /// </summary>
-        /// <param name="Subkey">Subkey.</param>
         /// <returns>Returns True if registry subkey exists.</returns>
-        public static bool CheckRegKeyExists(string Subkey)
+        private bool CheckRegKeyExists()
         {
             bool Result;
-            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(Subkey, false))
+            using (RegistryKey ResKey = Registry.CurrentUser.OpenSubKey(RegKey, false))
             {
                 Result = ResKey != null;
             }
@@ -753,19 +749,18 @@ namespace srcrepair.core
         /// <summary>
         /// Creates specified subkey in registry (HKEY_CURRENT_USER branch).
         /// </summary>
-        /// <param name="Subkey">Subkey.</param>
-        public static void CreateRegKey(string Subkey)
+        private void CreateRegKey()
         {
-            Registry.CurrentUser.CreateSubKey(Subkey);
+            Registry.CurrentUser.CreateSubKey(RegKey);
         }
 
         /// <summary>
-        /// Removed specified subkey from registry (HKEY_CURRENT_USER branch).
+        /// Restores a specified registry backup.
         /// </summary>
-        /// <param name="Subkey">Subkey.</param>
-        public static void RemoveRegKey(string Subkey)
+        /// <param name="FileName">Full path to the backup file.</param>
+        public static void RestoreRegBackUpNow(string FileName)
         {
-            Registry.CurrentUser.DeleteSubKeyTree(Subkey, false);
+            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegImportCmdLine, FileName));
         }
 
         /// <summary>
@@ -780,34 +775,13 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Restores a specified registry backup.
-        /// </summary>
-        /// <param name="FileName">Full path to the backup file.</param>
-        public static void RestoreRegBackUpNow(string FileName)
-        {
-            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegImportCmdLine, FileName));
-        }
-
-        /// <summary>
-        /// Creates a backup copy of specified registry subkey
-        /// (HKEY_CURRENT_USER branch).
-        /// </summary>
-        /// <param name="RegKey">Registry subkey.</param>
-        /// <param name="FileName">Backup file name.</param>
-        /// <param name="DestDir">Directory for saving backups.</param>
-        public static void BackUpVideoSettings(string RegKey, string FileName, string DestDir)
-        {
-            CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", RegKey), FileName, DestDir);
-        }
-
-        /// <summary>
         /// Type1Video class constructor.
         /// </summary>
         /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
         public Type1Video(string SAppName)
         {
             VSettings = new Type1Settings();
-            RegKey = GetGameRegKey(SAppName);
+            RegKey = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
         }
     }
 }

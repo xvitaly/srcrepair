@@ -120,7 +120,8 @@ namespace srcrepair.core
         /// <param name="DestDir">Directory for saving backups.</param>
         public override void BackUpSettings(string FileName, string DestDir)
         {
-            throw new NotImplementedException();
+            List<string> VideoCfgFiles = new List<string> { VideoFileName };
+            FileManager.CreateConfigBackUp(VideoCfgFiles, DestDir, FileName);
         }
 
         /// <summary>

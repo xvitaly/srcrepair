@@ -428,23 +428,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Creates video settings backup of Type 1 game.
+        /// Creates a backup of the game video settings.
         /// </summary>
-        private void Type1VideoSettingsBackup()
+        private void VideoSettingsBackup()
         {
             try
             {
-                string GameRegKey = Type1Video.GetGameRegKey(App.SourceGames[AppSelector.Text].SmallAppName);
-                if (Type1Video.CheckRegKeyExists(GameRegKey))
+                if (Properties.Settings.Default.SafeCleanup)
                 {
-                    if (Properties.Settings.Default.SafeCleanup)
-                    {
-                        Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
-                    }
-                }
-                else
-                {
-                    Type1Video.CreateRegKey(GameRegKey);
+                    App.SourceGames[AppSelector.Text].Video.BackUpSettings(Properties.Resources.BU_PrefixVidAuto, App.SourceGames[AppSelector.Text].FullBackUpDirPath);
                 }
             }
             catch (Exception Ex)
@@ -454,30 +446,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Creates video settings backup of Type 2 game.
-        /// </summary>
-        private void Type2VideoSettingsBackup()
-        {
-            try
-            {
-                if (Properties.Settings.Default.SafeCleanup)
-                {
-                    FileManager.CreateConfigBackUp(App.SourceGames[AppSelector.Text].VideoCfgFiles, App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
-                }
-            }
-            catch (Exception Ex)
-            {
-                Logger.Warn(Ex, DebugStrings.AppDbgExT2AutoFail);
-            }
-        }
-
-        /// <summary>
         /// Performes backup and then writes video settings of Type 1 game,
         /// selected in main window.
         /// </summary>
         private void WriteType1VideoSettings()
         {
-            Type1VideoSettingsBackup();
             UpdateType1VideoSettings((Type1Video)App.SourceGames[AppSelector.Text].Video);
         }
 
@@ -487,7 +460,6 @@ namespace srcrepair.gui
         /// </summary>
         private void WriteType2VideoSettings()
         {
-            Type2VideoSettingsBackup();
             UpdateType2VideoSettings((Type2Video)App.SourceGames[AppSelector.Text].Video);
         }
 
@@ -497,7 +469,6 @@ namespace srcrepair.gui
         /// </summary>
         private void WriteType4VideoSettings()
         {
-            Type2VideoSettingsBackup();
             UpdateType4VideoSettings((Type4Video)App.SourceGames[AppSelector.Text].Video);
         }
 
@@ -507,6 +478,7 @@ namespace srcrepair.gui
         /// </summary>
         private void WriteGraphicSettings()
         {
+            VideoSettingsBackup();
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case 1:
@@ -2363,38 +2335,8 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    // Removing video settings...
-                    if (!App.SourceGames[AppSelector.Text].IsUsingVideoFile)
-                    {
-                        string GameRegKey = Type1Video.GetGameRegKey(App.SourceGames[AppSelector.Text].SmallAppName);
-
-                        if (Properties.Settings.Default.SafeCleanup)
-                        {
-                            try
-                            {
-                                Type1Video.BackUpVideoSettings(GameRegKey, "Game_AutoBackUp", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
-                            }
-                            catch (Exception Ex) { Logger.Warn(Ex, DebugStrings.AppDbgExVideoAutoBackUp); }
-                        }
-
-                        Type1Video.RemoveRegKey(GameRegKey);
-                    }
-                    else
-                    {
-                        if (Properties.Settings.Default.SafeCleanup)
-                        {
-                            try
-                            {
-                                FileManager.CreateConfigBackUp(App.SourceGames[AppSelector.Text].VideoCfgFiles, App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixVidAuto);
-                            }
-                            catch (Exception Ex)
-                            {
-                                Logger.Warn(Ex, DebugStrings.AppDbgExRemVdAutoGs);
-                            }
-                        }
-
-                        CleanDirs.AddRange(App.SourceGames[AppSelector.Text].VideoCfgFiles);
-                    }
+                    VideoSettingsBackup();
+                    App.SourceGames[AppSelector.Text].Video.RemoveSettings();
 
                     // Creating backup...
                     if (Properties.Settings.Default.SafeCleanup)
@@ -2642,21 +2584,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    if (!App.SourceGames[AppSelector.Text].IsUsingVideoFile)
-                    {
-                        Type1Video.BackUpVideoSettings(Type1Video.GetGameRegKey(App.SourceGames[AppSelector.Text].SmallAppName), "Game_Options", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
-                    }
-                    else
-                    {
-                        try
-                        {
-                            FileManager.CreateConfigBackUp(App.SourceGames[AppSelector.Text].VideoCfgFiles, App.SourceGames[AppSelector.Text].FullBackUpDirPath, Properties.Resources.BU_PrefixVideo);
-                        }
-                        catch (Exception Ex)
-                        {
-                            Logger.Warn(Ex, DebugStrings.AppDbgExBkGsAuto);
-                        }
-                    }
+                    VideoSettingsBackup();
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UpdateBackUpList();
                 }
