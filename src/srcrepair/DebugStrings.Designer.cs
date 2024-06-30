@@ -952,11 +952,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create an automatic backup of the game video settings..
+        ///   Looks up a localized string similar to Exception while trying to create a backup of the game video settings..
         /// </summary>
-        internal static string AppDbgExVideoAutoBackUpFail {
+        internal static string AppDbgExVideoBackUpFail {
             get {
-                return ResourceManager.GetString("AppDbgExVideoAutoBackUpFail", resourceCulture);
+                return ResourceManager.GetString("AppDbgExVideoBackUpFail", resourceCulture);
             }
         }
         

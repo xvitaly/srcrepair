@@ -442,7 +442,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExVideoAutoBackUpFail);
+                Logger.Warn(Ex, DebugStrings.AppDbgExVideoBackUpFail);
             }
         }
 
