@@ -430,13 +430,14 @@ namespace srcrepair.gui
         /// <summary>
         /// Creates a backup of the game video settings.
         /// </summary>
-        private void VideoSettingsBackup()
+        /// <param name="IsManual">Determines whether the backup was initiated by the user or not.</param>
+        private void VideoSettingsBackup(bool IsManual)
         {
             try
             {
-                if (Properties.Settings.Default.SafeCleanup)
+                if (Properties.Settings.Default.SafeCleanup || IsManual)
                 {
-                    App.SourceGames[AppSelector.Text].Video.BackUpSettings(Properties.Resources.BU_PrefixVidAuto, App.SourceGames[AppSelector.Text].FullBackUpDirPath);
+                    App.SourceGames[AppSelector.Text].Video.BackUpSettings(App.SourceGames[AppSelector.Text].FullBackUpDirPath, IsManual);
                 }
             }
             catch (Exception Ex)
@@ -493,7 +494,7 @@ namespace srcrepair.gui
         /// </summary>
         private void WriteGraphicSettings()
         {
-            VideoSettingsBackup();
+            VideoSettingsBackup(false);
             switch (App.SourceGames[AppSelector.Text].SourceType)
             {
                 case 1:
@@ -2350,7 +2351,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    VideoSettingsBackup();
+                    VideoSettingsBackup(false);
                     VideoSettingsRemove();
 
                     // Creating backup...
@@ -2599,7 +2600,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    VideoSettingsBackup();
+                    VideoSettingsBackup(true);
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UpdateBackUpList();
                 }

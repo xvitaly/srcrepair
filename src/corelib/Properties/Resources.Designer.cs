@@ -430,6 +430,42 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to VideoAutoCfg.
+        /// </summary>
+        internal static string VideoFileAutoPrefix {
+            get {
+                return ResourceManager.GetString("VideoFileAutoPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to VideoCfg.
+        /// </summary>
+        internal static string VideoFileManualPrefix {
+            get {
+                return ResourceManager.GetString("VideoFileManualPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game_AutoBackUp.
+        /// </summary>
+        internal static string VideoRegAutoPrefix {
+            get {
+                return ResourceManager.GetString("VideoRegAutoPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Game_Options.
+        /// </summary>
+        internal static string VideoRegManualPrefix {
+            get {
+                return ResourceManager.GetString("VideoRegManualPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to workshop.
         /// </summary>
         internal static string WorkshopFolderName {

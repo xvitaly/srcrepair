@@ -636,13 +636,13 @@ namespace srcrepair.core
         /// <summary>
         /// Creates a backup copy of the game video settings.
         /// </summary>
-        /// <param name="FileName">Full path to the backup file.</param>
         /// <param name="DestDir">Directory for saving backups.</param>
-        public override void BackUpSettings(string FileName, string DestDir)
+        /// <param name="IsManual">Determines whether the backup was initiated by the user or not.</param>
+        public override void BackUpSettings(string DestDir, bool IsManual)
         {
             if (CheckRegKeyExists())
             {
-                ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, Path.Combine("HKEY_CURRENT_USER", RegKey), Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, FileName, FileManager.DateTime2Unix(DateTime.Now)))));
+                ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, Path.Combine("HKEY_CURRENT_USER", RegKey), Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, IsManual ? Properties.Resources.VideoFileManualPrefix : Properties.Resources.VideoRegAutoPrefix, FileManager.DateTime2Unix(DateTime.Now)))));
             }
             else
             {

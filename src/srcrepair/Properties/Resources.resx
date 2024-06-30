@@ -151,9 +151,6 @@
   <data name="BU_PrefixCfg" xml:space="preserve">
     <value>Config</value>
   </data>
-  <data name="BU_PrefixVidAuto" xml:space="preserve">
-    <value>VideoAutoCfg</value>
-  </data>
   <data name="IconGreenCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\green_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,9 +171,6 @@
   </data>
   <data name="IconUpdateChecking" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\upd_chk.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BU_PrefixVideo" xml:space="preserve">
-    <value>VideoCfg</value>
   </data>
   <data name="IconMHint" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\..\..\assets\icons\mhint.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
