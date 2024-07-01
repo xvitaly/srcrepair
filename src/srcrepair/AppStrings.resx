@@ -277,22 +277,31 @@
     <value>Restore selected backups?</value>
   </data>
   <data name="BU_RegCreate" xml:space="preserve">
-    <value>Create registry backup now?</value>
+    <value>Create the registry backup now?</value>
   </data>
   <data name="BU_RegDone" xml:space="preserve">
-    <value>Registry backup was successfully created!</value>
+    <value>The registry backup was successfully created!</value>
   </data>
   <data name="BU_RegErr" xml:space="preserve">
-    <value>An error occured. Backup file was not created!</value>
+    <value>An error occurred. The backup was not created!</value>
   </data>
   <data name="BU_RestFailed" xml:space="preserve">
-    <value>An error occured. BackUp was not restored!</value>
+    <value>An error occurred. The backup was not restored!</value>
   </data>
   <data name="BU_RestSuccessful" xml:space="preserve">
-    <value>BackUp was successfully restored!</value>
+    <value>The backup was successfully restored!</value>
   </data>
   <data name="BU_UnknownType" xml:space="preserve">
     <value>Unknown file type. Can't restore it!</value>
+  </data>
+  <data name="BU_VideoCreate" xml:space="preserve">
+    <value>Create a backup of the game video settings now?</value>
+  </data>
+  <data name="BU_VideoDone" xml:space="preserve">
+    <value>A backup of the game video settings has been successfully created!</value>
+  </data>
+  <data name="BU_VideoErr" xml:space="preserve">
+    <value>An error occurred while creating a backup copy of the game video settings!</value>
   </data>
   <data name="CE_BackUpCreated" xml:space="preserve">
     <value>Backup of {0} was successfully created!</value>

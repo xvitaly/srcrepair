@@ -538,7 +538,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Create registry backup now?.
+        ///   Looks up a localized string similar to Create the registry backup now?.
         /// </summary>
         internal static string BU_RegCreate {
             get {
@@ -547,7 +547,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Registry backup was successfully created!.
+        ///   Looks up a localized string similar to The registry backup was successfully created!.
         /// </summary>
         internal static string BU_RegDone {
             get {
@@ -556,7 +556,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occured. Backup file was not created!.
+        ///   Looks up a localized string similar to An error occurred. The backup was not created!.
         /// </summary>
         internal static string BU_RegErr {
             get {
@@ -565,7 +565,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occured. BackUp was not restored!.
+        ///   Looks up a localized string similar to An error occurred. The backup was not restored!.
         /// </summary>
         internal static string BU_RestFailed {
             get {
@@ -574,7 +574,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to BackUp was successfully restored!.
+        ///   Looks up a localized string similar to The backup was successfully restored!.
         /// </summary>
         internal static string BU_RestSuccessful {
             get {
@@ -588,6 +588,33 @@ namespace srcrepair.gui {
         internal static string BU_UnknownType {
             get {
                 return ResourceManager.GetString("BU_UnknownType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Create a backup of the game video settings now?.
+        /// </summary>
+        internal static string BU_VideoCreate {
+            get {
+                return ResourceManager.GetString("BU_VideoCreate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A backup of the game video settings has been successfully created!.
+        /// </summary>
+        internal static string BU_VideoDone {
+            get {
+                return ResourceManager.GetString("BU_VideoDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while creating a backup copy of the game video settings!.
+        /// </summary>
+        internal static string BU_VideoErr {
+            get {
+                return ResourceManager.GetString("BU_VideoErr", resourceCulture);
             }
         }
         

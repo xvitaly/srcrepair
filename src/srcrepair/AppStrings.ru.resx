@@ -294,6 +294,15 @@
   <data name="BU_UnknownType" xml:space="preserve">
     <value>Отсутствуют правила для восстановления такого типа файлов!</value>
   </data>
+  <data name="BU_VideoCreate" xml:space="preserve">
+    <value>Создать резервную копию графических настроек игры?</value>
+  </data>
+  <data name="BU_VideoDone" xml:space="preserve">
+    <value>Резервная копия графических настроек игры была успешно создана!</value>
+  </data>
+  <data name="BU_VideoErr" xml:space="preserve">
+    <value>Произошла ошибка при создании резервной копии графических настроек игры!</value>
+  </data>
   <data name="CE_BackUpCreated" xml:space="preserve">
     <value>Резервная копия файла {0} была успешено создана!</value>
   </data>
