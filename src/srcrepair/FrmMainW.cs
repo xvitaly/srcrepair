@@ -2623,7 +2623,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    Type1Video.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve"), "Steam_BackUp", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
+                    App.Platform.BackUpRegistrySettings(App.SourceGames[AppSelector.Text].FullBackUpDirPath);
                     MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UpdateBackUpList();
                 }
