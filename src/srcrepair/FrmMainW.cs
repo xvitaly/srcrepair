@@ -704,7 +704,6 @@ namespace srcrepair.gui
                 PS_CleanRegistry.Enabled = false;
                 PS_ServiceRepair.Enabled = false;
                 BUT_L_AllSteam.Enabled = false;
-                BUT_L_AllSRC.Enabled = false;
             }
         }
 
@@ -2630,29 +2629,6 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExBkAllStm);
-                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-        }
-
-        /// <summary>
-        /// "Create all Source games setting backup" toolbar button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void BUT_L_AllSRC_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(AppStrings.BU_RegCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                try
-                {
-                    Type1Video.CreateRegBackUpNow(Path.Combine("HKEY_CURRENT_USER", "Software", "Valve", "Source"), "Source_Options", App.SourceGames[AppSelector.Text].FullBackUpDirPath);
-                    MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    UpdateBackUpList();
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Error(Ex, DebugStrings.AppDbgExBkAllGames);
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }

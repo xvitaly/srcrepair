@@ -126,9 +126,6 @@
   <data name="AppDbgExBgWChk" xml:space="preserve">
     <value>Exception while checking for updates during application startup.</value>
   </data>
-  <data name="AppDbgExBkAllGames" xml:space="preserve">
-    <value>Exception while trying to backup the graphical settings of all games.</value>
-  </data>
   <data name="AppDbgExBkAllStm" xml:space="preserve">
     <value>Exception while trying to backup all Steam settings stored in the registry.</value>
   </data>

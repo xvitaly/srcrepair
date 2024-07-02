@@ -192,7 +192,6 @@
             this.BUT_CrBkupReg = new System.Windows.Forms.ToolStripSplitButton();
             this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
-            this.BUT_L_AllSRC = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowEdHint = new System.Windows.Forms.ToolStripMenuItem();
@@ -1621,8 +1620,7 @@
             this.BUT_CrBkupReg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.BUT_CrBkupReg.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BUT_L_GameSettings,
-            this.BUT_L_AllSteam,
-            this.BUT_L_AllSRC});
+            this.BUT_L_AllSteam});
             this.BUT_CrBkupReg.Image = global::srcrepair.gui.Properties.Resources.IconAdd;
             resources.ApplyResources(this.BUT_CrBkupReg, "BUT_CrBkupReg");
             this.BUT_CrBkupReg.Name = "BUT_CrBkupReg";
@@ -1641,13 +1639,6 @@
             this.BUT_L_AllSteam.Name = "BUT_L_AllSteam";
             resources.ApplyResources(this.BUT_L_AllSteam, "BUT_L_AllSteam");
             this.BUT_L_AllSteam.Click += new System.EventHandler(this.BUT_L_AllSteam_Click);
-            // 
-            // BUT_L_AllSRC
-            // 
-            this.BUT_L_AllSRC.Image = global::srcrepair.gui.Properties.Resources.IconAdd;
-            this.BUT_L_AllSRC.Name = "BUT_L_AllSRC";
-            resources.ApplyResources(this.BUT_L_AllSRC, "BUT_L_AllSRC");
-            this.BUT_L_AllSRC.Click += new System.EventHandler(this.BUT_L_AllSRC_Click);
             // 
             // MainMenu
             // 
@@ -2042,7 +2033,6 @@
         private System.Windows.Forms.ToolStripSeparator BUT_Sep3;
         private System.Windows.Forms.ToolStripMenuItem BUT_L_GameSettings;
         private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSteam;
-        private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSRC;
         private System.Windows.Forms.FolderBrowserDialog FldrBrwse;
         private System.Windows.Forms.ToolStripSeparator CE_ToolSep1;
         private System.Windows.Forms.ToolStripButton CE_RmRow;

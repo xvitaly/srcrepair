@@ -125,7 +125,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAACC
-        DwAAAk1TRnQBSQFMAgEBBgEAAcQBBQHEAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        DwAAAk1TRnQBSQFMAgEBBgEAAeABBQHgAQUBEAEAARABAAT/AQkBAAj/AUIBTQE2AQQGAAE2AQQCAAEo
         AwABQAMAASADAAEBAQABCAYAAQgYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
         AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
         AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
@@ -4242,22 +4242,16 @@
     <value>6, 25</value>
   </data>
   <data name="BUT_L_GameSettings.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 22</value>
+    <value>236, 22</value>
   </data>
   <data name="BUT_L_GameSettings.Text" xml:space="preserve">
-    <value>BackUp game settings</value>
+    <value>BackUp game video settings</value>
   </data>
   <data name="BUT_L_AllSteam.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 22</value>
+    <value>236, 22</value>
   </data>
   <data name="BUT_L_AllSteam.Text" xml:space="preserve">
-    <value>BackUp all Steam settings</value>
-  </data>
-  <data name="BUT_L_AllSRC.Size" type="System.Drawing.Size, System.Drawing">
-    <value>250, 22</value>
-  </data>
-  <data name="BUT_L_AllSRC.Text" xml:space="preserve">
-    <value>BackUp all Source games settings</value>
+    <value>BackUp Steam registry settings</value>
   </data>
   <data name="BUT_CrBkupReg.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -5472,12 +5466,6 @@
     <value>BUT_L_AllSteam</value>
   </data>
   <data name="&gt;&gt;BUT_L_AllSteam.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;BUT_L_AllSRC.Name" xml:space="preserve">
-    <value>BUT_L_AllSRC</value>
-  </data>
-  <data name="&gt;&gt;BUT_L_AllSRC.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolsMNU.Name" xml:space="preserve">

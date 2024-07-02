@@ -88,15 +88,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to backup the graphical settings of all games..
-        /// </summary>
-        internal static string AppDbgExBkAllGames {
-            get {
-                return ResourceManager.GetString("AppDbgExBkAllGames", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to backup all Steam settings stored in the registry..
         /// </summary>
         internal static string AppDbgExBkAllStm {
