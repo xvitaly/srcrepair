@@ -119,6 +119,15 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Restore settings stored in the registry file.
+        /// </summary>
+        /// <param name="FileName">Full path to the registry file.</param>
+        public override void RestoreRegistrySettings(string FileName)
+        {
+            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegImportCmdLine, FileName));
+        }
+
+        /// <summary>
         /// Start automatic service repair depending on the running platform.
         /// </summary>
         /// <param name="FullBinPath">Full path to the Steam binaries directory.</param>

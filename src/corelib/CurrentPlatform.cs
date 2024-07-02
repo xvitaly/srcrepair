@@ -230,6 +230,15 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Restore settings stored in the registry file.
+        /// </summary>
+        /// <param name="FileName">Full path to the registry file.</param>
+        public virtual void RestoreRegistrySettings(string FileName)
+        {
+            throw new PlatformNotSupportedException(DebugStrings.AppDbgCoreRegNotSupported);
+        }
+
+        /// <summary>
         /// Start automatic service repair depending on the running platform.
         /// </summary>
         /// <param name="FullBinPath">Full path to the Steam binaries directory.</param>

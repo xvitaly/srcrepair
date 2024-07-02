@@ -2507,7 +2507,7 @@ namespace srcrepair.gui
                                 case ".reg": // Registry file...
                                     try
                                     {
-                                        Type1Video.RestoreRegBackUpNow(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text));
+                                        App.Platform.RestoreRegistrySettings(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text));
                                     }
                                     catch (Exception Ex)
                                     {

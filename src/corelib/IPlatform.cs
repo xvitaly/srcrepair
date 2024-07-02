@@ -159,6 +159,12 @@ namespace srcrepair.core
         void CleanRegistrySettings(string LangName);
 
         /// <summary>
+        /// Restore settings stored in the registry file.
+        /// </summary>
+        /// <param name="FileName">Full path to the registry file.</param>
+        void RestoreRegistrySettings(string FileName);
+
+        /// <summary>
         /// Start automatic service repair depending on the running platform.
         /// </summary>
         /// <param name="FullBinPath">Full path to the Steam binaries directory.</param>
