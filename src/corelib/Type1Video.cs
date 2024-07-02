@@ -755,26 +755,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Restores a specified registry backup.
-        /// </summary>
-        /// <param name="FileName">Full path to the backup file.</param>
-        public static void RestoreRegBackUpNow(string FileName)
-        {
-            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegImportCmdLine, FileName));
-        }
-
-        /// <summary>
-        /// Creates a backup copy of specified registry key.
-        /// </summary>
-        /// <param name="RegKey">Registry key.</param>
-        /// <param name="FileName">Backup file name.</param>
-        /// <param name="DestDir">Directory for saving backups.</param>
-        public static void CreateRegBackUpNow(string RegKey, string FileName, string DestDir)
-        {
-            ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, RegKey, Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, FileName, FileManager.DateTime2Unix(DateTime.Now)))));
-        }
-
-        /// <summary>
         /// Type1Video class constructor.
         /// </summary>
         /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
