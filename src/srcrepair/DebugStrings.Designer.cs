@@ -79,6 +79,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to restore a backup file..
+        /// </summary>
+        internal static string AppDbgExBackUpRestore {
+            get {
+                return ResourceManager.GetString("AppDbgExBackUpRestore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while checking for updates during application startup..
         /// </summary>
         internal static string AppDbgExBgWChk {
@@ -705,15 +714,6 @@ namespace srcrepair.gui {
         internal static string AppDbgExPluginsInit {
             get {
                 return ResourceManager.GetString("AppDbgExPluginsInit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception on trying to launch the registry editor to restore the saved registry file..
-        /// </summary>
-        internal static string AppDbgExRegedit {
-            get {
-                return ResourceManager.GetString("AppDbgExRegedit", resourceCulture);
             }
         }
         

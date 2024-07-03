@@ -619,6 +619,37 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Restores a backup file depending on its extension.
+        /// </summary>
+        /// <returns>Result of the restore.</returns>
+        private bool RestoreBackUpFile(string FileName)
+        {
+            try
+            {
+                switch (Path.GetExtension(FileName))
+                {
+                    case ".reg": // Registry file...
+                        App.Platform.RestoreRegistrySettings(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, FileName));
+                        break;
+                    case ".bud": // Standard archive...
+                        GuiHelpers.FormShowArchiveExtract(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, FileName), Path.GetPathRoot(App.SourceGames[AppSelector.Text].FullGamePath));
+                        HandleConfigs();
+                        break;
+                    default: // Unknown type...
+                        MessageBox.Show(AppStrings.BU_UnknownType, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExBackUpRestore);
+                MessageBox.Show(AppStrings.BU_RestFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        /// <summary>
         /// Creates instances of CurrentApp and SteamManager classes.
         /// </summary>
         private void InitializeApp()
@@ -2500,29 +2531,13 @@ namespace srcrepair.gui
                 {
                     if (MessageBox.Show(AppStrings.BU_QMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
+                        bool RestoreStatus = true;
                         foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
                         {
-                            switch (Path.GetExtension(BU_Item.SubItems[4].Text))
-                            {
-                                case ".reg": // Registry file...
-                                    try
-                                    {
-                                        App.Platform.RestoreRegistrySettings(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text));
-                                    }
-                                    catch (Exception Ex)
-                                    {
-                                        Logger.Error(Ex, DebugStrings.AppDbgExRegedit);
-                                        MessageBox.Show(AppStrings.BU_RestFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    }
-                                    break;
-                                case ".bud": // Standard archive...
-                                    GuiHelpers.FormShowArchiveExtract(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text), Path.GetPathRoot(App.SourceGames[AppSelector.Text].FullGamePath));
-                                    HandleConfigs();
-                                    break;
-                                default: // Unknown type...
-                                    MessageBox.Show(AppStrings.BU_UnknownType, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                    break;
-                            }
+                            RestoreStatus &= RestoreBackUpFile(BU_Item.SubItems[4].Text);
+                        }
+                        if (RestoreStatus)
+                        {
                             MessageBox.Show(AppStrings.BU_RestSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }

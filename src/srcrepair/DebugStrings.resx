@@ -123,6 +123,9 @@
   <data name="AppDbgExBackupRem" xml:space="preserve">
     <value>Exception while trying to remove selected backups.</value>
   </data>
+  <data name="AppDbgExBackUpRestore" xml:space="preserve">
+    <value>Exception while trying to restore a backup file.</value>
+  </data>
   <data name="AppDbgExBgWChk" xml:space="preserve">
     <value>Exception while checking for updates during application startup.</value>
   </data>
@@ -332,9 +335,6 @@
   </data>
   <data name="AppDbgExPluginsInit" xml:space="preserve">
     <value>Exception while trying to create an instance of the PluginManager class.</value>
-  </data>
-  <data name="AppDbgExRegedit" xml:space="preserve">
-    <value>Exception on trying to launch the registry editor to restore the saved registry file.</value>
   </data>
   <data name="AppDbgExRemVd" xml:space="preserve">
     <value>Exception while trying to remove the game settings.</value>
