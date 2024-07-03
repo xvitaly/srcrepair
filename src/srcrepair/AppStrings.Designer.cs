@@ -574,7 +574,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The backup was successfully restored!.
+        ///   Looks up a localized string similar to The selected backups were successfully restored!.
         /// </summary>
         internal static string BU_RestSuccessful {
             get {

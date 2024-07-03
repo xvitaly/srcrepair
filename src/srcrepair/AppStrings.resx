@@ -289,7 +289,7 @@
     <value>An error occurred. The backup was not restored!</value>
   </data>
   <data name="BU_RestSuccessful" xml:space="preserve">
-    <value>The backup was successfully restored!</value>
+    <value>The selected backups were successfully restored!</value>
   </data>
   <data name="BU_UnknownType" xml:space="preserve">
     <value>Unknown file type. Can't restore it!</value>

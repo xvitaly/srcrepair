@@ -289,7 +289,7 @@
     <value>Произошла ошибка при попытке восстановить резервную копию. Файл не был восстановлен!</value>
   </data>
   <data name="BU_RestSuccessful" xml:space="preserve">
-    <value>Резервная копия была успешно восстановлена!</value>
+    <value>Выбранные резервные копии были успешно восстановлены!</value>
   </data>
   <data name="BU_UnknownType" xml:space="preserve">
     <value>Отсутствуют правила для восстановления такого типа файлов!</value>
