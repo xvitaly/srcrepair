@@ -650,6 +650,24 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Restores selected backup files.
+        /// </summary>
+        private void RestoreSelectedBackUps()
+        {
+            bool RestoreStatus = true;
+
+            foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
+            {
+                RestoreStatus &= RestoreBackUpFile(BU_Item.SubItems[4].Text);
+            }
+
+            if (RestoreStatus)
+            {
+                MessageBox.Show(AppStrings.BU_RestSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        /// <summary>
         /// Creates instances of CurrentApp and SteamManager classes.
         /// </summary>
         private void InitializeApp()
@@ -2531,15 +2549,7 @@ namespace srcrepair.gui
                 {
                     if (MessageBox.Show(AppStrings.BU_QMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
                     {
-                        bool RestoreStatus = true;
-                        foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
-                        {
-                            RestoreStatus &= RestoreBackUpFile(BU_Item.SubItems[4].Text);
-                        }
-                        if (RestoreStatus)
-                        {
-                            MessageBox.Show(AppStrings.BU_RestSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        RestoreSelectedBackUps();
                     }
                 }
                 else
