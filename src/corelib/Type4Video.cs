@@ -138,7 +138,10 @@ namespace srcrepair.core
         /// </summary>
         public override void RemoveSettings()
         {
-            throw new NotImplementedException();
+            if (File.Exists(VideoFileName))
+            {
+                File.Delete(VideoFileName);
+            }
         }
 
         /// <summary>
