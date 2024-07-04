@@ -692,12 +692,9 @@ namespace srcrepair.core
         public override void RemoveSettings()
         {
             List<string> VideoCfgFiles = new List<string> { VideoFileName, DefaultsFileName };
-            foreach (string VideoCfg in VideoCfgFiles)
+            foreach (string VideoCfg in VideoCfgFiles.Where(e => File.Exists(e)))
             {
-                if (File.Exists(VideoCfg))
-                {
-                    File.Delete(VideoCfg);
-                }
+                File.Delete(VideoCfg);
             }
         }
 
