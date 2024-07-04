@@ -700,7 +700,14 @@ namespace srcrepair.core
         /// </summary>
         public override void RemoveSettings()
         {
-            throw new NotImplementedException();
+            List<string> VideoCfgFiles = new List<string> { VideoFileName, DefaultsFileName };
+            foreach (string VideoCfg in VideoCfgFiles)
+            {
+                if (File.Exists(VideoCfg))
+                {
+                    File.Delete(VideoCfg);
+                }
+            }
         }
 
         /// <summary>
