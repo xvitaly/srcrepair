@@ -50,12 +50,6 @@ namespace srcrepair.core
         void BackUpSettings(string DestDir, bool IsManual);
 
         /// <summary>
-        /// Restores a backup copy of the game video settings.
-        /// </summary>
-        /// <param name="FileName">Full path to the backup file.</param>
-        void RestoreSettings(string FileName);
-
-        /// <summary>
         /// Removes game video settings.
         /// </summary>
         void RemoveSettings();
