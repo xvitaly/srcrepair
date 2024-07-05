@@ -22,19 +22,19 @@ namespace srcrepair.core
         private readonly Type4Settings VSettings;
 
         /// <summary>
-        /// Stores brightness value: ShadowDepthTexture.
-        /// </summary>
-        protected int _ShadowDepth;
-
-        /// <summary>
         /// Stores full path to video settings file.
         /// </summary>
-        protected string VideoFileName;
+        protected readonly string VideoFileName;
 
         /// <summary>
         /// Stores contents of video settings file.
         /// </summary>
         protected List<string> VideoFile;
+
+        /// <summary>
+        /// Stores brightness value: ShadowDepthTexture.
+        /// </summary>
+        protected int _ShadowDepth;
 
         /// <summary>
         /// Gets or sets shadow effects quality video setting.
