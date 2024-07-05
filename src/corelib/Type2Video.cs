@@ -25,13 +25,13 @@ namespace srcrepair.core
         /// <summary>
         /// Stores full path to video settings file.
         /// </summary>
-        protected string VideoFileName;
+        protected readonly string VideoFileName;
 
         /// <summary>
         /// Stores full path to video settings file with default
         /// options for this system.
         /// </summary>
-        protected string DefaultsFileName;
+        protected readonly string DefaultsFileName;
 
         /// <summary>
         /// Stores contents of video settings file.
