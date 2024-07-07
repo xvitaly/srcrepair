@@ -49,6 +49,11 @@ namespace srcrepair.core
         public string FullDumpsPath { get; private set; }
 
         /// <summary>
+        /// Gets or sets full path to Steam packages directory.
+        /// </summary>
+        public string FullPackagesPath { get; private set; }
+
+        /// <summary>
         /// Gets or sets full path to Steam logs directory.
         /// </summary>
         public string FullLogsPath { get; private set; }
@@ -231,6 +236,7 @@ namespace srcrepair.core
             FullBinPath = Path.Combine(FullSteamPath, "bin");
             FullConfigsPath = Path.Combine(FullSteamPath, "config");
             FullDumpsPath = Path.Combine(FullSteamPath, "dumps");
+            FullPackagesPath = Path.Combine(FullSteamPath, "package");
             FullLogsPath = Path.Combine(FullSteamPath, "logs");
             FullUserDataPath = Path.Combine(FullSteamPath, "userdata");
             SteamConfigFile = Path.Combine(FullConfigsPath, "config.vdf");
