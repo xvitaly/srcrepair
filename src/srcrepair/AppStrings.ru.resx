@@ -504,11 +504,11 @@
   <data name="PS_BwBusy" xml:space="preserve">
     <value>Цели для очистки ещё не были построены! Пожалуйста повторите попытку через 10 секунд.</value>
   </data>
-  <data name="PS_CleanBlobsException" xml:space="preserve">
-    <value>Произошла ошибка во время работы процедуры очистки blob-файлов! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
-  </data>
   <data name="PS_CleanInProgress" xml:space="preserve">
     <value>Выполняется...</value>
+  </data>
+  <data name="PS_CleanPackagesException" xml:space="preserve">
+    <value>Произошла ошибка во время работы процедуры очистки кэша загруженных пакетов! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
   <data name="PS_CleanRegistryException" xml:space="preserve">
     <value>Произошла ошибка во время удаления записей, хранящихся в реестре! Возможно, у вас отсутствуют необходимые права для этого действия.</value>

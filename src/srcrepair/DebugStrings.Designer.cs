@@ -250,15 +250,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while cleaning up Steam blob files..
-        /// </summary>
-        internal static string AppDbgExClnBlobs {
-            get {
-                return ResourceManager.GetString("AppDbgExClnBlobs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while cleaning up empty directories..
         /// </summary>
         internal static string AppDbgExClnEmptyDirs {
@@ -282,6 +273,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExClnOldUpdates {
             get {
                 return ResourceManager.GetString("AppDbgExClnOldUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while cleaning up Steam package cache..
+        /// </summary>
+        internal static string AppDbgExClnPackages {
+            get {
+                return ResourceManager.GetString("AppDbgExClnPackages", resourceCulture);
             }
         }
         

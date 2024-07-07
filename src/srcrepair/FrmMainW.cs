@@ -835,7 +835,7 @@ namespace srcrepair.gui
         /// <returns>Returns True if at least one repair procedure is selected.</returns>
         private bool GetRepairSelState()
         {
-            return PS_CleanBlobs.Checked || PS_CleanRegistry.Checked || PS_ServiceRepair.Checked;
+            return PS_CleanPackages.Checked || PS_CleanRegistry.Checked || PS_ServiceRepair.Checked;
         }
 
         /// <summary>
@@ -1052,21 +1052,21 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Performs deletion of blob files, if selected.
+        /// Performs deletion of package cache, if selected.
         /// </summary>
         /// <returns>Returns True if the process completed without errors.</returns>
-        private bool HandleCleanBlobs()
+        private bool HandleCleanPackages()
         {
-            if (PS_CleanBlobs.Checked)
+            if (PS_CleanPackages.Checked)
             {
                 try
                 {
-                    App.SteamClient.CleanBlobsNow();
+                    App.SteamClient.CleanPackagesNow();
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Error(Ex, DebugStrings.AppDbgExClnBlobs);
-                    MessageBox.Show(AppStrings.PS_CleanBlobsException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Logger.Error(Ex, DebugStrings.AppDbgExClnPackages);
+                    MessageBox.Show(AppStrings.PS_CleanPackagesException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
@@ -1869,11 +1869,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Clean blobs" checkbox status changed event handler.
+        /// "Clean packages" checkbox status changed event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void PS_CleanBlobs_CheckedChanged(object sender, EventArgs e)
+        private void PS_CleanPackages_CheckedChanged(object sender, EventArgs e)
         {
             PS_ExecuteNow.Enabled = GetRepairSelState();
         }
@@ -1910,7 +1910,7 @@ namespace srcrepair.gui
                 if (!HandleShutdownClient()) { return; }
 
                 bool CleanStatus = true;
-                CleanStatus &= HandleCleanBlobs();
+                CleanStatus &= HandleCleanPackages();
                 CleanStatus &= HandleCleanRegistry();
                 CleanStatus &= HandleServiceRepair();
 

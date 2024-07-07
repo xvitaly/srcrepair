@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainW));
-            this.TabIcons = new System.Windows.Forms.ImageList(this.components);
+            this.TabIcons = new System.Windows.Forms.ImageList();
             this.MainTabControl = new System.Windows.Forms.TabControl();
             this.GraphicTweaker = new System.Windows.Forms.TabPage();
             this.GT_LaunchOptions = new System.Windows.Forms.TextBox();
@@ -148,7 +147,7 @@
             this.PS_ServiceRepair = new System.Windows.Forms.CheckBox();
             this.PS_ExecuteNow = new System.Windows.Forms.Button();
             this.PS_CleanRegistry = new System.Windows.Forms.CheckBox();
-            this.PS_CleanBlobs = new System.Windows.Forms.CheckBox();
+            this.PS_CleanPackages = new System.Windows.Forms.CheckBox();
             this.FPSCfgInstall = new System.Windows.Forms.TabPage();
             this.FPS_Panel = new System.Windows.Forms.Panel();
             this.FP_OpenNotepad = new System.Windows.Forms.Button();
@@ -1286,7 +1285,7 @@
             this.PS_GB_Solver.Controls.Add(this.PS_ServiceRepair);
             this.PS_GB_Solver.Controls.Add(this.PS_ExecuteNow);
             this.PS_GB_Solver.Controls.Add(this.PS_CleanRegistry);
-            this.PS_GB_Solver.Controls.Add(this.PS_CleanBlobs);
+            this.PS_GB_Solver.Controls.Add(this.PS_CleanPackages);
             resources.ApplyResources(this.PS_GB_Solver, "PS_GB_Solver");
             this.PS_GB_Solver.Name = "PS_GB_Solver";
             this.PS_GB_Solver.TabStop = false;
@@ -1312,12 +1311,12 @@
             this.PS_CleanRegistry.UseVisualStyleBackColor = true;
             this.PS_CleanRegistry.CheckedChanged += new System.EventHandler(this.PS_CleanRegistry_CheckedChanged);
             // 
-            // PS_CleanBlobs
+            // PS_CleanPackages
             // 
-            resources.ApplyResources(this.PS_CleanBlobs, "PS_CleanBlobs");
-            this.PS_CleanBlobs.Name = "PS_CleanBlobs";
-            this.PS_CleanBlobs.UseVisualStyleBackColor = true;
-            this.PS_CleanBlobs.CheckedChanged += new System.EventHandler(this.PS_CleanBlobs_CheckedChanged);
+            resources.ApplyResources(this.PS_CleanPackages, "PS_CleanPackages");
+            this.PS_CleanPackages.Name = "PS_CleanPackages";
+            this.PS_CleanPackages.UseVisualStyleBackColor = true;
+            this.PS_CleanPackages.CheckedChanged += new System.EventHandler(this.PS_CleanPackages_CheckedChanged);
             // 
             // FPSCfgInstall
             // 
@@ -1991,7 +1990,7 @@
         private System.Windows.Forms.GroupBox PS_GB_Solver;
         private System.Windows.Forms.Button PS_ExecuteNow;
         private System.Windows.Forms.CheckBox PS_CleanRegistry;
-        private System.Windows.Forms.CheckBox PS_CleanBlobs;
+        private System.Windows.Forms.CheckBox PS_CleanPackages;
         private System.Windows.Forms.Label PS_PathSteam;
         private System.Windows.Forms.Label PS_OSDrive;
         private System.Windows.Forms.Button PS_CheckCache;

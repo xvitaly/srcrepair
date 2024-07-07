@@ -1222,20 +1222,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred during the blobs removal! Perhaps you have not enough rights for doing this..
-        /// </summary>
-        internal static string PS_CleanBlobsException {
-            get {
-                return ResourceManager.GetString("PS_CleanBlobsException", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cleaning up....
         /// </summary>
         internal static string PS_CleanInProgress {
             get {
                 return ResourceManager.GetString("PS_CleanInProgress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred during the package cache removal! Perhaps you have not enough rights for doing this..
+        /// </summary>
+        internal static string PS_CleanPackagesException {
+            get {
+                return ResourceManager.GetString("PS_CleanPackagesException", resourceCulture);
             }
         }
         

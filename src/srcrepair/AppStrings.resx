@@ -504,11 +504,11 @@
   <data name="PS_BwBusy" xml:space="preserve">
     <value>Cleanup targets are not yet available! Please try again in 10 seconds.</value>
   </data>
-  <data name="PS_CleanBlobsException" xml:space="preserve">
-    <value>An error occurred during the blobs removal! Perhaps you have not enough rights for doing this.</value>
-  </data>
   <data name="PS_CleanInProgress" xml:space="preserve">
     <value>Cleaning up...</value>
+  </data>
+  <data name="PS_CleanPackagesException" xml:space="preserve">
+    <value>An error occurred during the package cache removal! Perhaps you have not enough rights for doing this.</value>
   </data>
   <data name="PS_CleanRegistryException" xml:space="preserve">
     <value>An error occurred during the registry entries removal! Perhaps you have not enough rights for doing this.</value>

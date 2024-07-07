@@ -180,9 +180,6 @@
   <data name="AppDbgExCfgSelection" xml:space="preserve">
     <value>Exception during FPS config selection (click on warning icon).</value>
   </data>
-  <data name="AppDbgExClnBlobs" xml:space="preserve">
-    <value>Exception while cleaning up Steam blob files.</value>
-  </data>
   <data name="AppDbgExClnEmptyDirs" xml:space="preserve">
     <value>Exception while cleaning up empty directories.</value>
   </data>
@@ -191,6 +188,9 @@
   </data>
   <data name="AppDbgExClnOldUpdates" xml:space="preserve">
     <value>Exception while trying to find and remove the old application updates.</value>
+  </data>
+  <data name="AppDbgExClnPackages" xml:space="preserve">
+    <value>Exception while cleaning up Steam package cache.</value>
   </data>
   <data name="AppDbgExClnQueueRun" xml:space="preserve">
     <value>Exception while removing files from the queue.</value>

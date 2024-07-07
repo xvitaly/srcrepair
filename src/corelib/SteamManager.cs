@@ -143,20 +143,16 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Removes Steam blob files (*.blob).
+        /// Removes downloaded Steam package cache. Once removed, they will be redownloaded
+        /// and the client will be reinstalled automatically, which will resolve many issues
+        /// with broken or missing files.
         /// </summary>
-        public void CleanBlobsNow()
+        public void CleanPackagesNow()
         {
-            string FileName = Path.Combine(FullSteamPath, "AppUpdateStats.blob");
-            if (File.Exists(FileName))
+            List<string> Packages = FileManager.FindFiles(FullPackagesPath, "*.*");
+            foreach (string Package in Packages.Where(e => File.Exists(e)))
             {
-                File.Delete(FileName);
-            }
-
-            FileName = Path.Combine(FullSteamPath, "ClientRegistry.blob");
-            if (File.Exists(FileName))
-            {
-                File.Delete(FileName);
+                File.Delete(Package);
             }
         }
 
