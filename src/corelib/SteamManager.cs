@@ -150,10 +150,7 @@ namespace srcrepair.core
         public void CleanPackagesNow()
         {
             List<string> Packages = FileManager.FindFiles(FullPackagesPath, "*.*");
-            foreach (string Package in Packages.Where(e => File.Exists(e)))
-            {
-                File.Delete(Package);
-            }
+            FileManager.RemoveFiles(Packages);
         }
 
         /// <summary>
