@@ -215,6 +215,18 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Removes all existing files from the list.
+        /// </summary>
+        /// <param name="FileNames">The list of files for deletion.</param>
+        public static void RemoveFiles(List<string> FileNames)
+        {
+            foreach (string FileName in FileNames.Where(e => File.Exists(e)))
+            {
+                File.Delete(FileName);
+            }
+        }
+
+        /// <summary>
         /// Finds files by specified mask in specified directory.
         /// Recursion can be explicitly enabled or disabled.
         /// </summary>
