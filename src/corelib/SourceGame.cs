@@ -182,7 +182,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="Mask">File mask (pattern).</param>
         /// <returns>List of all found local copies of cloud configs.</returns>
-        private List<string> GetCloudConfigs(string Mask = "*.*cfg")
+        private List<string> GetCloudConfigs(string Mask)
         {
             return FileManager.FindFiles(Path.Combine(SteamPath, "userdata", SteamID, GameInternalID), Mask);
         }
@@ -290,7 +290,7 @@ namespace srcrepair.core
                 CloudScreenshotsPath = Path.Combine(SteamDir, "userdata", SteamID, "760", "remote", GameInternalID, "screenshots");
                 if (IsUsingVideoFile) { UpdateVideoFilesList(); }
                 UpdateBanlistFilesList();
-                CloudConfigs = GetCloudConfigs();
+                CloudConfigs = GetCloudConfigs("*.*cfg");
                 Video = GetVideoSettings();
             }
         }
