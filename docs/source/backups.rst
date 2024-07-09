@@ -47,9 +47,9 @@ BUD files are standard Zip-archives containing files removed by the program, pre
 
 Registry backup file names (only on Microsoft Windows platform) are generated as follows:
 
- * ``Game_AutoBackUp_UNIXTIME.reg`` -- automatic backup of game video settings;
- * ``Game_Options_UNIXTIME.reg`` -- manual backup of game video settings;
- * ``Source_Options_UNIXTIME.reg`` -- manual backup of all Source Engine games video settings;
+ * ``Game_AutoBackUp_UNIXTIME.reg`` -- automatic backup of the game video settings;
+ * ``Game_Options_UNIXTIME.reg`` -- manual backup of the game video settings;
+ * ``Source_Options_UNIXTIME.reg`` -- manual backup of all Source Engine games video settings (obsolete; no longer available for creation, but can be restored from existing backup files);
  * ``Steam_BackUp_UNIXTIME.reg`` -- manual backup of all Steam settings, stored in the Windows registry.
 
 .. index:: backup storage
@@ -87,7 +87,7 @@ Confirm deletion. Removed files cannot be restored!
 .. index:: registry backups
 .. _backups-registry:
 
-Creating registry backups
+Creating manual backups
 ==========================================
 
-If you want to create a backup of video settings, video settings of all Source Engine games or Steam settings, stored in the Windows registry, click the **Create** button on the main toolbar and select an option from the drop-down menu. The backup file will be created and added to the list.
+If you want to create a backup of the game video settings or Steam settings, stored in the Windows registry, click the **Create** button on the main toolbar and select an option from the drop-down menu. The backup file will be created and added to the list.
