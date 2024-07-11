@@ -127,6 +127,7 @@
             this.MM_Status});
             resources.ApplyResources(this.MM_StatusBar, "MM_StatusBar");
             this.MM_StatusBar.Name = "MM_StatusBar";
+            this.MM_StatusBar.SizingGrip = false;
             // 
             // MM_Status
             // 
