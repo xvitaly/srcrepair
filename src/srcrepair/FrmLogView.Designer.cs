@@ -116,6 +116,7 @@
             // 
             // LV_LogArea
             // 
+            this.LV_LogArea.BorderStyle = System.Windows.Forms.BorderStyle.None;
             resources.ApplyResources(this.LV_LogArea, "LV_LogArea");
             this.LV_LogArea.Name = "LV_LogArea";
             // 
