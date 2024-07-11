@@ -78,7 +78,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>AppStrings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="AppStrings.ru.resx" />
+    <EmbeddedResource Include="AppStrings.ru.resx">
+      <DependentUpon>AppStrings.resx</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmKBHelper.resx">
       <DependentUpon>FrmKBHelper.cs</DependentUpon>
     </EmbeddedResource>
