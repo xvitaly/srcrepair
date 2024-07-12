@@ -215,6 +215,18 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Checks if the file exists and deletes it.
+        /// </summary>
+        /// <param name="FileName">File for deletion.</param>
+        public static void RemoveFile(string FileName)
+        {
+            if (File.Exists(FileName))
+            {
+                File.Delete(FileName);
+            }
+        }
+
+        /// <summary>
         /// Removes all existing files from the list.
         /// </summary>
         /// <param name="FileNames">The list of files for deletion.</param>
