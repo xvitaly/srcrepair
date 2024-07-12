@@ -129,10 +129,7 @@ namespace srcrepair.core
         /// </summary>
         public override void RemoveSettings()
         {
-            if (File.Exists(VideoFileName))
-            {
-                File.Delete(VideoFileName);
-            }
+            FileManager.RemoveFile(VideoFileName);
         }
 
         /// <summary>
