@@ -222,6 +222,7 @@ namespace srcrepair.core
         {
             if (File.Exists(FileName))
             {
+                File.SetAttributes(FileName, FileAttributes.Normal);
                 File.Delete(FileName);
             }
         }
