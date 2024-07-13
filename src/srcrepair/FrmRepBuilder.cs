@@ -205,10 +205,7 @@ namespace srcrepair.gui
         {
             try
             {
-                if (File.Exists(RepMan.ReportArchiveName))
-                {
-                    File.Delete(RepMan.ReportArchiveName);
-                }
+                FileManager.RemoveFile(RepMan.ReportArchiveName);
             }
             catch (Exception Ex)
             {

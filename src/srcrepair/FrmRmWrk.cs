@@ -114,11 +114,7 @@ namespace srcrepair.gui
                 try
                 {
                     // Removing file if exists...
-                    if (File.Exists(Fl))
-                    {
-                        File.SetAttributes(Fl, FileAttributes.Normal);
-                        File.Delete(Fl);
-                    }
+                    FileManager.RemoveFile(Fl);
 
                     // Reporting progress to form...
                     CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;

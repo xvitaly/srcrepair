@@ -862,7 +862,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExHandleHUDScreenshot);
-                if (File.Exists(HUDScreenshotFile)) { File.Delete(HUDScreenshotFile); }
+                FileManager.RemoveFile(HUDScreenshotFile);
             }
         }
 
@@ -2190,10 +2190,7 @@ namespace srcrepair.gui
                 try
                 {
                     // Removing downloaded file...
-                    if (File.Exists(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile))
-                    {
-                        File.Delete(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
-                    }
+                    FileManager.RemoveFile(App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].LocalFile);
                 }
                 catch (Exception Ex)
                 {

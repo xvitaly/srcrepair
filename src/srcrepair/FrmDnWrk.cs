@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.IO;
 using NLog;
+using srcrepair.core;
 
 namespace srcrepair.gui
 {
@@ -107,10 +108,7 @@ namespace srcrepair.gui
         /// </summary>
         private void DownloaderCheckLocalFile()
         {
-            if (File.Exists(LocalFile))
-            {
-                File.Delete(LocalFile);
-            }
+            FileManager.RemoveFile(LocalFile);
         }
 
         /// <summary>
