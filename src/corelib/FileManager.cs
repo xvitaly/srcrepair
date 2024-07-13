@@ -235,6 +235,7 @@ namespace srcrepair.core
         {
             foreach (string FileName in FileNames.Where(e => File.Exists(e)))
             {
+                File.SetAttributes(FileName, FileAttributes.Normal);
                 File.Delete(FileName);
             }
         }
