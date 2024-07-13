@@ -167,7 +167,7 @@ namespace srcrepair.core
             }
             catch
             {
-                if (File.Exists(ArchiveName)) { File.Delete(ArchiveName); }
+                RemoveFile(ArchiveName);
                 return false;
             }
             return File.Exists(ArchiveName);
