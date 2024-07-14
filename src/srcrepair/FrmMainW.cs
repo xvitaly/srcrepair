@@ -893,7 +893,7 @@ namespace srcrepair.gui
         {
             try
             {
-                string CHMFile = Path.Combine(App.FullAppPath, "help", string.Format(Properties.Resources.AppHelpFileName, AppStrings.AppLangPrefix));
+                string CHMFile = Path.Combine(App.FullAppPath, Properties.Resources.AppHelpDirectory, string.Format(Properties.Resources.AppHelpFileName, AppStrings.AppLangPrefix));
                 if (File.Exists(CHMFile))
                 {
                     Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, PageName);
