@@ -131,6 +131,7 @@
             this.MainMenuStrip = this.LV_Menu;
             this.MaximizeBox = false;
             this.Name = "FrmLogView";
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.FrmLogView_Load);
             this.LV_StatusBar.ResumeLayout(false);
             this.LV_StatusBar.PerformLayout();
