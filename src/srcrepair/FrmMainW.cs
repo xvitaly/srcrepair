@@ -886,6 +886,31 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Show offline help with specified page name to display.
+        /// </summary>
+        /// <param name="PageName">Page name to display.</param>
+        private void HandleShowHelp(string PageName)
+        {
+            try
+            {
+                string CHMFile = Path.Combine(App.FullAppPath, "help", string.Format(Properties.Resources.AppHelpFileName, AppStrings.AppLangPrefix));
+                if (File.Exists(CHMFile))
+                {
+                    Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, PageName);
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.AppHelpCHMNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExHlpShow);
+                MessageBox.Show(AppStrings.AppHelpCHMPageError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
         /// Changes the state of some controls on "HUD Manager" page.
         /// </summary>
         /// <param name="State">If selected HUD installed.</param>
@@ -2707,24 +2732,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUHelp_Click(object sender, EventArgs e)
         {
-            string CHMFile = Path.Combine(App.FullAppPath, "help", string.Format(Properties.Resources.AppHelpFileName, AppStrings.AppLangPrefix));
-
-            if (File.Exists(CHMFile))
-            {
-                try
-                {
-                    Help.ShowHelp(this, CHMFile, HelpNavigator.Topic, GetHelpWebPage());
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExHlpShow);
-                    MessageBox.Show(AppStrings.AppHelpCHMPageError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.AppHelpCHMNotFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            HandleShowHelp(GetHelpWebPage());
         }
 
         /// <summary>
