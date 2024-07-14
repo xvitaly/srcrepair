@@ -106,7 +106,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The offline help system file is not found. Please reinstall application!.
+        ///   Looks up a localized string similar to The offline help system file is not installed, or is not supported by the selected program language!.
         /// </summary>
         internal static string AppHelpCHMNotFound {
             get {

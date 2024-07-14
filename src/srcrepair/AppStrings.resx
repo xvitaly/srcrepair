@@ -133,7 +133,7 @@
     <value>Fatal error occurred! The application will be terminated.</value>
   </data>
   <data name="AppHelpCHMNotFound" xml:space="preserve">
-    <value>The offline help system file is not found. Please reinstall application!</value>
+    <value>The offline help system file is not installed, or is not supported by the selected program language!</value>
   </data>
   <data name="AppHelpCHMPageError" xml:space="preserve">
     <value>The required page could not be found in the offline help system file!</value>
