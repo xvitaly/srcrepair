@@ -59,10 +59,11 @@
             this.Controls.Add(this.GenerateNow);
             this.Controls.Add(this.WelcomeLabel);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmRepBuilder";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmRepBuilder_FormClosing);
             this.ResumeLayout(false);

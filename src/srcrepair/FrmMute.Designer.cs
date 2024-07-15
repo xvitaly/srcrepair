@@ -330,6 +330,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMute";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.FrmMute_Load);
             this.MM_Menu.ResumeLayout(false);

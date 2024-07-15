@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCfgSelector));
             this.CS_Cancel = new System.Windows.Forms.Button();
             this.CS_OK = new System.Windows.Forms.Button();
             this.CS_CfgSel = new System.Windows.Forms.ComboBox();
             this.CS_WMsg = new System.Windows.Forms.Label();
-            this.CS_ToolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.CS_ToolTip = new System.Windows.Forms.ToolTip();
             this.SuspendLayout();
             // 
             // CS_Cancel
@@ -80,6 +79,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCfgSelector";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.FrmCfgSelector_Load);
             this.ResumeLayout(false);

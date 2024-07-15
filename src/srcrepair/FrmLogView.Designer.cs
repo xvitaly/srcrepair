@@ -130,7 +130,9 @@
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.LV_Menu;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmLogView";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.FrmLogView_Load);
             this.LV_StatusBar.ResumeLayout(false);

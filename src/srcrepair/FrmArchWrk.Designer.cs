@@ -51,10 +51,11 @@
             this.Controls.Add(this.AR_PrgBr);
             this.Controls.Add(this.AR_WlcMsg);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmArchWrk";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmArchWrk_FormClosing);
             this.Load += new System.EventHandler(this.FrmArchWrk_Load);

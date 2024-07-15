@@ -242,6 +242,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmStmClean";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.EC_Panel.ResumeLayout(false);
             this.EC_GB_Basic.ResumeLayout(false);

@@ -51,10 +51,11 @@
             this.Controls.Add(this.RW_PrgBr);
             this.Controls.Add(this.RW_WlcMsg);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmRmWrk";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmRmWrk_FormClosing);
             this.Load += new System.EventHandler(this.FrmRmWrk_Load);
