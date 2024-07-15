@@ -22,6 +22,7 @@ SRC Repair offline help
    settings.rst
    faq.rst
    legal.rst
+   privacy.rst
    development.rst
 
 
