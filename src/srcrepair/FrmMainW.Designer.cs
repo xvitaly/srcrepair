@@ -261,12 +261,12 @@
             // 
             this.TabIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("TabIcons.ImageStream")));
             this.TabIcons.TransparentColor = System.Drawing.Color.Transparent;
-            this.TabIcons.Images.SetKeyName(0, "Graphics.png");
-            this.TabIcons.Images.SetKeyName(1, "TextEditor.png");
-            this.TabIcons.Images.SetKeyName(2, "Screwdriver.png");
-            this.TabIcons.Images.SetKeyName(3, "Config.png");
-            this.TabIcons.Images.SetKeyName(4, "BackUp.png");
-            this.TabIcons.Images.SetKeyName(5, "Interface.png");
+            this.TabIcons.Images.SetKeyName(0, "graphics.png");
+            this.TabIcons.Images.SetKeyName(1, "texteditor.png");
+            this.TabIcons.Images.SetKeyName(2, "screwdriver.png");
+            this.TabIcons.Images.SetKeyName(3, "config.png");
+            this.TabIcons.Images.SetKeyName(4, "interface.png");
+            this.TabIcons.Images.SetKeyName(5, "backup.png");
             // 
             // MainTabControl
             // 

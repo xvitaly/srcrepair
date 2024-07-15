@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 43.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-29 14:32+0100\n"
-"PO-Revision-Date: 2024-03-29 14:43+0100\n"
+"POT-Creation-Date: 2024-07-15 10:46+0200\n"
+"PO-Revision-Date: 2024-07-15 10:46+0200\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-Basepath: ../../..\n"
 "X-Poedit-SearchPath-0: .\n"
@@ -54,8 +54,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`CC Attribution No Derivatives <https://creativecommons.org/licenses/by-"
-"nd/4.0/legalcode>`_"
+"`Creative Commons Attribution No Derivatives 3.0 Unported <https://"
+"creativecommons.org/licenses/by-nd/3.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -72,8 +72,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`CC Attribution Non-Commercial No Derivatives <https://creativecommons.org/"
-"licenses/by-nc-nd/4.0/legalcode>`_"
+"`Creative Commons Attribution Non-Commercial No Derivatives 3.0 Unported "
+"<https://creativecommons.org/licenses/by-nc-nd/3.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -86,15 +86,17 @@ msgid "backup.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Icontoaster"
+msgid "FatCow"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "Free for non commercial use"
+msgid ""
+"`Creative Commons Attribution 3.0 Unported <https://creativecommons.org/"
+"licenses/by/3.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/backup-2047.html>`__"
+msgid "n/a (backups.png)"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -107,8 +109,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`CC Attribution Share Alike <https://creativecommons.org/licenses/by-sa/4.0/"
-"legalcode>`_"
+"`Creative Commons Attribution Share Alike 3.0 Unported <https://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -132,6 +134,34 @@ msgstr ""
 #: ../../source/legal.rst:1
 msgid ""
 "`IconsPedia <https://www.iconspedia.com/icon/gnome-edit-clear-10--7.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "copy.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/page-copy-icon-21541.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "cut.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/cut-red-icon-20784.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "paste.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`IconsPedia <https://www.iconspedia.com/icon/page-white-paste-icon-21594."
+"html>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -224,11 +254,7 @@ msgid "home.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "IconsPedia"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/home--205.html>`__"
+msgid "n/a (house.png)"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -236,7 +262,7 @@ msgid "info.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/info--206.html>`__"
+msgid "n/a (information.png)"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -253,15 +279,6 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "interface.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "FatCow"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`CC Attribution <https://creativecommons.org/licenses/by/4.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -304,8 +321,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`CC Attribution Non-Commercial Share Alike <https://creativecommons.org/"
-"licenses/by-nc-sa/4.0/legalcode>`_"
+"`Creative Commons Attribution Non-Commercial Share Alike 3.0 Unported "
+"<https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -325,12 +342,7 @@ msgid "notebook.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "LazyCrazy"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/elegant--notebook-160--.html>`__"
+msgid "n/a (book_open.png)"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -373,12 +385,7 @@ msgid "report.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "ArtistValley"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid ""
-"`IconsPedia <https://www.iconspedia.com/icon/task-report-hot-3-17.html>`__"
+msgid "n/a (file_manager.png)"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -400,8 +407,8 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid ""
-"`GNU Lesser General Public License <https://opensource.org/licenses/"
-"LGPL-2.1>`_"
+"`GNU Lesser General Public License, version 2.1 <https://www.gnu.org/"
+"licenses/old-licenses/lgpl-2.1.html>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -422,6 +429,12 @@ msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "Babasse"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid ""
+"`Creative Commons Attribution <https://creativecommons.org/licenses/by/3.0/"
+"legalcode>`_"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -451,6 +464,14 @@ msgstr ""
 #: ../../source/legal.rst:1
 msgid ""
 "`IconsPedia <https://www.iconspedia.com/icon/team-fortress-2-4585.html>`__"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "source.png"
+msgstr ""
+
+#: ../../source/legal.rst:1
+msgid "n/a (function.png)"
 msgstr ""
 
 #: ../../source/legal.rst:1
@@ -517,30 +538,10 @@ msgid "warning.png"
 msgstr ""
 
 #: ../../source/legal.rst:1
-msgid "La Glanz Studio"
+msgid "n/a (error.png)"
 msgstr ""
 
-#: ../../source/legal.rst:1
-msgid "Free"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/warning-16712.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "xmas.png"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "Iconspedia"
-msgstr ""
-
-#: ../../source/legal.rst:1
-msgid "`IconsPedia <https://www.iconspedia.com/icon/santa-hat-17458.html>`__"
-msgstr ""
-
-#: ../../source/legal.rst:67
+#: ../../source/legal.rst:70
 msgid "Libraries licensing"
 msgstr "Лицензирование библиотек"
 
@@ -565,22 +566,22 @@ msgid "Dynamic (shared)"
 msgstr "Динамическая (DLL)"
 
 #: ../../source/legal.rst:1
-msgid "`BSD <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__"
+msgid "`New BSD License <https://github.com/NLog/NLog/blob/dev/LICENSE.txt>`__"
 msgstr ""
 
 #: ../../source/legal.rst:1
 msgid "`GitHub page <https://github.com/NLog/NLog>`__"
 msgstr ""
 
-#: ../../source/legal.rst:78
+#: ../../source/legal.rst:81
 msgid "Trademarks"
 msgstr "Торговые марки"
 
-#: ../../source/legal.rst:81
+#: ../../source/legal.rst:84
 msgid "Valve"
 msgstr ""
 
-#: ../../source/legal.rst:83
+#: ../../source/legal.rst:86
 msgid ""
 "Valve, the Valve logo, Half-Life, the Half-Life logo, the Lambda logo, "
 "Steam, the Steam logo, Team Fortress, the Team Fortress logo, Opposing "
@@ -597,11 +598,11 @@ msgstr ""
 "торговыми марками и/или зарегистрированными торговыми марками Корпорации "
 "Valve."
 
-#: ../../source/legal.rst:86
+#: ../../source/legal.rst:89
 msgid "Microsoft"
 msgstr ""
 
-#: ../../source/legal.rst:88
+#: ../../source/legal.rst:91
 msgid ""
 "Microsoft, Windows are trademarks and/or registered trademarks of Microsoft "
 "Corporation."
@@ -609,10 +610,10 @@ msgstr ""
 "Microsoft, Windows являются торговыми марками и/или зарегистрированными "
 "торговыми марками Корпорации Microsoft."
 
-#: ../../source/legal.rst:91
+#: ../../source/legal.rst:94
 msgid "Other"
 msgstr "Прочие"
 
-#: ../../source/legal.rst:93
+#: ../../source/legal.rst:96
 msgid "All other trademarks are property of their respective owners."
 msgstr "Все прочие торговые марки являются собственностью их владельцев."

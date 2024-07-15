@@ -9,19 +9,19 @@ License: GPL-3.0-or-later
 
 Files: assets/icons/add.png
 Copyright: 2011 VisualPharm
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/icons/arrow.png
 Copyright: 2011 Icon Leak
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/icons/backup.png
-Copyright: 2011 Icontoaster
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/bug.png
 Copyright: 2011 Asher
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/clean.png
 Copyright: 2003 GNOME icon artists
@@ -29,7 +29,7 @@ License: GPL-2.0-only
 
 Files: assets/icons/convert.png
 Copyright: 2011 Nikolay Verin
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/icons/copy.png
 Copyright: 2011 FatCow
@@ -41,7 +41,7 @@ License: CC-BY-3.0
 
 Files: assets/icons/delete.png
 Copyright: 2011 VisualPharm
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/icons/exit.png
 Copyright: 2003 GNOME icon artists
@@ -49,27 +49,27 @@ License: GPL-2.0-only
 
 Files: assets/icons/globe.png
 Copyright: 2011 PixelMixer
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/green_circle.png
 Copyright: 2011 Chris Ringeisen
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/icons/help.png
 Copyright: 2011 Asher
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/home.png
-Copyright: 2011 IconsPedia
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/info.png
-Copyright: 2011 IconsPedia
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/installer.png
 Copyright: 2011 Celldrifter
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/keyboard.png
 Copyright: 2003 GNOME icon artists
@@ -77,31 +77,31 @@ License: GPL-2.0-only
 
 Files: assets/icons/mhint.png
 Copyright: 2011 Mazenl77
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/mhint.png
 Copyright: 2011 Mazenl77
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/mute.png
 Copyright: 2011 Ahmad Hania
-License: CC-BY-NC-SA-4.0
+License: CC-BY-NC-SA-3.0
 
 Files: assets/icons/new.png
 Copyright: 2011 VisualPharm
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/notebook.png
-Copyright: 2011 LazyCrazy
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/open.png
 Copyright: 2011 VisualPharm
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/options.png
 Copyright: 2011 Ahmad Hania
-License: CC-BY-NC-SA-4.0
+License: CC-BY-NC-SA-3.0
 
 Files: assets/icons/paste.png
 Copyright: 2011 FatCow
@@ -109,15 +109,15 @@ License: CC-BY-3.0
 
 Files: assets/icons/red_circle.png
 Copyright: 2011 Chris Ringeisen
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/icons/refresh.png
 Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
 Files: assets/icons/report.png
-Copyright: 2011 ArtistValley
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/restore.png
 Copyright: 2003 GNOME icon artists
@@ -133,19 +133,15 @@ License: LGPL-2.1-only
 
 Files: assets/icons/search.png
 Copyright: 2011 Flahorn
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/icons/source.png
-Copyright: 2011 Flahorn
-License: CC-BY-NC-ND-4.0
-
-Files: assets/icons/source.png
-Copyright: 2011 IconsPedia
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/steam.png
 Copyright: 2011 Brsev
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/icons/texteditor.png
 Copyright: 2003 GNOME icon artists
@@ -161,23 +157,23 @@ License: CC-BY-3.0
 
 Files: assets/icons/upd_err.png
 Copyright: 2011 Designkindle
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/upd_nx.png
 Copyright: 2011 PixelMixer
-License: CC-BY-SA-4.0
+License: CC-BY-SA-3.0
 
 Files: assets/icons/warning.png
-Copyright: 2011 La Glanz Studio
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/bundled/backup.png
-Copyright: 2011 Icontoaster
-License: CC0-1.0
+Copyright: 2011 FatCow
+License: CC-BY-3.0
 
 Files: assets/icons/bundled/config.png
 Copyright: 2011 Asher
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/icons/bundled/graphics.png
 Copyright: 2003 GNOME icon artists
@@ -189,7 +185,7 @@ License: CC-BY-3.0
 
 Files: assets/icons/bundled/screwdriver.png
 Copyright: 2011 Babasse
-License: CC-BY-4.0
+License: CC-BY-3.0
 
 Files: assets/icons/bundled/texteditor.png
 Copyright: 2003 GNOME icon artists
@@ -197,19 +193,15 @@ License: GPL-2.0-only
 
 Files: assets/images/loadingfile.png
 Copyright: 2011 Iconsolid
-License: CC-BY-SA-4.0
-
-Files: assets/images/xmas.png
-Copyright: 2011 Iconspedia
-License: CC0-1.0
+License: CC-BY-SA-3.0
 
 Files: assets/img_sources/srcrepair.png
 Copyright: 2009 Lopagof
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/img_sources/srcrepair.svg
 Copyright: 2017 EasyCoding Team
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: assets/manifests/srcrepair.VisualElementsManifest.xml
 Copyright: 2011-2024 EasyCoding Team
@@ -373,7 +365,7 @@ License: GPL-3.0-or-later
 
 Files: src/srcrepair/srcrepair.ico
 Copyright: 2009 Lopagof
-License: CC-BY-NC-ND-4.0
+License: CC-BY-NC-ND-3.0
 
 Files: src/srcrepair/srcrepair.manifest
 Copyright: 2011-2024 EasyCoding Team

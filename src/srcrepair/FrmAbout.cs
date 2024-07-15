@@ -45,12 +45,6 @@ namespace srcrepair.gui
             AF_ProductVersion.Text = string.Format("Version: {0}", CurrentApp.AppVersion);
             AF_Copyright.Text = CurrentApp.AppCopyright;
             AF_CompanyName.Text = CurrentApp.AppCompany;
-
-            // Checking for the New Year eve...
-            if (CurrentApp.IsNewYear)
-            {
-                AF_ProductIcon.Image = Properties.Resources.ImageXmas;
-            }
         }
     }
 }

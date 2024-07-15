@@ -124,18 +124,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Checks if current date belongs to the New Year eve.
-        /// </summary>
-        public static bool IsNewYear
-        {
-            get
-            {
-                DateTime XDate = DateTime.Now;
-                return (XDate.Month == 12 && XDate.Day >= 20 && XDate.Day <= 31) || (XDate.Month == 1 && XDate.Day >= 1 && XDate.Day <= 10);
-            }
-        }
-
-        /// <summary>
         /// Get the full path to the running assembly.
         /// </summary>
         public static string AssemblyLocation => Assembly.GetEntryAssembly().Location;

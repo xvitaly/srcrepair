@@ -597,16 +597,6 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ImageXmas {
-            get {
-                object obj = ResourceManager.GetObject("ImageXmas", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to https://steamcommunity.com/profiles/{0}/.
         /// </summary>
         internal static string MM_CommunityURL {
