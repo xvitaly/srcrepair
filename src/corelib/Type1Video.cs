@@ -642,7 +642,7 @@ namespace srcrepair.core
         {
             if (CheckRegKeyExists())
             {
-                ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, Path.Combine("HKEY_CURRENT_USER", RegKey), Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, IsManual ? Properties.Resources.VideoFileManualPrefix : Properties.Resources.VideoRegAutoPrefix, FileManager.DateTime2Unix(DateTime.Now)))));
+                ProcessManager.StartProcessAndWait(Properties.Resources.RegExecutable, string.Format(Properties.Resources.RegExportCmdLine, Path.Combine("HKEY_CURRENT_USER", RegKey), Path.Combine(DestDir, string.Format(Properties.Resources.RegOutFilePattern, IsManual ? Properties.Resources.VideoRegManualPrefix : Properties.Resources.VideoRegAutoPrefix, FileManager.DateTime2Unix(DateTime.Now)))));
             }
             else
             {
