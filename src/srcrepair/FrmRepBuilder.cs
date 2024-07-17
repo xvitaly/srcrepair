@@ -194,7 +194,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExRepDirRem);
             }
         }
 
@@ -209,7 +209,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex);
+                Logger.Warn(Ex, DebugStrings.AppDbgExRepArchRem);
             }
         }
 

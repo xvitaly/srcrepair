@@ -342,6 +342,12 @@
   <data name="AppDbgExRemVdAutoCfg" xml:space="preserve">
     <value>Exception while trying to create an automatic backup of the game configs before removing them.</value>
   </data>
+  <data name="AppDbgExRepArchRem" xml:space="preserve">
+    <value>Exception while trying to remove a generated archived report file.</value>
+  </data>
+  <data name="AppDbgExRepDirRem" xml:space="preserve">
+    <value>Exception while trying to remove a directory containing temporary files used during a report creation.</value>
+  </data>
   <data name="AppDbgExRepFm" xml:space="preserve">
     <value>Exception while trying to show the generated report file in the file manager.</value>
   </data>

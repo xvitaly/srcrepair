@@ -736,6 +736,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove a generated archived report file..
+        /// </summary>
+        internal static string AppDbgExRepArchRem {
+            get {
+                return ResourceManager.GetString("AppDbgExRepArchRem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove a directory containing temporary files used during a report creation..
+        /// </summary>
+        internal static string AppDbgExRepDirRem {
+            get {
+                return ResourceManager.GetString("AppDbgExRepDirRem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to show the generated report file in the file manager..
         /// </summary>
         internal static string AppDbgExRepFm {
