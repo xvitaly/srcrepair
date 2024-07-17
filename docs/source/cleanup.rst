@@ -23,7 +23,7 @@ On this page you can resolve most known Steam and Source Engine games issues. Yo
 Troubleshooting and recovery
 ==========================================
 
-To run Steam client recovery, enable the **Clean .blob files from Steam directory** or/and the **Clean all registry entries** (require admin rights; not available on non-Windows platforms) checkboxes, then click the **Cleanup Now!** button.
+To begin recovery, select at least one option from the **Steam troubleshooting** group and click the **Cleanup Now!** button.
 
 Warning! The Steam client will be automatically terminated (if it is running).
 
@@ -42,9 +42,11 @@ Known issues that can be resolved with this tool:
 Principle of operation
 ============================================
 
- * If the **Clean downloaded Steam package cache** is checked, SRC Repair will get the Steam installation path, find and remove all downloaded package cache files, and force Steam recovery the next time you launch it.
- * If the **Clean all registry entries** is checked, SRC Repair will remove the ``HKEY_CURRENT_USER\Software\Valve\Steam`` registry key, and force Steam recovery the next time you launch it. If safe clean is enabled (green light in the status bar), a backup file will be created automatically.
- * If the **Run Steam service automatic repair** is checked, SRC Repair will run built-in Steam service automatic recovery function.
+If the **Clean downloaded Steam package cache** is checked, SRC Repair will get the Steam installation path, find and remove all downloaded package cache files, and force Steam recovery the next time you launch it. Once removed, these files will be redownloaded and the client will be reinstalled automatically, which should resolve many issues with broken or missing files.
+
+If the **Clean all Steam registry entries** is checked, SRC Repair will remove the ``HKEY_CURRENT_USER\Software\Valve\Steam`` registry key, and force Steam recovery the next time you launch it. If safe clean is enabled (green light in the status bar), a backup file will be created automatically.
+
+If the **Run Steam service automatic repair** is checked, SRC Repair will run built-in Steam service automatic recovery function.
 
 .. index:: path checker, installation path checker
 .. _cleanup-pathcheck:
