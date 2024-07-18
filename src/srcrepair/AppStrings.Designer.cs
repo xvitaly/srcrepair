@@ -88,6 +88,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to cut selected data to the clipboard!.
+        /// </summary>
+        internal static string AppClipboardCutError {
+            get {
+                return ResourceManager.GetString("AppClipboardCutError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://developer.valvesoftware.com/wiki/Console_Command_List.
         /// </summary>
         internal static string AppCVListURL {

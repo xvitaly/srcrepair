@@ -126,6 +126,9 @@
   <data name="AppClipboardCopyError" xml:space="preserve">
     <value>Failed to copy selected data to the clipboard!</value>
   </data>
+  <data name="AppClipboardCutError" xml:space="preserve">
+    <value>Failed to cut selected data to the clipboard!</value>
+  </data>
   <data name="AppCVListURL" xml:space="preserve">
     <value>https://developer.valvesoftware.com/wiki/Console_Command_List</value>
   </data>

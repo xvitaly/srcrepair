@@ -2827,20 +2827,22 @@ namespace srcrepair.gui
         {
             try
             {
-                StringBuilder SB = new StringBuilder();
-                foreach (DataGridViewCell DV in CE_Editor.SelectedCells)
+                if (CE_Editor.SelectedCells.Count > 0)
                 {
-                    if (DV.Value != null)
+                    Clipboard.SetDataObject(CE_Editor.GetClipboardContent());
+                    foreach (DataGridViewCell Cell in CE_Editor.SelectedCells)
                     {
-                        SB.AppendFormat("{0} ", DV.Value);
-                        DV.Value = null;
+                        if (!CE_Editor.Rows[Cell.RowIndex].IsNewRow)
+                        {
+                            Cell.Value = null;
+                        }
                     }
                 }
-                Clipboard.SetText(SB.ToString().Trim());
             }
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdCut);
+                MessageBox.Show(AppStrings.AppClipboardCutError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
