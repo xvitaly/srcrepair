@@ -2786,14 +2786,18 @@ namespace srcrepair.gui
         {
             try
             {
-                if (CE_Editor.Rows.Count > 0)
+                foreach (DataGridViewCell Cell in CE_Editor.SelectedCells)
                 {
-                    CE_Editor.Rows.Remove(CE_Editor.CurrentRow);
+                    if (Cell.RowIndex != -1 && !CE_Editor.Rows[Cell.RowIndex].IsNewRow)
+                    {
+                        CE_Editor.Rows.RemoveAt(Cell.RowIndex);
+                    }
                 }
             }
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdRemRow);
+                MessageBox.Show(AppStrings.AppDeleteRowError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

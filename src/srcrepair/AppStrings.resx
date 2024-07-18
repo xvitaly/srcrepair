@@ -132,6 +132,9 @@
   <data name="AppCVListURL" xml:space="preserve">
     <value>https://developer.valvesoftware.com/wiki/Console_Command_List</value>
   </data>
+  <data name="AppDeleteRowError" xml:space="preserve">
+    <value>Failed to delete the selected rows!</value>
+  </data>
   <data name="AppFailedToGetData" xml:space="preserve">
     <value>Failed to get data from the game database. Please try again later or select another game!</value>
   </data>

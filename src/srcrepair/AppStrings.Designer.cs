@@ -106,6 +106,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to delete the selected rows!.
+        /// </summary>
+        internal static string AppDeleteRowError {
+            get {
+                return ResourceManager.GetString("AppDeleteRowError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to get data from the game database. Please try again later or select another game!.
         /// </summary>
         internal static string AppFailedToGetData {
