@@ -1083,6 +1083,7 @@
             // 
             this.CE_Editor.BackgroundColor = System.Drawing.SystemColors.Window;
             this.CE_Editor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CE_Editor.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.CE_Editor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.CE_Editor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CE_CVName,
