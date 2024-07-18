@@ -79,6 +79,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to copy selected data to the clipboard!.
+        /// </summary>
+        internal static string AppClipboardCopyError {
+            get {
+                return ResourceManager.GetString("AppClipboardCopyError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://developer.valvesoftware.com/wiki/Console_Command_List.
         /// </summary>
         internal static string AppCVListURL {

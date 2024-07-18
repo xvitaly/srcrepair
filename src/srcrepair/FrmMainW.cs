@@ -2806,19 +2806,15 @@ namespace srcrepair.gui
         {
             try
             {
-                StringBuilder SB = new StringBuilder();
-                foreach (DataGridViewCell DV in CE_Editor.SelectedCells)
+                if (CE_Editor.SelectedCells.Count > 0)
                 {
-                    if (DV.Value != null)
-                    {
-                        SB.AppendFormat("{0} ", DV.Value);
-                    }
+                    Clipboard.SetDataObject(CE_Editor.GetClipboardContent());
                 }
-                Clipboard.SetText(SB.ToString().Trim());
             }
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdCopy);
+                MessageBox.Show(AppStrings.AppClipboardCopyError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

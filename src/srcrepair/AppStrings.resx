@@ -123,6 +123,9 @@
   <data name="AppAlreadyRunning" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
   </data>
+  <data name="AppClipboardCopyError" xml:space="preserve">
+    <value>Failed to copy selected data to the clipboard!</value>
+  </data>
   <data name="AppCVListURL" xml:space="preserve">
     <value>https://developer.valvesoftware.com/wiki/Console_Command_List</value>
   </data>
