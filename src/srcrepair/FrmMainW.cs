@@ -1468,12 +1468,12 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Shows FPS-config selection dialog and load selected config
-        /// in Config Editor module or default text editor.
+        /// Loads the specified FPS-config into the Config Editor or the default
+        /// text editor.
         /// </summary>
-        /// <param name="ConfigFile">Full path to config file to edit.</param>
-        /// <param name="UseNotepad">Use default text editor instead of Config Editor.</param>
-        private async Task EditFPSConfig(string ConfigFile, bool UseNotepad = false)
+        /// <param name="ConfigFile">Full path to the config file for editing.</param>
+        /// <param name="UseNotepad">Use the default text editor instead of the Config Editor.</param>
+        private async Task EditFPSConfig(string ConfigFile, bool UseNotepad)
         {
             if (!string.IsNullOrWhiteSpace(ConfigFile) && File.Exists(ConfigFile))
             {
