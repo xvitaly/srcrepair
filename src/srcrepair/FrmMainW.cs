@@ -2880,11 +2880,7 @@ namespace srcrepair.gui
         {
             try
             {
-                // Saving state of current ModifierKeys before loading new form...
-                Keys MfKeysState = ModifierKeys;
-
-                // Loading FPS-config to Notepad or built-in Config Editor...
-                await EditFPSConfig(App.SourceGames[AppSelector.Text].IsUsingUserDir ? Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg") : GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), MfKeysState != Keys.Shift);
+                await EditFPSConfig(App.SourceGames[AppSelector.Text].IsUsingUserDir ? Path.Combine(App.SourceGames[AppSelector.Text].CFGMan.FPSConfigInstallPath, App.SourceGames[AppSelector.Text].CFGMan[FP_ConfigSel.Text].InstallDir, "cfg", "autoexec.cfg") : GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), ModifierKeys != Keys.Shift);
             }
             catch (Exception Ex)
             {
