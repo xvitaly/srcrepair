@@ -129,6 +129,9 @@
   <data name="AppClipboardCutError" xml:space="preserve">
     <value>Произошла ошибка при попытке вырезать содержимое выбранной ячейки в буфер обмена!</value>
   </data>
+  <data name="AppClipboardPasteError" xml:space="preserve">
+    <value>Произошла ошибка при попытке вставить содержимое буфера обмена в выбранную ячейку!</value>
+  </data>
   <data name="AppCVListURL" xml:space="preserve">
     <value>https://www.easycoding.org/projects/srcrepair/cvarlist</value>
   </data>
