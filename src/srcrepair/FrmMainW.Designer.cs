@@ -182,15 +182,15 @@
             this.BU_BToolbar = new System.Windows.Forms.ToolStrip();
             this.BUT_Refresh = new System.Windows.Forms.ToolStripButton();
             this.BUT_Sep1 = new System.Windows.Forms.ToolStripSeparator();
-            this.BUT_RestoreB = new System.Windows.Forms.ToolStripButton();
-            this.BUT_DelB = new System.Windows.Forms.ToolStripButton();
+            this.BUT_Restore = new System.Windows.Forms.ToolStripButton();
+            this.BUT_Delete = new System.Windows.Forms.ToolStripButton();
             this.BUT_Sep2 = new System.Windows.Forms.ToolStripSeparator();
-            this.BUT_OpenNpad = new System.Windows.Forms.ToolStripButton();
-            this.BUT_ExploreBUp = new System.Windows.Forms.ToolStripButton();
+            this.BUT_TextEditor = new System.Windows.Forms.ToolStripButton();
+            this.BUT_ShowFile = new System.Windows.Forms.ToolStripButton();
             this.BUT_Sep3 = new System.Windows.Forms.ToolStripSeparator();
-            this.BUT_CrBkupReg = new System.Windows.Forms.ToolStripSplitButton();
-            this.BUT_L_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
-            this.BUT_L_AllSteam = new System.Windows.Forms.ToolStripMenuItem();
+            this.BUT_Create = new System.Windows.Forms.ToolStripSplitButton();
+            this.BUT_GameSettings = new System.Windows.Forms.ToolStripMenuItem();
+            this.BUT_RegSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.ToolsMNU = new System.Windows.Forms.ToolStripMenuItem();
             this.MNUShowEdHint = new System.Windows.Forms.ToolStripMenuItem();
@@ -1550,13 +1550,13 @@
             this.BU_BToolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BUT_Refresh,
             this.BUT_Sep1,
-            this.BUT_RestoreB,
-            this.BUT_DelB,
+            this.BUT_Restore,
+            this.BUT_Delete,
             this.BUT_Sep2,
-            this.BUT_OpenNpad,
-            this.BUT_ExploreBUp,
+            this.BUT_TextEditor,
+            this.BUT_ShowFile,
             this.BUT_Sep3,
-            this.BUT_CrBkupReg});
+            this.BUT_Create});
             resources.ApplyResources(this.BU_BToolbar, "BU_BToolbar");
             this.BU_BToolbar.Name = "BU_BToolbar";
             // 
@@ -1573,72 +1573,72 @@
             this.BUT_Sep1.Name = "BUT_Sep1";
             resources.ApplyResources(this.BUT_Sep1, "BUT_Sep1");
             // 
-            // BUT_RestoreB
+            // BUT_Restore
             // 
-            this.BUT_RestoreB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_RestoreB.Image = global::srcrepair.gui.Properties.Resources.IconRestore;
-            resources.ApplyResources(this.BUT_RestoreB, "BUT_RestoreB");
-            this.BUT_RestoreB.Name = "BUT_RestoreB";
-            this.BUT_RestoreB.Click += new System.EventHandler(this.BUT_RestoreB_Click);
+            this.BUT_Restore.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_Restore.Image = global::srcrepair.gui.Properties.Resources.IconRestore;
+            resources.ApplyResources(this.BUT_Restore, "BUT_Restore");
+            this.BUT_Restore.Name = "BUT_Restore";
+            this.BUT_Restore.Click += new System.EventHandler(this.BUT_Restore_Click);
             // 
-            // BUT_DelB
+            // BUT_Delete
             // 
-            this.BUT_DelB.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_DelB.Image = global::srcrepair.gui.Properties.Resources.IconDelete;
-            resources.ApplyResources(this.BUT_DelB, "BUT_DelB");
-            this.BUT_DelB.Name = "BUT_DelB";
-            this.BUT_DelB.Click += new System.EventHandler(this.BUT_DelB_Click);
+            this.BUT_Delete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_Delete.Image = global::srcrepair.gui.Properties.Resources.IconDelete;
+            resources.ApplyResources(this.BUT_Delete, "BUT_Delete");
+            this.BUT_Delete.Name = "BUT_Delete";
+            this.BUT_Delete.Click += new System.EventHandler(this.BUT_Delete_Click);
             // 
             // BUT_Sep2
             // 
             this.BUT_Sep2.Name = "BUT_Sep2";
             resources.ApplyResources(this.BUT_Sep2, "BUT_Sep2");
             // 
-            // BUT_OpenNpad
+            // BUT_TextEditor
             // 
-            this.BUT_OpenNpad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_OpenNpad.Image = global::srcrepair.gui.Properties.Resources.IconTextEditor;
-            resources.ApplyResources(this.BUT_OpenNpad, "BUT_OpenNpad");
-            this.BUT_OpenNpad.Name = "BUT_OpenNpad";
-            this.BUT_OpenNpad.Click += new System.EventHandler(this.BUT_OpenNpad_Click);
+            this.BUT_TextEditor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_TextEditor.Image = global::srcrepair.gui.Properties.Resources.IconTextEditor;
+            resources.ApplyResources(this.BUT_TextEditor, "BUT_TextEditor");
+            this.BUT_TextEditor.Name = "BUT_TextEditor";
+            this.BUT_TextEditor.Click += new System.EventHandler(this.BUT_TextEditor_Click);
             // 
-            // BUT_ExploreBUp
+            // BUT_ShowFile
             // 
-            this.BUT_ExploreBUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_ExploreBUp.Image = global::srcrepair.gui.Properties.Resources.IconSearch;
-            resources.ApplyResources(this.BUT_ExploreBUp, "BUT_ExploreBUp");
-            this.BUT_ExploreBUp.Name = "BUT_ExploreBUp";
-            this.BUT_ExploreBUp.Click += new System.EventHandler(this.BUT_ExploreBUp_Click);
+            this.BUT_ShowFile.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_ShowFile.Image = global::srcrepair.gui.Properties.Resources.IconSearch;
+            resources.ApplyResources(this.BUT_ShowFile, "BUT_ShowFile");
+            this.BUT_ShowFile.Name = "BUT_ShowFile";
+            this.BUT_ShowFile.Click += new System.EventHandler(this.BUT_ShowFile_Click);
             // 
             // BUT_Sep3
             // 
             this.BUT_Sep3.Name = "BUT_Sep3";
             resources.ApplyResources(this.BUT_Sep3, "BUT_Sep3");
             // 
-            // BUT_CrBkupReg
+            // BUT_Create
             // 
-            this.BUT_CrBkupReg.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BUT_CrBkupReg.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.BUT_L_GameSettings,
-            this.BUT_L_AllSteam});
-            this.BUT_CrBkupReg.Image = global::srcrepair.gui.Properties.Resources.IconAdd;
-            resources.ApplyResources(this.BUT_CrBkupReg, "BUT_CrBkupReg");
-            this.BUT_CrBkupReg.Name = "BUT_CrBkupReg";
-            this.BUT_CrBkupReg.ButtonClick += new System.EventHandler(this.BUT_CrBkupReg_ButtonClick);
+            this.BUT_Create.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BUT_Create.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BUT_GameSettings,
+            this.BUT_RegSettings});
+            this.BUT_Create.Image = global::srcrepair.gui.Properties.Resources.IconAdd;
+            resources.ApplyResources(this.BUT_Create, "BUT_Create");
+            this.BUT_Create.Name = "BUT_Create";
+            this.BUT_Create.ButtonClick += new System.EventHandler(this.BUT_Create_ButtonClick);
             // 
-            // BUT_L_GameSettings
+            // BUT_GameSettings
             // 
-            this.BUT_L_GameSettings.Image = global::srcrepair.gui.Properties.Resources.IconAdd;
-            this.BUT_L_GameSettings.Name = "BUT_L_GameSettings";
-            resources.ApplyResources(this.BUT_L_GameSettings, "BUT_L_GameSettings");
-            this.BUT_L_GameSettings.Click += new System.EventHandler(this.BUT_L_GameSettings_Click);
+            this.BUT_GameSettings.Image = global::srcrepair.gui.Properties.Resources.IconAdd;
+            this.BUT_GameSettings.Name = "BUT_GameSettings";
+            resources.ApplyResources(this.BUT_GameSettings, "BUT_GameSettings");
+            this.BUT_GameSettings.Click += new System.EventHandler(this.BUT_GameSettings_Click);
             // 
-            // BUT_L_AllSteam
+            // BUT_RegSettings
             // 
-            this.BUT_L_AllSteam.Image = global::srcrepair.gui.Properties.Resources.IconAdd;
-            this.BUT_L_AllSteam.Name = "BUT_L_AllSteam";
-            resources.ApplyResources(this.BUT_L_AllSteam, "BUT_L_AllSteam");
-            this.BUT_L_AllSteam.Click += new System.EventHandler(this.BUT_L_AllSteam_Click);
+            this.BUT_RegSettings.Image = global::srcrepair.gui.Properties.Resources.IconAdd;
+            this.BUT_RegSettings.Name = "BUT_RegSettings";
+            resources.ApplyResources(this.BUT_RegSettings, "BUT_RegSettings");
+            this.BUT_RegSettings.Click += new System.EventHandler(this.BUT_RegSettings_Click);
             // 
             // MainMenu
             // 
@@ -2027,12 +2027,12 @@
         private System.Windows.Forms.ToolStrip BU_BToolbar;
         private System.Windows.Forms.ToolStripButton BUT_Refresh;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep1;
-        private System.Windows.Forms.ToolStripButton BUT_RestoreB;
-        private System.Windows.Forms.ToolStripButton BUT_DelB;
-        private System.Windows.Forms.ToolStripSplitButton BUT_CrBkupReg;
+        private System.Windows.Forms.ToolStripButton BUT_Restore;
+        private System.Windows.Forms.ToolStripButton BUT_Delete;
+        private System.Windows.Forms.ToolStripSplitButton BUT_Create;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep3;
-        private System.Windows.Forms.ToolStripMenuItem BUT_L_GameSettings;
-        private System.Windows.Forms.ToolStripMenuItem BUT_L_AllSteam;
+        private System.Windows.Forms.ToolStripMenuItem BUT_GameSettings;
+        private System.Windows.Forms.ToolStripMenuItem BUT_RegSettings;
         private System.Windows.Forms.FolderBrowserDialog FldrBrwse;
         private System.Windows.Forms.ToolStripSeparator CE_ToolSep1;
         private System.Windows.Forms.ToolStripButton CE_RmRow;
@@ -2040,7 +2040,7 @@
         private System.Windows.Forms.Button PS_RemOldBin;
         private System.Windows.Forms.Button PS_RemGameOpts;
         private System.Windows.Forms.ToolStripMenuItem MNUUpdateCheck;
-        private System.Windows.Forms.ToolStripButton BUT_OpenNpad;
+        private System.Windows.Forms.ToolStripButton BUT_TextEditor;
         private System.Windows.Forms.ToolStripMenuItem MNUAppOptions;
         private System.Windows.Forms.ListView BU_LVTable;
         private System.Windows.Forms.ColumnHeader BU_LV_Name;
@@ -2048,7 +2048,7 @@
         private System.Windows.Forms.ColumnHeader BU_LV_Size;
         private System.Windows.Forms.ColumnHeader BU_LV_Date;
         private System.Windows.Forms.ColumnHeader BU_LV_RealName;
-        private System.Windows.Forms.ToolStripButton BUT_ExploreBUp;
+        private System.Windows.Forms.ToolStripButton BUT_ShowFile;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep2;
         private System.Windows.Forms.ToolStripMenuItem MNUWinMnuDisabler;
         private System.Windows.Forms.ToolStripButton CE_OpenInNotepad;

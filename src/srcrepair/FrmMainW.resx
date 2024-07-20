@@ -4194,73 +4194,73 @@
     <value>23, 22</value>
   </data>
   <data name="BUT_Refresh.Text" xml:space="preserve">
-    <value>Update BackUp list...</value>
+    <value>Update BackUps list...</value>
   </data>
   <data name="BUT_Sep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="BUT_RestoreB.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="BUT_Restore.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="BUT_RestoreB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUT_Restore.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="BUT_RestoreB.Text" xml:space="preserve">
+  <data name="BUT_Restore.Text" xml:space="preserve">
     <value>Restore BackUp</value>
   </data>
-  <data name="BUT_DelB.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="BUT_Delete.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="BUT_DelB.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUT_Delete.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="BUT_DelB.Text" xml:space="preserve">
+  <data name="BUT_Delete.Text" xml:space="preserve">
     <value>Delete BackUp</value>
   </data>
   <data name="BUT_Sep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="BUT_OpenNpad.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="BUT_TextEditor.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="BUT_OpenNpad.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUT_TextEditor.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="BUT_OpenNpad.Text" xml:space="preserve">
-    <value>Open BackUp in Notepad</value>
+  <data name="BUT_TextEditor.Text" xml:space="preserve">
+    <value>Load BackUp in text editor</value>
   </data>
-  <data name="BUT_ExploreBUp.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="BUT_ShowFile.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="BUT_ExploreBUp.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUT_ShowFile.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="BUT_ExploreBUp.Text" xml:space="preserve">
-    <value>Show BackUp file in Windows Explorer</value>
+  <data name="BUT_ShowFile.Text" xml:space="preserve">
+    <value>Show BackUp file in file manager</value>
   </data>
   <data name="BUT_Sep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="BUT_L_GameSettings.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUT_GameSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 22</value>
   </data>
-  <data name="BUT_L_GameSettings.Text" xml:space="preserve">
+  <data name="BUT_GameSettings.Text" xml:space="preserve">
     <value>BackUp game video settings</value>
   </data>
-  <data name="BUT_L_AllSteam.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUT_RegSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>236, 22</value>
   </data>
-  <data name="BUT_L_AllSteam.Text" xml:space="preserve">
+  <data name="BUT_RegSettings.Text" xml:space="preserve">
     <value>BackUp Steam registry settings</value>
   </data>
-  <data name="BUT_CrBkupReg.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="BUT_Create.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="BUT_CrBkupReg.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="BUT_Create.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 22</value>
   </data>
-  <data name="BUT_CrBkupReg.Text" xml:space="preserve">
-    <value>Create registry backup...</value>
+  <data name="BUT_Create.Text" xml:space="preserve">
+    <value>Create a new BackUp</value>
   </data>
   <data name="BU_BToolbar.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -5414,16 +5414,16 @@
   <data name="&gt;&gt;BUT_Sep1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BUT_RestoreB.Name" xml:space="preserve">
-    <value>BUT_RestoreB</value>
+  <data name="&gt;&gt;BUT_Restore.Name" xml:space="preserve">
+    <value>BUT_Restore</value>
   </data>
-  <data name="&gt;&gt;BUT_RestoreB.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUT_Restore.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BUT_DelB.Name" xml:space="preserve">
-    <value>BUT_DelB</value>
+  <data name="&gt;&gt;BUT_Delete.Name" xml:space="preserve">
+    <value>BUT_Delete</value>
   </data>
-  <data name="&gt;&gt;BUT_DelB.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUT_Delete.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BUT_Sep2.Name" xml:space="preserve">
@@ -5432,16 +5432,16 @@
   <data name="&gt;&gt;BUT_Sep2.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BUT_OpenNpad.Name" xml:space="preserve">
-    <value>BUT_OpenNpad</value>
+  <data name="&gt;&gt;BUT_TextEditor.Name" xml:space="preserve">
+    <value>BUT_TextEditor</value>
   </data>
-  <data name="&gt;&gt;BUT_OpenNpad.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUT_TextEditor.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BUT_ExploreBUp.Name" xml:space="preserve">
-    <value>BUT_ExploreBUp</value>
+  <data name="&gt;&gt;BUT_ShowFile.Name" xml:space="preserve">
+    <value>BUT_ShowFile</value>
   </data>
-  <data name="&gt;&gt;BUT_ExploreBUp.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUT_ShowFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;BUT_Sep3.Name" xml:space="preserve">
@@ -5450,22 +5450,22 @@
   <data name="&gt;&gt;BUT_Sep3.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BUT_CrBkupReg.Name" xml:space="preserve">
-    <value>BUT_CrBkupReg</value>
+  <data name="&gt;&gt;BUT_Create.Name" xml:space="preserve">
+    <value>BUT_Create</value>
   </data>
-  <data name="&gt;&gt;BUT_CrBkupReg.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUT_Create.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSplitButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BUT_L_GameSettings.Name" xml:space="preserve">
-    <value>BUT_L_GameSettings</value>
+  <data name="&gt;&gt;BUT_GameSettings.Name" xml:space="preserve">
+    <value>BUT_GameSettings</value>
   </data>
-  <data name="&gt;&gt;BUT_L_GameSettings.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUT_GameSettings.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;BUT_L_AllSteam.Name" xml:space="preserve">
-    <value>BUT_L_AllSteam</value>
+  <data name="&gt;&gt;BUT_RegSettings.Name" xml:space="preserve">
+    <value>BUT_RegSettings</value>
   </data>
-  <data name="&gt;&gt;BUT_L_AllSteam.Type" xml:space="preserve">
+  <data name="&gt;&gt;BUT_RegSettings.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ToolsMNU.Name" xml:space="preserve">

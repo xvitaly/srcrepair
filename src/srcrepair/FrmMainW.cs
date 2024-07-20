@@ -752,7 +752,7 @@ namespace srcrepair.gui
                 MNUWinMnuDisabler.Enabled = false;
                 PS_CleanRegistry.Enabled = false;
                 PS_ServiceRepair.Enabled = false;
-                BUT_L_AllSteam.Enabled = false;
+                BUT_RegSettings.Enabled = false;
             }
         }
 
@@ -2485,6 +2485,16 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// "Open Settings" menu item click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void MNUAppOptions_Click(object sender, EventArgs e)
+        {
+            GuiHelpers.FormShowOptions();
+        }
+
+        /// <summary>
         /// "Open Reporter" menu item click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -2545,139 +2555,6 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExBugRep);
-            }
-        }
-
-        /// <summary>
-        /// "Refresh backups" toolbar button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void BUT_Refresh_Click(object sender, EventArgs e)
-        {
-            UpdateBackUpList();
-        }
-
-        /// <summary>
-        /// "Restore backup" toolbar button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void BUT_RestoreB_Click(object sender, EventArgs e)
-        {
-            if (BU_LVTable.Items.Count > 0)
-            {
-                if (BU_LVTable.SelectedItems.Count > 0)
-                {
-                    if (MessageBox.Show(AppStrings.BU_QMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                    {
-                        RestoreSelectedBackUps();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.BU_NoSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.BU_NoFiles, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        /// <summary>
-        /// "Delete backup" toolbar button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void BUT_DelB_Click(object sender, EventArgs e)
-        {
-            if (BU_LVTable.Items.Count > 0)
-            {
-                if (BU_LVTable.SelectedItems.Count > 0)
-                {
-                    if (MessageBox.Show(AppStrings.BU_DelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-                    {
-                        foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
-                        {
-                            try
-                            {
-                                File.Delete(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text));
-                                BU_LVTable.Items.Remove(BU_Item);
-                            }
-                            catch (Exception Ex)
-                            {
-                                Logger.Error(Ex, DebugStrings.AppDbgExBackupRem);
-                                MessageBox.Show(AppStrings.BU_DelFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);                                
-                            }
-                        }
-                        MessageBox.Show(AppStrings.BU_DelSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.BU_NoSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.BU_NoFiles, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        /// <summary>
-        /// "Create backup" toolbar button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void BUT_CrBkupReg_ButtonClick(object sender, EventArgs e)
-        {
-            BUT_CrBkupReg.ShowDropDown();
-        }
-
-        /// <summary>
-        /// "Create game settings backup" toolbar button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void BUT_L_GameSettings_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(AppStrings.BU_VideoCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                try
-                {
-                    VideoSettingsBackup(true);
-                    MessageBox.Show(AppStrings.BU_VideoDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    UpdateBackUpList();
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Error(Ex, DebugStrings.AppDbgExBkSg);
-                    MessageBox.Show(AppStrings.BU_VideoErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-        }
-
-        /// <summary>
-        /// "Create Steam registry settings backup" toolbar button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void BUT_L_AllSteam_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show(AppStrings.BU_RegCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                try
-                {
-                    App.Platform.BackUpRegistrySettings(App.SourceGames[AppSelector.Text].FullBackUpDirPath);
-                    MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    UpdateBackUpList();
-                }
-                catch (Exception Ex)
-                {
-                    Logger.Error(Ex, DebugStrings.AppDbgExBkAllStm);
-                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
             }
         }
 
@@ -2900,11 +2777,88 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// "Refresh backups" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void BUT_Refresh_Click(object sender, EventArgs e)
+        {
+            UpdateBackUpList();
+        }
+
+        /// <summary>
+        /// "Restore backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void BUT_Restore_Click(object sender, EventArgs e)
+        {
+            if (BU_LVTable.Items.Count > 0)
+            {
+                if (BU_LVTable.SelectedItems.Count > 0)
+                {
+                    if (MessageBox.Show(AppStrings.BU_QMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    {
+                        RestoreSelectedBackUps();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.BU_NoSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.BU_NoFiles, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// "Delete backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void BUT_Delete_Click(object sender, EventArgs e)
+        {
+            if (BU_LVTable.Items.Count > 0)
+            {
+                if (BU_LVTable.SelectedItems.Count > 0)
+                {
+                    if (MessageBox.Show(AppStrings.BU_DelMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                    {
+                        foreach (ListViewItem BU_Item in BU_LVTable.SelectedItems)
+                        {
+                            try
+                            {
+                                File.Delete(Path.Combine(App.SourceGames[AppSelector.Text].FullBackUpDirPath, BU_Item.SubItems[4].Text));
+                                BU_LVTable.Items.Remove(BU_Item);
+                            }
+                            catch (Exception Ex)
+                            {
+                                Logger.Error(Ex, DebugStrings.AppDbgExBackupRem);
+                                MessageBox.Show(AppStrings.BU_DelFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        MessageBox.Show(AppStrings.BU_DelSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.BU_NoSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.BU_NoFiles, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
         /// "Load backup in text editor" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void BUT_OpenNpad_Click(object sender, EventArgs e)
+        private void BUT_TextEditor_Click(object sender, EventArgs e)
         {
             if (BU_LVTable.Items.Count > 0)
             {
@@ -2938,33 +2892,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Open Settings" menu item click event handler.
+        /// "Show backup file in file manager" toolbar button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void MNUAppOptions_Click(object sender, EventArgs e)
-        {
-            GuiHelpers.FormShowOptions();
-        }
-
-        /// <summary>
-        /// "Config editor table resized" event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void BU_LVTable_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
-        {
-            // Blocking resizing...
-            e.NewWidth = BU_LVTable.Columns[e.ColumnIndex].Width;
-            e.Cancel = true;
-        }
-
-        /// <summary>
-        /// "Show selected backup file in shell" toolbar button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void BUT_ExploreBUp_Click(object sender, EventArgs e)
+        private void BUT_ShowFile_Click(object sender, EventArgs e)
         {
             if (BU_LVTable.Items.Count > 0)
             {
@@ -2988,6 +2920,74 @@ namespace srcrepair.gui
             {
                 MessageBox.Show(AppStrings.BU_NoFiles, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        /// <summary>
+        /// "Create backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void BUT_Create_ButtonClick(object sender, EventArgs e)
+        {
+            BUT_Create.ShowDropDown();
+        }
+
+        /// <summary>
+        /// "Create game settings backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void BUT_GameSettings_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(AppStrings.BU_VideoCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    VideoSettingsBackup(true);
+                    MessageBox.Show(AppStrings.BU_VideoDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateBackUpList();
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex, DebugStrings.AppDbgExBkSg);
+                    MessageBox.Show(AppStrings.BU_VideoErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        /// <summary>
+        /// "Create Steam registry settings backup" toolbar button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void BUT_RegSettings_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(AppStrings.BU_RegCreate, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                try
+                {
+                    App.Platform.BackUpRegistrySettings(App.SourceGames[AppSelector.Text].FullBackUpDirPath);
+                    MessageBox.Show(AppStrings.BU_RegDone, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    UpdateBackUpList();
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Error(Ex, DebugStrings.AppDbgExBkAllStm);
+                    MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        /// <summary>
+        /// "Config editor table resized" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void BU_LVTable_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+            // Blocking resizing...
+            e.NewWidth = BU_LVTable.Columns[e.ColumnIndex].Width;
+            e.Cancel = true;
         }
 
         /// <summary>
@@ -3466,8 +3466,8 @@ namespace srcrepair.gui
         {
             // Blocking some buttons if user selected more than one backup file...
             bool IsSingle = BU_LVTable.SelectedItems.Count <= 1;
-            BUT_OpenNpad.Enabled = IsSingle;
-            BUT_ExploreBUp.Enabled = IsSingle;
+            BUT_TextEditor.Enabled = IsSingle;
+            BUT_ShowFile.Enabled = IsSingle;
         }
     }
 }
