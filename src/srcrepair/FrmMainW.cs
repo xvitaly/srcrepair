@@ -2884,7 +2884,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExEditCfg);
+                Logger.Warn(Ex, DebugStrings.AppDbgExEditCfg);
                 MessageBox.Show(AppStrings.FP_EditorLoadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
