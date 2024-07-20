@@ -2910,6 +2910,7 @@ namespace srcrepair.gui
                     catch (Exception Ex)
                     {
                         Logger.Warn(Ex, DebugStrings.AppDbgExBkFMan);
+                        MessageBox.Show(AppStrings.BU_ShowFileError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else

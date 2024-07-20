@@ -306,6 +306,9 @@
   <data name="BU_RestSuccessful" xml:space="preserve">
     <value>Выбранные резервные копии были успешно восстановлены!</value>
   </data>
+  <data name="BU_ShowFileError" xml:space="preserve">
+    <value>Произошла ошибка при попытке показать выбранный файл резервной копии в файловом менеджере!</value>
+  </data>
   <data name="BU_UnknownType" xml:space="preserve">
     <value>Отсутствуют правила для восстановления такого типа файлов!</value>
   </data>

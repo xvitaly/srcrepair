@@ -306,6 +306,9 @@
   <data name="BU_RestSuccessful" xml:space="preserve">
     <value>The selected backups were successfully restored!</value>
   </data>
+  <data name="BU_ShowFileError" xml:space="preserve">
+    <value>Failed to show the selected backup file in the file manager!</value>
+  </data>
   <data name="BU_UnknownType" xml:space="preserve">
     <value>Unknown file type. Can't restore it!</value>
   </data>

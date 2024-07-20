@@ -628,6 +628,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to show the selected backup file in the file manager!.
+        /// </summary>
+        internal static string BU_ShowFileError {
+            get {
+                return ResourceManager.GetString("BU_ShowFileError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Unknown file type. Can&apos;t restore it!.
         /// </summary>
         internal static string BU_UnknownType {
