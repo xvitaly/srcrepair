@@ -133,7 +133,7 @@
     <value>Exception while trying to backup all Steam settings stored in the registry.</value>
   </data>
   <data name="AppDbgExBkExtEdt" xml:space="preserve">
-    <value>Exception while trying to load a backup file into a text editor.</value>
+    <value>Exception while trying to load the backup file into the selected text editor.</value>
   </data>
   <data name="AppDbgExBkFMan" xml:space="preserve">
     <value>Exception while trying to show the selected backup file in the file manager.</value>

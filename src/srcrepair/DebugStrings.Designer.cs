@@ -106,7 +106,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to load a backup file into a text editor..
+        ///   Looks up a localized string similar to Exception while trying to load the backup file into the selected text editor..
         /// </summary>
         internal static string AppDbgExBkExtEdt {
             get {

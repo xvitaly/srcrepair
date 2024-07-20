@@ -565,6 +565,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to load the backup file into the selected text editor!.
+        /// </summary>
+        internal static string BU_OpenTextEditorFailed {
+            get {
+                return ResourceManager.GetString("BU_OpenTextEditorFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Restore selected backups?.
         /// </summary>
         internal static string BU_QMsg {

@@ -285,6 +285,9 @@
   <data name="BU_NoSelected" xml:space="preserve">
     <value>No files selected! Please select at least one and try again.</value>
   </data>
+  <data name="BU_OpenTextEditorFailed" xml:space="preserve">
+    <value>Failed to load the backup file into the selected text editor!</value>
+  </data>
   <data name="BU_QMsg" xml:space="preserve">
     <value>Restore selected backups?</value>
   </data>

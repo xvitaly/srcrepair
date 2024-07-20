@@ -285,6 +285,9 @@
   <data name="BU_NoSelected" xml:space="preserve">
     <value>Действие невозможно: не выбрано ни одного файла!</value>
   </data>
+  <data name="BU_OpenTextEditorFailed" xml:space="preserve">
+    <value>Не удалось загрузить файл резервной копии в выбранный текстовый редактор!</value>
+  </data>
   <data name="BU_QMsg" xml:space="preserve">
     <value>Вы уверены, что хотите восстановить выбранные резервные копии?</value>
   </data>

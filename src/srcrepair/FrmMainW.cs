@@ -2873,6 +2873,7 @@ namespace srcrepair.gui
                         catch (Exception Ex)
                         {
                             Logger.Warn(Ex, DebugStrings.AppDbgExBkExtEdt);
+                            MessageBox.Show(AppStrings.BU_OpenTextEditorFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
                     }
                     else
