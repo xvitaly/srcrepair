@@ -160,7 +160,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to create a manual backup of the game configuration file..
+        ///   Looks up a localized string similar to Exception while trying to create a manual backup of the current config file..
         /// </summary>
         internal static string AppDbgExCfgEdBkMan {
             get {

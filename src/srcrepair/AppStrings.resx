@@ -336,6 +336,9 @@
   <data name="CE_ExceptionDetected" xml:space="preserve">
     <value>Parsing error were detected. The config was opened with errors. We do not recommend to save it.</value>
   </data>
+  <data name="CE_ManualBackUpError" xml:space="preserve">
+    <value>Failed to create a manual backup of the current config file!</value>
+  </data>
   <data name="CE_NoFileOpened" xml:space="preserve">
     <value>Please open file first in order to use this funtion!</value>
   </data>

@@ -3145,7 +3145,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Create backup of current config" toolbar button click event handler.
+        /// "Create a backup of the config file" toolbar button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
@@ -3163,6 +3163,7 @@ namespace srcrepair.gui
                     catch (Exception Ex)
                     {
                         Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdBkMan);
+                        MessageBox.Show(AppStrings.CE_ManualBackUpError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
             }

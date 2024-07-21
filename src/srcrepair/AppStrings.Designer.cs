@@ -718,6 +718,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to create a manual backup of the current config file!.
+        /// </summary>
+        internal static string CE_ManualBackUpError {
+            get {
+                return ResourceManager.GetString("CE_ManualBackUpError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please open file first in order to use this funtion!.
         /// </summary>
         internal static string CE_NoFileOpened {

@@ -151,7 +151,7 @@
     <value>Exception while trying to create an automatic backup of the game configuration file before saving it in the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgEdBkMan" xml:space="preserve">
-    <value>Exception while trying to create a manual backup of the game configuration file.</value>
+    <value>Exception while trying to create a manual backup of the current config file.</value>
   </data>
   <data name="AppDbgExCfgEdCopy" xml:space="preserve">
     <value>Exception while trying to copy an item to the clipboard in the Config Editor.</value>
