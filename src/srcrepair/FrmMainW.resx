@@ -2486,14 +2486,14 @@
   <data name="CE_ToolSep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
   </data>
-  <data name="CE_OpenInNotepad.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+  <data name="CE_OpenTextEditor.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
-  <data name="CE_OpenInNotepad.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CE_OpenTextEditor.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 22</value>
   </data>
-  <data name="CE_OpenInNotepad.Text" xml:space="preserve">
-    <value>Open config in Notepad</value>
+  <data name="CE_OpenTextEditor.Text" xml:space="preserve">
+    <value>Open config in text editor</value>
   </data>
   <data name="CE_ManualBackUpCfg.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -3425,34 +3425,34 @@
   <metadata name="FPS_Panel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="FP_OpenNotepad.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="FP_Edit.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="FP_OpenNotepad.Enabled" type="System.Boolean, mscorlib">
+  <data name="FP_Edit.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="FP_OpenNotepad.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="FP_Edit.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="FP_OpenNotepad.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="FP_Edit.Location" type="System.Drawing.Point, System.Drawing">
     <value>352, 3</value>
   </data>
-  <data name="FP_OpenNotepad.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="FP_Edit.Size" type="System.Drawing.Size, System.Drawing">
     <value>24, 24</value>
   </data>
-  <data name="FP_OpenNotepad.TabIndex" type="System.Int32, mscorlib">
+  <data name="FP_Edit.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;FP_OpenNotepad.Name" xml:space="preserve">
-    <value>FP_OpenNotepad</value>
+  <data name="&gt;&gt;FP_Edit.Name" xml:space="preserve">
+    <value>FP_Edit</value>
   </data>
-  <data name="&gt;&gt;FP_OpenNotepad.Type" xml:space="preserve">
+  <data name="&gt;&gt;FP_Edit.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;FP_OpenNotepad.Parent" xml:space="preserve">
+  <data name="&gt;&gt;FP_Edit.Parent" xml:space="preserve">
     <value>FPS_Panel</value>
   </data>
-  <data name="&gt;&gt;FP_OpenNotepad.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;FP_Edit.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="FP_Install.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -5330,10 +5330,10 @@
   <data name="&gt;&gt;CE_ToolSep1.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CE_OpenInNotepad.Name" xml:space="preserve">
-    <value>CE_OpenInNotepad</value>
+  <data name="&gt;&gt;CE_OpenTextEditor.Name" xml:space="preserve">
+    <value>CE_OpenTextEditor</value>
   </data>
-  <data name="&gt;&gt;CE_OpenInNotepad.Type" xml:space="preserve">
+  <data name="&gt;&gt;CE_OpenTextEditor.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;CE_ManualBackUpCfg.Name" xml:space="preserve">

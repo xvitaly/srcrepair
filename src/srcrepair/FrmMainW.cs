@@ -930,7 +930,7 @@ namespace srcrepair.gui
             FP_Install.Text = State ? App.SourceGames[AppSelector.Text].IsUsingUserDir ? AppStrings.FP_BtnUpdateText : AppStrings.FP_BtnReplaceText : AppStrings.FP_BtnInstallText;
             FP_Uninstall.Text = App.SourceGames[AppSelector.Text].IsUsingUserDir ? AppStrings.FP_BtnUninstallSelectedText : AppStrings.FP_BtnUninstallAllText;
             FP_Uninstall.Enabled = State;
-            FP_OpenNotepad.Enabled = State;
+            FP_Edit.Enabled = State;
         }
 
         /// <summary>
@@ -1385,7 +1385,7 @@ namespace srcrepair.gui
                 // Blockg some form controls...
                 FP_Install.Enabled = false;
                 FP_ConfigSel.Enabled = false;
-                FP_OpenNotepad.Enabled = false;
+                FP_Edit.Enabled = false;
             }
         }
 
@@ -1472,12 +1472,12 @@ namespace srcrepair.gui
         /// text editor.
         /// </summary>
         /// <param name="ConfigFile">Full path to the config file for editing.</param>
-        /// <param name="UseNotepad">Use the default text editor instead of the Config Editor.</param>
-        private async Task EditFPSConfig(string ConfigFile, bool UseNotepad)
+        /// <param name="UseTextEditor">Use the default text editor instead of the Config Editor.</param>
+        private async Task EditFPSConfig(string ConfigFile, bool UseTextEditor)
         {
             if (!string.IsNullOrWhiteSpace(ConfigFile) && File.Exists(ConfigFile))
             {
-                if (UseNotepad)
+                if (UseTextEditor)
                 {
                     App.Platform.OpenTextEditor(ConfigFile, Properties.Settings.Default.EditorBin);
                 }
@@ -2753,7 +2753,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private async void FP_OpenNotepad_Click(object sender, EventArgs e)
+        private async void FP_Edit_Click(object sender, EventArgs e)
         {
             try
             {
@@ -3030,7 +3030,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void CE_OpenInNotepad_Click(object sender, EventArgs e)
+        private void CE_OpenTextEditor_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(CFGFileName))
             {

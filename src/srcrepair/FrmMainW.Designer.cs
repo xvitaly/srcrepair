@@ -112,7 +112,7 @@
             this.CE_Paste = new System.Windows.Forms.ToolStripButton();
             this.CE_RmRow = new System.Windows.Forms.ToolStripButton();
             this.CE_ToolSep1 = new System.Windows.Forms.ToolStripSeparator();
-            this.CE_OpenInNotepad = new System.Windows.Forms.ToolStripButton();
+            this.CE_OpenTextEditor = new System.Windows.Forms.ToolStripButton();
             this.CE_ManualBackUpCfg = new System.Windows.Forms.ToolStripButton();
             this.CE_ToolSep2 = new System.Windows.Forms.ToolStripSeparator();
             this.CE_ShowHint = new System.Windows.Forms.ToolStripButton();
@@ -150,7 +150,7 @@
             this.PS_CleanPackages = new System.Windows.Forms.CheckBox();
             this.FPSCfgInstall = new System.Windows.Forms.TabPage();
             this.FPS_Panel = new System.Windows.Forms.Panel();
-            this.FP_OpenNotepad = new System.Windows.Forms.Button();
+            this.FP_Edit = new System.Windows.Forms.Button();
             this.FP_Install = new System.Windows.Forms.Button();
             this.FP_GB_Desc = new System.Windows.Forms.GroupBox();
             this.FP_Comp = new System.Windows.Forms.Label();
@@ -960,7 +960,7 @@
             this.CE_Paste,
             this.CE_RmRow,
             this.CE_ToolSep1,
-            this.CE_OpenInNotepad,
+            this.CE_OpenTextEditor,
             this.CE_ManualBackUpCfg,
             this.CE_ToolSep2,
             this.CE_ShowHint,
@@ -1042,13 +1042,13 @@
             this.CE_ToolSep1.Name = "CE_ToolSep1";
             resources.ApplyResources(this.CE_ToolSep1, "CE_ToolSep1");
             // 
-            // CE_OpenInNotepad
+            // CE_OpenTextEditor
             // 
-            this.CE_OpenInNotepad.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CE_OpenInNotepad.Image = global::srcrepair.gui.Properties.Resources.IconTextEditor;
-            resources.ApplyResources(this.CE_OpenInNotepad, "CE_OpenInNotepad");
-            this.CE_OpenInNotepad.Name = "CE_OpenInNotepad";
-            this.CE_OpenInNotepad.Click += new System.EventHandler(this.CE_OpenInNotepad_Click);
+            this.CE_OpenTextEditor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CE_OpenTextEditor.Image = global::srcrepair.gui.Properties.Resources.IconTextEditor;
+            resources.ApplyResources(this.CE_OpenTextEditor, "CE_OpenTextEditor");
+            this.CE_OpenTextEditor.Name = "CE_OpenTextEditor";
+            this.CE_OpenTextEditor.Click += new System.EventHandler(this.CE_OpenTextEditor_Click);
             // 
             // CE_ManualBackUpCfg
             // 
@@ -1329,7 +1329,7 @@
             // 
             // FPS_Panel
             // 
-            this.FPS_Panel.Controls.Add(this.FP_OpenNotepad);
+            this.FPS_Panel.Controls.Add(this.FP_Edit);
             this.FPS_Panel.Controls.Add(this.FP_Install);
             this.FPS_Panel.Controls.Add(this.FP_GB_Desc);
             this.FPS_Panel.Controls.Add(this.FP_ConfigSel);
@@ -1338,14 +1338,14 @@
             resources.ApplyResources(this.FPS_Panel, "FPS_Panel");
             this.FPS_Panel.Name = "FPS_Panel";
             // 
-            // FP_OpenNotepad
+            // FP_Edit
             // 
-            resources.ApplyResources(this.FP_OpenNotepad, "FP_OpenNotepad");
-            this.FP_OpenNotepad.Image = global::srcrepair.gui.Properties.Resources.IconTextEditor;
-            this.FP_OpenNotepad.Name = "FP_OpenNotepad";
-            this.FP_OpenNotepad.TabStop = false;
-            this.FP_OpenNotepad.UseVisualStyleBackColor = true;
-            this.FP_OpenNotepad.Click += new System.EventHandler(this.FP_OpenNotepad_Click);
+            resources.ApplyResources(this.FP_Edit, "FP_Edit");
+            this.FP_Edit.Image = global::srcrepair.gui.Properties.Resources.IconTextEditor;
+            this.FP_Edit.Name = "FP_Edit";
+            this.FP_Edit.TabStop = false;
+            this.FP_Edit.UseVisualStyleBackColor = true;
+            this.FP_Edit.Click += new System.EventHandler(this.FP_Edit_Click);
             // 
             // FP_Install
             // 
@@ -2051,7 +2051,7 @@
         private System.Windows.Forms.ToolStripButton BUT_ShowFile;
         private System.Windows.Forms.ToolStripSeparator BUT_Sep2;
         private System.Windows.Forms.ToolStripMenuItem MNUWinMnuDisabler;
-        private System.Windows.Forms.ToolStripButton CE_OpenInNotepad;
+        private System.Windows.Forms.ToolStripButton CE_OpenTextEditor;
         private System.Windows.Forms.Button PS_RemReplays;
         private System.Windows.Forms.Button PS_DeepCleanup;
         private System.Windows.Forms.Button PS_RemTextures;
@@ -2148,7 +2148,7 @@
         private System.Windows.Forms.Label L_GT_LaunchOptions;
         private System.Windows.Forms.ToolStripStatusLabel SB_SteamID;
         private System.Windows.Forms.Panel FPS_Panel;
-        private System.Windows.Forms.Button FP_OpenNotepad;
+        private System.Windows.Forms.Button FP_Edit;
         private System.Windows.Forms.Button FP_Install;
         private System.Windows.Forms.GroupBox FP_GB_Desc;
         private System.Windows.Forms.Label FP_Comp;

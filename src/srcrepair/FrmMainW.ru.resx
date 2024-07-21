@@ -615,8 +615,8 @@
   <data name="CE_RmRow.Text" xml:space="preserve">
     <value>Удалить выбранную строку</value>
   </data>
-  <data name="CE_OpenInNotepad.Text" xml:space="preserve">
-    <value>Открыть конфиг в Блокноте</value>
+  <data name="CE_OpenTextEditor.Text" xml:space="preserve">
+    <value>Открыть конфиг в текстовом редакторе</value>
   </data>
   <data name="CE_ManualBackUpCfg.Text" xml:space="preserve">
     <value>Создать бэкап конфига</value>
