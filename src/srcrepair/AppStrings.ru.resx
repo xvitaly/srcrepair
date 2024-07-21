@@ -342,6 +342,9 @@
   <data name="CE_OpenFailed" xml:space="preserve">
     <value>Невозможно считать содержимое конфига, т.к. файл не найден!</value>
   </data>
+  <data name="CE_OpenTextEditorError" xml:space="preserve">
+    <value>Не удалось открыть конфиг в выбранном текстовом редакторе!</value>
+  </data>
   <data name="CE_RestConfigOpenWarn" xml:space="preserve">
     <value>Внимание! Настоятельно не рекомендуется редактировать этот файл, т.к. это может привести к непредсказуемым последствиям. Редактируйте его на свой страх и риск.</value>
   </data>

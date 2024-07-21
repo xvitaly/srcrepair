@@ -160,7 +160,7 @@
     <value>Exception while trying to cut an item to the clipboard in the Config Editor.</value>
   </data>
   <data name="AppDbgExCfgEdExtEdt" xml:space="preserve">
-    <value>Exception while trying to load a config file into a text editor.</value>
+    <value>Exception while trying to open the config file in the selected text editor.</value>
   </data>
   <data name="AppDbgExCfgEditorLoad" xml:space="preserve">
     <value>Failed to find and load the "{0}" FPS-config file by the Config Editor.</value>

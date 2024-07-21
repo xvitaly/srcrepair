@@ -342,6 +342,9 @@
   <data name="CE_OpenFailed" xml:space="preserve">
     <value>Could not read the contents of the config file!</value>
   </data>
+  <data name="CE_OpenTextEditorError" xml:space="preserve">
+    <value>Failed to open the config file in the selected text editor!</value>
+  </data>
   <data name="CE_RestConfigOpenWarn" xml:space="preserve">
     <value>We not recommend to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk.</value>
   </data>

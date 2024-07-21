@@ -3041,6 +3041,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     Logger.Warn(Ex, DebugStrings.AppDbgExCfgEdExtEdt);
+                    MessageBox.Show(AppStrings.CE_OpenTextEditorError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             else

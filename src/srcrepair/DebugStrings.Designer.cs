@@ -187,7 +187,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to load a config file into a text editor..
+        ///   Looks up a localized string similar to Exception while trying to open the config file in the selected text editor..
         /// </summary>
         internal static string AppDbgExCfgEdExtEdt {
             get {

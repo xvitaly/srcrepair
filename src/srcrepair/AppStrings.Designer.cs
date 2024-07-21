@@ -736,6 +736,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to open the config file in the selected text editor!.
+        /// </summary>
+        internal static string CE_OpenTextEditorError {
+            get {
+                return ResourceManager.GetString("CE_OpenTextEditorError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to We not recommend to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk..
         /// </summary>
         internal static string CE_RestConfigOpenWarn {
