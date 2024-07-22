@@ -493,7 +493,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to show the selected HUD directory in the file manager..
+        ///   Looks up a localized string similar to Exception while trying to show the selected HUD&apos;s directory in the file manager..
         /// </summary>
         internal static string AppDbgExHudExtFm {
             get {

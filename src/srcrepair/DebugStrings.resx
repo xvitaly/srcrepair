@@ -262,7 +262,7 @@
     <value>Exception while removing the HUD archive file.</value>
   </data>
   <data name="AppDbgExHudExtFm" xml:space="preserve">
-    <value>Exception while trying to show the selected HUD directory in the file manager.</value>
+    <value>Exception while trying to show the selected HUD's directory in the file manager.</value>
   </data>
   <data name="AppDbgExHUDInstall" xml:space="preserve">
     <value>Exception during HUD installation.</value>

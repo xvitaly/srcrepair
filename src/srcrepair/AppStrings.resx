@@ -483,6 +483,9 @@
   <data name="HD_NotTested" xml:space="preserve">
     <value>The selected HUD is not fully compatible with the latest version of the game.</value>
   </data>
+  <data name="HD_OpenDirError" xml:space="preserve">
+    <value>Failed to show the selected HUD's directory in the file manager!</value>
+  </data>
   <data name="HD_Outdated" xml:space="preserve">
     <value>Installation of outdated HUDs is not allowed. Please update database or select another HUD.</value>
   </data>

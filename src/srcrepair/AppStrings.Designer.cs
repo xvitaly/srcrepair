@@ -1159,6 +1159,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to show the selected HUD&apos;s directory in the file manager!.
+        /// </summary>
+        internal static string HD_OpenDirError {
+            get {
+                return ResourceManager.GetString("HD_OpenDirError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Installation of outdated HUDs is not allowed. Please update database or select another HUD..
         /// </summary>
         internal static string HD_Outdated {
