@@ -2650,6 +2650,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     Logger.Warn(Ex, DebugStrings.AppDbgExUrlGroup);
+                    MessageBox.Show(AppStrings.AppVisitGroupError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }

@@ -219,6 +219,9 @@
   <data name="AppVideoDbNotFound" xml:space="preserve">
     <value>Cannot get video settings of "{0}" from file "{1}".</value>
   </data>
+  <data name="AppVisitGroupError" xml:space="preserve">
+    <value>Failed to show the official group in both the Steam client and web browser.</value>
+  </data>
   <data name="AppVisitWebsiteError" xml:space="preserve">
     <value>Failed to open web browser to visit the official website!</value>
   </data>
