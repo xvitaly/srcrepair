@@ -376,7 +376,16 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to show the official group in both the Steam client and web browser..
+        ///   Looks up a localized string similar to Failed to start web browser to visit the variables and functions documentation website!.
+        /// </summary>
+        internal static string AppVisitCVListError {
+            get {
+                return ResourceManager.GetString("AppVisitCVListError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to show the official group in both the Steam client and web browser!.
         /// </summary>
         internal static string AppVisitGroupError {
             get {

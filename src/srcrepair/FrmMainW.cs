@@ -3130,7 +3130,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Open list of console variables" toolbar button click event handler.
+        /// "Open the list of variables and functions" toolbar button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
@@ -3143,6 +3143,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExUrlCvList);
+                MessageBox.Show(AppStrings.AppVisitCVListError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

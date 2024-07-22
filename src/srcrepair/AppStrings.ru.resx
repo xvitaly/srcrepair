@@ -222,6 +222,9 @@
   <data name="AppVisitBugTrackerError" xml:space="preserve">
     <value>Не удалось запустить веб-браузер для посещения системы отслеживания ошибок программы!</value>
   </data>
+  <data name="AppVisitCVListError" xml:space="preserve">
+    <value>Не удалось запустить веб-браузер для посещения сайта с документаций по переменным и функциям!</value>
+  </data>
   <data name="AppVisitGroupError" xml:space="preserve">
     <value>Не удалось показать страницу официальной группы ни в клиенте Steam, ни в веб-браузере!</value>
   </data>
