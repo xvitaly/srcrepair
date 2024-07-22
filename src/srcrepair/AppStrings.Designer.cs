@@ -1114,6 +1114,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to start web browser to visit the HUD&apos;s homepage!.
+        /// </summary>
+        internal static string HD_HomepageError {
+            get {
+                return ResourceManager.GetString("HD_HomepageError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occured during HUD installation. Please try again later..
         /// </summary>
         internal static string HD_InstallError {

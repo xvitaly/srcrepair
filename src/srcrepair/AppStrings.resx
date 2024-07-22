@@ -468,6 +468,9 @@
   <data name="HD_HashError" xml:space="preserve">
     <value>Failed to check hash sum of the downloaded file. Maybe it was damaged during transfer. Please try again later!</value>
   </data>
+  <data name="HD_HomepageError" xml:space="preserve">
+    <value>Failed to start web browser to visit the HUD's homepage!</value>
+  </data>
   <data name="HD_InstallError" xml:space="preserve">
     <value>An error occured during HUD installation. Please try again later.</value>
   </data>

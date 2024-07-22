@@ -3338,6 +3338,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     Logger.Warn(Ex, DebugStrings.AppDbgExUrlHudHome);
+                    MessageBox.Show(AppStrings.HD_HomepageError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
