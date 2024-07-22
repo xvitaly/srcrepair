@@ -219,6 +219,9 @@
   <data name="AppVideoDbNotFound" xml:space="preserve">
     <value>Не удалось загрузить графические настройки игры "{0}" из файла "{1}".</value>
   </data>
+  <data name="AppVisitBugTrackerError" xml:space="preserve">
+    <value>Не удалось запустить веб-браузер для посещения системы отслеживания ошибок программы!</value>
+  </data>
   <data name="AppVisitGroupError" xml:space="preserve">
     <value>Не удалось показать страницу официальной группы ни в клиенте Steam, ни в веб-браузере!</value>
   </data>

@@ -367,6 +367,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to start web browser to visit the bug tracker!.
+        /// </summary>
+        internal static string AppVisitBugTrackerError {
+            get {
+                return ResourceManager.GetString("AppVisitBugTrackerError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to show the official group in both the Steam client and web browser..
         /// </summary>
         internal static string AppVisitGroupError {
@@ -376,7 +385,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to open web browser to visit the official website!.
+        ///   Looks up a localized string similar to Failed to start web browser to visit the official website!.
         /// </summary>
         internal static string AppVisitWebsiteError {
             get {

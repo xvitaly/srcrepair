@@ -2555,6 +2555,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExBugRep);
+                MessageBox.Show(AppStrings.AppVisitBugTrackerError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
