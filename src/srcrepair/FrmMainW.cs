@@ -1505,7 +1505,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExCfgEdSave);
-                MessageBox.Show(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.CE_CfgSVVEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -1846,7 +1846,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExCfgEdLoad);
-                    MessageBox.Show(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.CE_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
@@ -1998,7 +1998,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExSelGame);
-                MessageBox.Show(AppStrings.AppFailedToGetData, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.AppFailedToGetData, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -2131,7 +2131,7 @@ namespace srcrepair.gui
                     catch (Exception Ex)
                     {
                         Logger.Error(Ex, DebugStrings.AppDbgExGTSave);
-                        MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.GT_SaveFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -2197,7 +2197,7 @@ namespace srcrepair.gui
                     else
                     {
                         Logger.Error(DebugStrings.AppDbgFPSDnlMirror);
-                        MessageBox.Show(AppStrings.FP_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.FP_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     // Changing the state of some controls...
@@ -2208,7 +2208,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExFpsInstall);
-                MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.FP_InstallFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -2276,7 +2276,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExCfgSelection);
+                Logger.Warn(Ex, DebugStrings.AppDbgExCfgSelection);
                 MessageBox.Show(AppStrings.CS_FailedToOpenCfg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -2447,7 +2447,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Error(Ex, DebugStrings.AppDbgExRemVd);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExRemVd);
                     MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
@@ -2478,7 +2478,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Error(Ex, DebugStrings.AppDbgExValCache);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExValCache);
                     MessageBox.Show(AppStrings.AppStartSteamFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
@@ -2837,7 +2837,7 @@ namespace srcrepair.gui
                             }
                             catch (Exception Ex)
                             {
-                                Logger.Error(Ex, DebugStrings.AppDbgExBackupRem);
+                                Logger.Warn(Ex, DebugStrings.AppDbgExBackupRem);
                                 MessageBox.Show(AppStrings.BU_DelFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
                         }
@@ -2953,7 +2953,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Error(Ex, DebugStrings.AppDbgExBkSg);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExBkSg);
                     MessageBox.Show(AppStrings.BU_VideoErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
@@ -2976,7 +2976,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Error(Ex, DebugStrings.AppDbgExBkAllStm);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExBkAllStm);
                     MessageBox.Show(AppStrings.BU_RegErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
@@ -3022,7 +3022,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExKbStart);
+                Logger.Error(Ex, DebugStrings.AppDbgExKbStart);
                 MessageBox.Show(AppStrings.KB_StartError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -3283,7 +3283,7 @@ namespace srcrepair.gui
                     else
                     {
                         Logger.Error(DebugStrings.AppDbgHUDDnlMirror);
-                        MessageBox.Show(AppStrings.HD_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.HD_DownloadError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -3462,7 +3462,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExUserIdSel);
-                MessageBox.Show(AppStrings.SD_NotEnoughStmIDs, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.SD_NotEnoughStmIDs, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
