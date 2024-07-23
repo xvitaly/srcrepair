@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 45.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-15 12:05+0200\n"
-"PO-Revision-Date: 2024-07-17 09:20+0200\n"
+"POT-Creation-Date: 2024-07-23 14:38+0200\n"
+"PO-Revision-Date: 2024-07-23 14:44+0200\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -83,10 +83,12 @@ msgstr "Может ли программа украсть мой Steam акка�
 #: ../../source/faq.rst:52
 msgid ""
 "No. SRC Repair is a free and opensource program. You can check its `source "
-"code <https://github.com/xvitaly/srcrepair>`__."
+"code <https://github.com/xvitaly/srcrepair>`__ or even :ref:`build it "
+"manually <building-from-sources>`."
 msgstr ""
 "Нет, не может. Вся функциональность программы документирована, а `исходный "
-"код открыт <https://github.com/xvitaly/srcrepair>`__ для всех желающих."
+"код открыт <https://github.com/xvitaly/srcrepair>`__ для всех желающих. Вы "
+"даже можете :ref:`собрать её <building-from-sources>` самостоятельно."
 
 #: ../../source/faq.rst:58
 msgid "Is it safe to run this program with Steam simultaneously?"
@@ -94,8 +96,11 @@ msgstr "Безопасно ли запускать программу однов
 
 #: ../../source/faq.rst:60
 msgid ""
-"Yes, unless you want use the :ref:`Steam cleanup module <modules-stmcln>`."
-msgstr "Да, если не выполнять :ref:`очистку кэшей Steam <modules-stmcln>`."
+"Yes, unless you want use the :ref:`Steam cleanup module <modules-stmcln>`. "
+"But we do not recommend doing this."
+msgstr ""
+"Да, если не выполнять :ref:`очистку кэшей Steam <modules-stmcln>`. Однако мы "
+"не рекомендуем этого делать."
 
 #: ../../source/faq.rst:66
 msgid "Is it safe to run this program with controlled game simultaneously?"
@@ -111,14 +116,16 @@ msgstr ""
 "настройкам и файлам конфигурации."
 
 #: ../../source/faq.rst:74
-msgid "Can I get VAC ban for using this program?"
+msgid "Can I get VAC banned for using this program?"
 msgstr "Могут ли выдать VAC бан за использование программы?"
 
 #: ../../source/faq.rst:76
-msgid "No, but do not use this program with any running VAC protected game."
+msgid ""
+"No, you should not, but do not use this program with any VAC protected game "
+"or Steam client running."
 msgstr ""
-"Нет, но постарайтесь не использовать SRC Repair одновременно с любой "
-"защищённой VAC игрой."
+"Нет, не должны, но не используйте программу одновременно с любой защищённой "
+"VAC игрой или работающим клиентом Steam."
 
 #: ../../source/faq.rst:82
 msgid "How I can report bug or create a new feature request?"

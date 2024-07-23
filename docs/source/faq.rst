@@ -49,7 +49,7 @@ Maybe, but no ETA yet.
 Can this program steal my Steam account?
 ============================================
 
-No. SRC Repair is a free and opensource program. You can check its `source code <https://github.com/xvitaly/srcrepair>`__.
+No. SRC Repair is a free and opensource program. You can check its `source code <https://github.com/xvitaly/srcrepair>`__ or even :ref:`build it manually <building-from-sources>`.
 
 .. index:: simultaneous launch with steam
 .. _faq-steam-run:
@@ -57,7 +57,7 @@ No. SRC Repair is a free and opensource program. You can check its `source code 
 Is it safe to run this program with Steam simultaneously?
 =============================================================
 
-Yes, unless you want use the :ref:`Steam cleanup module <modules-stmcln>`.
+Yes, unless you want use the :ref:`Steam cleanup module <modules-stmcln>`. But we do not recommend doing this.
 
 .. index:: simultaneous launch with the game
 .. _faq-game-run:
@@ -70,10 +70,10 @@ We strongly recommend against doing this, as neither SRC Repair nor the managed 
 .. index:: vac ban
 .. _faq-vac:
 
-Can I get VAC ban for using this program?
-==============================================
+Can I get VAC banned for using this program?
+================================================
 
-No, but do not use this program with any running VAC protected game.
+No, you should not, but do not use this program with any VAC protected game or Steam client running.
 
 .. index:: report a bug, feature request
 .. _faq-opinion:
