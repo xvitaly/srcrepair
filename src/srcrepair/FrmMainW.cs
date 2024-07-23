@@ -2640,7 +2640,7 @@ namespace srcrepair.gui
         {
             try
             {
-                Process.Start(Properties.Resources.AppURLSteamGrID);
+                App.Platform.StartRegularProcess(Properties.Resources.AppURLSteamGrID);
             }
             catch
             {
