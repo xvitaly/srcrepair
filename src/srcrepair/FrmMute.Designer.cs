@@ -138,6 +138,7 @@
             // 
             this.MM_Table.BackgroundColor = System.Drawing.SystemColors.Window;
             this.MM_Table.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MM_Table.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.MM_Table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MM_Table.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SteamID});
