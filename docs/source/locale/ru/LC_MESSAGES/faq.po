@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 45.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-23 14:38+0200\n"
-"PO-Revision-Date: 2024-07-23 14:44+0200\n"
+"POT-Creation-Date: 2024-07-24 09:31+0200\n"
+"PO-Revision-Date: 2024-07-24 09:39+0200\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -96,11 +96,13 @@ msgstr "Безопасно ли запускать программу однов
 
 #: ../../source/faq.rst:60
 msgid ""
-"Yes, unless you want use the :ref:`Steam cleanup module <modules-stmcln>`. "
-"But we do not recommend doing this."
+"Yes, unless you want use the :ref:`Steam cleanup module <modules-stmcln>`, "
+"or the :ref:`Troubleshooting <cleanup-troubleshooting>` methods. However, we "
+"advise keeping such use cases to a minimum."
 msgstr ""
-"Да, если не выполнять :ref:`очистку кэшей Steam <modules-stmcln>`. Однако мы "
-"не рекомендуем этого делать."
+"Да, если не использовать модуль :ref:`очистки кэшей <modules-stmcln>` или "
+"инструменты для :ref:`устранения проблем <cleanup-troubleshooting>` Steam. "
+"Однако мы советуем свести подобные сценарии к минимуму."
 
 #: ../../source/faq.rst:66
 msgid "Is it safe to run this program with controlled game simultaneously?"

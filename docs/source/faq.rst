@@ -57,7 +57,7 @@ No. SRC Repair is a free and opensource program. You can check its `source code 
 Is it safe to run this program with Steam simultaneously?
 =============================================================
 
-Yes, unless you want use the :ref:`Steam cleanup module <modules-stmcln>`. But we do not recommend doing this.
+Yes, unless you want use the :ref:`Steam cleanup module <modules-stmcln>`, or the :ref:`Troubleshooting <cleanup-troubleshooting>` methods. However, we advise keeping such use cases to a minimum.
 
 .. index:: simultaneous launch with the game
 .. _faq-game-run:
