@@ -167,16 +167,17 @@ namespace srcrepair.gui
         /// <param name="RemoveItems">True to cut items and False to copy.</param>
         private void CopyOrCutItems(bool RemoveItems)
         {
-            StringBuilder SB = new StringBuilder();
-            string Delimeter = string.Empty;
-            foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
+            Clipboard.SetDataObject(MM_Table.GetClipboardContent());
+            if (RemoveItems)
             {
-                SB.Append(Delimeter);
-                SB.Append(Cell.Value);
-                if (RemoveItems) { MM_Table.Rows.RemoveAt(Cell.RowIndex); }
-                Delimeter = " ";
+                foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
+                {
+                    if (!MM_Table.Rows[Cell.RowIndex].IsNewRow)
+                    {
+                        Cell.Value = null;
+                    }
+                }
             }
-            Clipboard.SetText(SB.ToString());
         }
 
         /// <summary>
