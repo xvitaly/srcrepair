@@ -160,7 +160,7 @@ namespace srcrepair.gui
             {
                 foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
                 {
-                    if (!MM_Table.Rows[Cell.RowIndex].IsNewRow)
+                    if (!Cell.OwningRow.IsNewRow)
                     {
                         Cell.Value = null;
                     }
@@ -200,7 +200,10 @@ namespace srcrepair.gui
         {
             foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
             {
-                MM_Table.Rows.RemoveAt(Cell.RowIndex);
+                if (!Cell.OwningRow.IsNewRow)
+                {
+                    MM_Table.Rows.RemoveAt(Cell.RowIndex);
+                }
             }
         }
 
