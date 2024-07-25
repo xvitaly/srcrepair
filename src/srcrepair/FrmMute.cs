@@ -5,7 +5,6 @@
 */
 
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Text;
@@ -124,7 +123,7 @@ namespace srcrepair.gui
                     if (!CurrentRow.IsNewRow && CurrentRow.Cells[0].Value != null)
                     {
                         string Item = CurrentRow.Cells[0].Value.ToString();
-                        if (Regex.IsMatch(Item, string.Format("^{0}$", Properties.Resources.MM_SteamIDRegex)))
+                        if (Regex.IsMatch(Item, Properties.Resources.MM_SteamIDRegex))
                         {
                             BanlistWriter.Write(Encoding.ASCII.GetBytes(AlignString(Item)));
                         }
@@ -135,21 +134,6 @@ namespace srcrepair.gui
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// Extracts valid SteamIDs from source string.
-        /// </summary>
-        /// <param name="Row">Source string.</param>
-        /// <returns>List of valid SteamIDs.</returns>
-        private List<string> ParseRow(string Row)
-        {
-            List<string> Result = new List<string>();
-            foreach (Match Mh in Regex.Matches(Row, Properties.Resources.MM_SteamIDRegex))
-            {
-                Result.Add(Mh.Value);
-            }
-            return Result;
         }
 
         /// <summary>
@@ -185,16 +169,26 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Tries to find Steam UserIDs in clipboard and then insert
-        /// them to the table.
+        /// Tries to find UserIDs in the clipboard and then inserts them
+        /// into the table.
         /// </summary>
         private void PasteItems()
         {
             if (Clipboard.ContainsText())
             {
-                foreach (string Item in ParseRow(Clipboard.GetText()))
+                string[] Items = Clipboard.GetText().Split('\n');
+                for (int i = 0; i < Items.Length; i++)
                 {
-                    MM_Table.Rows.Add(Item);
+                    string Item = Items[i].Trim();
+                    if (!Regex.IsMatch(Item, Properties.Resources.MM_SteamIDRegex)) { continue; }
+                    if ((i < MM_Table.SelectedCells.Count) && !MM_Table.SelectedCells[i].OwningRow.IsNewRow)
+                    {
+                        MM_Table.SelectedCells[i].Value = Item;
+                    }
+                    else
+                    {
+                        MM_Table.Rows.Add(Item);
+                    }
                 }
             }
         }

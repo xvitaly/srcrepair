@@ -615,7 +615,7 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (STEAM_[0-9]:[0-9]:[0-9]+|\[U:[0-9]:[0-9]+\]).
+        ///   Looks up a localized string similar to ^(STEAM_[0-9]:[0-9]:[0-9]+|\[U:[0-9]:[0-9]+\])$.
         /// </summary>
         internal static string MM_SteamIDRegex {
             get {
