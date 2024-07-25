@@ -96,10 +96,10 @@ namespace srcrepair.gui
                     DatabaseHeader = BanlistReader.ReadBytes(HeaderLength);
                     do
                     {
-                        string Entry = Encoding.ASCII.GetString(BanlistReader.ReadBytes(ElementLength)).TrimEnd('\0');
-                        if (!string.IsNullOrEmpty(Entry))
+                        string Item = Encoding.ASCII.GetString(BanlistReader.ReadBytes(ElementLength)).TrimEnd('\0');
+                        if (!string.IsNullOrEmpty(Item))
                         {
-                            MM_Table.Rows.Add(Entry);
+                            MM_Table.Rows.Add(Item);
                         }
                     }
                     while (BanlistStream.Position < BanlistStream.Length);
@@ -123,14 +123,14 @@ namespace srcrepair.gui
                 {
                     if (!CurrentRow.IsNewRow && CurrentRow.Cells[0].Value != null)
                     {
-                        string Str = CurrentRow.Cells[0].Value.ToString();
-                        if (Regex.IsMatch(Str, string.Format("^{0}$", Properties.Resources.MM_SteamIDRegex)))
+                        string Item = CurrentRow.Cells[0].Value.ToString();
+                        if (Regex.IsMatch(Item, string.Format("^{0}$", Properties.Resources.MM_SteamIDRegex)))
                         {
-                            BanlistWriter.Write(Encoding.ASCII.GetBytes(AlignString(Str)));
+                            BanlistWriter.Write(Encoding.ASCII.GetBytes(AlignString(Item)));
                         }
                         else
                         {
-                            Logger.Warn(DebugStrings.AppDbgMutedPlayersWrongFormat, Str);
+                            Logger.Warn(DebugStrings.AppDbgMutedPlayersWrongFormat, Item);
                         }
                     }
                 }
