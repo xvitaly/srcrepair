@@ -2666,7 +2666,7 @@ namespace srcrepair.gui
             {
                 foreach (DataGridViewCell Cell in CE_Editor.SelectedCells)
                 {
-                    if (Cell.RowIndex != -1 && !CE_Editor.Rows[Cell.RowIndex].IsNewRow)
+                    if (Cell.RowIndex != -1 && !Cell.OwningRow.IsNewRow)
                     {
                         CE_Editor.Rows.RemoveAt(Cell.RowIndex);
                     }
@@ -2714,7 +2714,7 @@ namespace srcrepair.gui
                     Clipboard.SetDataObject(CE_Editor.GetClipboardContent());
                     foreach (DataGridViewCell Cell in CE_Editor.SelectedCells)
                     {
-                        if (!CE_Editor.Rows[Cell.RowIndex].IsNewRow)
+                        if (!Cell.OwningRow.IsNewRow)
                         {
                             Cell.Value = null;
                         }
