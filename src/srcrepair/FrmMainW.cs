@@ -848,6 +848,31 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Copies the contents of the selected cells to the clipboard.
+        /// </summary>
+        private void HandleCopy()
+        {
+            if (CE_Editor.SelectedCells.Count > 0)
+            {
+                Clipboard.SetDataObject(CE_Editor.GetClipboardContent());
+            }
+        }
+
+        /// <summary>
+        /// Clears the contents of the selected cells.
+        /// </summary>
+        private void HandleClearSelection()
+        {
+            foreach (DataGridViewCell Cell in CE_Editor.SelectedCells)
+            {
+                if (!Cell.OwningRow.IsNewRow)
+                {
+                    Cell.Value = null;
+                }
+            }
+        }
+
+        /// <summary>
         /// Pastes the contents of the clipboard into the selected cell.
         /// </summary>
         private void HandlePasteSingle()
@@ -2735,10 +2760,7 @@ namespace srcrepair.gui
         {
             try
             {
-                if (CE_Editor.SelectedCells.Count > 0)
-                {
-                    Clipboard.SetDataObject(CE_Editor.GetClipboardContent());
-                }
+                HandleCopy();
             }
             catch (Exception Ex)
             {
@@ -2756,17 +2778,8 @@ namespace srcrepair.gui
         {
             try
             {
-                if (CE_Editor.SelectedCells.Count > 0)
-                {
-                    Clipboard.SetDataObject(CE_Editor.GetClipboardContent());
-                    foreach (DataGridViewCell Cell in CE_Editor.SelectedCells)
-                    {
-                        if (!Cell.OwningRow.IsNewRow)
-                        {
-                            Cell.Value = null;
-                        }
-                    }
-                }
+                HandleCopy();
+                HandleClearSelection();
             }
             catch (Exception Ex)
             {
