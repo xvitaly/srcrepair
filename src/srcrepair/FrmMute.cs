@@ -150,20 +150,26 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Handles copy and cut operations in table.
+        /// Copies the contents of the selected cells to the clipboard.
         /// </summary>
-        /// <param name="RemoveItems">True to cut items and False to copy.</param>
-        private void CopyOrCutItems(bool RemoveItems)
+        private void CopyItems()
         {
-            Clipboard.SetDataObject(MM_Table.GetClipboardContent());
-            if (RemoveItems)
+            if (MM_Table.SelectedCells.Count > 0)
             {
-                foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
+                Clipboard.SetDataObject(MM_Table.GetClipboardContent());
+            }
+        }
+
+        /// <summary>
+        /// Clears the contents of the selected cells.
+        /// </summary>
+        private void ClearItems()
+        {
+            foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
+            {
+                if (!Cell.OwningRow.IsNewRow)
                 {
-                    if (!Cell.OwningRow.IsNewRow)
-                    {
-                        Cell.Value = null;
-                    }
+                    Cell.Value = null;
                 }
             }
         }
@@ -341,7 +347,8 @@ namespace srcrepair.gui
         {
             try
             {
-                CopyOrCutItems(true);
+                CopyItems();
+                ClearItems();
             }
             catch (Exception Ex)
             {
@@ -359,7 +366,7 @@ namespace srcrepair.gui
         {
             try
             {
-                CopyOrCutItems(false);
+                CopyItems();
             }
             catch (Exception Ex)
             {
