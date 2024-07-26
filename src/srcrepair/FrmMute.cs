@@ -291,7 +291,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExMMReadDb);
-                MessageBox.Show(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -309,7 +309,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExMMRefresh);
-                MessageBox.Show(AppStrings.MM_RefreshError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.MM_RefreshError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
