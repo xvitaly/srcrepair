@@ -848,6 +848,53 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Pastes the contents of the clipboard into the selected cell.
+        /// </summary>
+        private void HandlePasteSingle()
+        {
+            if (!CE_Editor.Rows[CE_Editor.CurrentRow.Index].IsNewRow && Clipboard.ContainsText())
+            {
+                CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = Clipboard.GetText().Trim();
+            }
+        }
+
+        /// <summary>
+        /// Pastes the contents of the clipboard into the selected cells.
+        /// Internal implementation.
+        /// </summary>
+        private void HandlePasteMultipleInternal()
+        {
+            string[] Items = Clipboard.GetText().Split('\n');
+            for (int i = 0; i < Items.Length; i++)
+            {
+                string[] Item = Items[i].Split('\t');
+                if (Item.Length > 1 && !string.IsNullOrWhiteSpace(Item[0]) && !string.IsNullOrWhiteSpace(Item[1]))
+                {
+                    if ((i < CE_Editor.SelectedRows.Count) && !CE_Editor.SelectedRows[i].IsNewRow)
+                    {
+                        CE_Editor.SelectedRows[i].Cells[0].Value = Item[0].Trim();
+                        CE_Editor.SelectedRows[i].Cells[1].Value = Item[1].Trim();
+                    }
+                    else
+                    {
+                        CE_Editor.Rows.Add(Item[0].Trim(), Item[1].Trim());
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Pastes the contents of the clipboard into the selected cells.
+        /// </summary>
+        private void HandlePasteMultiple()
+        {
+            if (Clipboard.ContainsText())
+            {
+                HandlePasteMultipleInternal();
+            }
+        }
+
+        /// <summary>
         /// Downloads and shows on the form screenshot of the selected HUD.
         /// </summary>
         private async Task HandleHUDScreenshot()
@@ -2737,10 +2784,7 @@ namespace srcrepair.gui
         {
             try
             {
-                if (Clipboard.ContainsText())
-                {
-                    CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[CE_Editor.CurrentCell.ColumnIndex].Value = Clipboard.GetText();
-                }
+                if (CE_Editor.SelectedCells.Count == 1) { HandlePasteSingle(); } else { HandlePasteMultiple(); }
             }
             catch (Exception Ex)
             {
