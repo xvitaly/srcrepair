@@ -288,7 +288,7 @@ Graphics by:
 
 SRC Repair's icon by Lopagof. Licensed under the terms of the CC-BY-NC-ND-3.0 license.
 
-Third party libraries (dynamic linked):
+Third party libraries (dynamically linked):
  - NLog (BSD license).
 
 Additional information about the components used in this project, including the name of the author of each component, full license names, and important links, can be found in the help system on the Legal page.</value>
