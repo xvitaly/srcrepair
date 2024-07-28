@@ -4194,7 +4194,7 @@
     <value>23, 22</value>
   </data>
   <data name="BUT_Refresh.Text" xml:space="preserve">
-    <value>Update BackUps list...</value>
+    <value>Update BackUps list</value>
   </data>
   <data name="BUT_Sep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>

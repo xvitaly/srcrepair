@@ -788,7 +788,7 @@
     <value>Дата создания</value>
   </data>
   <data name="BUT_Refresh.Text" xml:space="preserve">
-    <value>Обновить список резервных копий...</value>
+    <value>Обновить список резервных копий</value>
   </data>
   <data name="BUT_Restore.Text" xml:space="preserve">
     <value>Восстановить резервную копию</value>
