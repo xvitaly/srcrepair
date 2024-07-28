@@ -838,6 +838,23 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Shows the description of the specified variable or function.
+        /// </summary>
+        /// <param name="Variable">Variable name.</param>
+        private void ShowVariableDescription(string Variable)
+        {
+            string Description = CvarFetcher.GetString(Variable);
+            if (!string.IsNullOrEmpty(Description))
+            {
+                MessageBox.Show(Description, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.CE_ClNoDescr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
         /// Handles with installed FPS-configs and shows special icon.
         /// </summary>
         private void HandleConfigs()
@@ -2649,22 +2666,21 @@ namespace srcrepair.gui
         {
             try
             {
-                string Buf = CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[0].Value.ToString();
-                if (!string.IsNullOrEmpty(Buf))
+                if (CE_Editor.SelectedCells.Count > 0)
                 {
-                    Buf = CvarFetcher.GetString(Buf);
-                    if (!string.IsNullOrEmpty(Buf))
+                    DataGridViewCell Item = CE_Editor.Rows[CE_Editor.CurrentRow.Index].Cells[0];
+                    if (!Item.OwningRow.IsNewRow && (Item.Value != null))
                     {
-                        MessageBox.Show(Buf, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ShowVariableDescription(Item.Value.ToString());
                     }
                     else
                     {
-                        MessageBox.Show(AppStrings.CE_ClNoDescr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show(AppStrings.CE_ClSelErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show(AppStrings.CE_NoSelection, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception Ex)
