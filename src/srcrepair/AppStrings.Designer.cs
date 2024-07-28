@@ -763,6 +763,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please select a cell in order to use this function!.
+        /// </summary>
+        internal static string CE_NoSelection {
+            get {
+                return ResourceManager.GetString("CE_NoSelection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Could not read the contents of the config file!.
         /// </summary>
         internal static string CE_OpenFailed {

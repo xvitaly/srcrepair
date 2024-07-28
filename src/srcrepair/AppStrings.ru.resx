@@ -349,7 +349,10 @@
     <value>Не удалось создать резервную копию текущего конфига!</value>
   </data>
   <data name="CE_NoFileOpened" xml:space="preserve">
-    <value>Для использования этой функции откройте файл.</value>
+    <value>Для использования этой функции откройте файл!</value>
+  </data>
+  <data name="CE_NoSelection" xml:space="preserve">
+    <value>Для использования этой функции выделите ячейку!</value>
   </data>
   <data name="CE_OpenFailed" xml:space="preserve">
     <value>Невозможно считать содержимое конфига, т.к. файл не найден!</value>

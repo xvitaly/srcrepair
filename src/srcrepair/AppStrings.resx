@@ -351,6 +351,9 @@
   <data name="CE_NoFileOpened" xml:space="preserve">
     <value>Please open file first in order to use this funtion!</value>
   </data>
+  <data name="CE_NoSelection" xml:space="preserve">
+    <value>Please select a cell in order to use this function!</value>
+  </data>
   <data name="CE_OpenFailed" xml:space="preserve">
     <value>Could not read the contents of the config file!</value>
   </data>
