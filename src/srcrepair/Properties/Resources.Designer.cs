@@ -115,6 +115,15 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to steam://validate/{0}.
+        /// </summary>
+        internal static string AppURLGameValidate {
+            get {
+                return ResourceManager.GetString("AppURLGameValidate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to steam://url/GroupSteamIDPage/103582791431662552.
         /// </summary>
         internal static string AppURLSteamGrID {

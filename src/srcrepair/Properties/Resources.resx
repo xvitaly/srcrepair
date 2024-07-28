@@ -301,4 +301,7 @@
   <data name="AppHelpDirectory" xml:space="preserve">
     <value>help</value>
   </data>
+  <data name="AppURLGameValidate" xml:space="preserve">
+    <value>steam://validate/{0}</value>
+  </data>
 </root>

@@ -2562,7 +2562,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    App.Platform.StartRegularProcess(string.Format("steam://validate/{0}", App.SourceGames[AppSelector.Text].GameInternalID));
+                    App.Platform.StartRegularProcess(string.Format(Properties.Resources.AppURLGameValidate, App.SourceGames[AppSelector.Text].GameInternalID));
                 }
                 catch (Exception Ex)
                 {
