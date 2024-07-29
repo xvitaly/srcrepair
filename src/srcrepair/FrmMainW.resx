@@ -2502,7 +2502,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_ManualBackUpCfg.Text" xml:space="preserve">
-    <value>BackUp current config file</value>
+    <value>Create a BackUp of the config file</value>
   </data>
   <data name="CE_ToolSep2.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>

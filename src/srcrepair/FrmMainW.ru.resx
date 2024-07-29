@@ -619,7 +619,7 @@
     <value>Открыть конфиг в текстовом редакторе</value>
   </data>
   <data name="CE_ManualBackUpCfg.Text" xml:space="preserve">
-    <value>Создать бэкап конфига</value>
+    <value>Создать резервную копию конфига</value>
   </data>
   <data name="CE_ShowHint.Text" xml:space="preserve">
     <value>Подсказка (F7)</value>
