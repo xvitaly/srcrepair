@@ -797,7 +797,7 @@
     <value>Удалить резервную копию</value>
   </data>
   <data name="BUT_TextEditor.Text" xml:space="preserve">
-    <value>Загрузить резервную копию в текстовый редактор</value>
+    <value>Открыть файл резервной копии в текстовом редакторе</value>
   </data>
   <data name="BUT_ShowFile.Text" xml:space="preserve">
     <value>Показать файл резервной копии в файловом менеджере</value>

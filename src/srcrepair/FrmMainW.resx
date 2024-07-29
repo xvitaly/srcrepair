@@ -4227,7 +4227,7 @@
     <value>23, 22</value>
   </data>
   <data name="BUT_TextEditor.Text" xml:space="preserve">
-    <value>Load BackUp in text editor</value>
+    <value>Open BackUp file in text editor</value>
   </data>
   <data name="BUT_ShowFile.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
