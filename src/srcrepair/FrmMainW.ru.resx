@@ -797,10 +797,10 @@
     <value>Удалить резервную копию</value>
   </data>
   <data name="BUT_TextEditor.Text" xml:space="preserve">
-    <value>Открыть файл резервной копии в текстовом редакторе</value>
+    <value>Открыть резервную копию в текстовом редакторе</value>
   </data>
   <data name="BUT_ShowFile.Text" xml:space="preserve">
-    <value>Показать файл резервной копии в файловом менеджере</value>
+    <value>Показать резервную копию в файловом менеджере</value>
   </data>
   <data name="BUT_GameSettings.Size" type="System.Drawing.Size, System.Drawing">
     <value>287, 22</value>

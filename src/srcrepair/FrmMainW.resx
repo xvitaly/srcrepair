@@ -4227,7 +4227,7 @@
     <value>23, 22</value>
   </data>
   <data name="BUT_TextEditor.Text" xml:space="preserve">
-    <value>Open BackUp file in text editor</value>
+    <value>Open BackUp in text editor</value>
   </data>
   <data name="BUT_ShowFile.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
@@ -4236,7 +4236,7 @@
     <value>23, 22</value>
   </data>
   <data name="BUT_ShowFile.Text" xml:space="preserve">
-    <value>Show BackUp file in file manager</value>
+    <value>Show BackUp in file manager</value>
   </data>
   <data name="BUT_Sep3.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>
