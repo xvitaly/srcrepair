@@ -236,7 +236,7 @@ namespace srcrepair.core
                         break;
                     case 2:
                         _DisplayMode = 1;
-                        _DisplayBorderless = 0;
+                        _DisplayBorderless = 1;
                         break;
                     default:
                         Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ScreenMode");
