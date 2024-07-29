@@ -88,7 +88,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _DisplayMode, "_DisplayMode");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _DisplayMode, nameof(_DisplayMode));
                         break;
                 }
 
@@ -106,7 +106,7 @@ namespace srcrepair.core
                         _DisplayMode = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "DisplayMode");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(DisplayMode));
                         break;
                 }
             }
@@ -133,7 +133,7 @@ namespace srcrepair.core
                         res = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ModelDetail, "_ModelDetail");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ModelDetail, nameof(_ModelDetail));
                         break;
                 }
 
@@ -154,7 +154,7 @@ namespace srcrepair.core
                         _ModelDetail = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ModelQuality");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(ModelQuality));
                         break;
                 }
             }
@@ -184,7 +184,7 @@ namespace srcrepair.core
                         res = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _TextureDetail, "_TextureDetail");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _TextureDetail, nameof(_TextureDetail));
                         break;
                 }
 
@@ -208,7 +208,7 @@ namespace srcrepair.core
                         _TextureDetail = -1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "TextureQuality");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(TextureQuality));
                         break;
                 }
             }
@@ -232,7 +232,7 @@ namespace srcrepair.core
                         res = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ShaderDetail, "_ShaderDetail");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ShaderDetail, nameof(_ShaderDetail));
                         break;
                 }
 
@@ -250,7 +250,7 @@ namespace srcrepair.core
                         _ShaderDetail = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ShaderQuality");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(ShaderQuality));
                         break;
                 }
             }
@@ -280,12 +280,12 @@ namespace srcrepair.core
                                 res = 2;
                                 break;
                             default:
-                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _WaterReflections, "_WaterReflections");
+                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _WaterReflections, nameof(_WaterReflections));
                                 break;
                         }
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _WaterDetail, "_WaterDetail");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _WaterDetail, nameof(_WaterDetail));
                         break;
                 }
 
@@ -309,7 +309,7 @@ namespace srcrepair.core
                         _WaterReflections = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ReflectionsQuality");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(ReflectionsQuality));
                         break;
                 }
             }
@@ -333,7 +333,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ShadowQuality, "_ShadowQuality");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ShadowQuality, nameof(_ShadowQuality));
                         break;
                 }
 
@@ -351,7 +351,7 @@ namespace srcrepair.core
                         _ShadowQuality = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ShadowQuality");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(ShadowQuality));
                         break;
                 }
             }
@@ -375,7 +375,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ColorCorrection, "_ColorCorrection");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _ColorCorrection, nameof(_ColorCorrection));
                         break;
                 }
 
@@ -393,7 +393,7 @@ namespace srcrepair.core
                         _ColorCorrection = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "ColorCorrection");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(ColorCorrection));
                         break;
                 }
             }
@@ -420,7 +420,7 @@ namespace srcrepair.core
                                 res = 1;
                                 break;
                             default:
-                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _FilteringTrilinear, "_FilteringTrilinear");
+                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _FilteringTrilinear, nameof(_FilteringTrilinear));
                                 break;
                         }
                         break;
@@ -437,7 +437,7 @@ namespace srcrepair.core
                         res = 5;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _FilteringMode, "_FilteringMode");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _FilteringMode, nameof(_FilteringMode));
                         break;
                 }
 
@@ -473,7 +473,7 @@ namespace srcrepair.core
                         _FilteringTrilinear = 0;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "FilteringMode");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(FilteringMode));
                         break;
                 }
             }
@@ -497,7 +497,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _VSync, "_VSync");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _VSync, nameof(_VSync));
                         break;
                 }
 
@@ -515,7 +515,7 @@ namespace srcrepair.core
                         _VSync = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "VSync");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(VSync));
                         break;
                 }
             }
@@ -545,7 +545,7 @@ namespace srcrepair.core
                         res = 3;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _DirectXMode, "_DirectXMode");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _DirectXMode, nameof(_DirectXMode));
                         break;
                 }
 
@@ -569,7 +569,7 @@ namespace srcrepair.core
                         _DirectXMode = 95;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "DirectXMode");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(DirectXMode));
                         break;
                 }
             }
@@ -596,7 +596,7 @@ namespace srcrepair.core
                         res = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _HDRMode, "_HDRMode");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _HDRMode, nameof(_HDRMode));
                         break;
                 }
 
@@ -617,7 +617,7 @@ namespace srcrepair.core
                         _HDRMode = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "HDRType");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(HDRType));
                         break;
                 }
             }

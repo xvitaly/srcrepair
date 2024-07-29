@@ -129,7 +129,7 @@ namespace srcrepair.core
                                 res = 4;
                                 break;
                             default:
-                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _AntiAliasQuality, "_AntiAliasQuality");
+                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _AntiAliasQuality, nameof(_AntiAliasQuality));
                                 break;
                         }
                         break;
@@ -143,12 +143,12 @@ namespace srcrepair.core
                                 res = 6;
                                 break;
                             default:
-                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _AntiAliasQuality, "_AntiAliasQuality");
+                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _AntiAliasQuality, nameof(_AntiAliasQuality));
                                 break;
                         }
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _AntiAliasing, "_AntiAliasing");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _AntiAliasing, nameof(_AntiAliasing));
                         break;
                 }
 
@@ -188,7 +188,7 @@ namespace srcrepair.core
                         _AntiAliasQuality = 2;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "AntiAliasing");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(AntiAliasing));
                         break;
                 }
             }
@@ -212,7 +212,7 @@ namespace srcrepair.core
                         res = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _MotionBlur, "_MotionBlur");
+                        Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _MotionBlur, nameof(_MotionBlur));
                         break;
                 }
 
@@ -230,7 +230,7 @@ namespace srcrepair.core
                         _MotionBlur = 1;
                         break;
                     default:
-                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, "MotionBlur");
+                        Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(MotionBlur));
                         break;
                 }
             }
