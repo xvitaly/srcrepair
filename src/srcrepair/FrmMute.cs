@@ -220,6 +220,7 @@ namespace srcrepair.gui
         {
             foreach (DataGridViewCell Cell in MM_Table.SelectedCells)
             {
+                if (Cell.OwningRow.IsNewRow || (Cell.Value == null)) { continue; }
                 string CellText = Cell.Value.ToString();
                 if (Regex.IsMatch(CellText, Properties.Resources.MM_SteamID32Regex))
                 {
