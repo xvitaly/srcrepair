@@ -142,6 +142,15 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to steam://open/main.
+        /// </summary>
+        internal static string AppURLSteamStart {
+            get {
+                return ResourceManager.GetString("AppURLSteamStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair.
         /// </summary>
         internal static string AppURLWebsite {

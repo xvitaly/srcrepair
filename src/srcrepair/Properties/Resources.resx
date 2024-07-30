@@ -304,4 +304,7 @@
   <data name="AppURLGameValidate" xml:space="preserve">
     <value>steam://validate/{0}</value>
   </data>
+  <data name="AppURLSteamStart" xml:space="preserve">
+    <value>steam://open/main</value>
+  </data>
 </root>

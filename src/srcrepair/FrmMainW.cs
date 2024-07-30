@@ -1262,10 +1262,8 @@ namespace srcrepair.gui
         {
             try
             {
-                if (File.Exists(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName)))
-                {
-                    App.Platform.StartRegularProcess(Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName));
-                }
+                string ClientBinary = Path.Combine(App.SteamClient.FullSteamPath, App.Platform.SteamBinaryName);
+                App.Platform.StartRegularProcess(File.Exists(ClientBinary) ? ClientBinary : Properties.Resources.AppURLSteamStart);
             }
             catch (Exception Ex)
             {
