@@ -243,6 +243,9 @@
   <data name="LV_LogArea.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 24</value>
   </data>
+  <data name="LV_LogArea.MaxLength" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="LV_LogArea.Multiline" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
