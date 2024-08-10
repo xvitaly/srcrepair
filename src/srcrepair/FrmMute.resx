@@ -217,7 +217,7 @@
     <value>372, 22</value>
   </data>
   <data name="MM_StatusBar.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="MM_StatusBar.Text" xml:space="preserve">
     <value>statusStrip1</value>
@@ -242,9 +242,6 @@
   </metadata>
   <data name="SteamID.HeaderText" xml:space="preserve">
     <value>SteamID</value>
-  </data>
-  <data name="SteamID.Width" type="System.Int32, mscorlib">
-    <value>310</value>
   </data>
   <metadata name="MM_Context.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>349, 17</value>
@@ -318,14 +315,17 @@
   <data name="&gt;&gt;MM_Context.Type" xml:space="preserve">
     <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="MM_Table.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
   <data name="MM_Table.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 49</value>
+    <value>0, 0</value>
   </data>
   <data name="MM_Table.Size" type="System.Drawing.Size, System.Drawing">
-    <value>372, 217</value>
+    <value>372, 215</value>
   </data>
   <data name="MM_Table.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;MM_Table.Name" xml:space="preserve">
     <value>MM_Table</value>
@@ -334,10 +334,10 @@
     <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MM_Table.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>MM_Table_Panel</value>
   </data>
   <data name="&gt;&gt;MM_Table.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <metadata name="MM_Toolbar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>236, 17</value>
@@ -442,7 +442,7 @@
     <value>372, 25</value>
   </data>
   <data name="MM_Toolbar.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>1</value>
   </data>
   <data name="MM_Toolbar.Text" xml:space="preserve">
     <value>toolStrip1</value>
@@ -457,6 +457,33 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;MM_Toolbar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="MM_Table_Panel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="MM_Table_Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="MM_Table_Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 49</value>
+  </data>
+  <data name="MM_Table_Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>372, 215</value>
+  </data>
+  <data name="MM_Table_Panel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;MM_Table_Panel.Name" xml:space="preserve">
+    <value>MM_Table_Panel</value>
+  </data>
+  <data name="&gt;&gt;MM_Table_Panel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MM_Table_Panel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MM_Table_Panel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

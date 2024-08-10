@@ -62,11 +62,13 @@
             this.MM_Steam = new System.Windows.Forms.ToolStripButton();
             this.MM_Sep3 = new System.Windows.Forms.ToolStripSeparator();
             this.MM_About = new System.Windows.Forms.ToolStripButton();
+            this.MM_Table_Panel = new System.Windows.Forms.Panel();
             this.MM_Menu.SuspendLayout();
             this.MM_StatusBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MM_Table)).BeginInit();
             this.MM_Context.SuspendLayout();
             this.MM_Toolbar.SuspendLayout();
+            this.MM_Table_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // MM_Menu
@@ -149,6 +151,7 @@
             // 
             // SteamID
             // 
+            this.SteamID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             resources.ApplyResources(this.SteamID, "SteamID");
             this.SteamID.Name = "SteamID";
             // 
@@ -317,12 +320,18 @@
             this.MM_About.Name = "MM_About";
             this.MM_About.Click += new System.EventHandler(this.MM_About_Click);
             // 
+            // MM_Table_Panel
+            // 
+            this.MM_Table_Panel.Controls.Add(this.MM_Table);
+            resources.ApplyResources(this.MM_Table_Panel, "MM_Table_Panel");
+            this.MM_Table_Panel.Name = "MM_Table_Panel";
+            // 
             // FrmMute
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.MM_Table_Panel);
             this.Controls.Add(this.MM_Toolbar);
-            this.Controls.Add(this.MM_Table);
             this.Controls.Add(this.MM_StatusBar);
             this.Controls.Add(this.MM_Menu);
             this.DoubleBuffered = true;
@@ -342,6 +351,7 @@
             this.MM_Context.ResumeLayout(false);
             this.MM_Toolbar.ResumeLayout(false);
             this.MM_Toolbar.PerformLayout();
+            this.MM_Table_Panel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -370,7 +380,6 @@
         private System.Windows.Forms.ToolStripButton MM_About;
         private System.Windows.Forms.ToolStripButton MM_Delete;
         private System.Windows.Forms.ToolStripSeparator MM_Sep3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SteamID;
         private System.Windows.Forms.ContextMenuStrip MM_Context;
         private System.Windows.Forms.ToolStripMenuItem MM_CRemove;
         private System.Windows.Forms.ToolStripMenuItem MM_CCut;
@@ -381,5 +390,7 @@
         private System.Windows.Forms.ToolStripMenuItem MM_CConvert;
         private System.Windows.Forms.ToolStripButton MM_Steam;
         private System.Windows.Forms.ToolStripMenuItem MM_CSteam;
+        private System.Windows.Forms.Panel MM_Table_Panel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SteamID;
     }
 }
