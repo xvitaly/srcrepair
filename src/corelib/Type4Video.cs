@@ -80,7 +80,7 @@ namespace srcrepair.core
         /// </summary>
         private void ReadVideoFile()
         {
-            VideoFile = File.ReadAllLines(VideoFileName).ToList<string>();
+            VideoFile = File.ReadAllLines(VideoFileName).ToList();
         }
 
         /// <summary>
