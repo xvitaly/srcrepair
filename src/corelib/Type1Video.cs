@@ -752,7 +752,7 @@ namespace srcrepair.core
         public Type1Video(string SAppName)
         {
             VSettings = new Type1Settings();
-            RegKey = Path.Combine("Software", "Valve", "Source", SAppName, "Settings");
+            RegKey = string.Format(@"Software\Valve\Source\{0}\Settings", SAppName);
         }
     }
 }
