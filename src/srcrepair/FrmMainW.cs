@@ -1286,10 +1286,7 @@ namespace srcrepair.gui
                     {
                         MessageBox.Show(string.Format(AppStrings.AppUpdateAvailable, Properties.Resources.AppName), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else
-                    {
-                        Properties.Settings.Default.LastUpdateTime = DateTime.Now;
-                    }
+                    Properties.Settings.Default.LastUpdateTime = DateTime.Now;
                 }
                 catch (Exception Ex)
                 {
