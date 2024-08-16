@@ -68,20 +68,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Scales controls on current form with some additional hacks applied.
-        /// </summary>
-        /// <param name="ScalingFactor">Scaling factor.</param>
-        /// <param name="ControlBounds">The bounds of the control.</param>
-        protected override void ScaleControl(SizeF ScalingFactor, BoundsSpecified ControlBounds)
-        {
-            base.ScaleControl(ScalingFactor, ControlBounds);
-            if (!DpiManager.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
-            {
-                DpiManager.ScaleColumnsInControl(MM_Table, ScalingFactor);
-            }
-        }
-
-        /// <summary>
         /// Reads contents from muted players database file and
         /// renders it on form.
         /// </summary>
