@@ -59,5 +59,8 @@
     <Setting Name="LastCleanupTime" Type="System.DateTime" Scope="User">
       <Value Profile="(Default)">2021-03-07</Value>
     </Setting>
+    <Setting Name="UpdateCheckInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
