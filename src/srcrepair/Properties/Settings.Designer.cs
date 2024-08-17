@@ -259,5 +259,17 @@ namespace srcrepair.gui.Properties {
                 this["UpdateCheckInterval"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("7")]
+        public int CleanupInterval {
+            get {
+                return ((int)(this["CleanupInterval"]));
+            }
+            set {
+                this["CleanupInterval"] = value;
+            }
+        }
     }
 }

@@ -1350,7 +1350,7 @@ namespace srcrepair.gui
         private bool IsCleanupNeeded()
         {
             if (!App.Platform.AutoUpdateSupported) { return false; }
-            return (DateTime.Now - Properties.Settings.Default.LastCleanupTime).Days >= 7;
+            return (DateTime.Now - Properties.Settings.Default.LastCleanupTime).Days >= Properties.Settings.Default.CleanupInterval;
         }
 
         /// <summary>
