@@ -1093,11 +1093,15 @@
             // 
             // CE_CVName
             // 
+            this.CE_CVName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CE_CVName.FillWeight = 35F;
             resources.ApplyResources(this.CE_CVName, "CE_CVName");
             this.CE_CVName.Name = "CE_CVName";
             // 
             // CE_CVal
             // 
+            this.CE_CVal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CE_CVal.FillWeight = 65F;
             resources.ApplyResources(this.CE_CVal, "CE_CVal");
             this.CE_CVal.Name = "CE_CVal";
             // 

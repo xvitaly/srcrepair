@@ -2558,17 +2558,11 @@
   <data name="CE_CVName.HeaderText" xml:space="preserve">
     <value>Variable</value>
   </data>
-  <data name="CE_CVName.Width" type="System.Int32, mscorlib">
-    <value>135</value>
-  </data>
   <metadata name="CE_CVal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="CE_CVal.HeaderText" xml:space="preserve">
     <value>Value</value>
-  </data>
-  <data name="CE_CVal.Width" type="System.Int32, mscorlib">
-    <value>255</value>
   </data>
   <data name="CE_Editor.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 29</value>
