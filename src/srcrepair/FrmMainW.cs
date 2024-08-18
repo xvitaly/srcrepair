@@ -66,7 +66,6 @@ namespace srcrepair.gui
             base.ScaleControl(ScalingFactor, ControlBounds);
             if (!DpiManager.CompareFloats(Math.Max(ScalingFactor.Width, ScalingFactor.Height), 1.0f))
             {
-                DpiManager.ScaleColumnsInControl(CE_Editor, ScalingFactor);
                 DpiManager.ScaleColumnsInControl(BU_LVTable, ScalingFactor);
                 DpiManager.ScaleColumnsInControl(StatusBar, ScalingFactor);
             }
