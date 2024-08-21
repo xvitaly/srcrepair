@@ -73,8 +73,10 @@ namespace srcrepair.gui
                         {
                             // Extracting file or directory...
                             string FullName = Path.GetFullPath(Path.Combine(DestinationDirectory, ZFile.FullName));
+                            string DirectoryName = Path.GetDirectoryName(FullName);
                             if (!FullName.StartsWith(Path.GetFullPath(DestinationDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException(DebugStrings.AppDbgZipPathTraversalDetected); }
-                            if (string.IsNullOrEmpty(ZFile.Name)) { Directory.CreateDirectory(FullName); } else { ZFile.ExtractToFile(FullName, true); }
+                            if (!Directory.Exists(DirectoryName)) { Directory.CreateDirectory(DirectoryName); }
+                            if (!string.IsNullOrEmpty(ZFile.Name)) { ZFile.ExtractToFile(FullName, true); }
 
                             // Reporting progress...
                             CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
