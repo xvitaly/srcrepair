@@ -125,6 +125,7 @@ namespace srcrepair.core
         /// <returns>Clean string with removed special characters.</returns>
         public static string CleanString(string RecvStr, bool CleanQuotes, bool CleanSlashes, bool CleanComments)
         {
+            if (string.IsNullOrEmpty(RecvStr)) { return RecvStr; }
             RecvStr = RemoveTabs(RecvStr);
             RecvStr = RemoveNullBytes(RecvStr);
             RecvStr = RemoveMultipleSpaces(RecvStr);
