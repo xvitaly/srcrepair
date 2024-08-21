@@ -274,7 +274,8 @@ namespace srcrepair.core
         {
             try
             {
-                return Convert.ToInt32(GetRawValue(CVar));
+                string RawValue = GetRawValue(CVar);
+                return !string.IsNullOrEmpty(RawValue) ? Convert.ToInt32(RawValue) : DefaultValue;
             }
             catch (Exception Ex)
             {
@@ -304,7 +305,8 @@ namespace srcrepair.core
         {
             try
             {
-                return Convert.ToDecimal(GetRawValue(CVar), CI);
+                string RawValue = GetRawValue(CVar);
+                return !string.IsNullOrEmpty(RawValue) ? Convert.ToDecimal(RawValue, CI) : DefaultValue;
             }
             catch (Exception Ex)
             {
@@ -354,7 +356,7 @@ namespace srcrepair.core
         protected static string ExtractCVFromLine(string LineA)
         {
             LineA = StringsManager.CleanString(LineA, true, false, false);
-            return LineA.Substring(LineA.LastIndexOf(" ", StringComparison.InvariantCulture)).Trim();
+            return LineA?.Substring(LineA.LastIndexOf(" ", StringComparison.InvariantCulture))?.Trim();
         }
     }
 }
