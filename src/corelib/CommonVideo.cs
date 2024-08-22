@@ -319,7 +319,6 @@ namespace srcrepair.core
         /// Gets Cvar value of decimal type from video file.
         /// </summary>
         /// <param name="CVar">Cvar name.</param>
-        /// <param name="DefaultValue">Cvar default value.</param>
         /// <returns>Cvar value from video file.</returns>
         protected decimal GetNCFDble(string CVar)
         {
