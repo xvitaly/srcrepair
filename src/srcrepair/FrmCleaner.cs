@@ -287,7 +287,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExClnEmptyDirs);
                     }
                 }
             }
@@ -318,7 +318,7 @@ namespace srcrepair.gui
                     Progress.Report(new Tuple<int, String>(0, AppStrings.PS_ProgressArchive));
                     if (!FileManager.CompressFiles(DeleteQueue, FileManager.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
-                        Logger.Error(AppStrings.PS_ArchFailed);
+                        Logger.Warn(AppStrings.PS_ArchFailed);
                     }
                 }
             });
@@ -461,7 +461,7 @@ namespace srcrepair.gui
                         catch (Exception Ex)
                         {
                             Logger.Error(Ex, DebugStrings.AppDbgExClnQueueRun);
-                            MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                         IsRunning = false;
                         Close();
