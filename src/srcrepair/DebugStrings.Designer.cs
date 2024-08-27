@@ -781,6 +781,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannot remove the &quot;{0}&quot; file due to an error..
+        /// </summary>
+        internal static string AppDbgExRmFileFailure {
+            get {
+                return ResourceManager.GetString("AppDbgExRmFileFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while removing files..
         /// </summary>
         internal static string AppDbgExRmRf {

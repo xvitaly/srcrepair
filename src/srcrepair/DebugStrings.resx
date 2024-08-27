@@ -357,6 +357,9 @@
   <data name="AppDbgExRepPack" xml:space="preserve">
     <value>Exception while trying to compress all generated log files into a single Zip archive.</value>
   </data>
+  <data name="AppDbgExRmFileFailure" xml:space="preserve">
+    <value>Cannot remove the "{0}" file due to an error.</value>
+  </data>
   <data name="AppDbgExRmRf" xml:space="preserve">
     <value>Exception while removing files.</value>
   </data>
