@@ -139,7 +139,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Error(Ex, DebugStrings.AppDbgExClnEmptyDirs);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExClnEmptyDirs);
                 }
             }
         }
@@ -189,7 +189,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExRmRf);
-                MessageBox.Show(AppStrings.RW_RmException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.RW_RmException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             FinalizeCleanup();
         }
