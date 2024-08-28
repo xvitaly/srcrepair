@@ -214,7 +214,7 @@ namespace srcrepair.gui
         /// Reports progress to progress bar on form.
         /// </summary>
         /// <param name="Progress">Progress tuple.</param>
-        private void ReportProgressChange(Tuple<int, String> Progress)
+        private void ReportProgressChange(Tuple<int, string> Progress)
         {
             PrbMain.Value = Progress.Item1;
             if (!string.IsNullOrEmpty(Progress.Item2))
@@ -245,10 +245,10 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="DeleteQueue">List of files and directories for deletion.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private void DeleteCandidates(List<string> DeleteQueue, IProgress<Tuple<int, String>> Progress)
+        private void DeleteCandidates(List<string> DeleteQueue, IProgress<Tuple<int, string>> Progress)
         {
             // Reporting new status...
-            Progress.Report(new Tuple<int, String>(0, AppStrings.PS_ProgressCleanup));
+            Progress.Report(new Tuple<int, string>(0, AppStrings.PS_ProgressCleanup));
 
             // Creating some counters...
             int TotalFiles = DeleteQueue.Count;
@@ -309,13 +309,13 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="DeleteQueue">List of files and directories for deletion.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task BackUpCandidatesTask(List<string> DeleteQueue, IProgress<Tuple<int, String>> Progress)
+        private async Task BackUpCandidatesTask(List<string> DeleteQueue, IProgress<Tuple<int, string>> Progress)
         {
             await Task.Run(() =>
             {
                 if (Properties.Settings.Default.PackBeforeCleanup || ForceBackUp)
                 {
-                    Progress.Report(new Tuple<int, String>(0, AppStrings.PS_ProgressArchive));
+                    Progress.Report(new Tuple<int, string>(0, AppStrings.PS_ProgressArchive));
                     if (!FileManager.CompressFiles(DeleteQueue, FileManager.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
                         Logger.Warn(AppStrings.PS_ArchFailed);
@@ -329,7 +329,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="DeleteQueue">List of files and directories for deletion.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task DeleteCandidatesTask(List<string> DeleteQueue, IProgress<Tuple<int, String>> Progress)
+        private async Task DeleteCandidatesTask(List<string> DeleteQueue, IProgress<Tuple<int, string>> Progress)
         {
             await Task.Run(() =>
             {
@@ -452,7 +452,7 @@ namespace srcrepair.gui
                         try
                         {
                             List<string> Candidates = GetDeleteFilesList();
-                            Progress<Tuple<int, String>> Progress = new Progress<Tuple<int, String>>(ReportProgressChange);
+                            Progress<Tuple<int, string>> Progress = new Progress<Tuple<int, string>>(ReportProgressChange);
                             await BackUpCandidatesTask(Candidates, Progress);
                             await DeleteCandidatesTask(Candidates, Progress);
                             CM_Info.Text = AppStrings.PS_ProgressFinished;
