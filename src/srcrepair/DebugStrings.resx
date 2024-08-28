@@ -186,6 +186,9 @@
   <data name="AppDbgExClnFindFilesFailure" xml:space="preserve">
     <value>Exception while building the list of files for cleanup.</value>
   </data>
+  <data name="AppDbgExClnFindSubdirsFailure" xml:space="preserve">
+    <value>Exception while searching subdirectories for building the list of files for cleanup.</value>
+  </data>
   <data name="AppDbgExClnFm" xml:space="preserve">
     <value>Exception while trying to show the selected file in the file manager.</value>
   </data>

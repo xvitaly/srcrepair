@@ -268,6 +268,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while searching subdirectories for building the list of files for cleanup..
+        /// </summary>
+        internal static string AppDbgExClnFindSubdirsFailure {
+            get {
+                return ResourceManager.GetString("AppDbgExClnFindSubdirsFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to show the selected file in the file manager..
         /// </summary>
         internal static string AppDbgExClnFm {
