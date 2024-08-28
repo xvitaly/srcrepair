@@ -183,6 +183,9 @@
   <data name="AppDbgExClnEmptyDirs" xml:space="preserve">
     <value>Exception while cleaning up empty directories.</value>
   </data>
+  <data name="AppDbgExClnFindFilesFailure" xml:space="preserve">
+    <value>Exception while building the list of files for cleanup.</value>
+  </data>
   <data name="AppDbgExClnFm" xml:space="preserve">
     <value>Exception while trying to show the selected file in the file manager.</value>
   </data>
