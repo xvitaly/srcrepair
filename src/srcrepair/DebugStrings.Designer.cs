@@ -250,6 +250,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannot delete the &quot;{0}&quot; file from the cleanup queue due to an error..
+        /// </summary>
+        internal static string AppDbgExClnDeleteFileFailure {
+            get {
+                return ResourceManager.GetString("AppDbgExClnDeleteFileFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while cleaning up empty directories..
         /// </summary>
         internal static string AppDbgExClnEmptyDirs {

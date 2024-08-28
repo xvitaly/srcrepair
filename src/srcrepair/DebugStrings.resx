@@ -180,6 +180,9 @@
   <data name="AppDbgExCfgSelection" xml:space="preserve">
     <value>Exception during FPS config selection (click on warning icon).</value>
   </data>
+  <data name="AppDbgExClnDeleteFileFailure" xml:space="preserve">
+    <value>Cannot delete the "{0}" file from the cleanup queue due to an error.</value>
+  </data>
   <data name="AppDbgExClnEmptyDirs" xml:space="preserve">
     <value>Exception while cleaning up empty directories.</value>
   </data>
