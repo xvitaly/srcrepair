@@ -439,30 +439,22 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void CM_FTable_KeyDown(object sender, KeyEventArgs e)
         {
-            if (!IsRunning)
+            if (!IsRunning && e.Control)
             {
-                // "Ctrl + A" pressed...
-                if (e.Control && e.KeyCode == Keys.A)
+                switch (e.KeyCode)
                 {
-                    HandleSelectAll();
-                }
-
-                // "Ctrl + D" pressed...
-                if (e.Control && e.KeyCode == Keys.D)
-                {
-                    HandleDeselectAll();
-                }
-
-                // "Ctrl + R" pressed...
-                if (e.Control && e.KeyCode == Keys.R)
-                {
-                    HandleInvertSelection();
-                }
-
-                // "Ctrl + C" pressed...
-                if (e.Control && e.KeyCode == Keys.C)
-                {
-                    HandleCopyToClipboard();
+                    case Keys.A: // "Ctrl + A" pressed...
+                        HandleSelectAll();
+                        break;
+                    case Keys.D: // "Ctrl + D" pressed...
+                        HandleDeselectAll();
+                        break;
+                    case Keys.R: // "Ctrl + R" pressed...
+                        HandleInvertSelection();
+                        break;
+                    case Keys.C: // "Ctrl + C" pressed...
+                        HandleCopyToClipboard();
+                        break;
                 }
             }
         }
