@@ -364,6 +364,55 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Selects all items from the table.
+        /// </summary>
+        private void HandleSelectAll()
+        {
+            foreach (ListViewItem Item in CM_FTable.Items)
+            {
+                Item.Checked = true;
+            }
+        }
+
+        /// <summary>
+        /// Deselects all items from the table.
+        /// </summary>
+        private void HandleDeselectAll()
+        {
+            foreach (ListViewItem Item in CM_FTable.Items)
+            {
+                Item.Checked = false;
+            }
+        }
+
+        /// <summary>
+        /// Selects unselected items from the table and vice versa.
+        /// </summary>
+        private void HandleInvertSelection()
+        {
+            foreach (ListViewItem Item in CM_FTable.Items)
+            {
+                Item.Checked = !Item.Checked;
+            }
+        }
+
+        /// <summary>
+        /// Copies full paths of the selected items to the clipboard.
+        /// </summary>
+        private void HandleCopyToClipboard()
+        {
+            StringBuilder SelectedFiles = new StringBuilder();
+            foreach (ListViewItem Item in CM_FTable.Items)
+            {
+                if (Item.Checked)
+                {
+                    SelectedFiles.AppendLine(Item.ToolTipText);
+                }
+            }
+            Clipboard.SetText(SelectedFiles.ToString());
+        }
+
+        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -395,42 +444,25 @@ namespace srcrepair.gui
                 // "Ctrl + A" pressed...
                 if (e.Control && e.KeyCode == Keys.A)
                 {
-                    foreach (ListViewItem LVI in CM_FTable.Items)
-                    {
-                        LVI.Checked = true;
-                    }
+                    HandleSelectAll();
                 }
 
                 // "Ctrl + D" pressed...
                 if (e.Control && e.KeyCode == Keys.D)
                 {
-                    foreach (ListViewItem LVI in CM_FTable.Items)
-                    {
-                        LVI.Checked = false;
-                    }
+                    HandleDeselectAll();
                 }
 
                 // "Ctrl + R" pressed...
                 if (e.Control && e.KeyCode == Keys.R)
                 {
-                    foreach (ListViewItem LVI in CM_FTable.Items)
-                    {
-                        LVI.Checked = !LVI.Checked;
-                    }
+                    HandleInvertSelection();
                 }
 
                 // "Ctrl + C" pressed...
                 if (e.Control && e.KeyCode == Keys.C)
                 {
-                    StringBuilder SelectedFiles = new StringBuilder();
-                    foreach (ListViewItem LVI in CM_FTable.Items)
-                    {
-                        if (LVI.Checked)
-                        {
-                            SelectedFiles.AppendLine(LVI.ToolTipText);
-                        }
-                    }
-                    Clipboard.SetText(SelectedFiles.ToString());
+                    HandleCopyToClipboard();
                 }
             }
         }
