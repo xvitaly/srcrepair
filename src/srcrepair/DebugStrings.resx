@@ -195,6 +195,9 @@
   <data name="AppDbgExClnFm" xml:space="preserve">
     <value>Exception while trying to show the selected file in the file manager.</value>
   </data>
+  <data name="AppDbgExClnHotkeyUnknown" xml:space="preserve">
+    <value>An unknown hotkey combination was pressed: Ctrl + {0}.</value>
+  </data>
   <data name="AppDbgExClnOldUpdates" xml:space="preserve">
     <value>Exception while trying to find and remove the old application updates.</value>
   </data>

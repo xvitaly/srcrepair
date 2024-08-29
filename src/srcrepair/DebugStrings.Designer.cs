@@ -295,6 +295,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An unknown hotkey combination was pressed: Ctrl + {0}..
+        /// </summary>
+        internal static string AppDbgExClnHotkeyUnknown {
+            get {
+                return ResourceManager.GetString("AppDbgExClnHotkeyUnknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to find and remove the old application updates..
         /// </summary>
         internal static string AppDbgExClnOldUpdates {
