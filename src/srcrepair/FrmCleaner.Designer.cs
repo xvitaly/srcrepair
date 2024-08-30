@@ -64,7 +64,7 @@
             this.CM_FTable.UseCompatibleStateImageBehavior = false;
             this.CM_FTable.View = System.Windows.Forms.View.Details;
             this.CM_FTable.DoubleClick += new System.EventHandler(this.CM_FTable_DoubleClick);
-            this.CM_FTable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CM_FTable_KeyDown);
+            this.CM_FTable.KeyUp += new System.Windows.Forms.KeyEventHandler(this.CM_FTable_KeyUp);
             // 
             // FName
             // 

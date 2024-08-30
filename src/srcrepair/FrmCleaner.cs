@@ -433,11 +433,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "On key down" event handler.
+        /// "On key up" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void CM_FTable_KeyDown(object sender, KeyEventArgs e)
+        private void CM_FTable_KeyUp(object sender, KeyEventArgs e)
         {
             if (!IsRunning && e.Control)
             {
