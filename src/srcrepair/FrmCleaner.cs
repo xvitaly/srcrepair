@@ -338,6 +338,27 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Starts cleanup process asynchronously and report progress.
+        /// </summary>
+        private async Task StartCleanup()
+        {
+            try
+            {
+                List<string> Candidates = GetDeleteFilesList();
+                Progress<Tuple<int, string>> Progress = new Progress<Tuple<int, string>>(ReportProgressChange);
+                await BackUpCandidatesTask(Candidates, Progress);
+                await DeleteCandidatesTask(Candidates, Progress);
+                CM_Info.Text = AppStrings.PS_ProgressFinished;
+                MessageBox.Show(SuccessMessage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExClnQueueRun);
+                MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
         /// Finalizes candidates find procedure.
         /// </summary>
         private void HandleCandidates()
@@ -476,20 +497,7 @@ namespace srcrepair.gui
                     if (CM_FTable.CheckedItems.Count > 0)
                     {
                         ChangeControlsState();
-                        try
-                        {
-                            List<string> Candidates = GetDeleteFilesList();
-                            Progress<Tuple<int, string>> Progress = new Progress<Tuple<int, string>>(ReportProgressChange);
-                            await BackUpCandidatesTask(Candidates, Progress);
-                            await DeleteCandidatesTask(Candidates, Progress);
-                            CM_Info.Text = AppStrings.PS_ProgressFinished;
-                            MessageBox.Show(SuccessMessage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                        catch (Exception Ex)
-                        {
-                            Logger.Error(Ex, DebugStrings.AppDbgExClnQueueRun);
-                            MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                        await StartCleanup();
                         IsRunning = false;
                         Close();
                     }
