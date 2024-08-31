@@ -183,6 +183,9 @@
   <data name="AppDbgExClnDeleteFileFailure" xml:space="preserve">
     <value>Cannot delete the "{0}" file from the cleanup queue due to an error.</value>
   </data>
+  <data name="AppDbgExClnDirectoryDoesNotExist" xml:space="preserve">
+    <value>The selected for cleanup directory "{0}" does not exist and was skipped.</value>
+  </data>
   <data name="AppDbgExClnEmptyDirs" xml:space="preserve">
     <value>Exception while cleaning up empty directories.</value>
   </data>
