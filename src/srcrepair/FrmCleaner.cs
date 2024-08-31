@@ -120,6 +120,12 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Finds files in the specified directory that match the specified file mask
+        /// and adds them to the list.
+        /// </summary>
+        /// <param name="CleanDir">Directory for cleanup.</param>
+        /// <param name="CleanMask">File mask.</param>
         private void AddFilesToList(string CleanDir, string CleanMask)
         {
             DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
@@ -143,6 +149,12 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Finds subdirectories in the specified directory and recursively tries to find
+        /// files in it that match the specified file mask and add them to the list.
+        /// </summary>
+        /// <param name="CleanDir">Directory for cleanup.</param>
+        /// <param name="CleanMask">File mask.</param>
         private void AddDirectoriesToList(string CleanDir, string CleanMask)
         {
             DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
