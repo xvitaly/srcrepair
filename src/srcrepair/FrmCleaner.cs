@@ -157,12 +157,11 @@ namespace srcrepair.gui
         /// <param name="CleanMask">File mask.</param>
         private void AddDirectoriesToList(string CleanDir, string CleanMask)
         {
-            DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
             List<string> SubDirs = new List<string>();
 
-            foreach (DirectoryInfo Dir in DInfo.GetDirectories())
+            foreach (string SubDir in Directory.GetDirectories(CleanDir))
             {
-                SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
+                SubDirs.Add(Path.Combine(SubDir, CleanMask));
             }
 
             if (SubDirs.Count > 0)
