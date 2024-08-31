@@ -120,8 +120,47 @@ namespace srcrepair.gui
             }
         }
 
+        private void AddFilesToList(string CleanDir, string CleanMask)
+        {
+            DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
+            FileInfo[] DirList = DInfo.GetFiles(CleanMask);
+
+            foreach (FileInfo DItem in DirList)
+            {
+                ListViewItem LvItem = new ListViewItem(DItem.Name)
+                {
+                    Checked = !NoAutoCheck,
+                    ToolTipText = Path.Combine(CleanDir, DItem.Name),
+                    SubItems =
+                    {
+                        GuiHelpers.SclBytes(DItem.Length),
+                        DItem.LastWriteTime.ToString(CultureInfo.CurrentUICulture)
+                    }
+                };
+
+                Invoke((MethodInvoker)delegate { CM_FTable.Items.Add(LvItem); });
+                TotalSize += DItem.Length;
+            }
+        }
+
+        private void AddDirectoriesToList(string CleanDir, string CleanMask)
+        {
+            DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
+            List<string> SubDirs = new List<string>();
+
+            foreach (DirectoryInfo Dir in DInfo.GetDirectories())
+            {
+                SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
+            }
+
+            if (SubDirs.Count > 0)
+            {
+                DetectFilesForCleanup(SubDirs, true);
+            }
+        }
+
         /// <summary>
-        /// Gets full list of files for deletion.
+        /// Gets the full list of files for deletion.
         /// </summary>
         /// <param name="Targets">List of files and directories for cleanup.</param>
         /// <param name="Recursive">Enable recursive cleanup.</param>
@@ -129,63 +168,29 @@ namespace srcrepair.gui
         {
             foreach (string DirMs in Targets)
             {
-                // Extracting directory path and file mask from combined string...
                 string CleanDir = Path.GetDirectoryName(DirMs);
                 string CleanMask = Path.GetFileName(DirMs);
                 
-                // Checking if directory exists...
-                if (Directory.Exists(CleanDir))
+                if (!Directory.Exists(CleanDir)) { continue; }
+
+                try
                 {
+                    AddFilesToList(CleanDir, CleanMask);
                     try
                     {
-                        // Getting full contents of directory and adding them to result...
-                        DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
-                        FileInfo[] DirList = DInfo.GetFiles(CleanMask);
-                        foreach (FileInfo DItem in DirList)
-                        {
-                            ListViewItem LvItem = new ListViewItem(DItem.Name)
-                            {
-                                Checked = !NoAutoCheck,
-                                ToolTipText = Path.Combine(CleanDir, DItem.Name),
-                                SubItems =
-                                {
-                                    GuiHelpers.SclBytes(DItem.Length),
-                                    DItem.LastWriteTime.ToString(CultureInfo.CurrentUICulture)
-                                }
-                            };
-
-                            // Adding file to main list and incrementing counter...
-                            Invoke((MethodInvoker)delegate { CM_FTable.Items.Add(LvItem); });
-                            TotalSize += DItem.Length;
-                        }
-
                         if (Recursive)
                         {
-                            try
-                            {
-                                // Getting subdirectories...
-                                List<string> SubDirs = new List<string>();
-                                foreach (DirectoryInfo Dir in DInfo.GetDirectories())
-                                {
-                                    SubDirs.Add(Path.Combine(Dir.FullName, CleanMask));
-                                }
-
-                                // If subdirectories exists, run this method recursively...
-                                if (SubDirs.Count > 0)
-                                {
-                                    DetectFilesForCleanup(SubDirs, true);
-                                }
-                            }
-                            catch (Exception Ex)
-                            {
-                                Logger.Warn(Ex, DebugStrings.AppDbgExClnFindSubdirsFailure);
-                            }
+                            AddDirectoriesToList(CleanDir, CleanMask);
                         }
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, DebugStrings.AppDbgExClnFindFilesFailure);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExClnFindSubdirsFailure);
                     }
+                }
+                catch (Exception Ex)
+                {
+                    Logger.Warn(Ex, DebugStrings.AppDbgExClnFindFilesFailure);
                 }
             }
         }
