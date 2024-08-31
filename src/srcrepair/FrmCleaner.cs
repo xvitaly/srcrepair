@@ -171,7 +171,11 @@ namespace srcrepair.gui
                 string CleanDir = Path.GetDirectoryName(DirMs);
                 string CleanMask = Path.GetFileName(DirMs);
                 
-                if (!Directory.Exists(CleanDir)) { continue; }
+                if (!Directory.Exists(CleanDir))
+                {
+                    Logger.Warn(DebugStrings.AppDbgExClnDirectoryDoesNotExist, CleanDir);
+                    continue;
+                }
 
                 try
                 {
