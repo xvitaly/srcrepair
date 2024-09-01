@@ -44,6 +44,36 @@ namespace srcrepair.gui
             RemDirs = SL;
         }
 
+        private List<string> AddFilesToList(string CleanDir)
+        {
+            List<string> Result = new List<string>();
+
+            foreach (string DItem in Directory.GetFiles(CleanDir))
+            {
+                Result.Add(DItem);
+            }
+
+            return Result;
+        }
+
+        private List<string> AddDirectoriesToList(string CleanDir)
+        {
+            List<string> Result = new List<string>();
+            List<string> SubDirs = new List<string>();
+
+            foreach (string SubDir in Directory.GetDirectories(CleanDir))
+            {
+                SubDirs.Add(SubDir);
+            }
+
+            if (SubDirs.Count > 0)
+            {
+                Result.AddRange(DetectFilesForCleanup(SubDirs));
+            }
+
+            return Result;
+        }
+
         /// <summary>
         /// Gets full list of files for deletion.
         /// </summary>
@@ -60,26 +90,8 @@ namespace srcrepair.gui
                 // Checking if directory exists...
                 if (Directory.Exists(CleanCnd))
                 {
-                    // Getting full contents of directory and adding them to result...
-                    DirectoryInfo DInfo = new DirectoryInfo(CleanCnd);
-                    FileInfo[] DirList = DInfo.GetFiles("*.*");
-                    foreach (FileInfo DItem in DirList)
-                    {
-                        Result.Add(DItem.FullName);
-                    }
-
-                    // Getting subdirectories...
-                    List<string> SubDirs = new List<string>();
-                    foreach (DirectoryInfo Dir in DInfo.GetDirectories())
-                    {
-                        SubDirs.Add(Path.Combine(Dir.FullName));
-                    }
-
-                    // If subdirectories exists, run this method recursively...
-                    if (SubDirs.Count > 0)
-                    {
-                        Result.AddRange(DetectFilesForCleanup(SubDirs));
-                    }
+                    Result.AddRange(AddFilesToList(CleanCnd));
+                    Result.AddRange(AddDirectoriesToList(CleanCnd));
                 }
                 else
                 {
