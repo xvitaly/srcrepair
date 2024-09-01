@@ -86,19 +86,19 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets full list of files for deletion.
+        /// Gets the full list of files for deletion.
         /// </summary>
-        /// <param name="CleanDirs">List of directories for cleanup.</param>
-        /// <returns>List of files for deletion.</returns>
+        /// <param name="CleanDirs">The list of directories for cleanup.</param>
+        /// <returns>The list of files for deletion.</returns>
         private List<string> DetectFilesForCleanup(List<string> CleanDirs)
         {
-            // Generating an empty list for storing results...
+            // Generating an empty list for storing result...
             List<string> Result = new List<string>();
 
-            // Expanding every directory from source list...
+            // Expanding every directory from the source list...
             foreach (string CleanCnd in CleanDirs)
             {
-                // Checking if directory exists...
+                // Checking for directory existence...
                 if (Directory.Exists(CleanCnd))
                 {
                     Result.AddRange(AddFilesToList(CleanCnd));
@@ -106,7 +106,7 @@ namespace srcrepair.gui
                 }
                 else
                 {
-                    // If directory does not exists, checking for file with the same name...
+                    // If directory does not exist, checking for the file with the same name...
                     if (File.Exists(CleanCnd))
                     {
                         Result.Add(CleanCnd);
