@@ -61,6 +61,12 @@ namespace srcrepair.gui
             return Result;
         }
 
+        /// <summary>
+        /// Finds subdirectories in the specified directory, recursively tries
+        /// to find files in it and add them to the list.
+        /// </summary>
+        /// <param name="CleanDir">Directory for cleanup.</param>
+        /// <returns>The list of files for cleanup.</returns>
         private List<string> AddDirectoriesToList(string CleanDir)
         {
             List<string> Result = new List<string>();
