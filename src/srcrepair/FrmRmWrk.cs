@@ -44,6 +44,11 @@ namespace srcrepair.gui
             RemDirs = SL;
         }
 
+        /// <summary>
+        /// Finds files in the specified directory and adds them to the list.
+        /// </summary>
+        /// <param name="CleanDir">Directory for cleanup.</param>
+        /// <returns>The list of files for cleanup.</returns>
         private List<string> AddFilesToList(string CleanDir)
         {
             List<string> Result = new List<string>();
