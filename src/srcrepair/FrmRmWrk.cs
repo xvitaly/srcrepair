@@ -45,47 +45,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Finds files in the specified directory and adds them to the list.
-        /// </summary>
-        /// <param name="CleanDir">Directory for cleanup.</param>
-        /// <returns>The list of files for cleanup.</returns>
-        private List<string> AddFilesToList(string CleanDir)
-        {
-            List<string> Result = new List<string>();
-
-            foreach (string DItem in Directory.GetFiles(CleanDir))
-            {
-                Result.Add(DItem);
-            }
-
-            return Result;
-        }
-
-        /// <summary>
-        /// Finds subdirectories in the specified directory, recursively tries
-        /// to find files in it and add them to the list.
-        /// </summary>
-        /// <param name="CleanDir">Directory for cleanup.</param>
-        /// <returns>The list of files for cleanup.</returns>
-        private List<string> AddDirectoriesToList(string CleanDir)
-        {
-            List<string> Result = new List<string>();
-            List<string> SubDirs = new List<string>();
-
-            foreach (string SubDir in Directory.GetDirectories(CleanDir))
-            {
-                SubDirs.Add(SubDir);
-            }
-
-            if (SubDirs.Count > 0)
-            {
-                Result.AddRange(DetectFilesForCleanup(SubDirs));
-            }
-
-            return Result;
-        }
-
-        /// <summary>
         /// Gets the full list of files for deletion.
         /// </summary>
         /// <param name="CleanDirs">The list of directories for cleanup.</param>
@@ -101,8 +60,24 @@ namespace srcrepair.gui
                 // Checking for directory existence...
                 if (Directory.Exists(CleanCnd))
                 {
-                    Result.AddRange(AddFilesToList(CleanCnd));
-                    Result.AddRange(AddDirectoriesToList(CleanCnd));
+                    // Getting files and adding them to the result...
+                    foreach (string DItem in Directory.GetFiles(CleanCnd))
+                    {
+                        Result.Add(DItem);
+                    }
+
+                    // Getting subdirectories...
+                    List<string> SubDirs = new List<string>();
+                    foreach (string SubDir in Directory.GetDirectories(CleanCnd))
+                    {
+                        SubDirs.Add(SubDir);
+                    }
+
+                    // If at least one subdirectory exist, run this method recursively...
+                    if (SubDirs.Count > 0)
+                    {
+                        Result.AddRange(DetectFilesForCleanup(SubDirs));
+                    }
                 }
                 else
                 {
