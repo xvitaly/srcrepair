@@ -121,56 +121,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Finds files in the specified directory that match the specified file mask
-        /// and adds them to the list.
-        /// </summary>
-        /// <param name="CleanDir">Directory for cleanup.</param>
-        /// <param name="CleanMask">File mask.</param>
-        private void AddFilesToList(string CleanDir, string CleanMask)
-        {
-            DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
-            FileInfo[] DirList = DInfo.GetFiles(CleanMask);
-
-            foreach (FileInfo DItem in DirList)
-            {
-                ListViewItem LvItem = new ListViewItem(DItem.Name)
-                {
-                    Checked = !NoAutoCheck,
-                    ToolTipText = Path.Combine(CleanDir, DItem.Name),
-                    SubItems =
-                    {
-                        GuiHelpers.SclBytes(DItem.Length),
-                        DItem.LastWriteTime.ToString(CultureInfo.CurrentUICulture)
-                    }
-                };
-
-                Invoke((MethodInvoker)delegate { CM_FTable.Items.Add(LvItem); });
-                TotalSize += DItem.Length;
-            }
-        }
-
-        /// <summary>
-        /// Finds subdirectories in the specified directory and recursively tries to find
-        /// files in it that match the specified file mask and add them to the list.
-        /// </summary>
-        /// <param name="CleanDir">Directory for cleanup.</param>
-        /// <param name="CleanMask">File mask.</param>
-        private void AddDirectoriesToList(string CleanDir, string CleanMask)
-        {
-            List<string> SubDirs = new List<string>();
-
-            foreach (string SubDir in Directory.GetDirectories(CleanDir))
-            {
-                SubDirs.Add(Path.Combine(SubDir, CleanMask));
-            }
-
-            if (SubDirs.Count > 0)
-            {
-                DetectFilesForCleanup(SubDirs, true);
-            }
-        }
-
-        /// <summary>
         /// Gets the full list of files for deletion.
         /// </summary>
         /// <param name="Targets">List of files and directories for cleanup.</param>
@@ -190,12 +140,38 @@ namespace srcrepair.gui
 
                 try
                 {
-                    AddFilesToList(CleanDir, CleanMask);
+                    DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
+                    foreach (FileInfo DItem in DInfo.GetFiles(CleanMask))
+                    {
+                        ListViewItem LvItem = new ListViewItem(DItem.Name)
+                        {
+                            Checked = !NoAutoCheck,
+                            ToolTipText = Path.Combine(CleanDir, DItem.Name),
+                            SubItems =
+                            {
+                                GuiHelpers.SclBytes(DItem.Length),
+                                DItem.LastWriteTime.ToString(CultureInfo.CurrentUICulture)
+                            }
+                        };
+
+                        Invoke((MethodInvoker)delegate { CM_FTable.Items.Add(LvItem); });
+                        TotalSize += DItem.Length;
+                    }
+
                     try
                     {
                         if (Recursive)
                         {
-                            AddDirectoriesToList(CleanDir, CleanMask);
+                            List<string> SubDirs = new List<string>();
+                            foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
+                            {
+                                SubDirs.Add(Path.Combine(SubDir.FullName, CleanMask));
+                            }
+
+                            if (SubDirs.Count > 0)
+                            {
+                                DetectFilesForCleanup(SubDirs, true);
+                            }
                         }
                     }
                     catch (Exception Ex)
