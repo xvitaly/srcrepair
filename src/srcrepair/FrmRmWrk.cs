@@ -61,22 +61,9 @@ namespace srcrepair.gui
                 if (Directory.Exists(CleanCnd))
                 {
                     // Getting files and adding them to the result...
-                    foreach (string DItem in Directory.GetFiles(CleanCnd))
+                    foreach (string DItem in Directory.EnumerateFiles(CleanCnd, "*.*", SearchOption.AllDirectories))
                     {
                         Result.Add(DItem);
-                    }
-
-                    // Getting subdirectories...
-                    List<string> SubDirs = new List<string>();
-                    foreach (string SubDir in Directory.GetDirectories(CleanCnd))
-                    {
-                        SubDirs.Add(SubDir);
-                    }
-
-                    // If at least one subdirectory exist, run this method recursively...
-                    if (SubDirs.Count > 0)
-                    {
-                        Result.AddRange(DetectFilesForCleanup(SubDirs));
                     }
                 }
                 else
