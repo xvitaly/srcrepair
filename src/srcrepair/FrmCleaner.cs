@@ -141,12 +141,12 @@ namespace srcrepair.gui
                 try
                 {
                     DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
-                    foreach (FileInfo DItem in DInfo.GetFiles(CleanMask))
+                    foreach (FileInfo DItem in DInfo.EnumerateFiles(CleanMask, Recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
                     {
                         ListViewItem LvItem = new ListViewItem(DItem.Name)
                         {
                             Checked = !NoAutoCheck,
-                            ToolTipText = Path.Combine(CleanDir, DItem.Name),
+                            ToolTipText = DItem.FullName,
                             SubItems =
                             {
                                 GuiHelpers.SclBytes(DItem.Length),
@@ -156,27 +156,6 @@ namespace srcrepair.gui
 
                         Invoke((MethodInvoker)delegate { CM_FTable.Items.Add(LvItem); });
                         TotalSize += DItem.Length;
-                    }
-
-                    try
-                    {
-                        if (Recursive)
-                        {
-                            List<string> SubDirs = new List<string>();
-                            foreach (DirectoryInfo SubDir in DInfo.GetDirectories())
-                            {
-                                SubDirs.Add(Path.Combine(SubDir.FullName, CleanMask));
-                            }
-
-                            if (SubDirs.Count > 0)
-                            {
-                                DetectFilesForCleanup(SubDirs, true);
-                            }
-                        }
-                    }
-                    catch (Exception Ex)
-                    {
-                        Logger.Warn(Ex, DebugStrings.AppDbgExClnFindSubdirsFailure);
                     }
                 }
                 catch (Exception Ex)
