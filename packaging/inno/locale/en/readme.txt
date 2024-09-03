@@ -1,4 +1,4 @@
-﻿SRC Repair is a free open source tool that can be used for tuning and cleaning up Steam and Source engine games. You can also create and edit configuration files (configs), backup and restore game settings, apply FPS configs or sprays into the game with one click.
+SRC Repair is a free open source tool that can be used for tuning and cleaning up Steam and Source engine games. You can also create and edit configuration files (configs), backup and restore game settings, apply FPS configs or sprays into the game with one click.
 
 Before using this program, please read the official help manual (select Help - Offline help system or press F1 key in the main window). Also, it is strongly recommended to manually create a backup copy of Steam folder and Steam registry keys (with the help of tools, located on the BackUps Center page).
 
