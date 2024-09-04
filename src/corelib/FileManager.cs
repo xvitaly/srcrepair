@@ -253,10 +253,10 @@ namespace srcrepair.core
             List<string> Result = new List<string>();
             if (Directory.Exists(SearchPath))
             {
-                DirectoryInfo DInfo = new DirectoryInfo(SearchPath);
-                FileInfo[] DirList = DInfo.GetFiles(SrcMask);
-                foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); }
-                if (IsRecursive) { foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { Result.AddRange(FindFiles(Dir.FullName, SrcMask)); } }
+                foreach (string DItem in Directory.EnumerateFiles(SearchPath, SrcMask, IsRecursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
+                {
+                    Result.Add(DItem);
+                }
             }
             return Result;
         }
