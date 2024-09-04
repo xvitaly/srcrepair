@@ -276,36 +276,26 @@ namespace srcrepair.core
         /// Finds files by specified mask in specified directories. Mask must be
         /// added to the end of path.
         /// </summary>
-        /// <param name="CleanDirs">List of directories with masks.</param>
+        /// <param name="DirList">List of directories with masks.</param>
         /// <param name="IsRecursive">Use recursive (include subdirectories) search.</param>
         /// <returns>List of files with full paths, matches mask.</returns>
-        public static List<string> ExpandFileList(List<string> CleanDirs, bool IsRecursive)
+        public static List<string> ExpandFileList(List<string> DirList, bool IsRecursive)
         {
             List<string> Result = new List<string>();
-            foreach (string DirMs in CleanDirs)
+            foreach (string DirMs in DirList)
             {
-                string CleanDir = Path.GetDirectoryName(DirMs); string CleanMask = Path.GetFileName(DirMs);
-                if (Directory.Exists(CleanDir))
-                {
-                    try
-                    {
-                        DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
-                        FileInfo[] DirList = DInfo.GetFiles(CleanMask);
-                        foreach (FileInfo DItem in DirList) { Result.Add(DItem.FullName); }
+                string CleanDir = Path.GetDirectoryName(DirMs);
+                string CleanMask = Path.GetFileName(DirMs);
 
-                        if (IsRecursive)
-                        {
-                            try
-                            {
-                                List<string> SubDirs = new List<string>();
-                                foreach (DirectoryInfo Dir in DInfo.GetDirectories()) { SubDirs.Add(Path.Combine(Dir.FullName, CleanMask)); }
-                                if (SubDirs.Count > 0) { Result.AddRange(ExpandFileList(SubDirs, true)); }
-                            }
-                            catch (Exception Ex) { Logger.Warn(Ex); }
-                        }
+                try
+                {
+                    if (!Directory.Exists(CleanDir)) { continue; }
+                    foreach (string DItem in Directory.EnumerateFiles(CleanDir, CleanMask, IsRecursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
+                    {
+                        Result.Add(DItem);
                     }
-                    catch (Exception Ex) { Logger.Warn(Ex); }
                 }
+                catch (Exception Ex) { Logger.Warn(Ex); }
             }
             return Result;
         }
