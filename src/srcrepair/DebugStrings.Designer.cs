@@ -259,15 +259,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The selected for cleanup directory &quot;{0}&quot; does not exist and was skipped..
-        /// </summary>
-        internal static string AppDbgExClnDirectoryDoesNotExist {
-            get {
-                return ResourceManager.GetString("AppDbgExClnDirectoryDoesNotExist", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while cleaning up empty directories..
         /// </summary>
         internal static string AppDbgExClnEmptyDirs {
