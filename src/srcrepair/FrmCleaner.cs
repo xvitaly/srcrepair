@@ -131,16 +131,11 @@ namespace srcrepair.gui
             {
                 string CleanDir = Path.GetDirectoryName(DirMs);
                 string CleanMask = Path.GetFileName(DirMs);
-                
-                if (!Directory.Exists(CleanDir))
-                {
-                    Logger.Warn(DebugStrings.AppDbgExClnDirectoryDoesNotExist, CleanDir);
-                    continue;
-                }
 
                 try
                 {
                     DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
+                    if (!DInfo.Exists) { continue; }
                     foreach (FileInfo DItem in DInfo.EnumerateFiles(CleanMask, Recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
                     {
                         ListViewItem LvItem = new ListViewItem(DItem.Name)
