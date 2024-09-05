@@ -241,35 +241,51 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Finds files by specified mask in specified directory.
+        /// Finds files in the specified list of directories that match the
+        /// specified file mask and adds them to the list. If allowed, the
+        /// list may also contain files, and if they exist, they will be
+        /// added to the list too.
         /// Recursion can be explicitly enabled or disabled.
         /// </summary>
-        /// <param name="SearchPath">Start directory.</param>
+        /// <param name="SearchPaths">The list of directories and files for searching.</param>
         /// <param name="SrcMask">File mask (wildcards are supported).</param>
         /// <param name="IsRecursive">Use recursive (include subdirectories) search.</param>
-        /// <returns>List of files with full paths, matches mask.</returns>
-        public static List<string> FindFiles(string SearchPath, string SrcMask, bool IsRecursive)
+        /// <param name="AllowFiles">Allow files in the search list.</param>
+        /// <returns>The list of files with full paths.</returns>
+        private static List<string> FindFiles(List<string> SearchPaths, string SrcMask, bool IsRecursive, bool AllowFiles)
         {
             List<string> Result = new List<string>();
-            if (Directory.Exists(SearchPath))
+            foreach (string CleanCnd in SearchPaths)
             {
-                foreach (string DItem in Directory.EnumerateFiles(SearchPath, SrcMask, IsRecursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
+                if (Directory.Exists(CleanCnd))
                 {
-                    Result.Add(DItem);
+                    foreach (string DItem in Directory.EnumerateFiles(CleanCnd, SrcMask, IsRecursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
+                    {
+                        Result.Add(DItem);
+                    }
+                }
+                else
+                {
+                    if (AllowFiles && File.Exists(CleanCnd))
+                    {
+                        Result.Add(CleanCnd);
+                    }
                 }
             }
             return Result;
         }
 
         /// <summary>
-        /// Finds files by specified mask in specified directory recursively.
+        /// Recursively finds files in the specified list of directories that match
+        /// the specified file mask and adds them to the list.
         /// </summary>
         /// <param name="SearchPath">Start directory.</param>
         /// <param name="SrcMask">File mask (wildcards are supported).</param>
         /// <returns>List of files with full paths, matches mask.</returns>
         public static List<string> FindFiles(string SearchPath, string SrcMask)
         {
-            return FindFiles(SearchPath, SrcMask, true);
+            List<string> SearchPaths = new List<string> { SearchPath };
+            return FindFiles(SearchPaths, SrcMask, true, false);
         }
 
         /// <summary>
