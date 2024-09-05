@@ -149,7 +149,7 @@ namespace srcrepair.core
         /// </summary>
         public void CleanPackagesNow()
         {
-            List<string> Packages = FileManager.FindFiles(FullPackagesPath, "*.*");
+            List<string> Packages = FileManager.FindFiles(FullPackagesPath);
             FileManager.RemoveFiles(Packages);
         }
 
