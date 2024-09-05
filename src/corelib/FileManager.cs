@@ -288,6 +288,16 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Finds all files in the specified directory and adds them to the list.
+        /// </summary>
+        /// <param name="SearchPath">Start directory.</param>
+        /// <returns>The list of files with full paths.</returns>
+        public static List<string> FindFiles(string SearchPath)
+        {
+            return FindFiles(new List<string> { SearchPath }, "*.*", true, false);
+        }
+
+        /// <summary>
         /// Recursively finds files in the specified list of directories that match
         /// the specified file mask and adds them to the list.
         /// </summary>
@@ -296,8 +306,7 @@ namespace srcrepair.core
         /// <returns>List of files with full paths, matches mask.</returns>
         public static List<string> FindFiles(string SearchPath, string SrcMask)
         {
-            List<string> SearchPaths = new List<string> { SearchPath };
-            return FindFiles(SearchPaths, SrcMask, true, false);
+            return FindFiles(new List<string> { SearchPath }, SrcMask, true, false);
         }
 
         /// <summary>
@@ -377,11 +386,8 @@ namespace srcrepair.core
         /// <param name="Prefix">Backup file pre-defined prefix.</param>
         public static void CreateConfigBackUp(string Config, string BackUpDir, string Prefix)
         {
-            // Adding only one file to list...
-            List<string> Configs = new List<string> { Config };
-
             // Running another overloaded version of this method...
-            CreateConfigBackUp(Configs, BackUpDir, Prefix);
+            CreateConfigBackUp(new List<string> { Config }, BackUpDir, Prefix);
         }
 
         /// <summary>
