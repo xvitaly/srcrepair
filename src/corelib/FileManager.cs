@@ -276,6 +276,18 @@ namespace srcrepair.core
         }
 
         /// <summary>
+        /// Finds all files in the specified list of directories and adds them
+        /// to the list. The list can also contain files, and if they exist,
+        /// they will be added too.
+        /// </summary>
+        /// <param name="SearchPaths">The list of directories and files for searching.</param>
+        /// <returns>The list of files with full paths.</returns>
+        public static List<string> FindFiles(List<string> SearchPaths)
+        {
+            return FindFiles(SearchPaths, "*.*", true, true);
+        }
+
+        /// <summary>
         /// Recursively finds files in the specified list of directories that match
         /// the specified file mask and adds them to the list.
         /// </summary>
