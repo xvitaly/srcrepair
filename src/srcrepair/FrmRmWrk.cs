@@ -45,49 +45,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets the full list of files for deletion.
-        /// </summary>
-        /// <param name="CleanDirs">The list of directories for cleanup.</param>
-        /// <returns>The list of files for deletion.</returns>
-        private List<string> DetectFilesForCleanup(List<string> CleanDirs)
-        {
-            // Generating an empty list for storing result...
-            List<string> Result = new List<string>();
-
-            // Expanding every directory from the source list...
-            foreach (string CleanCnd in CleanDirs)
-            {
-                // Checking for directory existence...
-                if (Directory.Exists(CleanCnd))
-                {
-                    // Getting files and adding them to the result...
-                    foreach (string DItem in Directory.EnumerateFiles(CleanCnd, "*.*", SearchOption.AllDirectories))
-                    {
-                        Result.Add(DItem);
-                    }
-                }
-                else
-                {
-                    // If directory does not exist, checking for the file with the same name...
-                    if (File.Exists(CleanCnd))
-                    {
-                        Result.Add(CleanCnd);
-                    }
-                }
-            }
-
-            // Returning result...
-            return Result;
-        }
-
-        /// <summary>
         /// Removes all files and directories recursively from specified directories.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
         private void CleanupFiles(IProgress<int> Progress)
         {
             // Searching for candidates...
-            List<string> DeleteQueue = DetectFilesForCleanup(RemDirs);
+            List<string> DeleteQueue = FileManager.FindFiles(RemDirs);
 
             // Creating some counters...
             int TotalFiles = DeleteQueue.Count;
