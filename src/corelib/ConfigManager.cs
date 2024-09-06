@@ -51,16 +51,16 @@ namespace srcrepair.core
         public string FPSConfigInstallPath { get; private set; }
 
         /// <summary>
-        /// Get list of common FPS-config paths installation.
+        /// Gets the list of installed FPS-configs.
         /// </summary>
         /// <param name="GamePath">Game installation directory.</param>
         /// <param name="UserDir">If game use custom user directories for custom stuff.</param>
         /// <returns>List of common FPS-config paths.</returns>
         public static List<string> ListFPSConfigs(string GamePath, bool UserDir)
         {
-            List<string> Result = new List<string> { Path.Combine(GamePath, "cfg", "autoexec.cfg") };
-            if (UserDir) { Result.Add(Path.Combine(GamePath, "custom", "autoexec.cfg")); }
-            return Result;
+            List<string> ConfigDirs = new List<string> { Path.Combine(GamePath, "cfg") };
+            if (UserDir) { ConfigDirs.Add(Path.Combine(GamePath, "custom")); }
+            return FileManager.FindFiles(ConfigDirs, "autoexec.cfg");
         }
 
         /// <summary>
