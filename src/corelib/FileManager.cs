@@ -244,8 +244,8 @@ namespace srcrepair.core
         /// Finds files in the specified list of directories that match the
         /// specified file mask and adds them to the list. If allowed, the
         /// list may also contain files, and if they exist, they will be
-        /// added to the list too.
-        /// Recursion can be explicitly enabled or disabled.
+        /// added to the list too. Recursion can be explicitly enabled or
+        /// disabled.
         /// </summary>
         /// <param name="SearchPaths">The list of directories and files for searching.</param>
         /// <param name="SrcMask">File mask (wildcards are supported).</param>
@@ -276,9 +276,9 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Finds all files in the specified list of directories and adds them
-        /// to the list. The list can also contain files, and if they exist,
-        /// they will be added too.
+        /// Recursively finds all files in the specified list of directories and
+        /// adds them to the list. The list can also contain files, and if they
+        /// exist, they will be added too.
         /// </summary>
         /// <param name="SearchPaths">The list of directories and files for searching.</param>
         /// <returns>The list of files with full paths.</returns>
@@ -288,7 +288,21 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Finds all files in the specified directory and adds them to the list.
+        /// Recursively finds files in the specified list of directories that match
+        /// the specified file mask and adds them to the list. The list can also
+        /// contain files, and if they exist, they will be added too.
+        /// </summary>
+        /// <param name="SearchPaths">The list of directories and files for searching.</param>
+        /// <param name="SrcMask">File mask (wildcards are supported).</param>
+        /// <returns>The list of files with full paths.</returns>
+        public static List<string> FindFiles(List<string> SearchPaths, string SrcMask)
+        {
+            return FindFiles(SearchPaths, SrcMask, true, true);
+        }
+
+        /// <summary>
+        /// Recursively finds all files in the specified directory and adds them to
+        /// the list.
         /// </summary>
         /// <param name="SearchPath">Start directory.</param>
         /// <returns>The list of files with full paths.</returns>
