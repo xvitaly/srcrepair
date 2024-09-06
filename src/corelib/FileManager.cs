@@ -181,7 +181,7 @@ namespace srcrepair.core
         /// <returns>Return True if archive was created successfully.</returns>
         public static bool CompressDirectory(string DirectoryPath, string ArchiveName)
         {
-            return CompressFiles(ExpandFileList(new List<string> { Path.Combine(DirectoryPath, "*.*") }, true), ArchiveName);
+            return CompressFiles(FindFiles(DirectoryPath), ArchiveName);
         }
 
         /// <summary>
