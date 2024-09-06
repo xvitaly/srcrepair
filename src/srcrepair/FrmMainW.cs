@@ -859,7 +859,7 @@ namespace srcrepair.gui
         private void HandleConfigs()
         {
             if (!Directory.Exists(App.AppCfgDir)) { Directory.CreateDirectory(App.AppCfgDir); }
-            App.SourceGames[AppSelector.Text].FPSConfigs = FileManager.ExpandFileList(ConfigManager.ListFPSConfigs(App.SourceGames[AppSelector.Text].FullGamePath, App.SourceGames[AppSelector.Text].IsUsingUserDir), true);
+            App.SourceGames[AppSelector.Text].FPSConfigs = ConfigManager.ListFPSConfigs(App.SourceGames[AppSelector.Text].FullGamePath, App.SourceGames[AppSelector.Text].IsUsingUserDir);
             GT_Warning.Visible = App.SourceGames[AppSelector.Text].FPSConfigs.Count > 0;
         }
 
