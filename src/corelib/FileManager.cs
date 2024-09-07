@@ -12,7 +12,6 @@ using System.IO.Compression;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
-using NLog;
 
 namespace srcrepair.core
 {
