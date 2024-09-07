@@ -22,11 +22,6 @@ namespace srcrepair.core
     public static class FileManager
     {
         /// <summary>
-        /// Logger instance for FileManager class.
-        /// </summary>
-        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-
-        /// <summary>
         /// Checks for non-ASCII characters in string.
         /// </summary>
         /// <param name="Path">Source string to check.</param>
@@ -44,18 +39,14 @@ namespace srcrepair.core
         /// <param name="FileName">Full path to file.</param>
         public static void CreateFile(string FileName)
         {
-            try
-            {
-                // Generating full path to destination directory...
-                string Dir = Path.GetDirectoryName(FileName);
+            // Generating full path to the destination directory...
+            string DirName = Path.GetDirectoryName(FileName);
 
-                // Check if destination directory exists. If not - creating...
-                if (!Directory.Exists(Dir)) { Directory.CreateDirectory(Dir); }
+            // Check if the destination directory exists. If not - creating...
+            if (!Directory.Exists(DirName)) { Directory.CreateDirectory(DirName); }
 
-                // Creating a mew empty file...
-                using (File.Create(FileName)) { /* Nothing here. */ }
-            }
-            catch (Exception Ex) { Logger.Warn(Ex); }
+            // Creating a new empty file...
+            using (File.Create(FileName)) { /* Nothing here. */ }
         }
 
         /// <summary>
