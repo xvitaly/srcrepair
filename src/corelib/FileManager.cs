@@ -324,34 +324,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Finds files by specified mask in specified directories. Mask must be
-        /// added to the end of path.
-        /// </summary>
-        /// <param name="DirList">List of directories with masks.</param>
-        /// <param name="IsRecursive">Use recursive (include subdirectories) search.</param>
-        /// <returns>List of files with full paths, matches mask.</returns>
-        public static List<string> ExpandFileList(List<string> DirList, bool IsRecursive)
-        {
-            List<string> Result = new List<string>();
-            foreach (string DirMs in DirList)
-            {
-                string CleanDir = Path.GetDirectoryName(DirMs);
-                string CleanMask = Path.GetFileName(DirMs);
-
-                try
-                {
-                    if (!Directory.Exists(CleanDir)) { continue; }
-                    foreach (string DItem in Directory.EnumerateFiles(CleanDir, CleanMask, IsRecursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
-                    {
-                        Result.Add(DItem);
-                    }
-                }
-                catch (Exception Ex) { Logger.Warn(Ex); }
-            }
-            return Result;
-        }
-
-        /// <summary>
         /// Finds and returns only existing files from specified list.
         /// </summary>
         /// <param name="Configs">List of files with full paths to check.</param>
