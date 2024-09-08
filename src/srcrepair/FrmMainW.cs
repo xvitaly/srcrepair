@@ -2362,7 +2362,11 @@ namespace srcrepair.gui
         {
             try
             {
-                await EditFPSConfig(GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs), ModifierKeys == Keys.Shift);
+                string SelectedCfg = GuiHelpers.FormShowCfgSelect(App.SourceGames[AppSelector.Text].FPSConfigs);
+                if (!string.IsNullOrWhiteSpace(SelectedCfg))
+                {
+                    await EditFPSConfig(SelectedCfg, ModifierKeys == Keys.Shift);
+                }
             }
             catch (Exception Ex)
             {
