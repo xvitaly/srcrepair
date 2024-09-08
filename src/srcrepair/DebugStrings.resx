@@ -252,6 +252,9 @@
   <data name="AppDbgExHandleCleanupTargets" xml:space="preserve">
     <value>Exception while trying to build the list of available cleanup targets.</value>
   </data>
+  <data name="AppDbgExHandleConfigs" xml:space="preserve">
+    <value>Exception while trying to find and show installed FPS-configs.</value>
+  </data>
   <data name="AppDbgExHandleFpsConfigs" xml:space="preserve">
     <value>Exception while trying to build the list of available FPS-configs.</value>
   </data>
