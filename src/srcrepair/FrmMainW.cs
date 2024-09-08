@@ -867,6 +867,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExHandleConfigs);
+                App.SourceGames[AppSelector.Text].FPSConfigs = new List<string>();
                 GT_Warning.Visible = false;
             }
         }
