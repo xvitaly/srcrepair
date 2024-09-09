@@ -35,7 +35,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Stores list of files and directories for cleanup.
         /// </summary>
-        private readonly List<string> CleanDirs;
+        private readonly List<string> CleanItems;
 
         /// <summary>
         /// Stores if manual selection of files is allowed.
@@ -96,7 +96,7 @@ namespace srcrepair.gui
         public FrmCleaner(List<string> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
-            CleanDirs = CD;
+            CleanItems = CD;
             CleanInfo = CI;
             IsReadOnly = RO;
             NoAutoCheck = NA;
@@ -249,11 +249,11 @@ namespace srcrepair.gui
             // Removing empty directories if allowed...
             if (Properties.Settings.Default.RemoveEmptyDirs)
             {
-                foreach (string Dir in CleanDirs)
+                foreach (string Item in CleanItems)
                 {
                     try
                     {
-                        FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+                        FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Item));
                     }
                     catch (Exception Ex)
                     {
@@ -270,7 +270,7 @@ namespace srcrepair.gui
         {
             await Task.Run(() =>
             {
-                DetectFilesForCleanup(CleanDirs, IsRecursive);
+                DetectFilesForCleanup(CleanItems, IsRecursive);
             });
         }
 
