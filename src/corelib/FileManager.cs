@@ -186,20 +186,21 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Finds and removes empty directories in specified directory.
+        /// Finds and removes empty directories in the specified directory.
         /// </summary>
         /// <param name="StartDir">Full path to start directory.</param>
         public static void RemoveEmptyDirectories(string StartDir)
         {
             if (Directory.Exists(StartDir))
             {
-                foreach (var Dir in Directory.GetDirectories(StartDir))
+                foreach (string SubDir in Directory.EnumerateDirectories(StartDir))
                 {
-                    RemoveEmptyDirectories(Dir);
-                    if ((Directory.GetFiles(Dir).Length == 0) && (Directory.GetDirectories(Dir).Length == 0))
-                    {
-                        Directory.Delete(Dir, false);
-                    }
+                    RemoveEmptyDirectories(SubDir);
+                }
+
+                if (!Directory.EnumerateFileSystemEntries(StartDir).Any())
+                {
+                    Directory.Delete(StartDir, false);
                 }
             }
         }
