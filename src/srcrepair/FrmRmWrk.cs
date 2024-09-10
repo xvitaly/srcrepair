@@ -84,7 +84,14 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    FileManager.RemoveEmptyDirectories(Directory.Exists(Dir) ? Dir : Path.GetDirectoryName(Dir));
+                    if (Directory.Exists(Dir))
+                    {
+                        FileManager.RemoveEmptyDirectories(Dir);
+                    }
+                    else if (File.Exists(Dir))
+                    {
+                        FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+                    }
                 }
                 catch (Exception Ex)
                 {
