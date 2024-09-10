@@ -18,57 +18,57 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of interactive cleanup window.
+    /// Class of the interactive cleanup window.
     /// </summary>
     public partial class FrmCleaner : Form
     {
         /// <summary>
-        /// Logger instance for FrmCleaner class.
+        /// Logger instance for the FrmCleaner class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// CurrentPlatform instance for FrmCleaner class.
+        /// CurrentPlatform instance for the FrmCleaner class.
         /// </summary>
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
-        /// Stores list of files and directories for cleanup.
+        /// Stores the list of items for cleanup.
         /// </summary>
         private readonly List<string> CleanItems;
 
         /// <summary>
-        /// Stores if manual selection of files is allowed.
+        /// Stores if the manual selection of files is allowed.
         /// </summary>
         private readonly bool IsReadOnly;
 
         /// <summary>
-        /// Stores if automatic files selection is disallowed.
+        /// Stores if the automatic files selection is disallowed.
         /// </summary>
         private readonly bool NoAutoCheck;
 
         /// <summary>
-        /// Stores if recursive cleanup is allowed.
+        /// Stores if the recursive cleanup is allowed.
         /// </summary>
         private readonly bool IsRecursive;
 
         /// <summary>
-        /// Stores if backups are forced.
+        /// Stores if the backups are forced.
         /// </summary>
         private readonly bool ForceBackUp;
 
         /// <summary>
-        /// Stores full path to directory for saving backups.
+        /// Stores full path to the directory for saving backups.
         /// </summary>
         private readonly string FullBackUpDirPath;
 
         /// <summary>
-        /// Stores successful cleanup completion message text.
+        /// Stores the message text about successful cleanup completion.
         /// </summary>
         private readonly string SuccessMessage;
 
         /// <summary>
-        /// Stores cleanup window title.
+        /// Stores the cleanup window title.
         /// </summary>
         private readonly string CleanInfo;
 
@@ -85,8 +85,8 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmCleaner class constructor.
         /// </summary>
-        /// <param name="CD">List of files and directories for cleanup.</param>
-        /// <param name="BD">Path to directory for saving backups.</param>
+        /// <param name="CD">The list of files and directories for cleanup.</param>
+        /// <param name="BD">Path to the directory for saving backups.</param>
         /// <param name="CI">Cleanup window title.</param>
         /// <param name="SM">Successful cleanup completion message text.</param>
         /// <param name="RO">Allow user to manually select files for deletion.</param>
@@ -161,7 +161,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Changes state of some controls on form on cleanup start.
+        /// Changes the state of some controls on form on cleanup start.
         /// </summary>
         private void ChangeControlsState()
         {
@@ -194,7 +194,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets list of files for removal.
+        /// Gets the list of files for removal.
         /// </summary>
         /// <returns>List of files to be removed.</returns>
         private List<string> GetDeleteFilesList()
