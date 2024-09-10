@@ -46,29 +46,14 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Checks if specified HUD installed.
+        /// Checks if the specified HUD is installed.
         /// </summary>
         /// <param name="CustomInstallDir">Full path to custom game stuff directory.</param>
         /// <param name="HUDDir">HUD installation directory name.</param>
         /// <returns>Return True if specified config is installed.</returns>
         public static bool CheckInstalledHUD(string CustomInstallDir, string HUDDir)
         {
-            // Creating some local variables...
-            bool Result = false;
-            string HUDPath = Path.Combine(CustomInstallDir, HUDDir);
-
-            // Checks if directory exists...
-            if (Directory.Exists(HUDPath))
-            {
-                // Checks if any files exists in this directory...
-                using (IEnumerator<String> StrEn = Directory.EnumerateFileSystemEntries(HUDPath).GetEnumerator())
-                {
-                    Result = StrEn.MoveNext();
-                }
-            }
-
-            // Returning result...
-            return Result;
+            return Directory.Exists(Path.Combine(CustomInstallDir, HUDDir));
         }
 
         /// <summary>
