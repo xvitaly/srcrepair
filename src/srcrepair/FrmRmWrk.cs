@@ -15,7 +15,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of recursive directory cleanup window.
+    /// Class of recursive files and directories cleanup window.
     /// </summary>
     public partial class FrmRmWrk : Form
     {
@@ -25,9 +25,9 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Stores the list of directories for cleanup.
+        /// Stores the list of items for cleanup.
         /// </summary>
-        private readonly List<string> RemDirs;
+        private readonly List<string> RemItems;
 
         /// <summary>
         /// Stores status of currently running process.
@@ -37,11 +37,11 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmRmWrk class constructor.
         /// </summary>
-        /// <param name="SL">List of directories for cleanup.</param>
+        /// <param name="SL">The list of files directories for cleanup.</param>
         public FrmRmWrk(List<string> SL)
         {
             InitializeComponent();
-            RemDirs = SL;
+            RemItems = SL;
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ namespace srcrepair.gui
         private void CleanupFiles(IProgress<int> Progress)
         {
             // Searching for candidates...
-            List<string> DeleteQueue = FileManager.FindFiles(RemDirs);
+            List<string> DeleteQueue = FileManager.FindFiles(RemItems);
 
             // Creating some counters...
             int TotalFiles = DeleteQueue.Count;
@@ -79,18 +79,18 @@ namespace srcrepair.gui
                 }
             }
 
-            // Removing empty directories after files removal...
-            foreach (string Dir in RemDirs)
+            // Removing empty directories after the files removal...
+            foreach (string Item in RemItems)
             {
                 try
                 {
-                    if (Directory.Exists(Dir))
+                    if (Directory.Exists(Item))
                     {
-                        FileManager.RemoveEmptyDirectories(Dir);
+                        FileManager.RemoveEmptyDirectories(Item);
                     }
-                    else if (File.Exists(Dir))
+                    else if (File.Exists(Item))
                     {
-                        FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Dir));
+                        FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Item));
                     }
                 }
                 catch (Exception Ex)
