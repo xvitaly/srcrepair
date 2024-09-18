@@ -1701,6 +1701,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Gets the local screenshot file name of the selected HUD.
+        /// </summary>
+        /// <returns>Returns full path to the HUD screenshot file.</returns>
+        private string GetHUDScreenshotFileName()
+        {
+            return Path.Combine(App.AppHUDDir, Path.GetFileName(App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Preview));
+        }
+
+        /// <summary>
         /// Downloads HUD archive from the main or reserve server.
         /// </summary>
         /// <param name="ForceMirror">Force use of the reserve server.</param>
