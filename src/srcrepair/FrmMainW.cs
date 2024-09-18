@@ -1701,6 +1701,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Gets the HUD screenshot URL.
+        /// </summary>
+        /// <returns>Returns HUD screenshot URL.</returns>
+        private string GetHUDScreenshotURL()
+        {
+            return App.SourceGames[AppSelector.Text].HUDMan[HD_HSel.Text].Preview;
+        }
+
+        /// <summary>
         /// Gets the local screenshot file name of the selected HUD.
         /// </summary>
         /// <returns>Returns full path to the HUD screenshot file.</returns>
