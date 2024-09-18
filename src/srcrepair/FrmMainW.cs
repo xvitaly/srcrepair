@@ -731,7 +731,7 @@ namespace srcrepair.gui
         {
             // Save last Steam path in application's settings...
             Properties.Settings.Default.LastSteamPath = App.SteamClient.FullSteamPath;
-            
+
             // Add Steam client installation path to Troubleshooting page...
             PS_StPath.Text = string.Format(PS_StPath.Text, App.SteamClient.FullSteamPath);
         }
@@ -949,10 +949,10 @@ namespace srcrepair.gui
         /// </summary>
         private async Task HandleHUDScreenshot()
         {
-            string HUDScreenshotFile = string.Empty;
+            string HUDScreenshotFile = GetHUDScreenshotFileName();
             try
             {
-                HUDScreenshotFile = await DownloadHUDScreenshot(AppSelector.Text, HD_HSel.Text);
+                await DownloadHUDScreenshotTask(GetHUDScreenshotURL(), HUDScreenshotFile);
                 HD_GB_Pbx.Image = Image.FromFile(HUDScreenshotFile);
             }
             catch (Exception Ex)
@@ -1836,26 +1836,18 @@ namespace srcrepair.gui
         /// <summary>
         /// Gets a screenshot of selected HUD in a separate thread.
         /// </summary>
-        /// <param name="SelectedGame">Selected game name.</param>
-        /// <param name="SelectedHUD">Selected HUD name.</param>
-        /// <returns>Returns full path to the HUD screenshot file.</returns>
-        private async Task<string> DownloadHUDScreenshot(string SelectedGame, string SelectedHUD)
+        /// <param name="ScreenURL">Selected game name.</param>
+        /// <param name="ScreenFile">Selected HUD name.</param>
+        private async Task DownloadHUDScreenshotTask(string ScreenURL, string ScreenFile)
         {
-            // Generating full file name for HUD screenshot...
-            string ScreenFile = Path.Combine(App.AppHUDDir, Path.GetFileName(App.SourceGames[SelectedGame].HUDMan[SelectedHUD].Preview));
-
-            // Downloading file if it doesn't exists...
             if (!File.Exists(ScreenFile))
             {
                 using (WebClient Downloader = new WebClient())
                 {
                     Downloader.Headers.Add("User-Agent", App.UserAgent);
-                    await Downloader.DownloadFileTaskAsync(App.SourceGames[SelectedGame].HUDMan[SelectedHUD].Preview, ScreenFile);
+                    await Downloader.DownloadFileTaskAsync(ScreenURL, ScreenFile);
                 }
             }
-
-            // Returning result to callback...
-            return ScreenFile;
         }
 
         /// <summary>
@@ -3215,13 +3207,13 @@ namespace srcrepair.gui
         {
             // Changing Safe Clean status...
             Properties.Settings.Default.SafeCleanup = !Properties.Settings.Default.SafeCleanup;
-            
+
             // Showing message about consequences of disabling...
             if (!Properties.Settings.Default.SafeCleanup)
             {
                 MessageBox.Show(AppStrings.AppSafeClnDisabled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            
+
             // Updating status bar...
             CheckSafeClnStatus();
         }
