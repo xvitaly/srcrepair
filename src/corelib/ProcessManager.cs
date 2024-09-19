@@ -39,7 +39,7 @@ namespace srcrepair.core
             {
                 // Saving PID...
                 ProcID = ResName.Id;
-                
+
                 // Terminating process...
                 ResName.Kill();
             }

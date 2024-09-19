@@ -18,7 +18,7 @@ namespace srcrepair.core
         /// Get or sets cleanup target friendly name.
         /// </summary>
         public string Name { get; private set; }
-        
+
         /// <summary>
         /// Gets or sets list of directories for cleanup.
         /// </summary>
