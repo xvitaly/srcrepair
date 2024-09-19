@@ -4,9 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
-using System;
 using System.Diagnostics;
-using System.IO;
 using System.Security.Permissions;
 using System.Security.Principal;
 
