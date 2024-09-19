@@ -195,7 +195,7 @@ namespace srcrepair.core
         /// Type4Video class constructor.
         /// </summary>
         /// <param name="SAppName">The name of registry subkey, used for storing video settings.</param>
-        public Type4Video(string VFile) : base (string.Empty)
+        public Type4Video(string VFile) : base(string.Empty)
         {
             VSettings = new Type4Settings();
             VideoFileName = VFile;
