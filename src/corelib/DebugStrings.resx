@@ -177,4 +177,7 @@
   <data name="AppDbgExCoreVideoLoadCvar" xml:space="preserve">
     <value>Unable to fetch the value of the {0} video setting.</value>
   </data>
+  <data name="AppDbgExCoreStmManDirNotFound" xml:space="preserve">
+    <value>The requested installation directory does not exist.</value>
+  </data>
 </root>

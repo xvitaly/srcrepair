@@ -178,6 +178,15 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The requested installation directory does not exist..
+        /// </summary>
+        internal static string AppDbgExCoreStmManDirNotFound {
+            get {
+                return ResourceManager.GetString("AppDbgExCoreStmManDirNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Minor exception while fetching the Steam mount points..
         /// </summary>
         internal static string AppDbgExCoreStmManMountPointsFetchError {
