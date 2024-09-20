@@ -107,7 +107,7 @@ namespace srcrepair.core
             }
             else
             {
-                throw new DirectoryNotFoundException();
+                throw new DirectoryNotFoundException(DebugStrings.AppDbgExCoreStmManDirNotFound);
             }
         }
 
