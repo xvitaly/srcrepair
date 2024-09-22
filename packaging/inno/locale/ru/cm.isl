@@ -11,5 +11,5 @@ CompDebugDesc=Файлы для системы обнаружения ошибо
 CompPluginsMetaDesc=Дополнительные внешние модули
 CompPluginKBHelperDesc=Модуль отключения системных клавиш
 CompLocalesMetaDesc=Локализации (многоязыковая поддержка)
-CompLocaleEnDesc=Английский (English)
-CompLocaleRuDesc=Русский (Russian)
+CompLocaleEnDesc=Английский
+CompLocaleRuDesc=Русский
