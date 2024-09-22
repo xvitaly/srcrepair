@@ -8,6 +8,7 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using NLog;
 
 namespace srcrepair.core
@@ -131,7 +132,7 @@ namespace srcrepair.core
         /// <summary>
         /// Get information about hardware architecture.
         /// </summary>
-        private string SystemArch => Environment.Is64BitOperatingSystem ? "Amd64" : "x86";
+        private string SystemArch => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
 
         /// <summary>
         /// Get the full path to the active application's log file.
