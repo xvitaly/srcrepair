@@ -430,6 +430,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0}.{1}.{2}.
+        /// </summary>
+        internal static string VersionNumberString {
+            get {
+                return ResourceManager.GetString("VersionNumberString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to VideoAutoCfg.
         /// </summary>
         internal static string VideoFileAutoPrefix {
