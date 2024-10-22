@@ -134,6 +134,15 @@ namespace srcrepair.core
         /// </summary>
         private string SystemArch => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
 
+        private string SystemVersion
+        {
+            get
+            {
+                Version OSVersion = Environment.OSVersion.Version;
+                return string.Format("{0}.{1}.{2}", OSVersion.Major, OSVersion.Minor, OSVersion.Build);
+            }
+        }
+
         /// <summary>
         /// Get the full path to the active application's log file.
         /// </summary>
