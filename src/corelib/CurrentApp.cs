@@ -134,6 +134,9 @@ namespace srcrepair.core
         /// </summary>
         private string SystemArch => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
 
+        /// <summary>
+        /// Get operating system version number.
+        /// </summary>
         private string SystemVersion
         {
             get
