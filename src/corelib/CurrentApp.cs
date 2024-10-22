@@ -142,7 +142,7 @@ namespace srcrepair.core
             get
             {
                 Version OSVersion = Environment.OSVersion.Version;
-                return string.Format("{0}.{1}.{2}", OSVersion.Major, OSVersion.Minor, OSVersion.Build);
+                return string.Format(Properties.Resources.VersionNumberString, OSVersion.Major, OSVersion.Minor, OSVersion.Build);
             }
         }
 
