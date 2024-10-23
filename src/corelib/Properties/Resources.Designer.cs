@@ -187,6 +187,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to {0}.{1}.
+        /// </summary>
+        internal static string OSVersionTemplate {
+            get {
+                return ResourceManager.GetString("OSVersionTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ^[0-9a-zA-Z :()-_./\\\\]*$.
         /// </summary>
         internal static string PathValidateRegex {
@@ -417,15 +426,6 @@ namespace srcrepair.core.Properties {
         internal static string UserIDValidateRegex {
             get {
                 return ResourceManager.GetString("UserIDValidateRegex", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to {0}.{1}.{2}.
-        /// </summary>
-        internal static string VersionNumberTemplate {
-            get {
-                return ResourceManager.GetString("VersionNumberTemplate", resourceCulture);
             }
         }
         

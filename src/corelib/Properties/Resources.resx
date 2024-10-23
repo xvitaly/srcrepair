@@ -159,6 +159,9 @@
   <data name="OSFriendlyNameWin" xml:space="preserve">
     <value>{0} NT</value>
   </data>
+  <data name="OSVersionTemplate" xml:space="preserve">
+    <value>{0}.{1}</value>
+  </data>
   <data name="PathValidateRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z :()-_./\\\\]*$</value>
   </data>
@@ -236,9 +239,6 @@
   </data>
   <data name="UserIDValidateRegex" xml:space="preserve">
     <value>^\d{2,12}$</value>
-  </data>
-  <data name="VersionNumberTemplate" xml:space="preserve">
-    <value>{0}.{1}.{2}</value>
   </data>
   <data name="VideoFileAutoPrefix" xml:space="preserve">
     <value>VideoAutoCfg</value>
