@@ -80,7 +80,7 @@ namespace srcrepair.core
         /// <summary>
         /// Get platform-dependent suffix for HTTP_USER_AGENT header.
         /// </summary>
-        string UASuffix { get; }
+        string UserAgentSuffix { get; }
 
         /// <summary>
         /// Show the specified file in default file manager.

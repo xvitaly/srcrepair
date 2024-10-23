@@ -212,7 +212,7 @@ namespace srcrepair.core
             }
 
             // Generating User-Agent header for outgoing HTTP queries...
-            UserAgent = string.Format(Properties.Resources.AppDefUA, Platform.OSFriendlyName, Platform.UASuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
+            UserAgent = string.Format(Properties.Resources.AppUserAgentTemplate, Platform.OSFriendlyName, Platform.UserAgentSuffix, Environment.OSVersion.Version.Major, Environment.OSVersion.Version.Minor, CultureInfo.CurrentCulture.Name, AppVersion, AppName, SystemArch);
         }
     }
 }
