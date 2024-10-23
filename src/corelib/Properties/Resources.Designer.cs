@@ -432,9 +432,9 @@ namespace srcrepair.core.Properties {
         /// <summary>
         ///   Looks up a localized string similar to {0}.{1}.{2}.
         /// </summary>
-        internal static string VersionNumberString {
+        internal static string VersionNumberTemplate {
             get {
-                return ResourceManager.GetString("VersionNumberString", resourceCulture);
+                return ResourceManager.GetString("VersionNumberTemplate", resourceCulture);
             }
         }
         

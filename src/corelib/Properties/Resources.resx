@@ -240,7 +240,7 @@
   <data name="UserIDValidateRegex" xml:space="preserve">
     <value>^\d{2,12}$</value>
   </data>
-  <data name="VersionNumberString" xml:space="preserve">
+  <data name="VersionNumberTemplate" xml:space="preserve">
     <value>{0}.{1}.{2}</value>
   </data>
   <data name="VideoFileAutoPrefix" xml:space="preserve">
