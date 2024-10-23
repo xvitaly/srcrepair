@@ -46,11 +46,6 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Get current operating system friendly name.
-        /// </summary>
-        public string OSFriendlyName => OS.ToString();
-
-        /// <summary>
         /// Get name and ID of running operating system.
         /// </summary>
         /// <returns>Platform ID.</returns>
@@ -248,14 +243,14 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Get platform-dependent suffix for HTTP_USER_AGENT header.
-        /// </summary>
-        public virtual string UserAgentSuffix => Properties.Resources.AppUserAgentSuffixOther;
-
-        /// <summary>
         /// Get current operating system ID.
         /// </summary>
         public abstract OSType OS { get; }
+
+        /// <summary>
+        /// Get current operating system friendly name for the HTTP_USER_AGENT header.
+        /// </summary>
+        public virtual string OSFriendlyName => OS.ToString();
 
         /// <summary>
         /// Get platform-dependent Steam installation folder (directory) name.

@@ -126,14 +126,8 @@
   <data name="AppOpenHandlerMac" xml:space="preserve">
     <value>open</value>
   </data>
-  <data name="AppUserAgentSuffixOther" xml:space="preserve">
-    <value>(mono)</value>
-  </data>
-  <data name="AppUserAgentSuffixWin" xml:space="preserve">
-    <value>NT</value>
-  </data>
   <data name="AppUserAgentTemplate" xml:space="preserve">
-    <value>Mozilla/5.0 ({0} {1} {2}; {3}; {4}) {5}/{6})</value>
+    <value>Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5})</value>
   </data>
   <data name="BackUpLocalDir" xml:space="preserve">
     <value>backups</value>
@@ -161,6 +155,9 @@
   </data>
   <data name="LogMainFile" xml:space="preserve">
     <value>debug.log</value>
+  </data>
+  <data name="OSFriendlyNameWin" xml:space="preserve">
+    <value>{0} NT</value>
   </data>
   <data name="PathValidateRegex" xml:space="preserve">
     <value>^[0-9a-zA-Z :()-_./\\\\]*$</value>

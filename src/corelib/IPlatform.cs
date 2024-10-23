@@ -43,7 +43,7 @@ namespace srcrepair.core
         void Exit(int ReturnCode);
 
         /// <summary>
-        /// Get current operating system friendly name.
+        /// Get current operating system friendly name for the HTTP_USER_AGENT header.
         /// </summary>
         string OSFriendlyName { get; }
 
@@ -76,11 +76,6 @@ namespace srcrepair.core
         /// Get platform-dependent Steam process name.
         /// </summary>
         string SteamProcName { get; }
-
-        /// <summary>
-        /// Get platform-dependent suffix for HTTP_USER_AGENT header.
-        /// </summary>
-        string UserAgentSuffix { get; }
 
         /// <summary>
         /// Show the specified file in default file manager.

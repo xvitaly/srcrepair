@@ -88,25 +88,7 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to (mono).
-        /// </summary>
-        internal static string AppUserAgentSuffixOther {
-            get {
-                return ResourceManager.GetString("AppUserAgentSuffixOther", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to NT.
-        /// </summary>
-        internal static string AppUserAgentSuffixWin {
-            get {
-                return ResourceManager.GetString("AppUserAgentSuffixWin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mozilla/5.0 ({0} {1} {2}; {3}; {4}) {5}/{6}).
+        ///   Looks up a localized string similar to Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5}).
         /// </summary>
         internal static string AppUserAgentTemplate {
             get {
@@ -192,6 +174,15 @@ namespace srcrepair.core.Properties {
         internal static string LogMainFile {
             get {
                 return ResourceManager.GetString("LogMainFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0} NT.
+        /// </summary>
+        internal static string OSFriendlyNameWin {
+            get {
+                return ResourceManager.GetString("OSFriendlyNameWin", resourceCulture);
             }
         }
         
