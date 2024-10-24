@@ -260,6 +260,18 @@ namespace srcrepair.core
         public virtual string OSFriendlyName => OS.ToString();
 
         /// <summary>
+        /// Get operating system version number for the HTTP_USER_AGENT header.
+        /// </summary>
+        public virtual string OSVersion
+        {
+            get
+            {
+                Version OSVer = Environment.OSVersion.Version;
+                return string.Format(Properties.Resources.OSVersionTemplate, OSVer.Major, OSVer.Minor);
+            }
+        }
+
+        /// <summary>
         /// Get platform-dependent Steam installation folder (directory) name.
         /// </summary>
         public abstract string SteamFolderName { get; }

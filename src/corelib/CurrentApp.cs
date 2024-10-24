@@ -129,18 +129,6 @@ namespace srcrepair.core
         public static string AssemblyLocation => Assembly.GetEntryAssembly().Location;
 
         /// <summary>
-        /// Get operating system version number.
-        /// </summary>
-        private string SystemVersion
-        {
-            get
-            {
-                Version OSVersion = Environment.OSVersion.Version;
-                return string.Format(Properties.Resources.OSVersionTemplate, OSVersion.Major, OSVersion.Minor);
-            }
-        }
-
-        /// <summary>
         /// Get the full path to the active application's log file.
         /// </summary>
         /// <returns>Full path to the active log file.</returns>
@@ -206,7 +194,7 @@ namespace srcrepair.core
             }
 
             // Generating User-Agent header for outgoing HTTP queries...
-            UserAgent = string.Format(Properties.Resources.AppUserAgentTemplate, Platform.OSFriendlyName, SystemVersion, Platform.OSArchitecture, CultureInfo.CurrentCulture.Name, AppName, AppVersion);
+            UserAgent = string.Format(Properties.Resources.AppUserAgentTemplate, Platform.OSFriendlyName, Platform.OSVersion, Platform.OSArchitecture, CultureInfo.CurrentCulture.Name, AppName, AppVersion);
         }
     }
 }
