@@ -53,6 +53,11 @@ namespace srcrepair.core
         string OSFriendlyName { get; }
 
         /// <summary>
+        /// Get operating system version number for the HTTP_USER_AGENT header.
+        /// </summary>
+        string OSVersion { get; }
+
+        /// <summary>
         /// Get platform-dependent SteamApps directory name.
         /// </summary>
         string SteamAppsFolderName { get; }
