@@ -8,7 +8,6 @@ using System;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
-using System.Runtime.InteropServices;
 using NLog;
 
 namespace srcrepair.core
@@ -130,11 +129,6 @@ namespace srcrepair.core
         public static string AssemblyLocation => Assembly.GetEntryAssembly().Location;
 
         /// <summary>
-        /// Get information about hardware architecture.
-        /// </summary>
-        private string SystemArch => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
-
-        /// <summary>
         /// Get operating system version number.
         /// </summary>
         private string SystemVersion
@@ -212,7 +206,7 @@ namespace srcrepair.core
             }
 
             // Generating User-Agent header for outgoing HTTP queries...
-            UserAgent = string.Format(Properties.Resources.AppUserAgentTemplate, Platform.OSFriendlyName, SystemVersion, SystemArch, CultureInfo.CurrentCulture.Name, AppName, AppVersion);
+            UserAgent = string.Format(Properties.Resources.AppUserAgentTemplate, Platform.OSFriendlyName, SystemVersion, Platform.OSArchitecture, CultureInfo.CurrentCulture.Name, AppName, AppVersion);
         }
     }
 }

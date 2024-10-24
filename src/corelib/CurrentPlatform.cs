@@ -6,7 +6,9 @@
 
 using System;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
+using System.Runtime.InteropServices;
 using System.Security.Permissions;
 using System.Windows.Forms;
 
@@ -246,6 +248,11 @@ namespace srcrepair.core
         /// Get current operating system ID.
         /// </summary>
         public abstract OSType OS { get; }
+
+        /// <summary>
+        /// Get information about operating system architecture for the HTTP_USER_AGENT header.
+        /// </summary>
+        public virtual string OSArchitecture => RuntimeInformation.OSArchitecture.ToString().ToLower(CultureInfo.InvariantCulture);
 
         /// <summary>
         /// Get current operating system friendly name for the HTTP_USER_AGENT header.
