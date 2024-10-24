@@ -43,6 +43,11 @@ namespace srcrepair.core
         void Exit(int ReturnCode);
 
         /// <summary>
+        /// Get information about operating system architecture for the HTTP_USER_AGENT header.
+        /// </summary>
+        string OSArchitecture { get; }
+
+        /// <summary>
         /// Get current operating system friendly name for the HTTP_USER_AGENT header.
         /// </summary>
         string OSFriendlyName { get; }
