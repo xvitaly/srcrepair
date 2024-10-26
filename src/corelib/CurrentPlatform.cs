@@ -24,17 +24,10 @@ namespace srcrepair.core
         /// </summary>
         public static CurrentPlatform Create()
         {
-            switch (GetRunningOS())
-            {
-                case OSType.Windows:
-                    return new PlatformWindows();
-                case OSType.Linux:
-                    return new PlatformLinux();
-                case OSType.MacOSX:
-                    return new PlatformMac();
-                default:
-                    throw new PlatformNotSupportedException();
-            }
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) { return new PlatformWindows(); }
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) { return new PlatformLinux(); }
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) { return new PlatformMac(); }
+            throw new PlatformNotSupportedException();
         }
 
         /// <summary>
@@ -45,22 +38,6 @@ namespace srcrepair.core
             Windows = 0,
             MacOSX = 1,
             Linux = 2
-        }
-
-        /// <summary>
-        /// Get name and ID of running operating system.
-        /// </summary>
-        /// <returns>Platform ID.</returns>
-        private static OSType GetRunningOS()
-        {
-            switch (Environment.OSVersion.Platform)
-            {
-                case PlatformID.Unix:
-                    return Directory.Exists("/Applications") ? OSType.MacOSX : OSType.Linux;
-                case PlatformID.MacOSX:
-                    return OSType.MacOSX;
-                default: return OSType.Windows;
-            }
         }
 
         /// <summary>
