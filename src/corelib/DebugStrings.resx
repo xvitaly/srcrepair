@@ -180,4 +180,7 @@
   <data name="AppDbgExCoreStmManDirNotFound" xml:space="preserve">
     <value>The requested installation directory does not exist.</value>
   </data>
+  <data name="AppDbgCorePlatformNotSupported" xml:space="preserve">
+    <value>Current operating system is not supported.</value>
+  </data>
 </root>

@@ -70,6 +70,15 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Current operating system is not supported..
+        /// </summary>
+        internal static string AppDbgCorePlatformNotSupported {
+            get {
+                return ResourceManager.GetString("AppDbgCorePlatformNotSupported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Working with the registry is not supported on this platform..
         /// </summary>
         internal static string AppDbgCoreRegNotSupported {
