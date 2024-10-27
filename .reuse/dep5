@@ -235,10 +235,6 @@ Files: src/corelib/DebugStrings.*
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
-Files: src/corelib/DebugStrings.*
-Copyright: 2011-2024 EasyCoding Team
-License: GPL-3.0-or-later
-
 Files: src/corelib/*.config
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
@@ -356,10 +352,6 @@ Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmUpdate.*
-Copyright: 2011-2024 EasyCoding Team
-License: GPL-3.0-or-later
-
-Files: src/srcrepair/srcrepair.csproj
 Copyright: 2011-2024 EasyCoding Team
 License: GPL-3.0-or-later
 
