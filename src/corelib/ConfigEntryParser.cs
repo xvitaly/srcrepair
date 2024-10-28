@@ -75,7 +75,7 @@ namespace srcrepair.core
             // Checking the source string for null...
             if (string.IsNullOrWhiteSpace(Value))
             {
-                if (TryParse) { return null; } else { throw new ArgumentException("Game config entry string cannot be null, empty or contain only spaces.", nameof(Value)); }
+                if (TryParse) { return null; } else { throw new ArgumentException(DebugStrings.AppDbgCoreEntryParserEmptyError, nameof(Value)); }
             }
 
             // Calculating the indices of the first space and the double slash character...

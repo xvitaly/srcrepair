@@ -61,6 +61,15 @@ namespace srcrepair.core {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game config entry string cannot be null, empty or contain only spaces..
+        /// </summary>
+        internal static string AppDbgCoreEntryParserEmptyError {
+            get {
+                return ResourceManager.GetString("AppDbgCoreEntryParserEmptyError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The value &quot;{0}&quot; of the &quot;{1}&quot; field is out of range..
         /// </summary>
         internal static string AppDbgCoreFieldOutOfRange {
