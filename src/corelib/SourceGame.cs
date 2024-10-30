@@ -285,7 +285,7 @@ namespace srcrepair.core
                 FullCfgPath = Path.Combine(FullGamePath, "cfg");
                 CoreEngineBinPath = Path.Combine(GamePath, "bin");
                 FullBackUpDirPath = Path.Combine(AUserDir, Properties.Resources.BackUpLocalDir, SmallAppName);
-                CustomInstallDir = Path.Combine(FullGamePath, IsUsingUserDir ? "custom" : string.Empty);
+                CustomInstallDir = IsUsingUserDir ? Path.Combine(FullGamePath, "custom") : FullGamePath;
                 AppWorkshopDir = Path.Combine(SteamDir, SteamAppsDirName, Properties.Resources.WorkshopFolderName, "content", GameInternalID);
                 CloudScreenshotsPath = Path.Combine(SteamDir, "userdata", SteamID, "760", "remote", GameInternalID, "screenshots");
                 if (IsUsingVideoFile) { UpdateVideoFilesList(); }
