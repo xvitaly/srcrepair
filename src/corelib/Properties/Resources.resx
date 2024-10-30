@@ -127,7 +127,7 @@
     <value>open</value>
   </data>
   <data name="AppUserAgentTemplate" xml:space="preserve">
-    <value>Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5})</value>
+    <value>Mozilla/5.0 ({0} {1}; {2}; {3}) {4}/{5}</value>
   </data>
   <data name="BackUpLocalDir" xml:space="preserve">
     <value>backups</value>
