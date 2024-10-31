@@ -86,7 +86,7 @@ namespace srcrepair.core
         /// <returns>Returns True if application update available.</returns>
         public bool CheckAppUpdate()
         {
-            return AppUpdateVersion > Assembly.GetCallingAssembly().GetName().Version;
+            return AppUpdateVersion > CurrentApp.AppVersion;
         }
 
         /// <summary>
