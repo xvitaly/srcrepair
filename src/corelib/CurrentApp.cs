@@ -131,7 +131,7 @@ namespace srcrepair.core
         /// <summary>
         /// Get the full path to the running assembly.
         /// </summary>
-        public static string AssemblyLocation => Assembly.GetEntryAssembly().Location;
+        public static string AppLocation => Assembly.GetCallingAssembly().Location;
 
         /// <summary>
         /// Get the full path to the active application's log file.
@@ -177,7 +177,7 @@ namespace srcrepair.core
             Platform = CurrentPlatform.Create();
 
             // Getting full path to application installation directory...
-            FullAppPath = Path.GetDirectoryName(Assembly.GetCallingAssembly().Location);
+            FullAppPath = Path.GetDirectoryName(AppLocation);
 
             // Getting full to application user directory...
             AppUserDir = IsPortable ? Path.Combine(FullAppPath, Properties.Resources.PortableLocalDir) : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), AppName);

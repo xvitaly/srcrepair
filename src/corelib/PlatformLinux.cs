@@ -57,7 +57,7 @@ namespace srcrepair.core
         [EnvironmentPermission(SecurityAction.Demand, Unrestricted = true)]
         public override void RestartApplicationAsAdmin()
         {
-            StartElevatedProcess(Path.GetFileNameWithoutExtension(CurrentApp.AssemblyLocation));
+            StartElevatedProcess(Path.GetFileNameWithoutExtension(CurrentApp.AppLocation));
             Environment.Exit(ReturnCodes.Success);
         }
 
