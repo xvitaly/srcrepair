@@ -100,6 +100,11 @@ namespace srcrepair.core
         public static Version AppVersion => Assembly.GetCallingAssembly().GetName().Version;
 
         /// <summary>
+        /// Get the library version from the resource section of current assembly.
+        /// </summary>
+        public static Version LibVersion => Assembly.GetExecutingAssembly().GetName().Version;
+
+        /// <summary>
         /// Get application developer name from the resource section of calling assembly.
         /// </summary>
         public static string AppCompany
