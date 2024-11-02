@@ -89,7 +89,7 @@ namespace srcrepair.core
         {
             get
             {
-                object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
+                object[] Attribs = Assembly.GetEntryAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
                 return Attribs.Length != 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : string.Empty;
             }
         }
@@ -97,7 +97,7 @@ namespace srcrepair.core
         /// <summary>
         /// Get application version from the resource section of calling assembly.
         /// </summary>
-        public static Version AppVersion => Assembly.GetCallingAssembly().GetName().Version;
+        public static Version AppVersion => Assembly.GetEntryAssembly().GetName().Version;
 
         /// <summary>
         /// Get the library version from the resource section of current assembly.
@@ -111,7 +111,7 @@ namespace srcrepair.core
         {
             get
             {
-                object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
+                object[] Attribs = Assembly.GetEntryAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
                 return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : string.Empty;
             }
         }
@@ -123,7 +123,7 @@ namespace srcrepair.core
         {
             get
             {
-                object[] Attribs = Assembly.GetCallingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
+                object[] Attribs = Assembly.GetEntryAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
                 return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : string.Empty;
             }
         }
@@ -131,7 +131,7 @@ namespace srcrepair.core
         /// <summary>
         /// Get the full path to the running assembly.
         /// </summary>
-        public static string AppLocation => Assembly.GetCallingAssembly().Location;
+        public static string AppLocation => Assembly.GetEntryAssembly().Location;
 
         /// <summary>
         /// Get the full path to the active application's log file.

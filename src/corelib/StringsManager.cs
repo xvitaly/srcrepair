@@ -154,7 +154,7 @@ namespace srcrepair.core
         public static string GetTemplateFromResource(string FileName)
         {
             string Result = string.Empty;
-            using (StreamReader Reader = new StreamReader(Assembly.GetCallingAssembly().GetManifestResourceStream(FileName)))
+            using (StreamReader Reader = new StreamReader(Assembly.GetEntryAssembly().GetManifestResourceStream(FileName)))
             {
                 Result = Reader.ReadToEnd();
             }
