@@ -20,7 +20,7 @@ namespace srcrepair.gui.kbhelper
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             CurrentPlatform Platform = CurrentPlatform.Create();
             if (Platform.OS == CurrentPlatform.OSType.Windows)
