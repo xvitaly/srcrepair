@@ -29,6 +29,16 @@ namespace srcrepair.gui.kbhelper
         }
 
         /// <summary>
+        /// Initializes and shows the main form of the application.
+        /// </summary>
+        private static void ShowMainForm()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FrmKBHelper());
+        }
+
+        /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
@@ -43,9 +53,7 @@ namespace srcrepair.gui.kbhelper
                     {
                         if (Mtx.WaitOne(0, false))
                         {
-                            Application.EnableVisualStyles();
-                            Application.SetCompatibleTextRenderingDefault(false);
-                            Application.Run(new FrmKBHelper());
+                            ShowMainForm();
                         }
                         else
                         {
