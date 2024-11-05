@@ -17,6 +17,18 @@ namespace srcrepair.gui.kbhelper
     internal static class Program
     {
         /// <summary>
+        /// Checks if the required library version is equal with the current library version.
+        /// </summary>
+        private static void CheckLibrary()
+        {
+            if (!LibraryManager.CheckLibraryVersion())
+            {
+                MessageBox.Show(AppStrings.KB_LibVersionMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(ReturnCodes.CoreLibVersionMissmatch);
+            }
+        }
+
+        /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]

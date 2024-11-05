@@ -138,6 +138,9 @@
   <data name="KB_ExRWinMenu" xml:space="preserve">
     <value>An error occurred while trying to right WIN and MENU buttons!</value>
   </data>
+  <data name="KB_LibVersionMissmatch" xml:space="preserve">
+    <value>The core library version does not match the application's version. Please reinstall or report this issue to developers.</value>
+  </data>
   <data name="KB_NoAdminRights" xml:space="preserve">
     <value>This program must be run with admin rights!</value>
   </data>

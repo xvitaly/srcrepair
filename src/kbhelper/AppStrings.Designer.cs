@@ -19,7 +19,7 @@ namespace srcrepair.gui.kbhelper {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class AppStrings {
@@ -120,6 +120,15 @@ namespace srcrepair.gui.kbhelper {
         internal static string KB_ExRWinMenu {
             get {
                 return ResourceManager.GetString("KB_ExRWinMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The core library version does not match the application&apos;s version. Please reinstall or report this issue to developers..
+        /// </summary>
+        internal static string KB_LibVersionMissmatch {
+            get {
+                return ResourceManager.GetString("KB_LibVersionMissmatch", resourceCulture);
             }
         }
         
