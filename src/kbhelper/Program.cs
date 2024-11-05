@@ -11,6 +11,9 @@ using srcrepair.core;
 
 namespace srcrepair.gui.kbhelper
 {
+    /// <summary>
+    /// Main class of the application.
+    /// </summary>
     internal static class Program
     {
         /// <summary>
