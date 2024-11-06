@@ -67,5 +67,10 @@ namespace srcrepair.core
         /// Application update pending.
         /// </summary>
         public static int AppUpdatePending => 10;
+
+        /// <summary>
+        /// Current platform is not supported.
+        /// </summary>
+        public static int PlatformNotSupported => 11;
     }
 }

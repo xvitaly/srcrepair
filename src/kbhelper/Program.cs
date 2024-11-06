@@ -19,6 +19,19 @@ namespace srcrepair.gui.kbhelper
         /// <summary>
         /// Checks if the required library version is equal with the current library version.
         /// </summary>
+        private static void CheckPlatform()
+        {
+            CurrentPlatform Platform = CurrentPlatform.Create();
+            if (Platform.OS != CurrentPlatform.OSType.Windows)
+            {
+                MessageBox.Show(AppStrings.KB_OSNotSupported, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(ReturnCodes.PlatformNotSupported);
+            }
+        }
+
+        /// <summary>
+        /// Checks if the required library version is equal with the current library version.
+        /// </summary>
         private static void CheckLibrary()
         {
             if (!LibraryManager.CheckLibraryVersion())
@@ -53,32 +66,25 @@ namespace srcrepair.gui.kbhelper
         [STAThread]
         private static void Main()
         {
-            CurrentPlatform Platform = CurrentPlatform.Create();
-            if (Platform.OS == CurrentPlatform.OSType.Windows)
+            if (ProcessManager.IsCurrentUserAdmin())
             {
-                if (ProcessManager.IsCurrentUserAdmin())
+                using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
                 {
-                    using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
+                    if (Mtx.WaitOne(0, false))
                     {
-                        if (Mtx.WaitOne(0, false))
-                        {
-                            CheckLibrary();
-                            ShowMainForm();
-                        }
-                        else
-                        {
-                            HandleRunning();
-                        }
+                        CheckPlatform();
+                        CheckLibrary();
+                        ShowMainForm();
                     }
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.KB_NoAdminRights, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        HandleRunning();
+                    }
                 }
             }
             else
             {
-                MessageBox.Show(AppStrings.KB_OSNotSupported, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.KB_NoAdminRights, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
