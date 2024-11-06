@@ -72,5 +72,11 @@ namespace srcrepair.core
         /// Current platform is not supported.
         /// </summary>
         public static int PlatformNotSupported => 11;
+
+        /// <summary>
+        /// The requested action requires administrator rights, but the
+        /// program is running as a regular user.
+        /// </summary>
+        public static int AppNoAdminRights => 12;
     }
 }

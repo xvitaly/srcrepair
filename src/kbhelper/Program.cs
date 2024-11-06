@@ -32,6 +32,18 @@ namespace srcrepair.gui.kbhelper
         /// <summary>
         /// Checks if the required library version is equal with the current library version.
         /// </summary>
+        private static void CheckAdminRights()
+        {
+            if (!ProcessManager.IsCurrentUserAdmin())
+            {
+                MessageBox.Show(AppStrings.KB_NoAdminRights, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(ReturnCodes.AppNoAdminRights);
+            }
+        }
+
+        /// <summary>
+        /// Checks if the required library version is equal with the current library version.
+        /// </summary>
         private static void CheckLibrary()
         {
             if (!LibraryManager.CheckLibraryVersion())
@@ -66,25 +78,19 @@ namespace srcrepair.gui.kbhelper
         [STAThread]
         private static void Main()
         {
-            if (ProcessManager.IsCurrentUserAdmin())
+            using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
             {
-                using (Mutex Mtx = new Mutex(false, Properties.Resources.AppName))
+                if (Mtx.WaitOne(0, false))
                 {
-                    if (Mtx.WaitOne(0, false))
-                    {
-                        CheckPlatform();
-                        CheckLibrary();
-                        ShowMainForm();
-                    }
-                    else
-                    {
-                        HandleRunning();
-                    }
+                    CheckPlatform();
+                    CheckAdminRights();
+                    CheckLibrary();
+                    ShowMainForm();
                 }
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.KB_NoAdminRights, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                {
+                    HandleRunning();
+                }
             }
         }
     }
