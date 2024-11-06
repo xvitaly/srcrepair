@@ -82,9 +82,9 @@ namespace srcrepair.gui.kbhelper
             {
                 if (Mtx.WaitOne(0, false))
                 {
+                    CheckLibrary();
                     CheckPlatform();
                     CheckAdminRights();
-                    CheckLibrary();
                     ShowMainForm();
                 }
                 else
