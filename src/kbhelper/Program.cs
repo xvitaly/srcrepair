@@ -39,6 +39,15 @@ namespace srcrepair.gui.kbhelper
         }
 
         /// <summary>
+        /// Shows the message about already running application and exits.
+        /// </summary>
+        private static void HandleRunning()
+        {
+            MessageBox.Show(AppStrings.KB_AlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            Environment.Exit(ReturnCodes.AppAlreadyRunning);
+        }
+
+        /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
@@ -57,8 +66,7 @@ namespace srcrepair.gui.kbhelper
                         }
                         else
                         {
-                            MessageBox.Show(AppStrings.KB_AlrLaunched, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            Environment.Exit(ReturnCodes.AppAlreadyRunning);
+                            HandleRunning();
                         }
                     }
                 }
