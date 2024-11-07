@@ -138,6 +138,9 @@
   <data name="KB_ExRWinMenu" xml:space="preserve">
     <value>Произошла ошибка при попытке отключения правой клавиши WIN и MENU!</value>
   </data>
+  <data name="KB_LibVersionMissmatch" xml:space="preserve">
+    <value>Обнаружено несоответствие между версиями приложения и основной библиотеки функций! Сообщите об этом разработчикам, либо переустановите программу.</value>
+  </data>
   <data name="KB_NoAdminRights" xml:space="preserve">
     <value>Для работы этой программы она должна быть запущена с правами администратора!</value>
   </data>
