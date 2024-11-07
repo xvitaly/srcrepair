@@ -77,6 +77,6 @@ namespace srcrepair.core
         /// The requested action requires administrator rights, but the
         /// program is running as a regular user.
         /// </summary>
-        public static int AppNoAdminRights => 12;
+        public static int NoAdminRights => 12;
     }
 }

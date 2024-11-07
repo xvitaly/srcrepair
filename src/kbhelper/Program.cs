@@ -37,7 +37,7 @@ namespace srcrepair.gui.kbhelper
             if (!ProcessManager.IsCurrentUserAdmin())
             {
                 MessageBox.Show(AppStrings.KB_NoAdminRights, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Environment.Exit(ReturnCodes.AppNoAdminRights);
+                Environment.Exit(ReturnCodes.NoAdminRights);
             }
         }
 
