@@ -22,7 +22,7 @@ namespace srcrepair.gui.kbhelper
         private static void CheckPlatform()
         {
             CurrentPlatform Platform = CurrentPlatform.Create();
-            if (Platform.OS != CurrentPlatform.OSType.Windows)
+            if (!Platform.AdvancedFeaturesSupported)
             {
                 MessageBox.Show(AppStrings.KB_OSNotSupported, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(ReturnCodes.PlatformNotSupported);
