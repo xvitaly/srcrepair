@@ -165,11 +165,11 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="AppName">Game directory name.</param>
         /// <param name="GameDirs">Paths to all available game libraries.</param>
-        /// <param name="OSType">Operating system type.</param>
+        /// <param name="SkipBinaryCheck">Skip the game binary file existence check.</param>
         /// <returns>Returns full path or empty string if nothing was found.</returns>
-        private string GetGameDirectory(string AppName, List<string> GameDirs, CurrentPlatform.OSType OSType)
+        private string GetGameDirectory(string AppName, List<string> GameDirs, bool SkipBinaryCheck)
         {
-            foreach (string GameDirectory in GameDirs.Select(e => Path.Combine(e, AppName)).Where(j => Directory.Exists(Path.Combine(j, SmallAppName)) && (File.Exists(Path.Combine(j, GameBinaryFile)) || OSType != CurrentPlatform.OSType.Windows)))
+            foreach (string GameDirectory in GameDirs.Select(e => Path.Combine(e, AppName)).Where(j => Directory.Exists(Path.Combine(j, SmallAppName)) && (SkipBinaryCheck || File.Exists(Path.Combine(j, GameBinaryFile)))))
             {
                 return GameDirectory;
             }
@@ -272,7 +272,7 @@ namespace srcrepair.core
             SteamPath = SteamDir;
 
             // Getting game installation directory...
-            GamePath = GetGameDirectory(DirName, GameDirs, OS);
+            GamePath = GetGameDirectory(DirName, GameDirs, OS != CurrentPlatform.OSType.Windows);
 
             // Checking if game installed...
             IsInstalled = !string.IsNullOrWhiteSpace(GamePath);
