@@ -256,15 +256,15 @@ namespace srcrepair.core
         /// <param name="AUserDir">Full path to data directory.</param>
         /// <param name="SteamDir">Full path to Steam directory.</param>
         /// <param name="SteamAppsDirName">Platform-dependent SteamApps directory name.</param>
-        /// <param name="OS">Operating system type.</param>
-        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, int SV, string VFDir, bool UserDir, bool HUDAv, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<string> GameDirs, CurrentPlatform.OSType OS)
+        /// <param name="OSType">Operating system type.</param>
+        public SourceGame(string AppName, string DirName, string SmallName, string Executable, string SID, int SV, string VFDir, bool UserDir, bool HUDAv, string AUserDir, string SteamDir, string SteamAppsDirName, string SelectedSteamID, List<string> GameDirs, bool OSType)
         {
             // Setting basic properties...
             FullAppName = AppName;
             SmallAppName = SmallName;
             GameBinaryFile = Executable;
             GameInternalID = SID;
-            SourceType = (OS != CurrentPlatform.OSType.Windows) && (SV == 1) ? 2 : SV;
+            SourceType = OSType && (SV == 1) ? 2 : SV;
             ConfDir = VFDir;
             IsUsingVideoFile = SourceType != 1;
             IsUsingUserDir = UserDir;
@@ -272,7 +272,7 @@ namespace srcrepair.core
             SteamPath = SteamDir;
 
             // Getting game installation directory...
-            GamePath = GetGameDirectory(DirName, GameDirs, OS != CurrentPlatform.OSType.Windows);
+            GamePath = GetGameDirectory(DirName, GameDirs, OSType);
 
             // Checking if game installed...
             IsInstalled = !string.IsNullOrWhiteSpace(GamePath);

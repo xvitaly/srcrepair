@@ -72,7 +72,7 @@ namespace srcrepair.core
                     {
                         if (XmlItem.SelectSingleNode("Enabled").InnerText == "1" || !HideUnsupported)
                         {
-                            SourceGame SG = new SourceGame(XmlItem.Attributes["Name"].Value, XmlItem.SelectSingleNode("DirName").InnerText, XmlItem.SelectSingleNode("SmallName").InnerText, XmlItem.SelectSingleNode("Executable").InnerText, XmlItem.SelectSingleNode("SID").InnerText, Convert.ToInt32(XmlItem.SelectSingleNode("SVer").InnerText), XmlItem.SelectSingleNode("VFDir").InnerText, XmlItem.SelectSingleNode("UserDir").InnerText == "1", XmlItem.SelectSingleNode("HUDsAvail").InnerText == "1", App.AppUserDir, App.SteamClient.FullSteamPath, App.Platform.SteamAppsFolderName, App.SteamClient.SteamID, GameDirs, App.Platform.OS);
+                            SourceGame SG = new SourceGame(XmlItem.Attributes["Name"].Value, XmlItem.SelectSingleNode("DirName").InnerText, XmlItem.SelectSingleNode("SmallName").InnerText, XmlItem.SelectSingleNode("Executable").InnerText, XmlItem.SelectSingleNode("SID").InnerText, Convert.ToInt32(XmlItem.SelectSingleNode("SVer").InnerText), XmlItem.SelectSingleNode("VFDir").InnerText, XmlItem.SelectSingleNode("UserDir").InnerText == "1", XmlItem.SelectSingleNode("HUDsAvail").InnerText == "1", App.AppUserDir, App.SteamClient.FullSteamPath, App.Platform.SteamAppsFolderName, App.SteamClient.SteamID, GameDirs, !App.Platform.AdvancedFeaturesSupported);
                             if (SG.IsInstalled)
                             {
                                 SourceGames.Add(XmlItem.Attributes["Name"].Value, SG);
