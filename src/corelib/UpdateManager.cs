@@ -103,7 +103,7 @@ namespace srcrepair.core
         /// </summary>
         private async Task CheckForUpdatesTask()
         {
-            await DownloadXML();
+            await Task.Run(() => DownloadXML());
             ParseXML();
         }
 
