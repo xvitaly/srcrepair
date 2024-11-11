@@ -42,7 +42,7 @@ namespace srcrepair.gui.kbhelper
         }
 
         /// <summary>
-        /// Checks if the required library version is equal with the current library version.
+        /// Checks if the library version matches the application version.
         /// </summary>
         private static void CheckLibrary()
         {
