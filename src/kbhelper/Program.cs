@@ -30,7 +30,7 @@ namespace srcrepair.gui.kbhelper
         }
 
         /// <summary>
-        /// Checks if the required library version is equal with the current library version.
+        /// Checks if the application is running with administrator rights.
         /// </summary>
         private static void CheckAdminRights()
         {
