@@ -17,7 +17,7 @@ namespace srcrepair.gui.kbhelper
     internal static class Program
     {
         /// <summary>
-        /// Checks if the required library version is equal with the current library version.
+        /// Checks if the current platform is supported.
         /// </summary>
         private static void CheckPlatform()
         {
