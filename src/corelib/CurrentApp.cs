@@ -90,7 +90,7 @@ namespace srcrepair.core
             get
             {
                 object[] Attribs = Assembly.GetEntryAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-                return Attribs.Length != 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : string.Empty;
+                return Attribs.Length > 0 ? ((AssemblyProductAttribute)Attribs[0]).Product : string.Empty;
             }
         }
 
@@ -112,7 +112,7 @@ namespace srcrepair.core
             get
             {
                 object[] Attribs = Assembly.GetEntryAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-                return Attribs.Length != 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : string.Empty;
+                return Attribs.Length > 0 ? ((AssemblyCompanyAttribute)Attribs[0]).Company : string.Empty;
             }
         }
 
@@ -124,7 +124,7 @@ namespace srcrepair.core
             get
             {
                 object[] Attribs = Assembly.GetEntryAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-                return Attribs.Length != 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : string.Empty;
+                return Attribs.Length > 0 ? ((AssemblyCopyrightAttribute)Attribs[0]).Copyright : string.Empty;
             }
         }
 
