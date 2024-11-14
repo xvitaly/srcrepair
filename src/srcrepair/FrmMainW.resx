@@ -2481,7 +2481,7 @@
     <value>23, 22</value>
   </data>
   <data name="CE_RmRow.Text" xml:space="preserve">
-    <value>Delete selected row</value>
+    <value>Delete</value>
   </data>
   <data name="CE_ToolSep1.Size" type="System.Drawing.Size, System.Drawing">
     <value>6, 25</value>

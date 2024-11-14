@@ -613,7 +613,7 @@
     <value>Вставить</value>
   </data>
   <data name="CE_RmRow.Text" xml:space="preserve">
-    <value>Удалить выбранную строку</value>
+    <value>Удалить</value>
   </data>
   <data name="CE_OpenTextEditor.Text" xml:space="preserve">
     <value>Открыть конфиг в текстовом редакторе</value>
