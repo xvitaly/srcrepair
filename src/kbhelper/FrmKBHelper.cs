@@ -5,6 +5,7 @@
 */
 
 using System;
+using System.Globalization;
 using System.Windows.Forms;
 using Microsoft.Win32;
 
@@ -136,7 +137,7 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_LWIN_Click(object sender, EventArgs e)
         {
-            InstallKBS(RegLWinValue, ((Button)sender).Text.ToLowerInvariant());
+            InstallKBS(RegLWinValue, ((Button)sender).Text.ToLower(CultureInfo.CurrentUICulture));
         }
 
         /// <summary>
@@ -146,7 +147,7 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_BWIN_Click(object sender, EventArgs e)
         {
-            InstallKBS(RegBothWinValue, ((Button)sender).Text.ToLowerInvariant());
+            InstallKBS(RegBothWinValue, ((Button)sender).Text.ToLower(CultureInfo.CurrentUICulture));
         }
 
         /// <summary>
@@ -156,7 +157,7 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_RWinMnu_Click(object sender, EventArgs e)
         {
-            InstallKBS(RegRWinMenuValue, ((Button)sender).Text.ToLowerInvariant());
+            InstallKBS(RegRWinMenuValue, ((Button)sender).Text.ToLower(CultureInfo.CurrentUICulture));
         }
 
         /// <summary>
@@ -166,7 +167,7 @@ namespace srcrepair.gui.kbhelper
         /// <param name="e">Event arguments.</param>
         private void Dis_BWinMnu_Click(object sender, EventArgs e)
         {
-            InstallKBS(RegBothWinMenuValue, ((Button)sender).Text.ToLowerInvariant());
+            InstallKBS(RegBothWinMenuValue, ((Button)sender).Text.ToLower(CultureInfo.CurrentUICulture));
         }
 
         /// <summary>
