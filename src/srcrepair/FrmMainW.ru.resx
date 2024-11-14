@@ -598,7 +598,7 @@
     <value>Открыть конфиг из файла</value>
   </data>
   <data name="CE_Save.Text" xml:space="preserve">
-    <value>Сохранить изменения в файл</value>
+    <value>Сохранить конфиг</value>
   </data>
   <data name="CE_SaveAs.Text" xml:space="preserve">
     <value>Сохранить конфиг как...</value>
