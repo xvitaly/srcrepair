@@ -145,7 +145,7 @@ namespace srcrepair.gui
                             SubItems =
                             {
                                 GuiHelpers.SclBytes(DItem.Length),
-                                DItem.LastWriteTime.ToString(CultureInfo.CurrentUICulture)
+                                DItem.LastWriteTime.ToString(CultureInfo.CurrentCulture)
                             }
                         };
 

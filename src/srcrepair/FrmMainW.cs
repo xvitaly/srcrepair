@@ -1377,7 +1377,7 @@ namespace srcrepair.gui
                     {
                         Rs.Item1,
                         GuiHelpers.SclBytes(DItem.Length),
-                        DItem.CreationTime.ToString(CultureInfo.CurrentUICulture),
+                        DItem.CreationTime.ToString(CultureInfo.CurrentCulture),
                         DItem.Name
                     }
                 };
