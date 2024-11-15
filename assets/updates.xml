@@ -6,9 +6,9 @@
 -->
 <Updates>
     <Application>
-        <Version>46.0.0.0</Version>
-        <URL>https://github.com/xvitaly/srcrepair/releases/download/v46.0.0/srcrepair_460_setup.exe</URL>
-        <Info>https://github.com/xvitaly/srcrepair/releases/tag/v46.0.0</Info>
-        <Hash2>ba9825faea39ec24b5f9834f383c5e1c88bf218b2c35598c7b9bb52b071fed95a26403316341e78ea4600ff5a81ac5083a97ee40a433b3592e5a1a650cd66e2d</Hash2>
+        <Version>47.0.0.0</Version>
+        <URL>https://github.com/xvitaly/srcrepair/releases/download/v47.0.0/srcrepair_470_setup.exe</URL>
+        <Info>https://github.com/xvitaly/srcrepair/releases/tag/v47.0.0</Info>
+        <Hash2>69ce5ae9be7a18bca0c53b8c142ff3a3382a885b648c276cb4d28a6d41e9b5325ccea7a311eb847845b90b4eb5be482e2c63ec4061058a7f3c8d03b54986f83a</Hash2>
     </Application>
 </Updates>
