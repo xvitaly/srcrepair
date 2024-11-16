@@ -53,7 +53,7 @@
         <Enabled>1</Enabled>
         <DirName>Half-Life 2</DirName>
         <SmallName>hl2</SmallName>
-        <VFDir>hl2</VFDir>
+        <VFDir>hl2_complete</VFDir>
         <UserDir>0</UserDir>
         <HUDsAvail>0</HUDsAvail>
         <SID>220</SID>
