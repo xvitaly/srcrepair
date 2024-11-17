@@ -9,7 +9,7 @@ rem
 title Building SRC Repair release binaries...
 
 set GPGKEY=A989AAAA
-set RELVER=470
+set RELVER=471
 
 if [%CI_HASH%] == [] (
     set PREFIX=srcrepair_%RELVER%
