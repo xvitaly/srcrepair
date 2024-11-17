@@ -61,7 +61,7 @@
         <Executable>hl2.exe</Executable>
     </Game>
     <Game Name="Half-Life 2: Episode One">
-        <Enabled>1</Enabled>
+        <Enabled>0</Enabled>
         <DirName>Half-Life 2</DirName>
         <SmallName>episodic</SmallName>
         <VFDir>episodic</VFDir>
@@ -72,7 +72,7 @@
         <Executable>hl2.exe</Executable>
     </Game>
     <Game Name="Half-Life 2: Episode Two">
-        <Enabled>1</Enabled>
+        <Enabled>0</Enabled>
         <DirName>Half-Life 2</DirName>
         <SmallName>ep2</SmallName>
         <VFDir>ep2</VFDir>
@@ -83,7 +83,7 @@
         <Executable>hl2.exe</Executable>
     </Game>
     <Game Name="Half-Life 2: Lost Coast">
-        <Enabled>1</Enabled>
+        <Enabled>0</Enabled>
         <DirName>Half-Life 2</DirName>
         <SmallName>lostcoast</SmallName>
         <VFDir>lostcoast</VFDir>
