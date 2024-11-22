@@ -144,21 +144,5 @@ namespace srcrepair.core
         {
             return CleanString(RecvStr, false, false, false);
         }
-
-        /// <summary>
-        /// Return contents of text file from internal resource section
-        /// of the calling assembly.
-        /// </summary>
-        /// <param name="FileName">Internal resource file name.</param>
-        /// <returns>Contents of bundled in resource text file.</returns>
-        public static string GetTemplateFromResource(string FileName)
-        {
-            string Result = string.Empty;
-            using (StreamReader Reader = new StreamReader(Assembly.GetEntryAssembly().GetManifestResourceStream(FileName)))
-            {
-                Result = Reader.ReadToEnd();
-            }
-            return Result;
-        }
     }
 }
