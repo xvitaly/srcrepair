@@ -651,15 +651,6 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to srcrepair.gui.Resources.TemplateVMTSpray.txt.
-        /// </summary>
-        internal static string PI_TemplateFile {
-            get {
-                return ResourceManager.GetString("PI_TemplateFile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &quot;UnlitGeneric&quot;
         ///{
         ///	&quot;$basetexture&quot;	&quot;{D}&quot;
