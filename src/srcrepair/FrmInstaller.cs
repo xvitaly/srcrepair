@@ -76,7 +76,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    CFile.WriteLine(StringsManager.GetTemplateFromResource(Properties.Resources.PI_TemplateFile).Replace("{D}", Path.Combine("vgui", "logos", Path.GetFileNameWithoutExtension(FileName))));
+                    CFile.WriteLine(Properties.Resources.TemplateVMTSpray.Replace("{D}", Path.Combine("vgui", "logos", Path.GetFileNameWithoutExtension(FileName))));
                 }
                 catch (Exception Ex)
                 {
