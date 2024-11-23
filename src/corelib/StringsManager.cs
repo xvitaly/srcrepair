@@ -9,8 +9,8 @@ using System;
 namespace srcrepair.core
 {
     /// <summary>
-    /// Class for working with strings and strings, stored in
-    /// resource section of this shared library.
+    /// Class for working with strings and strings stored in
+    /// resource sections.
     /// </summary>
     public static class StringsManager
     {
