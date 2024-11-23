@@ -114,7 +114,7 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Remove different special characters from specified string.
+        /// Remove special characters from the source string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
         /// <param name="CleanQuotes">Enable removal of quotes.</param>
@@ -134,7 +134,8 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Remove different special characters from specified string.
+        /// Remove special characters (tabulations, NUL-bytes and multiple spaces)
+        /// from the source string.
         /// </summary>
         /// <param name="RecvStr">Source string for cleanup.</param>
         /// <returns>Clean string with removed special characters.</returns>
