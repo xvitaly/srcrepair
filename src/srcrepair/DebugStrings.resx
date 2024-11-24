@@ -285,7 +285,10 @@
   <data name="AppDbgExHudSelect" xml:space="preserve">
     <value>Exception while trying to select another HUD.</value>
   </data>
-  <data name="AppDbgExInstRun" xml:space="preserve">
+  <data name="AppDbgExInstallerCompile" xml:space="preserve">
+    <value>Exception while trying to compile VMT file from template.</value>
+  </data>
+  <data name="AppDbgExInstallerRun" xml:space="preserve">
     <value>Exception while installing the selected file.</value>
   </data>
   <data name="AppDbgExKbBW" xml:space="preserve">

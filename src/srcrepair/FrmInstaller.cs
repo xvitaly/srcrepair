@@ -213,7 +213,7 @@ namespace srcrepair.gui
                 {
                     // An error occured. Showing message and writing issue to logs...
                     MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    Logger.Error(Ex, DebugStrings.AppDbgExInstRun);
+                    Logger.Error(Ex, DebugStrings.AppDbgExInstallerRun);
                 }
             }
             else

@@ -565,11 +565,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to compile VMT file from template..
+        /// </summary>
+        internal static string AppDbgExInstallerCompile {
+            get {
+                return ResourceManager.GetString("AppDbgExInstallerCompile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while installing the selected file..
         /// </summary>
-        internal static string AppDbgExInstRun {
+        internal static string AppDbgExInstallerRun {
             get {
-                return ResourceManager.GetString("AppDbgExInstRun", resourceCulture);
+                return ResourceManager.GetString("AppDbgExInstallerRun", resourceCulture);
             }
         }
         
