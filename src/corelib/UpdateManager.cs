@@ -101,7 +101,7 @@ namespace srcrepair.core
         /// <summary>
         /// Asyncronically fetch and parse XML file with updates information.
         /// </summary>
-        private async Task CheckForUpdatesTask()
+        private async Task CheckForUpdates()
         {
             await Task.Run(() => DownloadXML());
             await Task.Run(() => ParseXML());
@@ -125,7 +125,7 @@ namespace srcrepair.core
         public static async Task<UpdateManager> Create(string UA)
         {
             UpdateManager UpdaterInstance = new UpdateManager(UA);
-            await UpdaterInstance.CheckForUpdatesTask();
+            await UpdaterInstance.CheckForUpdates();
             return UpdaterInstance;
         }
 
