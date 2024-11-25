@@ -212,9 +212,9 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    // An error occured. Showing message and writing issue to logs...
-                    MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    // An error occurred. Showing message and writing issue to logs...
                     Logger.Error(Ex, DebugStrings.AppDbgExInstallerRun);
+                    MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
