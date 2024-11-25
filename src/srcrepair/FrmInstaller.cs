@@ -81,6 +81,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExInstallerCompile);
+                MessageBox.Show(AppStrings.QI_GenVMTError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

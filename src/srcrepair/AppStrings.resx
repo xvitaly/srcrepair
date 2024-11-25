@@ -609,6 +609,9 @@
   <data name="QI_Excpt" xml:space="preserve">
     <value>An error occured during file installation. Please try again later!</value>
   </data>
+  <data name="QI_GenVMTError" xml:space="preserve">
+    <value>An error occurred while generating the VMT file! This file will not be installed.</value>
+  </data>
   <data name="QI_GenVMTMsg" xml:space="preserve">
     <value>Generate VMT file automatically?</value>
   </data>
