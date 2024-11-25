@@ -66,21 +66,21 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Compiles VMT file from VTF.
+        /// Compiles a new VMT file from a template.
         /// </summary>
-        /// <param name="FileName">Full path to destination VMT file.</param>
-        private void CompileFromVTF(string FileName)
+        /// <param name="FileName">Full path to the destination VMT file.</param>
+        private void CompileFromTemplate(string FileName)
         {
-            using (StreamWriter CFile = new StreamWriter(FileName))
+            try
             {
-                try
+                using (StreamWriter CFile = new StreamWriter(FileName))
                 {
                     CFile.WriteLine(Properties.Resources.TemplateVMTSpray.Replace("{D}", Path.Combine("vgui", "logos", Path.GetFileNameWithoutExtension(FileName))));
                 }
-                catch (Exception Ex)
-                {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExInstallerCompile);
-                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExInstallerCompile);
             }
         }
 
@@ -119,7 +119,7 @@ namespace srcrepair.gui
                 {
                     // Will compile VMT file automatically...
                     UseVMT = true;
-                    CompileFromVTF(VMTFile);
+                    CompileFromTemplate(VMTFile);
                 }
                 else
                 {
