@@ -91,20 +91,12 @@ namespace srcrepair.gui
         /// <param name="FileName">Full path to source file with spray.</param>
         private void InstallSprayNow(string FileName)
         {
-            // Generating path to source directory...
-            string CDir = Path.GetDirectoryName(FileName);
+            // Generating file paths...
+            string DestDir = Path.Combine(FullGamePath, "materials", "vgui", "logos");
+            string SprayFileDest = Path.Combine(DestDir, Path.GetFileName(FileName));
+            string VMTFile = Path.Combine(Path.GetDirectoryName(FileName), Path.ChangeExtension(Path.GetFileName(FileName), ".vmt"));
+            string VMTFileDest = Path.Combine(DestDir, Path.GetFileName(VMTFile));
 
-            // Generating path to destination directory...
-            string FPath = Path.Combine(FullGamePath, "materials", "vgui", "logos");
-
-            // Generating full path to destination spray file...
-            string FFPath = Path.Combine(FPath, Path.GetFileName(FileName));
-
-            // Generating full path to destination VMT file...
-            string VMTFileDest = Path.Combine(FPath, Path.GetFileNameWithoutExtension(Path.GetFileName(FileName)) + ".vmt");
-
-            // Generating full path to source VMT file...
-            string VMTFile = Path.Combine(CDir, Path.GetFileName(VMTFileDest));
             bool UseVMT;
 
             // Checking if precompiled VMT file exists...
@@ -130,13 +122,13 @@ namespace srcrepair.gui
             }
 
             // Checking if destination directory exists...
-            if (!Directory.Exists(FPath))
+            if (!Directory.Exists(DestDir))
             {
-                Directory.CreateDirectory(FPath);
+                Directory.CreateDirectory(DestDir);
             }
 
             // Compying spray file...
-            File.Copy(FileName, Path.Combine(FPath, Path.GetFileName(FFPath)), true);
+            File.Copy(FileName, SprayFileDest, true);
 
             // Copying VMT file if allowed...
             if (UseVMT)
