@@ -86,54 +86,34 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Installs custom spray to game.
+        /// Installs a custom spray to the game.
         /// </summary>
-        /// <param name="FileName">Full path to source file with spray.</param>
+        /// <param name="FileName">Full path to the source spray file.</param>
         private void InstallSprayNow(string FileName)
         {
-            // Generating file paths...
+            // Generating paths to files and directories...
             string DestDir = Path.Combine(FullGamePath, "materials", "vgui", "logos");
-            string SprayFileDest = Path.Combine(DestDir, Path.GetFileName(FileName));
             string VMTFile = Path.Combine(Path.GetDirectoryName(FileName), Path.ChangeExtension(Path.GetFileName(FileName), ".vmt"));
-            string VMTFileDest = Path.Combine(DestDir, Path.GetFileName(VMTFile));
 
-            bool UseVMT;
-
-            // Checking if precompiled VMT file exists...
-            if (File.Exists(VMTFile))
+            // Checking if the precompiled VMT file exists...
+            if (!File.Exists(VMTFile) && MessageBox.Show(AppStrings.QI_GenVMTMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                // Found. Will use it...
-                UseVMT = true;
-            }
-            else
-            {
-                // Not found. Asking user to allow its compilation...
-                if (MessageBox.Show(AppStrings.QI_GenVMTMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    // Will compile VMT file automatically...
-                    UseVMT = true;
-                    CompileFromTemplate(VMTFile);
-                }
-                else
-                {
-                    // Will not install VMT file...
-                    UseVMT = false;
-                }
+                CompileFromTemplate(VMTFile);
             }
 
-            // Checking if destination directory exists...
+            // Checking if the destination directory exists...
             if (!Directory.Exists(DestDir))
             {
                 Directory.CreateDirectory(DestDir);
             }
 
-            // Compying spray file...
-            File.Copy(FileName, SprayFileDest, true);
+            // Installing spray file...
+            File.Copy(FileName, Path.Combine(DestDir, Path.GetFileName(FileName)), true);
 
-            // Copying VMT file if allowed...
-            if (UseVMT)
+            // Installing VMT file...
+            if (File.Exists(VMTFile))
             {
-                File.Copy(VMTFile, VMTFileDest, true);
+                File.Copy(VMTFile, Path.Combine(DestDir, Path.GetFileName(VMTFile)), true);
             }
         }
 
