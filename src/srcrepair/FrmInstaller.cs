@@ -101,19 +101,13 @@ namespace srcrepair.gui
                 CompileFromTemplate(VMTFile);
             }
 
-            // Checking if the destination directory exists...
-            if (!Directory.Exists(DestDir))
-            {
-                Directory.CreateDirectory(DestDir);
-            }
-
             // Installing spray file...
-            File.Copy(FileName, Path.Combine(DestDir, Path.GetFileName(FileName)), true);
+            InstallFileNow(FileName, DestDir);
 
             // Installing VMT file...
             if (File.Exists(VMTFile))
             {
-                File.Copy(VMTFile, Path.Combine(DestDir, Path.GetFileName(VMTFile)), true);
+                InstallFileNow(VMTFile, DestDir);
             }
         }
 
