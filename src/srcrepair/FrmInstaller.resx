@@ -117,147 +117,147 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="labelWelcome.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="QI_WlcMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="labelWelcome.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="QI_WlcMsg.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 9</value>
   </data>
-  <data name="labelWelcome.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="QI_WlcMsg.Size" type="System.Drawing.Size, System.Drawing">
     <value>344, 38</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="labelWelcome.TabIndex" type="System.Int32, mscorlib">
+  <data name="QI_WlcMsg.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="labelWelcome.Text" xml:space="preserve">
+  <data name="QI_WlcMsg.Text" xml:space="preserve">
     <value>This plugin can install spray, demo, map or non-standard config file to selected in the main window game. Do not install untested configs!</value>
   </data>
-  <data name="&gt;&gt;labelWelcome.Name" xml:space="preserve">
-    <value>labelWelcome</value>
+  <data name="&gt;&gt;QI_WlcMsg.Name" xml:space="preserve">
+    <value>QI_WlcMsg</value>
   </data>
-  <data name="&gt;&gt;labelWelcome.Type" xml:space="preserve">
+  <data name="&gt;&gt;QI_WlcMsg.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelWelcome.Parent" xml:space="preserve">
+  <data name="&gt;&gt;QI_WlcMsg.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelWelcome.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;QI_WlcMsg.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="labelPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="QI_InstallPathLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="labelPath.AutoSize" type="System.Boolean, mscorlib">
+  <data name="QI_InstallPathLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="labelPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="QI_InstallPathLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 47</value>
   </data>
-  <data name="labelPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="QI_InstallPathLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>32, 13</value>
   </data>
-  <data name="labelPath.TabIndex" type="System.Int32, mscorlib">
+  <data name="QI_InstallPathLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="labelPath.Text" xml:space="preserve">
+  <data name="QI_InstallPathLabel.Text" xml:space="preserve">
     <value>Path:</value>
   </data>
-  <data name="&gt;&gt;labelPath.Name" xml:space="preserve">
-    <value>labelPath</value>
+  <data name="&gt;&gt;QI_InstallPathLabel.Name" xml:space="preserve">
+    <value>QI_InstallPathLabel</value>
   </data>
-  <data name="&gt;&gt;labelPath.Type" xml:space="preserve">
+  <data name="&gt;&gt;QI_InstallPathLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;labelPath.Parent" xml:space="preserve">
+  <data name="&gt;&gt;QI_InstallPathLabel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;labelPath.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;QI_InstallPathLabel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="InstallPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="QI_InstallPath.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="InstallPath.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="QI_InstallPath.Location" type="System.Drawing.Point, System.Drawing">
     <value>50, 44</value>
   </data>
-  <data name="InstallPath.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="QI_InstallPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>218, 20</value>
   </data>
-  <data name="InstallPath.TabIndex" type="System.Int32, mscorlib">
+  <data name="QI_InstallPath.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;InstallPath.Name" xml:space="preserve">
-    <value>InstallPath</value>
+  <data name="&gt;&gt;QI_InstallPath.Name" xml:space="preserve">
+    <value>QI_InstallPath</value>
   </data>
-  <data name="&gt;&gt;InstallPath.Type" xml:space="preserve">
+  <data name="&gt;&gt;QI_InstallPath.Type" xml:space="preserve">
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;InstallPath.Parent" xml:space="preserve">
+  <data name="&gt;&gt;QI_InstallPath.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;InstallPath.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;QI_InstallPath.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="btnBrowse.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="QI_Browse.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnBrowse.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="QI_Browse.Location" type="System.Drawing.Point, System.Drawing">
     <value>274, 42</value>
   </data>
-  <data name="btnBrowse.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="QI_Browse.Size" type="System.Drawing.Size, System.Drawing">
     <value>82, 23</value>
   </data>
-  <data name="btnBrowse.TabIndex" type="System.Int32, mscorlib">
+  <data name="QI_Browse.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="btnBrowse.Text" xml:space="preserve">
+  <data name="QI_Browse.Text" xml:space="preserve">
     <value>Browse</value>
   </data>
-  <data name="&gt;&gt;btnBrowse.Name" xml:space="preserve">
-    <value>btnBrowse</value>
+  <data name="&gt;&gt;QI_Browse.Name" xml:space="preserve">
+    <value>QI_Browse</value>
   </data>
-  <data name="&gt;&gt;btnBrowse.Type" xml:space="preserve">
+  <data name="&gt;&gt;QI_Browse.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnBrowse.Parent" xml:space="preserve">
+  <data name="&gt;&gt;QI_Browse.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnBrowse.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;QI_Browse.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="btnInstall.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="QI_Install.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnInstall.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="QI_Install.Location" type="System.Drawing.Point, System.Drawing">
     <value>130, 79</value>
   </data>
-  <data name="btnInstall.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="QI_Install.Size" type="System.Drawing.Size, System.Drawing">
     <value>119, 23</value>
   </data>
-  <data name="btnInstall.TabIndex" type="System.Int32, mscorlib">
+  <data name="QI_Install.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="btnInstall.Text" xml:space="preserve">
+  <data name="QI_Install.Text" xml:space="preserve">
     <value>Install</value>
   </data>
-  <data name="&gt;&gt;btnInstall.Name" xml:space="preserve">
-    <value>btnInstall</value>
+  <data name="&gt;&gt;QI_Install.Name" xml:space="preserve">
+    <value>QI_Install</value>
   </data>
-  <data name="&gt;&gt;btnInstall.Type" xml:space="preserve">
+  <data name="&gt;&gt;QI_Install.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;btnInstall.Parent" xml:space="preserve">
+  <data name="&gt;&gt;QI_Install.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;btnInstall.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;QI_Install.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="openDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="QI_OpenFile.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="openDialog.Filter" xml:space="preserve">
+  <data name="QI_OpenFile.Filter" xml:space="preserve">
     <value>Spray files|*.vtf|Game packages|*.zip|Demos|*.dem|Config files|*.cfg|Valve package files|*.vpk|Maps|*.bsp|Hit sounds|hitsound.wav|Kill sounds|killsound.wav|Binary plugins|*.dll</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -279,10 +279,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Quick add-on installer</value>
   </data>
-  <data name="&gt;&gt;openDialog.Name" xml:space="preserve">
-    <value>openDialog</value>
+  <data name="&gt;&gt;QI_OpenFile.Name" xml:space="preserve">
+    <value>QI_OpenFile</value>
   </data>
-  <data name="&gt;&gt;openDialog.Type" xml:space="preserve">
+  <data name="&gt;&gt;QI_OpenFile.Type" xml:space="preserve">
     <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

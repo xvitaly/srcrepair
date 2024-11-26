@@ -29,58 +29,58 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInstaller));
-            this.labelWelcome = new System.Windows.Forms.Label();
-            this.labelPath = new System.Windows.Forms.Label();
-            this.InstallPath = new System.Windows.Forms.TextBox();
-            this.btnBrowse = new System.Windows.Forms.Button();
-            this.btnInstall = new System.Windows.Forms.Button();
-            this.openDialog = new System.Windows.Forms.OpenFileDialog();
+            this.QI_WlcMsg = new System.Windows.Forms.Label();
+            this.QI_InstallPathLabel = new System.Windows.Forms.Label();
+            this.QI_InstallPath = new System.Windows.Forms.TextBox();
+            this.QI_Browse = new System.Windows.Forms.Button();
+            this.QI_Install = new System.Windows.Forms.Button();
+            this.QI_OpenFile = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
-            // labelWelcome
+            // QI_WlcMsg
             // 
-            resources.ApplyResources(this.labelWelcome, "labelWelcome");
-            this.labelWelcome.Name = "labelWelcome";
+            resources.ApplyResources(this.QI_WlcMsg, "QI_WlcMsg");
+            this.QI_WlcMsg.Name = "QI_WlcMsg";
             // 
-            // labelPath
+            // QI_InstallPathLabel
             // 
-            resources.ApplyResources(this.labelPath, "labelPath");
-            this.labelPath.Name = "labelPath";
+            resources.ApplyResources(this.QI_InstallPathLabel, "QI_InstallPathLabel");
+            this.QI_InstallPathLabel.Name = "QI_InstallPathLabel";
             // 
-            // InstallPath
+            // QI_InstallPath
             // 
-            resources.ApplyResources(this.InstallPath, "InstallPath");
-            this.InstallPath.Name = "InstallPath";
-            this.InstallPath.ReadOnly = true;
-            this.InstallPath.TabStop = false;
+            resources.ApplyResources(this.QI_InstallPath, "QI_InstallPath");
+            this.QI_InstallPath.Name = "QI_InstallPath";
+            this.QI_InstallPath.ReadOnly = true;
+            this.QI_InstallPath.TabStop = false;
             // 
-            // btnBrowse
+            // QI_Browse
             // 
-            resources.ApplyResources(this.btnBrowse, "btnBrowse");
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.BtnBrowse_Click);
+            resources.ApplyResources(this.QI_Browse, "QI_Browse");
+            this.QI_Browse.Name = "QI_Browse";
+            this.QI_Browse.UseVisualStyleBackColor = true;
+            this.QI_Browse.Click += new System.EventHandler(this.QI_Browse_Click);
             // 
-            // btnInstall
+            // QI_Install
             // 
-            resources.ApplyResources(this.btnInstall, "btnInstall");
-            this.btnInstall.Name = "btnInstall";
-            this.btnInstall.UseVisualStyleBackColor = true;
-            this.btnInstall.Click += new System.EventHandler(this.BtnInstall_Click);
+            resources.ApplyResources(this.QI_Install, "QI_Install");
+            this.QI_Install.Name = "QI_Install";
+            this.QI_Install.UseVisualStyleBackColor = true;
+            this.QI_Install.Click += new System.EventHandler(this.QI_Install_Click);
             // 
-            // openDialog
+            // QI_OpenFile
             // 
-            resources.ApplyResources(this.openDialog, "openDialog");
+            resources.ApplyResources(this.QI_OpenFile, "QI_OpenFile");
             // 
             // FrmInstaller
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnInstall);
-            this.Controls.Add(this.btnBrowse);
-            this.Controls.Add(this.InstallPath);
-            this.Controls.Add(this.labelPath);
-            this.Controls.Add(this.labelWelcome);
+            this.Controls.Add(this.QI_Install);
+            this.Controls.Add(this.QI_Browse);
+            this.Controls.Add(this.QI_InstallPath);
+            this.Controls.Add(this.QI_InstallPathLabel);
+            this.Controls.Add(this.QI_WlcMsg);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -95,11 +95,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelWelcome;
-        private System.Windows.Forms.Label labelPath;
-        private System.Windows.Forms.TextBox InstallPath;
-        private System.Windows.Forms.Button btnBrowse;
-        private System.Windows.Forms.Button btnInstall;
-        private System.Windows.Forms.OpenFileDialog openDialog;
+        private System.Windows.Forms.Label QI_WlcMsg;
+        private System.Windows.Forms.Label QI_InstallPathLabel;
+        private System.Windows.Forms.TextBox QI_InstallPath;
+        private System.Windows.Forms.Button QI_Browse;
+        private System.Windows.Forms.Button QI_Install;
+        private System.Windows.Forms.OpenFileDialog QI_OpenFile;
     }
 }

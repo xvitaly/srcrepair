@@ -122,11 +122,11 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void BtnBrowse_Click(object sender, EventArgs e)
+        private void QI_Browse_Click(object sender, EventArgs e)
         {
-            if (openDialog.ShowDialog() == DialogResult.OK)
+            if (QI_OpenFile.ShowDialog() == DialogResult.OK)
             {
-                InstallPath.Text = openDialog.FileName;
+                QI_InstallPath.Text = QI_OpenFile.FileName;
             }
         }
 
@@ -135,9 +135,9 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void BtnInstall_Click(object sender, EventArgs e)
+        private void QI_Install_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(InstallPath.Text))
+            if (!string.IsNullOrEmpty(QI_InstallPath.Text))
             {
                 try
                 {
@@ -145,31 +145,31 @@ namespace srcrepair.gui
                     string InstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
 
                     // Using different methods, based on source file extension...
-                    switch (Path.GetExtension(InstallPath.Text))
+                    switch (Path.GetExtension(QI_InstallPath.Text))
                     {
                         case ".dem": // Installing demo file...
-                            InstallFileNow(InstallPath.Text, FullGamePath);
+                            InstallFileNow(QI_InstallPath.Text, FullGamePath);
                             break;
                         case ".vpk": // Installing VPK package...
-                            InstallFileNow(InstallPath.Text, CustomInstallDir);
+                            InstallFileNow(QI_InstallPath.Text, CustomInstallDir);
                             break;
                         case ".cfg": // Installing game config...
-                            InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "cfg"));
+                            InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "cfg"));
                             break;
                         case ".bsp": // Installing map...
-                            InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "maps"));
+                            InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "maps"));
                             break;
                         case ".wav": // Installing hitsound...
-                            InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "sound", "ui"));
+                            InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "sound", "ui"));
                             break;
                         case ".vtf": // Installing spray...
-                            InstallSprayNow(InstallPath.Text);
+                            InstallSprayNow(QI_InstallPath.Text);
                             break;
                         case ".zip": // Installing contents of Zip archive...
-                            GuiHelpers.FormShowArchiveExtract(InstallPath.Text, CustomInstallDir);
+                            GuiHelpers.FormShowArchiveExtract(QI_InstallPath.Text, CustomInstallDir);
                             break;
                         case ".dll": // Installing binary plugin...
-                            InstallFileNow(InstallPath.Text, Path.Combine(InstallDir, "addons"));
+                            InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "addons"));
                             break;
                         default:
                             Logger.Warn(DebugStrings.AppDbgQIUnknownFileType);
