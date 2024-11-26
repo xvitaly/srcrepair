@@ -86,7 +86,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Installs a custom spray to the game.
+        /// Installs a custom spray into the game.
         /// </summary>
         /// <param name="FileName">Full path to the source spray file.</param>
         private void InstallSprayNow(string FileName)
