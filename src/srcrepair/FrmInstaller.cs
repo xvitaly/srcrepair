@@ -143,9 +143,8 @@ namespace srcrepair.gui
                 case ".dll": // Installing binary plugin...
                     InstallFileNow(FileName, Path.Combine(InstallDir, "addons"));
                     break;
-                default:
-                    Logger.Warn(DebugStrings.AppDbgQIUnknownFileType);
-                    break;
+                default: // Unknown file type...
+                    throw new NotImplementedException(DebugStrings.AppDbgQIUnknownFileType);
             }
         }
 
