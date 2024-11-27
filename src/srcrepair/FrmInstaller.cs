@@ -111,6 +111,10 @@ namespace srcrepair.gui
             }
         }
 
+        /// <summary>
+        /// Installs a custom content into the game.
+        /// </summary>
+        /// <param name="FileName">Full path to the custom content file.</param>
         private void InstallContent(string FileName)
         {
             // Generating full path to the installation directory...
