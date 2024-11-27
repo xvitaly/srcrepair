@@ -111,6 +111,44 @@ namespace srcrepair.gui
             }
         }
 
+        private void InstallContent(string FileName)
+        {
+            // Generating full path to the installation directory...
+            string InstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
+            
+            // Using different methods, based on source file extension...
+            switch (Path.GetExtension(FileName))
+            {
+                case ".dem": // Installing demo file...
+                    InstallFileNow(FileName, FullGamePath);
+                    break;
+                case ".vpk": // Installing VPK package...
+                    InstallFileNow(FileName, CustomInstallDir);
+                    break;
+                case ".cfg": // Installing game config...
+                    InstallFileNow(FileName, Path.Combine(InstallDir, "cfg"));
+                    break;
+                case ".bsp": // Installing map...
+                    InstallFileNow(FileName, Path.Combine(InstallDir, "maps"));
+                    break;
+                case ".wav": // Installing hitsound...
+                    InstallFileNow(FileName, Path.Combine(InstallDir, "sound", "ui"));
+                    break;
+                case ".vtf": // Installing spray...
+                    InstallSprayNow(FileName);
+                    break;
+                case ".zip": // Installing contents of Zip archive...
+                    GuiHelpers.FormShowArchiveExtract(FileName, CustomInstallDir);
+                    break;
+                case ".dll": // Installing binary plugin...
+                    InstallFileNow(FileName, Path.Combine(InstallDir, "addons"));
+                    break;
+                default:
+                    Logger.Warn(DebugStrings.AppDbgQIUnknownFileType);
+                    break;
+            }
+        }
+
         /// <summary>
         /// "Browse" button click event handler.
         /// </summary>
@@ -133,57 +171,18 @@ namespace srcrepair.gui
         {
             if (string.IsNullOrEmpty(QI_InstallPath.Text))
             {
-                // Nothing selected for installation. Showing message...
                 MessageBox.Show(AppStrings.QI_InstUnav, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                // Generating full path to destination directory, depending on selected in main window game...
-                string InstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
-
-                // Using different methods, based on source file extension...
-                switch (Path.GetExtension(QI_InstallPath.Text))
-                {
-                    case ".dem": // Installing demo file...
-                        InstallFileNow(QI_InstallPath.Text, FullGamePath);
-                        break;
-                    case ".vpk": // Installing VPK package...
-                        InstallFileNow(QI_InstallPath.Text, CustomInstallDir);
-                        break;
-                    case ".cfg": // Installing game config...
-                        InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "cfg"));
-                        break;
-                    case ".bsp": // Installing map...
-                        InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "maps"));
-                        break;
-                    case ".wav": // Installing hitsound...
-                        InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "sound", "ui"));
-                        break;
-                    case ".vtf": // Installing spray...
-                        InstallSprayNow(QI_InstallPath.Text);
-                        break;
-                    case ".zip": // Installing contents of Zip archive...
-                        GuiHelpers.FormShowArchiveExtract(QI_InstallPath.Text, CustomInstallDir);
-                        break;
-                    case ".dll": // Installing binary plugin...
-                        InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "addons"));
-                        break;
-                    default:
-                        Logger.Warn(DebugStrings.AppDbgQIUnknownFileType);
-                        break;
-                }
-
-                // Showing message...
+                InstallContent(QI_InstallPath.Text);
                 MessageBox.Show(AppStrings.QI_InstSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                // Closing window...
                 Close();
             }
             catch (Exception Ex)
             {
-                // An error occurred. Showing message and writing issue to logs...
                 Logger.Error(Ex, DebugStrings.AppDbgExInstallerRun);
                 MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
