@@ -131,62 +131,61 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void QI_Install_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(QI_InstallPath.Text))
+            if (string.IsNullOrEmpty(QI_InstallPath.Text))
             {
-                try
-                {
-                    // Generating full path to destination directory, depending on selected in main window game...
-                    string InstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
-
-                    // Using different methods, based on source file extension...
-                    switch (Path.GetExtension(QI_InstallPath.Text))
-                    {
-                        case ".dem": // Installing demo file...
-                            InstallFileNow(QI_InstallPath.Text, FullGamePath);
-                            break;
-                        case ".vpk": // Installing VPK package...
-                            InstallFileNow(QI_InstallPath.Text, CustomInstallDir);
-                            break;
-                        case ".cfg": // Installing game config...
-                            InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "cfg"));
-                            break;
-                        case ".bsp": // Installing map...
-                            InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "maps"));
-                            break;
-                        case ".wav": // Installing hitsound...
-                            InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "sound", "ui"));
-                            break;
-                        case ".vtf": // Installing spray...
-                            InstallSprayNow(QI_InstallPath.Text);
-                            break;
-                        case ".zip": // Installing contents of Zip archive...
-                            GuiHelpers.FormShowArchiveExtract(QI_InstallPath.Text, CustomInstallDir);
-                            break;
-                        case ".dll": // Installing binary plugin...
-                            InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "addons"));
-                            break;
-                        default:
-                            Logger.Warn(DebugStrings.AppDbgQIUnknownFileType);
-                            break;
-                    }
-
-                    // Showing message...
-                    MessageBox.Show(AppStrings.QI_InstSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // Closing window...
-                    Close();
-                }
-                catch (Exception Ex)
-                {
-                    // An error occurred. Showing message and writing issue to logs...
-                    Logger.Error(Ex, DebugStrings.AppDbgExInstallerRun);
-                    MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                // User selected nothing. Showing message...
+                // Nothing selected for installation. Showing message...
                 MessageBox.Show(AppStrings.QI_InstUnav, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                // Generating full path to destination directory, depending on selected in main window game...
+                string InstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
+
+                // Using different methods, based on source file extension...
+                switch (Path.GetExtension(QI_InstallPath.Text))
+                {
+                    case ".dem": // Installing demo file...
+                        InstallFileNow(QI_InstallPath.Text, FullGamePath);
+                        break;
+                    case ".vpk": // Installing VPK package...
+                        InstallFileNow(QI_InstallPath.Text, CustomInstallDir);
+                        break;
+                    case ".cfg": // Installing game config...
+                        InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "cfg"));
+                        break;
+                    case ".bsp": // Installing map...
+                        InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "maps"));
+                        break;
+                    case ".wav": // Installing hitsound...
+                        InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "sound", "ui"));
+                        break;
+                    case ".vtf": // Installing spray...
+                        InstallSprayNow(QI_InstallPath.Text);
+                        break;
+                    case ".zip": // Installing contents of Zip archive...
+                        GuiHelpers.FormShowArchiveExtract(QI_InstallPath.Text, CustomInstallDir);
+                        break;
+                    case ".dll": // Installing binary plugin...
+                        InstallFileNow(QI_InstallPath.Text, Path.Combine(InstallDir, "addons"));
+                        break;
+                    default:
+                        Logger.Warn(DebugStrings.AppDbgQIUnknownFileType);
+                        break;
+                }
+
+                // Showing message...
+                MessageBox.Show(AppStrings.QI_InstSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Closing window...
+                Close();
+            }
+            catch (Exception Ex)
+            {
+                // An error occurred. Showing message and writing issue to logs...
+                Logger.Error(Ex, DebugStrings.AppDbgExInstallerRun);
+                MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
