@@ -1528,15 +1528,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occured during file installation. Please try again later!.
-        /// </summary>
-        internal static string QI_Excpt {
-            get {
-                return ResourceManager.GetString("QI_Excpt", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred while generating the VMT file! This file will not be installed..
         /// </summary>
         internal static string QI_GenVMTError {
@@ -1551,6 +1542,15 @@ namespace srcrepair.gui {
         internal static string QI_GenVMTMsg {
             get {
                 return ResourceManager.GetString("QI_GenVMTMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to install the selected file!.
+        /// </summary>
+        internal static string QI_InstallationError {
+            get {
+                return ResourceManager.GetString("QI_InstallationError", resourceCulture);
             }
         }
         

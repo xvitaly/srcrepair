@@ -606,14 +606,14 @@
   <data name="PS_StartClientException" xml:space="preserve">
     <value>Произошла ошибка при попытке запуска установленного клиента Steam! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
-  <data name="QI_Excpt" xml:space="preserve">
-    <value>Произошла ошибка во время установки выбранного файла!</value>
-  </data>
   <data name="QI_GenVMTError" xml:space="preserve">
     <value>Произошла ошибка при генерации VMT-файла! Он не будет установлен.</value>
   </data>
   <data name="QI_GenVMTMsg" xml:space="preserve">
     <value>В каталоге со спреем не найден VMT-файл. Сгенерировать его автоматически?</value>
+  </data>
+  <data name="QI_InstallationError" xml:space="preserve">
+    <value>Произошла ошибка при попытке установить выбранный файл!</value>
   </data>
   <data name="QI_InstallationSuccessful" xml:space="preserve">
     <value>Выбранный файл был успешно установлен!</value>

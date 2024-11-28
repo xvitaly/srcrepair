@@ -187,7 +187,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExInstallerRun);
-                MessageBox.Show(AppStrings.QI_Excpt, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.QI_InstallationError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
