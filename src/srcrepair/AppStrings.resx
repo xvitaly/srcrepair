@@ -618,8 +618,8 @@
   <data name="QI_InstSuccessfull" xml:space="preserve">
     <value>Installation has been completed successfully!</value>
   </data>
-  <data name="QI_InstUnav" xml:space="preserve">
-    <value>Please select file before pressing this button and try again!</value>
+  <data name="QI_NoSelection" xml:space="preserve">
+    <value>No files selected for installation! Please choose one using the Browse button, then click Install.</value>
   </data>
   <data name="RPB_CloseCpt" xml:space="preserve">
     <value>Close</value>

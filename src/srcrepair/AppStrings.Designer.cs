@@ -1564,11 +1564,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please select file before pressing this button and try again!.
+        ///   Looks up a localized string similar to No files selected for installation! Please choose one using the Browse button, then click Install..
         /// </summary>
-        internal static string QI_InstUnav {
+        internal static string QI_NoSelection {
             get {
-                return ResourceManager.GetString("QI_InstUnav", resourceCulture);
+                return ResourceManager.GetString("QI_NoSelection", resourceCulture);
             }
         }
         

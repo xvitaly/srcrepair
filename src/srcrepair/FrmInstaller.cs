@@ -174,7 +174,7 @@ namespace srcrepair.gui
         {
             if (string.IsNullOrEmpty(QI_InstallPath.Text))
             {
-                MessageBox.Show(AppStrings.QI_InstUnav, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.QI_NoSelection, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

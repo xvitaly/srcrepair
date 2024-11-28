@@ -618,8 +618,8 @@
   <data name="QI_InstSuccessfull" xml:space="preserve">
     <value>Установка выбранного файла успешно завершена!</value>
   </data>
-  <data name="QI_InstUnav" xml:space="preserve">
-    <value>Установка невозможна, т.к. вы не выбрали файл, который нужно установить. Выберите файл и повторите попытку!</value>
+  <data name="QI_NoSelection" xml:space="preserve">
+    <value>Не указан файл для установки! Пожалуйста сначала выберите его при помощи кнопки Найти, а затем нажмите Установить.</value>
   </data>
   <data name="RPB_CloseCpt" xml:space="preserve">
     <value>Закрыть</value>
