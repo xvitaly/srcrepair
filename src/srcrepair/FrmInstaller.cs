@@ -38,6 +38,11 @@ namespace srcrepair.gui
         private readonly string CustomInstallDir;
 
         /// <summary>
+        /// Stores full path to the installation directory.
+        /// </summary>
+        private readonly string UserInstallDir;
+
+        /// <summary>
         /// FrmInstaller class constructor.
         /// </summary>
         /// <param name="F">Path to game installation directory.</param>
@@ -49,6 +54,7 @@ namespace srcrepair.gui
             FullGamePath = F;
             IsUsingUserDir = I;
             CustomInstallDir = U;
+            UserInstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
         }
 
         /// <summary>
@@ -117,9 +123,6 @@ namespace srcrepair.gui
         /// <param name="FileName">Full path to the custom content file.</param>
         private void InstallContent(string FileName)
         {
-            // Generating full path to the installation directory...
-            string InstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
-            
             // Using different methods, based on source file extension...
             switch (Path.GetExtension(FileName))
             {
@@ -130,13 +133,13 @@ namespace srcrepair.gui
                     InstallFileNow(FileName, CustomInstallDir);
                     break;
                 case ".cfg": // Installing game config...
-                    InstallFileNow(FileName, Path.Combine(InstallDir, "cfg"));
+                    InstallFileNow(FileName, Path.Combine(UserInstallDir, "cfg"));
                     break;
                 case ".bsp": // Installing map...
-                    InstallFileNow(FileName, Path.Combine(InstallDir, "maps"));
+                    InstallFileNow(FileName, Path.Combine(UserInstallDir, "maps"));
                     break;
                 case ".wav": // Installing hitsound...
-                    InstallFileNow(FileName, Path.Combine(InstallDir, "sound", "ui"));
+                    InstallFileNow(FileName, Path.Combine(UserInstallDir, "sound", "ui"));
                     break;
                 case ".vtf": // Installing spray...
                     InstallSprayNow(FileName);
@@ -145,7 +148,7 @@ namespace srcrepair.gui
                     GuiHelpers.FormShowArchiveExtract(FileName, CustomInstallDir);
                     break;
                 case ".dll": // Installing binary plugin...
-                    InstallFileNow(FileName, Path.Combine(InstallDir, "addons"));
+                    InstallFileNow(FileName, Path.Combine(UserInstallDir, "addons"));
                     break;
                 default: // Unknown file type...
                     throw new NotImplementedException(DebugStrings.AppDbgQIUnknownFileType);
