@@ -1555,11 +1555,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Installation has been completed successfully!.
+        ///   Looks up a localized string similar to The selected file has been installed successfully!.
         /// </summary>
-        internal static string QI_InstSuccessfull {
+        internal static string QI_InstallationSuccessful {
             get {
-                return ResourceManager.GetString("QI_InstSuccessfull", resourceCulture);
+                return ResourceManager.GetString("QI_InstallationSuccessful", resourceCulture);
             }
         }
         

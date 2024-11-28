@@ -181,7 +181,7 @@ namespace srcrepair.gui
             try
             {
                 InstallContent(QI_InstallPath.Text);
-                MessageBox.Show(AppStrings.QI_InstSuccessfull, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.QI_InstallationSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (Exception Ex)

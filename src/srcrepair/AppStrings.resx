@@ -615,8 +615,8 @@
   <data name="QI_GenVMTMsg" xml:space="preserve">
     <value>Generate VMT file automatically?</value>
   </data>
-  <data name="QI_InstSuccessfull" xml:space="preserve">
-    <value>Installation has been completed successfully!</value>
+  <data name="QI_InstallationSuccessful" xml:space="preserve">
+    <value>The selected file has been installed successfully!</value>
   </data>
   <data name="QI_NoSelection" xml:space="preserve">
     <value>No files selected for installation! Please choose one using the Browse button, then click Install.</value>
