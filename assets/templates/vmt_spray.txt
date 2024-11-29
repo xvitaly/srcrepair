@@ -1,6 +1,6 @@
 "UnlitGeneric"
 {
-	"$basetexture"	"{D}"
+	"$basetexture" "vgui/logos/{D}"
 	"$translucent" "1"
 	"$ignorez" "1"
 	"$vertexcolor" "1"
