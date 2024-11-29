@@ -565,24 +565,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to compile VMT file from template..
-        /// </summary>
-        internal static string AppDbgExInstallerCompile {
-            get {
-                return ResourceManager.GetString("AppDbgExInstallerCompile", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while installing the selected file..
-        /// </summary>
-        internal static string AppDbgExInstallerRun {
-            get {
-                return ResourceManager.GetString("AppDbgExInstallerRun", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to disable both WIN keys..
         /// </summary>
         internal static string AppDbgExKbBW {
@@ -759,6 +741,24 @@ namespace srcrepair.gui {
         internal static string AppDbgExPluginsInit {
             get {
                 return ResourceManager.GetString("AppDbgExPluginsInit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to install the selected file..
+        /// </summary>
+        internal static string AppDbgExQIBaseInstall {
+            get {
+                return ResourceManager.GetString("AppDbgExQIBaseInstall", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to generate a new VMT file from template..
+        /// </summary>
+        internal static string AppDbgExQIGenVMT {
+            get {
+                return ResourceManager.GetString("AppDbgExQIGenVMT", resourceCulture);
             }
         }
         

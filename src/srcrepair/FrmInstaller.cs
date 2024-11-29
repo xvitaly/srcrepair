@@ -86,7 +86,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExInstallerCompile);
+                Logger.Warn(Ex, DebugStrings.AppDbgExQIGenVMT);
                 MessageBox.Show(AppStrings.QI_GenVMTError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
@@ -189,7 +189,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExInstallerRun);
+                Logger.Error(Ex, DebugStrings.AppDbgExQIBaseInstall);
                 MessageBox.Show(AppStrings.QI_InstallationError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }

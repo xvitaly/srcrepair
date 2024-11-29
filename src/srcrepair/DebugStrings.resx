@@ -285,12 +285,6 @@
   <data name="AppDbgExHudSelect" xml:space="preserve">
     <value>Exception while trying to select another HUD.</value>
   </data>
-  <data name="AppDbgExInstallerCompile" xml:space="preserve">
-    <value>Exception while trying to compile VMT file from template.</value>
-  </data>
-  <data name="AppDbgExInstallerRun" xml:space="preserve">
-    <value>Exception while installing the selected file.</value>
-  </data>
   <data name="AppDbgExKbBW" xml:space="preserve">
     <value>Exception while trying to disable both WIN keys.</value>
   </data>
@@ -350,6 +344,12 @@
   </data>
   <data name="AppDbgExPluginsInit" xml:space="preserve">
     <value>Exception while trying to create an instance of the PluginManager class.</value>
+  </data>
+  <data name="AppDbgExQIBaseInstall" xml:space="preserve">
+    <value>Exception while trying to install the selected file.</value>
+  </data>
+  <data name="AppDbgExQIGenVMT" xml:space="preserve">
+    <value>Exception while trying to generate a new VMT file from template.</value>
   </data>
   <data name="AppDbgExRemVd" xml:space="preserve">
     <value>Exception while trying to remove the game settings.</value>
