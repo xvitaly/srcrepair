@@ -610,7 +610,7 @@
     <value>An error occurred while generating the VMT file! This file will not be installed.</value>
   </data>
   <data name="QI_GenVMTMsg" xml:space="preserve">
-    <value>Generate VMT file automatically?</value>
+    <value>Spray files require a special VMT file in order to be available in the game. Unfortunately, it was found in the same directory as a spray file. Generate it automatically?</value>
   </data>
   <data name="QI_InstallationError" xml:space="preserve">
     <value>An error occurred while trying to install the selected file!</value>

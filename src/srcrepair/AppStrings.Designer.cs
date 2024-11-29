@@ -1537,7 +1537,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Generate VMT file automatically?.
+        ///   Looks up a localized string similar to Spray files require a special VMT file in order to be available in the game. Unfortunately, it was found in the same directory as a spray file. Generate it automatically?.
         /// </summary>
         internal static string QI_GenVMTMsg {
             get {
