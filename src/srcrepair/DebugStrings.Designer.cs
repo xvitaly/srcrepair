@@ -754,11 +754,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to generate a new VMT file from template..
+        ///   Looks up a localized string similar to Exception while trying to generate a new configuration file from a template..
         /// </summary>
-        internal static string AppDbgExQIGenVMT {
+        internal static string AppDbgExQIGenTemplate {
             get {
-                return ResourceManager.GetString("AppDbgExQIGenVMT", resourceCulture);
+                return ResourceManager.GetString("AppDbgExQIGenTemplate", resourceCulture);
             }
         }
         

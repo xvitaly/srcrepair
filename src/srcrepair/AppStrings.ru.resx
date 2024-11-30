@@ -606,8 +606,8 @@
   <data name="PS_StartClientException" xml:space="preserve">
     <value>Произошла ошибка при попытке запуска установленного клиента Steam! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
-  <data name="QI_GenVMTError" xml:space="preserve">
-    <value>Произошла ошибка при генерации VMT-файла! Он не будет установлен.</value>
+  <data name="QI_GenTemplateError" xml:space="preserve">
+    <value>Произошла ошибка при генерации файла конфигурации! Он не будет установлен.</value>
   </data>
   <data name="QI_GenVMTMsg" xml:space="preserve">
     <value>Файлы спреев требуют специальный VMT-файл, чтобы быть доступными в игре. К сожалению, он не был найден в том же каталоге, что и файл спрея. Сгенерировать его автоматически?</value>

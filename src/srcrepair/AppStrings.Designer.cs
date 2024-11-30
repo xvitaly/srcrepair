@@ -1528,11 +1528,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while generating the VMT file! This file will not be installed..
+        ///   Looks up a localized string similar to An error occurred while generating the configuration file! This file will not be installed..
         /// </summary>
-        internal static string QI_GenVMTError {
+        internal static string QI_GenTemplateError {
             get {
-                return ResourceManager.GetString("QI_GenVMTError", resourceCulture);
+                return ResourceManager.GetString("QI_GenTemplateError", resourceCulture);
             }
         }
         

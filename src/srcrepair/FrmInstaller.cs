@@ -72,22 +72,23 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Compiles a new VMT file from a template.
+        /// Compiles a new file from a template.
         /// </summary>
-        /// <param name="FileName">Full path to the destination VMT file.</param>
-        private void CompileFromTemplate(string FileName)
+        /// <param name="Template">Template.</param>
+        /// <param name="FileName">Full path to the destination file.</param>
+        private void CompileFromTemplate(string Template, string FileName)
         {
             try
             {
                 using (StreamWriter CFile = new StreamWriter(FileName))
                 {
-                    CFile.WriteLine(Properties.Resources.TemplateSpray.Replace("{D}", Path.GetFileNameWithoutExtension(FileName)));
+                    CFile.WriteLine(Template.Replace("{D}", Path.GetFileNameWithoutExtension(FileName)));
                 }
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExQIGenVMT);
-                MessageBox.Show(AppStrings.QI_GenVMTError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Warn(Ex, DebugStrings.AppDbgExQIGenTemplate);
+                MessageBox.Show(AppStrings.QI_GenTemplateError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -104,7 +105,7 @@ namespace srcrepair.gui
             // Checking if the precompiled VMT file exists...
             if (!File.Exists(VMTFile) && MessageBox.Show(AppStrings.QI_GenVMTMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                CompileFromTemplate(VMTFile);
+                CompileFromTemplate(Properties.Resources.TemplateSpray, VMTFile);
             }
 
             // Installing spray file...
