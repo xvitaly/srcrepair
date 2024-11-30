@@ -651,9 +651,22 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &quot;Plugin&quot;
+        ///{
+        ///	&quot;file&quot; &quot;addons/{D}&quot;
+        ///}
+        ///.
+        /// </summary>
+        internal static string TemplatePlugin {
+            get {
+                return ResourceManager.GetString("TemplatePlugin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &quot;UnlitGeneric&quot;
         ///{
-        ///	&quot;$basetexture&quot;	&quot;{D}&quot;
+        ///	&quot;$basetexture&quot; &quot;vgui/logos/{D}&quot;
         ///	&quot;$translucent&quot; &quot;1&quot;
         ///	&quot;$ignorez&quot; &quot;1&quot;
         ///	&quot;$vertexcolor&quot; &quot;1&quot;
@@ -661,9 +674,9 @@ namespace srcrepair.gui.Properties {
         ///}
         ///.
         /// </summary>
-        internal static string TemplateVMTSpray {
+        internal static string TemplateSpray {
             get {
-                return ResourceManager.GetString("TemplateVMTSpray", resourceCulture);
+                return ResourceManager.GetString("TemplateSpray", resourceCulture);
             }
         }
     }
