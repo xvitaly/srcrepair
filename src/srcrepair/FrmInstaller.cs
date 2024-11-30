@@ -122,6 +122,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Installs a custom plugin into the game.
+        /// </summary>
+        /// <param name="FileName">Full path to the source plugin file.</param>
+        private void InstallPluginNow(string FileName)
+        {
+            InstallWithConfigNow(FileName, Path.Combine(UserInstallDir, "addons"), ".vdf", Properties.Resources.TemplatePlugin);
+        }
+
+        /// <summary>
         /// Installs a custom spray into the game.
         /// </summary>
         /// <param name="FileName">Full path to the source spray file.</param>
@@ -161,7 +170,7 @@ namespace srcrepair.gui
                     GuiHelpers.FormShowArchiveExtract(FileName, CustomInstallDir);
                     break;
                 case ".dll": // Installing binary plugin...
-                    InstallFileNow(FileName, Path.Combine(UserInstallDir, "addons"));
+                    InstallPluginNow(FileName);
                     break;
                 default: // Unknown file type...
                     throw new NotImplementedException(DebugStrings.AppDbgQIUnknownFileType);
