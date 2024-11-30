@@ -1528,20 +1528,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The selected file require a special configuration file in order to be available in the game. Unfortunately, it was found in the same directory. Generate it automatically?.
+        /// </summary>
+        internal static string QI_GenFileMsg {
+            get {
+                return ResourceManager.GetString("QI_GenFileMsg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while generating the configuration file! This file will not be installed..
         /// </summary>
         internal static string QI_GenTemplateError {
             get {
                 return ResourceManager.GetString("QI_GenTemplateError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Spray files require a special VMT file in order to be available in the game. Unfortunately, it was found in the same directory as a spray file. Generate it automatically?.
-        /// </summary>
-        internal static string QI_GenVMTMsg {
-            get {
-                return ResourceManager.GetString("QI_GenVMTMsg", resourceCulture);
             }
         }
         

@@ -93,29 +93,41 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Installs custom content into the game that requires a special
+        /// configuration file.
+        /// </summary>
+        /// <param name="FileName">Full path to the custom content file.</param>
+        /// <param name="DestDir">Destination directory.</param>
+        /// <param name="ConfigExtension">Configuration file extension.</param>
+        /// <param name="Template">Template as a string.</param>
+        private void InstallWithConfigNow(string FileName, string DestDir, string ConfigExtension, string Template)
+        {
+            // Generating full path to the configuration file...
+            string ConfigFile = Path.Combine(Path.GetDirectoryName(FileName), Path.ChangeExtension(Path.GetFileName(FileName), ConfigExtension));
+
+            // Checking if the precompiled configuration file exists...
+            if (!File.Exists(ConfigFile) && MessageBox.Show(AppStrings.QI_GenFileMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                CompileFromTemplate(Template, ConfigFile);
+            }
+
+            // Installing the requested file...
+            InstallFileNow(FileName, DestDir);
+
+            // Installing the configuration file...
+            if (File.Exists(ConfigFile))
+            {
+                InstallFileNow(ConfigFile, DestDir);
+            }
+        }
+
+        /// <summary>
         /// Installs a custom spray into the game.
         /// </summary>
         /// <param name="FileName">Full path to the source spray file.</param>
         private void InstallSprayNow(string FileName)
         {
-            // Generating paths to files and directories...
-            string DestDir = Path.Combine(FullGamePath, "materials", "vgui", "logos");
-            string VMTFile = Path.Combine(Path.GetDirectoryName(FileName), Path.ChangeExtension(Path.GetFileName(FileName), ".vmt"));
-
-            // Checking if the precompiled VMT file exists...
-            if (!File.Exists(VMTFile) && MessageBox.Show(AppStrings.QI_GenVMTMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                CompileFromTemplate(Properties.Resources.TemplateSpray, VMTFile);
-            }
-
-            // Installing spray file...
-            InstallFileNow(FileName, DestDir);
-
-            // Installing VMT file...
-            if (File.Exists(VMTFile))
-            {
-                InstallFileNow(VMTFile, DestDir);
-            }
+            InstallWithConfigNow(FileName, Path.Combine(FullGamePath, "materials", "vgui", "logos"), ".vmt", Properties.Resources.TemplateSpray);
         }
 
         /// <summary>
