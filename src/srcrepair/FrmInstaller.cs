@@ -82,7 +82,7 @@ namespace srcrepair.gui
             {
                 using (StreamWriter CFile = new StreamWriter(FileName))
                 {
-                    CFile.WriteLine(Template.Replace("{D}", Path.GetFileNameWithoutExtension(FileName)));
+                    CFile.Write(Template.Replace("{D}", Path.GetFileNameWithoutExtension(FileName)));
                 }
             }
             catch (Exception Ex)
