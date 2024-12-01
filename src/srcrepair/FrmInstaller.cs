@@ -58,20 +58,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Installs custom file to game.
-        /// </summary>
-        /// <param name="FileName">Full path to source file.</param>
-        /// <param name="DestDir">Full path to destination file.</param>
-        private void InstallFileNow(string FileName, string DestDir)
-        {
-            // Checking if destination directory exists...
-            if (!Directory.Exists(DestDir)) { Directory.CreateDirectory(DestDir); }
-
-            // Copying file from source to destination...
-            File.Copy(FileName, Path.Combine(DestDir, Path.GetFileName(FileName)), true);
-        }
-
-        /// <summary>
         /// Generates a configuration file from a template.
         /// </summary>
         /// <param name="FileName">Full path to the target configuration file.</param>
@@ -90,6 +76,20 @@ namespace srcrepair.gui
                 Logger.Warn(Ex, DebugStrings.AppDbgExQIGenTemplate);
                 MessageBox.Show(AppStrings.QI_GenTemplateError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        /// <summary>
+        /// Installs custom file to game.
+        /// </summary>
+        /// <param name="FileName">Full path to source file.</param>
+        /// <param name="DestDir">Full path to destination file.</param>
+        private void InstallFileNow(string FileName, string DestDir)
+        {
+            // Checking if destination directory exists...
+            if (!Directory.Exists(DestDir)) { Directory.CreateDirectory(DestDir); }
+
+            // Copying file from source to destination...
+            File.Copy(FileName, Path.Combine(DestDir, Path.GetFileName(FileName)), true);
         }
 
         /// <summary>
