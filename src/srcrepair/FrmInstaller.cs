@@ -99,8 +99,8 @@ namespace srcrepair.gui
         /// <param name="FileName">Full path to the custom content file.</param>
         /// <param name="DestDir">Destination directory.</param>
         /// <param name="ConfigExtension">Configuration file extension.</param>
-        /// <param name="Template">Template as a string.</param>
-        private void InstallWithConfigNow(string FileName, string DestDir, string ConfigExtension, string Template)
+        /// <param name="ConfigTemplate">Configuration file template as a string.</param>
+        private void InstallWithConfigNow(string FileName, string DestDir, string ConfigExtension, string ConfigTemplate)
         {
             // Generating full path to the configuration file...
             string ConfigFile = Path.Combine(Path.GetDirectoryName(FileName), Path.ChangeExtension(Path.GetFileName(FileName), ConfigExtension));
@@ -108,7 +108,7 @@ namespace srcrepair.gui
             // Checking if the precompiled configuration file exists...
             if (!File.Exists(ConfigFile) && MessageBox.Show(AppStrings.QI_GenFileMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                CompileFromTemplate(Template, ConfigFile);
+                CompileFromTemplate(ConfigTemplate, ConfigFile);
             }
 
             // Installing the requested file...
