@@ -27,12 +27,6 @@ namespace srcrepair.gui
         private readonly string FullGamePath;
 
         /// <summary>
-        /// Stores if current game is using a special directory
-        /// for custom user stuff.
-        /// </summary>
-        private readonly bool IsUsingUserDir;
-
-        /// <summary>
         /// Stores path to custom user stuff directory.
         /// </summary>
         private readonly string CustomInstallDir;
@@ -52,9 +46,8 @@ namespace srcrepair.gui
         {
             InitializeComponent();
             FullGamePath = F;
-            IsUsingUserDir = I;
             CustomInstallDir = U;
-            UserInstallDir = IsUsingUserDir ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
+            UserInstallDir = I ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
         }
 
         /// <summary>
