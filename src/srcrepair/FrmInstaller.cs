@@ -72,11 +72,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Compiles a new file from a template.
+        /// Generates a configuration file from a template.
         /// </summary>
-        /// <param name="Template">Template.</param>
-        /// <param name="FileName">Full path to the destination file.</param>
-        private void CompileFromTemplate(string Template, string FileName)
+        /// <param name="FileName">Full path to the target configuration file.</param>
+        /// <param name="Template">Configuration file template as a string.</param>
+        private void GenerateConfigFromTemplate(string FileName, string Template)
         {
             try
             {
@@ -105,10 +105,10 @@ namespace srcrepair.gui
             // Generating full path to the configuration file...
             string ConfigFile = Path.Combine(Path.GetDirectoryName(FileName), Path.ChangeExtension(Path.GetFileName(FileName), ConfigExtension));
 
-            // Checking if the precompiled configuration file exists...
+            // Checking if the configuration file exists...
             if (!File.Exists(ConfigFile) && MessageBox.Show(AppStrings.QI_GenFileMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                CompileFromTemplate(ConfigTemplate, ConfigFile);
+                GenerateConfigFromTemplate(ConfigFile, ConfigTemplate);
             }
 
             // Installing the requested file...
