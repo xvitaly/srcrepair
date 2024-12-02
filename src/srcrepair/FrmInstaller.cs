@@ -12,36 +12,37 @@ using NLog;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of custom stuff installer window.
+    /// Class of the Quick add-on installer module.
     /// </summary>
     public partial class FrmInstaller : Form
     {
         /// <summary>
-        /// Logger instance for FrmInstaller class.
+        /// Logger instance for the FrmInstaller class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Stores path to game installation directory.
+        /// Stores the full path to the game installation directory.
         /// </summary>
         private readonly string FullGamePath;
 
         /// <summary>
-        /// Stores path to custom user stuff directory.
+        /// Stores the full path to a special directory for storing
+        /// custom user content.
         /// </summary>
         private readonly string CustomInstallDir;
 
         /// <summary>
-        /// Stores full path to the installation directory.
+        /// Stores the full path to the installation directory.
         /// </summary>
         private readonly string UserInstallDir;
 
         /// <summary>
         /// FrmInstaller class constructor.
         /// </summary>
-        /// <param name="F">Path to game installation directory.</param>
-        /// <param name="I">If current game is using a special directory for custom user stuff.</param>
-        /// <param name="U">Path to custom user stuff directory.</param>
+        /// <param name="F">Full path to the game installation directory.</param>
+        /// <param name="I">If current game is using a special directory for storing custom user content.</param>
+        /// <param name="U">Full path to the custom user content directory.</param>
         public FrmInstaller(string F, bool I, string U)
         {
             InitializeComponent();
