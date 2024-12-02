@@ -1528,6 +1528,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No file selected for installation! Please choose one using the Browse button, then click Install..
+        /// </summary>
+        internal static string QI_FileNotSelected {
+            get {
+                return ResourceManager.GetString("QI_FileNotSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The selected file require a special configuration file in order to be available in the game. Unfortunately, it was found in the same directory. Generate it automatically?.
         /// </summary>
         internal static string QI_GenFileMsg {
@@ -1560,15 +1569,6 @@ namespace srcrepair.gui {
         internal static string QI_InstallationSuccessful {
             get {
                 return ResourceManager.GetString("QI_InstallationSuccessful", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No files selected for installation! Please choose one using the Browse button, then click Install..
-        /// </summary>
-        internal static string QI_NoFilesSelected {
-            get {
-                return ResourceManager.GetString("QI_NoFilesSelected", resourceCulture);
             }
         }
         

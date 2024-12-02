@@ -192,7 +192,7 @@ namespace srcrepair.gui
         {
             if (string.IsNullOrEmpty(QI_InstallPath.Text))
             {
-                MessageBox.Show(AppStrings.QI_NoFilesSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.QI_FileNotSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

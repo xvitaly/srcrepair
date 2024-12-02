@@ -606,6 +606,9 @@
   <data name="PS_StartClientException" xml:space="preserve">
     <value>Произошла ошибка при попытке запуска установленного клиента Steam! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
+  <data name="QI_FileNotSelected" xml:space="preserve">
+    <value>Не указан файл для установки! Пожалуйста, сначала выберите его при помощи кнопки Найти, а затем нажмите Установить.</value>
+  </data>
   <data name="QI_GenFileMsg" xml:space="preserve">
     <value>Выбранный для установки файл требует специальный конфигурационный файл, чтобы быть доступным в игре. К сожалению, он не был найден в том же каталоге. Сгенерировать его автоматически?</value>
   </data>
@@ -617,9 +620,6 @@
   </data>
   <data name="QI_InstallationSuccessful" xml:space="preserve">
     <value>Выбранный файл был успешно установлен!</value>
-  </data>
-  <data name="QI_NoFilesSelected" xml:space="preserve">
-    <value>Не указаны файл для установки! Пожалуйста, сначала выберите его при помощи кнопки Найти, а затем нажмите Установить.</value>
   </data>
   <data name="RPB_CloseCpt" xml:space="preserve">
     <value>Закрыть</value>
