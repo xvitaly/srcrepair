@@ -67,7 +67,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExQIGenTemplate);
-                MessageBox.Show(AppStrings.QI_GenTemplateError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.QI_GenerateConfigError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -99,7 +99,7 @@ namespace srcrepair.gui
             string ConfigFile = Path.Combine(Path.GetDirectoryName(FileName), Path.ChangeExtension(Path.GetFileName(FileName), ConfigExtension));
 
             // Checking if the configuration file exists...
-            if (!File.Exists(ConfigFile) && MessageBox.Show(AppStrings.QI_GenFileMsg, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (!File.Exists(ConfigFile) && MessageBox.Show(AppStrings.QI_GenerateConfigQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 GenerateConfigFromTemplate(ConfigFile, ConfigTemplate);
             }

@@ -609,11 +609,11 @@
   <data name="QI_FileNotSelected" xml:space="preserve">
     <value>No file selected for installation! Please choose one using the Browse button, then click Install.</value>
   </data>
-  <data name="QI_GenFileMsg" xml:space="preserve">
-    <value>The selected file require a special configuration file in order to be available in the game. Unfortunately, it was found in the same directory. Generate it automatically?</value>
-  </data>
-  <data name="QI_GenTemplateError" xml:space="preserve">
+  <data name="QI_GenerateConfigError" xml:space="preserve">
     <value>An error occurred while generating the configuration file! This file will not be installed.</value>
+  </data>
+  <data name="QI_GenerateConfigQuestion" xml:space="preserve">
+    <value>The selected file require a special configuration file in order to be available in the game. Unfortunately, it was found in the same directory. Generate it automatically?</value>
   </data>
   <data name="QI_InstallationError" xml:space="preserve">
     <value>An error occurred while trying to install the selected file!</value>

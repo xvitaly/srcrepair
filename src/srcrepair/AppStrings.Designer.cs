@@ -1537,20 +1537,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The selected file require a special configuration file in order to be available in the game. Unfortunately, it was found in the same directory. Generate it automatically?.
+        ///   Looks up a localized string similar to An error occurred while generating the configuration file! This file will not be installed..
         /// </summary>
-        internal static string QI_GenFileMsg {
+        internal static string QI_GenerateConfigError {
             get {
-                return ResourceManager.GetString("QI_GenFileMsg", resourceCulture);
+                return ResourceManager.GetString("QI_GenerateConfigError", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while generating the configuration file! This file will not be installed..
+        ///   Looks up a localized string similar to The selected file require a special configuration file in order to be available in the game. Unfortunately, it was found in the same directory. Generate it automatically?.
         /// </summary>
-        internal static string QI_GenTemplateError {
+        internal static string QI_GenerateConfigQuestion {
             get {
-                return ResourceManager.GetString("QI_GenTemplateError", resourceCulture);
+                return ResourceManager.GetString("QI_GenerateConfigQuestion", resourceCulture);
             }
         }
         
