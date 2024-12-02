@@ -67,7 +67,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExQIGenTemplate);
+                Logger.Warn(Ex, DebugStrings.AppDbgExQIGenerateConfig);
                 MessageBox.Show(AppStrings.QI_GenerateConfigError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

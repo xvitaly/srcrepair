@@ -348,7 +348,7 @@
   <data name="AppDbgExQIBaseInstall" xml:space="preserve">
     <value>Exception while trying to install the selected file.</value>
   </data>
-  <data name="AppDbgExQIGenTemplate" xml:space="preserve">
+  <data name="AppDbgExQIGenerateConfig" xml:space="preserve">
     <value>Exception while trying to generate a new configuration file from a template.</value>
   </data>
   <data name="AppDbgExRemVd" xml:space="preserve">

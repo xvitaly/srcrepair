@@ -756,9 +756,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Exception while trying to generate a new configuration file from a template..
         /// </summary>
-        internal static string AppDbgExQIGenTemplate {
+        internal static string AppDbgExQIGenerateConfig {
             get {
-                return ResourceManager.GetString("AppDbgExQIGenTemplate", resourceCulture);
+                return ResourceManager.GetString("AppDbgExQIGenerateConfig", resourceCulture);
             }
         }
         
