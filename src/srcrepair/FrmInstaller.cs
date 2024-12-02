@@ -40,15 +40,15 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmInstaller class constructor.
         /// </summary>
-        /// <param name="F">Full path to the game installation directory.</param>
-        /// <param name="I">If current game is using a special directory for storing custom user content.</param>
-        /// <param name="U">Full path to the custom user content directory.</param>
-        public FrmInstaller(string F, bool I, string U)
+        /// <param name="GameDir">Full path to the game installation directory.</param>
+        /// <param name="UseCustomDir">If current game is using a special directory for storing custom user content.</param>
+        /// <param name="CustomDir">Full path to the custom user content directory.</param>
+        public FrmInstaller(string GameDir, bool UseCustomDir, string CustomDir)
         {
             InitializeComponent();
-            FullGamePath = F;
-            CustomInstallDir = U;
-            UserInstallDir = I ? Path.Combine(CustomInstallDir, Properties.Settings.Default.UserCustDirName) : FullGamePath;
+            FullGamePath = GameDir;
+            CustomInstallDir = CustomDir;
+            UserInstallDir = UseCustomDir ? Path.Combine(CustomDir, Properties.Settings.Default.UserCustDirName) : GameDir;
         }
 
         /// <summary>
