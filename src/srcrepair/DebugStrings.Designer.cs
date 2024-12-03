@@ -1105,7 +1105,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unknown file type was specified. The installation is not possible..
+        ///   Looks up a localized string similar to An unknown file type has been selected. The installation is not possible..
         /// </summary>
         internal static string AppDbgQIUnknownFileType {
             get {

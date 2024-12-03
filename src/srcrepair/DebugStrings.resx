@@ -466,7 +466,7 @@
     <value>The string "{0}" failed to validate and was ignored.</value>
   </data>
   <data name="AppDbgQIUnknownFileType" xml:space="preserve">
-    <value>Unknown file type was specified. The installation is not possible.</value>
+    <value>An unknown file type has been selected. The installation is not possible.</value>
   </data>
   <data name="AppDbgUACCancel" xml:space="preserve">
     <value>Failed to perform elevation. The user closed the UAC dialog.</value>
