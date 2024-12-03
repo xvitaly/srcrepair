@@ -219,8 +219,8 @@ namespace srcrepair.gui
         private void RepWindowStart()
         {
             IsRunning = true;
-            RB_Progress.Visible = true;
-            GenerateNow.Enabled = false;
+            RP_Progress.Visible = true;
+            RP_Generate.Enabled = false;
             ControlBox = false;
         }
 
@@ -230,9 +230,9 @@ namespace srcrepair.gui
         private void RepWindowFinalize()
         {
             IsRunning = false;
-            RB_Progress.Visible = false;
-            GenerateNow.Text = AppStrings.RPB_CloseCpt;
-            GenerateNow.Enabled = true;
+            RP_Progress.Visible = false;
+            RP_Generate.Text = AppStrings.RPB_CloseCpt;
+            RP_Generate.Enabled = true;
             ControlBox = true;
             IsCompleted = true;
         }
@@ -267,15 +267,15 @@ namespace srcrepair.gui
         /// <param name="Progress">Current progress percentage.</param>
         private void ReportProgress(int Progress)
         {
-            RB_Progress.Value = Progress;
+            RP_Progress.Value = Progress;
         }
 
         /// <summary>
-        /// "Create/close" button click event handler.
+        /// "Generate/Close" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private async void GenerateNow_Click(object sender, EventArgs e)
+        private async void RP_Generate_Click(object sender, EventArgs e)
         {
             if (!IsCompleted)
             {

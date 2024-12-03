@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRepBuilder));
-            this.WelcomeLabel = new System.Windows.Forms.Label();
-            this.GenerateNow = new System.Windows.Forms.Button();
-            this.RB_Progress = new System.Windows.Forms.ProgressBar();
+            this.RP_WlcMsg = new System.Windows.Forms.Label();
+            this.RP_Generate = new System.Windows.Forms.Button();
+            this.RP_Progress = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
-            // WelcomeLabel
+            // RP_WlcMsg
             // 
-            resources.ApplyResources(this.WelcomeLabel, "WelcomeLabel");
-            this.WelcomeLabel.Name = "WelcomeLabel";
+            resources.ApplyResources(this.RP_WlcMsg, "RP_WlcMsg");
+            this.RP_WlcMsg.Name = "RP_WlcMsg";
             // 
-            // GenerateNow
+            // RP_Generate
             // 
-            resources.ApplyResources(this.GenerateNow, "GenerateNow");
-            this.GenerateNow.Name = "GenerateNow";
-            this.GenerateNow.UseVisualStyleBackColor = true;
-            this.GenerateNow.Click += new System.EventHandler(this.GenerateNow_Click);
+            resources.ApplyResources(this.RP_Generate, "RP_Generate");
+            this.RP_Generate.Name = "RP_Generate";
+            this.RP_Generate.UseVisualStyleBackColor = true;
+            this.RP_Generate.Click += new System.EventHandler(this.RP_Generate_Click);
             // 
-            // RB_Progress
+            // RP_Progress
             // 
-            resources.ApplyResources(this.RB_Progress, "RB_Progress");
-            this.RB_Progress.Name = "RB_Progress";
+            resources.ApplyResources(this.RP_Progress, "RP_Progress");
+            this.RP_Progress.Name = "RP_Progress";
             // 
             // FrmRepBuilder
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.RB_Progress);
-            this.Controls.Add(this.GenerateNow);
-            this.Controls.Add(this.WelcomeLabel);
+            this.Controls.Add(this.RP_Progress);
+            this.Controls.Add(this.RP_Generate);
+            this.Controls.Add(this.RP_WlcMsg);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -72,8 +72,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label WelcomeLabel;
-        private System.Windows.Forms.Button GenerateNow;
-        private System.Windows.Forms.ProgressBar RB_Progress;
+        private System.Windows.Forms.Label RP_WlcMsg;
+        private System.Windows.Forms.Button RP_Generate;
+        private System.Windows.Forms.ProgressBar RP_Progress;
     }
 }

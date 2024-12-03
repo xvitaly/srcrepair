@@ -117,87 +117,87 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="WelcomeLabel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="RP_WlcMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="WelcomeLabel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RP_WlcMsg.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 9</value>
   </data>
-  <data name="WelcomeLabel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RP_WlcMsg.Size" type="System.Drawing.Size, System.Drawing">
     <value>332, 48</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="WelcomeLabel.TabIndex" type="System.Int32, mscorlib">
+  <data name="RP_WlcMsg.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="WelcomeLabel.Text" xml:space="preserve">
+  <data name="RP_WlcMsg.Text" xml:space="preserve">
     <value>Here you can quickly and easily create a report for the official technical support service. This report is required by Steam technical support service. The process will take time, so please be patient!</value>
   </data>
-  <data name="&gt;&gt;WelcomeLabel.Name" xml:space="preserve">
-    <value>WelcomeLabel</value>
+  <data name="&gt;&gt;RP_WlcMsg.Name" xml:space="preserve">
+    <value>RP_WlcMsg</value>
   </data>
-  <data name="&gt;&gt;WelcomeLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;RP_WlcMsg.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;WelcomeLabel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RP_WlcMsg.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;WelcomeLabel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RP_WlcMsg.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="GenerateNow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="RP_Generate.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="GenerateNow.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RP_Generate.Location" type="System.Drawing.Point, System.Drawing">
     <value>96, 63</value>
   </data>
-  <data name="GenerateNow.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RP_Generate.Size" type="System.Drawing.Size, System.Drawing">
     <value>163, 23</value>
   </data>
-  <data name="GenerateNow.TabIndex" type="System.Int32, mscorlib">
+  <data name="RP_Generate.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="GenerateNow.Text" xml:space="preserve">
+  <data name="RP_Generate.Text" xml:space="preserve">
     <value>Generate report!</value>
   </data>
-  <data name="&gt;&gt;GenerateNow.Name" xml:space="preserve">
-    <value>GenerateNow</value>
+  <data name="&gt;&gt;RP_Generate.Name" xml:space="preserve">
+    <value>RP_Generate</value>
   </data>
-  <data name="&gt;&gt;GenerateNow.Type" xml:space="preserve">
+  <data name="&gt;&gt;RP_Generate.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;GenerateNow.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RP_Generate.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;GenerateNow.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RP_Generate.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="RB_Progress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="RP_Progress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="RB_Progress.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="RP_Progress.Location" type="System.Drawing.Point, System.Drawing">
     <value>15, 63</value>
   </data>
-  <data name="RB_Progress.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="RP_Progress.Size" type="System.Drawing.Size, System.Drawing">
     <value>329, 23</value>
   </data>
-  <data name="RB_Progress.TabIndex" type="System.Int32, mscorlib">
+  <data name="RP_Progress.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="RB_Progress.Visible" type="System.Boolean, mscorlib">
+  <data name="RP_Progress.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;RB_Progress.Name" xml:space="preserve">
-    <value>RB_Progress</value>
+  <data name="&gt;&gt;RP_Progress.Name" xml:space="preserve">
+    <value>RP_Progress</value>
   </data>
-  <data name="&gt;&gt;RB_Progress.Type" xml:space="preserve">
+  <data name="&gt;&gt;RP_Progress.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;RB_Progress.Parent" xml:space="preserve">
+  <data name="&gt;&gt;RP_Progress.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;RB_Progress.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;RP_Progress.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
