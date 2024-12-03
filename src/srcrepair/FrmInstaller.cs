@@ -73,16 +73,16 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Installs custom file to game.
+        /// Installs a custom content file into the game.
         /// </summary>
-        /// <param name="FileName">Full path to source file.</param>
-        /// <param name="DestDir">Full path to destination file.</param>
+        /// <param name="FileName">Full path to the source file.</param>
+        /// <param name="DestDir">Full path to the destination directory.</param>
         private void InstallFileNow(string FileName, string DestDir)
         {
-            // Checking if destination directory exists...
+            // Checking if the destination directory exists...
             if (!Directory.Exists(DestDir)) { Directory.CreateDirectory(DestDir); }
 
-            // Copying file from source to destination...
+            // Copying source file to the destination directory...
             File.Copy(FileName, Path.Combine(DestDir, Path.GetFileName(FileName)), true);
         }
 
