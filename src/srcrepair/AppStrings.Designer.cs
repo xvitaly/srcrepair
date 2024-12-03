@@ -1575,27 +1575,27 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
-        internal static string RPB_CloseCpt {
+        internal static string RP_CloseCpt {
             get {
-                return ResourceManager.GetString("RPB_CloseCpt", resourceCulture);
+                return ResourceManager.GetString("RP_CloseCpt", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Compressed report {0} has been successfully created! Now we will show it in the Windows Explorer. You can check it and upload to the technical support service or forum..
         /// </summary>
-        internal static string RPB_ComprGen {
+        internal static string RP_ComprGen {
             get {
-                return ResourceManager.GetString("RPB_ComprGen", resourceCulture);
+                return ResourceManager.GetString("RP_ComprGen", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report will be impossible. Terminating..
         /// </summary>
-        internal static string RPB_GenException {
+        internal static string RP_GenException {
             get {
-                return ResourceManager.GetString("RPB_GenException", resourceCulture);
+                return ResourceManager.GetString("RP_GenException", resourceCulture);
             }
         }
         

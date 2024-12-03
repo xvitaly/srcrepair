@@ -231,7 +231,7 @@ namespace srcrepair.gui
         {
             IsRunning = false;
             RP_Progress.Visible = false;
-            RP_Generate.Text = AppStrings.RPB_CloseCpt;
+            RP_Generate.Text = AppStrings.RP_CloseCpt;
             RP_Generate.Enabled = true;
             ControlBox = true;
             IsCompleted = true;
@@ -288,7 +288,7 @@ namespace srcrepair.gui
                     {
                         try
                         {
-                            MessageBox.Show(string.Format(AppStrings.RPB_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(string.Format(AppStrings.RP_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Platform.OpenExplorer(RepMan.ReportArchiveName);
                         }
                         catch (Exception Ex)
@@ -304,7 +304,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExRepPack);
-                    MessageBox.Show(AppStrings.RPB_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(AppStrings.RP_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     RepWindowError();
                 }
             }

@@ -621,13 +621,13 @@
   <data name="QI_InstallationSuccessful" xml:space="preserve">
     <value>The selected file has been installed successfully!</value>
   </data>
-  <data name="RPB_CloseCpt" xml:space="preserve">
+  <data name="RP_CloseCpt" xml:space="preserve">
     <value>Close</value>
   </data>
-  <data name="RPB_ComprGen" xml:space="preserve">
+  <data name="RP_ComprGen" xml:space="preserve">
     <value>Compressed report {0} has been successfully created! Now we will show it in the Windows Explorer. You can check it and upload to the technical support service or forum.</value>
   </data>
-  <data name="RPB_GenException" xml:space="preserve">
+  <data name="RP_GenException" xml:space="preserve">
     <value>Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report will be impossible. Terminating.</value>
   </data>
   <data name="RW_RmException" xml:space="preserve">
