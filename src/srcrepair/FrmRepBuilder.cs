@@ -253,6 +253,23 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Checks whether the report has been successfully generated and
+        /// performs some actions.
+        /// </summary>
+        private void FormComplete()
+        {
+            if (File.Exists(RepMan.ReportArchiveName))
+            {
+                MessageBox.Show(string.Format(AppStrings.RP_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ShowReportFile();
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
         /// Handles errors during report generation.
         /// </summary>
         private void FormError()
@@ -299,15 +316,7 @@ namespace srcrepair.gui
                     FormStart();
                     await CreateReport(new Progress<int>(ReportProgress));
                     FormFinalize();
-                    if (File.Exists(RepMan.ReportArchiveName))
-                    {
-                        MessageBox.Show(string.Format(AppStrings.RP_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        ShowReportFile();
-                    }
-                    else
-                    {
-                        MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    FormComplete();
                 }
                 catch (Exception Ex)
                 {
