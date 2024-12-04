@@ -16,7 +16,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of report generator window.
+    /// Class of the Report builder module.
     /// </summary>
     public partial class FrmRepBuilder : Form
     {
