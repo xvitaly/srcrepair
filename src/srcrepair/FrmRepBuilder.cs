@@ -214,6 +214,21 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Shows the generated report file in a default file manager.
+        /// </summary>
+        private void ShowReportFile()
+        {
+            try
+            {
+                Platform.OpenExplorer(RepMan.ReportArchiveName);
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExRepFm);
+            }
+        }
+
+        /// <summary>
         /// Enables status bar and hides some buttons.
         /// </summary>
         private void FormStart()
@@ -286,15 +301,8 @@ namespace srcrepair.gui
                     FormFinalize();
                     if (File.Exists(RepMan.ReportArchiveName))
                     {
-                        try
-                        {
-                            MessageBox.Show(string.Format(AppStrings.RP_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            Platform.OpenExplorer(RepMan.ReportArchiveName);
-                        }
-                        catch (Exception Ex)
-                        {
-                            Logger.Warn(Ex, DebugStrings.AppDbgExRepFm);
-                        }
+                        MessageBox.Show(string.Format(AppStrings.RP_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ShowReportFile();
                     }
                     else
                     {
