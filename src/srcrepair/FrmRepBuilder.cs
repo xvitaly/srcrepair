@@ -251,7 +251,7 @@ namespace srcrepair.gui
         /// Asynchronously generates reports.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task CreateReportTask(IProgress<int> Progress)
+        private async Task CreateReport(IProgress<int> Progress)
         {
             await Task.Run(() =>
             {
@@ -282,7 +282,7 @@ namespace srcrepair.gui
                 try
                 {
                     FormStart();
-                    await CreateReportTask(new Progress<int>(ReportProgress));
+                    await CreateReport(new Progress<int>(ReportProgress));
                     FormFinalize();
                     if (File.Exists(RepMan.ReportArchiveName))
                     {
