@@ -88,7 +88,7 @@ namespace srcrepair.gui
         /// Creates directories for storing generating report and working
         /// directory if does not exists.
         /// </summary>
-        private void RepCreateDirectories()
+        private void CreateDirectories()
         {
             if (!Directory.Exists(RepMan.ReportsDirectory))
             {
@@ -105,7 +105,7 @@ namespace srcrepair.gui
         /// Creates compressed report and saves it to disk.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private void RepCreateReport(IProgress<int> Progress)
+        private void CreateReportFile(IProgress<int> Progress)
         {
             using (ZipArchive ZBkUp = ZipFile.Open(RepMan.ReportArchiveName, ZipArchiveMode.Create, Encoding.UTF8))
             {
@@ -183,7 +183,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Removes temporary working directory with all its contents.
         /// </summary>
-        private void RepCleanupDirectories()
+        private void CleanupDirectories()
         {
             try
             {
@@ -201,7 +201,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Removes generated report file if exists.
         /// </summary>
-        private void RepRemoveArchive()
+        private void RemoveReportFile()
         {
             try
             {
@@ -216,7 +216,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Enables status bar and hides some buttons.
         /// </summary>
-        private void RepWindowStart()
+        private void FormStart()
         {
             IsRunning = true;
             RP_Progress.Visible = true;
@@ -227,7 +227,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Disables status bar and show all previously hidden buttons.
         /// </summary>
-        private void RepWindowFinalize()
+        private void FormFinalize()
         {
             IsRunning = false;
             RP_Progress.Visible = false;
@@ -240,10 +240,10 @@ namespace srcrepair.gui
         /// <summary>
         /// Handles errors during report generation.
         /// </summary>
-        private void RepWindowError()
+        private void FormError()
         {
-            RepWindowFinalize();
-            RepRemoveArchive();
+            FormFinalize();
+            RemoveReportFile();
             Close();
         }
 
@@ -255,9 +255,9 @@ namespace srcrepair.gui
         {
             await Task.Run(() =>
             {
-                RepCreateDirectories();
-                RepCreateReport(Progress);
-                RepCleanupDirectories();
+                CreateDirectories();
+                CreateReportFile(Progress);
+                CleanupDirectories();
             });
         }
 
@@ -281,9 +281,9 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    RepWindowStart();
+                    FormStart();
                     await CreateReportTask(new Progress<int>(ReportProgress));
-                    RepWindowFinalize();
+                    FormFinalize();
                     if (File.Exists(RepMan.ReportArchiveName))
                     {
                         try
@@ -305,7 +305,7 @@ namespace srcrepair.gui
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExRepPack);
                     MessageBox.Show(AppStrings.RP_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    RepWindowError();
+                    FormError();
                 }
             }
             else
