@@ -85,8 +85,8 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Creates directories for storing generating report and working
-        /// directory if does not exists.
+        /// Creates a directory for storing generated reports and a working
+        /// directory for temporary files.
         /// </summary>
         private void CreateDirectories()
         {
@@ -102,7 +102,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Creates compressed report and saves it to disk.
+        /// Creates a report file and saves it to disk.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
         private void CreateReportFile(IProgress<int> Progress)
@@ -181,7 +181,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Removes temporary working directory with all its contents.
+        /// Removes a working directory with temporary files.
         /// </summary>
         private void CleanupDirectories()
         {
@@ -199,7 +199,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Removes generated report file if exists.
+        /// Removes a generated report file.
         /// </summary>
         private void RemoveReportFile()
         {
@@ -229,7 +229,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Enables status bar and hides some buttons.
+        /// Enables the progress bar, hides some buttons and the form control box.
         /// </summary>
         private void FormStart()
         {
@@ -240,7 +240,8 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Disables status bar and show all previously hidden buttons.
+        /// Disables the progress bar, shows all previously hidden buttons and
+        /// the form control box.
         /// </summary>
         private void FormFinalize()
         {
@@ -270,7 +271,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Handles errors during report generation.
+        /// Handles errors during the report generation.
         /// </summary>
         private void FormError()
         {
@@ -280,7 +281,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Asynchronously generates reports.
+        /// Asynchronously generates a report.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
         private async Task CreateReport(IProgress<int> Progress)
@@ -294,7 +295,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Reports progress to progress bar on form.
+        /// Reports progress to the progress bar on the form.
         /// </summary>
         /// <param name="Progress">Current progress percentage.</param>
         private void ReportProgress(int Progress)
