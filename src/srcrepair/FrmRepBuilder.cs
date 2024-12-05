@@ -21,27 +21,27 @@ namespace srcrepair.gui
     public partial class FrmRepBuilder : Form
     {
         /// <summary>
-        /// Logger instance for FrmRepBuilder class.
+        /// Logger instance for the FrmRepBuilder class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// CurrentPlatform instance for FrmRepBuilder class.
+        /// CurrentPlatform instance for the FrmRepBuilder class.
         /// </summary>
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
-        /// Stores full path to the local logs directory.
+        /// Stores the full path to the application logs directory.
         /// </summary>
         private readonly string AppLogDir;
 
         /// <summary>
-        /// Stores full path to Steam client crash dumps directory.
+        /// Stores the full path to the Steam client crash dumps directory.
         /// </summary>
         private readonly string FullSteamDumpsDir;
 
         /// <summary>
-        /// Stores full path to Steam client logs directory.
+        /// Stores the full path to the Steam client logs directory.
         /// </summary>
         private readonly string FullSteamLogsDir;
 
@@ -51,18 +51,18 @@ namespace srcrepair.gui
         private readonly SourceGame SelectedGame;
 
         /// <summary>
-        /// Stores an instance of the ReportManager class for managing generic
+        /// Stores an instance of the ReportManager class for working with
         /// report targets.
         /// </summary>
         private readonly ReportManager RepMan;
 
         /// <summary>
-        /// Stores status of currently running process.
+        /// Stores the status of the currently running process.
         /// </summary>
         private bool IsRunning = false;
 
         /// <summary>
-        /// Stores status of process completion event.
+        /// Stores the status of the process completion event.
         /// </summary>
         private bool IsCompleted = false;
 
