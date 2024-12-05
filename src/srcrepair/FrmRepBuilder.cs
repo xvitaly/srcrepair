@@ -46,12 +46,13 @@ namespace srcrepair.gui
         private readonly string FullSteamLogsDir;
 
         /// <summary>
-        /// Stores an instance of the SourceGame class, selected in main window.
+        /// Stores an instance of the SourceGame class, selected in the
+        /// main window.
         /// </summary>
         private readonly SourceGame SelectedGame;
 
         /// <summary>
-        /// Stores an instance of the ReportManager class for working with
+        /// Stores an instance of the ReportManager class for working with the
         /// report targets.
         /// </summary>
         private readonly ReportManager RepMan;
