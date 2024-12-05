@@ -69,11 +69,11 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmRepBuilder class constructor.
         /// </summary>
-        /// <param name="A">Full path to the local reports directory.</param>
-        /// <param name="L">Full path to the local logs directory.</param>
-        /// <param name="SD">Full path to Steam crash dumps directory.</param>
-        /// <param name="SL">Full path to Steam logs directory.</param>
-        /// <param name="SG">Instance of SourceGame class, selected in main window.</param>
+        /// <param name="A">Full path to the application reports directory.</param>
+        /// <param name="L">Full path to the application logs directory.</param>
+        /// <param name="SD">Full path to the Steam crash dumps directory.</param>
+        /// <param name="SL">Full path to the Steam logs directory.</param>
+        /// <param name="SG">Instance of the SourceGame class, selected in main window.</param>
         public FrmRepBuilder(string A, string L, string SD, string SL, SourceGame SG)
         {
             InitializeComponent();
