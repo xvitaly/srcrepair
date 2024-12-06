@@ -360,9 +360,6 @@
   <data name="AppDbgExRepArchRem" xml:space="preserve">
     <value>Exception while trying to remove a generated archived report file.</value>
   </data>
-  <data name="AppDbgExRepDirRem" xml:space="preserve">
-    <value>Exception while trying to remove a directory containing temporary files used during a report creation.</value>
-  </data>
   <data name="AppDbgExRepFm" xml:space="preserve">
     <value>Exception while trying to show the generated report file in the file manager.</value>
   </data>
@@ -377,6 +374,9 @@
   </data>
   <data name="AppDbgExRmRf" xml:space="preserve">
     <value>Exception while removing files.</value>
+  </data>
+  <data name="AppDbgExRpCleanTempDir" xml:space="preserve">
+    <value>Exception while trying to remove a directory containing temporary files used during a report generation.</value>
   </data>
   <data name="AppDbgExRpMdrNotCreated" xml:space="preserve">
     <value>The mandatory report was not created.</value>

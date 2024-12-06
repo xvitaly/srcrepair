@@ -195,7 +195,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExRepDirRem);
+                Logger.Warn(Ex, DebugStrings.AppDbgExRpCleanTempDir);
             }
         }
 

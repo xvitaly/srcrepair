@@ -790,15 +790,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to remove a directory containing temporary files used during a report creation..
-        /// </summary>
-        internal static string AppDbgExRepDirRem {
-            get {
-                return ResourceManager.GetString("AppDbgExRepDirRem", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to show the generated report file in the file manager..
         /// </summary>
         internal static string AppDbgExRepFm {
@@ -840,6 +831,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExRmRf {
             get {
                 return ResourceManager.GetString("AppDbgExRmRf", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove a directory containing temporary files used during a report generation..
+        /// </summary>
+        internal static string AppDbgExRpCleanTempDir {
+            get {
+                return ResourceManager.GetString("AppDbgExRpCleanTempDir", resourceCulture);
             }
         }
         
