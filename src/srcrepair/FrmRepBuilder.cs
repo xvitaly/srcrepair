@@ -210,7 +210,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExRepArchRem);
+                Logger.Warn(Ex, DebugStrings.AppDbgExRpRemoveReportFile);
             }
         }
 

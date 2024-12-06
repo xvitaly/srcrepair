@@ -781,15 +781,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to remove a generated archived report file..
-        /// </summary>
-        internal static string AppDbgExRepArchRem {
-            get {
-                return ResourceManager.GetString("AppDbgExRepArchRem", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to show the generated report file in the file manager..
         /// </summary>
         internal static string AppDbgExRepFm {
@@ -849,6 +840,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExRpMdrNotCreated {
             get {
                 return ResourceManager.GetString("AppDbgExRpMdrNotCreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to remove a generated compressed report file..
+        /// </summary>
+        internal static string AppDbgExRpRemoveReportFile {
+            get {
+                return ResourceManager.GetString("AppDbgExRpRemoveReportFile", resourceCulture);
             }
         }
         
