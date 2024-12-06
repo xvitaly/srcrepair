@@ -781,24 +781,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while generating the report..
-        /// </summary>
-        internal static string AppDbgExRepGen {
-            get {
-                return ResourceManager.GetString("AppDbgExRepGen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to compress all generated log files into a single Zip archive..
-        /// </summary>
-        internal static string AppDbgExRepPack {
-            get {
-                return ResourceManager.GetString("AppDbgExRepPack", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cannot remove the &quot;{0}&quot; file due to an error..
         /// </summary>
         internal static string AppDbgExRmFileFailure {
@@ -822,6 +804,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExRpCleanTempDir {
             get {
                 return ResourceManager.GetString("AppDbgExRpCleanTempDir", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while generating the report..
+        /// </summary>
+        internal static string AppDbgExRpGenerate {
+            get {
+                return ResourceManager.GetString("AppDbgExRpGenerate", resourceCulture);
             }
         }
         
