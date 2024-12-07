@@ -248,7 +248,7 @@ namespace srcrepair.gui
         {
             IsRunning = false;
             RP_Progress.Visible = false;
-            RP_Generate.Text = AppStrings.RP_CloseCpt;
+            RP_Generate.Text = AppStrings.RP_CloseButtonText;
             RP_Generate.Enabled = true;
             ControlBox = true;
             IsCompleted = true;

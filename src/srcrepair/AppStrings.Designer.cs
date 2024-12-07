@@ -1575,9 +1575,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
-        internal static string RP_CloseCpt {
+        internal static string RP_CloseButtonText {
             get {
-                return ResourceManager.GetString("RP_CloseCpt", resourceCulture);
+                return ResourceManager.GetString("RP_CloseButtonText", resourceCulture);
             }
         }
         

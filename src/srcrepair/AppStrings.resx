@@ -621,7 +621,7 @@
   <data name="QI_InstallationSuccessful" xml:space="preserve">
     <value>The selected file has been installed successfully!</value>
   </data>
-  <data name="RP_CloseCpt" xml:space="preserve">
+  <data name="RP_CloseButtonText" xml:space="preserve">
     <value>Close</value>
   </data>
   <data name="RP_ComprGen" xml:space="preserve">
