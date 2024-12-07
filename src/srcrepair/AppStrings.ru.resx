@@ -624,8 +624,8 @@
   <data name="RP_CloseButtonText" xml:space="preserve">
     <value>Закрыть</value>
   </data>
-  <data name="RP_GenException" xml:space="preserve">
-    <value>Произошла ошибка. Невозможно выполнить утилиту Microsoft System Information. Возможно, она не установлена в данной ОС. Создание отчёта невозможно.</value>
+  <data name="RP_GenerateReportError" xml:space="preserve">
+    <value>Произошла ошибка при создании отчёта!</value>
   </data>
   <data name="RP_ReportFileCreated" xml:space="preserve">
     <value>Сжатый отчёт с именем {0} был успешно создан! Сейчас он будет показан в файловом менеджере, чтобы вы могли отправить его в службу технической поддержки, загрузить на форум и т.д.</value>

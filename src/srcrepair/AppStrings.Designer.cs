@@ -1582,11 +1582,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report will be impossible. Terminating..
+        ///   Looks up a localized string similar to An error occurred while generating the report!.
         /// </summary>
-        internal static string RP_GenException {
+        internal static string RP_GenerateReportError {
             get {
-                return ResourceManager.GetString("RP_GenException", resourceCulture);
+                return ResourceManager.GetString("RP_GenerateReportError", resourceCulture);
             }
         }
         

@@ -624,8 +624,8 @@
   <data name="RP_CloseButtonText" xml:space="preserve">
     <value>Close</value>
   </data>
-  <data name="RP_GenException" xml:space="preserve">
-    <value>Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report will be impossible. Terminating.</value>
+  <data name="RP_GenerateReportError" xml:space="preserve">
+    <value>An error occurred while generating the report!</value>
   </data>
   <data name="RP_ReportFileCreated" xml:space="preserve">
     <value>The compressed report named {0} has been successfully generated! Now we will show it in the default file manager and you will be able to send it to the technical support service, upload it to the forum, etc.</value>

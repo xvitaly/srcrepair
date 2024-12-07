@@ -323,7 +323,7 @@ namespace srcrepair.gui
                 catch (Exception Ex)
                 {
                     Logger.Error(Ex, DebugStrings.AppDbgExRpGenerate);
-                    MessageBox.Show(AppStrings.RP_GenException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(AppStrings.RP_GenerateReportError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     FormError();
                 }
             }
