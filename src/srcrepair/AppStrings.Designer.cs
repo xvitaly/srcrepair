@@ -1582,20 +1582,29 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Compressed report {0} has been successfully created! Now we will show it in the Windows Explorer. You can check it and upload to the technical support service or forum..
-        /// </summary>
-        internal static string RP_ComprGen {
-            get {
-                return ResourceManager.GetString("RP_ComprGen", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report will be impossible. Terminating..
         /// </summary>
         internal static string RP_GenException {
             get {
                 return ResourceManager.GetString("RP_GenException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The compressed report named {0} has been successfully generated! Now we will show it in the default file manager and you will be able to send it to the technical support service, upload it to the forum, etc..
+        /// </summary>
+        internal static string RP_ReportFileCreated {
+            get {
+                return ResourceManager.GetString("RP_ReportFileCreated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The compressed report file was not created!.
+        /// </summary>
+        internal static string RP_ReportFileNotCreated {
+            get {
+                return ResourceManager.GetString("RP_ReportFileNotCreated", resourceCulture);
             }
         }
         

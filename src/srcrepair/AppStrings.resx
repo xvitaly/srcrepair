@@ -624,11 +624,14 @@
   <data name="RP_CloseButtonText" xml:space="preserve">
     <value>Close</value>
   </data>
-  <data name="RP_ComprGen" xml:space="preserve">
-    <value>Compressed report {0} has been successfully created! Now we will show it in the Windows Explorer. You can check it and upload to the technical support service or forum.</value>
-  </data>
   <data name="RP_GenException" xml:space="preserve">
     <value>Unable to execute Microsoft System Information tool. Perhaps it is not installed on this operating system. Creating a report will be impossible. Terminating.</value>
+  </data>
+  <data name="RP_ReportFileCreated" xml:space="preserve">
+    <value>The compressed report named {0} has been successfully generated! Now we will show it in the default file manager and you will be able to send it to the technical support service, upload it to the forum, etc.</value>
+  </data>
+  <data name="RP_ReportFileNotCreated" xml:space="preserve">
+    <value>The compressed report file was not created!</value>
   </data>
   <data name="RW_RmException" xml:space="preserve">
     <value>An error occured during files removal. Some files were not deleted.</value>

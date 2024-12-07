@@ -624,11 +624,14 @@
   <data name="RP_CloseButtonText" xml:space="preserve">
     <value>Закрыть</value>
   </data>
-  <data name="RP_ComprGen" xml:space="preserve">
-    <value>Сжатый отчёт с именем {0} был успешно создан! Сейчас будет открыт каталог с отчётом для того, чтобы вы смогли загрузить его на форум.</value>
-  </data>
   <data name="RP_GenException" xml:space="preserve">
     <value>Произошла ошибка. Невозможно выполнить утилиту Microsoft System Information. Возможно, она не установлена в данной ОС. Создание отчёта невозможно.</value>
+  </data>
+  <data name="RP_ReportFileCreated" xml:space="preserve">
+    <value>Сжатый отчёт с именем {0} был успешно создан! Сейчас он будет показан в файловом менеджере, чтобы вы могли отправить его в службу технической поддержки, загрузить на форум и т.д.</value>
+  </data>
+  <data name="RP_ReportFileNotCreated" xml:space="preserve">
+    <value>Сжатый файл отчёта не был создан!</value>
   </data>
   <data name="RW_RmException" xml:space="preserve">
     <value>Произошла ошибка во время удаления файлов. Не все файлы были удалены.</value>

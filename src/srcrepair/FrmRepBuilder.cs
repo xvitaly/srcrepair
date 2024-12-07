@@ -262,12 +262,12 @@ namespace srcrepair.gui
         {
             if (File.Exists(RepMan.ReportArchiveName))
             {
-                MessageBox.Show(string.Format(AppStrings.RP_ComprGen, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(string.Format(AppStrings.RP_ReportFileCreated, Path.GetFileName(RepMan.ReportArchiveName)), Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ShowReportFile();
             }
             else
             {
-                MessageBox.Show(AppStrings.PS_ArchFailed, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.RP_ReportFileNotCreated, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
