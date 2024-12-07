@@ -278,6 +278,7 @@ namespace srcrepair.gui
         {
             FormFinalize();
             RemoveReportFile();
+            CleanupDirectories();
             Close();
         }
 
