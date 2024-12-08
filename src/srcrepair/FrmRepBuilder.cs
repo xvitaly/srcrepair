@@ -110,11 +110,11 @@ namespace srcrepair.gui
         {
             using (ZipArchive ZBkUp = ZipFile.Open(RepMan.ReportArchiveName, ZipArchiveMode.Create, Encoding.UTF8))
             {
-                // Creating some counters...
+                // Creating local variables for various counters...
                 int TotalFiles = RepMan.ReportTargets.Count;
                 int CurrentFile = 1, CurrentPercent, PreviousPercent = 0;
 
-                // Adding generic report files...
+                // Generating reports and adding results to the archive...
                 foreach (ReportTarget RepTarget in RepMan.ReportTargets)
                 {
                     ProcessManager.StartProcessAndWait(RepTarget.Program, string.Format(RepTarget.Parameters, RepTarget.OutputFileName));
@@ -145,7 +145,7 @@ namespace srcrepair.gui
                     ZBkUp.CreateEntryFromDirectory(SelectedGame.FullCfgPath, "configs", CompressionLevel.Optimal);
                 }
 
-                // Adding video file...
+                // Adding game video settings file...
                 if (SelectedGame.IsUsingVideoFile)
                 {
                     string GameVideo = SelectedGame.GetActualVideoFile();
@@ -173,7 +173,7 @@ namespace srcrepair.gui
                     ZBkUp.CreateEntryFromFile(Platform.HostsFileFullPath, Path.Combine("hosts", Path.GetFileName(Platform.HostsFileFullPath)), CompressionLevel.Optimal);
                 }
 
-                // Adding application debug log...
+                // Adding application debug logs...
                 if (Directory.Exists(AppLogDir))
                 {
                     ZBkUp.CreateEntryFromDirectory(AppLogDir, "debug", CompressionLevel.Optimal);
