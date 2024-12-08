@@ -341,7 +341,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmRepBuilder_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Blocking ability to close form window during report generating process...
+            // Blocking the ability to close the form window during the report generation process...
             e.Cancel = (e.CloseReason == CloseReason.UserClosing) && IsRunning;
         }
     }
