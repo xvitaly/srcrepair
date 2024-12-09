@@ -47,14 +47,14 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmDnWrk class constructor.
         /// </summary>
-        /// <param name="R">Download URL.</param>
-        /// <param name="L">Full path to destination file.</param>
-        public FrmDnWrk(string R, string L)
+        /// <param name="URL">Download URL.</param>
+        /// <param name="FileName">Full path to destination file.</param>
+        public FrmDnWrk(string URL, string FileName)
         {
             InitializeComponent();
-            RemoteURI = R;
-            LocalFile = L;
-            LocalDirectory = Path.GetDirectoryName(L);
+            RemoteURI = URL;
+            LocalFile = FileName;
+            LocalDirectory = Path.GetDirectoryName(FileName);
         }
 
         /// <summary>
