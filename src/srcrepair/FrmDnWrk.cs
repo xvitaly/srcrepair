@@ -58,7 +58,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Checks if the destination directory exists. If not - creates it.
+        /// Creates the destination directory.
         /// </summary>
         private void CreateLocalDirectory()
         {
@@ -69,7 +69,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Checks if the destination file exists. If so - deletes it.
+        /// Removes the destination file.
         /// </summary>
         private void RemoveLocalFile()
         {
@@ -77,7 +77,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Performs preliminary checks.
+        /// Performs various preliminary checks and prepares for downloading.
         /// </summary>
         private void RunChecks()
         {
@@ -86,7 +86,8 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Asynchronously downloads file from the Internet in a separate thread.
+        /// Asynchronously downloads file from the Internet in a separate thread
+        /// and reports progress.
         /// </summary>
         private void FormStart()
         {
