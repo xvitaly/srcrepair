@@ -20,27 +20,27 @@ namespace srcrepair.gui
     public partial class FrmDnWrk : Form
     {
         /// <summary>
-        /// Logger instance for FrmDnWrk class.
+        /// Logger instance for the FrmDnWrk class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Stores URL of download.
+        /// Stores the download URL.
         /// </summary>
         private readonly string RemoteURI;
 
         /// <summary>
-        /// Stores full path of local destination file.
+        /// Stores the full path to the destination file.
         /// </summary>
         private readonly string LocalFile;
 
         /// <summary>
-        /// Stores full path to the destination directory.
+        /// Stores the full path to the destination directory.
         /// </summary>
         private readonly string LocalDirectory;
 
         /// <summary>
-        /// Stores status of currently running process.
+        /// Stores the status of the currently running process.
         /// </summary>
         private bool IsRunning = true;
 
