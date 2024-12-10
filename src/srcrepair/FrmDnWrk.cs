@@ -123,7 +123,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExDnResultVerify, LocalFile);
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnVerifyResult, LocalFile);
             }
         }
 
