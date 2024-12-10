@@ -385,20 +385,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to start downloading the &quot;{0}&quot; file from the remote server to the local file &quot;{1}&quot;..
+        /// </summary>
+        internal static string AppDbgExDnTaskStart {
+            get {
+                return ResourceManager.GetString("AppDbgExDnTaskStart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to verify the downloaded file &quot;{0}&quot;..
         /// </summary>
         internal static string AppDbgExDnVerifyResult {
             get {
                 return ResourceManager.GetString("AppDbgExDnVerifyResult", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to start downloading file &quot;{0}&quot; to &quot;{1}&quot;..
-        /// </summary>
-        internal static string AppDbgExDnWrkTask {
-            get {
-                return ResourceManager.GetString("AppDbgExDnWrkTask", resourceCulture);
             }
         }
         

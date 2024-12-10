@@ -225,11 +225,11 @@
   <data name="AppDbgExDnTaskError" xml:space="preserve">
     <value>Exception while downloading the "{0}" file from the remote server to the local file "{1}".</value>
   </data>
+  <data name="AppDbgExDnTaskStart" xml:space="preserve">
+    <value>Exception while trying to start downloading the "{0}" file from the remote server to the local file "{1}".</value>
+  </data>
   <data name="AppDbgExDnVerifyResult" xml:space="preserve">
     <value>Exception while trying to verify the downloaded file "{0}".</value>
-  </data>
-  <data name="AppDbgExDnWrkTask" xml:space="preserve">
-    <value>Exception while trying to start downloading file "{0}" to "{1}".</value>
   </data>
   <data name="AppDbgExEditCfg" xml:space="preserve">
     <value>Exception on trying to load the installed FPS-config into the Config Editor.</value>

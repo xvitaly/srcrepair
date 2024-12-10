@@ -104,7 +104,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExDnWrkTask, RemoteURI, LocalFile);
+                Logger.Warn(Ex, DebugStrings.AppDbgExDnTaskStart, RemoteURI, LocalFile);
             }
         }
 
