@@ -367,7 +367,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to report download progress to the form..
+        ///   Looks up a localized string similar to Exception while trying to report the progress of a file download to the form..
         /// </summary>
         internal static string AppDbgExDnProgressChanged {
             get {

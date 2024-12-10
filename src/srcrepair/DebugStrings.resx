@@ -220,7 +220,7 @@
     <value>Exception while trying to detect the installed games.</value>
   </data>
   <data name="AppDbgExDnProgressChanged" xml:space="preserve">
-    <value>Exception while trying to report download progress to the form.</value>
+    <value>Exception while trying to report the progress of a file download to the form.</value>
   </data>
   <data name="AppDbgExDnVerifyResult" xml:space="preserve">
     <value>Exception while trying to verify the downloaded file "{0}".</value>
