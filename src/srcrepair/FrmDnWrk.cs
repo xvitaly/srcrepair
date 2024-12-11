@@ -49,10 +49,10 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="URL">Download URL.</param>
         /// <param name="FileName">Full path to destination file.</param>
-        public FrmDnWrk(string URL, string FileName)
+        public FrmDnWrk(string URI, string FileName)
         {
             InitializeComponent();
-            RemoteURI = URL;
+            RemoteURI = URI;
             LocalFile = FileName;
             LocalDirectory = Path.GetDirectoryName(FileName);
         }
