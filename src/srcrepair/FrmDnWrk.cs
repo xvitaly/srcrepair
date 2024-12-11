@@ -25,7 +25,7 @@ namespace srcrepair.gui
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Stores the download URL.
+        /// Stores the full download URL.
         /// </summary>
         private readonly string RemoteURI;
 
