@@ -47,7 +47,7 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmDnWrk class constructor.
         /// </summary>
-        /// <param name="URL">Download URL.</param>
+        /// <param name="URI">Full download URL.</param>
         /// <param name="FileName">Full path to destination file.</param>
         public FrmDnWrk(string URI, string FileName)
         {
