@@ -155,7 +155,7 @@ namespace srcrepair.gui
         {
             try
             {
-                DN_PrgBr.Value = e.ProgressPercentage;
+                DN_Progress.Value = e.ProgressPercentage;
             }
             catch (Exception Ex)
             {
