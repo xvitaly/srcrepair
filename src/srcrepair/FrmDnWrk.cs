@@ -77,7 +77,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Performs various preliminary checks and prepares for downloading.
+        /// Prepares the download process.
         /// </summary>
         private void PrepareDownloadProcess()
         {
