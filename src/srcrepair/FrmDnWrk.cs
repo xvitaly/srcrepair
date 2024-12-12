@@ -15,7 +15,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of the Internet download module.
+    /// Class of the file download module.
     /// </summary>
     public partial class FrmDnWrk : Form
     {
