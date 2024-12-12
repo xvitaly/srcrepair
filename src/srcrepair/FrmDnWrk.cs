@@ -79,7 +79,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Performs various preliminary checks and prepares for downloading.
         /// </summary>
-        private void RunChecks()
+        private void PrepareDownloadProcess()
         {
             CreateLocalDirectory();
             RemoveLocalFile();
@@ -93,7 +93,7 @@ namespace srcrepair.gui
         {
             try
             {
-                RunChecks();
+                PrepareDownloadProcess();
                 using (WebClient FileDownloader = new WebClient())
                 {
                     FileDownloader.Headers.Add("User-Agent", Properties.Resources.AppDownloadUserAgent);
