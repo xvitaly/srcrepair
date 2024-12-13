@@ -41,8 +41,8 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmArchWrk class constructor.
         /// </summary>
-        /// <param name="A">Full path to archive.</param>
-        /// <param name="D">Full destination path.</param>
+        /// <param name="A">Full path to the archive file.</param>
+        /// <param name="D">Full path to the destination directory.</param>
         public FrmArchWrk(string A, string D)
         {
             InitializeComponent();
