@@ -14,7 +14,7 @@ using NLog;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of archive extractor window.
+    /// Class of the archive unpacking module.
     /// </summary>
     public partial class FrmArchWrk : Form
     {
