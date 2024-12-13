@@ -190,7 +190,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Archive unpack tool</value>
+    <value>Archive unpacking module</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmArchWrk</value>
