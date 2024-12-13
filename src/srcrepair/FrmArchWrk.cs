@@ -117,7 +117,7 @@ namespace srcrepair.gui
         /// <param name="Progress">Current progress percentage.</param>
         private void ReportUnpackProgress(int Progress)
         {
-            AR_PrgBr.Value = Progress;
+            AR_Progress.Value = Progress;
         }
 
         /// <summary>

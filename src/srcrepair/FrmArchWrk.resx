@@ -149,28 +149,28 @@
   <data name="&gt;&gt;AR_WlcMsg.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="AR_PrgBr.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AR_Progress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="AR_PrgBr.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AR_Progress.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 33</value>
   </data>
-  <data name="AR_PrgBr.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AR_Progress.Size" type="System.Drawing.Size, System.Drawing">
     <value>354, 29</value>
   </data>
-  <data name="AR_PrgBr.TabIndex" type="System.Int32, mscorlib">
+  <data name="AR_Progress.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;AR_PrgBr.Name" xml:space="preserve">
-    <value>AR_PrgBr</value>
+  <data name="&gt;&gt;AR_Progress.Name" xml:space="preserve">
+    <value>AR_Progress</value>
   </data>
-  <data name="&gt;&gt;AR_PrgBr.Type" xml:space="preserve">
+  <data name="&gt;&gt;AR_Progress.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AR_PrgBr.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AR_Progress.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;AR_PrgBr.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AR_Progress.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmArchWrk));
             this.AR_WlcMsg = new System.Windows.Forms.Label();
-            this.AR_PrgBr = new System.Windows.Forms.ProgressBar();
+            this.AR_Progress = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // AR_WlcMsg
@@ -38,17 +38,17 @@
             resources.ApplyResources(this.AR_WlcMsg, "AR_WlcMsg");
             this.AR_WlcMsg.Name = "AR_WlcMsg";
             // 
-            // AR_PrgBr
+            // AR_Progress
             // 
-            resources.ApplyResources(this.AR_PrgBr, "AR_PrgBr");
-            this.AR_PrgBr.Name = "AR_PrgBr";
+            resources.ApplyResources(this.AR_Progress, "AR_Progress");
+            this.AR_Progress.Name = "AR_Progress";
             // 
             // FrmArchWrk
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
-            this.Controls.Add(this.AR_PrgBr);
+            this.Controls.Add(this.AR_Progress);
             this.Controls.Add(this.AR_WlcMsg);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -66,6 +66,6 @@
         #endregion
 
         private System.Windows.Forms.Label AR_WlcMsg;
-        private System.Windows.Forms.ProgressBar AR_PrgBr;
+        private System.Windows.Forms.ProgressBar AR_Progress;
     }
 }
