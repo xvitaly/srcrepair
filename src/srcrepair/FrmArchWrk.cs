@@ -19,22 +19,22 @@ namespace srcrepair.gui
     public partial class FrmArchWrk : Form
     {
         /// <summary>
-        /// Logger instance for FrmArchWrk class.
+        /// Logger instance for the FrmArchWrk class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Stores archive name with full path.
+        /// Stores the full path to the archive file.
         /// </summary>
         private readonly string ArchiveName;
 
         /// <summary>
-        /// Stores destination directory path.
+        /// Stores the full path to the destination directory.
         /// </summary>
         private readonly string DestinationDirectory;
 
         /// <summary>
-        /// Stores status of currently running process.
+        /// Stores the status of the currently running process.
         /// </summary>
         private bool IsRunning = true;
 
