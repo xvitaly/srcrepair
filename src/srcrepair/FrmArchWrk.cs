@@ -54,7 +54,7 @@ namespace srcrepair.gui
         /// Extracts archive to specified destination directory.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private void UnpackArchive(IProgress<int> Progress)
+        private void UnpackArchiveFile(IProgress<int> Progress)
         {
             // Checking if archive file exists...
             if (File.Exists(ArchiveName))
@@ -107,7 +107,7 @@ namespace srcrepair.gui
         {
             await Task.Run(() =>
             {
-                UnpackArchive(Progress);
+                UnpackArchiveFile(Progress);
             });
         }
 
