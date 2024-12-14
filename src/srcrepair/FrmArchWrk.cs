@@ -103,7 +103,7 @@ namespace srcrepair.gui
         /// Asynchronously extracts archive to specified destination directory.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task UnpackArchiveTask(IProgress<int> Progress)
+        private async Task UnpackArchive(IProgress<int> Progress)
         {
             await Task.Run(() =>
             {
@@ -138,7 +138,7 @@ namespace srcrepair.gui
         {
             try
             {
-                await UnpackArchiveTask(new Progress<int>(ReportUnpackProgress));
+                await UnpackArchive(new Progress<int>(ReportUnpackProgress));
             }
             catch (Exception Ex)
             {
