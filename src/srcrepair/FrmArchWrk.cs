@@ -115,7 +115,7 @@ namespace srcrepair.gui
         /// Reports progress to progress bar on form.
         /// </summary>
         /// <param name="Progress">Current progress percentage.</param>
-        private void ReportUnpackProgress(int Progress)
+        private void ReportProgress(int Progress)
         {
             AR_Progress.Value = Progress;
         }
@@ -138,7 +138,7 @@ namespace srcrepair.gui
         {
             try
             {
-                await UnpackArchive(new Progress<int>(ReportUnpackProgress));
+                await UnpackArchive(new Progress<int>(ReportProgress));
             }
             catch (Exception Ex)
             {
