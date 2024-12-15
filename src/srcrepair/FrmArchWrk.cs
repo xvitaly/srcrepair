@@ -123,7 +123,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Finalizes archive unpacking procedure.
         /// </summary>
-        private void FinalizeUnpack()
+        private void FormFinalize()
         {
             IsRunning = false;
             Close();
@@ -145,7 +145,7 @@ namespace srcrepair.gui
                 Logger.Error(Ex, DebugStrings.AppDbgExArWrkUnpack);
                 MessageBox.Show(AppStrings.AR_UnpackException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            FinalizeUnpack();
+            FormFinalize();
         }
 
         /// <summary>
