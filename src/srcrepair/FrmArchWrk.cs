@@ -120,6 +120,10 @@ namespace srcrepair.gui
             AR_Progress.Value = Progress;
         }
 
+        /// <summary>
+        /// Asynchronously unpacks the archive file in a separate thread
+        /// and reports progress.
+        /// </summary>
         private async Task FormStart()
         {
             try
