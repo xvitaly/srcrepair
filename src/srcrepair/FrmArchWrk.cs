@@ -120,6 +120,19 @@ namespace srcrepair.gui
             AR_Progress.Value = Progress;
         }
 
+        private async Task FormStart()
+        {
+            try
+            {
+                await UnpackArchive(new Progress<int>(ReportProgress));
+            }
+            catch (Exception Ex)
+            {
+                Logger.Error(Ex, DebugStrings.AppDbgExArWrkUnpack);
+                MessageBox.Show(AppStrings.AR_UnpackException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         /// <summary>
         /// Finalizes archive unpacking procedure.
         /// </summary>
@@ -136,15 +149,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private async void FrmArchWrk_Load(object sender, EventArgs e)
         {
-            try
-            {
-                await UnpackArchive(new Progress<int>(ReportProgress));
-            }
-            catch (Exception Ex)
-            {
-                Logger.Error(Ex, DebugStrings.AppDbgExArWrkUnpack);
-                MessageBox.Show(AppStrings.AR_UnpackException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            await FormStart();
             FormFinalize();
         }
 
