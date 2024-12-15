@@ -51,9 +51,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Extracts archive to specified destination directory.
+        /// Extracts the archive file to the destination directory.
         /// </summary>
-        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        /// <param name="Progress">Instance of the IProgress interface for reporting progress.</param>
         private void UnpackArchiveFile(IProgress<int> Progress)
         {
             // Checking if archive file exists...
@@ -100,9 +100,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Asynchronously extracts archive to specified destination directory.
+        /// Asynchronously extracts the archive file to the destination directory.
         /// </summary>
-        /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
+        /// <param name="Progress">Instance of the IProgress interface for reporting progress.</param>
         private async Task UnpackArchive(IProgress<int> Progress)
         {
             await Task.Run(() =>
@@ -112,7 +112,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Reports progress to progress bar on form.
+        /// Reports progress to the progress bar on the form.
         /// </summary>
         /// <param name="Progress">Current progress percentage.</param>
         private void ReportProgress(int Progress)
@@ -138,7 +138,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Finalizes archive unpacking procedure.
+        /// Performs finalizing actions and closes the form.
         /// </summary>
         private void FormFinalize()
         {
