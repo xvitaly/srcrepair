@@ -61,6 +61,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The archive tries to traverse through the base archive directory!.
+        /// </summary>
+        internal static string AppDbgExArPathTraversalDetected {
+            get {
+                return ResourceManager.GetString("AppDbgExArPathTraversalDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot unpack the &quot;{0}&quot; file from the archive &quot;{1}&quot; due to an error..
+        /// </summary>
+        internal static string AppDbgExArUnpackArchiveError {
+            get {
+                return ResourceManager.GetString("AppDbgExArUnpackArchiveError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception during unpacking files from a Zip archive..
         /// </summary>
         internal static string AppDbgExArWrkUnpack {
@@ -1110,24 +1128,6 @@ namespace srcrepair.gui {
         internal static string AppDbgUACCancel {
             get {
                 return ResourceManager.GetString("AppDbgUACCancel", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Cannot unpack the &quot;{0}&quot; file from the Zip archive due to an error..
-        /// </summary>
-        internal static string AppDbgZipExtractFailure {
-            get {
-                return ResourceManager.GetString("AppDbgZipExtractFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The archive tries to traverse through the base archive directory!.
-        /// </summary>
-        internal static string AppDbgZipPathTraversalDetected {
-            get {
-                return ResourceManager.GetString("AppDbgZipPathTraversalDetected", resourceCulture);
             }
         }
     }

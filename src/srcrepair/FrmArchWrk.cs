@@ -56,26 +56,26 @@ namespace srcrepair.gui
         /// <param name="Progress">Instance of the IProgress interface for reporting progress.</param>
         private void UnpackArchiveFile(IProgress<int> Progress)
         {
-            // Opening archive...
+            // Opening the archive file...
             using (ZipArchive Zip = ZipFile.OpenRead(ArchiveName))
             {
-                // Creating some counters...
+                // Creating local variables for various counters...
                 int TotalFiles = Zip.Entries.Count;
                 int CurrentFile = 1, CurrentPercent = 0, PreviousPercent = 0;
 
-                // Unpacking archive contents...
+                // Unpacking the archive contents...
                 foreach (ZipArchiveEntry ZFile in Zip.Entries)
                 {
                     try
                     {
-                        // Extracting file or directory...
+                        // Extracting files and directories...
                         string FullName = Path.GetFullPath(Path.Combine(DestinationDirectory, ZFile.FullName));
                         string DirectoryName = Path.GetDirectoryName(FullName);
-                        if (!FullName.StartsWith(Path.GetFullPath(DestinationDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException(DebugStrings.AppDbgZipPathTraversalDetected); }
+                        if (!FullName.StartsWith(Path.GetFullPath(DestinationDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException(DebugStrings.AppDbgExArPathTraversalDetected); }
                         if (!Directory.Exists(DirectoryName)) { Directory.CreateDirectory(DirectoryName); }
                         if (!string.IsNullOrEmpty(ZFile.Name)) { ZFile.ExtractToFile(FullName, true); }
 
-                        // Reporting progress...
+                        // Reporting the progress...
                         CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
                         if ((CurrentPercent >= 0) && (CurrentPercent <= 100) && (CurrentPercent > PreviousPercent))
                         {
@@ -85,7 +85,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, DebugStrings.AppDbgZipExtractFailure, ZFile.Name);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExArUnpackArchiveError, ZFile.Name, ArchiveName);
                     }
                 }
             }
