@@ -412,11 +412,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occured during unpacking selected archive. Additional information can be found in debug log..
+        ///   Looks up a localized string similar to An error occurred while unpacking the archive file! It may not have been fully unpacked..
         /// </summary>
-        internal static string AR_UnpackException {
+        internal static string AR_UnpackArchiveError {
             get {
-                return ResourceManager.GetString("AR_UnpackException", resourceCulture);
+                return ResourceManager.GetString("AR_UnpackArchiveError", resourceCulture);
             }
         }
         

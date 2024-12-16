@@ -125,7 +125,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExArTaskError, ArchiveName);
-                MessageBox.Show(AppStrings.AR_UnpackException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.AR_UnpackArchiveError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
