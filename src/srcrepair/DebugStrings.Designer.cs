@@ -70,20 +70,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception during unpacking files from the archive &quot;{0}&quot;..
+        /// </summary>
+        internal static string AppDbgExArTaskError {
+            get {
+                return ResourceManager.GetString("AppDbgExArTaskError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cannot unpack the &quot;{0}&quot; file from the archive &quot;{1}&quot; due to an error..
         /// </summary>
         internal static string AppDbgExArUnpackArchiveError {
             get {
                 return ResourceManager.GetString("AppDbgExArUnpackArchiveError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception during unpacking files from a Zip archive..
-        /// </summary>
-        internal static string AppDbgExArWrkUnpack {
-            get {
-                return ResourceManager.GetString("AppDbgExArWrkUnpack", resourceCulture);
             }
         }
         

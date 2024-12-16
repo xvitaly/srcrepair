@@ -120,11 +120,11 @@
   <data name="AppDbgExArPathTraversalDetected" xml:space="preserve">
     <value>The archive tries to traverse through the base archive directory!</value>
   </data>
+  <data name="AppDbgExArTaskError" xml:space="preserve">
+    <value>Exception during unpacking files from the archive "{0}".</value>
+  </data>
   <data name="AppDbgExArUnpackArchiveError" xml:space="preserve">
     <value>Cannot unpack the "{0}" file from the archive "{1}" due to an error.</value>
-  </data>
-  <data name="AppDbgExArWrkUnpack" xml:space="preserve">
-    <value>Exception during unpacking files from a Zip archive.</value>
   </data>
   <data name="AppDbgExBackupRem" xml:space="preserve">
     <value>Exception while trying to remove selected backups.</value>
