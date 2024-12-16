@@ -56,46 +56,38 @@ namespace srcrepair.gui
         /// <param name="Progress">Instance of the IProgress interface for reporting progress.</param>
         private void UnpackArchiveFile(IProgress<int> Progress)
         {
-            // Checking if archive file exists...
-            if (File.Exists(ArchiveName))
+            // Opening archive...
+            using (ZipArchive Zip = ZipFile.OpenRead(ArchiveName))
             {
-                // Opening archive...
-                using (ZipArchive Zip = ZipFile.OpenRead(ArchiveName))
+                // Creating some counters...
+                int TotalFiles = Zip.Entries.Count;
+                int CurrentFile = 1, CurrentPercent = 0, PreviousPercent = 0;
+
+                // Unpacking archive contents...
+                foreach (ZipArchiveEntry ZFile in Zip.Entries)
                 {
-                    // Creating some counters...
-                    int TotalFiles = Zip.Entries.Count;
-                    int CurrentFile = 1, CurrentPercent = 0, PreviousPercent = 0;
-
-                    // Unpacking archive contents...
-                    foreach (ZipArchiveEntry ZFile in Zip.Entries)
+                    try
                     {
-                        try
-                        {
-                            // Extracting file or directory...
-                            string FullName = Path.GetFullPath(Path.Combine(DestinationDirectory, ZFile.FullName));
-                            string DirectoryName = Path.GetDirectoryName(FullName);
-                            if (!FullName.StartsWith(Path.GetFullPath(DestinationDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException(DebugStrings.AppDbgZipPathTraversalDetected); }
-                            if (!Directory.Exists(DirectoryName)) { Directory.CreateDirectory(DirectoryName); }
-                            if (!string.IsNullOrEmpty(ZFile.Name)) { ZFile.ExtractToFile(FullName, true); }
+                        // Extracting file or directory...
+                        string FullName = Path.GetFullPath(Path.Combine(DestinationDirectory, ZFile.FullName));
+                        string DirectoryName = Path.GetDirectoryName(FullName);
+                        if (!FullName.StartsWith(Path.GetFullPath(DestinationDirectory + Path.DirectorySeparatorChar))) { throw new InvalidOperationException(DebugStrings.AppDbgZipPathTraversalDetected); }
+                        if (!Directory.Exists(DirectoryName)) { Directory.CreateDirectory(DirectoryName); }
+                        if (!string.IsNullOrEmpty(ZFile.Name)) { ZFile.ExtractToFile(FullName, true); }
 
-                            // Reporting progress...
-                            CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
-                            if ((CurrentPercent >= 0) && (CurrentPercent <= 100) && (CurrentPercent > PreviousPercent))
-                            {
-                                PreviousPercent = CurrentPercent;
-                                Progress.Report(CurrentPercent);
-                            }
-                        }
-                        catch (Exception Ex)
+                        // Reporting progress...
+                        CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
+                        if ((CurrentPercent >= 0) && (CurrentPercent <= 100) && (CurrentPercent > PreviousPercent))
                         {
-                            Logger.Warn(Ex, DebugStrings.AppDbgZipExtractFailure, ZFile.Name);
+                            PreviousPercent = CurrentPercent;
+                            Progress.Report(CurrentPercent);
                         }
                     }
+                    catch (Exception Ex)
+                    {
+                        Logger.Warn(Ex, DebugStrings.AppDbgZipExtractFailure, ZFile.Name);
+                    }
                 }
-            }
-            else
-            {
-                throw new FileNotFoundException(DebugStrings.AppDbgZipExtractArchiveNotFound, ArchiveName);
             }
         }
 

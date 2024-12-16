@@ -1114,15 +1114,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot unpack because the archive file was not found..
-        /// </summary>
-        internal static string AppDbgZipExtractArchiveNotFound {
-            get {
-                return ResourceManager.GetString("AppDbgZipExtractArchiveNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cannot unpack the &quot;{0}&quot; file from the Zip archive due to an error..
         /// </summary>
         internal static string AppDbgZipExtractFailure {
