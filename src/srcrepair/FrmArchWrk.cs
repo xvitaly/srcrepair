@@ -164,7 +164,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmArchWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Blocking ability to close form window during extraction process...
             e.Cancel = (e.CloseReason == CloseReason.UserClosing) && IsRunning;
         }
     }
