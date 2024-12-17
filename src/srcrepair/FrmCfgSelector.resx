@@ -253,7 +253,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Select config file to edit</value>
+    <value>Config file selection</value>
   </data>
   <data name="&gt;&gt;CS_ToolTip.Name" xml:space="preserve">
     <value>CS_ToolTip</value>

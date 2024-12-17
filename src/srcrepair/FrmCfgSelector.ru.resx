@@ -124,6 +124,6 @@
     <value>Выберите конфиг из списка для редактирования:</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Выбор конфига для редактирования</value>
+    <value>Выбор конфига</value>
   </data>
 </root>
