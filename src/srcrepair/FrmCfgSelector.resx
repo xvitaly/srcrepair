@@ -204,34 +204,34 @@
   <data name="&gt;&gt;CS_CfgSel.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <metadata name="CS_WMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="CS_WlcMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="CS_WMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="CS_WlcMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="CS_WMsg.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="CS_WlcMsg.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 9</value>
   </data>
-  <data name="CS_WMsg.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CS_WlcMsg.Size" type="System.Drawing.Size, System.Drawing">
     <value>316, 14</value>
   </data>
-  <data name="CS_WMsg.TabIndex" type="System.Int32, mscorlib">
+  <data name="CS_WlcMsg.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="CS_WMsg.Text" xml:space="preserve">
-    <value>Select config from list to edit:</value>
+  <data name="CS_WlcMsg.Text" xml:space="preserve">
+    <value>Select a config file from the list to edit:</value>
   </data>
-  <data name="&gt;&gt;CS_WMsg.Name" xml:space="preserve">
-    <value>CS_WMsg</value>
+  <data name="&gt;&gt;CS_WlcMsg.Name" xml:space="preserve">
+    <value>CS_WlcMsg</value>
   </data>
-  <data name="&gt;&gt;CS_WMsg.Type" xml:space="preserve">
+  <data name="&gt;&gt;CS_WlcMsg.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CS_WMsg.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CS_WlcMsg.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;CS_WMsg.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CS_WlcMsg.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
   <metadata name="CS_ToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

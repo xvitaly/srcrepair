@@ -120,7 +120,7 @@
   <data name="CS_Cancel.Text" xml:space="preserve">
     <value>Отмена</value>
   </data>
-  <data name="CS_WMsg.Text" xml:space="preserve">
+  <data name="CS_WlcMsg.Text" xml:space="preserve">
     <value>Выберите конфиг из списка для редактирования:</value>
   </data>
   <data name="$this.Text" xml:space="preserve">

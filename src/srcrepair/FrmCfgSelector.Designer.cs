@@ -32,7 +32,7 @@
             this.CS_Cancel = new System.Windows.Forms.Button();
             this.CS_OK = new System.Windows.Forms.Button();
             this.CS_CfgSel = new System.Windows.Forms.ComboBox();
-            this.CS_WMsg = new System.Windows.Forms.Label();
+            this.CS_WlcMsg = new System.Windows.Forms.Label();
             this.CS_ToolTip = new System.Windows.Forms.ToolTip();
             this.SuspendLayout();
             // 
@@ -59,10 +59,10 @@
             this.CS_CfgSel.Name = "CS_CfgSel";
             this.CS_CfgSel.SelectedIndexChanged += new System.EventHandler(this.CS_CfgSel_SelectedIndexChanged);
             // 
-            // CS_WMsg
+            // CS_WlcMsg
             // 
-            resources.ApplyResources(this.CS_WMsg, "CS_WMsg");
-            this.CS_WMsg.Name = "CS_WMsg";
+            resources.ApplyResources(this.CS_WlcMsg, "CS_WlcMsg");
+            this.CS_WlcMsg.Name = "CS_WlcMsg";
             // 
             // FrmCfgSelector
             // 
@@ -73,7 +73,7 @@
             this.Controls.Add(this.CS_Cancel);
             this.Controls.Add(this.CS_OK);
             this.Controls.Add(this.CS_CfgSel);
-            this.Controls.Add(this.CS_WMsg);
+            this.Controls.Add(this.CS_WlcMsg);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -91,7 +91,7 @@
         private System.Windows.Forms.Button CS_Cancel;
         private System.Windows.Forms.Button CS_OK;
         private System.Windows.Forms.ComboBox CS_CfgSel;
-        private System.Windows.Forms.Label CS_WMsg;
+        private System.Windows.Forms.Label CS_WlcMsg;
         private System.Windows.Forms.ToolTip CS_ToolTip;
     }
 }
