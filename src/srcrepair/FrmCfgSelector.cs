@@ -16,14 +16,14 @@ namespace srcrepair.gui
     public partial class FrmCfgSelector : Form
     {
         /// <summary>
-        /// Gets or sets full path to selected by user config file.
-        /// </summary>
-        public string Config { get; private set; }
-
-        /// <summary>
-        /// Gets or sets list of available configs.
+        /// Stores the list of available config files.
         /// </summary>
         private List<string> Configs { get; set; }
+
+        /// <summary>
+        /// Gets or sets the full path to the user-selected config file.
+        /// </summary>
+        public string Config { get; private set; }
 
         /// <summary>
         /// FrmCfgSelector class constructor.
