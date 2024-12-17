@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of config file selector window.
+    /// Class of the config file selection module.
     /// </summary>
     public partial class FrmCfgSelector : Form
     {
