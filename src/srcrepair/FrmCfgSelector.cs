@@ -18,7 +18,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Stores the list of available config files.
         /// </summary>
-        private List<string> Configs { get; set; }
+        private readonly List<string> Configs;
 
         /// <summary>
         /// Gets or sets the full path to the user-selected config file.
