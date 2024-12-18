@@ -3308,6 +3308,7 @@ namespace srcrepair.gui
         private void PS_RemConfigs_Click(object sender, EventArgs e)
         {
             GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
+            HandleConfigs();
         }
 
         /// <summary>
