@@ -69,13 +69,13 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Config selected" event handler.
+        /// "Config file selected" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
         private void CS_CfgSel_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Setting full path to tooltip...
+            // Setting the full config file path to the tooltip...
             CS_ToolTip.SetToolTip((ComboBox)sender, ((ComboBox)sender).Text);
         }
     }
