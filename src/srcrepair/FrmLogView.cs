@@ -13,7 +13,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of log viewer window.
+    /// Class of the log viewer module.
     /// </summary>
     public partial class FrmLogView : Form
     {
