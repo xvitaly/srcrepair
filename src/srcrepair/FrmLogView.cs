@@ -51,7 +51,7 @@ namespace srcrepair.gui
         /// Loads contents of log file and handles it.
         /// </summary>
         /// <param name="FileName">Full path to log file.</param>
-        private void LoadLog(string FileName)
+        private void LoadLogFile(string FileName)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace srcrepair.gui
         private void FrmLogView_Load(object sender, EventArgs e)
         {
             // Reading log file contents...
-            LoadLog(LogFileName);
+            LoadLogFile(LogFileName);
         }
 
         /// <summary>
@@ -83,7 +83,7 @@ namespace srcrepair.gui
         private void LV_MenuFileReload_Click(object sender, EventArgs e)
         {
             // Re-reading log file contents...
-            LoadLog(LogFileName);
+            LoadLogFile(LogFileName);
         }
 
         /// <summary>
