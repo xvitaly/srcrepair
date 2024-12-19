@@ -18,12 +18,12 @@ namespace srcrepair.gui
     public partial class FrmLogView : Form
     {
         /// <summary>
-        /// Logger instance for FrmLogView class.
+        /// Logger instance for the FrmLogView class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Stores full path to log file.
+        /// Stores the full path to the log file.
         /// </summary>
         private readonly string LogFileName;
 
