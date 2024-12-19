@@ -38,16 +38,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Loads contents of text file and renders it on form.
-        /// </summary>
-        /// <param name="FileName">Full path to log file.</param>
-        private void LoadTextFile(string FileName)
-        {
-            LV_LogArea.Clear();
-            LV_LogArea.AppendText(File.ReadAllText(FileName));
-        }
-
-        /// <summary>
         /// Loads contents of log file and handles it.
         /// </summary>
         /// <param name="FileName">Full path to log file.</param>
@@ -55,7 +45,8 @@ namespace srcrepair.gui
         {
             try
             {
-                LoadTextFile(FileName);
+                LV_LogArea.Clear();
+                LV_LogArea.AppendText(File.ReadAllText(FileName));
             }
             catch (Exception Ex)
             {
