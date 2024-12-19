@@ -30,7 +30,7 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmLogView class constructor.
         /// </summary>
-        /// <param name="LogFile">Full path to log file.</param>
+        /// <param name="LogFile">Full path to the log file.</param>
         public FrmLogView(string LogFile)
         {
             InitializeComponent();
