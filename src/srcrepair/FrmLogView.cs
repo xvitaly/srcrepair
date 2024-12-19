@@ -38,7 +38,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Loads contents of log file and handles it.
+        /// Loads the contents of the log file and displays it on the form.
         /// </summary>
         /// <param name="FileName">Full path to log file.</param>
         private void LoadLogFile(string FileName)
