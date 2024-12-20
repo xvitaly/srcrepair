@@ -113,8 +113,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.LV_ClearEx, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                Logger.Error(Ex, DebugStrings.AppDbgExLvClean);
+                MessageBox.Show(AppStrings.LV_ClearLogError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Logger.Error(Ex, DebugStrings.AppDbgExLvClearLog);
             }
         }
     }

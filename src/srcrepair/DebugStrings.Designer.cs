@@ -637,11 +637,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while cleaning up the debug log file..
+        ///   Looks up a localized string similar to Exception while trying to clear the log file..
         /// </summary>
-        internal static string AppDbgExLvClean {
+        internal static string AppDbgExLvClearLog {
             get {
-                return ResourceManager.GetString("AppDbgExLvClean", resourceCulture);
+                return ResourceManager.GetString("AppDbgExLvClearLog", resourceCulture);
             }
         }
         

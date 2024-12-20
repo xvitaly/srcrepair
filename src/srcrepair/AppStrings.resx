@@ -495,8 +495,8 @@
   <data name="KB_StartError" xml:space="preserve">
     <value>Failed to start keyboard helper plugin. Try again later!</value>
   </data>
-  <data name="LV_ClearEx" xml:space="preserve">
-    <value>Could not purge log file! Please try again later.</value>
+  <data name="LV_ClearLogError" xml:space="preserve">
+    <value>An error occurred while clearing the log file!</value>
   </data>
   <data name="LV_LoadFailed" xml:space="preserve">
     <value>Failed to load error log. Try again later.</value>

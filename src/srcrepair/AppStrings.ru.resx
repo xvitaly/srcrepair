@@ -495,8 +495,8 @@
   <data name="KB_StartError" xml:space="preserve">
     <value>Не удалось запустить внешний модуль. Попробуйте ещё раз позднее!</value>
   </data>
-  <data name="LV_ClearEx" xml:space="preserve">
-    <value>Произошла ошибка при попытке очистки журнала ошибок программы! Повторите попытку позже.</value>
+  <data name="LV_ClearLogError" xml:space="preserve">
+    <value>Произошла ошибка при очистке журнала!</value>
   </data>
   <data name="LV_LoadFailed" xml:space="preserve">
     <value>Произошла ошибка при загрузке журнала ошибок программы.</value>

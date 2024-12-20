@@ -1195,11 +1195,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Could not purge log file! Please try again later..
+        ///   Looks up a localized string similar to An error occurred while clearing the log file!.
         /// </summary>
-        internal static string LV_ClearEx {
+        internal static string LV_ClearLogError {
             get {
-                return ResourceManager.GetString("LV_ClearEx", resourceCulture);
+                return ResourceManager.GetString("LV_ClearLogError", resourceCulture);
             }
         }
         
