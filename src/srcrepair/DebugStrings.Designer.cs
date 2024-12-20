@@ -637,7 +637,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to clear the log file..
+        ///   Looks up a localized string similar to Exception while trying to clear the &quot;{0}&quot; log file..
         /// </summary>
         internal static string AppDbgExLvClearLog {
             get {
@@ -646,7 +646,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to load the log file..
+        ///   Looks up a localized string similar to Exception while trying to load the &quot;{0}&quot; log file..
         /// </summary>
         internal static string AppDbgExLvLoadLog {
             get {

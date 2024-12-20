@@ -310,10 +310,10 @@
     <value>Exception while trying to run the external keyboard helper plugin.</value>
   </data>
   <data name="AppDbgExLvClearLog" xml:space="preserve">
-    <value>Exception while trying to clear the log file.</value>
+    <value>Exception while trying to clear the "{0}" log file.</value>
   </data>
   <data name="AppDbgExLvLoadLog" xml:space="preserve">
-    <value>Exception while trying to load the log file.</value>
+    <value>Exception while trying to load the "{0}" log file.</value>
   </data>
   <data name="AppDbgExMMAutoSave" xml:space="preserve">
     <value>Exception while trying to create an automatic backup of the muted players file before saving it.</value>
