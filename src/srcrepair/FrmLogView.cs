@@ -106,12 +106,9 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void LV_MunuFileClearLog_Click(object sender, EventArgs e)
         {
-            // Clearing text area...
-            LV_LogArea.Clear();
-
-            // Clearing log file...
             try
             {
+                LV_LogArea.Clear();
                 if (File.Exists(LogFileName))
                 {
                     File.Delete(LogFileName);
