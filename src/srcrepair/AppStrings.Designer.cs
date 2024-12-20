@@ -1204,11 +1204,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to load error log. Try again later..
+        ///   Looks up a localized string similar to An error occurred while loading the log file!.
         /// </summary>
-        internal static string LV_LoadFailed {
+        internal static string LV_LoadLogError {
             get {
-                return ResourceManager.GetString("LV_LoadFailed", resourceCulture);
+                return ResourceManager.GetString("LV_LoadLogError", resourceCulture);
             }
         }
         

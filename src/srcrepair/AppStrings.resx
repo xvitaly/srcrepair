@@ -498,8 +498,8 @@
   <data name="LV_ClearLogError" xml:space="preserve">
     <value>An error occurred while clearing the log file!</value>
   </data>
-  <data name="LV_LoadFailed" xml:space="preserve">
-    <value>Failed to load error log. Try again later.</value>
+  <data name="LV_LoadLogError" xml:space="preserve">
+    <value>An error occurred while loading the log file!</value>
   </data>
   <data name="MM_ConvertItemsError" xml:space="preserve">
     <value>An error occurred while converting selected items to a new format!</value>

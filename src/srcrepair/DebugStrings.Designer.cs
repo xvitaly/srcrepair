@@ -646,11 +646,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to load the active debug log file..
+        ///   Looks up a localized string similar to Exception while trying to load the log file..
         /// </summary>
-        internal static string AppDbgExLvLoad {
+        internal static string AppDbgExLvLoadLog {
             get {
-                return ResourceManager.GetString("AppDbgExLvLoad", resourceCulture);
+                return ResourceManager.GetString("AppDbgExLvLoadLog", resourceCulture);
             }
         }
         

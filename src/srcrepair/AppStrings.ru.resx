@@ -498,8 +498,8 @@
   <data name="LV_ClearLogError" xml:space="preserve">
     <value>Произошла ошибка при очистке журнала!</value>
   </data>
-  <data name="LV_LoadFailed" xml:space="preserve">
-    <value>Произошла ошибка при загрузке журнала ошибок программы.</value>
+  <data name="LV_LoadLogError" xml:space="preserve">
+    <value>Произошла ошибка при загрузке журнала!</value>
   </data>
   <data name="MM_ConvertItemsError" xml:space="preserve">
     <value>Произошла ошибка при попытке преобразования выбранных элементов в новый формат!</value>

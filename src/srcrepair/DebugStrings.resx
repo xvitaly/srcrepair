@@ -312,8 +312,8 @@
   <data name="AppDbgExLvClearLog" xml:space="preserve">
     <value>Exception while trying to clear the log file.</value>
   </data>
-  <data name="AppDbgExLvLoad" xml:space="preserve">
-    <value>Exception while trying to load the active debug log file.</value>
+  <data name="AppDbgExLvLoadLog" xml:space="preserve">
+    <value>Exception while trying to load the log file.</value>
   </data>
   <data name="AppDbgExMMAutoSave" xml:space="preserve">
     <value>Exception while trying to create an automatic backup of the muted players file before saving it.</value>
