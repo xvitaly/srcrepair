@@ -62,7 +62,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmLogView_Load(object sender, EventArgs e)
         {
-            // Reading log file contents...
             LoadLogFile(LogFileName);
         }
 
@@ -73,7 +72,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void LV_MenuFileReload_Click(object sender, EventArgs e)
         {
-            // Re-reading log file contents...
             LoadLogFile(LogFileName);
         }
 
@@ -84,7 +82,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void LV_MenuFileExit_Click(object sender, EventArgs e)
         {
-            // Closing window...
             Close();
         }
 
@@ -95,7 +92,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void LV_MenuHelpAbout_Click(object sender, EventArgs e)
         {
-            // Show about dialog...
             GuiHelpers.FormShowAboutApp();
         }
 
