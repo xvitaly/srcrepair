@@ -100,7 +100,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void LV_MunuFileClearLog_Click(object sender, EventArgs e)
+        private void LV_MenuFileClearLog_Click(object sender, EventArgs e)
         {
             try
             {
