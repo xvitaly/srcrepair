@@ -50,8 +50,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                MessageBox.Show(AppStrings.LV_LoadLogError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Logger.Error(Ex, DebugStrings.AppDbgExLvLoadLog, LogFileName);
+                MessageBox.Show(AppStrings.LV_LoadLogError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
