@@ -38,37 +38,37 @@ namespace srcrepair.gui
         private readonly List<string> CleanItems;
 
         /// <summary>
-        /// Stores if the manual selection of files is allowed.
+        /// Stores whether the manual file selection is enabled.
         /// </summary>
         private readonly bool IsReadOnly;
 
         /// <summary>
-        /// Stores if the automatic files selection is disallowed.
+        /// Stores whether the automatic file selection is disabled.
         /// </summary>
         private readonly bool NoAutoCheck;
 
         /// <summary>
-        /// Stores if the recursive cleanup is allowed.
+        /// Stores whether the recursive cleanup is enabled.
         /// </summary>
         private readonly bool IsRecursive;
 
         /// <summary>
-        /// Stores if the backups are forced.
+        /// Stores whether a backup file creation is required.
         /// </summary>
         private readonly bool ForceBackUp;
 
         /// <summary>
-        /// Stores full path to the directory for saving backups.
+        /// Stores the full path to the directory for saving backups.
         /// </summary>
         private readonly string FullBackUpDirPath;
 
         /// <summary>
-        /// Stores the message text about successful cleanup completion.
+        /// Stores the message text of the successful cleanup completion.
         /// </summary>
         private readonly string SuccessMessage;
 
         /// <summary>
-        /// Stores the cleanup window title.
+        /// Stores the cleanup module form title.
         /// </summary>
         private readonly string CleanInfo;
 
@@ -78,7 +78,7 @@ namespace srcrepair.gui
         private long TotalSize = 0;
 
         /// <summary>
-        /// Stores status of currently running process.
+        /// Stores the status of the currently running process.
         /// </summary>
         private bool IsRunning = true;
 
