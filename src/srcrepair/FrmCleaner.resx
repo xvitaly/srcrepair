@@ -117,33 +117,33 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="CM_WelcMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="CM_WlcMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="CM_WelcMsg.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="CM_WlcMsg.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 9</value>
   </data>
-  <data name="CM_WelcMsg.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CM_WlcMsg.Size" type="System.Drawing.Size, System.Drawing">
     <value>397, 29</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="CM_WelcMsg.TabIndex" type="System.Int32, mscorlib">
+  <data name="CM_WlcMsg.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="CM_WelcMsg.Text" xml:space="preserve">
+  <data name="CM_WlcMsg.Text" xml:space="preserve">
     <value>Please check the list of files to be deleted and confirm the deletion. Not selected files will not be deleted!</value>
   </data>
-  <data name="&gt;&gt;CM_WelcMsg.Name" xml:space="preserve">
-    <value>CM_WelcMsg</value>
+  <data name="&gt;&gt;CM_WlcMsg.Name" xml:space="preserve">
+    <value>CM_WlcMsg</value>
   </data>
-  <data name="&gt;&gt;CM_WelcMsg.Type" xml:space="preserve">
+  <data name="&gt;&gt;CM_WlcMsg.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;CM_WelcMsg.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CM_WlcMsg.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;CM_WelcMsg.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CM_WlcMsg.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <metadata name="CM_FTable.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -279,31 +279,31 @@
   <data name="&gt;&gt;CM_Cancel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="PrbMain.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="CM_Progress.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="PrbMain.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="CM_Progress.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 279</value>
   </data>
-  <data name="PrbMain.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="CM_Progress.Size" type="System.Drawing.Size, System.Drawing">
     <value>397, 19</value>
   </data>
-  <data name="PrbMain.TabIndex" type="System.Int32, mscorlib">
+  <data name="CM_Progress.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="PrbMain.Visible" type="System.Boolean, mscorlib">
+  <data name="CM_Progress.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="&gt;&gt;PrbMain.Name" xml:space="preserve">
-    <value>PrbMain</value>
+  <data name="&gt;&gt;CM_Progress.Name" xml:space="preserve">
+    <value>CM_Progress</value>
   </data>
-  <data name="&gt;&gt;PrbMain.Type" xml:space="preserve">
+  <data name="&gt;&gt;CM_Progress.Type" xml:space="preserve">
     <value>System.Windows.Forms.ProgressBar, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;PrbMain.Parent" xml:space="preserve">
+  <data name="&gt;&gt;CM_Progress.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;PrbMain.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;CM_Progress.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCleaner));
-            this.CM_WelcMsg = new System.Windows.Forms.Label();
+            this.CM_WlcMsg = new System.Windows.Forms.Label();
             this.CM_FTable = new System.Windows.Forms.ListView();
             this.FName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FSize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,13 +37,13 @@
             this.CM_Info = new System.Windows.Forms.Label();
             this.CM_Clean = new System.Windows.Forms.Button();
             this.CM_Cancel = new System.Windows.Forms.Button();
-            this.PrbMain = new System.Windows.Forms.ProgressBar();
+            this.CM_Progress = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
-            // CM_WelcMsg
+            // CM_WlcMsg
             // 
-            resources.ApplyResources(this.CM_WelcMsg, "CM_WelcMsg");
-            this.CM_WelcMsg.Name = "CM_WelcMsg";
+            resources.ApplyResources(this.CM_WlcMsg, "CM_WlcMsg");
+            this.CM_WlcMsg.Name = "CM_WlcMsg";
             // 
             // CM_FTable
             // 
@@ -98,10 +98,10 @@
             this.CM_Cancel.UseVisualStyleBackColor = true;
             this.CM_Cancel.Click += new System.EventHandler(this.CM_Cancel_Click);
             // 
-            // PrbMain
+            // CM_Progress
             // 
-            resources.ApplyResources(this.PrbMain, "PrbMain");
-            this.PrbMain.Name = "PrbMain";
+            resources.ApplyResources(this.CM_Progress, "CM_Progress");
+            this.CM_Progress.Name = "CM_Progress";
             // 
             // FrmCleaner
             // 
@@ -110,12 +110,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CM_Cancel;
             this.ControlBox = false;
-            this.Controls.Add(this.PrbMain);
+            this.Controls.Add(this.CM_Progress);
             this.Controls.Add(this.CM_Cancel);
             this.Controls.Add(this.CM_Clean);
             this.Controls.Add(this.CM_Info);
             this.Controls.Add(this.CM_FTable);
-            this.Controls.Add(this.CM_WelcMsg);
+            this.Controls.Add(this.CM_WlcMsg);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -131,7 +131,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label CM_WelcMsg;
+        private System.Windows.Forms.Label CM_WlcMsg;
         private System.Windows.Forms.ListView CM_FTable;
         private System.Windows.Forms.Label CM_Info;
         private System.Windows.Forms.Button CM_Clean;
@@ -139,6 +139,6 @@
         private System.Windows.Forms.ColumnHeader FName;
         private System.Windows.Forms.ColumnHeader FSize;
         private System.Windows.Forms.ColumnHeader FDate;
-        private System.Windows.Forms.ProgressBar PrbMain;
+        private System.Windows.Forms.ProgressBar CM_Progress;
     }
 }

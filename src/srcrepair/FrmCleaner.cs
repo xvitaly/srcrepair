@@ -177,7 +177,7 @@ namespace srcrepair.gui
             // Changing the state of other controls...
             CM_Cancel.Enabled = false;
             CM_Cancel.Visible = false;
-            PrbMain.Visible = true;
+            CM_Progress.Visible = true;
         }
 
         /// <summary>
@@ -186,7 +186,7 @@ namespace srcrepair.gui
         /// <param name="Progress">Progress tuple.</param>
         private void ReportProgressChange(Tuple<int, string> Progress)
         {
-            PrbMain.Value = Progress.Item1;
+            CM_Progress.Value = Progress.Item1;
             if (!string.IsNullOrEmpty(Progress.Item2))
             {
                 CM_Info.Text = Progress.Item2;
