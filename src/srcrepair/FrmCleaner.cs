@@ -184,7 +184,7 @@ namespace srcrepair.gui
         /// Reports progress to progress bar on form.
         /// </summary>
         /// <param name="Progress">Progress tuple.</param>
-        private void ReportProgressChange(Tuple<int, string> Progress)
+        private void ReportProgress(Tuple<int, string> Progress)
         {
             CM_Progress.Value = Progress.Item1;
             if (!string.IsNullOrEmpty(Progress.Item2))
@@ -315,7 +315,7 @@ namespace srcrepair.gui
             try
             {
                 List<string> Candidates = GetDeleteFilesList();
-                Progress<Tuple<int, string>> Progress = new Progress<Tuple<int, string>>(ReportProgressChange);
+                Progress<Tuple<int, string>> Progress = new Progress<Tuple<int, string>>(ReportProgress);
                 await BackUpCandidatesTask(Candidates, Progress);
                 await DeleteCandidatesTask(Candidates, Progress);
                 CM_Info.Text = AppStrings.PS_ProgressFinished;
