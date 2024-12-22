@@ -18,7 +18,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of the interactive cleanup window.
+    /// Class of the cleanup module.
     /// </summary>
     public partial class FrmCleaner : Form
     {
