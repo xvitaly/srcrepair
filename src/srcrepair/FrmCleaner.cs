@@ -197,17 +197,17 @@ namespace srcrepair.gui
         /// Gets the list of files for removal.
         /// </summary>
         /// <returns>List of files to be removed.</returns>
-        private List<string> GetDeleteFilesList()
+        private List<string> GetSelectedFiles()
         {
-            List<string> DeleteQueue = new List<string>();
-            foreach (ListViewItem LVI in CM_FTable.Items)
+            List<string> Result = new List<string>();
+            foreach (ListViewItem Item in CM_FTable.Items)
             {
-                if (LVI.Checked)
+                if (Item.Checked)
                 {
-                    DeleteQueue.Add(LVI.ToolTipText);
+                    Result.Add(Item.ToolTipText);
                 }
             }
-            return DeleteQueue;
+            return Result;
         }
 
         /// <summary>
@@ -314,7 +314,7 @@ namespace srcrepair.gui
         {
             try
             {
-                List<string> Candidates = GetDeleteFilesList();
+                List<string> Candidates = GetSelectedFiles();
                 Progress<Tuple<int, string>> Progress = new Progress<Tuple<int, string>>(ReportProgress);
                 await BackUpFiles(Candidates, Progress);
                 await DeleteFiles(Candidates, Progress);
