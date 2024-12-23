@@ -266,7 +266,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Asynchronously checks candidates for deletion.
         /// </summary>
-        private async Task FindCandidatesTask()
+        private async Task FindFiles()
         {
             await Task.Run(() =>
             {
@@ -416,7 +416,7 @@ namespace srcrepair.gui
 
             // Starting searching for candidates...
             CM_FTable.BeginUpdate();
-            await FindCandidatesTask();
+            await FindFiles();
             CM_FTable.EndUpdate();
 
             // Handling candidates...
