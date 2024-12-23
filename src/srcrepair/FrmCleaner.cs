@@ -279,7 +279,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="DeleteQueue">List of files and directories for deletion.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task BackUpCandidatesTask(List<string> DeleteQueue, IProgress<Tuple<int, string>> Progress)
+        private async Task BackUpFiles(List<string> DeleteQueue, IProgress<Tuple<int, string>> Progress)
         {
             await Task.Run(() =>
             {
@@ -316,7 +316,7 @@ namespace srcrepair.gui
             {
                 List<string> Candidates = GetDeleteFilesList();
                 Progress<Tuple<int, string>> Progress = new Progress<Tuple<int, string>>(ReportProgress);
-                await BackUpCandidatesTask(Candidates, Progress);
+                await BackUpFiles(Candidates, Progress);
                 await DeleteCandidatesTask(Candidates, Progress);
                 CM_Info.Text = AppStrings.PS_ProgressFinished;
                 MessageBox.Show(SuccessMessage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
