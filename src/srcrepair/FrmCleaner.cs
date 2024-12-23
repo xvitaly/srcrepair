@@ -215,7 +215,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="DeleteQueue">List of files and directories for deletion.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private void DeleteCandidates(List<string> DeleteQueue, IProgress<Tuple<int, string>> Progress)
+        private void DeleteSelectedFiles(List<string> DeleteQueue, IProgress<Tuple<int, string>> Progress)
         {
             // Reporting new status...
             Progress.Report(new Tuple<int, string>(0, AppStrings.PS_ProgressCleanup));
@@ -303,7 +303,7 @@ namespace srcrepair.gui
         {
             await Task.Run(() =>
             {
-                DeleteCandidates(DeleteQueue, Progress);
+                DeleteSelectedFiles(DeleteQueue, Progress);
             });
         }
 
