@@ -288,7 +288,7 @@ namespace srcrepair.gui
                     Progress.Report(new Tuple<int, string>(0, AppStrings.PS_ProgressArchive));
                     if (!FileManager.CompressFiles(DeleteQueue, FileManager.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
-                        Logger.Warn(AppStrings.PS_ArchFailed);
+                        Logger.Warn(DebugStrings.AppDbgExCmBackUpFiles);
                     }
                 }
             });

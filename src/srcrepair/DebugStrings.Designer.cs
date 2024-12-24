@@ -349,6 +349,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to backup files selected for deletion..
+        /// </summary>
+        internal static string AppDbgExCmBackUpFiles {
+            get {
+                return ResourceManager.GetString("AppDbgExCmBackUpFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to configure the cryptographic policy..
         /// </summary>
         internal static string AppDbgExCryptoPolicy {
