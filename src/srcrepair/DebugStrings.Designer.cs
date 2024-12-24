@@ -331,15 +331,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while removing files from the queue..
-        /// </summary>
-        internal static string AppDbgExClnQueueRun {
-            get {
-                return ResourceManager.GetString("AppDbgExClnQueueRun", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while cleaning up Steam registry entries..
         /// </summary>
         internal static string AppDbgExClnReg {
@@ -354,6 +345,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExCmBackUpFiles {
             get {
                 return ResourceManager.GetString("AppDbgExCmBackUpFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while cleaning up selected files..
+        /// </summary>
+        internal static string AppDbgExCmCleanupError {
+            get {
+                return ResourceManager.GetString("AppDbgExCmCleanupError", resourceCulture);
             }
         }
         

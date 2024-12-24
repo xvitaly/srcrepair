@@ -314,17 +314,17 @@ namespace srcrepair.gui
         {
             try
             {
-                List<string> Candidates = GetSelectedFiles();
+                List<string> DeleteQueue = GetSelectedFiles();
                 Progress<Tuple<int, string>> Progress = new Progress<Tuple<int, string>>(ReportProgress);
-                await BackUpFiles(Candidates, Progress);
-                await DeleteFiles(Candidates, Progress);
-                CM_Info.Text = AppStrings.PS_ProgressFinished;
+                await BackUpFiles(DeleteQueue, Progress);
+                await DeleteFiles(DeleteQueue, Progress);
+                CM_Info.Text = AppStrings.CM_ProgressFinished;
                 MessageBox.Show(SuccessMessage, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExClnQueueRun);
-                MessageBox.Show(AppStrings.PS_CleanupErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, DebugStrings.AppDbgExCmCleanupError);
+                MessageBox.Show(AppStrings.CM_CleanupError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -363,6 +363,12 @@
   <data name="CE_RestConfigOpenWarn" xml:space="preserve">
     <value>Внимание! Настоятельно не рекомендуется редактировать этот файл, т.к. это может привести к непредсказуемым последствиям. Редактируйте его на свой страх и риск.</value>
   </data>
+  <data name="CM_CleanupError" xml:space="preserve">
+    <value>Во время удаления файлов произошла ошибка! Некоторые файлы не были удалены.</value>
+  </data>
+  <data name="CM_ProgressFinished" xml:space="preserve">
+    <value>Очистка завершена.</value>
+  </data>
   <data name="CS_FailedToOpenCfg" xml:space="preserve">
     <value>Произошла ошибка при вызове модуля выбора конфига для редактирования.</value>
   </data>
@@ -587,9 +593,6 @@
   </data>
   <data name="PS_ProgressCleanup" xml:space="preserve">
     <value>Идёт очистка выбранных файлов...</value>
-  </data>
-  <data name="PS_ProgressFinished" xml:space="preserve">
-    <value>Очистка завершена.</value>
   </data>
   <data name="PS_SelectItemsMsg" xml:space="preserve">
     <value>Файлы для очистки не выбраны! Пожалуйста выберите файлы для очистки из списка и повторите попытку.</value>

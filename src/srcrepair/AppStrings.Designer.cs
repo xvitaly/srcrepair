@@ -799,6 +799,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while deleting files! Some files were not deleted..
+        /// </summary>
+        internal static string CM_CleanupError {
+            get {
+                return ResourceManager.GetString("CM_CleanupError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Done..
+        /// </summary>
+        internal static string CM_ProgressFinished {
+            get {
+                return ResourceManager.GetString("CM_ProgressFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occured. Failed to open config selector! Try again later..
         /// </summary>
         internal static string CS_FailedToOpenCfg {
@@ -1470,15 +1488,6 @@ namespace srcrepair.gui {
         internal static string PS_ProgressCleanup {
             get {
                 return ResourceManager.GetString("PS_ProgressCleanup", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Done..
-        /// </summary>
-        internal static string PS_ProgressFinished {
-            get {
-                return ResourceManager.GetString("PS_ProgressFinished", resourceCulture);
             }
         }
         

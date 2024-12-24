@@ -363,6 +363,12 @@
   <data name="CE_RestConfigOpenWarn" xml:space="preserve">
     <value>We not recommend to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk.</value>
   </data>
+  <data name="CM_CleanupError" xml:space="preserve">
+    <value>An error occurred while deleting files! Some files were not deleted.</value>
+  </data>
+  <data name="CM_ProgressFinished" xml:space="preserve">
+    <value>Done.</value>
+  </data>
   <data name="CS_FailedToOpenCfg" xml:space="preserve">
     <value>An error occured. Failed to open config selector! Try again later.</value>
   </data>
@@ -587,9 +593,6 @@
   </data>
   <data name="PS_ProgressCleanup" xml:space="preserve">
     <value>Cleanup in progress...</value>
-  </data>
-  <data name="PS_ProgressFinished" xml:space="preserve">
-    <value>Done.</value>
   </data>
   <data name="PS_SelectItemsMsg" xml:space="preserve">
     <value>No files for cleanup were selected! Please select them and run this process again.</value>
