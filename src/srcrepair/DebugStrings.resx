@@ -216,6 +216,9 @@
   <data name="AppDbgExCmCleanupError" xml:space="preserve">
     <value>Exception while cleaning up selected files.</value>
   </data>
+  <data name="AppDbgExCmCopyToClipboard" xml:space="preserve">
+    <value>An error occurred while copying paths of the selected files to the clipboard.</value>
+  </data>
   <data name="AppDbgExCryptoPolicy" xml:space="preserve">
     <value>Failed to configure the cryptographic policy.</value>
   </data>

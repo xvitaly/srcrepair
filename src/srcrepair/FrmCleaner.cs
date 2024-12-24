@@ -391,10 +391,17 @@ namespace srcrepair.gui
         /// </summary>
         private void HandleCopyToClipboard()
         {
-            string Result = string.Join(Environment.NewLine, GetSelectedFiles());
-            if (!string.IsNullOrWhiteSpace(Result))
+            try
             {
-                Clipboard.SetText(Result);
+                string Result = string.Join(Environment.NewLine, GetSelectedFiles());
+                if (!string.IsNullOrWhiteSpace(Result))
+                {
+                    Clipboard.SetText(Result);
+                }
+            }
+            catch (Exception Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCmCopyToClipboard);
             }
         }
 

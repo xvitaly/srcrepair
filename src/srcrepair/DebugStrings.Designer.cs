@@ -358,6 +358,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while copying paths of the selected files to the clipboard..
+        /// </summary>
+        internal static string AppDbgExCmCopyToClipboard {
+            get {
+                return ResourceManager.GetString("AppDbgExCmCopyToClipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to configure the cryptographic policy..
         /// </summary>
         internal static string AppDbgExCryptoPolicy {
