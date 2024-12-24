@@ -9,7 +9,6 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NLog;
@@ -392,15 +391,11 @@ namespace srcrepair.gui
         /// </summary>
         private void HandleCopyToClipboard()
         {
-            StringBuilder SelectedFiles = new StringBuilder();
-            foreach (ListViewItem Item in CM_FTable.Items)
+            string Result = string.Join(Environment.NewLine, GetSelectedFiles());
+            if (!string.IsNullOrWhiteSpace(Result))
             {
-                if (Item.Checked)
-                {
-                    SelectedFiles.AppendLine(Item.ToolTipText);
-                }
+                Clipboard.SetText(Result);
             }
-            Clipboard.SetText(SelectedFiles.ToString());
         }
 
         /// <summary>
