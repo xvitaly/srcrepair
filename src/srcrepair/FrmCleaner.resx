@@ -132,7 +132,7 @@
     <value>0</value>
   </data>
   <data name="CM_WlcMsg.Text" xml:space="preserve">
-    <value>Please check the list of files to be deleted and confirm the deletion. Not selected files will not be deleted!</value>
+    <value>Please review the list of files selected for deletion and confirm the cleanup. Double-clicking a file will show it in the file manager.</value>
   </data>
   <data name="&gt;&gt;CM_WlcMsg.Name" xml:space="preserve">
     <value>CM_WlcMsg</value>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CM_WlcMsg.Text" xml:space="preserve">
-    <value>Проверьте список файлов, отмеченных для удаления. Все выбранные файлы будут удалены. Двойной клик по файлу откроет его в Проводнике.</value>
+    <value>Проверьте список файлов, отмеченных для удаления, а затем подтвердите очистку. Двойной клик по файлу покажет его в файловом менеджере.</value>
   </data>
   <data name="FName.Text" xml:space="preserve">
     <value>Имя файла</value>
