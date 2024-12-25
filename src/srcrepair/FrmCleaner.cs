@@ -263,7 +263,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Asynchronously checks candidates for deletion.
+        /// Asynchronously finds files for deletion.
         /// </summary>
         private async Task FindFiles()
         {
@@ -328,27 +328,27 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Finalizes candidates find procedure.
+        /// Processes found files.
         /// </summary>
-        private void HandleCandidates()
+        private void HandleFiles()
         {
-            // Changing state...
+            // Changing the form state...
             IsRunning = false;
 
-            // Showing estimated free space to be freed after removing all found files...
+            // Showing the estimated free space to be freed after removing all found files...
             CM_Info.Text = string.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
 
-            // Checking if candidates are found...
+            // Checking if any files were found...
             if (CM_FTable.Items.Count == 0)
             {
-                // Nothing found. Showing message and closing form...
+                // Nothing found. Showing an error message and closing the form...
                 MessageBox.Show(AppStrings.PS_LoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 CM_Clean.Enabled = false;
                 Close();
             }
             else
             {
-                // At least one candidate found. Enabling cleanup button...
+                // At least one file found. Enabling cleanup button...
                 CM_Clean.Enabled = true;
             }
         }
@@ -425,13 +425,13 @@ namespace srcrepair.gui
             Text = string.Format(Text, CleanInfo);
             CM_FTable.Enabled = !IsReadOnly;
 
-            // Starting searching for candidates...
+            // Starting searching for files...
             CM_FTable.BeginUpdate();
             await FindFiles();
             CM_FTable.EndUpdate();
 
-            // Handling candidates...
-            HandleCandidates();
+            // Processing found files...
+            HandleFiles();
         }
 
         /// <summary>
