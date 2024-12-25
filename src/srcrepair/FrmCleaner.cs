@@ -354,6 +354,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Performs finalizing actions and closes the form.
+        /// </summary>
+        private void FormFinalize()
+        {
+            IsRunning = false;
+            Close();
+        }
+
+        /// <summary>
         /// Selects all items from the table.
         /// </summary>
         private void HandleSelectAll()
@@ -470,8 +479,7 @@ namespace srcrepair.gui
                     {
                         ChangeControlsState();
                         await StartCleanup();
-                        IsRunning = false;
-                        Close();
+                        FormFinalize();
                     }
                     else
                     {
