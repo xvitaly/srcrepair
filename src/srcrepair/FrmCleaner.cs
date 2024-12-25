@@ -471,25 +471,23 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private async void CM_Clean_Click(object sender, EventArgs e)
         {
+            if (CM_FTable.Items.Count == 0)
+            {
+                MessageBox.Show(AppStrings.PS_LoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (CM_FTable.CheckedItems.Count == 0)
+            {
+                MessageBox.Show(AppStrings.PS_SelectItemsMsg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (MessageBox.Show(string.Format(AppStrings.PS_CleanupExecuteQ, CleanInfo), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                if (CM_FTable.Items.Count > 0)
-                {
-                    if (CM_FTable.CheckedItems.Count > 0)
-                    {
-                        ChangeControlsState();
-                        await StartCleanup();
-                        FormFinalize();
-                    }
-                    else
-                    {
-                        MessageBox.Show(AppStrings.PS_SelectItemsMsg, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.PS_LoadErr, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                ChangeControlsState();
+                await StartCleanup();
+                FormFinalize();
             }
         }
 
