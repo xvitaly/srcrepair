@@ -508,12 +508,12 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void CM_FTable_DoubleClick(object sender, EventArgs e)
         {
-            // Workaround to known bug with unchecking selected item on double click...
-            CM_FTable.SelectedItems[0].Checked = !CM_FTable.SelectedItems[0].Checked;
-
             try
             {
-                // Starting default shell and selecting file in its window...
+                // Workaround for known bug where double clicking on selected item would uncheck it...
+                CM_FTable.SelectedItems[0].Checked = !CM_FTable.SelectedItems[0].Checked;
+
+                // Starting the default file manager and shows the selected file in its window...
                 Platform.OpenExplorer(CM_FTable.SelectedItems[0].ToolTipText);
             }
             catch (Exception Ex)
