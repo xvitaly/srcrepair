@@ -162,7 +162,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Changes the state of some controls on form on cleanup start.
         /// </summary>
-        private void ChangeControlsState()
+        private void FormStart()
         {
             // Setting new status...
             CM_Info.Text = AppStrings.PS_ProcessPrepare;
@@ -485,7 +485,7 @@ namespace srcrepair.gui
 
             if (MessageBox.Show(string.Format(AppStrings.PS_CleanupExecuteQ, CleanInfo), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                ChangeControlsState();
+                FormStart();
                 await StartCleanup();
                 FormFinalize();
             }
