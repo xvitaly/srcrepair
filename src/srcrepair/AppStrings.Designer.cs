@@ -808,6 +808,33 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete selected files ({0})?.
+        /// </summary>
+        internal static string CM_CleanupQuestion {
+            get {
+                return ResourceManager.GetString("CM_CleanupQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No files detected for deletion! No cleanup required..
+        /// </summary>
+        internal static string CM_NoFilesDetected {
+            get {
+                return ResourceManager.GetString("CM_NoFilesDetected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No files selected for deletion! Please select at least one and try again..
+        /// </summary>
+        internal static string CM_NoFilesSelected {
+            get {
+                return ResourceManager.GetString("CM_NoFilesSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Done..
         /// </summary>
         internal static string CM_ProgressFinished {
@@ -1402,15 +1429,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Clean selected {0}?.
-        /// </summary>
-        internal static string PS_CleanupExecuteQ {
-            get {
-                return ResourceManager.GetString("PS_CleanupExecuteQ", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Cleanup has been successfully completed!.
         /// </summary>
         internal static string PS_CleanupSuccess {
@@ -1447,15 +1465,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cleanup is not required..
-        /// </summary>
-        internal static string PS_LoadErr {
-            get {
-                return ResourceManager.GetString("PS_LoadErr", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Steam process has been successfully terminated!.
         /// </summary>
         internal static string PS_ProcessDetected {
@@ -1488,15 +1497,6 @@ namespace srcrepair.gui {
         internal static string PS_ProgressCleanup {
             get {
                 return ResourceManager.GetString("PS_ProgressCleanup", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to No files for cleanup were selected! Please select them and run this process again..
-        /// </summary>
-        internal static string PS_SelectItemsMsg {
-            get {
-                return ResourceManager.GetString("PS_SelectItemsMsg", resourceCulture);
             }
         }
         

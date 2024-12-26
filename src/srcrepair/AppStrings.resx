@@ -366,6 +366,15 @@
   <data name="CM_CleanupError" xml:space="preserve">
     <value>An error occurred while deleting files! Some files were not deleted.</value>
   </data>
+  <data name="CM_CleanupQuestion" xml:space="preserve">
+    <value>Delete selected files ({0})?</value>
+  </data>
+  <data name="CM_NoFilesDetected" xml:space="preserve">
+    <value>No files detected for deletion! No cleanup required.</value>
+  </data>
+  <data name="CM_NoFilesSelected" xml:space="preserve">
+    <value>No files selected for deletion! Please select at least one and try again.</value>
+  </data>
   <data name="CM_ProgressFinished" xml:space="preserve">
     <value>Done.</value>
   </data>
@@ -564,9 +573,6 @@
   <data name="PS_CleanupErr" xml:space="preserve">
     <value>Error occured while deleting files. Some files were not deleted!</value>
   </data>
-  <data name="PS_CleanupExecuteQ" xml:space="preserve">
-    <value>Clean selected {0}?</value>
-  </data>
   <data name="PS_CleanupSuccess" xml:space="preserve">
     <value>Cleanup has been successfully completed!</value>
   </data>
@@ -579,9 +585,6 @@
   <data name="PS_FrFInfo" xml:space="preserve">
     <value>We can free up to {0} hard-disk space after cleanup.</value>
   </data>
-  <data name="PS_LoadErr" xml:space="preserve">
-    <value>Cleanup is not required.</value>
-  </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Steam process has been successfully terminated!</value>
   </data>
@@ -593,9 +596,6 @@
   </data>
   <data name="PS_ProgressCleanup" xml:space="preserve">
     <value>Cleanup in progress...</value>
-  </data>
-  <data name="PS_SelectItemsMsg" xml:space="preserve">
-    <value>No files for cleanup were selected! Please select them and run this process again.</value>
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
     <value>The cleanup has been successfully completed. Steam will run in recovery mode right now!</value>

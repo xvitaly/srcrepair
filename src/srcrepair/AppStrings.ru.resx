@@ -366,6 +366,15 @@
   <data name="CM_CleanupError" xml:space="preserve">
     <value>Во время удаления файлов произошла ошибка! Некоторые файлы не были удалены.</value>
   </data>
+  <data name="CM_CleanupQuestion" xml:space="preserve">
+    <value>Удалить выбранные файлы ({0})?</value>
+  </data>
+  <data name="CM_NoFilesDetected" xml:space="preserve">
+    <value>Файлы для удаления не найдены! Очистка не требуется.</value>
+  </data>
+  <data name="CM_NoFilesSelected" xml:space="preserve">
+    <value>Файлы для удаления не выбраны! Пожалуйста выберите хотя бы один и повторите попытку.</value>
+  </data>
   <data name="CM_ProgressFinished" xml:space="preserve">
     <value>Очистка завершена.</value>
   </data>
@@ -564,9 +573,6 @@
   <data name="PS_CleanupErr" xml:space="preserve">
     <value>Во время удаления файлов произошла ошибка. Некоторые файлы не были удалены!</value>
   </data>
-  <data name="PS_CleanupExecuteQ" xml:space="preserve">
-    <value>Удалить выбранные файлы ({0})?</value>
-  </data>
   <data name="PS_CleanupSuccess" xml:space="preserve">
     <value>Процесс очистки успешно завершён!</value>
   </data>
@@ -579,9 +585,6 @@
   <data name="PS_FrFInfo" xml:space="preserve">
     <value>В результате очистки может быть освобождено до {0}.</value>
   </data>
-  <data name="PS_LoadErr" xml:space="preserve">
-    <value>Файлы для удаления не найдены! Очистка не требуется.</value>
-  </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Процесс Steam, обнаруженный в памяти был успешно завершён!</value>
   </data>
@@ -593,9 +596,6 @@
   </data>
   <data name="PS_ProgressCleanup" xml:space="preserve">
     <value>Идёт очистка выбранных файлов...</value>
-  </data>
-  <data name="PS_SelectItemsMsg" xml:space="preserve">
-    <value>Файлы для очистки не выбраны! Пожалуйста выберите файлы для очистки из списка и повторите попытку.</value>
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
     <value>Очистка успешно выполнена. Steam будет запущен в режиме восстановления прямо сейчас!</value>
