@@ -286,15 +286,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while building the list of files for cleanup..
-        /// </summary>
-        internal static string AppDbgExClnFindFilesFailure {
-            get {
-                return ResourceManager.GetString("AppDbgExClnFindFilesFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An unknown hotkey combination was pressed: Ctrl + {0}..
         /// </summary>
         internal static string AppDbgExClnHotkeyUnknown {
@@ -354,6 +345,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExCmCopyToClipboard {
             get {
                 return ResourceManager.GetString("AppDbgExCmCopyToClipboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to build a list of files for cleanup..
+        /// </summary>
+        internal static string AppDbgExCmDetectFiles {
+            get {
+                return ResourceManager.GetString("AppDbgExCmDetectFiles", resourceCulture);
             }
         }
         
