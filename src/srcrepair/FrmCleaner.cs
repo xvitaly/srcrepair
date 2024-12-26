@@ -518,7 +518,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExClnFm);
+                Logger.Warn(Ex, DebugStrings.AppDbgExCmFileManager);
             }
         }
 
