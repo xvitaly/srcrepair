@@ -113,7 +113,7 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>4000</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>gmod.exe</Executable>
     </Game>
     <Game Name="Age of Chivalry">
         <Enabled>1</Enabled>
@@ -140,13 +140,13 @@
     <Game Name="Dystopia">
         <Enabled>1</Enabled>
         <DirName>Dystopia</DirName>
-        <SmallName>Dystopia</SmallName>
-        <VFDir>Dystopia</VFDir>
+        <SmallName>dystopia</SmallName>
+        <VFDir>dystopia</VFDir>
         <UserDir>0</UserDir>
         <HUDsAvail>0</HUDsAvail>
         <SID>17580</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>bin/win32/dystopia.exe</Executable>
     </Game>
     <Game Name="Insurgency: Modern Infantry Combat">
         <Enabled>1</Enabled>
@@ -168,7 +168,7 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>17570</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>sdkbase_pvkii/pvkii.exe</Executable>
     </Game>
     <Game Name="Smashball">
         <Enabled>1</Enabled>
@@ -190,7 +190,7 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>17520</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>synergy.exe</Executable>
     </Game>
     <Game Name="Zombie Panic! Source">
         <Enabled>1</Enabled>
@@ -414,7 +414,7 @@
     </Game>
     <Game Name="Eternal Silence">
         <Enabled>1</Enabled>
-        <DirName>eternal-silence</DirName>
+        <DirName>Source SDK Base</DirName>
         <SmallName>esmod</SmallName>
         <VFDir>esmod</VFDir>
         <UserDir>0</UserDir>
@@ -432,7 +432,7 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>212160</SID>
         <SVer>2</SVer>
-        <Executable>nxsteam.exe</Executable>
+        <Executable>en-US/nxsteam/nxsteam.exe</Executable>
     </Game>
     <Game Name="Bloody Good Time">
         <Enabled>1</Enabled>
@@ -459,8 +459,8 @@
     <Game Name="MINERVA: Metastasis">
         <Enabled>1</Enabled>
         <DirName>MINERVA</DirName>
-        <SmallName>minerva</SmallName>
-        <VFDir>minerva</VFDir>
+        <SmallName>metastasis</SmallName>
+        <VFDir>metastasis</VFDir>
         <UserDir>0</UserDir>
         <HUDsAvail>0</HUDsAvail>
         <SID>235780</SID>
@@ -476,7 +476,7 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>222880</SID>
         <SVer>2</SVer>
-        <Executable>insurgency.exe</Executable>
+        <Executable>insurgency_x64.exe</Executable>
     </Game>
     <Game Name="No More Room in Hell">
         <Enabled>1</Enabled>
@@ -685,7 +685,7 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>225600</SID>
         <SVer>2</SVer>
-        <Executable>berimbau.exe</Executable>
+        <Executable>bin/win64/berimbau.exe</Executable>
     </Game>
     <Game Name="The Beginner's Guide">
         <Enabled>1</Enabled>
