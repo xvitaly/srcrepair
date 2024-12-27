@@ -284,7 +284,7 @@ namespace srcrepair.gui
             {
                 if (Properties.Settings.Default.PackBeforeCleanup || ForceBackUp)
                 {
-                    Progress.Report(new Tuple<int, string>(0, AppStrings.PS_ProgressArchive));
+                    Progress.Report(new Tuple<int, string>(0, AppStrings.CM_ProgressArchive));
                     if (!FileManager.CompressFiles(DeleteQueue, FileManager.GenerateBackUpFileName(FullBackUpDirPath, Properties.Resources.BU_PrefixDef)))
                     {
                         Logger.Warn(DebugStrings.AppDbgExCmBackUpFiles);

@@ -199,7 +199,7 @@
     <value>Exception while cleaning up Steam registry entries.</value>
   </data>
   <data name="AppDbgExCmBackUpFiles" xml:space="preserve">
-    <value>An error occurred while trying to backup files selected for deletion.</value>
+    <value>An error occurred while trying to backup selected for deletion files.</value>
   </data>
   <data name="AppDbgExCmCleanupError" xml:space="preserve">
     <value>Exception while cleaning up selected files.</value>

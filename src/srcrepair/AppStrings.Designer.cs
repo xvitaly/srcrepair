@@ -844,6 +844,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Creating backup....
+        /// </summary>
+        internal static string CM_ProgressArchive {
+            get {
+                return ResourceManager.GetString("CM_ProgressArchive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cleanup in progress....
         /// </summary>
         internal static string CM_ProgressCleanup {
@@ -1488,15 +1497,6 @@ namespace srcrepair.gui {
         internal static string PS_ProcessDetected {
             get {
                 return ResourceManager.GetString("PS_ProcessDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Creating backup....
-        /// </summary>
-        internal static string PS_ProgressArchive {
-            get {
-                return ResourceManager.GetString("PS_ProgressArchive", resourceCulture);
             }
         }
         

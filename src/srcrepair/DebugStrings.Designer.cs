@@ -304,7 +304,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to backup files selected for deletion..
+        ///   Looks up a localized string similar to An error occurred while trying to backup selected for deletion files..
         /// </summary>
         internal static string AppDbgExCmBackUpFiles {
             get {
