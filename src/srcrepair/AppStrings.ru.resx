@@ -378,6 +378,9 @@
   <data name="CM_NoFilesSelected" xml:space="preserve">
     <value>Файлы для удаления не выбраны! Пожалуйста выберите хотя бы один и повторите попытку.</value>
   </data>
+  <data name="CM_ProgressCleanup" xml:space="preserve">
+    <value>Идёт очистка выбранных файлов...</value>
+  </data>
   <data name="CM_ProgressFinished" xml:space="preserve">
     <value>Очистка завершена.</value>
   </data>
@@ -593,9 +596,6 @@
   </data>
   <data name="PS_ProgressArchive" xml:space="preserve">
     <value>Создание резервной копии...</value>
-  </data>
-  <data name="PS_ProgressCleanup" xml:space="preserve">
-    <value>Идёт очистка выбранных файлов...</value>
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
     <value>Очистка успешно выполнена. Steam будет запущен в режиме восстановления прямо сейчас!</value>

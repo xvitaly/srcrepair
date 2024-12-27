@@ -186,12 +186,6 @@
   <data name="AppDbgExCfgSelection" xml:space="preserve">
     <value>Exception during FPS config selection (click on warning icon).</value>
   </data>
-  <data name="AppDbgExClnDeleteFileFailure" xml:space="preserve">
-    <value>Cannot delete the "{0}" file from the cleanup queue due to an error.</value>
-  </data>
-  <data name="AppDbgExClnEmptyDirs" xml:space="preserve">
-    <value>Exception while cleaning up empty directories.</value>
-  </data>
   <data name="AppDbgExClnHotkeyUnknown" xml:space="preserve">
     <value>An unknown hotkey combination was pressed: Ctrl + {0}.</value>
   </data>
@@ -213,8 +207,14 @@
   <data name="AppDbgExCmCopyToClipboard" xml:space="preserve">
     <value>An error occurred while copying paths of the selected files to the clipboard.</value>
   </data>
+  <data name="AppDbgExCmDeleteFiles" xml:space="preserve">
+    <value>Cannot delete the "{0}" file from the cleanup queue due to an error.</value>
+  </data>
   <data name="AppDbgExCmDetectFiles" xml:space="preserve">
     <value>Exception while trying to build a list of files for cleanup from directory "{0}" using file mask "{1}".</value>
+  </data>
+  <data name="AppDbgExCmEmptyDirs" xml:space="preserve">
+    <value>Exception while removing empty directories after cleaning up selected files.</value>
   </data>
   <data name="AppDbgExCmFileManager" xml:space="preserve">
     <value>Exception while trying to show the selected file in the file manager.</value>
@@ -368,6 +368,9 @@
   </data>
   <data name="AppDbgExRemVdAutoCfg" xml:space="preserve">
     <value>Exception while trying to create an automatic backup of the game configs before removing them.</value>
+  </data>
+  <data name="AppDbgExRmEmptyDirs" xml:space="preserve">
+    <value>Exception while removing empty directories.</value>
   </data>
   <data name="AppDbgExRmFileFailure" xml:space="preserve">
     <value>Cannot remove the "{0}" file due to an error.</value>

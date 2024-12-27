@@ -378,6 +378,9 @@
   <data name="CM_NoFilesSelected" xml:space="preserve">
     <value>No files selected for deletion! Please select at least one and try again.</value>
   </data>
+  <data name="CM_ProgressCleanup" xml:space="preserve">
+    <value>Cleanup in progress...</value>
+  </data>
   <data name="CM_ProgressFinished" xml:space="preserve">
     <value>Done.</value>
   </data>
@@ -593,9 +596,6 @@
   </data>
   <data name="PS_ProgressArchive" xml:space="preserve">
     <value>Creating backup...</value>
-  </data>
-  <data name="PS_ProgressCleanup" xml:space="preserve">
-    <value>Cleanup in progress...</value>
   </data>
   <data name="PS_SeqCompleted" xml:space="preserve">
     <value>The cleanup has been successfully completed. Steam will run in recovery mode right now!</value>

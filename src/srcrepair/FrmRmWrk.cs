@@ -95,7 +95,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExClnEmptyDirs);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExRmEmptyDirs);
                 }
             }
         }

@@ -217,7 +217,7 @@ namespace srcrepair.gui
         private void DeleteSelectedFiles(List<string> DeleteQueue, IProgress<Tuple<int, string>> Progress)
         {
             // Reporting new status...
-            Progress.Report(new Tuple<int, string>(0, AppStrings.PS_ProgressCleanup));
+            Progress.Report(new Tuple<int, string>(0, AppStrings.CM_ProgressCleanup));
 
             // Creating some counters...
             int TotalFiles = DeleteQueue.Count;
@@ -241,7 +241,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExClnDeleteFileFailure, Fl);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExCmDeleteFiles, Fl);
                 }
             }
 
@@ -256,7 +256,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex, DebugStrings.AppDbgExClnEmptyDirs);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExCmEmptyDirs);
                     }
                 }
             }

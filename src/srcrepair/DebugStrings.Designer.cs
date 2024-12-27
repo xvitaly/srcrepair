@@ -268,24 +268,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot delete the &quot;{0}&quot; file from the cleanup queue due to an error..
-        /// </summary>
-        internal static string AppDbgExClnDeleteFileFailure {
-            get {
-                return ResourceManager.GetString("AppDbgExClnDeleteFileFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while cleaning up empty directories..
-        /// </summary>
-        internal static string AppDbgExClnEmptyDirs {
-            get {
-                return ResourceManager.GetString("AppDbgExClnEmptyDirs", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An unknown hotkey combination was pressed: Ctrl + {0}..
         /// </summary>
         internal static string AppDbgExClnHotkeyUnknown {
@@ -349,11 +331,29 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cannot delete the &quot;{0}&quot; file from the cleanup queue due to an error..
+        /// </summary>
+        internal static string AppDbgExCmDeleteFiles {
+            get {
+                return ResourceManager.GetString("AppDbgExCmDeleteFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to build a list of files for cleanup from directory &quot;{0}&quot; using file mask &quot;{1}&quot;..
         /// </summary>
         internal static string AppDbgExCmDetectFiles {
             get {
                 return ResourceManager.GetString("AppDbgExCmDetectFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while removing empty directories after cleaning up selected files..
+        /// </summary>
+        internal static string AppDbgExCmEmptyDirs {
+            get {
+                return ResourceManager.GetString("AppDbgExCmEmptyDirs", resourceCulture);
             }
         }
         
@@ -813,6 +813,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExRemVdAutoCfg {
             get {
                 return ResourceManager.GetString("AppDbgExRemVdAutoCfg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while removing empty directories..
+        /// </summary>
+        internal static string AppDbgExRmEmptyDirs {
+            get {
+                return ResourceManager.GetString("AppDbgExRmEmptyDirs", resourceCulture);
             }
         }
         
