@@ -154,7 +154,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExCmDetectFiles);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExCmDetectFiles, CleanDir, CleanMask);
                 }
             }
         }

@@ -214,7 +214,7 @@
     <value>An error occurred while copying paths of the selected files to the clipboard.</value>
   </data>
   <data name="AppDbgExCmDetectFiles" xml:space="preserve">
-    <value>Exception while trying to build a list of files for cleanup.</value>
+    <value>Exception while trying to build a list of files for cleanup from directory "{0}" using file mask "{1}".</value>
   </data>
   <data name="AppDbgExCmFileManager" xml:space="preserve">
     <value>Exception while trying to show the selected file in the file manager.</value>

@@ -349,7 +349,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to build a list of files for cleanup..
+        ///   Looks up a localized string similar to Exception while trying to build a list of files for cleanup from directory &quot;{0}&quot; using file mask &quot;{1}&quot;..
         /// </summary>
         internal static string AppDbgExCmDetectFiles {
             get {
