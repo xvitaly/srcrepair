@@ -363,6 +363,9 @@
   <data name="CE_RestConfigOpenWarn" xml:space="preserve">
     <value>Внимание! Настоятельно не рекомендуется редактировать этот файл, т.к. это может привести к непредсказуемым последствиям. Редактируйте его на свой страх и риск.</value>
   </data>
+  <data name="CM_ButtonWorking" xml:space="preserve">
+    <value>Выполняется...</value>
+  </data>
   <data name="CM_CleanupError" xml:space="preserve">
     <value>Во время удаления файлов произошла ошибка! Некоторые файлы не были удалены.</value>
   </data>
@@ -377,6 +380,9 @@
   </data>
   <data name="CM_ProgressFinished" xml:space="preserve">
     <value>Очистка завершена.</value>
+  </data>
+  <data name="CM_ProgressPrepare" xml:space="preserve">
+    <value>Подготовка к запуску очистки...</value>
   </data>
   <data name="CS_FailedToOpenCfg" xml:space="preserve">
     <value>Произошла ошибка при вызове модуля выбора конфига для редактирования.</value>
@@ -561,9 +567,6 @@
   <data name="PS_BwBusy" xml:space="preserve">
     <value>Цели для очистки ещё не были построены! Пожалуйста повторите попытку через 10 секунд.</value>
   </data>
-  <data name="PS_CleanInProgress" xml:space="preserve">
-    <value>Выполняется...</value>
-  </data>
   <data name="PS_CleanPackagesException" xml:space="preserve">
     <value>Произошла ошибка во время работы процедуры очистки кэша загруженных пакетов! Возможно, у вас отсутствуют необходимые права для этого действия.</value>
   </data>
@@ -587,9 +590,6 @@
   </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Процесс Steam, обнаруженный в памяти был успешно завершён!</value>
-  </data>
-  <data name="PS_ProcessPrepare" xml:space="preserve">
-    <value>Подготовка к запуску очистки...</value>
   </data>
   <data name="PS_ProgressArchive" xml:space="preserve">
     <value>Создание резервной копии...</value>

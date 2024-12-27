@@ -165,11 +165,11 @@ namespace srcrepair.gui
         private void FormStart()
         {
             // Setting new status...
-            CM_Info.Text = AppStrings.PS_ProcessPrepare;
+            CM_Info.Text = AppStrings.CM_ProgressPrepare;
             IsRunning = true;
 
             // Disabling "Execute cleanup" button...
-            CM_Clean.Text = AppStrings.PS_CleanInProgress;
+            CM_Clean.Text = AppStrings.CM_ButtonWorking;
             CM_Clean.Enabled = false;
             CM_Clean.Visible = false;
 

@@ -799,6 +799,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Cleaning up....
+        /// </summary>
+        internal static string CM_ButtonWorking {
+            get {
+                return ResourceManager.GetString("CM_ButtonWorking", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while deleting files! Some files were not deleted..
         /// </summary>
         internal static string CM_CleanupError {
@@ -840,6 +849,15 @@ namespace srcrepair.gui {
         internal static string CM_ProgressFinished {
             get {
                 return ResourceManager.GetString("CM_ProgressFinished", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting cleanup....
+        /// </summary>
+        internal static string CM_ProgressPrepare {
+            get {
+                return ResourceManager.GetString("CM_ProgressPrepare", resourceCulture);
             }
         }
         
@@ -1393,15 +1411,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cleaning up....
-        /// </summary>
-        internal static string PS_CleanInProgress {
-            get {
-                return ResourceManager.GetString("PS_CleanInProgress", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred during the package cache removal! Perhaps you have not enough rights for doing this..
         /// </summary>
         internal static string PS_CleanPackagesException {
@@ -1470,15 +1479,6 @@ namespace srcrepair.gui {
         internal static string PS_ProcessDetected {
             get {
                 return ResourceManager.GetString("PS_ProcessDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Starting cleanup....
-        /// </summary>
-        internal static string PS_ProcessPrepare {
-            get {
-                return ResourceManager.GetString("PS_ProcessPrepare", resourceCulture);
             }
         }
         

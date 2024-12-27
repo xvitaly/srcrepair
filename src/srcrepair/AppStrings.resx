@@ -363,6 +363,9 @@
   <data name="CE_RestConfigOpenWarn" xml:space="preserve">
     <value>We not recommend to edit this file, because this may lead to unpredictable consequences. Edit it at your own risk.</value>
   </data>
+  <data name="CM_ButtonWorking" xml:space="preserve">
+    <value>Cleaning up...</value>
+  </data>
   <data name="CM_CleanupError" xml:space="preserve">
     <value>An error occurred while deleting files! Some files were not deleted.</value>
   </data>
@@ -377,6 +380,9 @@
   </data>
   <data name="CM_ProgressFinished" xml:space="preserve">
     <value>Done.</value>
+  </data>
+  <data name="CM_ProgressPrepare" xml:space="preserve">
+    <value>Starting cleanup...</value>
   </data>
   <data name="CS_FailedToOpenCfg" xml:space="preserve">
     <value>An error occured. Failed to open config selector! Try again later.</value>
@@ -561,9 +567,6 @@
   <data name="PS_BwBusy" xml:space="preserve">
     <value>Cleanup targets are not yet available! Please try again in 10 seconds.</value>
   </data>
-  <data name="PS_CleanInProgress" xml:space="preserve">
-    <value>Cleaning up...</value>
-  </data>
   <data name="PS_CleanPackagesException" xml:space="preserve">
     <value>An error occurred during the package cache removal! Perhaps you have not enough rights for doing this.</value>
   </data>
@@ -587,9 +590,6 @@
   </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Steam process has been successfully terminated!</value>
-  </data>
-  <data name="PS_ProcessPrepare" xml:space="preserve">
-    <value>Starting cleanup...</value>
   </data>
   <data name="PS_ProgressArchive" xml:space="preserve">
     <value>Creating backup...</value>
