@@ -328,9 +328,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Processes found files.
+        /// Checks if any files were found and performs initialization actions
+        /// depending on this.
         /// </summary>
-        private void HandleFiles()
+        private void FormInitialize()
         {
             // Changing the form state...
             IsRunning = false;
@@ -431,7 +432,7 @@ namespace srcrepair.gui
             CM_FTable.EndUpdate();
 
             // Processing found files...
-            HandleFiles();
+            FormInitialize();
         }
 
         /// <summary>
