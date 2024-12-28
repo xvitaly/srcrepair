@@ -471,12 +471,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private async void CM_Clean_Click(object sender, EventArgs e)
         {
-            if (CM_FTable.Items.Count == 0)
-            {
-                MessageBox.Show(AppStrings.CM_NoFilesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             if (CM_FTable.CheckedItems.Count == 0)
             {
                 MessageBox.Show(AppStrings.CM_NoFilesSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
