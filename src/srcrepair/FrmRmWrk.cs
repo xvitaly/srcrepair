@@ -55,7 +55,7 @@ namespace srcrepair.gui
 
             // Creating some counters...
             int TotalFiles = DeleteQueue.Count;
-            int CurrentFile = 1, CurrentPercent = 0, PreviousPercent = 0;
+            int CurrentFile = 1, CurrentPercent, PreviousPercent = 0;
 
             // Removing all files from list...
             foreach (string Fl in DeleteQueue)

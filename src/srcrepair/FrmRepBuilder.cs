@@ -112,7 +112,7 @@ namespace srcrepair.gui
             {
                 // Creating local variables for various counters...
                 int TotalFiles = RepMan.ReportTargets.Count;
-                int CurrentFile = 1, CurrentPercent = 0, PreviousPercent = 0;
+                int CurrentFile = 1, CurrentPercent, PreviousPercent = 0;
 
                 // Generating reports and adding results to the archive...
                 foreach (ReportTarget RepTarget in RepMan.ReportTargets)
