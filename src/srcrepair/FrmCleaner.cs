@@ -106,7 +106,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Scales controls on current form with some additional hacks applied.
+        /// Scales controls on current form with some additional workarounds applied.
         /// </summary>
         /// <param name="ScalingFactor">Scaling factor.</param>
         /// <param name="ControlBounds">The bounds of the control.</param>
@@ -120,7 +120,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets the full list of files for deletion.
+        /// Finds files for deletion.
         /// </summary>
         /// <param name="Targets">List of files and directories for cleanup.</param>
         /// <param name="Recursive">Enable recursive cleanup.</param>
@@ -180,9 +180,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Reports progress to progress bar on form.
+        /// Reports progress to the progress bar on the form.
         /// </summary>
-        /// <param name="Progress">Progress tuple.</param>
+        /// <param name="Progress">Current progress tuple.</param>
         private void ReportProgress(Tuple<int, string> Progress)
         {
             CM_Progress.Value = Progress.Item1;
@@ -193,9 +193,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Gets the list of files for removal.
+        /// Gets the list of selected files for deletion.
         /// </summary>
-        /// <returns>List of files to be removed.</returns>
+        /// <returns>List of selected files for deletion.</returns>
         private List<string> GetSelectedFiles()
         {
             List<string> Result = new List<string>();
@@ -274,7 +274,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Asynchronously backups selected files if enabled or required by policy.
+        /// Asynchronously backups selected files if enabled by the user or required by policy.
         /// </summary>
         /// <param name="DeleteQueue">List of files and directories for deletion.</param>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
@@ -307,7 +307,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Starts cleanup process asynchronously and report progress.
+        /// Asynchronously starts the cleanup process and report progress.
         /// </summary>
         private async Task StartCleanup()
         {
@@ -363,7 +363,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Selects all items from the table.
+        /// Selects all files from the table.
         /// </summary>
         private void HandleSelectAll()
         {
@@ -374,7 +374,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Deselects all items from the table.
+        /// Deselects all files from the table.
         /// </summary>
         private void HandleDeselectAll()
         {
@@ -385,7 +385,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Selects unselected items from the table and vice versa.
+        /// Selects unselected files from the table and vice versa.
         /// </summary>
         private void HandleInvertSelection()
         {
@@ -396,7 +396,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Copies full paths of the selected items to the clipboard.
+        /// Copies full paths of the selected files to the clipboard.
         /// </summary>
         private void HandleCopyToClipboard()
         {
