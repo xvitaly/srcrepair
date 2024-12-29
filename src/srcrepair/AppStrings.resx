@@ -372,6 +372,9 @@
   <data name="CM_CleanupQuestion" xml:space="preserve">
     <value>Delete selected files ({0})?</value>
   </data>
+  <data name="CM_FileManagerError" xml:space="preserve">
+    <value>Failed to show the selected file in the file manager!</value>
+  </data>
   <data name="CM_NoFilesDetected" xml:space="preserve">
     <value>No files detected for deletion! No cleanup required.</value>
   </data>

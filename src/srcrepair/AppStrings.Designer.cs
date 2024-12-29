@@ -826,6 +826,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to show the selected file in the file manager!.
+        /// </summary>
+        internal static string CM_FileManagerError {
+            get {
+                return ResourceManager.GetString("CM_FileManagerError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No files detected for deletion! No cleanup required..
         /// </summary>
         internal static string CM_NoFilesDetected {
