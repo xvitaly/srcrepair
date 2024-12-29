@@ -366,7 +366,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Selects all files from the table.
         /// </summary>
-        private void HandleSelectAll()
+        private void SelectAll()
         {
             foreach (ListViewItem Item in CM_FTable.Items)
             {
@@ -377,7 +377,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Deselects all files from the table.
         /// </summary>
-        private void HandleDeselectAll()
+        private void DeselectAll()
         {
             foreach (ListViewItem Item in CM_FTable.Items)
             {
@@ -388,7 +388,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Selects unselected files from the table and vice versa.
         /// </summary>
-        private void HandleInvertSelection()
+        private void InvertSelection()
         {
             foreach (ListViewItem Item in CM_FTable.Items)
             {
@@ -399,7 +399,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Copies full paths of the selected files to the clipboard.
         /// </summary>
-        private void HandleCopyToClipboard()
+        private void CopyToClipboard()
         {
             try
             {
@@ -447,16 +447,16 @@ namespace srcrepair.gui
                 switch (e.KeyCode)
                 {
                     case Keys.A: // "Ctrl + A"...
-                        HandleSelectAll();
+                        SelectAll();
                         break;
                     case Keys.D: // "Ctrl + D"...
-                        HandleDeselectAll();
+                        DeselectAll();
                         break;
                     case Keys.R: // "Ctrl + R"...
-                        HandleInvertSelection();
+                        InvertSelection();
                         break;
                     case Keys.C: // "Ctrl + C"...
-                        HandleCopyToClipboard();
+                        CopyToClipboard();
                         break;
                     default: // Unknown combination...
                         Logger.Warn(DebugStrings.AppDbgExClnHotkeyUnknown, e.KeyCode);
