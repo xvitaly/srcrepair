@@ -472,17 +472,18 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private async void CM_Clean_Click(object sender, EventArgs e)
         {
-            if (CM_FTable.CheckedItems.Count == 0)
-            {
-                MessageBox.Show(AppStrings.CM_NoFilesSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             if (MessageBox.Show(string.Format(AppStrings.CM_CleanupQuestion, CleanInfo), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                FormStart();
-                await StartCleanup();
-                FormFinalize();
+                if (CM_FTable.CheckedItems.Count > 0)
+                {
+                    FormStart();
+                    await StartCleanup();
+                    FormFinalize();
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.CM_NoFilesSelected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
