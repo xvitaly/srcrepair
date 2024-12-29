@@ -201,7 +201,7 @@
   <data name="AppDbgExCmBackUpFiles" xml:space="preserve">
     <value>An error occurred while trying to backup selected for deletion files.</value>
   </data>
-  <data name="AppDbgExCmCleanupError" xml:space="preserve">
+  <data name="AppDbgExCmCleanup" xml:space="preserve">
     <value>Exception while cleaning up selected files.</value>
   </data>
   <data name="AppDbgExCmCopyToClipboard" xml:space="preserve">

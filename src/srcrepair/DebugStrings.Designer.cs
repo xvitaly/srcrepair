@@ -315,9 +315,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Exception while cleaning up selected files..
         /// </summary>
-        internal static string AppDbgExCmCleanupError {
+        internal static string AppDbgExCmCleanup {
             get {
-                return ResourceManager.GetString("AppDbgExCmCleanupError", resourceCulture);
+                return ResourceManager.GetString("AppDbgExCmCleanup", resourceCulture);
             }
         }
         

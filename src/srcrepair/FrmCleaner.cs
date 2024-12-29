@@ -322,7 +322,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExCmCleanupError);
+                Logger.Error(Ex, DebugStrings.AppDbgExCmCleanup);
                 MessageBox.Show(AppStrings.CM_CleanupError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
