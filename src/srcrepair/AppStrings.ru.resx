@@ -375,7 +375,7 @@
   <data name="CM_FileManagerError" xml:space="preserve">
     <value>Не удалось отобразить выбранный файл в файловом менеджере!</value>
   </data>
-  <data name="CM_NoFilesDetected" xml:space="preserve">
+  <data name="CM_NoFilesFound" xml:space="preserve">
     <value>Файлы для удаления не найдены! Очистка не требуется.</value>
   </data>
   <data name="CM_NoFilesSelected" xml:space="preserve">

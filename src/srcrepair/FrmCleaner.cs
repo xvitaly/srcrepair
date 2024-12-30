@@ -344,7 +344,7 @@ namespace srcrepair.gui
             {
                 // Nothing found. Showing an error message and closing the form...
                 CM_Clean.Enabled = false;
-                MessageBox.Show(AppStrings.CM_NoFilesDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.CM_NoFilesFound, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             else

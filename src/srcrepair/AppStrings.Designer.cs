@@ -835,11 +835,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No files detected for deletion! No cleanup required..
+        ///   Looks up a localized string similar to No files found for deletion! Cleanup is not required..
         /// </summary>
-        internal static string CM_NoFilesDetected {
+        internal static string CM_NoFilesFound {
             get {
-                return ResourceManager.GetString("CM_NoFilesDetected", resourceCulture);
+                return ResourceManager.GetString("CM_NoFilesFound", resourceCulture);
             }
         }
         

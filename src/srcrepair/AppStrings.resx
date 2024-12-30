@@ -375,8 +375,8 @@
   <data name="CM_FileManagerError" xml:space="preserve">
     <value>Failed to show the selected file in the file manager!</value>
   </data>
-  <data name="CM_NoFilesDetected" xml:space="preserve">
-    <value>No files detected for deletion! No cleanup required.</value>
+  <data name="CM_NoFilesFound" xml:space="preserve">
+    <value>No files found for deletion! Cleanup is not required.</value>
   </data>
   <data name="CM_NoFilesSelected" xml:space="preserve">
     <value>No files selected for deletion! Please select at least one and try again.</value>
