@@ -85,13 +85,13 @@ namespace srcrepair.gui
         /// FrmCleaner class constructor.
         /// </summary>
         /// <param name="CD">The list of files and directories for cleanup.</param>
-        /// <param name="BD">Path to the directory for saving backups.</param>
-        /// <param name="CI">Cleanup window title.</param>
-        /// <param name="SM">Successful cleanup completion message text.</param>
+        /// <param name="BD">Full path to the directory for saving backups.</param>
+        /// <param name="CI">Cleanup module form title.</param>
+        /// <param name="SM">Message text of the successful cleanup completion.</param>
         /// <param name="RO">Allow user to manually select files for deletion.</param>
-        /// <param name="NA">Disable automatically mark found files to deletion.</param>
+        /// <param name="NA">Disable automatically marking of found files for deletion.</param>
         /// <param name="RS">Enable recursive cleanup.</param>
-        /// <param name="FB">Force backup file creation before running cleanup.</param>
+        /// <param name="FB">Require a backup to be created before running the cleanup.</param>
         public FrmCleaner(List<string> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
