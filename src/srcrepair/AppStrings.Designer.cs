@@ -889,6 +889,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The cleanup can free up to {0} of disk space..
+        /// </summary>
+        internal static string CM_ProgressSpace {
+            get {
+                return ResourceManager.GetString("CM_ProgressSpace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occured. Failed to open config selector! Try again later..
         /// </summary>
         internal static string CS_FailedToOpenCfg {
@@ -1488,15 +1497,6 @@ namespace srcrepair.gui {
         internal static string PS_ExecuteMSG {
             get {
                 return ResourceManager.GetString("PS_ExecuteMSG", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to We can free up to {0} hard-disk space after cleanup..
-        /// </summary>
-        internal static string PS_FrFInfo {
-            get {
-                return ResourceManager.GetString("PS_FrFInfo", resourceCulture);
             }
         }
         

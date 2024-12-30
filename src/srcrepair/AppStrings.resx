@@ -393,6 +393,9 @@
   <data name="CM_ProgressPrepare" xml:space="preserve">
     <value>Starting cleanup...</value>
   </data>
+  <data name="CM_ProgressSpace" xml:space="preserve">
+    <value>The cleanup can free up to {0} of disk space.</value>
+  </data>
   <data name="CS_FailedToOpenCfg" xml:space="preserve">
     <value>An error occured. Failed to open config selector! Try again later.</value>
   </data>
@@ -593,9 +596,6 @@
   </data>
   <data name="PS_ExecuteMSG" xml:space="preserve">
     <value>Perform this cleanup?</value>
-  </data>
-  <data name="PS_FrFInfo" xml:space="preserve">
-    <value>We can free up to {0} hard-disk space after cleanup.</value>
   </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Steam process has been successfully terminated!</value>

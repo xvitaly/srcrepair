@@ -337,7 +337,7 @@ namespace srcrepair.gui
             IsRunning = false;
 
             // Showing the estimated free space to be freed after removing all found files...
-            CM_Info.Text = string.Format(AppStrings.PS_FrFInfo, GuiHelpers.SclBytes(TotalSize));
+            CM_Info.Text = string.Format(AppStrings.CM_ProgressSpace, GuiHelpers.SclBytes(TotalSize));
 
             // Checking if any files were found...
             if (CM_FTable.Items.Count == 0)

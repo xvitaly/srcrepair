@@ -393,6 +393,9 @@
   <data name="CM_ProgressPrepare" xml:space="preserve">
     <value>Подготовка к запуску очистки...</value>
   </data>
+  <data name="CM_ProgressSpace" xml:space="preserve">
+    <value>В результате очистки может быть освобождено до {0}.</value>
+  </data>
   <data name="CS_FailedToOpenCfg" xml:space="preserve">
     <value>Произошла ошибка при вызове модуля выбора конфига для редактирования.</value>
   </data>
@@ -593,9 +596,6 @@
   </data>
   <data name="PS_ExecuteMSG" xml:space="preserve">
     <value>Выполнить очистку?</value>
-  </data>
-  <data name="PS_FrFInfo" xml:space="preserve">
-    <value>В результате очистки может быть освобождено до {0}.</value>
   </data>
   <data name="PS_ProcessDetected" xml:space="preserve">
     <value>Процесс Steam, обнаруженный в памяти был успешно завершён!</value>
