@@ -372,6 +372,9 @@
   <data name="CM_CleanupQuestion" xml:space="preserve">
     <value>Удалить выбранные файлы ({0})?</value>
   </data>
+  <data name="CM_CopyToClipboardError" xml:space="preserve">
+    <value>Не удалось скопировать пути выбранных файлов в буфер обмена!</value>
+  </data>
   <data name="CM_FileManagerError" xml:space="preserve">
     <value>Не удалось отобразить выбранный файл в файловом менеджере!</value>
   </data>

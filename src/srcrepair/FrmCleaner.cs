@@ -412,6 +412,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExCmCopyToClipboard);
+                MessageBox.Show(AppStrings.CM_CopyToClipboardError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

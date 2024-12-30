@@ -372,6 +372,9 @@
   <data name="CM_CleanupQuestion" xml:space="preserve">
     <value>Delete selected files ({0})?</value>
   </data>
+  <data name="CM_CopyToClipboardError" xml:space="preserve">
+    <value>Failed to copy paths of selected files to clipboard!</value>
+  </data>
   <data name="CM_FileManagerError" xml:space="preserve">
     <value>Failed to show the selected file in the file manager!</value>
   </data>

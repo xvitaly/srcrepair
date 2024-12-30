@@ -826,6 +826,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to copy paths of selected files to clipboard!.
+        /// </summary>
+        internal static string CM_CopyToClipboardError {
+            get {
+                return ResourceManager.GetString("CM_CopyToClipboardError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to show the selected file in the file manager!.
         /// </summary>
         internal static string CM_FileManagerError {
