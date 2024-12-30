@@ -313,15 +313,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while cleaning up selected files..
-        /// </summary>
-        internal static string AppDbgExCmCleanup {
-            get {
-                return ResourceManager.GetString("AppDbgExCmCleanup", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred while copying paths of the selected files to the clipboard..
         /// </summary>
         internal static string AppDbgExCmCopyToClipboard {
@@ -363,6 +354,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExCmFileManager {
             get {
                 return ResourceManager.GetString("AppDbgExCmFileManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while cleaning up selected files..
+        /// </summary>
+        internal static string AppDbgExCmTaskError {
+            get {
+                return ResourceManager.GetString("AppDbgExCmTaskError", resourceCulture);
             }
         }
         
