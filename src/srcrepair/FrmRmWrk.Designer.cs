@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRmWrk));
-            this.RW_PrgBr = new System.Windows.Forms.ProgressBar();
-            this.RW_WlcMsg = new System.Windows.Forms.Label();
+            this.RM_Progress = new System.Windows.Forms.ProgressBar();
+            this.RM_WlcMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // RW_PrgBr
+            // RM_Progress
             // 
-            resources.ApplyResources(this.RW_PrgBr, "RW_PrgBr");
-            this.RW_PrgBr.Name = "RW_PrgBr";
+            resources.ApplyResources(this.RM_Progress, "RM_Progress");
+            this.RM_Progress.Name = "RM_Progress";
             // 
-            // RW_WlcMsg
+            // RM_WlcMsg
             // 
-            resources.ApplyResources(this.RW_WlcMsg, "RW_WlcMsg");
-            this.RW_WlcMsg.Name = "RW_WlcMsg";
+            resources.ApplyResources(this.RM_WlcMsg, "RM_WlcMsg");
+            this.RM_WlcMsg.Name = "RM_WlcMsg";
             // 
             // FrmRmWrk
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ControlBox = false;
-            this.Controls.Add(this.RW_PrgBr);
-            this.Controls.Add(this.RW_WlcMsg);
+            this.Controls.Add(this.RM_Progress);
+            this.Controls.Add(this.RM_WlcMsg);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -65,7 +65,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ProgressBar RW_PrgBr;
-        private System.Windows.Forms.Label RW_WlcMsg;
+        private System.Windows.Forms.ProgressBar RM_Progress;
+        private System.Windows.Forms.Label RM_WlcMsg;
     }
 }

@@ -106,7 +106,7 @@ namespace srcrepair.gui
         /// <param name="Progress">Current progress percentage.</param>
         private void ReportCleanupProgress(int Progress)
         {
-            RW_PrgBr.Value = Progress;
+            RM_Progress.Value = Progress;
         }
 
         /// <summary>
