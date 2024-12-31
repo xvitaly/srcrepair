@@ -15,7 +15,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of recursive files and directories cleanup window.
+    /// Class of the file remover module.
     /// </summary>
     public partial class FrmRmWrk : Form
     {
