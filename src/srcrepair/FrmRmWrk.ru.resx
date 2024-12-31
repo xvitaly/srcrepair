@@ -121,6 +121,6 @@
     <value>Удаление файлов... Пожалуйста, подождите.</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Модуль быстрой очистки</value>
+    <value>Модуль удаления файлов</value>
   </data>
 </root>
