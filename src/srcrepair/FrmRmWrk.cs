@@ -20,17 +20,17 @@ namespace srcrepair.gui
     public partial class FrmRmWrk : Form
     {
         /// <summary>
-        /// Logger instance for FrmRmWrk class.
+        /// Logger instance for the FrmRmWrk class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// Stores the list of items for cleanup.
+        /// Stores the list of items for deletion.
         /// </summary>
         private readonly List<string> RemItems;
 
         /// <summary>
-        /// Stores status of currently running process.
+        /// Stores the status of the currently running process.
         /// </summary>
         private bool IsRunning = true;
 
