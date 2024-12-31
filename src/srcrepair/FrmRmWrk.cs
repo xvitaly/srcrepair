@@ -37,7 +37,7 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmRmWrk class constructor.
         /// </summary>
-        /// <param name="SL">The list of files directories for cleanup.</param>
+        /// <param name="SL">The list of files and directories for deletion.</param>
         public FrmRmWrk(List<string> SL)
         {
             InitializeComponent();
