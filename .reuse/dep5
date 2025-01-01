@@ -4,7 +4,7 @@ Upstream-Contact: EasyCoding Team
 Source: https://github.com/xvitaly/srcrepair
 
 Files: .github/*.md
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: assets/icons/add.png
@@ -208,59 +208,59 @@ Copyright: 2017 EasyCoding Team
 License: CC-BY-NC-ND-3.0
 
 Files: assets/manifests/srcrepair.VisualElementsManifest.xml
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: assets/templates/vmt_spray.txt
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: packaging/inno/locale/*/readme.txt
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: packaging/linux/*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/corelib/Properties/*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/corelib/corelib.csproj
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/corelib/DebugStrings.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/corelib/*.config
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/corelib/ReportStrings.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/kbhelper/Properties/*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/kbhelper/*.config
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/kbhelper/AppStrings.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/kbhelper/FrmKBHelper.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/kbhelper/kbhelper.csproj
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/kbhelper/kbhelper.ico
@@ -268,95 +268,95 @@ Copyright: 2003 GNOME icon artists
 License: GPL-2.0-only
 
 Files: src/kbhelper/kbhelper.manifest
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/Properties/*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/*.config
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/AppStrings.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/CVList.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/DebugStrings.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmAbout.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmArchWrk.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmCfgSelector.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmCleaner.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmDnWrk.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmInstaller.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmLogView.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmMainW.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmMute.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmOptions.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmRepBuilder.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmRmWrk.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmStmClean.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmStmSelector.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmUpdate.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/FrmUpdate.*
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/srcrepair.csproj
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: src/srcrepair/srcrepair.ico
@@ -364,13 +364,13 @@ Copyright: 2009 Lopagof
 License: CC-BY-NC-ND-3.0
 
 Files: src/srcrepair/srcrepair.manifest
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: README.md
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
 
 Files: srcrepair.sln
-Copyright: 2011-2024 EasyCoding Team
+Copyright: 2011-2025 EasyCoding Team
 License: GPL-3.0-or-later
