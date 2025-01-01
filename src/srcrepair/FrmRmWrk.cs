@@ -104,7 +104,7 @@ namespace srcrepair.gui
         /// Reports progress to progress bar on form.
         /// </summary>
         /// <param name="Progress">Current progress percentage.</param>
-        private void ReportCleanupProgress(int Progress)
+        private void ReportProgress(int Progress)
         {
             RM_Progress.Value = Progress;
         }
@@ -140,7 +140,7 @@ namespace srcrepair.gui
         {
             try
             {
-                await CleanupFilesTask(new Progress<int>(ReportCleanupProgress));
+                await CleanupFilesTask(new Progress<int>(ReportProgress));
             }
             catch (Exception Ex)
             {
