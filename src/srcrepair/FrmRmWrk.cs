@@ -123,7 +123,7 @@ namespace srcrepair.gui
         /// directories.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private async Task CleanupFilesTask(IProgress<int> Progress)
+        private async Task DeleteFiles(IProgress<int> Progress)
         {
             await Task.Run(() =>
             {
@@ -140,7 +140,7 @@ namespace srcrepair.gui
         {
             try
             {
-                await CleanupFilesTask(new Progress<int>(ReportProgress));
+                await DeleteFiles(new Progress<int>(ReportProgress));
             }
             catch (Exception Ex)
             {
