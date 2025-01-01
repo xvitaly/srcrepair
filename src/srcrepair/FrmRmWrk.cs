@@ -48,7 +48,7 @@ namespace srcrepair.gui
         /// Removes all files and directories recursively from specified directories.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
-        private void CleanupFiles(IProgress<int> Progress)
+        private void DeleteItems(IProgress<int> Progress)
         {
             // Searching for candidates...
             List<string> DeleteQueue = FileManager.FindFiles(RemItems);
@@ -127,7 +127,7 @@ namespace srcrepair.gui
         {
             await Task.Run(() =>
             {
-                CleanupFiles(Progress);
+                DeleteItems(Progress);
             });
         }
 
