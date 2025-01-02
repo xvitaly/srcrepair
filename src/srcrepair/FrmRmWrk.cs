@@ -166,7 +166,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmRmWrk_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Blocking ability to close form window during cleanup process...
             e.Cancel = (e.CloseReason == CloseReason.UserClosing) && IsRunning;
         }
     }
