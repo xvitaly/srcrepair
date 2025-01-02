@@ -132,11 +132,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Form create" event handler.
+        /// Asynchronously deletes all files and directories recursively
+        /// in a separate thread and reports progress.
         /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private async void FrmRmWrk_Load(object sender, EventArgs e)
+        private async Task FormStart()
         {
             try
             {
@@ -147,6 +146,16 @@ namespace srcrepair.gui
                 Logger.Error(Ex, DebugStrings.AppDbgExRmRf);
                 MessageBox.Show(AppStrings.RW_RmException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        /// <summary>
+        /// "Form create" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private async void FrmRmWrk_Load(object sender, EventArgs e)
+        {
+            await FormStart();
             FinalizeCleanup();
         }
 
