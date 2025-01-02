@@ -110,15 +110,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Finalizes cleanup procedure.
-        /// </summary>
-        private void FinalizeCleanup()
-        {
-            IsRunning = false;
-            Close();
-        }
-
-        /// <summary>
         /// Asynchronously deletes all files and directories recursively from specified
         /// directories.
         /// </summary>
@@ -149,6 +140,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Performs finalizing actions and closes the form.
+        /// </summary>
+        private void FormFinalize()
+        {
+            IsRunning = false;
+            Close();
+        }
+
+        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -156,7 +156,7 @@ namespace srcrepair.gui
         private async void FrmRmWrk_Load(object sender, EventArgs e)
         {
             await FormStart();
-            FinalizeCleanup();
+            FormFinalize();
         }
 
         /// <summary>
