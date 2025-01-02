@@ -837,9 +837,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Exception while removing files..
         /// </summary>
-        internal static string AppDbgExRmRf {
+        internal static string AppDbgExRmTaskError {
             get {
-                return ResourceManager.GetString("AppDbgExRmRf", resourceCulture);
+                return ResourceManager.GetString("AppDbgExRmTaskError", resourceCulture);
             }
         }
         

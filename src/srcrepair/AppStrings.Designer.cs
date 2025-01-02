@@ -1600,6 +1600,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while removing files! Some files were not deleted..
+        /// </summary>
+        internal static string RM_RemoveFilesError {
+            get {
+                return ResourceManager.GetString("RM_RemoveFilesError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         internal static string RP_CloseButtonText {
@@ -1632,15 +1641,6 @@ namespace srcrepair.gui {
         internal static string RP_ReportFileNotCreated {
             get {
                 return ResourceManager.GetString("RP_ReportFileNotCreated", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occured during files removal. Some files were not deleted..
-        /// </summary>
-        internal static string RW_RmException {
-            get {
-                return ResourceManager.GetString("RW_RmException", resourceCulture);
             }
         }
         

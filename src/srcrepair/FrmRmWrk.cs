@@ -134,8 +134,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExRmRf);
-                MessageBox.Show(AppStrings.RW_RmException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, DebugStrings.AppDbgExRmTaskError);
+                MessageBox.Show(AppStrings.RM_RemoveFilesError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -630,6 +630,9 @@
   <data name="QI_InstallationSuccessful" xml:space="preserve">
     <value>Выбранный файл был успешно установлен!</value>
   </data>
+  <data name="RM_RemoveFilesError" xml:space="preserve">
+    <value>Произошла ошибка во время удаления файлов! Некоторые файлы не были удалены.</value>
+  </data>
   <data name="RP_CloseButtonText" xml:space="preserve">
     <value>Закрыть</value>
   </data>
@@ -641,9 +644,6 @@
   </data>
   <data name="RP_ReportFileNotCreated" xml:space="preserve">
     <value>Сжатый файл отчёта не был создан!</value>
-  </data>
-  <data name="RW_RmException" xml:space="preserve">
-    <value>Произошла ошибка во время удаления файлов. Не все файлы были удалены.</value>
   </data>
   <data name="SD_NotEnoughStmIDs" xml:space="preserve">
     <value>Невозможно отобразить диалоговое окно выбора SteamID, т.к. найдено недостаточное их количество!</value>

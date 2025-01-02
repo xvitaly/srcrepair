@@ -375,7 +375,7 @@
   <data name="AppDbgExRmFileFailure" xml:space="preserve">
     <value>Cannot remove the "{0}" file due to an error.</value>
   </data>
-  <data name="AppDbgExRmRf" xml:space="preserve">
+  <data name="AppDbgExRmTaskError" xml:space="preserve">
     <value>Exception while removing files.</value>
   </data>
   <data name="AppDbgExRpCleanTempDir" xml:space="preserve">
