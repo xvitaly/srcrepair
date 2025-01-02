@@ -45,19 +45,19 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Removes all files and directories recursively from specified directories.
+        /// Removes all files and directories recursively from the specified directories.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
         private void DeleteItems(IProgress<int> Progress)
         {
-            // Searching for candidates...
+            // Searching for files for deletion...
             List<string> DeleteQueue = FileManager.FindFiles(RemItems);
 
-            // Creating some counters...
+            // Creating local variables for various counters...
             int TotalFiles = DeleteQueue.Count;
             int CurrentFile = 1, CurrentPercent, PreviousPercent = 0;
 
-            // Removing all files from list...
+            // Removing all files from the list...
             foreach (string Fl in DeleteQueue)
             {
                 try
@@ -65,7 +65,7 @@ namespace srcrepair.gui
                     // Removing file if exists...
                     FileManager.RemoveFile(Fl);
 
-                    // Reporting progress to form...
+                    // Reporting the progress...
                     CurrentPercent = (int)Math.Round(CurrentFile / (double)TotalFiles * 100.00d, 0); CurrentFile++;
                     if ((CurrentPercent >= 0) && (CurrentPercent <= 100) && (CurrentPercent > PreviousPercent))
                     {
