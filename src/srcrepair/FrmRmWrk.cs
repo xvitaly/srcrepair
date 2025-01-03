@@ -45,7 +45,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Removes all files and directories recursively from the specified directories.
+        /// Finds and deletes all files and directories recursively.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
         private void DeleteItems(IProgress<int> Progress)
@@ -110,8 +110,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Asynchronously deletes all files and directories recursively from specified
-        /// directories.
+        /// Asynchronously deletes all files and directories recursively.
         /// </summary>
         /// <param name="Progress">Instance of IProgress interface for reporting progress.</param>
         private async Task DeleteFiles(IProgress<int> Progress)
