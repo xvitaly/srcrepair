@@ -120,6 +120,9 @@
   <data name="AC_NoItemsSelected" xml:space="preserve">
     <value>No items selected. Please select at least one and then try again!</value>
   </data>
+  <data name="AF_Version" xml:space="preserve">
+    <value>Version: {0}</value>
+  </data>
   <data name="AppAlreadyRunning" xml:space="preserve">
     <value>The program is already running. Starting the second copy is not allowed.</value>
   </data>

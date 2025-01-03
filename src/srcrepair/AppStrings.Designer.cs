@@ -70,6 +70,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Version: {0}.
+        /// </summary>
+        internal static string AF_Version {
+            get {
+                return ResourceManager.GetString("AF_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The program is already running. Starting the second copy is not allowed..
         /// </summary>
         internal static string AppAlreadyRunning {

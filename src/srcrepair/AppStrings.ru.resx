@@ -120,6 +120,9 @@
   <data name="AC_NoItemsSelected" xml:space="preserve">
     <value>Вы не выбрали ни один элемент! Очистка невозможна.</value>
   </data>
+  <data name="AF_Version" xml:space="preserve">
+    <value>Версия: {0}</value>
+  </data>
   <data name="AppAlreadyRunning" xml:space="preserve">
     <value>Программа уже выполняется! Запуск нескольких копий не поддерживается.</value>
   </data>
