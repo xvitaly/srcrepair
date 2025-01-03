@@ -35,7 +35,7 @@
             this.AF_Description = new System.Windows.Forms.TextBox();
             this.AF_License = new System.Windows.Forms.Label();
             this.AF_Copyright = new System.Windows.Forms.Label();
-            this.AF_About = new System.Windows.Forms.Button();
+            this.AF_Okay = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AF_ProductIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,21 +78,21 @@
             resources.ApplyResources(this.AF_Copyright, "AF_Copyright");
             this.AF_Copyright.Name = "AF_Copyright";
             // 
-            // AF_About
+            // AF_Okay
             // 
-            this.AF_About.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            resources.ApplyResources(this.AF_About, "AF_About");
-            this.AF_About.Name = "AF_About";
-            this.AF_About.UseVisualStyleBackColor = true;
-            this.AF_About.Click += new System.EventHandler(this.OkButton_Click);
+            this.AF_Okay.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            resources.ApplyResources(this.AF_Okay, "AF_Okay");
+            this.AF_Okay.Name = "AF_Okay";
+            this.AF_Okay.UseVisualStyleBackColor = true;
+            this.AF_Okay.Click += new System.EventHandler(this.AF_Okay_Click);
             // 
             // FrmAbout
             // 
-            this.AcceptButton = this.AF_About;
+            this.AcceptButton = this.AF_Okay;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.AF_About;
-            this.Controls.Add(this.AF_About);
+            this.CancelButton = this.AF_Okay;
+            this.Controls.Add(this.AF_Okay);
             this.Controls.Add(this.AF_Copyright);
             this.Controls.Add(this.AF_License);
             this.Controls.Add(this.AF_Description);
@@ -123,7 +123,7 @@
         private System.Windows.Forms.TextBox AF_Description;
         private System.Windows.Forms.Label AF_License;
         private System.Windows.Forms.Label AF_Copyright;
-        private System.Windows.Forms.Button AF_About;
+        private System.Windows.Forms.Button AF_Okay;
 
     }
 }

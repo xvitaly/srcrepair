@@ -359,31 +359,31 @@ Additional information about the components used in this project, including the 
   <data name="&gt;&gt;AF_Copyright.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="AF_About.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="AF_Okay.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="AF_About.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="AF_Okay.Location" type="System.Drawing.Point, System.Drawing">
     <value>89, 297</value>
   </data>
-  <data name="AF_About.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="AF_Okay.Size" type="System.Drawing.Size, System.Drawing">
     <value>101, 23</value>
   </data>
-  <data name="AF_About.TabIndex" type="System.Int32, mscorlib">
+  <data name="AF_Okay.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="AF_About.Text" xml:space="preserve">
+  <data name="AF_Okay.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="&gt;&gt;AF_About.Name" xml:space="preserve">
-    <value>AF_About</value>
+  <data name="&gt;&gt;AF_Okay.Name" xml:space="preserve">
+    <value>AF_Okay</value>
   </data>
-  <data name="&gt;&gt;AF_About.Type" xml:space="preserve">
+  <data name="&gt;&gt;AF_Okay.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;AF_About.Parent" xml:space="preserve">
+  <data name="&gt;&gt;AF_Okay.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;AF_About.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;AF_Okay.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

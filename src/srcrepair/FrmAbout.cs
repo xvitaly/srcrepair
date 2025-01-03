@@ -24,16 +24,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "OK" button click event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void OkButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -45,6 +35,16 @@ namespace srcrepair.gui
             AF_ProductVersion.Text = string.Format("Version: {0}", CurrentApp.AppVersion);
             AF_Copyright.Text = CurrentApp.AppCopyright;
             AF_CompanyName.Text = CurrentApp.AppCompany;
+        }
+
+        /// <summary>
+        /// "OK" button click event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void AF_Okay_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
