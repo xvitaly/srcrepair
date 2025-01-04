@@ -30,7 +30,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmAbout_Load(object sender, EventArgs e)
         {
-            // Adding information about product version and copyrights...
             AF_ProductName.Text = CurrentApp.AppProduct;
             AF_ProductVersion.Text = string.Format(AppStrings.AF_Version, CurrentApp.AppVersion);
             AF_Copyright.Text = CurrentApp.AppCopyright;
