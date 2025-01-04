@@ -11,7 +11,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of form "About".
+    /// Class of the About module.
     /// </summary>
     public partial class FrmAbout : Form
     {
