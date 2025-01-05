@@ -43,9 +43,6 @@ namespace srcrepair.gui
             MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
             MO_UseUpstream.Checked = Properties.Settings.Default.HUDUseUpstream;
             MO_HideOutdatedHUDs.Checked = Properties.Settings.Default.HUDHideOutdated;
-
-            // Settig application name in window title...
-            Text = string.Format(Text, Properties.Resources.AppName);
         }
 
         /// <summary>
