@@ -12,7 +12,7 @@ using System.Text.RegularExpressions;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of settings editor window.
+    /// Class of the Options module.
     /// </summary>
     public partial class FrmOptions : Form
     {
