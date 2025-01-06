@@ -42,6 +42,9 @@ namespace srcrepair.gui
             MO_HideOutdatedHUDs.Checked = Properties.Settings.Default.HUDHideOutdated;
         }
 
+        /// <summary>
+        /// Writes the application settings to the configuration file.
+        /// </summary>
         private void WriteSettings()
         {
             Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
