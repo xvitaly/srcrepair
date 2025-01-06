@@ -24,14 +24,8 @@ namespace srcrepair.gui
             InitializeComponent();
         }
 
-        /// <summary>
-        /// "Form create" event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void FrmOptions_Load(object sender, EventArgs e)
+        private void ReadSettings()
         {
-            // Reading current settings from configuration file...
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
             MO_HideUnsupported.Checked = Properties.Settings.Default.HideUnsupportedGames;
             MO_RemEmptyDirs.Checked = Properties.Settings.Default.RemoveEmptyDirs;
@@ -43,6 +37,17 @@ namespace srcrepair.gui
             MO_UnSafeOps.Checked = Properties.Settings.Default.AllowUnSafeCleanup;
             MO_UseUpstream.Checked = Properties.Settings.Default.HUDUseUpstream;
             MO_HideOutdatedHUDs.Checked = Properties.Settings.Default.HUDHideOutdated;
+        }
+
+        /// <summary>
+        /// "Form create" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void FrmOptions_Load(object sender, EventArgs e)
+        {
+            // Reading current settings from configuration file...
+            ReadSettings();
         }
 
         /// <summary>
