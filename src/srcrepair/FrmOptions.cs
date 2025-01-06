@@ -24,6 +24,9 @@ namespace srcrepair.gui
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Reads the application settings from the configuration file.
+        /// </summary>
         private void ReadSettings()
         {
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
