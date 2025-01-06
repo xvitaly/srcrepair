@@ -39,6 +39,22 @@ namespace srcrepair.gui
             MO_HideOutdatedHUDs.Checked = Properties.Settings.Default.HUDHideOutdated;
         }
 
+        private void WriteSettings()
+        {
+            Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
+            Properties.Settings.Default.HideUnsupportedGames = MO_HideUnsupported.Checked;
+            Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
+            Properties.Settings.Default.HighlightOldBackUps = MO_HighlightOldBackUps.Checked;
+            Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
+            Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
+            Properties.Settings.Default.AutoUpdateCheck = MO_AutoCheckUpdates.Checked;
+            Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
+            Properties.Settings.Default.HUDUseUpstream = MO_UseUpstream.Checked;
+            Properties.Settings.Default.HUDHideOutdated = MO_HideOutdatedHUDs.Checked;
+            if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
+            Properties.Settings.Default.Save();
+        }
+
         /// <summary>
         /// "Form create" event handler.
         /// </summary>
@@ -57,23 +73,10 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MO_Okay_Click(object sender, EventArgs e)
         {
-            // Storing settings...
-            Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
-            Properties.Settings.Default.HideUnsupportedGames = MO_HideUnsupported.Checked;
-            Properties.Settings.Default.RemoveEmptyDirs = MO_RemEmptyDirs.Checked;
-            Properties.Settings.Default.HighlightOldBackUps = MO_HighlightOldBackUps.Checked;
-            Properties.Settings.Default.EditorBin = MO_TextEdBin.Text;
-            Properties.Settings.Default.PackBeforeCleanup = MO_ZipCompress.Checked;
-            Properties.Settings.Default.AutoUpdateCheck = MO_AutoCheckUpdates.Checked;
-            Properties.Settings.Default.AllowUnSafeCleanup = MO_UnSafeOps.Checked;
-            Properties.Settings.Default.HUDUseUpstream = MO_UseUpstream.Checked;
-            Properties.Settings.Default.HUDHideOutdated = MO_HideOutdatedHUDs.Checked;
-            if (Regex.IsMatch(MO_CustDirName.Text, Properties.Resources.MO_CustomDirRegex)) { Properties.Settings.Default.UserCustDirName = MO_CustDirName.Text; }
+            // Writing settings to the configuration file...
+            WriteSettings();
 
-            // Saving settings to disk...
-            Properties.Settings.Default.Save();
-
-            // Showing message and closing form...
+            // Showing a message and closing the form...
             MessageBox.Show(AppStrings.Opts_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
