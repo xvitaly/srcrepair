@@ -573,8 +573,8 @@
   <data name="MM_SaveException" xml:space="preserve">
     <value>Произошла ошибка при сохранении файла. Возможно, он был повреждён.</value>
   </data>
-  <data name="Opts_Saved" xml:space="preserve">
-    <value>Настройки были успешно сохранены. Внимание! Некоторые из них будут задействованы только после перезапуска программы.</value>
+  <data name="MO_SettingsSaved" xml:space="preserve">
+    <value>Настройки были успешно сохранены! Некоторые из них будут задействованы только при следующем запуске программы.</value>
   </data>
   <data name="PS_AppRunning" xml:space="preserve">
     <value>Обнаружено запущенное приложение {0}! Чтобы выполнить эту очистку завершите его работу.</value>

@@ -1429,11 +1429,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Settings were saved successfully. Some of them will be activated only on next launch..
+        ///   Looks up a localized string similar to The settings have been saved successfully! Some of them will be activated only on the next program launch..
         /// </summary>
-        internal static string Opts_Saved {
+        internal static string MO_SettingsSaved {
             get {
-                return ResourceManager.GetString("Opts_Saved", resourceCulture);
+                return ResourceManager.GetString("MO_SettingsSaved", resourceCulture);
             }
         }
         

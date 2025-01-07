@@ -66,7 +66,7 @@ namespace srcrepair.gui
         /// </summary>
         private void FormFinalize()
         {
-            MessageBox.Show(AppStrings.Opts_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(AppStrings.MO_SettingsSaved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 
