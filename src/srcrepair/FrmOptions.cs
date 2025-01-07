@@ -77,7 +77,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmOptions_Load(object sender, EventArgs e)
         {
-            // Reading current settings from configuration file...
             ReadSettings();
         }
 
@@ -88,7 +87,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MO_Okay_Click(object sender, EventArgs e)
         {
-            // Writing settings to the configuration file...
             WriteSettings();
             FormFinalize();
         }
@@ -100,7 +98,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MO_Cancel_Click(object sender, EventArgs e)
         {
-            // Closing form without saving anything...
             Close();
         }
 
