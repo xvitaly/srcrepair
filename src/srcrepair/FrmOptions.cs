@@ -62,6 +62,15 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Shows a message and closes the form.
+        /// </summary>
+        private void FormFinalize()
+        {
+            MessageBox.Show(AppStrings.Opts_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
+        }
+
+        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -81,10 +90,7 @@ namespace srcrepair.gui
         {
             // Writing settings to the configuration file...
             WriteSettings();
-
-            // Showing a message and closing the form...
-            MessageBox.Show(AppStrings.Opts_Saved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Close();
+            FormFinalize();
         }
 
         /// <summary>
