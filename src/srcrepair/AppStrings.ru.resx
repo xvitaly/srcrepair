@@ -573,7 +573,7 @@
   <data name="MM_SaveException" xml:space="preserve">
     <value>Произошла ошибка при сохранении файла. Возможно, он был повреждён.</value>
   </data>
-  <data name="MO_SettingsSaved" xml:space="preserve">
+  <data name="MO_OptionsSaved" xml:space="preserve">
     <value>Настройки были успешно сохранены! Некоторые из них будут задействованы только при следующем запуске программы.</value>
   </data>
   <data name="PS_AppRunning" xml:space="preserve">

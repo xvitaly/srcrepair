@@ -573,8 +573,8 @@
   <data name="MM_SaveException" xml:space="preserve">
     <value>An error occured while saving database file! It may be corrupted.</value>
   </data>
-  <data name="MO_SettingsSaved" xml:space="preserve">
-    <value>The settings have been saved successfully! Some of them will be activated only on the next program launch.</value>
+  <data name="MO_OptionsSaved" xml:space="preserve">
+    <value>The options have been saved successfully! Some of them will be activated only on the next program launch.</value>
   </data>
   <data name="PS_AppRunning" xml:space="preserve">
     <value>{0} application is running! To execute this cleanup please close it first.</value>
