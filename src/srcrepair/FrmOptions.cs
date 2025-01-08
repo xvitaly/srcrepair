@@ -43,9 +43,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Writes the application settings to the configuration file.
+        /// Saves the application options to the configuration file.
         /// </summary>
-        private void WriteSettings()
+        private void SaveOptions()
         {
             Properties.Settings.Default.ConfirmExit = MO_ConfirmExit.Checked;
             Properties.Settings.Default.HideUnsupportedGames = MO_HideUnsupported.Checked;
@@ -87,7 +87,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MO_Okay_Click(object sender, EventArgs e)
         {
-            WriteSettings();
+            SaveOptions();
             FormFinalize();
         }
 
