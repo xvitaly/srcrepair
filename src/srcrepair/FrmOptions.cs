@@ -25,9 +25,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Reads the application settings from the configuration file.
+        /// Loads the application options from the configuration file.
         /// </summary>
-        private void ReadSettings()
+        private void LoadOptions()
         {
             MO_ConfirmExit.Checked = Properties.Settings.Default.ConfirmExit;
             MO_HideUnsupported.Checked = Properties.Settings.Default.HideUnsupportedGames;
@@ -77,7 +77,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void FrmOptions_Load(object sender, EventArgs e)
         {
-            ReadSettings();
+            LoadOptions();
         }
 
         /// <summary>
