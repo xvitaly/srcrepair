@@ -55,7 +55,7 @@ namespace srcrepair.gui
         private void FrmStmSelector_Load(object sender, EventArgs e)
         {
             // Connecting SteamIDs object with ComboBox on form...
-            SD_IDSel.DataSource = SteamIDs;
+            ST_IDSel.DataSource = SteamIDs;
         }
 
         /// <summary>
@@ -63,9 +63,9 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void ST_OK_Click(object sender, EventArgs e)
+        private void ST_Okay_Click(object sender, EventArgs e)
         {
-            SteamID = SD_IDSel.Text;
+            SteamID = ST_IDSel.Text;
             DialogResult = DialogResult.OK;
             Close();
         }
@@ -86,11 +86,11 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void SD_Follow_Click(object sender, EventArgs e)
+        private void ST_ShowProfile_Click(object sender, EventArgs e)
         {
             try
             {
-                Platform.OpenWebPage(string.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(SD_IDSel.Text)));
+                Platform.OpenWebPage(string.Format(Properties.Resources.MM_CommunityURL, SteamConv.ConvSidv3Sid64(ST_IDSel.Text)));
             }
             catch (Exception Ex)
             {

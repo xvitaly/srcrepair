@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="SD_WMsg.Text" xml:space="preserve">
+  <data name="ST_WlcMsg.Text" xml:space="preserve">
     <value>Выберите свой UserID из списка:</value>
   </data>
   <data name="ST_Cancel.Text" xml:space="preserve">

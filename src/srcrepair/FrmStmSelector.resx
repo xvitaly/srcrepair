@@ -117,88 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="SD_WMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ST_WlcMsg.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SD_WMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="ST_WlcMsg.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="SD_WMsg.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ST_WlcMsg.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 9</value>
   </data>
-  <data name="SD_WMsg.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ST_WlcMsg.Size" type="System.Drawing.Size, System.Drawing">
     <value>214, 14</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="SD_WMsg.TabIndex" type="System.Int32, mscorlib">
+  <data name="ST_WlcMsg.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="SD_WMsg.Text" xml:space="preserve">
+  <data name="ST_WlcMsg.Text" xml:space="preserve">
     <value>Select your UserID from list:</value>
   </data>
-  <data name="&gt;&gt;SD_WMsg.Name" xml:space="preserve">
-    <value>SD_WMsg</value>
+  <data name="&gt;&gt;ST_WlcMsg.Name" xml:space="preserve">
+    <value>ST_WlcMsg</value>
   </data>
-  <data name="&gt;&gt;SD_WMsg.Type" xml:space="preserve">
+  <data name="&gt;&gt;ST_WlcMsg.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SD_WMsg.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ST_WlcMsg.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SD_WMsg.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ST_WlcMsg.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <metadata name="SD_IDSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ST_IDSel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="SD_IDSel.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ST_IDSel.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 26</value>
   </data>
-  <data name="SD_IDSel.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ST_IDSel.Size" type="System.Drawing.Size, System.Drawing">
     <value>188, 21</value>
   </data>
-  <data name="SD_IDSel.TabIndex" type="System.Int32, mscorlib">
+  <data name="ST_IDSel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;SD_IDSel.Name" xml:space="preserve">
-    <value>SD_IDSel</value>
+  <data name="&gt;&gt;ST_IDSel.Name" xml:space="preserve">
+    <value>ST_IDSel</value>
   </data>
-  <data name="&gt;&gt;SD_IDSel.Type" xml:space="preserve">
+  <data name="&gt;&gt;ST_IDSel.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SD_IDSel.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ST_IDSel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SD_IDSel.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ST_IDSel.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <metadata name="ST_OK.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ST_Okay.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="ST_OK.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ST_Okay.Location" type="System.Drawing.Point, System.Drawing">
     <value>11, 53</value>
   </data>
-  <data name="ST_OK.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ST_Okay.Size" type="System.Drawing.Size, System.Drawing">
     <value>104, 23</value>
   </data>
-  <data name="ST_OK.TabIndex" type="System.Int32, mscorlib">
+  <data name="ST_Okay.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="ST_OK.Text" xml:space="preserve">
+  <data name="ST_Okay.Text" xml:space="preserve">
     <value>OK</value>
   </data>
-  <data name="&gt;&gt;ST_OK.Name" xml:space="preserve">
-    <value>ST_OK</value>
+  <data name="&gt;&gt;ST_Okay.Name" xml:space="preserve">
+    <value>ST_Okay</value>
   </data>
-  <data name="&gt;&gt;ST_OK.Type" xml:space="preserve">
+  <data name="&gt;&gt;ST_Okay.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;ST_OK.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ST_Okay.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;ST_OK.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ST_Okay.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
   <metadata name="ST_Cancel.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -228,28 +228,28 @@
   <data name="&gt;&gt;ST_Cancel.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="SD_Follow.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="ST_ShowProfile.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="SD_Follow.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ST_ShowProfile.Location" type="System.Drawing.Point, System.Drawing">
     <value>204, 25</value>
   </data>
-  <data name="SD_Follow.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="ST_ShowProfile.Size" type="System.Drawing.Size, System.Drawing">
     <value>23, 23</value>
   </data>
-  <data name="SD_Follow.TabIndex" type="System.Int32, mscorlib">
+  <data name="ST_ShowProfile.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;SD_Follow.Name" xml:space="preserve">
-    <value>SD_Follow</value>
+  <data name="&gt;&gt;ST_ShowProfile.Name" xml:space="preserve">
+    <value>ST_ShowProfile</value>
   </data>
-  <data name="&gt;&gt;SD_Follow.Type" xml:space="preserve">
+  <data name="&gt;&gt;ST_ShowProfile.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;SD_Follow.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ST_ShowProfile.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;SD_Follow.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ST_ShowProfile.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
