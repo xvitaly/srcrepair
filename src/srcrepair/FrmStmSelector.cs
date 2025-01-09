@@ -13,7 +13,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of UserID selection window.
+    /// Class of the UserID selection module.
     /// </summary>
     public partial class FrmStmSelector : Form
     {
