@@ -435,7 +435,7 @@
   <data name="AppDbgExUrlHudHome" xml:space="preserve">
     <value>Exception while trying to start the web browser to open the HUD's homepage.</value>
   </data>
-  <data name="AppDbgExUrlStmSel" xml:space="preserve">
+  <data name="AppDbgExUrlProfile" xml:space="preserve">
     <value>Exception while trying to start the web browser to open the Steam profile.</value>
   </data>
   <data name="AppDbgExUrlWebsite" xml:space="preserve">

@@ -1017,9 +1017,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Exception while trying to start the web browser to open the Steam profile..
         /// </summary>
-        internal static string AppDbgExUrlStmSel {
+        internal static string AppDbgExUrlProfile {
             get {
-                return ResourceManager.GetString("AppDbgExUrlStmSel", resourceCulture);
+                return ResourceManager.GetString("AppDbgExUrlProfile", resourceCulture);
             }
         }
         
