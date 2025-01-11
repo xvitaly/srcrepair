@@ -14,7 +14,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of update checker window.
+    /// Class of the Update center module.
     /// </summary>
     public partial class FrmUpdate : Form
     {
