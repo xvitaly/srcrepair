@@ -18,12 +18,12 @@ namespace srcrepair.gui
     public partial class FrmStmSelector : Form
     {
         /// <summary>
-        /// Logger instance for FrmStmSelector class.
+        /// Logger instance for the FrmStmSelector class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// CurrentPlatform instance for FrmStmSelector class.
+        /// CurrentPlatform instance for the FrmStmSelector class.
         /// </summary>
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
@@ -33,7 +33,7 @@ namespace srcrepair.gui
         private readonly List<string> SteamIDs;
 
         /// <summary>
-        /// Gets or sets Steam UserID.
+        /// Gets or sets the Steam UserID.
         /// </summary>
         public string SteamID { get; private set; }
 
