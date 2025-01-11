@@ -1663,6 +1663,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while starting the web browser to open the selected Steam profile!.
+        /// </summary>
+        internal static string ST_ShowProfileError {
+            get {
+                return ResourceManager.GetString("ST_ShowProfileError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ready..
         /// </summary>
         internal static string StatusNormal {

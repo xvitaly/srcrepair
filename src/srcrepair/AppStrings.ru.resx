@@ -669,6 +669,9 @@
   <data name="SteamPathEnterErr" xml:space="preserve">
     <value>Вы указали неправильный путь! Программа будет завершена.</value>
   </data>
+  <data name="ST_ShowProfileError" xml:space="preserve">
+    <value>Произошла ошибка при запуске веб-браузера для отображения выбранного профиля Steam!</value>
+  </data>
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Безымянный.cfg</value>
   </data>

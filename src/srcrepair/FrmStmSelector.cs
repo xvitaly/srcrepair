@@ -95,6 +95,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExUrlProfile);
+                MessageBox.Show(AppStrings.ST_ShowProfileError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

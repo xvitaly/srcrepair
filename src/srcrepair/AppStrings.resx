@@ -669,6 +669,9 @@
   <data name="SteamPathEnterErr" xml:space="preserve">
     <value>You have entered the wrong Steam path! The program will be terminated.</value>
   </data>
+  <data name="ST_ShowProfileError" xml:space="preserve">
+    <value>An error occurred while starting the web browser to open the selected Steam profile!</value>
+  </data>
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Unnamed.cfg</value>
   </data>
