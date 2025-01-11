@@ -19,38 +19,38 @@ namespace srcrepair.gui
     public partial class FrmUpdate : Form
     {
         /// <summary>
-        /// Logger instance for FrmUpdate class.
+        /// Logger instance for the FrmUpdate class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// CurrentPlatform instance for FrmMute class.
+        /// CurrentPlatform instance for the FrmUpdate class.
         /// </summary>
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
-        /// Stores User-Agent header for outgoing HTTP queries.
+        /// Stores the User-Agent header for outgoing HTTP queries.
         /// </summary>
         private readonly string UserAgent;
 
         /// <summary>
-        /// Stores full path to the local updates directory.
+        /// Stores the full path to the local updates directory.
         /// </summary>
         private readonly string AppUpdateDir;
 
         /// <summary>
-        /// Stores app's installation directory.
+        /// Stores the application installation directory.
         /// </summary>
         private readonly string FullAppPath;
 
         /// <summary>
-        /// Stores an instance of UpdateManager class for working
+        /// Stores an instance of the UpdateManager class for working
         /// with updates.
         /// </summary>
         private UpdateManager UpMan;
 
         /// <summary>
-        /// Stores current state of the async tasks.
+        /// Stores the status of the currently running process.
         /// </summary>
         private bool IsCompleted = false;
 
