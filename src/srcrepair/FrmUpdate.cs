@@ -193,16 +193,6 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Form close" event handler.
-        /// </summary>
-        /// <param name="sender">Sender object.</param>
-        /// <param name="e">Event arguments.</param>
-        private void FrmUpdate_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && !IsCompleted;
-        }
-
-        /// <summary>
         /// "Install app update" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -247,6 +237,16 @@ namespace srcrepair.gui
         private void UP_Close_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        /// <summary>
+        /// "Form close" event handler.
+        /// </summary>
+        /// <param name="sender">Sender object.</param>
+        /// <param name="e">Event arguments.</param>
+        private void FrmUpdate_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = (e.CloseReason == CloseReason.UserClosing) && !IsCompleted;
         }
     }
 }
