@@ -152,7 +152,7 @@ namespace srcrepair.gui
                     catch (Exception Ex)
                     {
                         MessageBox.Show(AppStrings.UP_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        Logger.Error(Ex, DebugStrings.AppDbgExUpdBinInst);
+                        Logger.Error(Ex, DebugStrings.AppDbgExUpInstallUpdate);
                     }
                 }
                 else

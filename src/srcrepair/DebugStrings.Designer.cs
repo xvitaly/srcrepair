@@ -979,11 +979,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to install the binary update..
+        ///   Looks up a localized string similar to Exception while trying to run the installer of the new version..
         /// </summary>
-        internal static string AppDbgExUpdBinInst {
+        internal static string AppDbgExUpInstallUpdate {
             get {
-                return ResourceManager.GetString("AppDbgExUpdBinInst", resourceCulture);
+                return ResourceManager.GetString("AppDbgExUpInstallUpdate", resourceCulture);
             }
         }
         
