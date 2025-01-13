@@ -1737,18 +1737,27 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Update check failed. Please try again later..
         /// </summary>
-        internal static string UPD_AppCheckFailure {
+        internal static string UP_CheckForUpdatesError {
             get {
-                return ResourceManager.GetString("UPD_AppCheckFailure", resourceCulture);
+                return ResourceManager.GetString("UP_CheckForUpdatesError", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to No new updates available. Your application is up to date..
         /// </summary>
-        internal static string UPD_AppNoUpdates {
+        internal static string UP_NoUpdates {
             get {
-                return ResourceManager.GetString("UPD_AppNoUpdates", resourceCulture);
+                return ResourceManager.GetString("UP_NoUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application update available. New version: {0}..
+        /// </summary>
+        internal static string UP_UpdateAvailable {
+            get {
+                return ResourceManager.GetString("UP_UpdateAvailable", resourceCulture);
             }
         }
         
@@ -1758,15 +1767,6 @@ namespace srcrepair.gui {
         internal static string UPD_AppOtherPlatform {
             get {
                 return ResourceManager.GetString("UPD_AppOtherPlatform", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Application update available. New version: {0}..
-        /// </summary>
-        internal static string UPD_AppUpdateAvail {
-            get {
-                return ResourceManager.GetString("UPD_AppUpdateAvail", resourceCulture);
             }
         }
         
