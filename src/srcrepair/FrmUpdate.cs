@@ -131,7 +131,7 @@ namespace srcrepair.gui
                 if (UpMan.CheckAppHash(FileManager.CalculateFileSHA512(UpdateFileName)))
                 {
                     // Showing message about successful download...
-                    MessageBox.Show(AppStrings.UPD_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.UP_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Installing standalone update...
                     try
@@ -151,7 +151,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(AppStrings.UP_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Logger.Error(Ex, DebugStrings.AppDbgExUpdBinInst);
                     }
                 }
@@ -174,7 +174,7 @@ namespace srcrepair.gui
             else
             {
                 // Showing error about update failure...
-                MessageBox.Show(AppStrings.UPD_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.UP_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             // Returning result...

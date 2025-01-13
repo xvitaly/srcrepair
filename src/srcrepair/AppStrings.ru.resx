@@ -684,12 +684,6 @@
   <data name="UPD_LatestInstalled" xml:space="preserve">
     <value>Обновление не требуется, т.к. у вас установлена последняя версия программы.</value>
   </data>
-  <data name="UPD_UpdateFailure" xml:space="preserve">
-    <value>Произошла ошибка при попытке запуска программы установки новой версии. Программа не была обновлена. Запустите обновление повторно позднее!</value>
-  </data>
-  <data name="UPD_UpdateSuccessful" xml:space="preserve">
-    <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
-  </data>
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Произошла ошибка во время проверки обновлений программы.</value>
   </data>
@@ -698,5 +692,11 @@
   </data>
   <data name="UP_UpdateAvailable" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
+  </data>
+  <data name="UP_UpdateFailure" xml:space="preserve">
+    <value>Произошла ошибка при попытке запуска модуля установки новой версии! Программа не была обновлена.</value>
+  </data>
+  <data name="UP_UpdateSuccessful" xml:space="preserve">
+    <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
   </data>
 </root>

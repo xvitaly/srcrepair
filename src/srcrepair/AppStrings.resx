@@ -684,12 +684,6 @@
   <data name="UPD_LatestInstalled" xml:space="preserve">
     <value>Update is not required because you have the latest version of the program.</value>
   </data>
-  <data name="UPD_UpdateFailure" xml:space="preserve">
-    <value>An error occurred while trying to run the installer. The program has not been updated. Run the update again later!</value>
-  </data>
-  <data name="UPD_UpdateSuccessful" xml:space="preserve">
-    <value>The new version has been successfully received from server. We will install it now!</value>
-  </data>
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Update check failed. Please try again later.</value>
   </data>
@@ -698,5 +692,11 @@
   </data>
   <data name="UP_UpdateAvailable" xml:space="preserve">
     <value>Application update available. New version: {0}.</value>
+  </data>
+  <data name="UP_UpdateFailure" xml:space="preserve">
+    <value>An error occurred while trying to run the installer of the new version! The program has not been updated.</value>
+  </data>
+  <data name="UP_UpdateSuccessful" xml:space="preserve">
+    <value>The new version has been successfully received from the server. We will install it now!</value>
   </data>
 </root>

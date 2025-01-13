@@ -1762,6 +1762,24 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The program has not been updated..
+        /// </summary>
+        internal static string UP_UpdateFailure {
+            get {
+                return ResourceManager.GetString("UP_UpdateFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The new version has been successfully received from the server. We will install it now!.
+        /// </summary>
+        internal static string UP_UpdateSuccessful {
+            get {
+                return ResourceManager.GetString("UP_UpdateSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
         /// </summary>
         internal static string UPD_AppOtherPlatform {
@@ -1785,24 +1803,6 @@ namespace srcrepair.gui {
         internal static string UPD_LatestInstalled {
             get {
                 return ResourceManager.GetString("UPD_LatestInstalled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to run the installer. The program has not been updated. Run the update again later!.
-        /// </summary>
-        internal static string UPD_UpdateFailure {
-            get {
-                return ResourceManager.GetString("UPD_UpdateFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The new version has been successfully received from server. We will install it now!.
-        /// </summary>
-        internal static string UPD_UpdateSuccessful {
-            get {
-                return ResourceManager.GetString("UPD_UpdateSuccessful", resourceCulture);
             }
         }
     }
