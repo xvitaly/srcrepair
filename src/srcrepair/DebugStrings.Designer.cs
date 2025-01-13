@@ -961,6 +961,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while checking for updates during the Updates center form initialization..
+        /// </summary>
+        internal static string AppDbgExUpCheckForUpdates {
+            get {
+                return ResourceManager.GetString("AppDbgExUpCheckForUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to get the list of available backups..
         /// </summary>
         internal static string AppDbgExUpdateBackUpList {
@@ -975,15 +984,6 @@ namespace srcrepair.gui {
         internal static string AppDbgExUpdBinInst {
             get {
                 return ResourceManager.GetString("AppDbgExUpdBinInst", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while checking for updates during the Updates form initialization..
-        /// </summary>
-        internal static string AppDbgExUpdChk {
-            get {
-                return ResourceManager.GetString("AppDbgExUpdChk", resourceCulture);
             }
         }
         

@@ -90,7 +90,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExUpdChk);
+                Logger.Error(Ex, DebugStrings.AppDbgExUpCheckForUpdates);
                 UP_Icon.Image = Properties.Resources.IconUpdateError;
                 UP_Status.Text = AppStrings.UP_CheckForUpdatesError;
             }

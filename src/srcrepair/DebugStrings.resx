@@ -417,14 +417,14 @@
   <data name="AppDbgExSvcRepair" xml:space="preserve">
     <value>Exception while trying to run the Service automatic repair.</value>
   </data>
+  <data name="AppDbgExUpCheckForUpdates" xml:space="preserve">
+    <value>Exception while checking for updates during the Updates center form initialization.</value>
+  </data>
   <data name="AppDbgExUpdateBackUpList" xml:space="preserve">
     <value>Exception while trying to get the list of available backups.</value>
   </data>
   <data name="AppDbgExUpdBinInst" xml:space="preserve">
     <value>Exception while trying to install the binary update.</value>
-  </data>
-  <data name="AppDbgExUpdChk" xml:space="preserve">
-    <value>Exception while checking for updates during the Updates form initialization.</value>
   </data>
   <data name="AppDbgExUrlCvList" xml:space="preserve">
     <value>Exception while trying to start the web browser to open the cvarlist URL.</value>
