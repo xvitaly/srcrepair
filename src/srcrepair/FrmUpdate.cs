@@ -168,7 +168,7 @@ namespace srcrepair.gui
                     }
 
                     // Showing message about hash missmatch...
-                    MessageBox.Show(AppStrings.UPD_HashFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(AppStrings.UP_HashMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

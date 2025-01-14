@@ -678,14 +678,14 @@
   <data name="UPD_AppOtherPlatform" xml:space="preserve">
     <value>A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?</value>
   </data>
-  <data name="UPD_HashFailure" xml:space="preserve">
-    <value>Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!</value>
-  </data>
   <data name="UPD_LatestInstalled" xml:space="preserve">
     <value>Update is not required because you have the latest version of the program.</value>
   </data>
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Update check failed. Please try again later.</value>
+  </data>
+  <data name="UP_HashMissmatch" xml:space="preserve">
+    <value>The downloaded file has an incorrect hash! It may have been corrupted during transfer. Please try again later.</value>
   </data>
   <data name="UP_NoUpdates" xml:space="preserve">
     <value>No new updates available. Your application is up to date.</value>

@@ -1744,6 +1744,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The downloaded file has an incorrect hash! It may have been corrupted during transfer. Please try again later..
+        /// </summary>
+        internal static string UP_HashMissmatch {
+            get {
+                return ResourceManager.GetString("UP_HashMissmatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No new updates available. Your application is up to date..
         /// </summary>
         internal static string UP_NoUpdates {
@@ -1785,15 +1794,6 @@ namespace srcrepair.gui {
         internal static string UPD_AppOtherPlatform {
             get {
                 return ResourceManager.GetString("UPD_AppOtherPlatform", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Downloaded file has incorrect hash. Maybe it was corrupted during transfer. Please try again later!.
-        /// </summary>
-        internal static string UPD_HashFailure {
-            get {
-                return ResourceManager.GetString("UPD_HashFailure", resourceCulture);
             }
         }
         

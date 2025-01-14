@@ -678,14 +678,14 @@
   <data name="UPD_AppOtherPlatform" xml:space="preserve">
     <value>Доступна новая версия {0} программы, однако автоматические обновления на данной платформе не поддерживаются. Показать список изменений и ссылки для скачивания в веб-браузере?</value>
   </data>
-  <data name="UPD_HashFailure" xml:space="preserve">
-    <value>Контрольная сумма загруженного файла отличается от эталона. Обновление не было установлено!</value>
-  </data>
   <data name="UPD_LatestInstalled" xml:space="preserve">
     <value>Обновление не требуется, т.к. у вас установлена последняя версия программы.</value>
   </data>
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Произошла ошибка во время проверки обновлений программы.</value>
+  </data>
+  <data name="UP_HashMissmatch" xml:space="preserve">
+    <value>Контрольная сумма загруженного файла отличается от эталонной! Возможно он был повреждён при передаче. Попробуйте повторить попытку позднее.</value>
   </data>
   <data name="UP_NoUpdates" xml:space="preserve">
     <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
