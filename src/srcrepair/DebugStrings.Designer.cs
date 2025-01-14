@@ -1166,5 +1166,14 @@ namespace srcrepair.gui {
                 return ResourceManager.GetString("AppDbgUACCancel", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Failed to install the program update. The downloaded file has an incorrect hash and will be deleted..
+        /// </summary>
+        internal static string AppDbgUpHashMissmatch {
+            get {
+                return ResourceManager.GetString("AppDbgUpHashMissmatch", resourceCulture);
+            }
+        }
     }
 }

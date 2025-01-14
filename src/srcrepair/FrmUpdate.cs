@@ -157,6 +157,9 @@ namespace srcrepair.gui
                 }
                 else
                 {
+                    // Writing to log...
+                    Logger.Error(DebugStrings.AppDbgUpHashMissmatch);
+
                     // Hash missmatch. File was damaged. Removing it...
                     try
                     {
