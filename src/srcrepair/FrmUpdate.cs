@@ -164,7 +164,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Warn(Ex);
+                        Logger.Warn(Ex, DebugStrings.AppDbgExUpDeleteFile);
                     }
 
                     // Showing message about hash missmatch...

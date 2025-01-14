@@ -979,6 +979,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception when trying to delete the downloaded file with an incorrect hash..
+        /// </summary>
+        internal static string AppDbgExUpDeleteFile {
+            get {
+                return ResourceManager.GetString("AppDbgExUpDeleteFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while trying to run the installer of the new version..
         /// </summary>
         internal static string AppDbgExUpInstallUpdate {

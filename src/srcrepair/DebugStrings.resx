@@ -423,6 +423,9 @@
   <data name="AppDbgExUpdateBackUpList" xml:space="preserve">
     <value>Exception while trying to get the list of available backups.</value>
   </data>
+  <data name="AppDbgExUpDeleteFile" xml:space="preserve">
+    <value>Exception when trying to delete the downloaded file with an incorrect hash.</value>
+  </data>
   <data name="AppDbgExUpInstallUpdate" xml:space="preserve">
     <value>Exception while trying to run the installer of the new version.</value>
   </data>
