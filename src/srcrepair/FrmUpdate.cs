@@ -113,7 +113,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="UpdateURL">Full download URL.</param>
         /// <returns>Result of operation.</returns>
-        private bool InstallUpdate(string UpdateURL)
+        private bool InstallAppUpdate(string UpdateURL)
         {
             // Setting default value for result...
             bool Result = false;
@@ -185,6 +185,28 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Installs an update or displays an update notification depending on
+        /// the currently running platform.
+        /// </summary>
+        private void InstallUpdate()
+        {
+            if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
+            {
+                if (InstallAppUpdate(UpMan.AppUpdateURL))
+                {
+                    Platform.Exit(ReturnCodes.AppUpdatePending);
+                }
+            }
+            else
+            {
+                if (MessageBox.Show(string.Format(AppStrings.UP_OtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    Platform.OpenWebPage(UpMan.AppUpdateInfo);
+                }
+            }
+        }
+
+        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -206,20 +228,7 @@ namespace srcrepair.gui
             {
                 if (UpMan.CheckAppUpdate())
                 {
-                    if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
-                    {
-                        if (InstallUpdate(UpMan.AppUpdateURL))
-                        {
-                            Platform.Exit(ReturnCodes.AppUpdatePending);
-                        }
-                    }
-                    else
-                    {
-                        if (MessageBox.Show(string.Format(AppStrings.UP_OtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                        {
-                            Platform.OpenWebPage(UpMan.AppUpdateInfo);
-                        }
-                    }
+                    InstallUpdate();
                 }
                 else
                 {
