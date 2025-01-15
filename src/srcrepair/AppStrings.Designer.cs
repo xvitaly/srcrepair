@@ -934,15 +934,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Checking for updates... Please wait!.
-        /// </summary>
-        internal static string DB_WrkInProgress {
-            get {
-                return ResourceManager.GetString("DB_WrkInProgress", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Install selected config.
         /// </summary>
         internal static string FP_BtnInstallText {
@@ -1753,11 +1744,29 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The update is not required as you already have the latest version of the program installed!.
+        /// </summary>
+        internal static string UP_LatestInstalled {
+            get {
+                return ResourceManager.GetString("UP_LatestInstalled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No new updates available. Your application is up to date..
         /// </summary>
         internal static string UP_NoUpdates {
             get {
                 return ResourceManager.GetString("UP_NoUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
+        /// </summary>
+        internal static string UP_OtherPlatform {
+            get {
+                return ResourceManager.GetString("UP_OtherPlatform", resourceCulture);
             }
         }
         
@@ -1789,20 +1798,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
+        ///   Looks up a localized string similar to Please wait until the checking for updates process is complete!.
         /// </summary>
-        internal static string UPD_AppOtherPlatform {
+        internal static string UP_WorkInProgress {
             get {
-                return ResourceManager.GetString("UPD_AppOtherPlatform", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Update is not required because you have the latest version of the program..
-        /// </summary>
-        internal static string UPD_LatestInstalled {
-            get {
-                return ResourceManager.GetString("UPD_LatestInstalled", resourceCulture);
+                return ResourceManager.GetString("UP_WorkInProgress", resourceCulture);
             }
         }
     }

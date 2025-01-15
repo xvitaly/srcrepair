@@ -408,9 +408,6 @@
   <data name="CS_NEParamsFormException" xml:space="preserve">
     <value>Невозможно создать форму, т.к. передано недостаточное количество конфигов.</value>
   </data>
-  <data name="DB_WrkInProgress" xml:space="preserve">
-    <value>Пожалуйста, дождитесь завершения проверки обновлений!</value>
-  </data>
   <data name="FP_BtnInstallText" xml:space="preserve">
     <value>Установить выбранный конфиг</value>
   </data>
@@ -675,20 +672,20 @@
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Безымянный.cfg</value>
   </data>
-  <data name="UPD_AppOtherPlatform" xml:space="preserve">
-    <value>Доступна новая версия {0} программы, однако автоматические обновления на данной платформе не поддерживаются. Показать список изменений и ссылки для скачивания в веб-браузере?</value>
-  </data>
-  <data name="UPD_LatestInstalled" xml:space="preserve">
-    <value>Обновление не требуется, т.к. у вас установлена последняя версия программы.</value>
-  </data>
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Произошла ошибка во время проверки обновлений программы.</value>
   </data>
   <data name="UP_HashMissmatch" xml:space="preserve">
     <value>Контрольная сумма загруженного файла отличается от эталонной! Возможно он был повреждён при передаче. Попробуйте повторить попытку позднее.</value>
   </data>
+  <data name="UP_LatestInstalled" xml:space="preserve">
+    <value>Обновление не требуется, т.к. у вас установлена последняя версия программы!</value>
+  </data>
   <data name="UP_NoUpdates" xml:space="preserve">
     <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
+  </data>
+  <data name="UP_OtherPlatform" xml:space="preserve">
+    <value>Доступна новая версия {0} программы, однако автоматические обновления на данной платформе не поддерживаются. Показать список изменений и ссылки для скачивания в веб-браузере?</value>
   </data>
   <data name="UP_UpdateAvailable" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
@@ -698,5 +695,8 @@
   </data>
   <data name="UP_UpdateSuccessful" xml:space="preserve">
     <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
+  </data>
+  <data name="UP_WorkInProgress" xml:space="preserve">
+    <value>Пожалуйста, дождитесь завершения процесса проверки обновлений!</value>
   </data>
 </root>
