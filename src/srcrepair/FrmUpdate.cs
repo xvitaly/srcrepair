@@ -150,7 +150,7 @@ namespace srcrepair.gui
                 if (UpMan.CheckAppHash(FileManager.CalculateFileSHA512(UpdateFileName)))
                 {
                     // Showing a message about the successful download...
-                    MessageBox.Show(AppStrings.UP_UpdateSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.UP_DownloadSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Installing the standalone update...
                     try

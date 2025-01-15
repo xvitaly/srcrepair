@@ -675,6 +675,9 @@
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Update check failed. Please try again later.</value>
   </data>
+  <data name="UP_DownloadSuccessful" xml:space="preserve">
+    <value>The new version has been successfully received from the server. We will install it now!</value>
+  </data>
   <data name="UP_HashMissmatch" xml:space="preserve">
     <value>The downloaded file has an incorrect hash! It may have been corrupted during transfer. Please try again later.</value>
   </data>
@@ -692,9 +695,6 @@
   </data>
   <data name="UP_UpdateFailure" xml:space="preserve">
     <value>An error occurred while trying to run the installer of the new version! The program has not been updated.</value>
-  </data>
-  <data name="UP_UpdateSuccessful" xml:space="preserve">
-    <value>The new version has been successfully received from the server. We will install it now!</value>
   </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Please wait until the checking for updates process is complete!</value>

@@ -1735,6 +1735,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The new version has been successfully received from the server. We will install it now!.
+        /// </summary>
+        internal static string UP_DownloadSuccessful {
+            get {
+                return ResourceManager.GetString("UP_DownloadSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The downloaded file has an incorrect hash! It may have been corrupted during transfer. Please try again later..
         /// </summary>
         internal static string UP_HashMissmatch {
@@ -1785,15 +1794,6 @@ namespace srcrepair.gui {
         internal static string UP_UpdateFailure {
             get {
                 return ResourceManager.GetString("UP_UpdateFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The new version has been successfully received from the server. We will install it now!.
-        /// </summary>
-        internal static string UP_UpdateSuccessful {
-            get {
-                return ResourceManager.GetString("UP_UpdateSuccessful", resourceCulture);
             }
         }
         

@@ -675,6 +675,9 @@
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Произошла ошибка во время проверки обновлений программы.</value>
   </data>
+  <data name="UP_DownloadSuccessful" xml:space="preserve">
+    <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
+  </data>
   <data name="UP_HashMissmatch" xml:space="preserve">
     <value>Контрольная сумма загруженного файла отличается от эталонной! Возможно он был повреждён при передаче. Попробуйте повторить попытку позднее.</value>
   </data>
@@ -692,9 +695,6 @@
   </data>
   <data name="UP_UpdateFailure" xml:space="preserve">
     <value>Произошла ошибка при попытке запуска модуля установки новой версии! Программа не была обновлена.</value>
-  </data>
-  <data name="UP_UpdateSuccessful" xml:space="preserve">
-    <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
   </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения процесса проверки обновлений!</value>
