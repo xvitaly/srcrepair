@@ -109,6 +109,25 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Installs the downloaded update file.
+        /// </summary>
+        /// <param name="UpdateFileName">Full path to the downloaded update file.</param>
+        private void InstallBinaryUpdate(string UpdateFileName)
+        {
+            // Checking if the application installation directory is writable...
+            if (FileManager.IsDirectoryWritable(FullAppPath))
+            {
+                // Running the installer with current access rights...
+                Platform.StartRegularProcess(UpdateFileName);
+            }
+            else
+            {
+                // Running the installer with UAC access rights elevation...
+                Platform.StartElevatedProcess(UpdateFileName);
+            }
+        }
+
+        /// <summary>
         /// Installs standalone update.
         /// </summary>
         /// <param name="UpdateURL">Full download URL.</param>
@@ -136,17 +155,7 @@ namespace srcrepair.gui
                     // Installing standalone update...
                     try
                     {
-                        // Checking if app's installation directory is writable...
-                        if (FileManager.IsDirectoryWritable(FullAppPath))
-                        {
-                            // Running installer with current access rights...
-                            Platform.StartRegularProcess(UpdateFileName);
-                        }
-                        else
-                        {
-                            // Running installer with UAC access rights elevation...
-                            Platform.StartElevatedProcess(UpdateFileName);
-                        }
+                        InstallBinaryUpdate(UpdateFileName);
                         Result = true;
                     }
                     catch (Exception Ex)
