@@ -185,7 +185,8 @@ namespace srcrepair.gui
             }
             else
             {
-                // Showing an error message about the update failure...
+                // Writing to the log and showing an error message about the download failure...
+                Logger.Error(DebugStrings.AppDbgUpDownloadFailure);
                 MessageBox.Show(AppStrings.UP_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 

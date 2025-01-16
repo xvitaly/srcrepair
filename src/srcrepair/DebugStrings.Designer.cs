@@ -1168,6 +1168,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to download the the program update from the remote server..
+        /// </summary>
+        internal static string AppDbgUpDownloadFailure {
+            get {
+                return ResourceManager.GetString("AppDbgUpDownloadFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to install the program update. The downloaded file has an incorrect hash and will be deleted..
         /// </summary>
         internal static string AppDbgUpHashMissmatch {
