@@ -1735,6 +1735,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while downloading the installer of the new version from the remote server! The program has not been updated..
+        /// </summary>
+        internal static string UP_DownloadFailure {
+            get {
+                return ResourceManager.GetString("UP_DownloadFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The new version has been successfully received from the server. We will install it now!.
         /// </summary>
         internal static string UP_DownloadSuccessful {
