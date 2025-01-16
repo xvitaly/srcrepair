@@ -238,7 +238,6 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private async void FrmUpdate_Load(object sender, EventArgs e)
         {
-            // Starting checking for updates...
             await CheckForUpdates();
         }
 
