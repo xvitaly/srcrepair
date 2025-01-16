@@ -217,6 +217,21 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Checks whether the update is available and attempts to install it.
+        /// </summary>
+        private void CheckAndInstallUpdate()
+        {
+            if (UpMan.CheckAppUpdate())
+            {
+                InstallUpdate();
+            }
+            else
+            {
+                MessageBox.Show(AppStrings.UP_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        /// <summary>
         /// "Form create" event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
@@ -236,14 +251,7 @@ namespace srcrepair.gui
         {
             if (IsCompleted)
             {
-                if (UpMan.CheckAppUpdate())
-                {
-                    InstallUpdate();
-                }
-                else
-                {
-                    MessageBox.Show(AppStrings.UP_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
+                CheckAndInstallUpdate();
             }
             else
             {
