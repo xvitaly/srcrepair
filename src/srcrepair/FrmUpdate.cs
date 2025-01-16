@@ -187,7 +187,7 @@ namespace srcrepair.gui
             {
                 // Writing to the log and showing an error message about the download failure...
                 Logger.Error(DebugStrings.AppDbgUpDownloadFailure);
-                MessageBox.Show(AppStrings.UP_DownloadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.UP_DownloadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // Returning result...
