@@ -130,15 +130,14 @@ namespace srcrepair.gui
         /// <summary>
         /// Downloads and installs the standalone update.
         /// </summary>
-        /// <param name="UpdateURL">Full download URL.</param>
         /// <returns>The result of the operation.</returns>
-        private bool InstallBinaryUpdate(string UpdateURL)
+        private bool InstallBinaryUpdate()
         {
             // Setting the default value for the result...
             bool Result = false;
 
             // Generating full path to the update file...
-            string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUpdateDir, Path.GetFileName(UpdateURL)));
+            string UpdateFileName = UpdateManager.GenerateUpdateFileName(Path.Combine(AppUpdateDir, Path.GetFileName(UpMan.AppUpdateURL)));
 
             // Downloading the update from the server...
             GuiHelpers.FormShowDownloader(UpMan.AppUpdateURL, UpdateFileName);
@@ -202,7 +201,7 @@ namespace srcrepair.gui
         {
             if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
             {
-                if (InstallBinaryUpdate(UpMan.AppUpdateURL))
+                if (InstallBinaryUpdate())
                 {
                     Platform.Exit(ReturnCodes.AppUpdatePending);
                 }
