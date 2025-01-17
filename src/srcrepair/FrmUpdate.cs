@@ -197,7 +197,7 @@ namespace srcrepair.gui
         /// Installs an update or displays an update notification depending on
         /// the currently running platform.
         /// </summary>
-        private void InstallUpdate()
+        private void InstallAppUpdate()
         {
             if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
             {
@@ -222,7 +222,7 @@ namespace srcrepair.gui
         {
             if (UpMan.CheckAppUpdate())
             {
-                InstallUpdate();
+                InstallAppUpdate();
             }
             else
             {
