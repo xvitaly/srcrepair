@@ -112,7 +112,7 @@ namespace srcrepair.gui
         /// Installs the downloaded update file.
         /// </summary>
         /// <param name="UpdateFileName">Full path to the downloaded update file.</param>
-        private void InstallBinaryUpdate(string UpdateFileName)
+        private void StartUpdateInstaller(string UpdateFileName)
         {
             // Checking if the application installation directory is writable...
             if (FileManager.IsDirectoryWritable(FullAppPath))
@@ -155,7 +155,7 @@ namespace srcrepair.gui
                     // Installing the standalone update...
                     try
                     {
-                        InstallBinaryUpdate(UpdateFileName);
+                        StartUpdateInstaller(UpdateFileName);
                         Result = true;
                     }
                     catch (Exception Ex)
