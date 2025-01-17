@@ -218,7 +218,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Checks whether the update is available and attempts to install it.
         /// </summary>
-        private void CheckAndInstallUpdate()
+        private void CheckAndInstallAppUpdate()
         {
             if (UpMan.CheckAppUpdate())
             {
@@ -249,7 +249,7 @@ namespace srcrepair.gui
         {
             if (IsCompleted)
             {
-                CheckAndInstallUpdate();
+                CheckAndInstallAppUpdate();
             }
             else
             {
