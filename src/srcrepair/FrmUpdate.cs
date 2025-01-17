@@ -132,7 +132,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="UpdateURL">Full download URL.</param>
         /// <returns>The result of the operation.</returns>
-        private bool InstallAppUpdate(string UpdateURL)
+        private bool InstallBinaryUpdate(string UpdateURL)
         {
             // Setting the default value for the result...
             bool Result = false;
@@ -202,7 +202,7 @@ namespace srcrepair.gui
         {
             if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
             {
-                if (InstallAppUpdate(UpMan.AppUpdateURL))
+                if (InstallBinaryUpdate(UpMan.AppUpdateURL))
                 {
                     Platform.Exit(ReturnCodes.AppUpdatePending);
                 }
