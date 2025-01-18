@@ -226,7 +226,7 @@ namespace srcrepair.gui
             }
             else
             {
-                MessageBox.Show(AppStrings.UP_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.UP_AppLatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

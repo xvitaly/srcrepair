@@ -1753,6 +1753,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The update is not required as you already have the latest version of the program installed!.
+        /// </summary>
+        internal static string UP_AppLatestInstalled {
+            get {
+                return ResourceManager.GetString("UP_AppLatestInstalled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
         /// </summary>
         internal static string UP_AppOtherPlatform {
@@ -1785,15 +1794,6 @@ namespace srcrepair.gui {
         internal static string UP_CheckForUpdatesError {
             get {
                 return ResourceManager.GetString("UP_CheckForUpdatesError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The update is not required as you already have the latest version of the program installed!.
-        /// </summary>
-        internal static string UP_LatestInstalled {
-            get {
-                return ResourceManager.GetString("UP_LatestInstalled", resourceCulture);
             }
         }
         

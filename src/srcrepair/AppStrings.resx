@@ -681,6 +681,9 @@
   <data name="UP_AppHashMissmatch" xml:space="preserve">
     <value>The downloaded installer has an incorrect hash! It may have been corrupted during transfer. Please try again later.</value>
   </data>
+  <data name="UP_AppLatestInstalled" xml:space="preserve">
+    <value>The update is not required as you already have the latest version of the program installed!</value>
+  </data>
   <data name="UP_AppOtherPlatform" xml:space="preserve">
     <value>A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?</value>
   </data>
@@ -692,9 +695,6 @@
   </data>
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Update check failed. Please try again later.</value>
-  </data>
-  <data name="UP_LatestInstalled" xml:space="preserve">
-    <value>The update is not required as you already have the latest version of the program installed!</value>
   </data>
   <data name="UP_NoAppUpdates" xml:space="preserve">
     <value>No new updates available. Your application is up to date.</value>
