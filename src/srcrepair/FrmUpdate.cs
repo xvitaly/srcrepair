@@ -92,7 +92,7 @@ namespace srcrepair.gui
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExUpCheckForUpdates);
                 UP_Icon.Image = Properties.Resources.IconUpdateError;
-                UP_Status.Text = AppStrings.UP_CheckForUpdatesError;
+                UP_Status.Text = AppStrings.UP_CheckForUpdatesFailure;
             }
             IsCompleted = true;
         }

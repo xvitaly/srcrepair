@@ -1791,9 +1791,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Update check failed. Please try again later..
         /// </summary>
-        internal static string UP_CheckForUpdatesError {
+        internal static string UP_CheckForUpdatesFailure {
             get {
-                return ResourceManager.GetString("UP_CheckForUpdatesError", resourceCulture);
+                return ResourceManager.GetString("UP_CheckForUpdatesFailure", resourceCulture);
             }
         }
         
