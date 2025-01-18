@@ -672,20 +672,23 @@
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Unnamed.cfg</value>
   </data>
+  <data name="UP_AppDownloadFailure" xml:space="preserve">
+    <value>An error occurred while downloading the installer of the new version from the remote server! The program has not been updated.</value>
+  </data>
+  <data name="UP_AppDownloadSuccessful" xml:space="preserve">
+    <value>The new version has been successfully received from the server. We will install it now!</value>
+  </data>
+  <data name="UP_AppHashMissmatch" xml:space="preserve">
+    <value>The downloaded installer has an incorrect hash! It may have been corrupted during transfer. Please try again later.</value>
+  </data>
   <data name="UP_AppUpdateAvailable" xml:space="preserve">
     <value>Application update available. New version: {0}.</value>
   </data>
+  <data name="UP_AppUpdateFailure" xml:space="preserve">
+    <value>An error occurred while trying to run the installer of the new version! The program has not been updated.</value>
+  </data>
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Update check failed. Please try again later.</value>
-  </data>
-  <data name="UP_DownloadFailure" xml:space="preserve">
-    <value>An error occurred while downloading the installer of the new version from the remote server! The program has not been updated.</value>
-  </data>
-  <data name="UP_DownloadSuccessful" xml:space="preserve">
-    <value>The new version has been successfully received from the server. We will install it now!</value>
-  </data>
-  <data name="UP_HashMissmatch" xml:space="preserve">
-    <value>The downloaded file has an incorrect hash! It may have been corrupted during transfer. Please try again later.</value>
   </data>
   <data name="UP_LatestInstalled" xml:space="preserve">
     <value>The update is not required as you already have the latest version of the program installed!</value>
@@ -695,9 +698,6 @@
   </data>
   <data name="UP_OtherPlatform" xml:space="preserve">
     <value>A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?</value>
-  </data>
-  <data name="UP_UpdateFailure" xml:space="preserve">
-    <value>An error occurred while trying to run the installer of the new version! The program has not been updated.</value>
   </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Please wait until the checking for updates process is complete!</value>

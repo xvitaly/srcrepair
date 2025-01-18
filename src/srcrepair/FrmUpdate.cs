@@ -149,7 +149,7 @@ namespace srcrepair.gui
                 if (UpMan.CheckAppHash(FileManager.CalculateFileSHA512(UpdateFileName)))
                 {
                     // Showing a message about the successful download...
-                    MessageBox.Show(AppStrings.UP_DownloadSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.UP_AppDownloadSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Installing the standalone update...
                     try
@@ -160,7 +160,7 @@ namespace srcrepair.gui
                     catch (Exception Ex)
                     {
                         Logger.Error(Ex, DebugStrings.AppDbgExUpInstallUpdate);
-                        MessageBox.Show(AppStrings.UP_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(AppStrings.UP_AppUpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
@@ -179,14 +179,14 @@ namespace srcrepair.gui
                     }
 
                     // Showing a message about the hash missmatch...
-                    MessageBox.Show(AppStrings.UP_HashMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(AppStrings.UP_AppHashMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
                 // Writing to the log and showing an error message about the download failure...
                 Logger.Error(DebugStrings.AppDbgUpDownloadFailure);
-                MessageBox.Show(AppStrings.UP_DownloadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(AppStrings.UP_AppDownloadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // Returning result...

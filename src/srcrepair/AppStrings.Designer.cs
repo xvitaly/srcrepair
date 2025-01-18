@@ -1726,6 +1726,33 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while downloading the installer of the new version from the remote server! The program has not been updated..
+        /// </summary>
+        internal static string UP_AppDownloadFailure {
+            get {
+                return ResourceManager.GetString("UP_AppDownloadFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The new version has been successfully received from the server. We will install it now!.
+        /// </summary>
+        internal static string UP_AppDownloadSuccessful {
+            get {
+                return ResourceManager.GetString("UP_AppDownloadSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The downloaded installer has an incorrect hash! It may have been corrupted during transfer. Please try again later..
+        /// </summary>
+        internal static string UP_AppHashMissmatch {
+            get {
+                return ResourceManager.GetString("UP_AppHashMissmatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Application update available. New version: {0}..
         /// </summary>
         internal static string UP_AppUpdateAvailable {
@@ -1735,38 +1762,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The program has not been updated..
+        /// </summary>
+        internal static string UP_AppUpdateFailure {
+            get {
+                return ResourceManager.GetString("UP_AppUpdateFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Update check failed. Please try again later..
         /// </summary>
         internal static string UP_CheckForUpdatesError {
             get {
                 return ResourceManager.GetString("UP_CheckForUpdatesError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred while downloading the installer of the new version from the remote server! The program has not been updated..
-        /// </summary>
-        internal static string UP_DownloadFailure {
-            get {
-                return ResourceManager.GetString("UP_DownloadFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The new version has been successfully received from the server. We will install it now!.
-        /// </summary>
-        internal static string UP_DownloadSuccessful {
-            get {
-                return ResourceManager.GetString("UP_DownloadSuccessful", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The downloaded file has an incorrect hash! It may have been corrupted during transfer. Please try again later..
-        /// </summary>
-        internal static string UP_HashMissmatch {
-            get {
-                return ResourceManager.GetString("UP_HashMissmatch", resourceCulture);
             }
         }
         
@@ -1794,15 +1803,6 @@ namespace srcrepair.gui {
         internal static string UP_OtherPlatform {
             get {
                 return ResourceManager.GetString("UP_OtherPlatform", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The program has not been updated..
-        /// </summary>
-        internal static string UP_UpdateFailure {
-            get {
-                return ResourceManager.GetString("UP_UpdateFailure", resourceCulture);
             }
         }
         

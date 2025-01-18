@@ -672,20 +672,23 @@
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Безымянный.cfg</value>
   </data>
+  <data name="UP_AppDownloadFailure" xml:space="preserve">
+    <value>Произошла ошибка при загрузке модуля установки новой версии с сервера! Программа не была обновлена.</value>
+  </data>
+  <data name="UP_AppDownloadSuccessful" xml:space="preserve">
+    <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
+  </data>
+  <data name="UP_AppHashMissmatch" xml:space="preserve">
+    <value>Контрольная сумма загруженного инсталлятора отличается от эталонной! Возможно он был повреждён при передаче. Попробуйте повторить попытку позднее.</value>
+  </data>
   <data name="UP_AppUpdateAvailable" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
   </data>
+  <data name="UP_AppUpdateFailure" xml:space="preserve">
+    <value>Произошла ошибка при попытке запуска модуля установки новой версии! Программа не была обновлена.</value>
+  </data>
   <data name="UP_CheckForUpdatesError" xml:space="preserve">
     <value>Произошла ошибка во время проверки обновлений программы.</value>
-  </data>
-  <data name="UP_DownloadFailure" xml:space="preserve">
-    <value>Произошла ошибка при загрузке модуля установки новой версии с сервера! Программа не была обновлена.</value>
-  </data>
-  <data name="UP_DownloadSuccessful" xml:space="preserve">
-    <value>Новая версия была успешно получена с сервера. Сейчас будет произведена её установка!</value>
-  </data>
-  <data name="UP_HashMissmatch" xml:space="preserve">
-    <value>Контрольная сумма загруженного файла отличается от эталонной! Возможно он был повреждён при передаче. Попробуйте повторить попытку позднее.</value>
   </data>
   <data name="UP_LatestInstalled" xml:space="preserve">
     <value>Обновление не требуется, т.к. у вас установлена последняя версия программы!</value>
@@ -695,9 +698,6 @@
   </data>
   <data name="UP_OtherPlatform" xml:space="preserve">
     <value>Доступна новая версия {0} программы, однако автоматические обновления на данной платформе не поддерживаются. Показать список изменений и ссылки для скачивания в веб-браузере?</value>
-  </data>
-  <data name="UP_UpdateFailure" xml:space="preserve">
-    <value>Произошла ошибка при попытке запуска модуля установки новой версии! Программа не была обновлена.</value>
   </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения процесса проверки обновлений!</value>
