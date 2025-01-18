@@ -79,12 +79,12 @@ namespace srcrepair.gui
                 if (await IsUpdatesAvailable(UserAgent))
                 {
                     UP_Icon.Image = Properties.Resources.IconUpdateAvailable;
-                    UP_Status.Text = string.Format(AppStrings.UP_UpdateAvailable, UpMan.AppUpdateVersion);
+                    UP_Status.Text = string.Format(AppStrings.UP_AppUpdateAvailable, UpMan.AppUpdateVersion);
                 }
                 else
                 {
                     UP_Icon.Image = Properties.Resources.IconUpdateNotAvailable;
-                    UP_Status.Text = AppStrings.UP_NoUpdates;
+                    UP_Status.Text = AppStrings.UP_NoAppUpdates;
                 }
                 Properties.Settings.Default.LastUpdateTime = DateTime.Now;
             }
