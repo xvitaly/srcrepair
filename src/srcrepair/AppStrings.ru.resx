@@ -681,6 +681,9 @@
   <data name="UP_AppHashMissmatch" xml:space="preserve">
     <value>Контрольная сумма загруженного инсталлятора отличается от эталонной! Возможно он был повреждён при передаче. Попробуйте повторить попытку позднее.</value>
   </data>
+  <data name="UP_AppOtherPlatform" xml:space="preserve">
+    <value>Доступна новая версия {0} программы, однако автоматические обновления на данной платформе не поддерживаются. Показать список изменений и ссылки для скачивания в веб-браузере?</value>
+  </data>
   <data name="UP_AppUpdateAvailable" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
   </data>
@@ -695,9 +698,6 @@
   </data>
   <data name="UP_NoAppUpdates" xml:space="preserve">
     <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
-  </data>
-  <data name="UP_OtherPlatform" xml:space="preserve">
-    <value>Доступна новая версия {0} программы, однако автоматические обновления на данной платформе не поддерживаются. Показать список изменений и ссылки для скачивания в веб-браузере?</value>
   </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения процесса проверки обновлений!</value>

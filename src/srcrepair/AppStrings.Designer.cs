@@ -1753,6 +1753,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
+        /// </summary>
+        internal static string UP_AppOtherPlatform {
+            get {
+                return ResourceManager.GetString("UP_AppOtherPlatform", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Application update available. New version: {0}..
         /// </summary>
         internal static string UP_AppUpdateAvailable {
@@ -1794,15 +1803,6 @@ namespace srcrepair.gui {
         internal static string UP_NoAppUpdates {
             get {
                 return ResourceManager.GetString("UP_NoAppUpdates", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
-        /// </summary>
-        internal static string UP_OtherPlatform {
-            get {
-                return ResourceManager.GetString("UP_OtherPlatform", resourceCulture);
             }
         }
         

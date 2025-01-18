@@ -208,7 +208,7 @@ namespace srcrepair.gui
             }
             else
             {
-                if (MessageBox.Show(string.Format(AppStrings.UP_OtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(string.Format(AppStrings.UP_AppOtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Platform.OpenWebPage(UpMan.AppUpdateInfo);
                 }
