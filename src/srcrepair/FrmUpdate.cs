@@ -76,7 +76,7 @@ namespace srcrepair.gui
         {
             try
             {
-                if (await IsUpdatesAvailable())
+                if (await IsAppUpdateAvailable())
                 {
                     UP_Icon.Image = Properties.Resources.IconUpdateAvailable;
                     UP_Status.Text = string.Format(AppStrings.UP_AppUpdateAvailable, UpMan.AppUpdateVersion);
@@ -101,7 +101,7 @@ namespace srcrepair.gui
         /// Checks for application updates in a separate thread.
         /// </summary>
         /// <returns>Returns True if updates were found.</returns>
-        private async Task<bool> IsUpdatesAvailable()
+        private async Task<bool> IsAppUpdateAvailable()
         {
             UpMan = await UpdateManager.Create(UserAgent);
             return UpMan.CheckAppUpdate();
