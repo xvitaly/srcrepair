@@ -34,14 +34,14 @@ namespace srcrepair.gui
         private readonly string UserAgent;
 
         /// <summary>
+        /// Stores full path to the application installation directory.
+        /// </summary>
+        private readonly string FullAppPath;
+
+        /// <summary>
         /// Stores the full path to the local updates directory.
         /// </summary>
         private readonly string AppUpdateDir;
-
-        /// <summary>
-        /// Stores the application installation directory.
-        /// </summary>
-        private readonly string FullAppPath;
 
         /// <summary>
         /// Stores an instance of the UpdateManager class for working
