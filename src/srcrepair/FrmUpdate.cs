@@ -158,14 +158,14 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Error(Ex, DebugStrings.AppDbgExUpInstallUpdate);
+                        Logger.Error(Ex, DebugStrings.AppDbgExUpInstallAppUpdate);
                         MessageBox.Show(AppStrings.UP_AppUpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
                     // Hash missmatch. Writing to the log...
-                    Logger.Error(DebugStrings.AppDbgUpHashMissmatch);
+                    Logger.Error(DebugStrings.AppDbgUpAppHashMissmatch);
 
                     // Removing the downloaded file...
                     try
@@ -184,7 +184,7 @@ namespace srcrepair.gui
             else
             {
                 // Writing to the log and showing an error message about the download failure...
-                Logger.Error(DebugStrings.AppDbgUpDownloadFailure);
+                Logger.Error(DebugStrings.AppDbgUpAppDownloadFailure);
                 MessageBox.Show(AppStrings.UP_AppDownloadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 

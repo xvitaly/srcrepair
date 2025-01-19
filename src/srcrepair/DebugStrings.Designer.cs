@@ -990,9 +990,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Exception while trying to run the installer of the new version..
         /// </summary>
-        internal static string AppDbgExUpInstallUpdate {
+        internal static string AppDbgExUpInstallAppUpdate {
             get {
-                return ResourceManager.GetString("AppDbgExUpInstallUpdate", resourceCulture);
+                return ResourceManager.GetString("AppDbgExUpInstallAppUpdate", resourceCulture);
             }
         }
         
@@ -1170,18 +1170,18 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Failed to download the the program update from the remote server..
         /// </summary>
-        internal static string AppDbgUpDownloadFailure {
+        internal static string AppDbgUpAppDownloadFailure {
             get {
-                return ResourceManager.GetString("AppDbgUpDownloadFailure", resourceCulture);
+                return ResourceManager.GetString("AppDbgUpAppDownloadFailure", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Failed to install the program update. The downloaded file has an incorrect hash and will be deleted..
         /// </summary>
-        internal static string AppDbgUpHashMissmatch {
+        internal static string AppDbgUpAppHashMissmatch {
             get {
-                return ResourceManager.GetString("AppDbgUpHashMissmatch", resourceCulture);
+                return ResourceManager.GetString("AppDbgUpAppHashMissmatch", resourceCulture);
             }
         }
     }
