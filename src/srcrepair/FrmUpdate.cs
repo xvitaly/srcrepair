@@ -57,15 +57,15 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmUpdate class constructor.
         /// </summary>
-        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
-        /// <param name="A">App's installation directory.</param>
-        /// <param name="U">App's local updates directory.</param>
-        public FrmUpdate(string UA, string A, string U)
+        /// <param name="Agent">User-Agent header for outgoing HTTP queries.</param>
+        /// <param name="AppDir">Full path to the application installation directory.</param>
+        /// <param name="UpdateDir">Full path to the local updates directory.</param>
+        public FrmUpdate(string Agent, string AppDir, string UpdateDir)
         {
             InitializeComponent();
-            UserAgent = UA;
-            FullAppPath = A;
-            AppUpdateDir = U;
+            UserAgent = Agent;
+            FullAppPath = AppDir;
+            AppUpdateDir = UpdateDir;
         }
 
         /// <summary>
