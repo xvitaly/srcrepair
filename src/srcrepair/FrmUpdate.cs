@@ -98,9 +98,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Checks for application updates in a separate thread.
+        /// Checks for the application updates in a separate thread.
         /// </summary>
-        /// <returns>Returns True if updates were found.</returns>
+        /// <returns>Returns True if application updates were found.</returns>
         private async Task<bool> IsAppUpdateAvailable()
         {
             UpMan = await UpdateManager.Create(UserAgent);
