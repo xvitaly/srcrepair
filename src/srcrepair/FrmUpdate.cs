@@ -69,8 +69,8 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Launches a program update checker in a separate thread, waits for the
-        /// result and returns a message if found.
+        /// Launches the update checker in a separate thread, waits for the
+        /// result and then updates the form.
         /// </summary>
         private async Task CheckForUpdates()
         {
