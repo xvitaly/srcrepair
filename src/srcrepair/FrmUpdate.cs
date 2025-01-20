@@ -108,6 +108,17 @@ namespace srcrepair.gui
         }
 
         /// <summary>
+        /// Retries checking for updates.
+        /// </summary>
+        private async Task RetryUpdateCheck()
+        {
+            IsCompleted = false;
+            UP_Icon.Image = Properties.Resources.IconUpdateChecking;
+            UP_Status.Text = AppStrings.UP_RetryUpdateCheck;
+            await CheckForUpdates();
+        }
+
+        /// <summary>
         /// Installs the downloaded update file.
         /// </summary>
         /// <param name="UpdateFileName">Full path to the downloaded update file.</param>
@@ -244,9 +255,13 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
-        private void UP_Status_Click(object sender, EventArgs e)
+        private async void UP_Status_Click(object sender, EventArgs e)
         {
-            if (IsCompleted)
+            if (IsCompleted && (UpMan == null))
+            {
+                await RetryUpdateCheck();
+            }
+            else if (IsCompleted)
             {
                 CheckAndInstallAppUpdate();
             }

@@ -699,6 +699,9 @@
   <data name="UP_NoAppUpdates" xml:space="preserve">
     <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
   </data>
+  <data name="UP_RetryUpdateCheck" xml:space="preserve">
+    <value>Повтор проверки обновлений. Пожалуйста, подождите...</value>
+  </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения процесса проверки обновлений!</value>
   </data>

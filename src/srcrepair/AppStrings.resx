@@ -699,6 +699,9 @@
   <data name="UP_NoAppUpdates" xml:space="preserve">
     <value>No new updates available. Your application is up to date.</value>
   </data>
+  <data name="UP_RetryUpdateCheck" xml:space="preserve">
+    <value>Retrying the update check. Please wait...</value>
+  </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Please wait until the checking for updates process is complete!</value>
   </data>

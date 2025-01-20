@@ -1807,6 +1807,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Retrying the update check. Please wait....
+        /// </summary>
+        internal static string UP_RetryUpdateCheck {
+            get {
+                return ResourceManager.GetString("UP_RetryUpdateCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please wait until the checking for updates process is complete!.
         /// </summary>
         internal static string UP_WorkInProgress {
