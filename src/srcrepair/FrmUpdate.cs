@@ -112,10 +112,13 @@ namespace srcrepair.gui
         /// </summary>
         private async Task RetryUpdateCheck()
         {
-            IsCompleted = false;
-            UP_Icon.Image = Properties.Resources.IconUpdateChecking;
-            UP_Status.Text = AppStrings.UP_RetryUpdateCheck;
-            await CheckForUpdates();
+            if (MessageBox.Show(AppStrings.UP_RetryUpdateCheckQuestion, Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                IsCompleted = false;
+                UP_Icon.Image = Properties.Resources.IconUpdateChecking;
+                UP_Status.Text = AppStrings.UP_RetryUpdateCheck;
+                await CheckForUpdates();
+            }
         }
 
         /// <summary>

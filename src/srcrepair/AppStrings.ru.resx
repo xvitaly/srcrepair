@@ -702,6 +702,9 @@
   <data name="UP_RetryUpdateCheck" xml:space="preserve">
     <value>Повтор проверки обновлений. Пожалуйста, подождите...</value>
   </data>
+  <data name="UP_RetryUpdateCheckQuestion" xml:space="preserve">
+    <value>Повторить попытку проверки обновлений?</value>
+  </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения процесса проверки обновлений!</value>
   </data>
