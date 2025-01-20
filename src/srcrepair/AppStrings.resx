@@ -681,6 +681,9 @@
   <data name="UP_AppHashMissmatch" xml:space="preserve">
     <value>The downloaded installer has an incorrect hash! It may have been corrupted during transfer. Please try again later.</value>
   </data>
+  <data name="UP_AppInstallUpdateError" xml:space="preserve">
+    <value>An error occurred while trying to download and install the program update!</value>
+  </data>
   <data name="UP_AppLatestInstalled" xml:space="preserve">
     <value>The update is not required as you already have the latest version of the program installed!</value>
   </data>

@@ -1753,6 +1753,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to download and install the program update!.
+        /// </summary>
+        internal static string UP_AppInstallUpdateError {
+            get {
+                return ResourceManager.GetString("UP_AppInstallUpdateError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The update is not required as you already have the latest version of the program installed!.
         /// </summary>
         internal static string UP_AppLatestInstalled {

@@ -961,6 +961,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to download and install the program update..
+        /// </summary>
+        internal static string AppDbgExUpAppInstallUpdate {
+            get {
+                return ResourceManager.GetString("AppDbgExUpAppInstallUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while checking for updates during the Updates center form initialization..
         /// </summary>
         internal static string AppDbgExUpCheckForUpdates {

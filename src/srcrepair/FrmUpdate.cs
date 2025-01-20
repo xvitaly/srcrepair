@@ -260,17 +260,25 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private async void UP_Status_Click(object sender, EventArgs e)
         {
-            if (IsCompleted && (UpMan == null))
+            try
             {
-                await RetryUpdateCheck();
+                if (IsCompleted && (UpMan == null))
+                {
+                    await RetryUpdateCheck();
+                }
+                else if (IsCompleted)
+                {
+                    CheckAndInstallAppUpdate();
+                }
+                else
+                {
+                    MessageBox.Show(AppStrings.UP_WorkInProgress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            else if (IsCompleted)
+            catch (Exception Ex)
             {
-                CheckAndInstallAppUpdate();
-            }
-            else
-            {
-                MessageBox.Show(AppStrings.UP_WorkInProgress, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Logger.Error(Ex, DebugStrings.AppDbgExUpAppInstallUpdate);
+                MessageBox.Show(AppStrings.UP_AppInstallUpdateError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

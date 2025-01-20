@@ -417,6 +417,9 @@
   <data name="AppDbgExSvcRepair" xml:space="preserve">
     <value>Exception while trying to run the Service automatic repair.</value>
   </data>
+  <data name="AppDbgExUpAppInstallUpdate" xml:space="preserve">
+    <value>Exception while trying to download and install the program update.</value>
+  </data>
   <data name="AppDbgExUpCheckForUpdates" xml:space="preserve">
     <value>Exception while checking for updates during the Updates center form initialization.</value>
   </data>

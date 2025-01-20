@@ -681,6 +681,9 @@
   <data name="UP_AppHashMissmatch" xml:space="preserve">
     <value>Контрольная сумма загруженного инсталлятора отличается от эталонной! Возможно он был повреждён при передаче. Попробуйте повторить попытку позднее.</value>
   </data>
+  <data name="UP_AppInstallUpdateError" xml:space="preserve">
+    <value>Произошла ошибка во время загрузки и установки обновления программы!</value>
+  </data>
   <data name="UP_AppLatestInstalled" xml:space="preserve">
     <value>Обновление не требуется, т.к. у вас установлена последняя версия программы!</value>
   </data>
