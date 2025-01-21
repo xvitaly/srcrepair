@@ -106,7 +106,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while checking for updates during application startup..
+        ///   Looks up a localized string similar to Exception while checking for updates during the application startup..
         /// </summary>
         internal static string AppDbgExBgWChk {
             get {
@@ -961,7 +961,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while checking for updates during the Updates center form initialization..
+        ///   Looks up a localized string similar to Exception while checking for updates by the Updates center..
         /// </summary>
         internal static string AppDbgExUpCheckForUpdates {
             get {

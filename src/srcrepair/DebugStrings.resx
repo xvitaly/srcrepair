@@ -133,7 +133,7 @@
     <value>Exception while trying to restore a backup file.</value>
   </data>
   <data name="AppDbgExBgWChk" xml:space="preserve">
-    <value>Exception while checking for updates during application startup.</value>
+    <value>Exception while checking for updates during the application startup.</value>
   </data>
   <data name="AppDbgExBkAllStm" xml:space="preserve">
     <value>Exception while trying to backup all Steam settings stored in the registry.</value>
@@ -418,7 +418,7 @@
     <value>Exception while trying to run the Service automatic repair.</value>
   </data>
   <data name="AppDbgExUpCheckForUpdates" xml:space="preserve">
-    <value>Exception while checking for updates during the Updates center form initialization.</value>
+    <value>Exception while checking for updates by the Updates center.</value>
   </data>
   <data name="AppDbgExUpdateBackUpList" xml:space="preserve">
     <value>Exception while trying to get the list of available backups.</value>
