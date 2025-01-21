@@ -76,15 +76,15 @@ namespace srcrepair.gui
         {
             try
             {
-                if (await IsAppUpdateAvailable())
+                if (await IsUpdateAvailable())
                 {
                     UP_Icon.Image = Properties.Resources.IconUpdateAvailable;
-                    UP_Status.Text = string.Format(AppStrings.UP_AppUpdateAvailable, UpMan.AppUpdateVersion);
+                    UP_Status.Text = string.Format(AppStrings.UP_UpdateAvailable, UpMan.AppUpdateVersion);
                 }
                 else
                 {
                     UP_Icon.Image = Properties.Resources.IconUpdateNotAvailable;
-                    UP_Status.Text = AppStrings.UP_NoAppUpdates;
+                    UP_Status.Text = AppStrings.UP_NoUpdatesFound;
                 }
                 Properties.Settings.Default.LastUpdateTime = DateTime.Now;
             }
@@ -101,7 +101,7 @@ namespace srcrepair.gui
         /// Checks for the application updates in a separate thread.
         /// </summary>
         /// <returns>Returns True if application updates were found.</returns>
-        private async Task<bool> IsAppUpdateAvailable()
+        private async Task<bool> IsUpdateAvailable()
         {
             UpMan = await UpdateManager.Create(UserAgent);
             return UpMan.CheckAppUpdate();
@@ -162,7 +162,7 @@ namespace srcrepair.gui
                 if (UpMan.CheckAppHash(FileManager.CalculateFileSHA512(UpdateFileName)))
                 {
                     // Showing a message about the successful download...
-                    MessageBox.Show(AppStrings.UP_AppDownloadSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(AppStrings.UP_DownloadSuccessful, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     // Installing the standalone update...
                     try
@@ -173,13 +173,13 @@ namespace srcrepair.gui
                     catch (Exception Ex)
                     {
                         Logger.Error(Ex, DebugStrings.AppDbgExUpInstallAppUpdate);
-                        MessageBox.Show(AppStrings.UP_AppUpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(AppStrings.UP_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
                     // Hash missmatch. Writing to the log...
-                    Logger.Error(DebugStrings.AppDbgUpAppHashMissmatch);
+                    Logger.Error(DebugStrings.AppDbgUpHashMissmatch);
 
                     // Removing the downloaded file...
                     try
@@ -192,14 +192,14 @@ namespace srcrepair.gui
                     }
 
                     // Showing a message about the hash missmatch...
-                    MessageBox.Show(AppStrings.UP_AppHashMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(AppStrings.UP_HashMissmatch, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
                 // Writing to the log and showing an error message about the download failure...
-                Logger.Error(DebugStrings.AppDbgUpAppDownloadFailure);
-                MessageBox.Show(AppStrings.UP_AppDownloadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(DebugStrings.AppDbgUpDownloadFailure);
+                MessageBox.Show(AppStrings.UP_DownloadFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             // Returning result...
@@ -210,7 +210,7 @@ namespace srcrepair.gui
         /// Installs an update or displays an update notification depending on
         /// the currently running platform.
         /// </summary>
-        private void InstallAppUpdate()
+        private void InstallUpdate()
         {
             if (Platform.AutoUpdateSupported && !Properties.Settings.Default.IsPortable)
             {
@@ -221,7 +221,7 @@ namespace srcrepair.gui
             }
             else
             {
-                if (MessageBox.Show(string.Format(AppStrings.UP_AppOtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(string.Format(AppStrings.UP_OtherPlatform, UpMan.AppUpdateVersion), Properties.Resources.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Platform.OpenWebPage(UpMan.AppUpdateInfo);
                 }
@@ -231,15 +231,15 @@ namespace srcrepair.gui
         /// <summary>
         /// Checks whether the update is available and attempts to install it.
         /// </summary>
-        private void CheckAndInstallAppUpdate()
+        private void CheckAndInstallUpdate()
         {
             if (UpMan.CheckAppUpdate())
             {
-                InstallAppUpdate();
+                InstallUpdate();
             }
             else
             {
-                MessageBox.Show(AppStrings.UP_AppLatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.UP_LatestInstalled, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -268,7 +268,7 @@ namespace srcrepair.gui
                 }
                 else if (IsCompleted)
                 {
-                    CheckAndInstallAppUpdate();
+                    CheckAndInstallUpdate();
                 }
                 else
                 {
@@ -277,8 +277,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExUpAppInstallUpdate);
-                MessageBox.Show(AppStrings.UP_AppInstallUpdateError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, DebugStrings.AppDbgExUpInstallUpdate);
+                MessageBox.Show(AppStrings.UP_InstallUpdateError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

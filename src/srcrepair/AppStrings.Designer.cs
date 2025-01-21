@@ -1726,78 +1726,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while downloading the installer of the new version from the remote server! The program has not been updated..
-        /// </summary>
-        internal static string UP_AppDownloadFailure {
-            get {
-                return ResourceManager.GetString("UP_AppDownloadFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The new version has been successfully received from the server. We will install it now!.
-        /// </summary>
-        internal static string UP_AppDownloadSuccessful {
-            get {
-                return ResourceManager.GetString("UP_AppDownloadSuccessful", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The downloaded installer has an incorrect hash! It may have been corrupted during transfer. Please try again later..
-        /// </summary>
-        internal static string UP_AppHashMissmatch {
-            get {
-                return ResourceManager.GetString("UP_AppHashMissmatch", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to download and install the program update!.
-        /// </summary>
-        internal static string UP_AppInstallUpdateError {
-            get {
-                return ResourceManager.GetString("UP_AppInstallUpdateError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The update is not required as you already have the latest version of the program installed!.
-        /// </summary>
-        internal static string UP_AppLatestInstalled {
-            get {
-                return ResourceManager.GetString("UP_AppLatestInstalled", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
-        /// </summary>
-        internal static string UP_AppOtherPlatform {
-            get {
-                return ResourceManager.GetString("UP_AppOtherPlatform", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Application update available. New version: {0}..
-        /// </summary>
-        internal static string UP_AppUpdateAvailable {
-            get {
-                return ResourceManager.GetString("UP_AppUpdateAvailable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The program has not been updated..
-        /// </summary>
-        internal static string UP_AppUpdateFailure {
-            get {
-                return ResourceManager.GetString("UP_AppUpdateFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Update check failed. Please try again later..
         /// </summary>
         internal static string UP_CheckForUpdatesFailure {
@@ -1807,11 +1735,65 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No new updates available. Your application is up to date..
+        ///   Looks up a localized string similar to An error occurred while downloading the installer of the new version from the remote server! The program has not been updated..
         /// </summary>
-        internal static string UP_NoAppUpdates {
+        internal static string UP_DownloadFailure {
             get {
-                return ResourceManager.GetString("UP_NoAppUpdates", resourceCulture);
+                return ResourceManager.GetString("UP_DownloadFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The new version has been successfully received from the server. We will install it now!.
+        /// </summary>
+        internal static string UP_DownloadSuccessful {
+            get {
+                return ResourceManager.GetString("UP_DownloadSuccessful", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The downloaded installer has an incorrect hash! It may have been corrupted during transfer. Please try again later..
+        /// </summary>
+        internal static string UP_HashMissmatch {
+            get {
+                return ResourceManager.GetString("UP_HashMissmatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to download and install the program update!.
+        /// </summary>
+        internal static string UP_InstallUpdateError {
+            get {
+                return ResourceManager.GetString("UP_InstallUpdateError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The update is not required as you already have the latest version of the program installed!.
+        /// </summary>
+        internal static string UP_LatestInstalled {
+            get {
+                return ResourceManager.GetString("UP_LatestInstalled", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No new updates available. The application is up to date..
+        /// </summary>
+        internal static string UP_NoUpdatesFound {
+            get {
+                return ResourceManager.GetString("UP_NoUpdatesFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
+        /// </summary>
+        internal static string UP_OtherPlatform {
+            get {
+                return ResourceManager.GetString("UP_OtherPlatform", resourceCulture);
             }
         }
         
@@ -1830,6 +1812,24 @@ namespace srcrepair.gui {
         internal static string UP_RetryUpdateCheckQuestion {
             get {
                 return ResourceManager.GetString("UP_RetryUpdateCheckQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Application update available. New version: {0}..
+        /// </summary>
+        internal static string UP_UpdateAvailable {
+            get {
+                return ResourceManager.GetString("UP_UpdateAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The program has not been updated..
+        /// </summary>
+        internal static string UP_UpdateFailure {
+            get {
+                return ResourceManager.GetString("UP_UpdateFailure", resourceCulture);
             }
         }
         

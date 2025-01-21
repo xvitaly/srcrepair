@@ -961,15 +961,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to download and install the program update..
-        /// </summary>
-        internal static string AppDbgExUpAppInstallUpdate {
-            get {
-                return ResourceManager.GetString("AppDbgExUpAppInstallUpdate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Exception while checking for updates during the Updates center form initialization..
         /// </summary>
         internal static string AppDbgExUpCheckForUpdates {
@@ -1002,6 +993,15 @@ namespace srcrepair.gui {
         internal static string AppDbgExUpInstallAppUpdate {
             get {
                 return ResourceManager.GetString("AppDbgExUpInstallAppUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to download and install the program update..
+        /// </summary>
+        internal static string AppDbgExUpInstallUpdate {
+            get {
+                return ResourceManager.GetString("AppDbgExUpInstallUpdate", resourceCulture);
             }
         }
         
@@ -1179,18 +1179,18 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Failed to download the the program update from the remote server..
         /// </summary>
-        internal static string AppDbgUpAppDownloadFailure {
+        internal static string AppDbgUpDownloadFailure {
             get {
-                return ResourceManager.GetString("AppDbgUpAppDownloadFailure", resourceCulture);
+                return ResourceManager.GetString("AppDbgUpDownloadFailure", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Failed to install the program update. The downloaded file has an incorrect hash and will be deleted..
         /// </summary>
-        internal static string AppDbgUpAppHashMissmatch {
+        internal static string AppDbgUpHashMissmatch {
             get {
-                return ResourceManager.GetString("AppDbgUpAppHashMissmatch", resourceCulture);
+                return ResourceManager.GetString("AppDbgUpHashMissmatch", resourceCulture);
             }
         }
     }
