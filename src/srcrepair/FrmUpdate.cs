@@ -254,7 +254,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Install app update" button click event handler.
+        /// "Install update" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
