@@ -1735,7 +1735,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while downloading the installer of the new version from the remote server! The program has not been updated..
+        ///   Looks up a localized string similar to An error occurred while downloading the installer of the new version from the remote server! The application has not been updated..
         /// </summary>
         internal static string UP_DownloadFailure {
             get {
@@ -1762,7 +1762,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to download and install the program update!.
+        ///   Looks up a localized string similar to An error occurred while trying to download and install the application update!.
         /// </summary>
         internal static string UP_InstallUpdateError {
             get {
@@ -1771,7 +1771,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The update is not required as you already have the latest version of the program installed!.
+        ///   Looks up a localized string similar to The update is not required as you already have the latest version of the application installed!.
         /// </summary>
         internal static string UP_LatestInstalled {
             get {
@@ -1816,7 +1816,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Application update available. New version: {0}..
+        ///   Looks up a localized string similar to The application update is available. New version: {0}..
         /// </summary>
         internal static string UP_UpdateAvailable {
             get {
@@ -1825,7 +1825,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The program has not been updated..
+        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The application has not been updated..
         /// </summary>
         internal static string UP_UpdateFailure {
             get {
