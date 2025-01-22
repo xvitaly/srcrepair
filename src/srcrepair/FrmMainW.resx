@@ -4404,7 +4404,7 @@
     <value>229, 22</value>
   </data>
   <data name="MNUExtClnSteam.Text" xml:space="preserve">
-    <value>Start &amp;Steam cleaner...</value>
+    <value>&amp;Steam cleanup module...</value>
   </data>
   <data name="MNUSep6.Size" type="System.Drawing.Size, System.Drawing">
     <value>226, 6</value>
