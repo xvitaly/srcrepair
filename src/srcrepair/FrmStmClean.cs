@@ -13,7 +13,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of Steam garbage cleaner window.
+    /// Class of the Steam cleanup module.
     /// </summary>
     public partial class FrmStmClean : Form
     {
