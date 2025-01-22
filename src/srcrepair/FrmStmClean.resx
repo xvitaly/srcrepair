@@ -904,7 +904,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Steam extended cleaner</value>
+    <value>Steam cleanup module</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FrmStmClean</value>
