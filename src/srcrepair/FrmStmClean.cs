@@ -18,17 +18,17 @@ namespace srcrepair.gui
     public partial class FrmStmClean : Form
     {
         /// <summary>
-        /// CurrentPlatform instance for FrmStmClean class.
+        /// CurrentPlatform instance for the FrmStmClean class.
         /// </summary>
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
-        /// Stores full path to Steam client directory.
+        /// Stores the full path to the Steam client installation directory.
         /// </summary>
         private readonly string SteamPath;
 
         /// <summary>
-        ///Stores full path to directory for saving backups.
+        /// Stores the full path to the directory for saving backups.
         /// </summary>
         private readonly string BackUpDir;
 
