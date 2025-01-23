@@ -1726,15 +1726,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Update check failed. Please try again later..
-        /// </summary>
-        internal static string UP_CheckForUpdatesFailure {
-            get {
-                return ResourceManager.GetString("UP_CheckForUpdatesFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred while downloading the installer of the new version from the remote server! The application has not been updated..
         /// </summary>
         internal static string UP_DownloadFailure {
@@ -1780,15 +1771,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No new updates available. The application is up to date..
-        /// </summary>
-        internal static string UP_NoUpdatesFound {
-            get {
-                return ResourceManager.GetString("UP_NoUpdatesFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?.
         /// </summary>
         internal static string UP_OtherPlatform {
@@ -1825,11 +1807,29 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update check failed. Please try again later..
+        /// </summary>
+        internal static string UP_UpdateCheckFailure {
+            get {
+                return ResourceManager.GetString("UP_UpdateCheckFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The application has not been updated..
         /// </summary>
         internal static string UP_UpdateFailure {
             get {
                 return ResourceManager.GetString("UP_UpdateFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No new updates available. The application is up to date..
+        /// </summary>
+        internal static string UP_UpdateNotAvailable {
+            get {
+                return ResourceManager.GetString("UP_UpdateNotAvailable", resourceCulture);
             }
         }
         

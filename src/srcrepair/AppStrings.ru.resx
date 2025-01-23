@@ -672,9 +672,6 @@
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Безымянный.cfg</value>
   </data>
-  <data name="UP_CheckForUpdatesFailure" xml:space="preserve">
-    <value>Произошла ошибка во время проверки обновлений программы.</value>
-  </data>
   <data name="UP_DownloadFailure" xml:space="preserve">
     <value>Произошла ошибка при загрузке модуля установки новой версии с сервера! Программа не была обновлена.</value>
   </data>
@@ -690,9 +687,6 @@
   <data name="UP_LatestInstalled" xml:space="preserve">
     <value>Обновление не требуется, т.к. у вас установлена последняя версия программы!</value>
   </data>
-  <data name="UP_NoUpdatesFound" xml:space="preserve">
-    <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
-  </data>
   <data name="UP_OtherPlatform" xml:space="preserve">
     <value>Доступна новая версия {0} программы, однако автоматические обновления на данной платформе не поддерживаются. Показать список изменений и ссылки для скачивания в веб-браузере?</value>
   </data>
@@ -705,8 +699,14 @@
   <data name="UP_UpdateAvailable" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
   </data>
+  <data name="UP_UpdateCheckFailure" xml:space="preserve">
+    <value>Произошла ошибка во время проверки обновлений программы.</value>
+  </data>
   <data name="UP_UpdateFailure" xml:space="preserve">
     <value>Произошла ошибка при попытке запуска модуля установки новой версии! Программа не была обновлена.</value>
+  </data>
+  <data name="UP_UpdateNotAvailable" xml:space="preserve">
+    <value>Нет новых обновлений программы. Установлена новейшая версия.</value>
   </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Пожалуйста, дождитесь завершения процесса проверки обновлений!</value>

@@ -672,9 +672,6 @@
   <data name="UnnamedFileName" xml:space="preserve">
     <value>Unnamed.cfg</value>
   </data>
-  <data name="UP_CheckForUpdatesFailure" xml:space="preserve">
-    <value>Update check failed. Please try again later.</value>
-  </data>
   <data name="UP_DownloadFailure" xml:space="preserve">
     <value>An error occurred while downloading the installer of the new version from the remote server! The application has not been updated.</value>
   </data>
@@ -690,9 +687,6 @@
   <data name="UP_LatestInstalled" xml:space="preserve">
     <value>The update is not required as you already have the latest version of the application installed!</value>
   </data>
-  <data name="UP_NoUpdatesFound" xml:space="preserve">
-    <value>No new updates available. The application is up to date.</value>
-  </data>
   <data name="UP_OtherPlatform" xml:space="preserve">
     <value>A new version {0} is available, but automatic updates are not supported on this platform. Do you want to see the changelog page, including download links, in a web browser?</value>
   </data>
@@ -705,8 +699,14 @@
   <data name="UP_UpdateAvailable" xml:space="preserve">
     <value>The application update is available. New version: {0}.</value>
   </data>
+  <data name="UP_UpdateCheckFailure" xml:space="preserve">
+    <value>Update check failed. Please try again later.</value>
+  </data>
   <data name="UP_UpdateFailure" xml:space="preserve">
     <value>An error occurred while trying to run the installer of the new version! The application has not been updated.</value>
+  </data>
+  <data name="UP_UpdateNotAvailable" xml:space="preserve">
+    <value>No new updates available. The application is up to date.</value>
   </data>
   <data name="UP_WorkInProgress" xml:space="preserve">
     <value>Please wait until the checking for updates process is complete!</value>

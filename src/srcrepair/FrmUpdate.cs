@@ -84,7 +84,7 @@ namespace srcrepair.gui
                 else
                 {
                     UP_Icon.Image = Properties.Resources.IconUpdateNotAvailable;
-                    UP_Status.Text = AppStrings.UP_NoUpdatesFound;
+                    UP_Status.Text = AppStrings.UP_UpdateNotAvailable;
                 }
                 Properties.Settings.Default.LastUpdateTime = DateTime.Now;
             }
@@ -92,7 +92,7 @@ namespace srcrepair.gui
             {
                 Logger.Error(Ex, DebugStrings.AppDbgExUpCheckForUpdates);
                 UP_Icon.Image = Properties.Resources.IconUpdateError;
-                UP_Status.Text = AppStrings.UP_CheckForUpdatesFailure;
+                UP_Status.Text = AppStrings.UP_UpdateCheckFailure;
             }
             IsCompleted = true;
         }
