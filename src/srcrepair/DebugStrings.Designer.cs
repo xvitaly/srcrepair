@@ -990,9 +990,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Exception while trying to run the installer of the new version..
         /// </summary>
-        internal static string AppDbgExUpInstallAppUpdate {
+        internal static string AppDbgExUpInstallBinaryUpdate {
             get {
-                return ResourceManager.GetString("AppDbgExUpInstallAppUpdate", resourceCulture);
+                return ResourceManager.GetString("AppDbgExUpInstallBinaryUpdate", resourceCulture);
             }
         }
         

@@ -172,7 +172,7 @@ namespace srcrepair.gui
                     }
                     catch (Exception Ex)
                     {
-                        Logger.Error(Ex, DebugStrings.AppDbgExUpInstallAppUpdate);
+                        Logger.Error(Ex, DebugStrings.AppDbgExUpInstallBinaryUpdate);
                         MessageBox.Show(AppStrings.UP_UpdateFailure, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
