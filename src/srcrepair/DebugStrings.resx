@@ -426,11 +426,11 @@
   <data name="AppDbgExUpDeleteFile" xml:space="preserve">
     <value>Exception when trying to delete the downloaded file with an incorrect hash.</value>
   </data>
-  <data name="AppDbgExUpInstallBinaryUpdate" xml:space="preserve">
-    <value>Exception while trying to run the installer of the new version.</value>
-  </data>
   <data name="AppDbgExUpInstallUpdate" xml:space="preserve">
     <value>Exception while trying to download and install the program update.</value>
+  </data>
+  <data name="AppDbgExUpStartUpdateInstaller" xml:space="preserve">
+    <value>Exception while trying to run the installer of the new version.</value>
   </data>
   <data name="AppDbgExUrlCvList" xml:space="preserve">
     <value>Exception while trying to start the web browser to open the cvarlist URL.</value>

@@ -1798,6 +1798,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The application has not been updated..
+        /// </summary>
+        internal static string UP_StartUpdateInstallerFailure {
+            get {
+                return ResourceManager.GetString("UP_StartUpdateInstallerFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The application update is available. New version: {0}..
         /// </summary>
         internal static string UP_UpdateAvailable {
@@ -1812,15 +1821,6 @@ namespace srcrepair.gui {
         internal static string UP_UpdateCheckFailure {
             get {
                 return ResourceManager.GetString("UP_UpdateCheckFailure", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to run the installer of the new version! The application has not been updated..
-        /// </summary>
-        internal static string UP_UpdateFailure {
-            get {
-                return ResourceManager.GetString("UP_UpdateFailure", resourceCulture);
             }
         }
         

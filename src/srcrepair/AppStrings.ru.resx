@@ -696,14 +696,14 @@
   <data name="UP_RetryUpdateCheckQuestion" xml:space="preserve">
     <value>Повторить попытку проверки обновлений?</value>
   </data>
+  <data name="UP_StartUpdateInstallerFailure" xml:space="preserve">
+    <value>Произошла ошибка при попытке запуска модуля установки новой версии! Программа не была обновлена.</value>
+  </data>
   <data name="UP_UpdateAvailable" xml:space="preserve">
     <value>Доступно обновление программы. Новая версия: {0}.</value>
   </data>
   <data name="UP_UpdateCheckFailure" xml:space="preserve">
     <value>Произошла ошибка во время проверки обновлений программы.</value>
-  </data>
-  <data name="UP_UpdateFailure" xml:space="preserve">
-    <value>Произошла ошибка при попытке запуска модуля установки новой версии! Программа не была обновлена.</value>
   </data>
   <data name="UP_UpdateNotAvailable" xml:space="preserve">
     <value>Нет новых обновлений программы. Установлена новейшая версия.</value>

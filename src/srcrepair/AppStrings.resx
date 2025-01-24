@@ -696,14 +696,14 @@
   <data name="UP_RetryUpdateCheckQuestion" xml:space="preserve">
     <value>Retry the update check?</value>
   </data>
+  <data name="UP_StartUpdateInstallerFailure" xml:space="preserve">
+    <value>An error occurred while trying to run the installer of the new version! The application has not been updated.</value>
+  </data>
   <data name="UP_UpdateAvailable" xml:space="preserve">
     <value>The application update is available. New version: {0}.</value>
   </data>
   <data name="UP_UpdateCheckFailure" xml:space="preserve">
     <value>Update check failed. Please try again later.</value>
-  </data>
-  <data name="UP_UpdateFailure" xml:space="preserve">
-    <value>An error occurred while trying to run the installer of the new version! The application has not been updated.</value>
   </data>
   <data name="UP_UpdateNotAvailable" xml:space="preserve">
     <value>No new updates available. The application is up to date.</value>
