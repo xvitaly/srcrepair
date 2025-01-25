@@ -152,8 +152,8 @@ namespace srcrepair.gui
         {
             if (EC_BuildCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "downloading"));
-                CleanDirs.Add(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "temp"));
+                CleanDirs.Add(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "downloading", "*.*"));
+                CleanDirs.Add(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "temp", "*.*"));
             }
         }
 
