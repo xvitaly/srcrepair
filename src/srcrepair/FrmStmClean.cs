@@ -140,8 +140,6 @@ namespace srcrepair.gui
             if (EC_ErrDmps.Checked)
             {
                 CleanDirs.Add(Path.Combine(FullSteamPath, "dumps", "*.*"));
-                CleanDirs.Add(Path.Combine(FullSteamPath, "*.dmp"));
-                CleanDirs.Add(Path.Combine(FullSteamPath, "*.mdmp"));
             }
         }
 
