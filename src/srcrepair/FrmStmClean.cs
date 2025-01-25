@@ -40,13 +40,13 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmStmClean class constructor.
         /// </summary>
-        /// <param name="SP">Full path to Steam client directory.</param>
-        /// <param name="BD">Full path to directory for saving backups.</param>
-        public FrmStmClean(string SP, string BD)
+        /// <param name="SteamDir">Full path to the Steam client installation directory.</param>
+        /// <param name="BackUpDir">Full path to the directory for saving backups.</param>
+        public FrmStmClean(string SteamDir, string BackUpDir)
         {
             InitializeComponent();
-            FullSteamPath = SP;
-            FullBackUpDirPath = BD;
+            FullSteamPath = SteamDir;
+            FullBackUpDirPath = BackUpDir;
             CleanDirs = new List<string>();
         }
 
