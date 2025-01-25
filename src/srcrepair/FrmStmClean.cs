@@ -58,8 +58,6 @@ namespace srcrepair.gui
         {
             if (EC_HTMLCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "config", "htmlcache", "*.*"));
-                CleanDirs.Add(Path.Combine(FullSteamPath, "config", "overlayhtmlcache", "*.*"));
                 CleanDirs.Add(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam", "htmlcache", "*.*"));
             }
         }
