@@ -128,7 +128,6 @@ namespace srcrepair.gui
             if (EC_OldBins.Checked)
             {
                 CleanDirs.Add(Path.Combine(FullSteamPath, "*.old"));
-                CleanDirs.Add(Path.Combine(FullSteamPath, "bin", "*.old"));
             }
         }
 
