@@ -196,11 +196,10 @@ namespace srcrepair.core
                 foreach (string SubDir in Directory.EnumerateDirectories(StartDir))
                 {
                     RemoveEmptyDirectories(SubDir);
-                }
-
-                if (!Directory.EnumerateFileSystemEntries(StartDir).Any())
-                {
-                    Directory.Delete(StartDir, false);
+                    if (!Directory.EnumerateFileSystemEntries(SubDir).Any())
+                    {
+                        Directory.Delete(SubDir, false);
+                    }
                 }
             }
         }
