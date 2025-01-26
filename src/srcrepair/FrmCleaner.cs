@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using NLog;
@@ -248,11 +249,11 @@ namespace srcrepair.gui
             // Removing empty directories if allowed...
             if (Properties.Settings.Default.RemoveEmptyDirs)
             {
-                foreach (string Item in CleanItems)
+                foreach (string Item in CleanItems.Select(e => Path.GetDirectoryName(e)))
                 {
                     try
                     {
-                        FileManager.RemoveEmptyDirectories(Path.GetDirectoryName(Item));
+                        FileManager.RemoveEmptyDirectories(Item);
                     }
                     catch (Exception Ex)
                     {
