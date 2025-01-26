@@ -260,7 +260,7 @@ namespace srcrepair.gui
                 {
                     try
                     {
-                        FileManager.RemoveEmptyDirectories(Item);
+                        FileManager.CleanEmptyDirectories(Item);
                     }
                     catch (Exception Ex)
                     {
