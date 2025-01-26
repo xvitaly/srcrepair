@@ -58,6 +58,11 @@ namespace srcrepair.gui
         private readonly bool ForceBackUp;
 
         /// <summary>
+        /// Stores the full path to the Steam installation directory.
+        /// </summary>
+        private readonly string FullSteamPath;
+
+        /// <summary>
         /// Stores the full path to the directory for saving backups.
         /// </summary>
         private readonly string FullBackUpDirPath;
@@ -86,6 +91,7 @@ namespace srcrepair.gui
         /// FrmCleaner class constructor.
         /// </summary>
         /// <param name="CD">The list of files and directories for cleanup.</param>
+        /// <param name="SP">Full path to the Steam installation directory.</param>
         /// <param name="BD">Full path to the directory for saving backups.</param>
         /// <param name="CI">Cleanup module form title.</param>
         /// <param name="SM">Message text of the successful cleanup completion.</param>
@@ -93,7 +99,7 @@ namespace srcrepair.gui
         /// <param name="NA">Disable automatically marking of found files for deletion.</param>
         /// <param name="RS">Enable recursive cleanup.</param>
         /// <param name="FB">Require a backup to be created before running the cleanup.</param>
-        public FrmCleaner(List<string> CD, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
+        public FrmCleaner(List<string> CD, string SP, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
         {
             InitializeComponent();
             CleanItems = CD;
@@ -103,6 +109,7 @@ namespace srcrepair.gui
             IsRecursive = RS;
             ForceBackUp = FB;
             SuccessMessage = SM;
+            FullSteamPath = SP;
             FullBackUpDirPath = BD;
         }
 
@@ -249,7 +256,7 @@ namespace srcrepair.gui
             // Removing empty directories if allowed...
             if (Properties.Settings.Default.RemoveEmptyDirs)
             {
-                foreach (string Item in CleanItems.Select(e => Path.GetDirectoryName(e)))
+                foreach (string Item in CleanItems.Select(e => Path.GetDirectoryName(e)).Where(e => !e.Equals(FullSteamPath, StringComparison.InvariantCultureIgnoreCase)))
                 {
                     try
                     {

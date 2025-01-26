@@ -280,7 +280,7 @@ namespace srcrepair.gui
         {
             if (CleanDirs.Count > 0)
             {
-                GuiHelpers.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, FullBackUpDirPath, Platform.SteamProcName);
+                GuiHelpers.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, FullSteamPath, FullBackUpDirPath, Platform.SteamProcName);
                 Close();
             }
             else

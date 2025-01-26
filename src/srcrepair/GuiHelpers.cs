@@ -52,16 +52,17 @@ namespace srcrepair.gui
         /// <param name="LText">Cleanup window title.</param>
         /// <param name="CheckBin">Process name to be checked before cleanup.</param>
         /// <param name="ResultMsg">Successful cleanup completion message text.</param>
+        /// <param name="SteamDir">Full path to the Steam installation directory.</param>
         /// <param name="BackUpDir">Path to directory for saving backups.</param>
         /// <param name="ReadOnly">Allow user to manually select files for deletion.</param>
         /// <param name="NoAuto">Disable automatically mark found files to deletion.</param>
         /// <param name="Recursive">Enable recursive cleanup.</param>
         /// <param name="ForceBackUp">Force backup file creation before running cleanup.</param>
-        public static void FormShowCleanup(List<string> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly, bool NoAuto, bool Recursive, bool ForceBackUp)
+        public static void FormShowCleanup(List<string> Paths, string LText, string ResultMsg, string SteamDir, string BackUpDir, string CheckBin, bool ReadOnly, bool NoAuto, bool Recursive, bool ForceBackUp)
         {
             if (!ProcessManager.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin)))
             {
-                using (FrmCleaner FCl = new FrmCleaner(Paths, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp))
+                using (FrmCleaner FCl = new FrmCleaner(Paths, SteamDir, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp))
                 {
                     FCl.ShowDialog();
                 }
@@ -79,10 +80,11 @@ namespace srcrepair.gui
         /// <param name="LText">Cleanup window title.</param>
         /// <param name="CheckBin">Process name to be checked before cleanup.</param>
         /// <param name="ResultMsg">Successful cleanup completion message text.</param>
+        /// <param name="SteamDir">Full path to the Steam installation directory.</param>
         /// <param name="BackUpDir">Path to directory for saving backups.</param>
-        public static void FormShowCleanup(List<string> Paths, string LText, string ResultMsg, string BackUpDir, string CheckBin)
+        public static void FormShowCleanup(List<string> Paths, string LText, string ResultMsg, string SteamDir, string BackUpDir, string CheckBin)
         {
-            FormShowCleanup(Paths, LText, ResultMsg, BackUpDir, CheckBin, false, false, true, false);
+            FormShowCleanup(Paths, LText, ResultMsg, SteamDir, BackUpDir, CheckBin, false, false, true, false);
         }
 
         /// <summary>
