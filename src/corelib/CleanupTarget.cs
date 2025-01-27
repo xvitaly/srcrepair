@@ -4,7 +4,6 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
-using System;
 using System.Collections.Generic;
 
 namespace srcrepair.core
