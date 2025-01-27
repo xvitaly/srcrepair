@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CleanupItem.cs" />
     <Compile Include="CleanupManager.cs" />
     <Compile Include="CleanupTarget.cs" />
     <Compile Include="CommonSettings.cs" />
