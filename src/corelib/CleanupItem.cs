@@ -36,6 +36,10 @@ namespace srcrepair.core
         /// <summary>
         /// CleanupItem class constructor.
         /// </summary>
+        /// <param name="Dir">Full path to the directory for cleanup.</param>
+        /// <param name="Mask">File mask for cleanup.</param>
+        /// <param name="Recursive">Enable or disable the recursive cleanup.</param>
+        /// <param name="Empty">Enable or disable the empty directories cleanup.</param>
         public CleanupItem(string Dir, string Mask, bool Recursive, bool Empty)
         {
             CleanDirectory = Dir;
