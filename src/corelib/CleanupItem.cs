@@ -33,6 +33,9 @@ namespace srcrepair.core
         /// </summary>
         public bool CleanEmpty { get; private set; }
 
+        /// <summary>
+        /// CleanupItem class constructor.
+        /// </summary>
         public CleanupItem(string Dir, string Mask, bool Recursive, bool Empty)
         {
             CleanDirectory = Dir;
