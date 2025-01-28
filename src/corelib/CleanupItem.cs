@@ -8,6 +8,9 @@ using System;
 
 namespace srcrepair.core
 {
+    /// <summary>
+    /// Class for working with a single cleanup item.
+    /// </summary>
     public sealed class CleanupItem
     {
         public string CleanDirectory { get; private set; }
