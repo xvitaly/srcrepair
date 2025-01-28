@@ -13,12 +13,24 @@ namespace srcrepair.core
     /// </summary>
     public sealed class CleanupItem
     {
+        /// <summary>
+        /// Gets or sets the full path to the directory for cleanup.
+        /// </summary>
         public string CleanDirectory { get; private set; }
 
+        /// <summary>
+        /// Gets or sets the file mask for cleanup.
+        /// </summary>
         public string CleanMask { get; private set; }
 
+        /// <summary>
+        /// Gets or sets whether the recursive cleanup is enabled.
+        /// </summary>
         public bool IsRecursive { get; private set; }
 
+        /// <summary>
+        /// Gets or sets whether the empty directories cleanup is enabled.
+        /// </summary>
         public bool CleanEmpty { get; private set; }
 
         public CleanupItem(string Dir, string Mask, bool Recursive, bool Empty)
