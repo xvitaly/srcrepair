@@ -502,7 +502,7 @@
     <value>CenterParent</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Mute manager</value>
+    <value>Muted players manager</value>
   </data>
   <data name="&gt;&gt;MM_File.Name" xml:space="preserve">
     <value>MM_File</value>
