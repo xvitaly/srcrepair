@@ -16,6 +16,17 @@
         <SVer>1</SVer>
         <Executable>tf_win64.exe</Executable>
     </Game>
+    <Game Name="Team Fortress 2 (32-bit)">
+        <Enabled>0</Enabled>
+        <DirName>Team Fortress 2</DirName>
+        <SmallName>tf</SmallName>
+        <VFDir>tf</VFDir>
+        <UserDir>1</UserDir>
+        <HUDsAvail>1</HUDsAvail>
+        <SID>440</SID>
+        <SVer>1</SVer>
+        <Executable>tf.exe</Executable>
+    </Game>
     <Game Name="Counter-Strike: Source">
         <Enabled>1</Enabled>
         <DirName>Counter-Strike Source</DirName>
