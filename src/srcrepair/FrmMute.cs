@@ -47,7 +47,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Stores the full path to the directory for saving backups.
         /// </summary>
-        private readonly string BackUpDir;
+        private readonly string FullBackUpDirPath;
 
         /// <summary>
         /// Stores the database header.
@@ -63,7 +63,7 @@ namespace srcrepair.gui
         {
             InitializeComponent();
             Banlist = BL;
-            BackUpDir = BD;
+            FullBackUpDirPath = BD;
         }
 
         /// <summary>
@@ -242,7 +242,7 @@ namespace srcrepair.gui
             {
                 try
                 {
-                    FileManager.CreateConfigBackUp(Banlist, BackUpDir, Properties.Resources.BU_PrefixVChat);
+                    FileManager.CreateConfigBackUp(Banlist, FullBackUpDirPath, Properties.Resources.BU_PrefixVChat);
                 }
                 catch (Exception Ex)
                 {
