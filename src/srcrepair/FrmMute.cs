@@ -15,7 +15,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class of editor of muted players window.
+    /// Class of the Muted players manager module.
     /// </summary>
     public partial class FrmMute : Form
     {
