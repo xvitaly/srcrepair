@@ -20,17 +20,17 @@ namespace srcrepair.gui
     public partial class FrmMute : Form
     {
         /// <summary>
-        /// Logger instance for FrmMute class.
+        /// Logger instance for the FrmMute class.
         /// </summary>
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// CurrentPlatform instance for FrmMute class.
+        /// CurrentPlatform instance for the FrmMute class.
         /// </summary>
         private readonly CurrentPlatform Platform = CurrentPlatform.Create();
 
         /// <summary>
-        /// Stores the number of bytes in database file header.
+        /// Stores the number of bytes in the database file header.
         /// </summary>
         private readonly int HeaderLength = 4;
 
@@ -40,17 +40,17 @@ namespace srcrepair.gui
         private readonly int ElementLength = 32;
 
         /// <summary>
-        /// Stores full path to muted players database file.
+        /// Stores the full path to the muted players database file.
         /// </summary>
         private readonly string Banlist;
 
         /// <summary>
-        /// Stores full path to game backups directory.
+        /// Stores the full path to the directory for saving backups.
         /// </summary>
         private readonly string BackUpDir;
 
         /// <summary>
-        /// Stores database header.
+        /// Stores the database header.
         /// </summary>
         private byte[] DatabaseHeader;
 
