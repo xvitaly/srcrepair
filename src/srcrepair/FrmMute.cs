@@ -222,7 +222,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens Steam profile page of selected user ID.
+        /// Opens the Steam profile page of the selected user ID.
         /// </summary>
         private void OpenItemProfile()
         {
