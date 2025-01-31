@@ -122,7 +122,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Aligns string to specified length with NUL bytes.
+        /// Aligns a string to the specified length with NUL bytes.
         /// </summary>
         /// <param name="Source">Source string.</param>
         /// <returns>Aligned string.</returns>
