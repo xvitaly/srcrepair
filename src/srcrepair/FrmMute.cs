@@ -67,8 +67,8 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Reads contents from muted players database file and
-        /// renders it on form.
+        /// Reads the contents of the muted players database file and
+        /// renders it on the form.
         /// </summary>
         private void ReadFileToTable()
         {
