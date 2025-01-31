@@ -57,13 +57,13 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmMute class constructor.
         /// </summary>
-        /// <param name="BL">Full path to the muted players database file.</param>
-        /// <param name="BD">Full path to the directory for saving backups.</param>
-        public FrmMute(string BL, string BD)
+        /// <param name="DBFileName">Full path to the muted players database file.</param>
+        /// <param name="BackUpDir">Full path to the directory for saving backups.</param>
+        public FrmMute(string DBFileName, string BackUpDir)
         {
             InitializeComponent();
-            Banlist = BL;
-            FullBackUpDirPath = BD;
+            Banlist = DBFileName;
+            FullBackUpDirPath = BackUpDir;
         }
 
         /// <summary>
