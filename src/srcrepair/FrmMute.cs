@@ -92,7 +92,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Writes contents of muted players to database file.
+        /// Writes the contents of muted players table to the database file.
         /// </summary>
         private void WriteTableToFile()
         {
