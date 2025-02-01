@@ -253,7 +253,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Reads elements from a database file.
+        /// Reads the contents of the database file.
         /// </summary>
         private void UpdateTable()
         {
