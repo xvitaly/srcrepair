@@ -262,7 +262,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Saves current contents to a database file.
+        /// Writes the contents to the database file.
         /// </summary>
         private void WriteTable()
         {
