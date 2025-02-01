@@ -754,11 +754,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while writing to save the muted users database..
+        ///   Looks up a localized string similar to Exception while trying to save the muted players database file..
         /// </summary>
-        internal static string AppDbgExMMSaveDb {
+        internal static string AppDbgExMMSaveDatabase {
             get {
-                return ResourceManager.GetString("AppDbgExMMSaveDb", resourceCulture);
+                return ResourceManager.GetString("AppDbgExMMSaveDatabase", resourceCulture);
             }
         }
         

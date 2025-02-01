@@ -320,8 +320,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExMMSaveDb);
-                MessageBox.Show(AppStrings.MM_SaveException, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, DebugStrings.AppDbgExMMSaveDatabase);
+                MessageBox.Show(AppStrings.MM_SaveDatabaseError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

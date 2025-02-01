@@ -1402,20 +1402,20 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occured while saving the muted players database file! It may be corrupted..
+        /// </summary>
+        internal static string MM_SaveDatabaseError {
+            get {
+                return ResourceManager.GetString("MM_SaveDatabaseError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your changes ware saved!.
         /// </summary>
         internal static string MM_SavedOK {
             get {
                 return ResourceManager.GetString("MM_SavedOK", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occured while saving database file! It may be corrupted..
-        /// </summary>
-        internal static string MM_SaveException {
-            get {
-                return ResourceManager.GetString("MM_SaveException", resourceCulture);
             }
         }
         

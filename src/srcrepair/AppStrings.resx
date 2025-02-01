@@ -564,11 +564,11 @@
   <data name="MM_RemoveItemsError" xml:space="preserve">
     <value>An error occurred while deleting selected items!</value>
   </data>
+  <data name="MM_SaveDatabaseError" xml:space="preserve">
+    <value>An error occured while saving the muted players database file! It may be corrupted.</value>
+  </data>
   <data name="MM_SavedOK" xml:space="preserve">
     <value>Your changes ware saved!</value>
-  </data>
-  <data name="MM_SaveException" xml:space="preserve">
-    <value>An error occured while saving database file! It may be corrupted.</value>
   </data>
   <data name="MO_OptionsSaved" xml:space="preserve">
     <value>The options have been saved successfully! Some of them will be activated only on the next program launch.</value>

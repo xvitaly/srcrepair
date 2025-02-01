@@ -348,8 +348,8 @@
   <data name="AppDbgExMMRemoveItems" xml:space="preserve">
     <value>Exception while trying to remove the selected items.</value>
   </data>
-  <data name="AppDbgExMMSaveDb" xml:space="preserve">
-    <value>Exception while writing to save the muted users database.</value>
+  <data name="AppDbgExMMSaveDatabase" xml:space="preserve">
+    <value>Exception while trying to save the muted players database file.</value>
   </data>
   <data name="AppDbgExPluginRegister" xml:space="preserve">
     <value>Exception while trying to register the available plugins.</value>
