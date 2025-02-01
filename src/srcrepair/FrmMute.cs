@@ -234,7 +234,8 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Creates backup of database file if safe cleanup is enabled.
+        /// Creates a backup of the database file if the safe cleanup
+        /// is enabled.
         /// </summary>
         private void CreateTableBackUp()
         {
