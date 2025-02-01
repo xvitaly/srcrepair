@@ -1357,15 +1357,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occured while parsing game banlist file. Please try again later..
-        /// </summary>
-        internal static string MM_ExceptionDetected {
-            get {
-                return ResourceManager.GetString("MM_ExceptionDetected", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred while trying to view the selected item&apos;s Steam profile in a web browser..
         /// </summary>
         internal static string MM_OpenItemProfileError {
@@ -1380,6 +1371,15 @@ namespace srcrepair.gui {
         internal static string MM_PasteItemsError {
             get {
                 return ResourceManager.GetString("MM_PasteItemsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An error occured while reading the muted players database file!.
+        /// </summary>
+        internal static string MM_ReadDatabaseError {
+            get {
+                return ResourceManager.GetString("MM_ReadDatabaseError", resourceCulture);
             }
         }
         

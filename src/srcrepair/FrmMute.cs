@@ -283,8 +283,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExMMReadDb);
-                MessageBox.Show(AppStrings.MM_ExceptionDetected, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, DebugStrings.AppDbgExMMReadDatabase);
+                MessageBox.Show(AppStrings.MM_ReadDatabaseError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -727,11 +727,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while reading the muted users database..
+        ///   Looks up a localized string similar to Exception while trying to read the muted players database file..
         /// </summary>
-        internal static string AppDbgExMMReadDb {
+        internal static string AppDbgExMMReadDatabase {
             get {
-                return ResourceManager.GetString("AppDbgExMMReadDb", resourceCulture);
+                return ResourceManager.GetString("AppDbgExMMReadDatabase", resourceCulture);
             }
         }
         

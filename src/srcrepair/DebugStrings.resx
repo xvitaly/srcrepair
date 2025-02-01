@@ -339,8 +339,8 @@
   <data name="AppDbgExMMPasteItems" xml:space="preserve">
     <value>Exception while trying to paste the items from the clipboard.</value>
   </data>
-  <data name="AppDbgExMMReadDb" xml:space="preserve">
-    <value>Exception while reading the muted users database.</value>
+  <data name="AppDbgExMMReadDatabase" xml:space="preserve">
+    <value>Exception while trying to read the muted players database file.</value>
   </data>
   <data name="AppDbgExMMRefresh" xml:space="preserve">
     <value>Exception while trying to refresh the items from the database.</value>

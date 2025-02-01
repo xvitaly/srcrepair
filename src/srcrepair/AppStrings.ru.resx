@@ -549,14 +549,14 @@
   <data name="MM_CutItemsError" xml:space="preserve">
     <value>Произошла ошибка при попытке вырезать выделенные элементы в буфер обмена!</value>
   </data>
-  <data name="MM_ExceptionDetected" xml:space="preserve">
-    <value>При загрузке содержимого файла произошла ошибка. Попробуйте ещё раз позже.</value>
-  </data>
   <data name="MM_OpenItemProfileError" xml:space="preserve">
     <value>Произошла ошибка при попытке просмотреть профиль Steam выбранного элемента в веб-браузере!</value>
   </data>
   <data name="MM_PasteItemsError" xml:space="preserve">
     <value>Произошла ошибка при попытке вставить элементы из буфера обмена!</value>
+  </data>
+  <data name="MM_ReadDatabaseError" xml:space="preserve">
+    <value>Произошла ошибка при загрузке файла базы данных отключённых игроков!</value>
   </data>
   <data name="MM_RefreshError" xml:space="preserve">
     <value>Прозошла ошибка при попытке обновить элементы из базы данных!</value>
