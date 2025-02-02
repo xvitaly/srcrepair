@@ -301,8 +301,8 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Error(Ex, DebugStrings.AppDbgExMMRefresh);
-                MessageBox.Show(AppStrings.MM_RefreshError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.Error(Ex, DebugStrings.AppDbgExMMRefreshTable);
+                MessageBox.Show(AppStrings.MM_RefreshTableError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -342,7 +342,7 @@
   <data name="AppDbgExMMReadDatabase" xml:space="preserve">
     <value>Exception while trying to read the muted players database file.</value>
   </data>
-  <data name="AppDbgExMMRefresh" xml:space="preserve">
+  <data name="AppDbgExMMRefreshTable" xml:space="preserve">
     <value>Exception while trying to refresh the items from the database.</value>
   </data>
   <data name="AppDbgExMMRemoveItems" xml:space="preserve">

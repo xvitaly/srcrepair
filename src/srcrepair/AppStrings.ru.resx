@@ -561,7 +561,7 @@
   <data name="MM_ReadDatabaseError" xml:space="preserve">
     <value>Произошла ошибка при загрузке файла базы данных отключённых игроков!</value>
   </data>
-  <data name="MM_RefreshError" xml:space="preserve">
+  <data name="MM_RefreshTableError" xml:space="preserve">
     <value>Прозошла ошибка при попытке обновить элементы из базы данных!</value>
   </data>
   <data name="MM_RemoveItemsError" xml:space="preserve">

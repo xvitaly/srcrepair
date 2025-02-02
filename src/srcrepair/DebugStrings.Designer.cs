@@ -738,9 +738,9 @@ namespace srcrepair.gui {
         /// <summary>
         ///   Looks up a localized string similar to Exception while trying to refresh the items from the database..
         /// </summary>
-        internal static string AppDbgExMMRefresh {
+        internal static string AppDbgExMMRefreshTable {
             get {
-                return ResourceManager.GetString("AppDbgExMMRefresh", resourceCulture);
+                return ResourceManager.GetString("AppDbgExMMRefreshTable", resourceCulture);
             }
         }
         

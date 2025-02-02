@@ -1393,11 +1393,11 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to update items from the database!.
+        ///   Looks up a localized string similar to An error occurred while trying to refresh the items from the database!.
         /// </summary>
-        internal static string MM_RefreshError {
+        internal static string MM_RefreshTableError {
             get {
-                return ResourceManager.GetString("MM_RefreshError", resourceCulture);
+                return ResourceManager.GetString("MM_RefreshTableError", resourceCulture);
             }
         }
         

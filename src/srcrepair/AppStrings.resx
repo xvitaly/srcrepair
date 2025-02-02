@@ -561,8 +561,8 @@
   <data name="MM_ReadDatabaseError" xml:space="preserve">
     <value>An error occured while reading the muted players database file!</value>
   </data>
-  <data name="MM_RefreshError" xml:space="preserve">
-    <value>An error occurred while trying to update items from the database!</value>
+  <data name="MM_RefreshTableError" xml:space="preserve">
+    <value>An error occurred while trying to refresh the items from the database!</value>
   </data>
   <data name="MM_RemoveItemsError" xml:space="preserve">
     <value>An error occurred while deleting selected items!</value>
