@@ -1348,7 +1348,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while cutting selected items to clipboard!.
+        ///   Looks up a localized string similar to An error occurred while cutting the selected items to the clipboard!.
         /// </summary>
         internal static string MM_CutItemsError {
             get {
