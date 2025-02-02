@@ -1339,7 +1339,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while copying selected items to clipboard!.
+        ///   Looks up a localized string similar to An error occurred while copying the selected items to the clipboard!.
         /// </summary>
         internal static string MM_CopyItemsError {
             get {

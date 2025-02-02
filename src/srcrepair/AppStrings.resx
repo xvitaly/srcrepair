@@ -544,7 +544,7 @@
     <value>Conversion from SteamIDv3 to legacy SteamID32 is not allowed!</value>
   </data>
   <data name="MM_CopyItemsError" xml:space="preserve">
-    <value>An error occurred while copying selected items to clipboard!</value>
+    <value>An error occurred while copying the selected items to the clipboard!</value>
   </data>
   <data name="MM_CutItemsError" xml:space="preserve">
     <value>An error occurred while cutting the selected items to the clipboard!</value>
