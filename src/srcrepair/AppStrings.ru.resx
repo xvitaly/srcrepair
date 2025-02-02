@@ -549,6 +549,9 @@
   <data name="MM_CutItemsError" xml:space="preserve">
     <value>Произошла ошибка при попытке вырезать выделенные элементы в буфер обмена!</value>
   </data>
+  <data name="MM_DatabaseSaved" xml:space="preserve">
+    <value>Файл базы данных сохранён!</value>
+  </data>
   <data name="MM_OpenItemProfileError" xml:space="preserve">
     <value>Произошла ошибка при попытке просмотреть профиль Steam выбранного элемента в веб-браузере!</value>
   </data>
@@ -566,9 +569,6 @@
   </data>
   <data name="MM_SaveDatabaseError" xml:space="preserve">
     <value>Произошла ошибка при сохранении файла базы данных отключённых игроков! Возможно, он был повреждён.</value>
-  </data>
-  <data name="MM_SavedOK" xml:space="preserve">
-    <value>Файл успешно сохранён!</value>
   </data>
   <data name="MO_OptionsSaved" xml:space="preserve">
     <value>Настройки были успешно сохранены! Некоторые из них будут задействованы только при следующем запуске программы.</value>

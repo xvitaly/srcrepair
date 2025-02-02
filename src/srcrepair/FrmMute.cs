@@ -316,7 +316,7 @@ namespace srcrepair.gui
             try
             {
                 WriteTable();
-                MessageBox.Show(AppStrings.MM_SavedOK, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(AppStrings.MM_DatabaseSaved, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception Ex)
             {

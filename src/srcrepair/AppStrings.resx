@@ -549,6 +549,9 @@
   <data name="MM_CutItemsError" xml:space="preserve">
     <value>An error occurred while cutting selected items to clipboard!</value>
   </data>
+  <data name="MM_DatabaseSaved" xml:space="preserve">
+    <value>The database file has been saved!</value>
+  </data>
   <data name="MM_OpenItemProfileError" xml:space="preserve">
     <value>An error occurred while trying to view the selected item's Steam profile in a web browser.</value>
   </data>
@@ -566,9 +569,6 @@
   </data>
   <data name="MM_SaveDatabaseError" xml:space="preserve">
     <value>An error occured while saving the muted players database file! It may be corrupted.</value>
-  </data>
-  <data name="MM_SavedOK" xml:space="preserve">
-    <value>Your changes ware saved!</value>
   </data>
   <data name="MO_OptionsSaved" xml:space="preserve">
     <value>The options have been saved successfully! Some of them will be activated only on the next program launch.</value>

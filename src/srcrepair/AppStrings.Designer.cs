@@ -1357,6 +1357,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The database file has been saved!.
+        /// </summary>
+        internal static string MM_DatabaseSaved {
+            get {
+                return ResourceManager.GetString("MM_DatabaseSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while trying to view the selected item&apos;s Steam profile in a web browser..
         /// </summary>
         internal static string MM_OpenItemProfileError {
@@ -1407,15 +1416,6 @@ namespace srcrepair.gui {
         internal static string MM_SaveDatabaseError {
             get {
                 return ResourceManager.GetString("MM_SaveDatabaseError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Your changes ware saved!.
-        /// </summary>
-        internal static string MM_SavedOK {
-            get {
-                return ResourceManager.GetString("MM_SavedOK", resourceCulture);
             }
         }
         
