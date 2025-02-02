@@ -289,7 +289,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Update table" menu item and button click event handler.
+        /// "Refresh table" menu item and button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
