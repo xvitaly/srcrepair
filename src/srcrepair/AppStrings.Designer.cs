@@ -1321,7 +1321,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while converting selected items to a new format!.
+        ///   Looks up a localized string similar to An error occurred while converting the selected items to a new format!.
         /// </summary>
         internal static string MM_ConvertItemsError {
             get {

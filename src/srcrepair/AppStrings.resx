@@ -538,7 +538,7 @@
     <value>An error occurred while loading the log file!</value>
   </data>
   <data name="MM_ConvertItemsError" xml:space="preserve">
-    <value>An error occurred while converting selected items to a new format!</value>
+    <value>An error occurred while converting the selected items to a new format!</value>
   </data>
   <data name="MM_ConvRest" xml:space="preserve">
     <value>Conversion from SteamIDv3 to legacy SteamID32 is not allowed!</value>
