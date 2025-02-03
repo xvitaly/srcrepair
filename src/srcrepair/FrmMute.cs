@@ -381,7 +381,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Delete row" button click event handler.
+        /// "Delete items" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
