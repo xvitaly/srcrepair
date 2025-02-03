@@ -556,7 +556,7 @@
     <value>An error occurred while trying to view the selected item's Steam profile in a web browser.</value>
   </data>
   <data name="MM_PasteItemsError" xml:space="preserve">
-    <value>An error occurred while trying to paste items from clipboard!</value>
+    <value>An error occurred while trying to paste the items from the clipboard!</value>
   </data>
   <data name="MM_ReadDatabaseError" xml:space="preserve">
     <value>An error occured while reading the muted players database file!</value>

@@ -1375,7 +1375,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An error occurred while trying to paste items from clipboard!.
+        ///   Looks up a localized string similar to An error occurred while trying to paste the items from the clipboard!.
         /// </summary>
         internal static string MM_PasteItemsError {
             get {
