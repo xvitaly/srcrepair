@@ -394,7 +394,7 @@ namespace srcrepair.gui
             catch (Exception Ex)
             {
                 Logger.Warn(Ex, DebugStrings.AppDbgExMMRemoveItems);
-                MessageBox.Show(AppStrings.MM_RemoveItemsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(AppStrings.MM_DeleteItemsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

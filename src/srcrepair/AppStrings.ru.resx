@@ -552,6 +552,9 @@
   <data name="MM_DatabaseSaved" xml:space="preserve">
     <value>Файл базы данных сохранён!</value>
   </data>
+  <data name="MM_DeleteItemsError" xml:space="preserve">
+    <value>Произошла ошибка при попытке удалить выделенные элементы!</value>
+  </data>
   <data name="MM_OpenItemProfileError" xml:space="preserve">
     <value>Произошла ошибка при попытке просмотреть профиль Steam выбранного элемента в веб-браузере!</value>
   </data>
@@ -563,9 +566,6 @@
   </data>
   <data name="MM_RefreshTableError" xml:space="preserve">
     <value>Прозошла ошибка при попытке обновить элементы из базы данных!</value>
-  </data>
-  <data name="MM_RemoveItemsError" xml:space="preserve">
-    <value>Произошла ошибка при попытке удалить выделенные элементы!</value>
   </data>
   <data name="MM_SaveDatabaseError" xml:space="preserve">
     <value>Произошла ошибка при сохранении файла базы данных отключённых игроков! Возможно, он был повреждён.</value>

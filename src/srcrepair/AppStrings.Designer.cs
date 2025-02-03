@@ -1366,6 +1366,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An error occurred while deleting the selected items!.
+        /// </summary>
+        internal static string MM_DeleteItemsError {
+            get {
+                return ResourceManager.GetString("MM_DeleteItemsError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while trying to view the selected item&apos;s Steam profile in a web browser..
         /// </summary>
         internal static string MM_OpenItemProfileError {
@@ -1398,15 +1407,6 @@ namespace srcrepair.gui {
         internal static string MM_RefreshTableError {
             get {
                 return ResourceManager.GetString("MM_RefreshTableError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An error occurred while deleting selected items!.
-        /// </summary>
-        internal static string MM_RemoveItemsError {
-            get {
-                return ResourceManager.GetString("MM_RemoveItemsError", resourceCulture);
             }
         }
         
