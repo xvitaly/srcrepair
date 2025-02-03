@@ -393,7 +393,7 @@ namespace srcrepair.gui
             }
             catch (Exception Ex)
             {
-                Logger.Warn(Ex, DebugStrings.AppDbgExMMRemoveItems);
+                Logger.Warn(Ex, DebugStrings.AppDbgExMMDeleteItems);
                 MessageBox.Show(AppStrings.MM_DeleteItemsError, Properties.Resources.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }

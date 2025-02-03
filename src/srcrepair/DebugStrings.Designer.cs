@@ -709,6 +709,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Exception while trying to delete the selected items..
+        /// </summary>
+        internal static string AppDbgExMMDeleteItems {
+            get {
+                return ResourceManager.GetString("AppDbgExMMDeleteItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception when trying to view the selected item&apos;s Steam profile in a web browser..
         /// </summary>
         internal static string AppDbgExMMOpenItemProfile {
@@ -741,15 +750,6 @@ namespace srcrepair.gui {
         internal static string AppDbgExMMRefreshTable {
             get {
                 return ResourceManager.GetString("AppDbgExMMRefreshTable", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exception while trying to remove the selected items..
-        /// </summary>
-        internal static string AppDbgExMMRemoveItems {
-            get {
-                return ResourceManager.GetString("AppDbgExMMRemoveItems", resourceCulture);
             }
         }
         

@@ -333,6 +333,9 @@
   <data name="AppDbgExMMCutItems" xml:space="preserve">
     <value>Exception while trying to cut the selected items to the clipboard.</value>
   </data>
+  <data name="AppDbgExMMDeleteItems" xml:space="preserve">
+    <value>Exception while trying to delete the selected items.</value>
+  </data>
   <data name="AppDbgExMMOpenItemProfile" xml:space="preserve">
     <value>Exception when trying to view the selected item's Steam profile in a web browser.</value>
   </data>
@@ -344,9 +347,6 @@
   </data>
   <data name="AppDbgExMMRefreshTable" xml:space="preserve">
     <value>Exception while trying to refresh the items from the database.</value>
-  </data>
-  <data name="AppDbgExMMRemoveItems" xml:space="preserve">
-    <value>Exception while trying to remove the selected items.</value>
   </data>
   <data name="AppDbgExMMSaveDatabase" xml:space="preserve">
     <value>Exception while trying to save the muted players database file.</value>
