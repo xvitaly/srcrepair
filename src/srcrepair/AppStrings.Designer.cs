@@ -403,7 +403,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to start web browser to visit the official website!.
+        ///   Looks up a localized string similar to Failed to start the web browser to visit the official website!.
         /// </summary>
         internal static string AppVisitWebsiteError {
             get {

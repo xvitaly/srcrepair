@@ -232,7 +232,7 @@
     <value>Failed to show the official group in both the Steam client and the web browser!</value>
   </data>
   <data name="AppVisitWebsiteError" xml:space="preserve">
-    <value>Failed to start web browser to visit the official website!</value>
+    <value>Failed to start the web browser to visit the official website!</value>
   </data>
   <data name="AppXMLParseError" xml:space="preserve">
     <value>An error occurred while parsing XML game database file. Please reinstall this application.</value>
