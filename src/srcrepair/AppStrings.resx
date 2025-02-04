@@ -223,7 +223,7 @@
     <value>Cannot get video settings of "{0}" from file "{1}".</value>
   </data>
   <data name="AppVisitBugTrackerError" xml:space="preserve">
-    <value>Failed to start web browser to visit the bug tracker!</value>
+    <value>Failed to start the web browser to visit the bug tracker!</value>
   </data>
   <data name="AppVisitCVListError" xml:space="preserve">
     <value>Failed to start web browser to visit the variables and functions documentation website!</value>

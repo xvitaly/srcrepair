@@ -376,7 +376,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to start web browser to visit the bug tracker!.
+        ///   Looks up a localized string similar to Failed to start the web browser to visit the bug tracker!.
         /// </summary>
         internal static string AppVisitBugTrackerError {
             get {
