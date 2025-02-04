@@ -229,7 +229,7 @@
     <value>Failed to start the web browser to visit the variables and functions documentation website!</value>
   </data>
   <data name="AppVisitGroupError" xml:space="preserve">
-    <value>Failed to show the official group in both the Steam client and web browser!</value>
+    <value>Failed to show the official group in both the Steam client and the web browser!</value>
   </data>
   <data name="AppVisitWebsiteError" xml:space="preserve">
     <value>Failed to start web browser to visit the official website!</value>
