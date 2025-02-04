@@ -1231,7 +1231,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to start web browser to visit the HUD&apos;s homepage!.
+        ///   Looks up a localized string similar to Failed to start the web browser to visit the HUD&apos;s homepage!.
         /// </summary>
         internal static string HD_HomepageError {
             get {
