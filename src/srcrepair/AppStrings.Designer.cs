@@ -385,7 +385,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Failed to start web browser to visit the variables and functions documentation website!.
+        ///   Looks up a localized string similar to Failed to start the web browser to visit the variables and functions documentation website!.
         /// </summary>
         internal static string AppVisitCVListError {
             get {
