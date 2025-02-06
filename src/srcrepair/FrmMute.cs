@@ -326,7 +326,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Cut to clipboard" button click event handler.
+        /// "Cut to the clipboard" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
@@ -345,7 +345,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Copy to clipboard" button click event handler.
+        /// "Copy to the clipboard" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
@@ -363,7 +363,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Paste from clipboard" button click event handler.
+        /// "Paste from the clipboard" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
@@ -381,7 +381,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// "Delete items" button click event handler.
+        /// "Delete selected items" button click event handler.
         /// </summary>
         /// <param name="sender">Sender object.</param>
         /// <param name="e">Event arguments.</param>
