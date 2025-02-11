@@ -239,7 +239,7 @@ namespace srcrepair.gui
         /// </summary>
         private void CreateTableBackUp()
         {
-            if (File.Exists(Banlist) && Properties.Settings.Default.SafeCleanup)
+            if (Properties.Settings.Default.SafeCleanup && File.Exists(Banlist))
             {
                 try
                 {
