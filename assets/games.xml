@@ -14,7 +14,10 @@
         <HUDsAvail>1</HUDsAvail>
         <SID>440</SID>
         <SVer>1</SVer>
-        <Executable>tf_win64.exe</Executable>
+        <Executable>
+            <x86>tf.exe</x86>
+            <x64>tf_win64.exe</x64>
+        </Executable>
     </Game>
     <Game Name="Team Fortress 2 (32-bit)">
         <Enabled>0</Enabled>
@@ -487,7 +490,10 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>222880</SID>
         <SVer>2</SVer>
-        <Executable>insurgency_x64.exe</Executable>
+        <Executable>
+            <x86>insurgency.exe</x86>
+            <x64>insurgency_x64.exe</x64>
+        </Executable>
     </Game>
     <Game Name="No More Room in Hell">
         <Enabled>1</Enabled>
@@ -696,7 +702,10 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>225600</SID>
         <SVer>2</SVer>
-        <Executable>bin/win64/berimbau.exe</Executable>
+        <Executable>
+            <x86>bin/win32/berimbau.exe</x86>
+            <x64>bin/win64/berimbau.exe</x64>
+        </Executable>
     </Game>
     <Game Name="The Beginner's Guide">
         <Enabled>1</Enabled>
