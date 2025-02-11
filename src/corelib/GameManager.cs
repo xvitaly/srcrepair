@@ -28,6 +28,11 @@ namespace srcrepair.core
         private readonly Dictionary<string, SourceGame> SourceGames;
 
         /// <summary>
+        /// Store operating system architecture name.
+        /// </summary>
+        private readonly string OSArchitecture;
+
+        /// <summary>
         /// Get names of installed games.
         /// </summary>
         public List<string> InstalledGameNames
@@ -46,14 +51,27 @@ namespace srcrepair.core
         public SourceGame this[string key] => SourceGames[key];
 
         /// <summary>
+        /// Get the application executable name depending on the current
+        /// architecture (if the game supports it).
+        /// </summary>
+        /// <param name="XmlItem">XmlNode instance.</param>
+        /// <returns>Return the application executable name.</returns>
+        private string GetExecutableName(XmlNode XmlItem)
+        {
+            XmlNode Executable = XmlItem.SelectSingleNode("Executable");
+            return (Executable.ChildNodes.Count > 1) ? Executable.SelectSingleNode(OSArchitecture).InnerText : Executable.InnerText;
+        }
+
+        /// <summary>
         /// GameManager class constructor.
         /// </summary>
         /// <param name="App">CurrentApp class instance.</param>
         /// <param name="HideUnsupported">Enable or disable adding unsupported games to list.</param>
         public GameManager(CurrentApp App, bool HideUnsupported)
         {
-            // Creating empty dictionary...
+            // Setting private fields...
             SourceGames = new Dictionary<string, SourceGame>();
+            OSArchitecture = App.Platform.OSArchitecture;
 
             // Fetching game libraries...
             List<string> GameDirs = App.SteamClient.FormatInstallDirs(App.Platform.SteamAppsFolderName);
@@ -72,7 +90,7 @@ namespace srcrepair.core
                     {
                         if (XmlItem.SelectSingleNode("Enabled").InnerText == "1" || !HideUnsupported)
                         {
-                            SourceGame SG = new SourceGame(XmlItem.Attributes["Name"].Value, XmlItem.SelectSingleNode("DirName").InnerText, XmlItem.SelectSingleNode("SmallName").InnerText, XmlItem.SelectSingleNode("Executable").InnerText, XmlItem.SelectSingleNode("SID").InnerText, Convert.ToInt32(XmlItem.SelectSingleNode("SVer").InnerText), XmlItem.SelectSingleNode("VFDir").InnerText, XmlItem.SelectSingleNode("UserDir").InnerText == "1", XmlItem.SelectSingleNode("HUDsAvail").InnerText == "1", App.AppUserDir, App.SteamClient.FullSteamPath, App.Platform.SteamAppsFolderName, App.SteamClient.SteamID, GameDirs, !App.Platform.AdvancedFeaturesSupported);
+                            SourceGame SG = new SourceGame(XmlItem.Attributes["Name"].Value, XmlItem.SelectSingleNode("DirName").InnerText, XmlItem.SelectSingleNode("SmallName").InnerText, GetExecutableName(XmlItem), XmlItem.SelectSingleNode("SID").InnerText, Convert.ToInt32(XmlItem.SelectSingleNode("SVer").InnerText), XmlItem.SelectSingleNode("VFDir").InnerText, XmlItem.SelectSingleNode("UserDir").InnerText == "1", XmlItem.SelectSingleNode("HUDsAvail").InnerText == "1", App.AppUserDir, App.SteamClient.FullSteamPath, App.Platform.SteamAppsFolderName, App.SteamClient.SteamID, GameDirs, !App.Platform.AdvancedFeaturesSupported);
                             if (SG.IsInstalled)
                             {
                                 SourceGames.Add(XmlItem.Attributes["Name"].Value, SG);
