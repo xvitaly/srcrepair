@@ -261,7 +261,7 @@ Level 2:
     * ``3`` -- Source Engine 2, generic (not yet implemented; reserved for future use);
     * ``4`` -- Source Engine 1, Type 4 (same as Type 1, but store video settings in ``videoconfig.cfg`` file);
 
-  * ``Executable`` -- game executable file name (only for Windows).
+  * ``Executable`` -- game executable (only for Windows). A single file name or a list for each supported architecture: ``x86`` and ``x64``.
 
 .. index:: huds database
 .. _huds-database:
