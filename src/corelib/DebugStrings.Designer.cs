@@ -151,7 +151,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while building the games list object..
+        ///   Looks up a localized string similar to Exception while building the list of available games..
         /// </summary>
         internal static string AppDbgExCoreGameManConstructor {
             get {

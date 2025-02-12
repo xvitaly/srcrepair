@@ -142,7 +142,7 @@
     <value>Minor exception while while building the Config list object.</value>
   </data>
   <data name="AppDbgExCoreGameManConstructor" xml:space="preserve">
-    <value>Minor exception while building the games list object.</value>
+    <value>Exception while building the list of available games.</value>
   </data>
   <data name="AppDbgExCoreHelperNxExists" xml:space="preserve">
     <value>The helper application executable file does not exist.</value>
