@@ -136,7 +136,7 @@
     <value>Directory {0} not found. Cannot add it to the Zip archive!</value>
   </data>
   <data name="AppDbgExCoreClnManConstructor" xml:space="preserve">
-    <value>Minor exception while while building the CleanupTargets list object.</value>
+    <value>Exception while building the list of available cleanup targets.</value>
   </data>
   <data name="AppDbgExCoreConfManConstructor" xml:space="preserve">
     <value>Exception while building the list of available FPS-configs.</value>

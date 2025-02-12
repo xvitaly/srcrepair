@@ -133,7 +133,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while while building the CleanupTargets list object..
+        ///   Looks up a localized string similar to Exception while building the list of available cleanup targets..
         /// </summary>
         internal static string AppDbgExCoreClnManConstructor {
             get {
