@@ -259,7 +259,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Unable to fetch the value of the {0} video setting..
+        ///   Looks up a localized string similar to Unable to fetch the value of the &quot;{0}&quot; video setting..
         /// </summary>
         internal static string AppDbgExCoreVideoLoadCvar {
             get {
