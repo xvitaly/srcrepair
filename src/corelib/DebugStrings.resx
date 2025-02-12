@@ -139,7 +139,7 @@
     <value>Minor exception while while building the CleanupTargets list object.</value>
   </data>
   <data name="AppDbgExCoreConfManConstructor" xml:space="preserve">
-    <value>Minor exception while while building the Config list object.</value>
+    <value>Exception while building the list of available FPS-configs.</value>
   </data>
   <data name="AppDbgExCoreGameManConstructor" xml:space="preserve">
     <value>Exception while building the list of available games.</value>

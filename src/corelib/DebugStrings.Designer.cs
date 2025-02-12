@@ -142,7 +142,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while while building the Config list object..
+        ///   Looks up a localized string similar to Exception while building the list of available FPS-configs..
         /// </summary>
         internal static string AppDbgExCoreConfManConstructor {
             get {
