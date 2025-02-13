@@ -178,7 +178,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while building the list of available plugins object..
+        ///   Looks up a localized string similar to Exception while building the list of available plugins..
         /// </summary>
         internal static string AppDbgExCorePluginManConstructor {
             get {
