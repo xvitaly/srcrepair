@@ -205,7 +205,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Minor exception while fetching the Steam mount points..
+        ///   Looks up a localized string similar to Exception while getting Steam mount points from the configuration file..
         /// </summary>
         internal static string AppDbgExCoreStmManMountPointsFetchError {
             get {

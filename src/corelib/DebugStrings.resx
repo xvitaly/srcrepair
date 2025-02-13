@@ -157,7 +157,7 @@
     <value>The plugin executable file does not exist.</value>
   </data>
   <data name="AppDbgExCoreStmManMountPointsFetchError" xml:space="preserve">
-    <value>Minor exception while fetching the Steam mount points.</value>
+    <value>Exception while getting Steam mount points from the configuration file.</value>
   </data>
   <data name="AppDbgExCoreStmManNoInstallPathDetected" xml:space="preserve">
     <value>No InstallPath value detected. Unable to get installation path from the registry.</value>
