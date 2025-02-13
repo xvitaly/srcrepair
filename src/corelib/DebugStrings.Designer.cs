@@ -124,7 +124,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Directory {0} not found. Cannot add it to the Zip archive!.
+        ///   Looks up a localized string similar to The directory &quot;{0}&quot; was not found. Cannot add it to the Zip archive!.
         /// </summary>
         internal static string AppDbgCoreZipAddDirNotFound {
             get {

@@ -133,7 +133,7 @@
     <value>The requested value "{0}" for the "{1}" setter is out of range.</value>
   </data>
   <data name="AppDbgCoreZipAddDirNotFound" xml:space="preserve">
-    <value>Directory {0} not found. Cannot add it to the Zip archive!</value>
+    <value>The directory "{0}" was not found. Cannot add it to the Zip archive!</value>
   </data>
   <data name="AppDbgExCoreClnManConstructor" xml:space="preserve">
     <value>Exception while building the list of available cleanup targets.</value>
