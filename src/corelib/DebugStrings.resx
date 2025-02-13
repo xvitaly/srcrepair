@@ -184,6 +184,6 @@
     <value>Current operating system is not supported.</value>
   </data>
   <data name="AppDbgCoreEntryParserEmptyError" xml:space="preserve">
-    <value>Game config entry string cannot be null, empty or contain only spaces.</value>
+    <value>The game config entry string cannot be null, empty or contain only spaces.</value>
   </data>
 </root>

@@ -61,7 +61,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Game config entry string cannot be null, empty or contain only spaces..
+        ///   Looks up a localized string similar to The game config entry string cannot be null, empty or contain only spaces..
         /// </summary>
         internal static string AppDbgCoreEntryParserEmptyError {
             get {
