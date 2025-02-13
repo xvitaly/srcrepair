@@ -148,7 +148,7 @@
     <value>The helper application executable file does not exist.</value>
   </data>
   <data name="AppDbgExCoreHudManConstructor" xml:space="preserve">
-    <value>Exception while building list of available HUDs.</value>
+    <value>Exception while building the list of available HUDs.</value>
   </data>
   <data name="AppDbgExCorePluginManConstructor" xml:space="preserve">
     <value>Exception while building the list of available plugins.</value>

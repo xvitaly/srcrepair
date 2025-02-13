@@ -169,7 +169,7 @@ namespace srcrepair.core {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Exception while building list of available HUDs..
+        ///   Looks up a localized string similar to Exception while building the list of available HUDs..
         /// </summary>
         internal static string AppDbgExCoreHudManConstructor {
             get {
