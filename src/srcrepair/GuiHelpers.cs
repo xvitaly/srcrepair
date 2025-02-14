@@ -32,11 +32,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens archive extract window with progress and extracts
-        /// specified file to a specified directory.
+        /// Opens the archive unpacking module and extracts the
+        /// specified archive file to the specified directory.
         /// </summary>
-        /// <param name="ArchName">Full path to archive.</param>
-        /// <param name="DestDir">Full destination path.</param>
+        /// <param name="ArchName">Full path to the archive file.</param>
+        /// <param name="DestDir">Full path to the destination directory.</param>
         public static void FormShowArchiveExtract(string ArchName, string DestDir)
         {
             using (FrmArchWrk ArW = new FrmArchWrk(ArchName, DestDir))
