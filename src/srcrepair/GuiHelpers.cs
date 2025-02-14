@@ -109,22 +109,22 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens Steam UserID selection window.
+        /// Opens the UserID selection module.
         /// </summary>
-        /// <param name="SteamIDs">List of available Steam UserIDs.</param>
+        /// <param name="SteamIDs">The list of available Steam UserIDs.</param>
         /// <returns>Selected by user Steam UserID.</returns>
         public static string FormShowIDSelect(List<string> SteamIDs)
         {
-            // Checking number of available Steam UserIDs...
+            // Checking the number of available Steam UserIDs...
             if (SteamIDs.Count < 1)
             {
                 throw new ArgumentOutOfRangeException(DebugStrings.AppDbgExStmIDsNotEnough);
             }
 
-            // Creating local variable for storing result...
+            // Creating a local variable for storing result...
             string Result = string.Empty;
 
-            // Starting form...
+            // Starting the form...
             using (FrmStmSelector StmSel = new FrmStmSelector(SteamIDs))
             {
                 if (StmSel.ShowDialog() == DialogResult.OK)
