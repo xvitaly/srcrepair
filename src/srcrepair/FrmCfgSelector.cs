@@ -28,7 +28,7 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmCfgSelector class constructor.
         /// </summary>
-        /// <param name="C">List of available config files.</param>
+        /// <param name="Cfgs">The list of available config files.</param>
         public FrmCfgSelector(List<string> Cfgs)
         {
             InitializeComponent();
