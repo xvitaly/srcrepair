@@ -40,7 +40,7 @@ namespace srcrepair.gui
         /// <summary>
         /// FrmStmSelector class constructor.
         /// </summary>
-        /// <param name="S">The list of available Steam UserIDs.</param>
+        /// <param name="AvailableIDs">The list of available Steam UserIDs.</param>
         public FrmStmSelector(List<string> AvailableIDs)
         {
             InitializeComponent();
