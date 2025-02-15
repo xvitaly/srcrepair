@@ -138,7 +138,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens config selection window.
+        /// Opens the config file selection module.
         /// </summary>
         /// <param name="Cfgs">List of available configs.</param>
         /// <returns>Selected by user config.</returns>
@@ -150,10 +150,10 @@ namespace srcrepair.gui
                 throw new ArgumentOutOfRangeException(AppStrings.CS_NEParamsFormException);
             }
 
-            // Creating local variable for storing result...
+            // Creating a local variable for storing result...
             string Result = string.Empty;
 
-            // Starting form...
+            // Starting the form...
             using (FrmCfgSelector CfgSel = new FrmCfgSelector(Cfgs))
             {
                 if (CfgSel.ShowDialog() == DialogResult.OK)
