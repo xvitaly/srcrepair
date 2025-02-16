@@ -199,7 +199,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Opens about application window.
         /// </summary>
-        public static void FormShowAboutApp()
+        public static void FormShowAbout()
         {
             using (FrmAbout AboutFrm = new FrmAbout())
             {

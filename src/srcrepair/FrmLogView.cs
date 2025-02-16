@@ -92,7 +92,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void LV_MenuHelpAbout_Click(object sender, EventArgs e)
         {
-            GuiHelpers.FormShowAboutApp();
+            GuiHelpers.FormShowAbout();
         }
 
         /// <summary>
