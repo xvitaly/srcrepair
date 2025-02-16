@@ -197,7 +197,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens about application window.
+        /// Opens the about module.
         /// </summary>
         public static void FormShowAbout()
         {
