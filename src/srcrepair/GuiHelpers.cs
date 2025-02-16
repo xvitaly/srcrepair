@@ -183,11 +183,11 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens installer window.
+        /// Opens the quick add-on installer module.
         /// </summary>
-        /// <param name="FullGamePath">Path to game installation directory.</param>
-        /// <param name="IsUsingUserDir">If current game is using a special directory for custom user stuff.</param>
-        /// <param name="CustomInstallDir">Path to custom user stuff directory.</param>
+        /// <param name="FullGamePath">Full path to the game installation directory.</param>
+        /// <param name="IsUsingUserDir">If current game is using a special directory for storing custom user content.</param>
+        /// <param name="CustomInstallDir">Full path to the custom user content directory.</param>
         public static void FormShowInstaller(string FullGamePath, bool IsUsingUserDir, string CustomInstallDir)
         {
             using (FrmInstaller InstF = new FrmInstaller(FullGamePath, IsUsingUserDir, CustomInstallDir))
