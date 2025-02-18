@@ -222,7 +222,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens settings window.
+        /// Opens the options module.
         /// </summary>
         public static void FormShowOptions()
         {
