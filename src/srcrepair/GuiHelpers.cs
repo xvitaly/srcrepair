@@ -233,9 +233,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens log viewer window.
+        /// Opens the log viewer module.
         /// </summary>
-        /// <param name="LogFile">Full path to active log file.</param>
+        /// <param name="LogFile">Full path to the log file.</param>
         public static void FormShowLogViewer(string LogFile)
         {
             using (FrmLogView Lv = new FrmLogView(LogFile))
