@@ -88,9 +88,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens non-interactive cleanup window.
+        /// Opens the file remover module.
         /// </summary>
-        /// <param name="Paths">List of files and directories for cleanup.</param>
+        /// <param name="Paths">The list of files and directories for deletion.</param>
         public static void FormShowRemoveFiles(List<string> Paths)
         {
             using (FrmRmWrk Rm = new FrmRmWrk(Paths))
@@ -100,9 +100,9 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens non-interactive cleanup window.
+        /// Opens the file remover module.
         /// </summary>
-        /// <param name="RmPath">Path for cleanup.</param>
+        /// <param name="RmPath">A single path for deletion.</param>
         public static void FormShowRemoveFiles(string RmPath)
         {
             FormShowRemoveFiles(new List<string> { RmPath });
