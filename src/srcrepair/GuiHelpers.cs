@@ -245,12 +245,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens interactive cleanup window.
+        /// Opens the Steam clenup module.
         /// </summary>
-        /// <param name="FullSteamPath">Full path to Steam client directory.</param>
-        /// <param name="FullBackUpDirPath">Path to directory for saving backups.</param>
-        /// <param name="SteamAppsDirName">Platform-dependent SteamApps directory name.</param>
-        /// <param name="SteamProcName">Platform-dependent Steam process name.</param>
+        /// <param name="FullSteamPath">Full path to the Steam client installation directory.</param>
+        /// <param name="FullBackUpDirPath">Full path to the directory for saving backups.</param>
         public static void FormShowStmCleaner(string FullSteamPath, string FullBackUpDirPath)
         {
             using (FrmStmClean StmCln = new FrmStmClean(FullSteamPath, FullBackUpDirPath))
