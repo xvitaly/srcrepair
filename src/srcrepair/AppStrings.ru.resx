@@ -196,16 +196,16 @@
     <value>Копии: вкл</value>
   </data>
   <data name="AppSizeBytes" xml:space="preserve">
-    <value>Б</value>
+    <value>{0} Б</value>
   </data>
   <data name="AppSizeGigabytes" xml:space="preserve">
-    <value>ГБ</value>
+    <value>{0} ГБ</value>
   </data>
   <data name="AppSizeKilobytes" xml:space="preserve">
-    <value>КБ</value>
+    <value>{0} КБ</value>
   </data>
   <data name="AppSizeMegabytes" xml:space="preserve">
-    <value>МБ</value>
+    <value>{0} МБ</value>
   </data>
   <data name="AppStartSteamFailed" xml:space="preserve">
     <value>Не удалось запустить Steam. Проверьте правильность его установки и повторите попытку позднее!</value>

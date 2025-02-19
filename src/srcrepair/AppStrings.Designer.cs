@@ -295,7 +295,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to B.
+        ///   Looks up a localized string similar to {0} B.
         /// </summary>
         internal static string AppSizeBytes {
             get {
@@ -304,7 +304,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GB.
+        ///   Looks up a localized string similar to {0} GB.
         /// </summary>
         internal static string AppSizeGigabytes {
             get {
@@ -313,7 +313,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to KB.
+        ///   Looks up a localized string similar to {0} KB.
         /// </summary>
         internal static string AppSizeKilobytes {
             get {
@@ -322,7 +322,7 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MB.
+        ///   Looks up a localized string similar to {0} MB.
         /// </summary>
         internal static string AppSizeMegabytes {
             get {

@@ -282,16 +282,15 @@ namespace srcrepair.gui
             const long KB = B * B;
             const long MB = B * B * B;
             const long GB = B * B * B * B;
-            const string Template = "{0} {1}";
 
             // Checking bytes...
-            if ((InpNumber >= 0) && (InpNumber < B)) { return string.Format(Template, InpNumber, AppStrings.AppSizeBytes); }
+            if ((InpNumber >= 0) && (InpNumber < B)) { return string.Format(AppStrings.AppSizeBytes, InpNumber); }
             // ...kilobytes...
-            else if ((InpNumber >= B) && (InpNumber < KB)) { return string.Format(Template, Math.Round((float)InpNumber / B, 2), AppStrings.AppSizeKilobytes); }
+            else if ((InpNumber >= B) && (InpNumber < KB)) { return string.Format(AppStrings.AppSizeKilobytes, Math.Round((float)InpNumber / B, 2)); }
             // ...megabytes...
-            else if ((InpNumber >= KB) && (InpNumber < MB)) { return string.Format(Template, Math.Round((float)InpNumber / KB, 2), AppStrings.AppSizeMegabytes); }
+            else if ((InpNumber >= KB) && (InpNumber < MB)) { return string.Format(AppStrings.AppSizeMegabytes, Math.Round((float)InpNumber / KB, 2)); }
             // ...gitabytes.
-            else if ((InpNumber >= MB) && (InpNumber < GB)) { return string.Format(Template, Math.Round((float)InpNumber / MB, 2), AppStrings.AppSizeGigabytes); }
+            else if ((InpNumber >= MB) && (InpNumber < GB)) { return string.Format(AppStrings.AppSizeGigabytes, Math.Round((float)InpNumber / MB, 2)); }
 
             // Return source as result...
             return InpNumber.ToString();
