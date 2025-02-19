@@ -258,10 +258,10 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens muted players manager window.
+        /// Opens the muted players manager module.
         /// </summary>
-        /// <param name="Banlist">Full path to muted players database file.</param>
-        /// <param name="FullBackUpDirPath">Full path to game backups directory.</param>
+        /// <param name="Banlist">Full path to the muted players database file.</param>
+        /// <param name="FullBackUpDirPath">Full path to the directory for saving backups.</param>
         public static void FormShowMuteManager(string Banlist, string FullBackUpDirPath)
         {
             using (FrmMute FMm = new FrmMute(Banlist, FullBackUpDirPath))
