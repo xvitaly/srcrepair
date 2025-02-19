@@ -271,7 +271,7 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Formats bytes file size to user-friendly format.
+        /// Formats the file size in bytes to the user-friendly format.
         /// </summary>
         /// <param name="InpNumber">File size in bytes.</param>
         /// <returns>User-friendly formatted string.</returns>
@@ -289,10 +289,10 @@ namespace srcrepair.gui
             else if ((InpNumber >= B) && (InpNumber < KB)) { return string.Format(AppStrings.AppSizeKilobytes, Math.Round((float)InpNumber / B, 2)); }
             // ...megabytes...
             else if ((InpNumber >= KB) && (InpNumber < MB)) { return string.Format(AppStrings.AppSizeMegabytes, Math.Round((float)InpNumber / KB, 2)); }
-            // ...gitabytes.
+            // ...gigabytes...
             else if ((InpNumber >= MB) && (InpNumber < GB)) { return string.Format(AppStrings.AppSizeGigabytes, Math.Round((float)InpNumber / MB, 2)); }
 
-            // Return source as result...
+            // Returning the source as a result...
             return InpNumber.ToString();
         }
     }
