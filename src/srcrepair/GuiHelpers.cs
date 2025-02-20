@@ -13,7 +13,7 @@ using srcrepair.core;
 namespace srcrepair.gui
 {
     /// <summary>
-    /// Class with helper methods for working with forms.
+    /// Class with helper methods for working with internal modules and forms.
     /// </summary>
     public static class GuiHelpers
     {
