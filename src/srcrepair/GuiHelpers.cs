@@ -25,9 +25,9 @@ namespace srcrepair.gui
         /// <param name="FileName">Full path to the destination file.</param>
         public static void FormShowDownloader(string URI, string FileName)
         {
-            using (FrmDnWrk DnW = new FrmDnWrk(URI, FileName))
+            using (FrmDnWrk DnWrkForm = new FrmDnWrk(URI, FileName))
             {
-                DnW.ShowDialog();
+                DnWrkForm.ShowDialog();
             }
         }
 
@@ -39,9 +39,9 @@ namespace srcrepair.gui
         /// <param name="DestDir">Full path to the destination directory.</param>
         public static void FormShowArchiveExtract(string ArchName, string DestDir)
         {
-            using (FrmArchWrk ArW = new FrmArchWrk(ArchName, DestDir))
+            using (FrmArchWrk ArchWrkForm = new FrmArchWrk(ArchName, DestDir))
             {
-                ArW.ShowDialog();
+                ArchWrkForm.ShowDialog();
             }
         }
 
@@ -62,9 +62,9 @@ namespace srcrepair.gui
         {
             if (!ProcessManager.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin)))
             {
-                using (FrmCleaner FCl = new FrmCleaner(Paths, SteamDir, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp))
+                using (FrmCleaner CleanerForm = new FrmCleaner(Paths, SteamDir, BackUpDir, LText, ResultMsg, ReadOnly, NoAuto, Recursive, ForceBackUp))
                 {
-                    FCl.ShowDialog();
+                    CleanerForm.ShowDialog();
                 }
             }
             else
@@ -93,9 +93,9 @@ namespace srcrepair.gui
         /// <param name="Paths">The list of files and directories for deletion.</param>
         public static void FormShowRemoveFiles(List<string> Paths)
         {
-            using (FrmRmWrk Rm = new FrmRmWrk(Paths))
+            using (FrmRmWrk RmWrkForm = new FrmRmWrk(Paths))
             {
-                Rm.ShowDialog();
+                RmWrkForm.ShowDialog();
             }
         }
 
@@ -125,11 +125,11 @@ namespace srcrepair.gui
             string Result = string.Empty;
 
             // Starting the form...
-            using (FrmStmSelector StmSel = new FrmStmSelector(SteamIDs))
+            using (FrmStmSelector StmSelectorForm = new FrmStmSelector(SteamIDs))
             {
-                if (StmSel.ShowDialog() == DialogResult.OK)
+                if (StmSelectorForm.ShowDialog() == DialogResult.OK)
                 {
-                    Result = StmSel.SteamID;
+                    Result = StmSelectorForm.SteamID;
                 }
             }
 
@@ -154,11 +154,11 @@ namespace srcrepair.gui
             string Result = string.Empty;
 
             // Starting the form...
-            using (FrmCfgSelector CfgSel = new FrmCfgSelector(Cfgs))
+            using (FrmCfgSelector CfgSelectorForm = new FrmCfgSelector(Cfgs))
             {
-                if (CfgSel.ShowDialog() == DialogResult.OK)
+                if (CfgSelectorForm.ShowDialog() == DialogResult.OK)
                 {
-                    Result = CfgSel.Config;
+                    Result = CfgSelectorForm.Config;
                 }
             }
 
@@ -176,9 +176,9 @@ namespace srcrepair.gui
         /// <param name="SelectedGame">Instance of the SourceGame class, selected in main window.</param>
         public static void FormShowRepBuilder(string AppReportDir, string AppLogDir, string FullDumpsPath, string FullLogsPath, SourceGame SelectedGame)
         {
-            using (FrmRepBuilder RBF = new FrmRepBuilder(AppReportDir, AppLogDir, FullDumpsPath, FullLogsPath, SelectedGame))
+            using (FrmRepBuilder RepBuilderForm = new FrmRepBuilder(AppReportDir, AppLogDir, FullDumpsPath, FullLogsPath, SelectedGame))
             {
-                RBF.ShowDialog();
+                RepBuilderForm.ShowDialog();
             }
         }
 
@@ -190,9 +190,9 @@ namespace srcrepair.gui
         /// <param name="CustomInstallDir">Full path to the custom user content directory.</param>
         public static void FormShowInstaller(string FullGamePath, bool IsUsingUserDir, string CustomInstallDir)
         {
-            using (FrmInstaller InstF = new FrmInstaller(FullGamePath, IsUsingUserDir, CustomInstallDir))
+            using (FrmInstaller InstallerForm = new FrmInstaller(FullGamePath, IsUsingUserDir, CustomInstallDir))
             {
-                InstF.ShowDialog();
+                InstallerForm.ShowDialog();
             }
         }
 
@@ -201,9 +201,9 @@ namespace srcrepair.gui
         /// </summary>
         public static void FormShowAbout()
         {
-            using (FrmAbout AboutFrm = new FrmAbout())
+            using (FrmAbout AboutForm = new FrmAbout())
             {
-                AboutFrm.ShowDialog();
+                AboutForm.ShowDialog();
             }
         }
 
@@ -215,9 +215,9 @@ namespace srcrepair.gui
         /// <param name="AppUpdateDir">Full path to the local updates directory.</param>
         public static void FormShowUpdater(string UserAgent, string FullAppPath, string AppUpdateDir)
         {
-            using (FrmUpdate UpdFrm = new FrmUpdate(UserAgent, FullAppPath, AppUpdateDir))
+            using (FrmUpdate UpdateForm = new FrmUpdate(UserAgent, FullAppPath, AppUpdateDir))
             {
-                UpdFrm.ShowDialog();
+                UpdateForm.ShowDialog();
             }
         }
 
@@ -226,9 +226,9 @@ namespace srcrepair.gui
         /// </summary>
         public static void FormShowOptions()
         {
-            using (FrmOptions OptsFrm = new FrmOptions())
+            using (FrmOptions OptionsForm = new FrmOptions())
             {
-                OptsFrm.ShowDialog();
+                OptionsForm.ShowDialog();
             }
         }
 
@@ -238,9 +238,9 @@ namespace srcrepair.gui
         /// <param name="LogFile">Full path to the log file.</param>
         public static void FormShowLogViewer(string LogFile)
         {
-            using (FrmLogView Lv = new FrmLogView(LogFile))
+            using (FrmLogView LogViewForm = new FrmLogView(LogFile))
             {
-                Lv.ShowDialog();
+                LogViewForm.ShowDialog();
             }
         }
 
@@ -251,9 +251,9 @@ namespace srcrepair.gui
         /// <param name="FullBackUpDirPath">Full path to the directory for saving backups.</param>
         public static void FormShowStmCleaner(string FullSteamPath, string FullBackUpDirPath)
         {
-            using (FrmStmClean StmCln = new FrmStmClean(FullSteamPath, FullBackUpDirPath))
+            using (FrmStmClean StmCleanForm = new FrmStmClean(FullSteamPath, FullBackUpDirPath))
             {
-                StmCln.ShowDialog();
+                StmCleanForm.ShowDialog();
             }
         }
 
@@ -264,9 +264,9 @@ namespace srcrepair.gui
         /// <param name="FullBackUpDirPath">Full path to the directory for saving backups.</param>
         public static void FormShowMuteManager(string Banlist, string FullBackUpDirPath)
         {
-            using (FrmMute FMm = new FrmMute(Banlist, FullBackUpDirPath))
+            using (FrmMute MuteForm = new FrmMute(Banlist, FullBackUpDirPath))
             {
-                FMm.ShowDialog();
+                MuteForm.ShowDialog();
             }
         }
 
