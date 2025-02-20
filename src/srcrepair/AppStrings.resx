@@ -405,9 +405,6 @@
   <data name="CS_FailedToOpenCfg" xml:space="preserve">
     <value>An error occured. Failed to open config selector! Try again later.</value>
   </data>
-  <data name="CS_NEParamsFormException" xml:space="preserve">
-    <value>Not enough configs in the list.</value>
-  </data>
   <data name="FP_BtnInstallText" xml:space="preserve">
     <value>Install selected config</value>
   </data>

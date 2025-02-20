@@ -147,7 +147,7 @@ namespace srcrepair.gui
             // Checking number of available configs...
             if (Cfgs.Count < 1)
             {
-                throw new ArgumentOutOfRangeException(AppStrings.CS_NEParamsFormException);
+                throw new ArgumentOutOfRangeException(DebugStrings.AppDbgExCsCfgsNotEnough);
             }
 
             // Creating a local variable for storing result...

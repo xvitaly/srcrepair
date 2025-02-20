@@ -376,6 +376,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to create the config selection form due to insufficient configs in the list..
+        /// </summary>
+        internal static string AppDbgExCsCfgsNotEnough {
+            get {
+                return ResourceManager.GetString("AppDbgExCsCfgsNotEnough", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exception while fetching Cvar description from a separate resource file..
         /// </summary>
         internal static string AppDbgExCvarDescFetchFailure {

@@ -222,6 +222,9 @@
   <data name="AppDbgExCryptoPolicy" xml:space="preserve">
     <value>Failed to configure the cryptographic policy.</value>
   </data>
+  <data name="AppDbgExCsCfgsNotEnough" xml:space="preserve">
+    <value>Failed to create the config selection form due to insufficient configs in the list.</value>
+  </data>
   <data name="AppDbgExCvarDescFetchFailure" xml:space="preserve">
     <value>Exception while fetching Cvar description from a separate resource file.</value>
   </data>

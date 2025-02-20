@@ -925,15 +925,6 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Not enough configs in the list..
-        /// </summary>
-        internal static string CS_NEParamsFormException {
-            get {
-                return ResourceManager.GetString("CS_NEParamsFormException", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Install selected config.
         /// </summary>
         internal static string FP_BtnInstallText {
