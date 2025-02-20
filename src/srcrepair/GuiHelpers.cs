@@ -46,18 +46,18 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens interactive cleanup window.
+        /// Opens the cleanup module.
         /// </summary>
-        /// <param name="Paths">List of files and directories for cleanup.</param>
-        /// <param name="LText">Cleanup window title.</param>
-        /// <param name="CheckBin">Process name to be checked before cleanup.</param>
-        /// <param name="ResultMsg">Successful cleanup completion message text.</param>
+        /// <param name="Paths">The list of files and directories for cleanup.</param>
+        /// <param name="LText">Cleanup module form title.</param>
+        /// <param name="ResultMsg">Message text of the successful cleanup completion.</param>
         /// <param name="SteamDir">Full path to the Steam installation directory.</param>
-        /// <param name="BackUpDir">Path to directory for saving backups.</param>
+        /// <param name="BackUpDir">Full path to the directory for saving backups.</param>
+        /// <param name="CheckBin">Process name to be checked before the cleanup.</param>
         /// <param name="ReadOnly">Allow user to manually select files for deletion.</param>
-        /// <param name="NoAuto">Disable automatically mark found files to deletion.</param>
+        /// <param name="NoAuto">Disable automatically marking of found files for deletion.</param>
         /// <param name="Recursive">Enable recursive cleanup.</param>
-        /// <param name="ForceBackUp">Force backup file creation before running cleanup.</param>
+        /// <param name="ForceBackUp">Require a backup to be created before running the cleanup.</param>
         public static void FormShowCleanup(List<string> Paths, string LText, string ResultMsg, string SteamDir, string BackUpDir, string CheckBin, bool ReadOnly, bool NoAuto, bool Recursive, bool ForceBackUp)
         {
             if (!ProcessManager.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin)))
@@ -74,14 +74,14 @@ namespace srcrepair.gui
         }
 
         /// <summary>
-        /// Opens interactive cleanup window with default options.
+        /// Opens the cleanup module with default options.
         /// </summary>
-        /// <param name="Paths">List of files and directories for cleanup.</param>
-        /// <param name="LText">Cleanup window title.</param>
-        /// <param name="CheckBin">Process name to be checked before cleanup.</param>
-        /// <param name="ResultMsg">Successful cleanup completion message text.</param>
+        /// <param name="Paths">The list of files and directories for cleanup.</param>
+        /// <param name="LText">Cleanup module form title.</param>
+        /// <param name="ResultMsg">Message text of the successful cleanup completion.</param>
         /// <param name="SteamDir">Full path to the Steam installation directory.</param>
-        /// <param name="BackUpDir">Path to directory for saving backups.</param>
+        /// <param name="BackUpDir">Full path to the directory for saving backups.</param>
+        /// <param name="CheckBin">Process name to be checked before the cleanup.</param>
         public static void FormShowCleanup(List<string> Paths, string LText, string ResultMsg, string SteamDir, string BackUpDir, string CheckBin)
         {
             FormShowCleanup(Paths, LText, ResultMsg, SteamDir, BackUpDir, CheckBin, false, false, true, false);
