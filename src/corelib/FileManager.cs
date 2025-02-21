@@ -75,10 +75,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Get file system on specified drive or mount point.
+        /// Gets the file system of the specified drive or mount point.
         /// </summary>
         /// <param name="CDrive">Drive letter or mount point path.</param>
-        /// <returns>File system name or Unknown if we cannot detect it.</returns>
+        /// <returns>File system name or Unknown if we cannot determine it.</returns>
         public static string DetectDriveFileSystem(string CDrive)
         {
             string Result = "Unknown";
