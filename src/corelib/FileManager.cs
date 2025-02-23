@@ -81,8 +81,7 @@ namespace srcrepair.core
         /// <returns>File system name or Unknown if we cannot determine it.</returns>
         public static string DetectDriveFileSystem(string CDrive)
         {
-            DriveInfo[] Drives = DriveInfo.GetDrives();
-            DriveInfo Drive = Drives.FirstOrDefault(e => CDrive.Equals(e.Name, StringComparison.InvariantCultureIgnoreCase));
+            DriveInfo Drive = DriveInfo.GetDrives().FirstOrDefault(e => CDrive.Equals(e.Name, StringComparison.InvariantCultureIgnoreCase));
             return (Drive == null) ? "Unknown" : Drive.DriveFormat;
         }
 
