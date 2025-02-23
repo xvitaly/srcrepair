@@ -79,6 +79,7 @@ namespace srcrepair.core
             ScreenWidth = "ScreenWidth";
             ScreenHeight = "ScreenHeight";
             DisplayMode = "ScreenWindowed";
+            DisplayBorderless = "ScreenNoBorder";
             ModelDetail = "r_rootlod";
             TextureDetail = "mat_picmip";
             ShaderDetail = "mat_reducefillrate";

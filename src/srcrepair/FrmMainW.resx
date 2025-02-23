@@ -1187,6 +1187,9 @@
   <data name="GT_ScreenType.Items1" xml:space="preserve">
     <value>Windowed</value>
   </data>
+  <data name="GT_ScreenType.Items2" xml:space="preserve">
+    <value>Windowed (no border)</value>
+  </data>
   <data name="GT_ScreenType.Location" type="System.Drawing.Point, System.Drawing">
     <value>306, 29</value>
   </data>
@@ -4344,7 +4347,7 @@
     <value>F7</value>
   </data>
   <data name="MNUShowEdHint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="MNUShowEdHint.Text" xml:space="preserve">
     <value>&amp;Show hint</value>
@@ -4353,19 +4356,19 @@
     <value>Ctrl+O</value>
   </data>
   <data name="MNUAppOptions.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="MNUAppOptions.Text" xml:space="preserve">
     <value>Optio&amp;ns</value>
   </data>
   <data name="MNUSep1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 6</value>
+    <value>224, 6</value>
   </data>
   <data name="MNUReportBuilder.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>F12</value>
   </data>
   <data name="MNUReportBuilder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="MNUReportBuilder.Text" xml:space="preserve">
     <value>R&amp;eport builder</value>
@@ -4377,7 +4380,7 @@
     <value>F8</value>
   </data>
   <data name="MNUInstaller.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="MNUInstaller.Text" xml:space="preserve">
     <value>Q&amp;uick add-on installer...</value>
@@ -4386,7 +4389,7 @@
     <value>False</value>
   </data>
   <data name="MNUWinMnuDisabler.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="MNUWinMnuDisabler.Text" xml:space="preserve">
     <value>S&amp;ystem buttons disabler...</value>
@@ -4395,7 +4398,7 @@
     <value>F3</value>
   </data>
   <data name="MNUMuteMan.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="MNUMuteMan.Text" xml:space="preserve">
     <value>Mu&amp;ted players manager...</value>
@@ -4422,19 +4425,19 @@
     <value>S&amp;ystem temporary directory</value>
   </data>
   <data name="MNUExtClnSub.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="MNUExtClnSub.Text" xml:space="preserve">
     <value>Exten&amp;ded cleanup</value>
   </data>
   <data name="MNUSep2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 6</value>
+    <value>224, 6</value>
   </data>
   <data name="MNUExit.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
     <value>Ctrl+Q</value>
   </data>
   <data name="MNUExit.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 22</value>
+    <value>227, 22</value>
   </data>
   <data name="MNUExit.Text" xml:space="preserve">
     <value>E&amp;xit</value>

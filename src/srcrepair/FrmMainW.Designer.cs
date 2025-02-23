@@ -594,7 +594,8 @@
             this.GT_ScreenType.FormattingEnabled = true;
             this.GT_ScreenType.Items.AddRange(new object[] {
             resources.GetString("GT_ScreenType.Items"),
-            resources.GetString("GT_ScreenType.Items1")});
+            resources.GetString("GT_ScreenType.Items1"),
+            resources.GetString("GT_ScreenType.Items2")});
             resources.ApplyResources(this.GT_ScreenType, "GT_ScreenType");
             this.GT_ScreenType.Name = "GT_ScreenType";
             // 

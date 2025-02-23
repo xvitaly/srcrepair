@@ -85,7 +85,18 @@ namespace srcrepair.core
                         res = 0;
                         break;
                     case 1:
-                        res = 1;
+                        switch (_DisplayBorderless)
+                        {
+                            case 0:
+                                res = 1;
+                                break;
+                            case 1:
+                                res = 2;
+                                break;
+                            default:
+                                Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _DisplayBorderless, nameof(_DisplayBorderless));
+                                break;
+                        }
                         break;
                     default:
                         Logger.Warn(DebugStrings.AppDbgCoreFieldOutOfRange, _DisplayMode, nameof(_DisplayMode));
@@ -101,9 +112,15 @@ namespace srcrepair.core
                 {
                     case 0:
                         _DisplayMode = 0;
+                        _DisplayBorderless = 0;
                         break;
                     case 1:
                         _DisplayMode = 1;
+                        _DisplayBorderless = 0;
+                        break;
+                    case 2:
+                        _DisplayMode = 1;
+                        _DisplayBorderless = 1;
                         break;
                     default:
                         Logger.Warn(DebugStrings.AppDbgCoreSetterOutOfRange, value, nameof(DisplayMode));
@@ -670,6 +687,7 @@ namespace srcrepair.core
                     try { _ScreenWidth = Convert.ToInt32(ResKey.GetValue(VSettings.ScreenWidth)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _ScreenHeight = Convert.ToInt32(ResKey.GetValue(VSettings.ScreenHeight)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _DisplayMode = Convert.ToInt32(ResKey.GetValue(VSettings.DisplayMode)); } catch (Exception Ex) { Logger.Warn(Ex); }
+                    try { _DisplayBorderless = Convert.ToInt32(ResKey.GetValue(VSettings.DisplayBorderless)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _ModelDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ModelDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _TextureDetail = Convert.ToInt32(ResKey.GetValue(VSettings.TextureDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
                     try { _ShaderDetail = Convert.ToInt32(ResKey.GetValue(VSettings.ShaderDetail)); } catch (Exception Ex) { Logger.Warn(Ex); }
@@ -703,6 +721,7 @@ namespace srcrepair.core
                 try { ResKey.SetValue(VSettings.ScreenWidth, _ScreenWidth, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.ScreenHeight, _ScreenHeight, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.DisplayMode, _DisplayMode, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
+                try { ResKey.SetValue(VSettings.DisplayBorderless, _DisplayBorderless, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.ModelDetail, _ModelDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.TextureDetail, _TextureDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
                 try { ResKey.SetValue(VSettings.ShaderDetail, _ShaderDetail, RegistryValueKind.DWord); } catch (Exception Ex) { Logger.Warn(Ex); }
