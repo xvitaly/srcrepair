@@ -28,7 +28,10 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>240</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>
+            <x86>cstrike.exe</x86>
+            <x64>cstrike_win64.exe</x64>
+        </Executable>
     </Game>
     <Game Name="Day of Defeat: Source">
         <Enabled>1</Enabled>
@@ -39,7 +42,10 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>300</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>
+            <x86>dod.exe</x86>
+            <x64>dod_win64.exe</x64>
+        </Executable>
     </Game>
     <Game Name="Half-Life 2: Deathmatch">
         <Enabled>1</Enabled>
@@ -50,7 +56,10 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>320</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>
+            <x86>hl2mp.exe</x86>
+            <x64>hl2mp_win64.exe</x64>
+        </Executable>
     </Game>
     <Game Name="Half-Life 2">
         <Enabled>1</Enabled>
@@ -226,7 +235,10 @@
         <HUDsAvail>0</HUDsAvail>
         <SID>360</SID>
         <SVer>1</SVer>
-        <Executable>hl2.exe</Executable>
+        <Executable>
+            <x86>hl1mp.exe</x86>
+            <x64>hl1mp_win64.exe</x64>
+        </Executable>
     </Game>
     <Game Name="Left 4 Dead">
         <Enabled>1</Enabled>
