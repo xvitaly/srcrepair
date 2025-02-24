@@ -27,7 +27,7 @@ Available settings:
 
   * **horisontal resolution** -- an integer ranging from *640* to *2000* pixels;
   * **vertical resolution** -- an integer ranging from *480* to *1900* pixels;
-  * **display mode**: *fullscreen* or *windoweed*. In most cases, it is recommended to use fullscreen mode for maximum performance;
+  * **display mode**: *fullscreen*, *windoweed* or *windoweed (no border)*. In most cases, it is recommended to use fullscreen mode for maximum performance;
   * **model quality**: *low*, *medium* or *high*. At the maximum value, the most powerful GPU will be required;
   * **texture quality**: *low*, *medium* or *high* (the same as models);
   * **shaders quality**: *low* or *high* -- set the quality of shader effects;
