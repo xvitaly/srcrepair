@@ -34,6 +34,13 @@ namespace srcrepair.core
         /// </summary>
         public bool CleanEmpty { get; private set; }
 
+        /// <summary>
+        /// Creates a modern cleanup file list from a legacy list format.
+        /// </summary>
+        /// <param name="Items">List of files and directories for deletion in legacy format.</param>
+        /// <param name="Recursive">Enable or disable the recursive cleanup.</param>
+        /// <param name="Empty">Enable or disable the empty directories cleanup.</param>
+        /// <returns>List of files and directories for deletion.</returns>
         public static List<CleanupItem> CreateFromLegacyList(List<string> Items, bool Recursive, bool Empty)
         {
             List<CleanupItem> Result = new List<CleanupItem>();
