@@ -4,6 +4,9 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
 */
 
+using System.Collections.Generic;
+using System.IO;
+
 namespace srcrepair.core
 {
     /// <summary>
@@ -30,6 +33,16 @@ namespace srcrepair.core
         /// Gets or sets whether the empty directories cleanup is enabled.
         /// </summary>
         public bool CleanEmpty { get; private set; }
+
+        public static List<CleanupItem> CreateFromLegacyList(List<string> Items, bool Recursive, bool Empty)
+        {
+            List<CleanupItem> Result = new List<CleanupItem>();
+            foreach (string Item in Items)
+            {
+                Result.Add(new CleanupItem(Path.GetDirectoryName(Item), Path.GetFileName(Item), Recursive, Empty));
+            }
+            return Result;
+        }
 
         /// <summary>
         /// CleanupItem class constructor.
