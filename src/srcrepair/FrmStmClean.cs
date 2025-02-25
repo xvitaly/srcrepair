@@ -35,7 +35,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Stores the list of files and directories for cleanup.
         /// </summary>
-        private readonly List<string> CleanDirs;
+        private readonly List<CleanupItem> CleanDirs;
 
         /// <summary>
         /// FrmStmClean class constructor.
@@ -47,7 +47,7 @@ namespace srcrepair.gui
             InitializeComponent();
             FullSteamPath = SteamDir;
             FullBackUpDirPath = BackUpDir;
-            CleanDirs = new List<string>();
+            CleanDirs = new List<CleanupItem>();
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ namespace srcrepair.gui
         {
             if (EC_HTMLCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam", "htmlcache", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Steam", "htmlcache"), "*.*", true, true));
             }
         }
 
@@ -69,7 +69,7 @@ namespace srcrepair.gui
         {
             if (EC_HTTPCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "appcache", "httpcache", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "appcache", "httpcache"), "*.*", true, true));
             }
         }
 
@@ -80,7 +80,7 @@ namespace srcrepair.gui
         {
             if (EC_DepotCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "depotcache", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "depotcache"), "*.*", true, true));
             }
         }
 
@@ -91,7 +91,7 @@ namespace srcrepair.gui
         {
             if (EC_ShaderCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "shadercache", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "shadercache"), "*.*", true, true));
             }
         }
 
@@ -102,7 +102,7 @@ namespace srcrepair.gui
         {
             if (EC_LibraryCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "appcache", "librarycache", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "appcache", "librarycache"), "*.*", true, true));
             }
         }
 
@@ -113,8 +113,8 @@ namespace srcrepair.gui
         {
             if (EC_Logs.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "logs", "*.*"));
-                CleanDirs.Add(Path.Combine(FullSteamPath, "*.log*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "logs"), "*.*", true, true));
+                CleanDirs.Add(new CleanupItem(FullSteamPath, "*.log*", false, false));
             }
         }
 
@@ -125,7 +125,7 @@ namespace srcrepair.gui
         {
             if (EC_OldBins.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "*.old"));
+                CleanDirs.Add(new CleanupItem(FullSteamPath, "*.old", false, false));
             }
         }
 
@@ -136,7 +136,7 @@ namespace srcrepair.gui
         {
             if (EC_ErrDmps.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "dumps", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "dumps"), "*.*", true, false));
             }
         }
 
@@ -147,8 +147,8 @@ namespace srcrepair.gui
         {
             if (EC_BuildCache.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "downloading", "*.*"));
-                CleanDirs.Add(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "temp", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "downloading"), "*.*", true, true));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, Platform.SteamAppsFolderName, "temp"), "*.*", true, true));
             }
         }
 
@@ -159,7 +159,7 @@ namespace srcrepair.gui
         {
             if (EC_GameIcons.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "steam", "games", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "steam", "games"), "*.*", true, true));
             }
         }
 
@@ -170,7 +170,7 @@ namespace srcrepair.gui
         {
             if (EC_Cloud.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "userdata", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "userdata"), "*.*", true, true));
             }
         }
 
@@ -181,7 +181,7 @@ namespace srcrepair.gui
         {
             if (EC_Stats.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "appcache", "stats", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "appcache", "stats"), "*.*", true, true));
             }
         }
 
@@ -192,7 +192,7 @@ namespace srcrepair.gui
         {
             if (EC_Music.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "music", "_database", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "music", "_database"), "*.*", true, true));
             }
         }
 
@@ -203,7 +203,7 @@ namespace srcrepair.gui
         {
             if (EC_Skins.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "skins", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "skins"), "*.*", true, true));
             }
         }
 
@@ -214,7 +214,7 @@ namespace srcrepair.gui
         {
             if (EC_Updater.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "package", "*.*"));
+                CleanDirs.Add(new CleanupItem(Path.Combine(FullSteamPath, "package"), "*.*", true, true));
             }
         }
 
@@ -225,7 +225,7 @@ namespace srcrepair.gui
         {
             if (EC_Guard.Checked)
             {
-                CleanDirs.Add(Path.Combine(FullSteamPath, "ssfn*"));
+                CleanDirs.Add(new CleanupItem(FullSteamPath, "ssfn*", false, false));
             }
         }
 
@@ -280,7 +280,7 @@ namespace srcrepair.gui
         {
             if (CleanDirs.Count > 0)
             {
-                GuiHelpers.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, FullSteamPath, FullBackUpDirPath, Platform.SteamProcName);
+                GuiHelpers.FormShowCleanup(CleanDirs, Text, AppStrings.PS_CleanupSuccess, FullBackUpDirPath, Platform.SteamProcName);
                 Close();
             }
             else

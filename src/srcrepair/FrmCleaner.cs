@@ -35,7 +35,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Stores the list of items for cleanup.
         /// </summary>
-        private readonly List<string> CleanItems;
+        private readonly List<CleanupItem> CleanItems;
 
         /// <summary>
         /// Stores whether the manual file selection is enabled.
@@ -48,19 +48,9 @@ namespace srcrepair.gui
         private readonly bool NoAutoCheck;
 
         /// <summary>
-        /// Stores whether the recursive cleanup is enabled.
-        /// </summary>
-        private readonly bool IsRecursive;
-
-        /// <summary>
         /// Stores whether a backup file creation is required.
         /// </summary>
         private readonly bool ForceBackUp;
-
-        /// <summary>
-        /// Stores the full path to the Steam installation directory.
-        /// </summary>
-        private readonly string FullSteamPath;
 
         /// <summary>
         /// Stores the full path to the directory for saving backups.
@@ -91,25 +81,21 @@ namespace srcrepair.gui
         /// FrmCleaner class constructor.
         /// </summary>
         /// <param name="CD">The list of files and directories for cleanup.</param>
-        /// <param name="SP">Full path to the Steam installation directory.</param>
         /// <param name="BD">Full path to the directory for saving backups.</param>
         /// <param name="CI">Cleanup module form title.</param>
         /// <param name="SM">Message text of the successful cleanup completion.</param>
         /// <param name="RO">Allow user to manually select files for deletion.</param>
         /// <param name="NA">Disable automatically marking of found files for deletion.</param>
-        /// <param name="RS">Enable recursive cleanup.</param>
         /// <param name="FB">Require a backup to be created before running the cleanup.</param>
-        public FrmCleaner(List<string> CD, string SP, string BD, string CI, string SM, bool RO, bool NA, bool RS, bool FB)
+        public FrmCleaner(List<CleanupItem> CD, string BD, string CI, string SM, bool RO, bool NA, bool FB)
         {
             InitializeComponent();
             CleanItems = CD;
             CleanInfo = CI;
             IsReadOnly = RO;
             NoAutoCheck = NA;
-            IsRecursive = RS;
             ForceBackUp = FB;
             SuccessMessage = SM;
-            FullSteamPath = SP;
             FullBackUpDirPath = BD;
         }
 
@@ -131,19 +117,15 @@ namespace srcrepair.gui
         /// Finds files for deletion.
         /// </summary>
         /// <param name="Targets">List of files and directories for cleanup.</param>
-        /// <param name="Recursive">Enable recursive cleanup.</param>
-        private void DetectFilesForCleanup(List<string> Targets, bool Recursive)
+        private void DetectFilesForCleanup(List<CleanupItem> Targets)
         {
-            foreach (string DirMs in Targets)
+            foreach (CleanupItem DirMs in Targets)
             {
-                string CleanDir = Path.GetDirectoryName(DirMs);
-                string CleanMask = Path.GetFileName(DirMs);
-
                 try
                 {
-                    DirectoryInfo DInfo = new DirectoryInfo(CleanDir);
+                    DirectoryInfo DInfo = new DirectoryInfo(DirMs.CleanDirectory);
                     if (!DInfo.Exists) { continue; }
-                    foreach (FileInfo DItem in DInfo.EnumerateFiles(CleanMask, Recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
+                    foreach (FileInfo DItem in DInfo.EnumerateFiles(DirMs.CleanMask, DirMs.IsRecursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
                     {
                         ListViewItem LvItem = new ListViewItem(DItem.Name)
                         {
@@ -162,7 +144,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExCmDetectFiles, CleanDir, CleanMask);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExCmDetectFiles, DirMs.CleanDirectory, DirMs.CleanMask);
                 }
             }
         }
@@ -256,11 +238,11 @@ namespace srcrepair.gui
             // Removing empty directories if allowed...
             if (Properties.Settings.Default.RemoveEmptyDirs)
             {
-                foreach (string Item in CleanItems.Select(e => Path.GetDirectoryName(e)).Where(e => !e.Equals(FullSteamPath, StringComparison.InvariantCultureIgnoreCase)))
+                foreach (CleanupItem Item in CleanItems.Where(e => e.CleanEmpty))
                 {
                     try
                     {
-                        FileManager.CleanEmptyDirectories(Item);
+                        FileManager.CleanEmptyDirectories(Item.CleanDirectory);
                     }
                     catch (Exception Ex)
                     {
@@ -277,7 +259,7 @@ namespace srcrepair.gui
         {
             await Task.Run(() =>
             {
-                DetectFilesForCleanup(CleanItems, IsRecursive);
+                DetectFilesForCleanup(CleanItems);
             });
         }
 

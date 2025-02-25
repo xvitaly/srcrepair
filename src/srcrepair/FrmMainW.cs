@@ -1406,7 +1406,7 @@ namespace srcrepair.gui
                 {
                     CleanDirs.AddRange(Targets);
                 }
-                GuiHelpers.FormShowCleanup(CleanDirs, Title.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+                GuiHelpers.FormShowCleanup(CleanupItem.CreateFromLegacyList(CleanDirs, true, false), Title.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
             }
             catch (Exception Ex)
             {
@@ -2350,7 +2350,7 @@ namespace srcrepair.gui
                 else
                 {
                     // Showing interactive dialog with detected FPS-configs...
-                    GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(CultureInfo.CurrentUICulture), AppStrings.FP_RemoveSuccessful, App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
+                    GuiHelpers.FormShowCleanup(CleanupItem.CreateFromLegacyList(App.SourceGames[AppSelector.Text].FPSConfigs, false, true), ((Button)sender).Text.ToLower(CultureInfo.CurrentUICulture), AppStrings.FP_RemoveSuccessful, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, Properties.Settings.Default.SafeCleanup);
                 }
 
                 // Changing the state of some controls...
@@ -3307,7 +3307,7 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void PS_RemConfigs_Click(object sender, EventArgs e)
         {
-            GuiHelpers.FormShowCleanup(App.SourceGames[AppSelector.Text].FPSConfigs, ((Button)sender).Text.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, false, Properties.Settings.Default.SafeCleanup);
+            GuiHelpers.FormShowCleanup(CleanupItem.CreateFromLegacyList(App.SourceGames[AppSelector.Text].FPSConfigs, false, true), ((Button)sender).Text.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile, false, false, Properties.Settings.Default.SafeCleanup);
             HandleConfigs();
         }
 
@@ -3440,13 +3440,13 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUExtClnAppCache_Click(object sender, EventArgs e)
         {
-            List<string> CleanDirs = new List<string>
+            List<CleanupItem> CleanDirs = new List<CleanupItem>
             {
-                Path.Combine(App.AppCfgDir, "*.*"),
-                Path.Combine(App.AppHUDDir, "*.*"),
-                Path.Combine(App.AppUpdateDir, "*.*")
+                new CleanupItem(App.AppCfgDir, "*.*", true, true),
+                new CleanupItem(App.AppHUDDir, "*.*", true, true),
+                new CleanupItem(App.AppUpdateDir, "*.*", true, true)
             };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower(CultureInfo.CurrentUICulture).Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower(CultureInfo.CurrentUICulture).Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
 
         /// <summary>
@@ -3456,11 +3456,11 @@ namespace srcrepair.gui
         /// <param name="e">Event arguments.</param>
         private void MNUExtClnTmpDir_Click(object sender, EventArgs e)
         {
-            List<string> CleanDirs = new List<string>
+            List<CleanupItem> CleanDirs = new List<CleanupItem>
             {
-                Path.Combine(Path.GetTempPath(), "*.*")
+                new CleanupItem(Path.GetTempPath(), "*.*", true, true)
             };
-            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower(CultureInfo.CurrentUICulture).Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SteamClient.FullSteamPath, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+            GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower(CultureInfo.CurrentUICulture).Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
 
         /// <summary>
