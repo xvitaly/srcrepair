@@ -74,14 +74,14 @@ namespace srcrepair.gui
         /// <summary>
         /// Opens the cleanup module with default options.
         /// </summary>
-        /// <param name="Paths">The list of files and directories for cleanup.</param>
+        /// <param name="Items">The list of files and directories for cleanup.</param>
         /// <param name="FormTitle">Cleanup module form title.</param>
         /// <param name="ResultMsg">Message text of the successful cleanup completion.</param>
         /// <param name="BackUpDir">Full path to the directory for saving backups.</param>
         /// <param name="CheckBin">Process name to be checked before the cleanup.</param>
-        public static void FormShowCleanup(List<CleanupItem> Paths, string FormTitle, string ResultMsg, string BackUpDir, string CheckBin)
+        public static void FormShowCleanup(List<CleanupItem> Items, string FormTitle, string ResultMsg, string BackUpDir, string CheckBin)
         {
-            FormShowCleanup(Paths, FormTitle, ResultMsg, BackUpDir, CheckBin, false, false, false);
+            FormShowCleanup(Items, FormTitle, ResultMsg, BackUpDir, CheckBin, false, false, false);
         }
 
         /// <summary>
