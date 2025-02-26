@@ -48,7 +48,7 @@ namespace srcrepair.gui
         /// <summary>
         /// Opens the cleanup module.
         /// </summary>
-        /// <param name="Paths">The list of files and directories for cleanup.</param>
+        /// <param name="Items">The list of files and directories for cleanup.</param>
         /// <param name="FormTitle">Cleanup module form title.</param>
         /// <param name="ResultMsg">Message text of the successful cleanup completion.</param>
         /// <param name="BackUpDir">Full path to the directory for saving backups.</param>
@@ -56,11 +56,11 @@ namespace srcrepair.gui
         /// <param name="ReadOnly">Allow user to manually select files for deletion.</param>
         /// <param name="NoAuto">Disable automatically marking of found files for deletion.</param>
         /// <param name="ForceBackUp">Require a backup to be created before running the cleanup.</param>
-        public static void FormShowCleanup(List<CleanupItem> Paths, string FormTitle, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly, bool NoAuto, bool ForceBackUp)
+        public static void FormShowCleanup(List<CleanupItem> Items, string FormTitle, string ResultMsg, string BackUpDir, string CheckBin, bool ReadOnly, bool NoAuto, bool ForceBackUp)
         {
             if (!ProcessManager.IsProcessRunning(Path.GetFileNameWithoutExtension(CheckBin)))
             {
-                using (FrmCleaner CleanerForm = new FrmCleaner(Paths, BackUpDir, FormTitle, ResultMsg, ReadOnly, NoAuto, ForceBackUp))
+                using (FrmCleaner CleanerForm = new FrmCleaner(Items, BackUpDir, FormTitle, ResultMsg, ReadOnly, NoAuto, ForceBackUp))
                 {
                     CleanerForm.ShowDialog();
                 }
