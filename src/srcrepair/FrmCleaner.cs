@@ -119,13 +119,13 @@ namespace srcrepair.gui
         /// <param name="Items">List of files and directories for cleanup.</param>
         private void DetectFilesForCleanup(List<CleanupItem> Items)
         {
-            foreach (CleanupItem DirMs in Items)
+            foreach (CleanupItem Item in Items)
             {
                 try
                 {
-                    DirectoryInfo DInfo = new DirectoryInfo(DirMs.CleanDirectory);
+                    DirectoryInfo DInfo = new DirectoryInfo(Item.CleanDirectory);
                     if (!DInfo.Exists) { continue; }
-                    foreach (FileInfo DItem in DInfo.EnumerateFiles(DirMs.CleanMask, DirMs.IsRecursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
+                    foreach (FileInfo DItem in DInfo.EnumerateFiles(Item.CleanMask, Item.IsRecursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
                     {
                         ListViewItem LvItem = new ListViewItem(DItem.Name)
                         {
@@ -144,7 +144,7 @@ namespace srcrepair.gui
                 }
                 catch (Exception Ex)
                 {
-                    Logger.Warn(Ex, DebugStrings.AppDbgExCmDetectFiles, DirMs.CleanDirectory, DirMs.CleanMask);
+                    Logger.Warn(Ex, DebugStrings.AppDbgExCmDetectFiles, Item.CleanDirectory, Item.CleanMask);
                 }
             }
         }
