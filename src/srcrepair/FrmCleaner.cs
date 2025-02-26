@@ -116,10 +116,10 @@ namespace srcrepair.gui
         /// <summary>
         /// Finds files for deletion.
         /// </summary>
-        /// <param name="Targets">List of files and directories for cleanup.</param>
-        private void DetectFilesForCleanup(List<CleanupItem> Targets)
+        /// <param name="Items">List of files and directories for cleanup.</param>
+        private void DetectFilesForCleanup(List<CleanupItem> Items)
         {
-            foreach (CleanupItem DirMs in Targets)
+            foreach (CleanupItem DirMs in Items)
             {
                 try
                 {
