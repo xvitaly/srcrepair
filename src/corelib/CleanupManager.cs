@@ -88,10 +88,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Extracts the list of directories from the XML node.
+        /// Extracts the list of cleanup items from the XML node.
         /// </summary>
         /// <param name="XmlItem">Source XML node item.</param>
-        /// <returns>The list of directories.</returns>
+        /// <returns>The list of cleanup items.</returns>
         private List<CleanupItem> GetDirListFromNode(XmlNode XmlItem)
         {
             List<CleanupItem> Result = new List<CleanupItem>();
