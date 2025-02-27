@@ -29,6 +29,11 @@ namespace srcrepair.core
         private readonly Dictionary<int, CleanupTarget> CleanupTargets;
 
         /// <summary>
+        /// Stores whether unsafe cleanup methods are allowed.
+        /// </summary>
+        private readonly bool AllowUnsafe;
+
+        /// <summary>
         /// Stores path to installation directory without SmallAppName.
         /// </summary>
         private readonly string GamePath;
@@ -86,9 +91,8 @@ namespace srcrepair.core
         /// Extracts the list of directories from the XML node.
         /// </summary>
         /// <param name="XmlItem">Source XML node item.</param>
-        /// <param name="AllowUnsafe">Allow or disallow to use unsafe cleanup methods.</param>
         /// <returns>The list of directories.</returns>
-        private List<CleanupItem> GetDirListFromNode(XmlNode XmlItem, bool AllowUnsafe)
+        private List<CleanupItem> GetDirListFromNode(XmlNode XmlItem)
         {
             List<CleanupItem> Result = new List<CleanupItem>();
 
@@ -108,10 +112,11 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
         /// <param name="SelectedGame">Instance of SourceGame class with selected in main window game.</param>
-        /// <param name="AllowUnsafe">Allow or disallow to use unsafe cleanup methods.</param>
-        public CleanupManager(string FullAppPath, SourceGame SelectedGame, bool AllowUnsafe)
+        /// <param name="UnsafeCleanup">Allow or disallow to use unsafe cleanup methods.</param>
+        public CleanupManager(string FullAppPath, SourceGame SelectedGame, bool UnsafeCleanup)
         {
             // Filling some private fields...
+            AllowUnsafe = UnsafeCleanup;
             GamePath = SelectedGame.GamePath;
             FullGamePath = SelectedGame.FullGamePath;
             AppWorkshopDir = SelectedGame.AppWorkshopDir;
@@ -132,7 +137,7 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        CleanupTargets.Add(int.Parse(XmlItem.SelectSingleNode("ID").InnerText), new CleanupTarget(XmlItem.SelectSingleNode("Name").InnerText, GetDirListFromNode(XmlItem, AllowUnsafe)));
+                        CleanupTargets.Add(int.Parse(XmlItem.SelectSingleNode("ID").InnerText), new CleanupTarget(XmlItem.SelectSingleNode("Name").InnerText, GetDirListFromNode(XmlItem)));
                     }
                     catch (Exception Ex)
                     {
