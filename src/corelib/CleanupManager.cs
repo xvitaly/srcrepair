@@ -88,15 +88,15 @@ namespace srcrepair.core
         /// <param name="XmlItem">Source XML node item.</param>
         /// <param name="AllowUnsafe">Allow or disallow to use unsafe cleanup methods.</param>
         /// <returns>The list of directories.</returns>
-        private List<string> GetDirListFromNode(XmlNode XmlItem, bool AllowUnsafe)
+        private List<CleanupItem> GetDirListFromNode(XmlNode XmlItem, bool AllowUnsafe)
         {
-            List<string> Result = new List<string>();
+            List<CleanupItem> Result = new List<CleanupItem>();
 
-            foreach (XmlNode CtDir in XmlItem.SelectSingleNode("Directories"))
+            foreach (XmlNode Item in XmlItem.SelectNodes("Directories/Directory"))
             {
-                if (CtDir.Attributes["Class"].Value == "Safe" || AllowUnsafe)
+                if (Item.SelectSingleNode("Class").InnerText == "Safe" || AllowUnsafe)
                 {
-                    Result.Add(GetFullPath(CtDir.InnerText));
+                    Result.Add(new CleanupItem(GetFullPath(Item.SelectSingleNode("Path").InnerText), Item.SelectSingleNode("Extension").InnerText, Item.SelectSingleNode("Recursive").InnerText == "1", Item.SelectSingleNode("CleanEmpty").InnerText == "1"));
                 }
             }
 

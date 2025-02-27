@@ -1391,7 +1391,7 @@ namespace srcrepair.gui
         /// <param name="ID">Cleanup target ID.</param>
         /// <param name="Title">Title for cleanup window.</param>
         /// <param name="Targets">Additional targets for cleanup.</param>
-        private void StartCleanup(int ID, string Title, List<string> Targets)
+        private void StartCleanup(int ID, string Title, List<CleanupItem> Targets)
         {
             if (App.SourceGames[AppSelector.Text].ClnMan == null)
             {
@@ -1401,12 +1401,12 @@ namespace srcrepair.gui
 
             try
             {
-                List<string> CleanDirs = new List<string>(App.SourceGames[AppSelector.Text].ClnMan[ID].Directories);
-                if (Targets.Count > 0)
+                List<CleanupItem> CleanDirs = new List<CleanupItem>(App.SourceGames[AppSelector.Text].ClnMan[ID].Items);
+                if (Targets != null)
                 {
                     CleanDirs.AddRange(Targets);
                 }
-                GuiHelpers.FormShowCleanup(CleanupItem.CreateFromLegacyList(CleanDirs, true, false), Title.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
+                GuiHelpers.FormShowCleanup(CleanDirs, Title.ToLower(CultureInfo.CurrentUICulture), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
             }
             catch (Exception Ex)
             {
@@ -1422,7 +1422,7 @@ namespace srcrepair.gui
         /// <param name="Title">Title for cleanup window.</param>
         private void StartCleanup(int ID, string Title)
         {
-            StartCleanup(ID, Title, new List<string>());
+            StartCleanup(ID, Title, null);
         }
 
         /// <summary>
@@ -3297,7 +3297,7 @@ namespace srcrepair.gui
             {
                 CleanDirs.AddRange(App.SourceGames[AppSelector.Text].VideoCfgFiles);
             }
-            StartCleanup(11, ((Button)sender).Text, CleanDirs);
+            StartCleanup(11, ((Button)sender).Text, CleanupItem.CreateFromLegacyList(CleanDirs, false, false));
         }
 
         /// <summary>
