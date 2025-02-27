@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 47.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 13:38+0100\n"
-"PO-Revision-Date: 2025-02-11 13:39+0100\n"
+"POT-Creation-Date: 2025-02-27 14:44+0100\n"
+"PO-Revision-Date: 2025-02-27 14:53+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -260,74 +260,80 @@ msgstr "Документация базы очистки"
 msgid "The original source file is located in ``assets/cleanup.xml``."
 msgstr "Исходный файл ``assets/cleanup.xml``."
 
-#: ../../source/development.rst:91 ../../source/development.rst:160
-#: ../../source/development.rst:215 ../../source/development.rst:275
-#: ../../source/development.rst:360
+#: ../../source/development.rst:91 ../../source/development.rst:181
+#: ../../source/development.rst:236 ../../source/development.rst:296
+#: ../../source/development.rst:381
 msgid "XML database example"
 msgstr "Пример базы данных в формате XML"
 
-#: ../../source/development.rst:108 ../../source/development.rst:184
-#: ../../source/development.rst:236 ../../source/development.rst:299
-#: ../../source/development.rst:334 ../../source/development.rst:375
+#: ../../source/development.rst:120 ../../source/development.rst:205
+#: ../../source/development.rst:257 ../../source/development.rst:320
+#: ../../source/development.rst:355 ../../source/development.rst:396
 msgid "Properties"
 msgstr "Доступные свойства"
 
-#: ../../source/development.rst:110 ../../source/development.rst:186
-#: ../../source/development.rst:238 ../../source/development.rst:301
-#: ../../source/development.rst:336 ../../source/development.rst:377
+#: ../../source/development.rst:122 ../../source/development.rst:207
+#: ../../source/development.rst:259 ../../source/development.rst:322
+#: ../../source/development.rst:357 ../../source/development.rst:398
 msgid "Level 0:"
 msgstr "Уровень 0:"
 
-#: ../../source/development.rst:112
+#: ../../source/development.rst:124
 msgid "``Targets`` -- XML root element."
 msgstr "``Targets`` -- корневой элемент XML."
 
-#: ../../source/development.rst:114 ../../source/development.rst:190
-#: ../../source/development.rst:242 ../../source/development.rst:305
-#: ../../source/development.rst:340 ../../source/development.rst:381
+#: ../../source/development.rst:126 ../../source/development.rst:211
+#: ../../source/development.rst:263 ../../source/development.rst:326
+#: ../../source/development.rst:361 ../../source/development.rst:402
 msgid "Level 1:"
 msgstr "Уровень 1:"
 
-#: ../../source/development.rst:116
+#: ../../source/development.rst:128
 msgid "``Target`` -- database entry base element."
 msgstr "``Target`` -- базовый элемент."
 
-#: ../../source/development.rst:118 ../../source/development.rst:194
-#: ../../source/development.rst:248 ../../source/development.rst:309
-#: ../../source/development.rst:344 ../../source/development.rst:385
+#: ../../source/development.rst:130 ../../source/development.rst:215
+#: ../../source/development.rst:269 ../../source/development.rst:330
+#: ../../source/development.rst:365 ../../source/development.rst:406
 msgid "Level 2:"
 msgstr "Уровень 2:"
 
-#: ../../source/development.rst:120
-msgid "``ID`` -- unique identifier (integer, starting from ``1``);"
+#: ../../source/development.rst:132
+msgid "``ID`` -- unique identifier (integer, starting from ``0``);"
 msgstr ""
-"``ID`` -- уникальный идентификатор (целое число, начинающееся с ``1``);"
+"``ID`` -- уникальный идентификатор (целое число, начинающееся с ``0``);"
 
-#: ../../source/development.rst:121
+#: ../../source/development.rst:133
 msgid "``Name`` -- user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:122
-msgid "``Directories`` -- list of directories for cleanup."
+#: ../../source/development.rst:134
+msgid "``Directories`` -- the list of directories for cleanup."
 msgstr "``Directories`` -- список каталогов для очистки."
 
-#: ../../source/development.rst:124
+#: ../../source/development.rst:136
 msgid "Level 3:"
 msgstr "Уровень 3:"
 
-#: ../../source/development.rst:126
-msgid "``Directory`` -- path to a single directory (with templates support):"
-msgstr ""
-"``Directory`` -- содержит путь к каталогу для очистки с поддержкой шаблонов "
-"и подстановок:"
+#: ../../source/development.rst:138
+msgid "``Directory`` -- a single cleanup entry with additional parameters."
+msgstr "``Directory`` -- элемент для очистки с дополнительными параметрами."
 
-#: ../../source/development.rst:128
+#: ../../source/development.rst:140
+msgid "Level 4:"
+msgstr "Уровень 4:"
+
+#: ../../source/development.rst:142
+msgid "``Class`` -- safety class:"
+msgstr "``Class`` -- класс безопасности:"
+
+#: ../../source/development.rst:144
 msgid "``Safe`` -- this directory can be safely cleaned;"
 msgstr ""
 "``Safe`` -- эта директория не содержит важных файлов и может быть безопасно "
 "очищена;"
 
-#: ../../source/development.rst:129
+#: ../../source/development.rst:145
 msgid ""
 "``Unsafe`` -- cleaning up this directory may be dangerous (can be allowed in "
 "settings)."
@@ -335,51 +341,76 @@ msgstr ""
 "``Unsafe`` -- очистка этого каталога может быть небезопасной (может быть "
 "разрешено в настройках)."
 
-#: ../../source/development.rst:132
+#: ../../source/development.rst:147
+msgid "``Path`` -- path to a single directory (with templates support);"
+msgstr ""
+"``Path`` -- содержит путь к каталогу для очистки с поддержкой шаблонов и "
+"подстановок;"
+
+#: ../../source/development.rst:148
+msgid "``Extension`` -- file mask or a file name;"
+msgstr "``Extension`` -- маска файлов или конкретное имя файла;"
+
+#: ../../source/development.rst:149
+msgid "``Recursive`` -- allow or disable the recursive cleanup;"
+msgstr ""
+"``Recursive`` -- разрешает или запрещает рекурсивную очистку (включая "
+"подкаталоги);"
+
+#: ../../source/development.rst:150
+msgid ""
+"``CleanEmpty`` -- allow or disable the empty directories deletion after "
+"cleanup."
+msgstr ""
+"``CleanEmpty`` -- разрешает или запрещает удаление пустых каталогов после "
+"очистки."
+
+#: ../../source/development.rst:153
 msgid "Directories"
 msgstr "Каталоги для очистки"
 
-#: ../../source/development.rst:134
+#: ../../source/development.rst:155
 msgid ""
-"Each path must ends with a file mask. All matched files will be marked to "
-"deletion."
+"Each path must not contain a file mask or a trailing directory separator "
+"character. All matched files will be marked to deletion."
 msgstr ""
-"Каждый путь должен в обязательном порядке заканчиваться маской файлов. Все "
-"файлы, удовлетворяющие данной маске, будут помечены на удаление."
+"Каждый путь не должен включать маску файлов, а также завершающий символ "
+"разделителя каталогов. Все файлы, удовлетворяющие данной маске, будут "
+"помечены на удаление."
 
-#: ../../source/development.rst:136
+#: ../../source/development.rst:157
 msgid "Use ``*.*`` to mark all files in a specified directory."
 msgstr ""
 "Используйте символ подстановки ``*.*``, чтобы пометить все файлы в указанном "
 "каталоге."
 
-#: ../../source/development.rst:139
+#: ../../source/development.rst:160
 msgid "Templates"
 msgstr "Шаблоны и подстановки"
 
-#: ../../source/development.rst:141
+#: ../../source/development.rst:162
 msgid "Available templates (can be used within the ``Directory`` property):"
 msgstr ""
 "Доступны следующие шаблоны и подстановки (могут использоваться внутри "
 "свойства ``Directory``):"
 
-#: ../../source/development.rst:143
+#: ../../source/development.rst:164
 msgid "``$GamePath$`` -- will be replaced by the ``SelectedGame.GamePath``;"
 msgstr "``$GamePath$`` -- будет заменено на ``SelectedGame.GamePath``;"
 
-#: ../../source/development.rst:144
+#: ../../source/development.rst:165
 msgid ""
 "``$FullGamePath$`` -- will be replaced by the ``SelectedGame.FullGamePath``;"
 msgstr "``$FullGamePath$`` -- будет заменено на ``SelectedGame.FullGamePath``;"
 
-#: ../../source/development.rst:145
+#: ../../source/development.rst:166
 msgid ""
 "``$AppWorkshopDir$`` -- will be replaced by the ``SelectedGame."
 "AppWorkshopDir``;"
 msgstr ""
 "``$AppWorkshopDir$`` -- будет заменено на ``SelectedGame.AppWorkshopDir``;"
 
-#: ../../source/development.rst:146
+#: ../../source/development.rst:167
 msgid ""
 "``$CloudScreenshotsPath$`` -- will be replaced by the ``SelectedGame."
 "CloudScreenshotsPath``;"
@@ -387,48 +418,48 @@ msgstr ""
 "``$CloudScreenshotsPath$`` -- будет заменено на ``SelectedGame."
 "CloudScreenshotsPath``;"
 
-#: ../../source/development.rst:147
+#: ../../source/development.rst:168
 msgid ""
-"``\\`` -- will be replaced by the correct trailing path directory separator "
+"``/`` -- will be replaced by the correct trailing path directory separator "
 "character, depending on running platform."
 msgstr ""
-"``\\`` -- будет заменён на корректный разделитель частей пути каталогов в "
+"``/`` -- будет заменён на корректный разделитель частей пути каталогов в "
 "зависимости от текущей платформы, на которой выполняется программа."
 
-#: ../../source/development.rst:149
+#: ../../source/development.rst:170
 msgid "Multiple templates are supported in a single entry."
 msgstr ""
 "Внутри одной строки разрешается использовать сразу несколько шаблонов или "
 "подстановок."
 
-#: ../../source/development.rst:155
+#: ../../source/development.rst:176
 msgid "FPS-configs database documentation"
 msgstr "Документация базы FPS-конфигов"
 
-#: ../../source/development.rst:157
+#: ../../source/development.rst:178
 msgid "The original source file is located in ``assets/configs.xml``."
 msgstr "Исходный файл ``assets/configs.xml``."
 
-#: ../../source/development.rst:188
+#: ../../source/development.rst:209
 msgid "``Configs`` -- XML root element."
 msgstr "``Configs`` -- корневой элемент XML."
 
-#: ../../source/development.rst:192
+#: ../../source/development.rst:213
 msgid "``Config`` -- database entry base element."
 msgstr "``Config`` -- базовый элемент."
 
-#: ../../source/development.rst:196
+#: ../../source/development.rst:217
 msgid "``Name`` -- FPS-config user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:197 ../../source/development.rst:314
+#: ../../source/development.rst:218 ../../source/development.rst:335
 msgid ""
 "``URI`` -- fully-qualified Zip archive download URL (safe redirects (3XX "
 "HTTP codes) are allowed);"
 msgstr ""
 "``URI`` -- адрес Zip-архива для загрузки (редиректы с кодами 3XX разрешены);"
 
-#: ../../source/development.rst:198 ../../source/development.rst:315
+#: ../../source/development.rst:219 ../../source/development.rst:336
 msgid ""
 "``Mirror`` -- fully-qualified Zip archive download mirror URL (safe "
 "redirects (3XX HTTP codes) are allowed);"
@@ -436,27 +467,27 @@ msgstr ""
 "``Mirror`` -- адрес зеркала с Zip-архивом для загрузки (редиректы с кодами "
 "3XX разрешены);"
 
-#: ../../source/development.rst:199
+#: ../../source/development.rst:220
 msgid ""
 "``SupportedGames`` -- the list of supported game IDs, separated by commas;"
 msgstr ""
 "``SupportedGames`` -- список поддерживаемых ID игр, разделённый запятыми;"
 
-#: ../../source/development.rst:200
+#: ../../source/development.rst:221
 msgid ""
 "``ru`` -- user-friendly description in Russian (CDATA escaping is required);"
 msgstr ""
 "``ru`` -- понятное конечному пользователю описание на русском языке (внутри "
 "тега необходимо использовать экранирование при помощи CDATA);"
 
-#: ../../source/development.rst:201
+#: ../../source/development.rst:222
 msgid ""
 "``en`` -- user-friendly description in English (CDATA escaping is required);"
 msgstr ""
 "``en`` -- понятное конечному пользователю описание на английском языке "
 "(внутри тега необходимо использовать экранирование при помощи CDATA);"
 
-#: ../../source/development.rst:202 ../../source/development.rst:322
+#: ../../source/development.rst:223 ../../source/development.rst:343
 msgid ""
 "``ArchiveDir`` -- directory name in the archive (subdirectories are "
 "supported (use ``/`` symbol));"
@@ -464,61 +495,61 @@ msgstr ""
 "``ArchiveDir`` -- имя каталога внутри архива (подкаталоги также "
 "поддерживаются (используйте символ ``/`` в качестве разделителя));"
 
-#: ../../source/development.rst:203
+#: ../../source/development.rst:224
 msgid "``InstallDir`` -- installation directory name;"
 msgstr "``InstallDir`` -- каталог назначения;"
 
-#: ../../source/development.rst:204
+#: ../../source/development.rst:225
 msgid ""
 "``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``."
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш загрузки, указанной в ``URI``."
 
-#: ../../source/development.rst:210
+#: ../../source/development.rst:231
 msgid "Games database documentation"
 msgstr "Документация базы игр"
 
-#: ../../source/development.rst:212
+#: ../../source/development.rst:233
 msgid "The original source file is located in ``assets/games.xml``."
 msgstr "Исходный файл ``assets/games.xml``."
 
-#: ../../source/development.rst:240
+#: ../../source/development.rst:261
 msgid "``Games`` -- XML root element."
 msgstr "``Games`` -- корневой элемент XML."
 
-#: ../../source/development.rst:244
+#: ../../source/development.rst:265
 msgid "``Game`` -- database entry base element:"
 msgstr "``Game`` -- базовый элемент:"
 
-#: ../../source/development.rst:246
+#: ../../source/development.rst:267
 msgid "``Name`` -- user-friendly game name."
 msgstr "``Name`` -- понятное конечному пользователю название."
 
-#: ../../source/development.rst:250
+#: ../../source/development.rst:271
 msgid ""
 "``Enabled`` -- ``1`` if the current game is enabled or ``0`` -- if don't;"
 msgstr ""
 "``Enabled`` -- ``1`` если игра разрешена для отображения, либо ``0`` если "
 "запрещена;"
 
-#: ../../source/development.rst:251
+#: ../../source/development.rst:272
 msgid "``DirName`` -- game installation directory in ``SteamApps/common``;"
 msgstr "``DirName`` -- имя каталога игры в ``SteamApps/common``;"
 
-#: ../../source/development.rst:252
+#: ../../source/development.rst:273
 msgid ""
 "``SmallName`` -- game subdirectory name in ``SteamApps/common/$DirName``;"
 msgstr ""
 "``SmallName`` -- имя собственного подкаталога игры в ``SteamApps/common/"
 "$DirName``;"
 
-#: ../../source/development.rst:253
+#: ../../source/development.rst:274
 msgid ""
 "``VFDir`` -- directory (or registry key) name of video settings storage;"
 msgstr ""
 "``VFDir`` -- имя каталога (или ключа реестра), в котором хранятся "
 "графические настройки игры;"
 
-#: ../../source/development.rst:254
+#: ../../source/development.rst:275
 msgid ""
 "``UserDir`` -- ``1`` if the current game support custom user stuff, located "
 "in ``custom`` directory or ``0`` -- if don't;"
@@ -526,7 +557,7 @@ msgstr ""
 "``UserDir`` -- ``1`` если игра поддерживает пользовательский контент в виде "
 "каталога ``custom``, либо ``0`` если не поддерживает;"
 
-#: ../../source/development.rst:255
+#: ../../source/development.rst:276
 msgid ""
 "``HUDsAvail`` -- ``1`` if the current game support custom HUDs or ``0`` -- "
 "if don't;"
@@ -534,15 +565,15 @@ msgstr ""
 "``HUDsAvail`` -- ``1`` если игра поддерживает нестандартные HUD, либо ``0`` "
 "если не поддерживает;"
 
-#: ../../source/development.rst:256
+#: ../../source/development.rst:277
 msgid "``SID`` -- Steam database internal ID for the current game;"
 msgstr "``SID`` -- внутренний ID игры в базе Steam;"
 
-#: ../../source/development.rst:257
+#: ../../source/development.rst:278
 msgid "``SVer`` -- Source Engine version:"
 msgstr "``SVer`` -- версия и тип движка Source:"
 
-#: ../../source/development.rst:259
+#: ../../source/development.rst:280
 msgid ""
 "``1`` -- Source Engine 1, Type 1 (use Windows registry to store video "
 "settings);"
@@ -550,7 +581,7 @@ msgstr ""
 "``1`` -- Source Engine версии 1, тип 1 (использует системный реестр Windows "
 "для хранения графических настроек игры);"
 
-#: ../../source/development.rst:260
+#: ../../source/development.rst:281
 msgid ""
 "``2`` -- Source Engine 1, Type 2 (use ``video.txt`` file to store video "
 "settings);"
@@ -558,7 +589,7 @@ msgstr ""
 "``2`` -- Source Engine версии 1, тип 2 (использует файл ``video.txt`` для "
 "хранения графических настроек игры);"
 
-#: ../../source/development.rst:261
+#: ../../source/development.rst:282
 msgid ""
 "``3`` -- Source Engine 2, generic (not yet implemented; reserved for future "
 "use);"
@@ -566,7 +597,7 @@ msgstr ""
 "``3`` -- Source Engine версии 2, базовый тип (не реализовано в настоящее "
 "время; зарезервировано для использования в будущем);"
 
-#: ../../source/development.rst:262
+#: ../../source/development.rst:283
 msgid ""
 "``4`` -- Source Engine 1, Type 4 (same as Type 1, but store video settings "
 "in ``videoconfig.cfg`` file);"
@@ -574,7 +605,7 @@ msgstr ""
 "``4`` -- Source Engine версии 1, тип 4 (то же, что и тип 1, но графические "
 "настройки игры сохраняются в файле ``videoconfig.cfg``);"
 
-#: ../../source/development.rst:264
+#: ../../source/development.rst:285
 msgid ""
 "``Executable`` -- game executable (only for Windows). A single file name or "
 "a list for each supported architecture: ``x86`` and ``x64``."
@@ -583,27 +614,27 @@ msgstr ""
 "Windows). Имя файла, либо список для каждой из поддерживаемых архитектур: "
 "``x86`` и ``x64``."
 
-#: ../../source/development.rst:270
+#: ../../source/development.rst:291
 msgid "HUDs database documentation"
 msgstr "Документация базы HUD"
 
-#: ../../source/development.rst:272
+#: ../../source/development.rst:293
 msgid "The original source file is located in ``assets/huds.xml``."
 msgstr "Исходный файл ``assets/huds.xml``."
 
-#: ../../source/development.rst:303
+#: ../../source/development.rst:324
 msgid "``HUDs`` -- XML root element."
 msgstr "``HUDs`` -- корневой элемент XML."
 
-#: ../../source/development.rst:307
+#: ../../source/development.rst:328
 msgid "``HUD`` -- database entry base element."
 msgstr "``HUD`` -- базовый элемент."
 
-#: ../../source/development.rst:311
+#: ../../source/development.rst:332
 msgid "``Name`` -- HUD user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:312
+#: ../../source/development.rst:333
 msgid ""
 "``Game`` -- short name of the supported by this HUD game (``SmallName`` "
 "from :ref:`games database <games-database>`);"
@@ -611,7 +642,7 @@ msgstr ""
 "``Game`` -- короткое имя поддерживаемой данным HUD игры (значение "
 "``SmallName`` из :ref:`базы игр <games-database>`);"
 
-#: ../../source/development.rst:313
+#: ../../source/development.rst:334
 msgid ""
 "``IsUpdated`` -- ``1`` if HUD supports the latest version of the game, ``0`` "
 "-- if don't;"
@@ -619,14 +650,14 @@ msgstr ""
 "``IsUpdated`` -- ``1`` если HUD поддерживает новейшие версии игры, либо "
 "``0`` если не поддерживает;"
 
-#: ../../source/development.rst:316
+#: ../../source/development.rst:337
 msgid ""
 "``UpURI`` -- upstream download archive URL (safe redirects (3XX HTTP codes) "
 "are allowed);"
 msgstr ""
 "``UpURI`` -- адрес Zip-архива для загрузки (редиректы с кодом 3XX разрешены);"
 
-#: ../../source/development.rst:317
+#: ../../source/development.rst:338
 msgid ""
 "``Preview`` -- screenshot of the game with this HUD or any custom image "
 "(JPEG and PNG formats are supported);"
@@ -634,88 +665,88 @@ msgstr ""
 "``Preview`` -- прямая ссылка на файл со скриншотом игры с данным HUD, либо "
 "любое другое изображение (поддерживаются форматы JPEG и PNG);"
 
-#: ../../source/development.rst:318
+#: ../../source/development.rst:339
 msgid "``RepoPath`` -- GitHub repository URL or ``null``;"
 msgstr "``RepoPath`` -- ссылка на GitHub-репозиторий, либо ``null``;"
 
-#: ../../source/development.rst:319
+#: ../../source/development.rst:340
 msgid ""
 "``Hash2`` -- download file SHA2 (SHA-512) hash, speficied in the ``URI``;"
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш загрузки, указанной в ``URI``;"
 
-#: ../../source/development.rst:320
+#: ../../source/development.rst:341
 msgid "``LastUpdate`` -- HUD last update time in Unix timestamp format;"
 msgstr "``LastUpdate`` -- дата последнего обновления HUD в формате UnixTime;"
 
-#: ../../source/development.rst:321
+#: ../../source/development.rst:342
 msgid "``Site`` -- website or homepage URL;"
 msgstr "``Site`` -- адрес домашней страницы;"
 
-#: ../../source/development.rst:323
+#: ../../source/development.rst:344
 msgid "``InstallDir`` -- installation directory name."
 msgstr "``InstallDir`` -- каталог назначения."
 
-#: ../../source/development.rst:329
+#: ../../source/development.rst:350
 msgid "Updates database documentation"
 msgstr "Документация базы обновлений"
 
-#: ../../source/development.rst:331
+#: ../../source/development.rst:352
 msgid "The original source file is located in ``assets/updates.xml``."
 msgstr "Исходный файл ``assets/updates.xml``."
 
-#: ../../source/development.rst:338
+#: ../../source/development.rst:359
 msgid "``Updates`` -- XML root element."
 msgstr "``Updates`` -- корневой элемент XML."
 
-#: ../../source/development.rst:342
+#: ../../source/development.rst:363
 msgid "``Application`` -- sub-element with application update metadata."
 msgstr "``Application`` -- содержит метаданные обновления приложения."
 
-#: ../../source/development.rst:346
+#: ../../source/development.rst:367
 msgid "``Version`` -- application or database version;"
 msgstr "``Version`` -- версия приложения или базы данных;"
 
-#: ../../source/development.rst:347
+#: ../../source/development.rst:368
 msgid "``URL`` -- direct download URL (no redirects are allowed);"
 msgstr "``URL`` -- URL для загрузки (любые редиректы запрещены);"
 
-#: ../../source/development.rst:348
+#: ../../source/development.rst:369
 msgid "``Info`` -- changelog URL;"
 msgstr "``Info`` -- URL со списком изменений;"
 
-#: ../../source/development.rst:349
+#: ../../source/development.rst:370
 msgid "``Hash2`` -- download file SHA2 (SHA-512) hash."
 msgstr "``Hash2`` -- SHA2 (SHA-512) хеш файла файла обновления."
 
-#: ../../source/development.rst:355
+#: ../../source/development.rst:376
 msgid "Plugins database documentation"
 msgstr "Документация базы внешних модулей"
 
-#: ../../source/development.rst:357
+#: ../../source/development.rst:378
 msgid "The original source file is located in ``assets/plugins.xml``."
 msgstr "Исходный файл ``assets/plugins.xml``."
 
-#: ../../source/development.rst:379
+#: ../../source/development.rst:400
 msgid "``Plugins`` -- XML root element."
 msgstr "``Plugins`` -- корневой элемент XML."
 
-#: ../../source/development.rst:383
+#: ../../source/development.rst:404
 msgid "``Plugin`` -- database entry base element."
 msgstr "``Plugin`` -- базовый элемент."
 
-#: ../../source/development.rst:387
+#: ../../source/development.rst:408
 msgid "``Name`` -- plugin user-friendly name;"
 msgstr "``Name`` -- понятное конечному пользователю название;"
 
-#: ../../source/development.rst:388
+#: ../../source/development.rst:409
 msgid "``IntName`` -- internal name for different actions;"
 msgstr "``IntName`` -- внутреннее имя внешнего модуля для различных целей;"
 
-#: ../../source/development.rst:389
+#: ../../source/development.rst:410
 msgid "``ExeName`` -- executable file name;"
 msgstr "``ExeName`` -- имя исполняемого файла;"
 
-#: ../../source/development.rst:390
+#: ../../source/development.rst:411
 msgid ""
 "``ElevationRequired`` -- ``1`` if the plugin need a local administrator "
 "rights in order to run, ``0`` -- if don't."

@@ -95,11 +95,23 @@ XML database example
     <?xml version="1.0" encoding="utf-8"?>
     <Targets>
         <Target>
-            <ID>1</ID>
+            <ID>0</ID>
             <Name>Example entry</Name>
             <Directories>
-                <Directory Class="Safe">$GamePath$/foo/*.*</Directory>
-                <Directory Class="Unsafe">$FullGamePath$/bar/*.*</Directory>
+                <Directory>
+                    <Class>Safe</Class>
+                    <Path>$GamePath$/foo</Path>
+                    <Extension>*.*</Extension>
+                    <Recursive>1</Recursive>
+                    <CleanEmpty>1</CleanEmpty>
+                </Directory>
+                <Directory>
+                    <Class>Unsafe</Class>
+                    <Path>$FullGamePath$/bar</Path>
+                    <Extension>*.*</Extension>
+                    <Recursive>0</Recursive>
+                    <CleanEmpty>0</CleanEmpty>
+                </Directory>
             </Directories>
         </Target>
     </Targets>
@@ -117,21 +129,30 @@ Level 1:
 
 Level 2:
 
-  * ``ID`` -- unique identifier (integer, starting from ``1``);
+  * ``ID`` -- unique identifier (integer, starting from ``0``);
   * ``Name`` -- user-friendly name;
-  * ``Directories`` -- list of directories for cleanup.
+  * ``Directories`` -- the list of directories for cleanup.
 
 Level 3:
 
-  * ``Directory`` -- path to a single directory (with templates support):
+  * ``Directory`` -- a single cleanup entry with additional parameters.
+
+Level 4:
+
+  * ``Class`` -- safety class:
 
     * ``Safe`` -- this directory can be safely cleaned;
     * ``Unsafe`` -- cleaning up this directory may be dangerous (can be allowed in settings).
 
+  * ``Path`` -- path to a single directory (with templates support);
+  * ``Extension`` -- file mask or a file name;
+  * ``Recursive`` -- allow or disable the recursive cleanup;
+  * ``CleanEmpty`` -- allow or disable the empty directories deletion after cleanup.
+
 Directories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Each path must ends with a file mask. All matched files will be marked to deletion.
+Each path must not contain a file mask or a trailing directory separator character. All matched files will be marked to deletion.
 
 Use ``*.*`` to mark all files in a specified directory.
 
@@ -144,7 +165,7 @@ Available templates (can be used within the ``Directory`` property):
   * ``$FullGamePath$`` -- will be replaced by the ``SelectedGame.FullGamePath``;
   * ``$AppWorkshopDir$`` -- will be replaced by the ``SelectedGame.AppWorkshopDir``;
   * ``$CloudScreenshotsPath$`` -- will be replaced by the ``SelectedGame.CloudScreenshotsPath``;
-  * ``\`` -- will be replaced by the correct trailing path directory separator character, depending on running platform.
+  * ``/`` -- will be replaced by the correct trailing path directory separator character, depending on running platform.
 
 Multiple templates are supported in a single entry.
 
