@@ -12,21 +12,21 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/custom</Path>
-                <Extension>*.bsp</Extension>
+                <Mask>*.bsp</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download</Path>
-                <Extension>*.bsp</Extension>
+                <Mask>*.bsp</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$AppWorkshopDir$</Path>
-                <Extension>*.bsp</Extension>
+                <Mask>*.bsp</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
@@ -39,21 +39,21 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/downloads</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/streams</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
@@ -66,28 +66,28 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/maps/graphs</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/maps/soundcache</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download/sound</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$</Path>
-                <Extension>*.cache</Extension>
+                <Mask>*.cache</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
@@ -100,14 +100,14 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/screenshots</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Unsafe</Class>
                 <Path>$CloudScreenshotsPath$</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
@@ -120,35 +120,35 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/demos</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$</Path>
-                <Extension>*.dem</Extension>
+                <Mask>*.dem</Mask>
                 <Recursive>0</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$</Path>
-                <Extension>*.mp4</Extension>
+                <Mask>*.mp4</Mask>
                 <Recursive>0</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$</Path>
-                <Extension>*.tga</Extension>
+                <Mask>*.tga</Mask>
                 <Recursive>0</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$</Path>
-                <Extension>*.wav</Extension>
+                <Mask>*.wav</Mask>
                 <Recursive>0</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
@@ -161,28 +161,28 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$GamePath$/bin</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/bin</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$GamePath$</Path>
-                <Extension>*.exe</Extension>
+                <Mask>*.exe</Mask>
                 <Recursive>0</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Unsafe</Class>
                 <Path>$GamePath$/platform</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
@@ -195,14 +195,14 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/replay</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/replays</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
@@ -215,70 +215,70 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download</Path>
-                <Extension>*.vt*</Extension>
+                <Mask>*.vt*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download</Path>
-                <Extension>*.vmt</Extension>
+                <Mask>*.vmt</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download</Path>
-                <Extension>*.mdl</Extension>
+                <Mask>*.mdl</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download</Path>
-                <Extension>*.phy</Extension>
+                <Mask>*.phy</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/custom</Path>
-                <Extension>*.vt*</Extension>
+                <Mask>*.vt*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/custom</Path>
-                <Extension>*.vmt</Extension>
+                <Mask>*.vmt</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/custom</Path>
-                <Extension>*.mdl</Extension>
+                <Mask>*.mdl</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/custom</Path>
-                <Extension>*.phy</Extension>
+                <Mask>*.phy</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Unsafe</Class>
                 <Path>$FullGamePath$/materials</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Unsafe</Class>
                 <Path>$FullGamePath$/models</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
@@ -291,21 +291,21 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/cache</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/custom/user_custom</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$GamePath$/config/html</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
@@ -318,21 +318,21 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download</Path>
-                <Extension>*.mp3</Extension>
+                <Mask>*.mp3</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download</Path>
-                <Extension>*.wav</Extension>
+                <Mask>*.wav</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Unsafe</Class>
                 <Path>$FullGamePath$/sound</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
@@ -345,14 +345,14 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/custom</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$AppWorkshopDir$</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
@@ -365,70 +365,70 @@
             <Directory>
                 <Class>Safe</Class>
                 <Path>$GamePath$/bin</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/bin</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$GamePath$</Path>
-                <Extension>*.exe</Extension>
+                <Mask>*.exe</Mask>
                 <Recursive>0</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/download</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/downloads</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/custom</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$AppWorkshopDir$</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/cache</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Safe</Class>
                 <Path>$FullGamePath$/cfg</Path>
-                <Extension>*.cfg</Extension>
+                <Mask>*.cfg</Mask>
                 <Recursive>0</Recursive>
                 <CleanEmpty>0</CleanEmpty>
             </Directory>
             <Directory>
                 <Class>Unsafe</Class>
                 <Path>$GamePath$/platform</Path>
-                <Extension>*.*</Extension>
+                <Mask>*.*</Mask>
                 <Recursive>1</Recursive>
                 <CleanEmpty>1</CleanEmpty>
             </Directory>

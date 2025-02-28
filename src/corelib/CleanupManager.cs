@@ -100,7 +100,7 @@ namespace srcrepair.core
             {
                 if (Item.SelectSingleNode("Class").InnerText == "Safe" || AllowUnsafe)
                 {
-                    Result.Add(new CleanupItem(GetFullPath(Item.SelectSingleNode("Path").InnerText), Item.SelectSingleNode("Extension").InnerText, Item.SelectSingleNode("Recursive").InnerText == "1", Item.SelectSingleNode("CleanEmpty").InnerText == "1"));
+                    Result.Add(new CleanupItem(GetFullPath(Item.SelectSingleNode("Path").InnerText), Item.SelectSingleNode("Mask").InnerText, Item.SelectSingleNode("Recursive").InnerText == "1", Item.SelectSingleNode("CleanEmpty").InnerText == "1"));
                 }
             }
 
