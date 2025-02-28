@@ -99,18 +99,18 @@ XML database example
             <Name>Example entry</Name>
             <Directories>
                 <Directory>
-                    <Class>Safe</Class>
                     <Path>$GamePath$/foo</Path>
                     <Extension>*.*</Extension>
                     <Recursive>1</Recursive>
                     <CleanEmpty>1</CleanEmpty>
+                    <Safe>1</Safe>
                 </Directory>
                 <Directory>
-                    <Class>Unsafe</Class>
                     <Path>$FullGamePath$/bar</Path>
                     <Extension>*.*</Extension>
                     <Recursive>0</Recursive>
                     <CleanEmpty>0</CleanEmpty>
+                    <Safe>0</Safe>
                 </Directory>
             </Directories>
         </Target>
@@ -139,15 +139,14 @@ Level 3:
 
 Level 4:
 
-  * ``Class`` -- safety class:
-
-    * ``Safe`` -- this directory can be safely cleaned;
-    * ``Unsafe`` -- cleaning up this directory may be dangerous (can be allowed in settings).
-
   * ``Path`` -- path to a single directory (with templates support);
   * ``Extension`` -- file mask or a file name;
-  * ``Recursive`` -- allow or disable the recursive cleanup;
-  * ``CleanEmpty`` -- allow or disable the empty directories deletion after cleanup.
+  * ``Recursive`` -- allow or disallow the recursive cleanup;
+  * ``CleanEmpty`` -- allow or disallow the empty directories deletion after cleanup;
+  * ``Safe`` -- safety class:
+
+    * ``1`` -- this directory can be safely cleaned;
+    * ``0`` -- cleaning up this directory may be dangerous (can be allowed in settings).
 
 Directories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
