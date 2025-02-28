@@ -96,11 +96,11 @@ namespace srcrepair.core
         {
             List<CleanupItem> Result = new List<CleanupItem>();
 
-            foreach (XmlNode Item in XmlItem.SelectNodes("Directories/Directory"))
+            foreach (XmlNode CleanItem in XmlItem.SelectNodes("Directories/Directory"))
             {
-                if (Item.SelectSingleNode("Safe").InnerText == "1" || AllowUnsafe)
+                if (CleanItem.SelectSingleNode("Safe").InnerText == "1" || AllowUnsafe)
                 {
-                    Result.Add(new CleanupItem(GetFullPath(Item.SelectSingleNode("Path").InnerText), Item.SelectSingleNode("Mask").InnerText, Item.SelectSingleNode("Recursive").InnerText == "1", Item.SelectSingleNode("CleanEmpty").InnerText == "1"));
+                    Result.Add(new CleanupItem(GetFullPath(CleanItem.SelectSingleNode("Path").InnerText), CleanItem.SelectSingleNode("Mask").InnerText, CleanItem.SelectSingleNode("Recursive").InnerText == "1", CleanItem.SelectSingleNode("CleanEmpty").InnerText == "1"));
                 }
             }
 
