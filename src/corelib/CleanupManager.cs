@@ -98,7 +98,7 @@ namespace srcrepair.core
 
             foreach (XmlNode Item in XmlItem.SelectNodes("Directories/Directory"))
             {
-                if (Item.SelectSingleNode("Class").InnerText == "Safe" || AllowUnsafe)
+                if (Item.SelectSingleNode("Safe").InnerText == "1" || AllowUnsafe)
                 {
                     Result.Add(new CleanupItem(GetFullPath(Item.SelectSingleNode("Path").InnerText), Item.SelectSingleNode("Mask").InnerText, Item.SelectSingleNode("Recursive").InnerText == "1", Item.SelectSingleNode("CleanEmpty").InnerText == "1"));
                 }
