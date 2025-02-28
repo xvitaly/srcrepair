@@ -84,7 +84,7 @@ namespace srcrepair.core
         /// <returns>Fully qualified path.</returns>
         private string GetFullPath(string Row)
         {
-            return ParseRow(Row);
+            return Path.GetFullPath(ParseRow(Row));
         }
 
         /// <summary>
