@@ -78,10 +78,10 @@ namespace srcrepair.core
         }
 
         /// <summary>
-        /// Gets fully qualified path from specified source string.
+        /// Gets the full directory path from the specified source string.
         /// </summary>
         /// <param name="Row">Source string.</param>
-        /// <returns>Fully qualified path.</returns>
+        /// <returns>Full directory path.</returns>
         private string GetFullDirectoryPath(string Row)
         {
             return Path.GetFullPath(ParseRow(Row));
