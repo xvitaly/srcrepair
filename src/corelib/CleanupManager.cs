@@ -82,7 +82,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="Row">Source string.</param>
         /// <returns>Fully qualified path.</returns>
-        private string GetFullPath(string Row)
+        private string GetFullDirectoryPath(string Row)
         {
             return Path.GetFullPath(ParseRow(Row));
         }
@@ -100,7 +100,7 @@ namespace srcrepair.core
             {
                 if (CleanItem.SelectSingleNode("Safe").InnerText == "1" || AllowUnsafe)
                 {
-                    Result.Add(new CleanupItem(GetFullPath(CleanItem.SelectSingleNode("Path").InnerText), CleanItem.SelectSingleNode("Mask").InnerText, CleanItem.SelectSingleNode("Recursive").InnerText == "1", CleanItem.SelectSingleNode("CleanEmpty").InnerText == "1"));
+                    Result.Add(new CleanupItem(GetFullDirectoryPath(CleanItem.SelectSingleNode("Path").InnerText), CleanItem.SelectSingleNode("Mask").InnerText, CleanItem.SelectSingleNode("Recursive").InnerText == "1", CleanItem.SelectSingleNode("CleanEmpty").InnerText == "1"));
                 }
             }
 
