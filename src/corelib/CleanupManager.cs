@@ -110,8 +110,8 @@ namespace srcrepair.core
         /// <summary>
         /// CleanupManager class constructor.
         /// </summary>
-        /// <param name="FullAppPath">Path to SRC Repair installation directory.</param>
-        /// <param name="SelectedGame">Instance of SourceGame class with selected in main window game.</param>
+        /// <param name="FullAppPath">Path to the application installation directory.</param>
+        /// <param name="SelectedGame">Instance of SourceGame class with selected in the main window game.</param>
         /// <param name="UnsafeCleanup">Allow or disallow to use unsafe cleanup methods.</param>
         public CleanupManager(string FullAppPath, SourceGame SelectedGame, bool UnsafeCleanup)
         {
