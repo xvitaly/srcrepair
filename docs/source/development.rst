@@ -100,14 +100,14 @@ XML database example
             <Directories>
                 <Directory>
                     <Path>$GamePath$/foo</Path>
-                    <Extension>*.*</Extension>
+                    <Mask>*.*</Mask>
                     <Recursive>1</Recursive>
                     <CleanEmpty>1</CleanEmpty>
                     <Safe>1</Safe>
                 </Directory>
                 <Directory>
                     <Path>$FullGamePath$/bar</Path>
-                    <Extension>*.*</Extension>
+                    <Mask>*.*</Mask>
                     <Recursive>0</Recursive>
                     <CleanEmpty>0</CleanEmpty>
                     <Safe>0</Safe>
@@ -140,7 +140,7 @@ Level 3:
 Level 4:
 
   * ``Path`` -- path to a single directory (with templates support);
-  * ``Extension`` -- file mask or a file name;
+  * ``Mask`` -- file mask or a file name;
   * ``Recursive`` -- allow or disallow the recursive cleanup;
   * ``CleanEmpty`` -- allow or disallow the empty directories deletion after cleanup;
   * ``Safe`` -- safety class:

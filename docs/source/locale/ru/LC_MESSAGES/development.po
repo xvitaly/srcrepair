@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: SRC Repair 47.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-28 14:49+0100\n"
-"PO-Revision-Date: 2025-02-28 14:53+0100\n"
+"POT-Creation-Date: 2025-03-01 16:06+0100\n"
+"PO-Revision-Date: 2025-03-01 16:07+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
@@ -330,8 +330,8 @@ msgstr ""
 "подстановок;"
 
 #: ../../source/development.rst:143
-msgid "``Extension`` -- file mask or a file name;"
-msgstr "``Extension`` -- маска файлов или конкретное имя файла;"
+msgid "``Mask`` -- file mask or a file name;"
+msgstr "``Mask`` -- маска файлов или конкретное имя файла;"
 
 #: ../../source/development.rst:144
 msgid "``Recursive`` -- allow or disallow the recursive cleanup;"
