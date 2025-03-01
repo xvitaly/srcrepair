@@ -92,7 +92,7 @@ namespace srcrepair.core
         /// </summary>
         /// <param name="XmlItem">Source XML node item.</param>
         /// <returns>The list of cleanup items.</returns>
-        private List<CleanupItem> GetDirListFromNode(XmlNode XmlItem)
+        private List<CleanupItem> GetItemsFromNode(XmlNode XmlItem)
         {
             List<CleanupItem> Result = new List<CleanupItem>();
 
@@ -137,7 +137,7 @@ namespace srcrepair.core
                 {
                     try
                     {
-                        CleanupTargets.Add(int.Parse(XmlItem.SelectSingleNode("ID").InnerText), new CleanupTarget(XmlItem.SelectSingleNode("Name").InnerText, GetDirListFromNode(XmlItem)));
+                        CleanupTargets.Add(int.Parse(XmlItem.SelectSingleNode("ID").InnerText), new CleanupTarget(XmlItem.SelectSingleNode("Name").InnerText, GetItemsFromNode(XmlItem)));
                     }
                     catch (Exception Ex)
                     {
