@@ -61,6 +61,15 @@ namespace srcrepair.core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to *.*.
+        /// </summary>
+        internal static string AllFilesMask {
+            get {
+                return ResourceManager.GetString("AllFilesMask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &quot;{0}&quot;.
         /// </summary>
         internal static string AppOpenHandlerEscapeTemplate {
