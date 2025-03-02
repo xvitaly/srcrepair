@@ -1809,7 +1809,7 @@ namespace srcrepair.gui
 
                 // Getting the list of files in the game backups directory...
                 DirectoryInfo DInfo = new DirectoryInfo(App.SourceGames[SelectedGame].FullBackUpDirPath);
-                return Task.FromResult(DInfo.GetFiles("*.*"));
+                return Task.FromResult(DInfo.GetFiles(Properties.Resources.AppAllFilesMask));
             });
         }
 
@@ -3442,9 +3442,9 @@ namespace srcrepair.gui
         {
             List<CleanupItem> CleanDirs = new List<CleanupItem>
             {
-                new CleanupItem(App.AppCfgDir, "*.*", true, true),
-                new CleanupItem(App.AppHUDDir, "*.*", true, true),
-                new CleanupItem(App.AppUpdateDir, "*.*", true, true)
+                new CleanupItem(App.AppCfgDir, Properties.Resources.AppAllFilesMask, true, true),
+                new CleanupItem(App.AppHUDDir, Properties.Resources.AppAllFilesMask, true, true),
+                new CleanupItem(App.AppUpdateDir, Properties.Resources.AppAllFilesMask, true, true)
             };
             GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower(CultureInfo.CurrentUICulture).Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
@@ -3458,7 +3458,7 @@ namespace srcrepair.gui
         {
             List<CleanupItem> CleanDirs = new List<CleanupItem>
             {
-                new CleanupItem(Path.GetTempPath(), "*.*", true, true)
+                new CleanupItem(Path.GetTempPath(), Properties.Resources.AppAllFilesMask, true, true)
             };
             GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower(CultureInfo.CurrentUICulture).Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
