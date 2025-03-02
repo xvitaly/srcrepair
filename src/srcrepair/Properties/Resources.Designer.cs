@@ -61,6 +61,15 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to *.*.
+        /// </summary>
+        internal static string AppAllFilesMask {
+            get {
+                return ResourceManager.GetString("AppAllFilesMask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to wget.
         /// </summary>
         internal static string AppDownloadUserAgent {

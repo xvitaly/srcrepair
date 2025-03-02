@@ -307,4 +307,7 @@
   <data name="AppURLSteamStart" xml:space="preserve">
     <value>steam://open/main</value>
   </data>
+  <data name="AppAllFilesMask" xml:space="preserve">
+    <value>*.*</value>
+  </data>
 </root>
