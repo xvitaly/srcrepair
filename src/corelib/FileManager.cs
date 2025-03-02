@@ -290,7 +290,7 @@ namespace srcrepair.core
         /// <returns>The list of files with full paths.</returns>
         public static List<string> FindFiles(List<string> SearchPaths)
         {
-            return FindFiles(SearchPaths, "*.*", true, true);
+            return FindFiles(SearchPaths, Properties.Resources.AllFilesMask, true, true);
         }
 
         /// <summary>
@@ -314,7 +314,7 @@ namespace srcrepair.core
         /// <returns>The list of files with full paths.</returns>
         public static List<string> FindFiles(string SearchPath)
         {
-            return FindFiles(new List<string> { SearchPath }, "*.*", true, false);
+            return FindFiles(new List<string> { SearchPath }, Properties.Resources.AllFilesMask, true, false);
         }
 
         /// <summary>
