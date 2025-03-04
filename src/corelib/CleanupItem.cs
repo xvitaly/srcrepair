@@ -51,6 +51,14 @@ namespace srcrepair.core
             return Result;
         }
 
+        public CleanupItem(string Dir)
+        {
+            CleanDirectory = Dir;
+            CleanMask = Properties.Resources.AllFilesMask;
+            IsRecursive = true;
+            CleanEmpty = true;
+        }
+
         /// <summary>
         /// CleanupItem class constructor with recursive cleanup
         /// and cleanup of empty directories options enabled.
