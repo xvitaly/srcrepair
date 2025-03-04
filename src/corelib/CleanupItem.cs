@@ -51,6 +51,14 @@ namespace srcrepair.core
             return Result;
         }
 
+        public CleanupItem(string Dir, string Mask)
+        {
+            CleanDirectory = Dir;
+            CleanMask = Mask;
+            IsRecursive = true;
+            CleanEmpty = true;
+        }
+
         /// <summary>
         /// CleanupItem class constructor.
         /// </summary>
