@@ -3442,9 +3442,9 @@ namespace srcrepair.gui
         {
             List<CleanupItem> CleanDirs = new List<CleanupItem>
             {
-                new CleanupItem(App.AppCfgDir, Properties.Resources.AppAllFilesMask, true, true),
-                new CleanupItem(App.AppHUDDir, Properties.Resources.AppAllFilesMask, true, true),
-                new CleanupItem(App.AppUpdateDir, Properties.Resources.AppAllFilesMask, true, true)
+                new CleanupItem(App.AppCfgDir),
+                new CleanupItem(App.AppHUDDir),
+                new CleanupItem(App.AppUpdateDir)
             };
             GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower(CultureInfo.CurrentUICulture).Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
@@ -3458,7 +3458,7 @@ namespace srcrepair.gui
         {
             List<CleanupItem> CleanDirs = new List<CleanupItem>
             {
-                new CleanupItem(Path.GetTempPath(), Properties.Resources.AppAllFilesMask, true, true)
+                new CleanupItem(Path.GetTempPath())
             };
             GuiHelpers.FormShowCleanup(CleanDirs, ((ToolStripMenuItem)sender).Text.ToLower(CultureInfo.CurrentUICulture).Replace("&", string.Empty), AppStrings.PS_CleanupSuccess, App.SourceGames[AppSelector.Text].FullBackUpDirPath, App.SourceGames[AppSelector.Text].GameBinaryFile);
         }
