@@ -329,6 +329,20 @@ namespace srcrepair.core
             return FindFiles(new List<string> { SearchPath }, SrcMask, true, false);
         }
 
+        public static List<FileInfo> FindFilesInfo(List<string> SearchPaths, string SrcMask, bool IsRecursive)
+        {
+            List<FileInfo> Result = new List<FileInfo>();
+            foreach (string CleanCnd in SearchPaths)
+            {
+                DirectoryInfo DInfo = new DirectoryInfo(CleanCnd);
+                if (DInfo.Exists)
+                {
+                    Result.AddRange(DInfo.GetFiles(SrcMask, IsRecursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly));
+                }
+            }
+            return Result;
+        }
+
         /// <summary>
         /// Finds and returns only existing files from specified list.
         /// </summary>
