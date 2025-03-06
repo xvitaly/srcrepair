@@ -352,6 +352,11 @@ namespace srcrepair.core
             return Result;
         }
 
+        public static List<FileInfo> FindFilesInfo(string SearchPath)
+        {
+            return FindFilesInfo(new List<string> { SearchPath }, Properties.Resources.AllFilesMask, false);
+        }
+
         /// <summary>
         /// Finds and returns only existing files from specified list.
         /// </summary>
