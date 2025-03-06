@@ -1365,7 +1365,7 @@ namespace srcrepair.gui
         /// Adds found backup files to collection on BackUps tab.
         /// </summary>
         /// <param name="DItems">Found items.</param>
-        private void AddBackUpsToTable(FileInfo[] DItems)
+        private void AddBackUpsToTable(List<FileInfo> DItems)
         {
             foreach (FileInfo DItem in DItems)
             {
@@ -1797,7 +1797,7 @@ namespace srcrepair.gui
         /// </summary>
         /// <param name="SelectedGame">Selected game name.</param>
         /// <returns>Returns array of available backup files.</returns>
-        private async Task<FileInfo[]> UpdateBackUpListTask(string SelectedGame)
+        private async Task<List<FileInfo>> UpdateBackUpListTask(string SelectedGame)
         {
             return await Task.Run(() =>
             {
@@ -1808,8 +1808,7 @@ namespace srcrepair.gui
                 }
 
                 // Getting the list of files in the game backups directory...
-                DirectoryInfo DInfo = new DirectoryInfo(App.SourceGames[SelectedGame].FullBackUpDirPath);
-                return Task.FromResult(DInfo.GetFiles(Properties.Resources.AppAllFilesMask));
+                return Task.FromResult(FileManager.FindFilesInfo(App.SourceGames[SelectedGame].FullBackUpDirPath));
             });
         }
 
