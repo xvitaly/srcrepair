@@ -352,6 +352,12 @@ namespace srcrepair.core
             return Result;
         }
 
+        /// <summary>
+        /// Finds all files in the specified directory and adds them to
+        /// the list.
+        /// </summary>
+        /// <param name="SearchPath">Base directory.</param>
+        /// <returns>The list of FileInfo items.</returns>
         public static List<FileInfo> FindFilesInfo(string SearchPath)
         {
             return FindFilesInfo(new List<string> { SearchPath }, Properties.Resources.AllFilesMask, false);
