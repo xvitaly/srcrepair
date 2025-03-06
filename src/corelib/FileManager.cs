@@ -329,6 +329,15 @@ namespace srcrepair.core
             return FindFiles(new List<string> { SearchPath }, SrcMask, true, false);
         }
 
+        /// <summary>
+        /// Finds files in the specified list of directories that match the
+        /// specified file mask and adds them to the list. Recursion can be
+        /// explicitly enabled or disabled.
+        /// </summary>
+        /// <param name="SearchPaths">The list of directories and files for searching.</param>
+        /// <param name="SrcMask">File mask (wildcards are supported).</param>
+        /// <param name="IsRecursive">Use recursive (include subdirectories) search.</param>
+        /// <returns>The list of FileInfo items.</returns>
         public static List<FileInfo> FindFilesInfo(List<string> SearchPaths, string SrcMask, bool IsRecursive)
         {
             List<FileInfo> Result = new List<FileInfo>();
