@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: SRC Repair 47.0\n"
+"Project-Id-Version: SRC Repair 48.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-15 12:48+0100\n"
-"PO-Revision-Date: 2024-11-15 12:53+0100\n"
+"POT-Creation-Date: 2025-03-07 15:08+0100\n"
+"PO-Revision-Date: 2025-03-07 15:17+0100\n"
 "Last-Translator: Vitaly <vitaly@easycoding.org>\n"
 "Language-Team: EasyCoding Team\n"
 "Language: ru\n"
