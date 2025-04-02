@@ -186,6 +186,9 @@
   <data name="AppDbgExCfgSelection" xml:space="preserve">
     <value>Exception during FPS config selection (click on warning icon).</value>
   </data>
+  <data name="AppDbgExCheckForUpdatesPrimary" xml:space="preserve">
+    <value>Failed to check for updates using the primary server.</value>
+  </data>
   <data name="AppDbgExClnHotkeyUnknown" xml:space="preserve">
     <value>An unknown hotkey combination was pressed: Ctrl + {0}.</value>
   </data>

@@ -1770,12 +1770,19 @@ namespace srcrepair.gui
         /// <summary>
         /// Checks for application updates in a separate thread.
         /// </summary>
-        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
+        /// <param name="Agent">User-Agent header for outgoing HTTP queries.</param>
         /// <returns>Returns True if updates were found.</returns>
-        private async Task<bool> CheckForUpdatesTask(string UA)
+        private async Task<bool> CheckForUpdatesTask(string Agent)
         {
-            UpdateManager Updater = await UpdateManager.Create(UA);
-            return Updater.CheckAppUpdate();
+            try
+            {
+                return (await UpdateManager.Create(Properties.Resources.AppURLUpdatePrimary, Agent)).CheckAppUpdate();
+            }
+            catch (WebException Ex)
+            {
+                Logger.Warn(Ex, DebugStrings.AppDbgExCheckForUpdatesPrimary);
+                return (await UpdateManager.Create(Properties.Resources.AppURLUpdateMirror, Agent)).CheckAppUpdate();
+            }
         }
 
         /// <summary>

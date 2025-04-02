@@ -38,6 +38,12 @@ namespace srcrepair.core
         public string AppUpdateHash { get; private set; }
 
         /// <summary>
+        /// Stores the URL of an XML file containing information about
+        /// the latest updates.
+        /// </summary>
+        private readonly string UpdateURL;
+
+        /// <summary>
         /// Stores HTTP UserAgent header, used during updates check.
         /// </summary>
         private readonly string UserAgent;
@@ -57,7 +63,7 @@ namespace srcrepair.core
             using (WebClient Downloader = new WebClient())
             {
                 Downloader.Headers.Add("User-Agent", UserAgent);
-                UpdateXML = await Downloader.DownloadStringTaskAsync(Properties.Resources.UpdateDBURL);
+                UpdateXML = await Downloader.DownloadStringTaskAsync(UpdateURL);
             }
         }
 
@@ -120,11 +126,12 @@ namespace srcrepair.core
         /// <summary>
         /// Create an instance of the UpdateManager class. Factory method.
         /// </summary>
-        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
+        /// <param name="URL">URL of an XML file containing information about the latest updates.</param>
+        /// <param name="Agent">User-Agent header for outgoing HTTP queries.</param>
         /// <returns>Return an instance of the UpdateManager class.</returns>
-        public static async Task<UpdateManager> Create(string UA)
+        public static async Task<UpdateManager> Create(string URL, string Agent)
         {
-            UpdateManager UpdaterInstance = new UpdateManager(UA);
+            UpdateManager UpdaterInstance = new UpdateManager(URL, Agent);
             await UpdaterInstance.CheckForUpdates();
             return UpdaterInstance;
         }
@@ -132,10 +139,12 @@ namespace srcrepair.core
         /// <summary>
         /// UpdateManager class constructor.
         /// </summary>
-        /// <param name="UA">User-Agent header for outgoing HTTP queries.</param>
-        private UpdateManager(string UA)
+        /// <param name="URL">URL of an XML file containing information about the latest updates.</param>
+        /// <param name="Agent">User-Agent header for outgoing HTTP queries.</param>
+        private UpdateManager(string URL, string Agent)
         {
-            UserAgent = UA;
+            UpdateURL = URL;
+            UserAgent = Agent;
         }
     }
 }

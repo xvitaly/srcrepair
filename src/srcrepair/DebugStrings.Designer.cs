@@ -268,6 +268,15 @@ namespace srcrepair.gui {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to check for updates using the primary server..
+        /// </summary>
+        internal static string AppDbgExCheckForUpdatesPrimary {
+            get {
+                return ResourceManager.GetString("AppDbgExCheckForUpdatesPrimary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An unknown hotkey combination was pressed: Ctrl + {0}..
         /// </summary>
         internal static string AppDbgExClnHotkeyUnknown {

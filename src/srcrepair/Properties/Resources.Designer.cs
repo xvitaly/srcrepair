@@ -151,6 +151,24 @@ namespace srcrepair.gui.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair/raw/refs/heads/master/assets/updates.xml.
+        /// </summary>
+        internal static string AppURLUpdateMirror {
+            get {
+                return ResourceManager.GetString("AppURLUpdateMirror", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://www.easycoding.org/files/srcrepair/updates/updates.xml.
+        /// </summary>
+        internal static string AppURLUpdatePrimary {
+            get {
+                return ResourceManager.GetString("AppURLUpdatePrimary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://github.com/xvitaly/srcrepair.
         /// </summary>
         internal static string AppURLWebsite {

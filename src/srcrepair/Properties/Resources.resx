@@ -307,4 +307,10 @@
   <data name="AppURLSteamStart" xml:space="preserve">
     <value>steam://open/main</value>
   </data>
+  <data name="AppURLUpdateMirror" xml:space="preserve">
+    <value>https://github.com/xvitaly/srcrepair/raw/refs/heads/master/assets/updates.xml</value>
+  </data>
+  <data name="AppURLUpdatePrimary" xml:space="preserve">
+    <value>https://www.easycoding.org/files/srcrepair/updates/updates.xml</value>
+  </data>
 </root>
